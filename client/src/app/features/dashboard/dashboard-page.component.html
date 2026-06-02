@@ -1,0 +1,57 @@
+<section class="min-h-dvh px-4 py-8 md:px-8">
+  <div class="mx-auto max-w-6xl">
+    <header class="glass-card flex flex-col gap-6 rounded-[2rem] p-6 md:flex-row md:items-center md:justify-between md:p-8">
+      <div>
+        <p class="text-sm uppercase tracking-[0.3em] text-[var(--brand)]">RetAIM dashboard</p>
+        <h1 class="mt-2 text-3xl md:text-5xl">
+          {{ profile()?.full_name || user()?.email || 'Usuario autenticado' }}
+        </h1>
+        <p class="mt-3 max-w-3xl text-[var(--muted)]">
+          Este dashboard ya esta leyendo la sesion de Supabase y el perfil base desde el backend.
+          Desde aqui podemos crecer hacia equipos, planes de certificacion y visibilidad del manager.
+        </p>
+      </div>
+
+      <button
+        class="rounded-full border border-[var(--line)] px-5 py-3 font-semibold text-[var(--ink)] transition hover:bg-white/70"
+        type="button"
+        (click)="signOut()"
+      >
+        Cerrar sesion
+      </button>
+    </header>
+
+    <div class="mt-6 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+      <article class="glass-card rounded-[2rem] p-6">
+        <h2 class="text-2xl">Perfil sincronizado</h2>
+        <div class="mt-5 grid gap-4 md:grid-cols-2">
+          <div class="rounded-3xl border border-[var(--line)] bg-white/70 p-4">
+            <p class="text-sm text-[var(--muted)]">Correo</p>
+            <p class="mt-2 font-semibold">{{ profile()?.email || user()?.email }}</p>
+          </div>
+          <div class="rounded-3xl border border-[var(--line)] bg-white/70 p-4">
+            <p class="text-sm text-[var(--muted)]">Rol</p>
+            <p class="mt-2 font-semibold">{{ profile()?.role || 'employee' }}</p>
+          </div>
+          <div class="rounded-3xl border border-[var(--line)] bg-white/70 p-4">
+            <p class="text-sm text-[var(--muted)]">Certificacion objetivo</p>
+            <p class="mt-2 font-semibold">{{ profile()?.target_certification || 'Pendiente' }}</p>
+          </div>
+          <div class="rounded-3xl border border-[var(--line)] bg-white/70 p-4">
+            <p class="text-sm text-[var(--muted)]">Estilo de aprendizaje</p>
+            <p class="mt-2 font-semibold">{{ learningStyle() }}</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="glass-card rounded-[2rem] p-6">
+        <h2 class="text-2xl">Lo que sigue</h2>
+        <ul class="mt-5 space-y-3 pl-5 text-[var(--muted)]">
+          <li>Crear onboarding de Gini Profile para nivel, horas y preferencia.</li>
+          <li>Modelar organizaciones, equipos e invitaciones del manager.</li>
+          <li>Montar catalogo de certificaciones y primer plan semanal.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>

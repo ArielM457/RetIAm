@@ -1,0 +1,120 @@
+<section class="min-h-dvh px-4 py-8 md:px-8">
+  <div class="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+    <article class="glass-card relative overflow-hidden rounded-[2rem] p-8 md:p-12">
+      <div class="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#0f766e,#f28c5a)]"></div>
+      <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[var(--brand)]">
+        RetAIM
+      </p>
+      <h1 class="max-w-xl text-4xl leading-tight md:text-6xl">
+        Certificaciones tecnicas con agentes que entienden el ritmo real del equipo.
+      </h1>
+      <p class="mt-5 max-w-2xl text-lg leading-8 text-[var(--muted)]">
+        Esta base deja listo el acceso con Supabase, el onboarding de perfiles y el primer
+        dashboard para seguir el MVP de la hackathon.
+      </p>
+
+      <div class="mt-10 grid gap-4 md:grid-cols-3">
+        <div class="rounded-3xl border border-[var(--line)] bg-white/65 p-4">
+          <p class="text-sm text-[var(--muted)]">Auth</p>
+          <p class="mt-2 font-semibold">Correo corporativo y sesion Supabase</p>
+        </div>
+        <div class="rounded-3xl border border-[var(--line)] bg-white/65 p-4">
+          <p class="text-sm text-[var(--muted)]">Perfil</p>
+          <p class="mt-2 font-semibold">Sincronizacion inicial con tabla `profiles`</p>
+        </div>
+        <div class="rounded-3xl border border-[var(--line)] bg-white/65 p-4">
+          <p class="text-sm text-[var(--muted)]">Paso siguiente</p>
+          <p class="mt-2 font-semibold">Equipos, rutas y dashboard manager</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="glass-card rounded-[2rem] p-6 md:p-8">
+      <div class="mb-6 flex rounded-full border border-[var(--line)] bg-white/70 p-1">
+        <button
+          class="flex-1 rounded-full px-4 py-3 text-sm font-semibold transition"
+          [ngClass]="mode() === 'signin' ? 'bg-[var(--ink)] text-white' : ''"
+          (click)="setMode('signin')"
+          type="button"
+        >
+          Iniciar sesion
+        </button>
+        <button
+          class="flex-1 rounded-full px-4 py-3 text-sm font-semibold transition"
+          [ngClass]="mode() === 'signup' ? 'bg-[var(--ink)] text-white' : ''"
+          (click)="setMode('signup')"
+          type="button"
+        >
+          Crear cuenta
+        </button>
+      </div>
+
+      <form class="space-y-4" [formGroup]="form" (ngSubmit)="submit()">
+        @if (mode() === 'signup') {
+          <label class="block">
+            <span class="mb-2 block text-sm font-medium">Nombre</span>
+            <input
+              class="w-full rounded-2xl border border-[var(--line)] bg-white/80 px-4 py-3 outline-none transition focus:border-[var(--brand)]"
+              formControlName="fullName"
+              placeholder="Ana Torres"
+              type="text"
+            />
+          </label>
+
+          <label class="block">
+            <span class="mb-2 block text-sm font-medium">Rol inicial</span>
+            <select
+              class="w-full rounded-2xl border border-[var(--line)] bg-white/80 px-4 py-3 outline-none transition focus:border-[var(--brand)]"
+              formControlName="role"
+            >
+              <option value="employee">Employee</option>
+              <option value="manager">Manager</option>
+            </select>
+          </label>
+        }
+
+        <label class="block">
+          <span class="mb-2 block text-sm font-medium">Correo corporativo</span>
+          <input
+            class="w-full rounded-2xl border border-[var(--line)] bg-white/80 px-4 py-3 outline-none transition focus:border-[var(--brand)]"
+            formControlName="email"
+            placeholder="persona@empresa.com"
+            type="email"
+          />
+          @if (submitted() && form.controls.email.invalid) {
+            <span class="mt-2 block text-sm text-red-600">Ingresa un correo valido.</span>
+          }
+        </label>
+
+        <label class="block">
+          <span class="mb-2 block text-sm font-medium">Contrasena</span>
+          <input
+            class="w-full rounded-2xl border border-[var(--line)] bg-white/80 px-4 py-3 outline-none transition focus:border-[var(--brand)]"
+            formControlName="password"
+            placeholder="Minimo 8 caracteres"
+            type="password"
+          />
+          @if (submitted() && form.controls.password.invalid) {
+            <span class="mt-2 block text-sm text-red-600">
+              Usa una contrasena de al menos 8 caracteres.
+            </span>
+          }
+        </label>
+
+        @if (error()) {
+          <div class="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+            {{ error() }}
+          </div>
+        }
+
+        <button
+          class="w-full rounded-2xl bg-[var(--ink)] px-4 py-3 font-semibold text-white transition hover:translate-y-[-1px] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
+          [disabled]="loading()"
+          type="submit"
+        >
+          {{ loading() ? 'Procesando...' : mode() === 'signup' ? 'Crear cuenta' : 'Entrar' }}
+        </button>
+      </form>
+    </article>
+  </div>
+</section>
