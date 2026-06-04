@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RetAIM | Recordatorios</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Shared Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#363a3d",
+                    "secondary-container": "#0053db",
+                    "on-secondary": "#002a78",
+                    "inverse-on-surface": "#2d3134",
+                    "on-tertiary-fixed-variant": "#3323cc",
+                    "on-surface": "#e0e2e6",
+                    "primary-fixed-dim": "#d2bbff",
+                    "outline-variant": "#4a4455",
+                    "on-tertiary-fixed": "#0f0069",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed": "#00174b",
+                    "error": "#ffb4ab",
+                    "on-surface-variant": "#ccc3d8",
+                    "outline": "#958da1",
+                    "background": "#101417",
+                    "on-secondary-fixed-variant": "#003ea8",
+                    "tertiary-container": "#564eec",
+                    "surface-container-high": "#272a2d",
+                    "on-primary-fixed-variant": "#5a00c6",
+                    "error-container": "#93000a",
+                    "on-secondary-container": "#cdd7ff",
+                    "primary-fixed": "#eaddff",
+                    "surface-container-lowest": "#0b0f11",
+                    "surface-container-highest": "#323538",
+                    "surface": "#101417",
+                    "on-primary": "#3f008e",
+                    "surface-tint": "#d2bbff",
+                    "on-error": "#690005",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "secondary-fixed": "#dbe1ff",
+                    "primary": "#d2bbff",
+                    "on-tertiary-container": "#e6e3ff",
+                    "surface-dim": "#101417",
+                    "surface-container": "#1d2023",
+                    "surface-variant": "#323538",
+                    "tertiary-fixed-dim": "#c3c0ff",
+                    "surface-container-low": "#191c1f",
+                    "on-tertiary": "#1d00a5",
+                    "inverse-primary": "#732ee4",
+                    "tertiary-fixed": "#e2dfff",
+                    "secondary": "#b4c5ff",
+                    "inverse-surface": "#e0e2e6",
+                    "on-primary-fixed": "#25005a",
+                    "primary-container": "#7c3aed",
+                    "on-primary-container": "#ede0ff",
+                    "tertiary": "#c3c0ff",
+                    "on-background": "#e0e2e6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "margin-desktop": "48px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "section-gap": "80px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-sm": ["Plus Jakarta Sans"],
+                    "display-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "title-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                    "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #0F172A; color: #e0e2e6; }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(124, 58, 237, 0.15);
+        }
+        .inner-glow {
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+        }
+        .ai-pulse {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; filter: brightness(1); }
+            50% { opacity: 0.8; filter: brightness(1.3) drop-shadow(0 0 8px #7C3AED); }
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #7C3AED 0%, #2563EB 100%);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 h-[72px] flex items-center justify-between px-margin-desktop max-w-container-max mx-auto bg-surface/70 backdrop-blur-md dark:bg-surface/70 border-b border-white/10 shadow-sm">
+<div class="flex items-center gap-8">
+<span class="font-display-lg text-display-lg-mobile text-primary dark:text-primary tracking-tight">RetAIM</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Inicio</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Mi Plan</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Sesiones</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Brechas</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all p-2 rounded-full hover:bg-surface-variant/20">notifications</button>
+<div class="w-10 h-10 rounded-full border-2 border-primary overflow-hidden">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="A professional headshot of a young male professional with a confident smile, wearing a dark navy blazer over a clean white shirt. The background is a soft, out-of-focus modern office setting with warm ambient lighting. The overall color palette is professional and clean, with cool tones and subtle primary violet accents reflecting the RetAIM brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJXRnkjmiwFxRFL8PNo9I6G4KnMMasag3KLXPtAwyulz3MIWxCgdvKK2BgZN8Mk49tF7vOxjEgfw2T9as4A2uO4eXN66C8a54JeT4GaIL5tgKXQO7MyimO_Nsv6H6GUqTRl1oNwaDuDTFphStCQ_VXrIkyXheKVarUL8a8YZaUwuOOCFvEehdbtqJURfE9SleraKjLZLLBMpmi6scglIRtNBxyJ4zbjeBWvHzeAjmc5uKUMHv1Yp4eG-m-kS-OB8oVOufmJhqfgi58"/>
+</div>
+</div>
+</header>
+<main class="mt-[72px] pt-12 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6">
+<div>
+<h1 class="font-headline-md text-headline-md mb-2">Recordatorios de Aprendizaje</h1>
+<p class="text-on-surface-variant max-w-2xl">Gestiona tus micro-sesiones programadas por la IA para optimizar la retención de conocimientos técnicos.</p>
+</div>
+<button class="flex items-center gap-2 px-6 py-3 rounded-xl border border-outline hover:bg-surface-variant/30 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+<span class="font-label-md text-label-md">Regenerar recordatorios</span>
+</button>
+</div>
+<!-- AI Suggestion Highlight Card -->
+<section class="mb-12">
+<div class="glass-panel inner-glow rounded-2xl p-8 relative overflow-hidden group">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/10 blur-[80px] rounded-full group-hover:bg-primary/20 transition-all duration-700"></div>
+<div class="relative z-10 flex flex-col md:flex-row gap-8 items-center">
+<div class="w-16 h-16 rounded-2xl bg-primary-container flex items-center justify-center ai-pulse shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-on-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div class="flex-1 text-center md:text-left">
+<div class="flex items-center justify-center md:justify-start gap-3 mb-2">
+<h2 class="font-title-lg text-title-lg text-primary">Contexto sugerido por la IA</h2>
+<span class="px-2 py-0.5 rounded bg-primary/10 border border-primary/20 text-[10px] font-bold text-primary tracking-widest uppercase">OPTIMIZADO</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface">
+                            "Detectamos que tu nivel de energía es mayor entre las 10:00 y las 11:30 AM. Hemos ajustado los tonos para que sean <span class="text-primary font-semibold">Directos</span> y enfocados en la resolución de problemas de arquitectura Kubernetes."
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Reminders Feed -->
+<section class="space-y-6">
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mb-4">Próximos Recordatorios</h3>
+<!-- Reminder Item 1 -->
+<div class="group relative flex flex-col md:flex-row items-center gap-6 p-6 bg-surface-container rounded-xl border border-white/5 hover:border-primary/40 transition-all hover:bg-surface-container-high">
+<div class="flex-shrink-0 w-24 text-center md:text-left">
+<span class="block text-primary font-bold text-xl">Hoy</span>
+<span class="text-on-surface-variant text-sm">10:30 AM</span>
+</div>
+<div class="flex-1">
+<div class="flex flex-wrap items-center gap-3 mb-2">
+<span class="font-label-sm text-label-sm px-3 py-1 rounded-full border border-tertiary text-tertiary bg-tertiary/5">Tono: Directo</span>
+<span class="font-label-sm text-label-sm px-3 py-1 rounded-full border border-green-400/50 text-green-400 bg-green-400/5">Programado</span>
+</div>
+<p class="text-on-surface text-body-md leading-relaxed">
+                        Es momento de revisar el diagrama de servicios. La persistencia de datos en el nodo B presenta una brecha de conocimiento crítica. ¿Iniciamos ahora?
+                    </p>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg hover:bg-surface-variant text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-surface-variant text-on-surface-variant hover:text-error transition-all">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+<!-- Reminder Item 2 -->
+<div class="group relative flex flex-col md:flex-row items-center gap-6 p-6 bg-surface-container rounded-xl border border-white/5 hover:border-primary/40 transition-all hover:bg-surface-container-high">
+<div class="flex-shrink-0 w-24 text-center md:text-left">
+<span class="block text-primary font-bold text-xl">Hoy</span>
+<span class="text-on-surface-variant text-sm">03:15 PM</span>
+</div>
+<div class="flex-1">
+<div class="flex flex-wrap items-center gap-3 mb-2">
+<span class="font-label-sm text-label-sm px-3 py-1 rounded-full border border-primary text-primary bg-primary/5">Tono: Persuasivo</span>
+<span class="font-label-sm text-label-sm px-3 py-1 rounded-full border border-green-400/50 text-green-400 bg-green-400/5">Programado</span>
+</div>
+<p class="text-on-surface text-body-md leading-relaxed">
+                        Dominar la seguridad en el Cloud te separa de los demás expertos. Dedica 10 minutos a repasar las políticas de IAM para tu certificación.
+                    </p>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg hover:bg-surface-variant text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-surface-variant text-on-surface-variant hover:text-error transition-all">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+<!-- Reminder Item 3 (Inactive/Sent) -->
+<div class="group relative flex flex-col md:flex-row items-center gap-6 p-6 bg-surface-container/40 rounded-xl border border-white/5 opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
+<div class="flex-shrink-0 w-24 text-center md:text-left">
+<span class="block text-on-surface-variant font-bold text-xl">Ayer</span>
+<span class="text-on-surface-variant text-sm">09:00 AM</span>
+</div>
+<div class="flex-1">
+<div class="flex flex-wrap items-center gap-3 mb-2">
+<span class="font-label-sm text-label-sm px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant">Tono: Informativo</span>
+<span class="font-label-sm text-label-sm px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant bg-surface-variant/10">Completado</span>
+</div>
+<p class="text-on-surface text-body-md leading-relaxed">
+                        Resumen semanal disponible: Has cerrado 3 brechas de seguridad en Terraform. Revisa tu progreso en el panel de control.
+                    </p>
+</div>
+<div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 rounded-lg hover:bg-surface-variant text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined">history</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Action Bar Mobile Floating -->
+<div class="md:hidden fixed bottom-6 right-6 z-50">
+<button class="w-14 h-14 rounded-full primary-gradient text-white flex items-center justify-center shadow-2xl shadow-primary/40 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+</main>
+<!-- SideNavBar (AI Assistant Overlay) -->
+<aside class="fixed right-0 top-0 h-full z-40 flex flex-col p-4 bg-surface-container/70 backdrop-blur-xl dark:bg-surface-container/70 border-l border-white/10 shadow-2xl shadow-primary/15 w-[380px] hidden lg:flex">
+<div class="flex items-center gap-4 mb-8 p-2">
+<div class="w-12 h-12 rounded-full primary-gradient p-0.5">
+<div class="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
+<img alt="AI Agent Avatar" class="w-full h-full object-cover" data-alt="A stylized digital representation of an AI entity, featuring a glowing sphere of violet and blue particles swirling in a dark, minimalist void. The light effects are sharp and sophisticated, suggesting high intelligence and technical prowess. The aesthetic is clean and modern, perfectly matching the professional enterprise SaaS environment of RetAIM." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzY6yr4ZXr2kPpAoU2rKkFw9trlFj0CjbbhTi5nYoIqbkNuA4F8GCv84ukTTxGv0n-reBqocbnVOCcIdn31wBwXb1O333QaS5Z_Mk73DLWR_gQC7S377Ztf0z0vKFonWnOctIWOEedHg-Bqk7hfD_CPrCZaYuoA8mN8ccvDMqjj3dEzPXKzaDChVpGTz5RMqeKPOma4VjyghcxWfniDmd5Ki7Rs0kwIY-JjDe9gXeifR9vHxAFYEck4TPkWnXqUy_EWdRCv6ecBJXH"/>
+</div>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-primary">RetAIM Assistant</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">AI-Powered Expert</p>
+</div>
+</div>
+<button class="w-full py-4 mb-8 primary-gradient text-white font-bold rounded-xl shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all">
+            New Chat
+        </button>
+<nav class="flex flex-col gap-2 flex-1">
+<a class="flex items-center gap-3 p-4 bg-primary-container text-on-primary-container rounded-xl" href="#">
+<span class="material-symbols-outlined">smart_toy</span>
+<span class="font-label-sm text-label-sm">AI Agent</span>
+</a>
+<a class="flex items-center gap-3 p-4 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-sm text-label-sm">History</span>
+</a>
+<a class="flex items-center gap-3 p-4 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-sm text-label-sm">Resources</span>
+</a>
+<a class="flex items-center gap-3 p-4 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+</nav>
+<div class="p-4 bg-surface-container-high rounded-2xl border border-white/5 mt-auto">
+<p class="text-xs text-on-surface-variant mb-3">Tasa de retención actual</p>
+<div class="flex items-center justify-between mb-2">
+<span class="font-bold text-primary">84%</span>
+<span class="text-[10px] text-green-400 font-bold">+5% este mes</span>
+</div>
+<div class="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full primary-gradient" style="width: 84%"></div>
+</div>
+</div>
+</aside>
+<script>
+        // Simple interaction for the regenerate button
+        const regenBtn = document.querySelector('button:has(span:contains("refresh"))');
+        if(regenBtn) {
+            regenBtn.addEventListener('click', () => {
+                regenBtn.classList.add('animate-spin');
+                setTimeout(() => {
+                    regenBtn.classList.remove('animate-spin');
+                    alert('Recordatorios optimizados por RetAIM AI');
+                }, 1200);
+            });
+        }
+
+        // Custom selector helper for pseudo-selectors not native to JS
+        function contains(selector, text) {
+          var elements = document.querySelectorAll(selector);
+          return Array.prototype.filter.call(elements, function(element){
+            return RegExp(text).test(element.textContent);
+          });
+        }
+    </script>
+</body></html>

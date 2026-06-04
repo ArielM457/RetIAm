@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RetAIM | Selección de Certificaciones</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#d2bbff",
+                    "surface-container-high": "#272a2d",
+                    "surface-bright": "#363a3d",
+                    "outline": "#958da1",
+                    "primary-fixed": "#eaddff",
+                    "outline-variant": "#4a4455",
+                    "tertiary-fixed-dim": "#c3c0ff",
+                    "tertiary-container": "#564eec",
+                    "surface": "#101417",
+                    "surface-dim": "#101417",
+                    "on-secondary-fixed-variant": "#003ea8",
+                    "on-tertiary-fixed": "#0f0069",
+                    "on-secondary-fixed": "#00174b",
+                    "error-container": "#93000a",
+                    "inverse-on-surface": "#2d3134",
+                    "background": "#101417",
+                    "on-background": "#e0e2e6",
+                    "on-primary-container": "#ede0ff",
+                    "on-primary-fixed": "#25005a",
+                    "on-error": "#690005",
+                    "on-tertiary": "#1d00a5",
+                    "primary-container": "#7c3aed",
+                    "surface-container-lowest": "#0b0f11",
+                    "on-secondary": "#002a78",
+                    "on-secondary-container": "#cdd7ff",
+                    "surface-container-low": "#191c1f",
+                    "error": "#ffb4ab",
+                    "primary": "#d2bbff",
+                    "on-primary-fixed-variant": "#5a00c6",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "surface-container-highest": "#323538",
+                    "inverse-surface": "#e0e2e6",
+                    "inverse-primary": "#732ee4",
+                    "tertiary": "#c3c0ff",
+                    "on-primary": "#3f008e",
+                    "surface-container": "#1d2023",
+                    "secondary-fixed": "#dbe1ff",
+                    "on-tertiary-fixed-variant": "#3323cc",
+                    "primary-fixed-dim": "#d2bbff",
+                    "tertiary-fixed": "#e2dfff",
+                    "on-surface-variant": "#ccc3d8",
+                    "secondary": "#b4c5ff",
+                    "on-tertiary-container": "#e6e3ff",
+                    "surface-variant": "#323538",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#0053db",
+                    "on-surface": "#e0e2e6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "section-gap": "80px",
+                    "container-max": "1280px",
+                    "base": "4px",
+                    "margin-desktop": "48px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Plus Jakarta Sans"],
+                    "label-md": ["Inter"],
+                    "title-lg": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "label-sm": ["Inter"],
+                    "display-lg-mobile": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #101417;
+            color: #e0e2e6;
+            scroll-behavior: smooth;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+        }
+        .shelf-container::-webkit-scrollbar {
+            display: none;
+        }
+        .shelf-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .glow-effect {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, rgba(124, 58, 237, 0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased overflow-x-hidden">
+<!-- Header Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 h-[72px] flex items-center justify-between px-margin-desktop max-w-container-max mx-auto bg-surface/70 backdrop-blur-md border-b border-white/10 shadow-sm">
+<div class="flex items-center gap-8">
+<span class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight">RetAIM</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Inicio</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Mi Plan</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Sesiones</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Brechas</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-variant/50 transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXvGky_9QnADlciXQafbtXqTAHRvsnBxV5YcPLCMcflhefA_jksAnGfXW_qZUvyJFHlvsUEyXfg6BBNdlol2_kde29ffwtPaL8roGpSj-wZXQEanBw5ThrjwDv-6ECCYpIJAaF1c7x5Z-561hW0-RwkUupWONFTBCAb66DVEN6w4sJXgAdCNxyvQEShOYX7NcMU3oBTMP7E8vXMWTRHJUJRMIrtP0p6EwdmBXGKVZYsVNyI7M_yyk5g8U9pgWDCGkFFOcNrsMQowOC"/>
+</div>
+</div>
+</nav>
+<main class="pt-[120px] pb-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Hero Context -->
+<header class="mb-12">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-4">Catálogo de Certificaciones</h1>
+<p class="text-on-surface-variant max-w-2xl font-body-lg text-body-lg">Explora rutas de aprendizaje técnico diseñadas para potenciar tus habilidades en IA y computación en la nube.</p>
+</header>
+<!-- Horizontal Filters -->
+<div class="flex flex-wrap items-center gap-3 mb-10 overflow-x-auto pb-4 scrollbar-hide">
+<button class="px-6 py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md transition-all">Todos</button>
+<button class="px-6 py-2.5 rounded-full border border-outline-variant text-on-surface-variant hover:bg-surface-variant/50 font-label-md text-label-md transition-all">Azure</button>
+<button class="px-6 py-2.5 rounded-full border border-outline-variant text-on-surface-variant hover:bg-surface-variant/50 font-label-md text-label-md transition-all">AWS</button>
+<button class="px-6 py-2.5 rounded-full border border-outline-variant text-on-surface-variant hover:bg-surface-variant/50 font-label-md text-label-md transition-all">GitHub</button>
+<button class="px-6 py-2.5 rounded-full border border-outline-variant text-on-surface-variant hover:bg-surface-variant/50 font-label-md text-label-md transition-all">Google Cloud</button>
+</div>
+<!-- Section 1: Recomendados -->
+<section class="mb-section-gap">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline-md text-headline-md text-on-background">Recomendados para ti</h2>
+<a class="text-primary font-label-md text-label-md hover:underline" href="#">Ver todo</a>
+</div>
+<div class="shelf-container flex overflow-x-auto gap-gutter pb-8 snap-x">
+<!-- Card 1 -->
+<div class="min-w-[340px] md:min-w-[420px] bg-surface-container rounded-xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all cursor-pointer group snap-start" onclick="openDrawer('Azure AI Engineer Associate', 'Diseña y construye soluciones de IA utilizando los servicios de Microsoft Azure.')">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A sophisticated abstract digital visualization representing artificial intelligence neural networks. The scene is dominated by glowing nodes and interconnected cyan and violet light filaments against a deep obsidian background. Soft volumetric lighting creates a sense of immense depth and technological mastery, aligning with a high-end enterprise AI aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAubDxevZG6f9AyTMz2x3v4bxUjxGfUitwe1yiAWfD6u5bRbxm8b4xMvt5GNgkqx7hsojTZP5crpuw_tihVjRc9CoUvco82ljYQHAQ1k6fH4tR-sStIdoc-I4t_6uyLQWvwzPBJMEAQROlIrr2LTnCBHNhoyKOfjSJJfMKgUFTwe5GpXotQeFkts68ewGnWDNoQqHhXTv48UGLtQns-383-gPajQWWo4ZyPQaCPdftMxpgb29btEhtIXNgtQXFTb1-DF0kcmywbcQ8K"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+<span class="absolute top-4 left-4 px-3 py-1 bg-surface-container-highest text-primary border border-primary/30 rounded-full font-label-sm text-label-sm">Certificación</span>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Azure AI Engineer Associate</h3>
+<p class="text-on-surface-variant font-label-md text-label-md mb-4">Microsoft Azure</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span> Intermedio
+                                </span>
+<span class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 42h
+                                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[340px] md:min-w-[420px] bg-surface-container rounded-xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all cursor-pointer group snap-start" onclick="openDrawer('AWS Certified Machine Learning', 'Aprende a diseñar e implementar soluciones de ML escalables en la nube de AWS.')">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="An expansive, dark cosmic scene with flowing rivers of golden data and digital particles streaming across the horizon. The composition is clean and minimalist, using high-contrast lighting to highlight the intricate detail of the light trails. The overall mood is visionary and suggests a global reach of cloud computing and intelligence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATAZPhaI7Jeg20q69K0CawoMd65P2qEuE7VR8wXcvYed1dGfNzW3vUgr2rJw_zI3l_QJ0eykrkBjwHW2vQ7SEqzlBCSM5ZscGK2S1aY5CZ88QTmoWCurH3_AwPBl5-uO3W_T3oOS5Qa8luqbu-RA06MC71N-qXvMjFIYsM9gmG_7RB8RZpJ_UvOTeKciw_GnvGzRTQkoLkXT-Vv2HNwtuDeiH0bK8Kqapwo_aJcC1PzHsNxaW73CWsfVrkwSPDYl8S0uchblBPm1es"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+<span class="absolute top-4 left-4 px-3 py-1 bg-surface-container-highest text-primary border border-primary/30 rounded-full font-label-sm text-label-sm">Certificación</span>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">AWS Certified Machine Learning</h3>
+<p class="text-on-surface-variant font-label-md text-label-md mb-4">Amazon Web Services</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span> Avanzado
+                                </span>
+<span class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 58h
+                                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[340px] md:min-w-[420px] bg-surface-container rounded-xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all cursor-pointer group snap-start" onclick="openDrawer('GitHub Actions Architect', 'Automatiza flujos de trabajo de CI/CD para optimizar el ciclo de vida de desarrollo.')">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A clean, editorial-style macro photography shot of abstract glass prisms refracting light into soft, sharp spectra of blue and white. The background is a perfectly smooth, dark slate grey. The lighting is precise and technical, creating a professional atmosphere that evokes the precision of software architecture and automated workflows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBugCm-6UARBLpkcXrZUWmezWt5zIFiVA2V16pg-WwjxGsjQbTmqOo0mSn_vO8melRue_qSthU9L5tPFKtM6ivXFL4fRKS8pQnfnJIuejL-UKBAjYlMAcI_snL7CaEqKCilWLb9NBFcS0LYnsnM0pAgguC8G70QrZbN_STjyW4fZzMUkxGhBZ3WAWF_HFcavRQDHOe3gtLi70u3VGWMiJD2N0d-pWKtYNhSqLRxS7CZIJZQ7FnLZPZeKc9jjWiOKTyDL3krblveV_OZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+<span class="absolute top-4 left-4 px-3 py-1 bg-surface-container-highest text-primary border border-primary/30 rounded-full font-label-sm text-label-sm">Certificación</span>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">GitHub Actions Architect</h3>
+<p class="text-on-surface-variant font-label-md text-label-md mb-4">GitHub Global</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span> Principiante
+                                </span>
+<span class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 24h
+                                </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Populares en tu empresa -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline-md text-headline-md text-on-background">Más populares en tu empresa</h2>
+<a class="text-primary font-label-md text-label-md hover:underline" href="#">Ver todo</a>
+</div>
+<div class="shelf-container flex overflow-x-auto gap-gutter pb-8 snap-x">
+<!-- Card 4 -->
+<div class="min-w-[300px] bg-surface-container-low rounded-xl overflow-hidden border border-white/5 hover:border-primary/30 transition-all cursor-pointer group snap-start" onclick="openDrawer('Google Professional Data Engineer', 'Analiza y transforma datos en conocimiento para decisiones de negocio.')">
+<div class="h-40 relative">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="An abstract visualization of large-scale data analytics. Shimmering glass cubes and transparent layers of data charts float in a dark, atmospheric environment. The palette is professional, focusing on shades of navy, charcoal, and electric blue, with soft focus depth-of-field effects that emphasize high-performance enterprise technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACi97_oeNYwkPNQmEq6gXHT3inhddI7uxKOsjPvm9o1sdGwZio_u4tk0IBdiZLjN5tndywVjzyjzzoY0v_AnM4205cX-4cwW2rNx-E33ItfkGUWk0DQ08vjssS0PLXj7GwPEnG5O1m6921lPMvpC2g0A8OzByFONsV1r0yEHKluPNKNVfqZXIF3AoSoiPRBHZBsAWnYhAxLd7uem7SxTQpxA7Avajm8Iy0pydpnUudj-CtqXaYx0lispwdzbDBZw5by6p-loxHVjZC"/>
+</div>
+<div class="p-5">
+<h3 class="font-title-lg text-title-lg text-on-background mb-1">Data Engineer</h3>
+<p class="text-on-surface-variant font-label-sm text-label-sm mb-3">Google Cloud</p>
+<div class="flex items-center gap-3">
+<div class="w-full h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="w-[75%] h-full bg-gradient-to-r from-secondary-container to-primary"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary">75%</span>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="min-w-[300px] bg-surface-container-low rounded-xl overflow-hidden border border-white/5 hover:border-primary/30 transition-all cursor-pointer group snap-start" onclick="openDrawer('Certified Kubernetes Administrator', 'Domina la orquestación de contenedores a escala empresarial.')">
+<div class="h-40 relative">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="A clean architectural view of modular structures in a futuristic, dark aesthetic. The scene uses subtle blue and cyan highlights to define edges, representing the structured and scalable nature of containerization. The lighting is soft and ambient, creating a high-tech, professional atmosphere suited for advanced devops training." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwk031d747y92B3TF7cU6horWyCfL6voFvdpznjuy39GoBPJQJiIV9ClRekJ0Oxxb-dlsXS4B1xvlqNu1x2w9WENnkqItitT9rlIosAhBVIAHPmY7nNSkxnou0pLT2XL3HatRhjuQCo2jGHyxAdMF8f1IEeEZFoTSD51wAP4TWJ6IYqhqs_zCK8dNfk2C9FOUwUk0bCw1h_Ygo624D1tt0Bt3FdOIzfQ_hQ7QqxIMhiu0aonggYn2o2Q4eKhcfnqqmQmdjy8-gT9a9"/>
+</div>
+<div class="p-5">
+<h3 class="font-title-lg text-title-lg text-on-background mb-1">CKA - Kubernetes</h3>
+<p class="text-on-surface-variant font-label-sm text-label-sm mb-3">Cloud Native Computing</p>
+<div class="flex items-center gap-3">
+<div class="w-full h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="w-[40%] h-full bg-gradient-to-r from-secondary-container to-primary"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary">40%</span>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="min-w-[300px] bg-surface-container-low rounded-xl overflow-hidden border border-white/5 hover:border-primary/30 transition-all cursor-pointer group snap-start" onclick="openDrawer('AWS Solutions Architect', 'Diseña arquitecturas robustas y eficientes en la infraestructura de AWS.')">
+<div class="h-40 relative">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="An intricate array of futuristic server racks glowing with soft indigo light in a dark, high-security data center environment. The perspective is dynamic, leading the eye into the depth of the server aisles. The visual style is premium and corporate, with a focus on reliability, scalability, and modern infrastructure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLfetsODg0JXfHZAii5wqNcIN0MduO33tkkPJHxdKGjcNmbHzHWsp4jZlf9aP2MyiWiRXN7VKt9d2OfPzL5akH8lhdt7wf222LpuHRKpYBE8kIdpgvm1A43T6fFVjQwY6RlVUGH8N8fZoV-Pt-6lyJAC--9gEcgRr_EGiPvEYWRDgWsfYsETc7zhq3ubtVwn9sUQbbzBvHcClGFp3UT7lTfHmHMZRduMGdGwOXENH9eAXd_SO1ijpDJvHWrORVYBqcSidw8DILzrrt"/>
+</div>
+<div class="p-5">
+<h3 class="font-title-lg text-title-lg text-on-background mb-1">Solutions Architect</h3>
+<p class="text-on-surface-variant font-label-sm text-label-sm mb-3">AWS Associate</p>
+<div class="flex items-center gap-3">
+<div class="w-full h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="w-[90%] h-full bg-gradient-to-r from-secondary-container to-primary"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary">90%</span>
+</div>
+</div>
+</div>
+<!-- Card 7 -->
+<div class="min-w-[300px] bg-surface-container-low rounded-xl overflow-hidden border border-white/5 hover:border-primary/30 transition-all cursor-pointer group snap-start" onclick="openDrawer('Terraform HashiCorp Certified', 'Infraestructura como código para multi-cloud y automatización extrema.')">
+<div class="h-40 relative">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="Minimalist abstract digital landscape featuring floating geometric slabs and digital code overlays. The aesthetic is clean and editorial, using a restricted color palette of deep blacks, greys, and vibrant violet accents. The composition suggests the building blocks of infrastructure and the precision of automated code execution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB41m05QZ5D8694r73mcnyaImYJf2cY2dn-1zm01_tgARgSAVETykBUPMOqyoIQNrCcQ_XaICYs64DVyQi1nvH2tZGdV3W_szwpcj5GmFqebpzoL4n9m0JUXzwfyDXH4T-p1pPcZBDWfKpU5_rUMjI1tuHXu0W-TyDZ-I8WEKWphaV8tVp8SUej8BXgusG3kQ-lR5tMLBb3cC1AROkZwUUAaDzW0VLzUkul4maeViUra-YKGhGVPBNdk2kx2YSCAvPlmCnnuUTftQe-"/>
+</div>
+<div class="p-5">
+<h3 class="font-title-lg text-title-lg text-on-background mb-1">Terraform Cert</h3>
+<p class="text-on-surface-variant font-label-sm text-label-sm mb-3">HashiCorp</p>
+<div class="flex items-center gap-3">
+<div class="w-full h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="w-[20%] h-full bg-gradient-to-r from-secondary-container to-primary"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary">20%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Side Drawer (Hidden by default) -->
+<div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] opacity-0 pointer-events-none transition-opacity duration-300" id="drawer-overlay" onclick="closeDrawer()"></div>
+<div class="fixed right-0 top-0 h-full w-full md:w-[480px] bg-surface-container/80 backdrop-blur-xl z-[70] border-l border-white/10 translate-x-full transition-transform duration-500 ease-out shadow-2xl flex flex-col" id="side-drawer">
+<!-- Close Button -->
+<button class="absolute top-6 left-[-60px] md:left-[-50px] w-12 h-12 flex items-center justify-center rounded-full bg-surface-container border border-white/10 text-on-surface hover:text-primary transition-all" onclick="closeDrawer()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="flex-1 overflow-y-auto p-8 pt-12">
+<div class="glow-effect"></div>
+<span class="text-primary font-label-md text-label-md uppercase tracking-widest mb-2 block" id="drawer-provider">MICROSOFT AZURE</span>
+<h2 class="font-display-lg text-display-lg-mobile text-on-background mb-6 leading-tight" id="drawer-title">Azure AI Engineer Associate</h2>
+<div class="flex flex-wrap gap-4 mb-8">
+<div class="px-4 py-2 bg-surface-variant/50 rounded-lg flex items-center gap-2 border border-white/5">
+<span class="material-symbols-outlined text-primary text-[20px]">equalizer</span>
+<span class="font-label-sm text-label-sm">Intermedio</span>
+</div>
+<div class="px-4 py-2 bg-surface-variant/50 rounded-lg flex items-center gap-2 border border-white/5">
+<span class="material-symbols-outlined text-primary text-[20px]">timer</span>
+<span class="font-label-sm text-label-sm">42 Horas</span>
+</div>
+<div class="px-4 py-2 bg-surface-variant/50 rounded-lg flex items-center gap-2 border border-white/5">
+<span class="material-symbols-outlined text-primary text-[20px]">workspace_premium</span>
+<span class="font-label-sm text-label-sm">Certificado Oficial</span>
+</div>
+</div>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-10 leading-relaxed" id="drawer-desc">
+                Diseña y construye soluciones de IA utilizando los servicios de Microsoft Azure. Este examen mide tu capacidad para realizar tareas técnicas como la preparación de datos y el entrenamiento de modelos de lenguaje natural.
+            </p>
+<div class="space-y-8">
+<h4 class="font-headline-sm text-headline-sm text-on-background border-b border-white/10 pb-4">Temario del curso</h4>
+<div class="space-y-6">
+<div class="flex gap-4 group">
+<div class="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 text-primary font-bold">1</div>
+<div>
+<h5 class="text-on-background font-title-lg text-title-lg group-hover:text-primary transition-colors">Configuración de Servicios de IA</h5>
+<p class="text-on-surface-variant font-body-md text-body-md mt-1">Implementación y gestión de recursos en Azure Cognitive Services.</p>
+</div>
+</div>
+<div class="flex gap-4 group">
+<div class="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 text-primary font-bold">2</div>
+<div>
+<h5 class="text-on-background font-title-lg text-title-lg group-hover:text-primary transition-colors">Computer Vision Solutions</h5>
+<p class="text-on-surface-variant font-body-md text-body-md mt-1">Análisis de imágenes y videos utilizando APIs pre-entrenadas.</p>
+</div>
+</div>
+<div class="flex gap-4 group">
+<div class="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 text-primary font-bold">3</div>
+<div>
+<h5 class="text-on-background font-title-lg text-title-lg group-hover:text-primary transition-colors">Natural Language Processing</h5>
+<p class="text-on-surface-variant font-body-md text-body-md mt-1">Extracción de entidades, análisis de sentimiento y traducción.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-8 bg-surface-container border-t border-white/10">
+<button class="w-full py-4 rounded-xl bg-gradient-to-r from-[#7C3AED] to-[#2563EB] text-white font-bold font-title-lg text-title-lg hover:shadow-[0_0_20px_rgba(124,58,237,0.4)] transition-all transform active:scale-[0.98]">
+                Comenzar Ruta de Aprendizaje
+            </button>
+</div>
+</div>
+<!-- Background Elements -->
+<div class="fixed top-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+<div class="fixed bottom-0 left-0 w-[500px] h-[500px] bg-secondary-container/5 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+<script>
+        function openDrawer(title, desc) {
+            const drawer = document.getElementById('side-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            const drawerTitle = document.getElementById('drawer-title');
+            const drawerDesc = document.getElementById('drawer-desc');
+
+            drawerTitle.innerText = title;
+            drawerDesc.innerText = desc;
+
+            drawer.classList.remove('translate-x-full');
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer() {
+            const drawer = document.getElementById('side-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+
+            drawer.classList.add('translate-x-full');
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = '';
+        }
+    </script>
+</body></html>

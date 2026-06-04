@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RetAIM - Detalle de Miembro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(124, 58, 237, 0.1);
+        }
+        .ai-glow {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, rgba(37, 99, 235, 0) 70%);
+            z-index: -1;
+            filter: blur(40px);
+        }
+        body {
+            background-color: #0F172A;
+            color: #e0e2e6;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-container": "#0053db",
+                      "on-surface": "#e0e2e6",
+                      "on-error-container": "#ffdad6",
+                      "surface-variant": "#323538",
+                      "on-tertiary-container": "#e6e3ff",
+                      "secondary": "#b4c5ff",
+                      "on-surface-variant": "#ccc3d8",
+                      "tertiary-fixed": "#e2dfff",
+                      "primary-fixed-dim": "#d2bbff",
+                      "on-tertiary-fixed-variant": "#3323cc",
+                      "secondary-fixed": "#dbe1ff",
+                      "surface-container": "#1d2023",
+                      "on-primary": "#3f008e",
+                      "tertiary": "#c3c0ff",
+                      "inverse-primary": "#732ee4",
+                      "surface-container-highest": "#323538",
+                      "inverse-surface": "#e0e2e6",
+                      "secondary-fixed-dim": "#b4c5ff",
+                      "primary": "#d2bbff",
+                      "on-primary-fixed-variant": "#5a00c6",
+                      "surface-container-low": "#191c1f",
+                      "on-secondary-container": "#cdd7ff",
+                      "error": "#ffb4ab",
+                      "on-secondary": "#002a78",
+                      "surface-container-lowest": "#0b0f11",
+                      "primary-container": "#7c3aed",
+                      "on-tertiary": "#1d00a5",
+                      "on-primary-fixed": "#25005a",
+                      "on-error": "#690005",
+                      "on-primary-container": "#ede0ff",
+                      "on-background": "#e0e2e6",
+                      "background": "#101417",
+                      "inverse-on-surface": "#2d3134",
+                      "error-container": "#93000a",
+                      "on-tertiary-fixed": "#0f0069",
+                      "on-secondary-fixed-variant": "#003ea8",
+                      "on-secondary-fixed": "#00174b",
+                      "surface-dim": "#101417",
+                      "surface": "#101417",
+                      "tertiary-fixed-dim": "#c3c0ff",
+                      "tertiary-container": "#564eec",
+                      "outline-variant": "#4a4455",
+                      "primary-fixed": "#eaddff",
+                      "outline": "#958da1",
+                      "surface-bright": "#363a3d",
+                      "surface-container-high": "#272a2d",
+                      "surface-tint": "#d2bbff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "48px",
+                      "base": "4px",
+                      "section-gap": "80px",
+                      "container-max": "1280px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "title-lg": ["Plus Jakarta Sans"],
+                      "label-md": ["Inter"],
+                      "headline-sm": ["Plus Jakarta Sans"],
+                      "display-lg": ["Plus Jakarta Sans"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "label-sm": ["Inter"],
+                      "display-lg-mobile": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full h-[72px] z-50 bg-surface/70 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_rgba(124,58,237,0.15)]">
+<div class="flex justify-between items-center px-margin-desktop max-w-container-max mx-auto w-full h-full">
+<div class="flex items-center gap-8">
+<span class="font-headline-sm text-headline-sm font-extrabold text-primary tracking-tight">RetAIM</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant font-medium hover:text-on-surface hover:text-primary transition-all duration-300 ease-in-out" href="#">Inicio</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-bold" href="#">Equipo</a>
+<a class="text-on-surface-variant font-medium hover:text-on-surface hover:text-primary transition-all duration-300 ease-in-out" href="#">Brechas</a>
+<a class="text-on-surface-variant font-medium hover:text-on-surface hover:text-primary transition-all duration-300 ease-in-out" href="#">Resumen</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transform transition-transform text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-white/10">
+<img alt="Manager Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1M79uDVI1-nphYmDmaBoXqGEfN0l6I4qf_-s49w3SZxEbTNvlFXu7GqlLash-Hk51S3flYlF6P40TfKpXi4_YQSXvu3-hNIKiIgX7rVo7f4poNiE1RmadYUNthr38zyKNMeSBGQnSmHoQS_L0Cqr0yEP1ZACJNzgcQuLq5chCpTiR8iopiPyezCOSFUOX03tuFaXeAUSPY67fY4VizVQ9bioEmCfU482U23VOOuwR1GzX_AQsv3Dc9P7i-B8CHMwKHSwMtcYTGYYe"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-[112px] pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative">
+<div class="ai-glow"></div>
+<!-- Breadcrumb & Member Title -->
+<div class="mb-8">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm mb-4">
+<span class="material-symbols-outlined text-[16px]">group</span>
+<span>Equipo</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-on-surface">David Ramos</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Profile & Metrics -->
+<div class="lg:col-span-5 space-y-gutter">
+<!-- Profile Header -->
+<div class="glass-panel p-8 rounded-xl overflow-hidden relative">
+<div class="flex flex-col items-center text-center">
+<div class="w-32 h-32 rounded-full border-4 border-primary/20 p-1 mb-6 relative">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full blur opacity-20"></div>
+<img class="w-full h-full rounded-full object-cover relative z-10" data-alt="A professional portrait of a tech expert in his late 30s, David Ramos, featuring a confident and focused expression. He has short dark hair and a neat beard. The background is a sophisticated dark corporate office with subtle blue and violet ambient lighting accents, creating a high-end technological atmosphere consistent with an AI-driven learning platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmEc37xELoEupnkqIDcfdfSDjjD3ovFmZ34ghE7AdYHyXQXru5Ex0nsYGI7OE-dNnxoWrpUIXFCCxleblDhL74gCQf_yuKORi_pY0TPLRvxOMninqAvfMWOdEfn8S6hqUcAvvvK3ZCCKHIJNhoTTC6abvpPQib9Fdqr92xjM0wFfbDlW_07hg_YDdmEBZ6TVXhqDUIo9wpjTAhFNovgw7u5Marg6ehpyuuGHE1K-EIS1mDsKctvlkfl53G2zOllKJrMEELwtibq_EP"/>
+</div>
+<h1 class="font-headline-md text-headline-md mb-1 text-on-surface">David Ramos</h1>
+<p class="text-on-surface-variant font-body-md mb-2">Senior DevOps</p>
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/30 rounded-full">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="text-primary font-label-sm">Kubernetes Administrator</span>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-white/5 space-y-6">
+<!-- Progress Metric -->
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="font-label-md text-on-surface-variant">Progreso de Certificación</span>
+<span class="font-display-lg text-primary leading-none">72%</span>
+</div>
+<div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary-container to-primary-container" style="width: 72%"></div>
+</div>
+</div>
+<!-- Status Indicators -->
+<div class="flex justify-between items-center p-4 bg-surface-container-low rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-on-surface-variant">Riesgo de Abandono</span>
+<div class="flex items-center gap-2 mt-1">
+<div class="w-3 h-3 rounded-full bg-yellow-500 shadow-[0_0_8px_rgba(234,179,8,0.5)]"></div>
+<span class="font-title-lg text-on-surface">Medio</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-on-surface-variant">Tiempo Restante</span>
+<span class="font-title-lg text-on-surface">14 días</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full py-4 border border-outline text-on-surface font-title-lg rounded-xl hover:bg-white/5 transition-all flex items-center justify-center gap-2 active:scale-[0.98]">
+<span class="material-symbols-outlined">send</span>
+                    Enviar mensaje de apoyo
+                </button>
+</div>
+<!-- Right Column: Timeline & Pending -->
+<div class="lg:col-span-7 space-y-gutter">
+<!-- Pending Modules -->
+<div class="glass-panel p-6 rounded-xl">
+<h3 class="font-headline-sm text-headline-sm mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">list_alt</span>
+                        Módulos Pendientes
+                    </h3>
+<div class="space-y-4">
+<div class="group flex items-center justify-between p-4 bg-surface-container-lowest border border-white/5 rounded-lg hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">shield</span>
+</div>
+<div>
+<p class="font-title-lg text-on-surface">Seguridad en Redes</p>
+<p class="font-label-sm text-on-surface-variant">Estimado: 4.5 horas</p>
+</div>
+</div>
+<span class="px-3 py-1 bg-surface-container-highest border border-outline-variant text-on-surface-variant font-label-sm rounded-full">Pendiente</span>
+</div>
+<div class="group flex items-center justify-between p-4 bg-surface-container-lowest border border-white/5 rounded-lg hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">cloud_sync</span>
+</div>
+<div>
+<p class="font-title-lg text-on-surface">Gestión de Clústeres</p>
+<p class="font-label-sm text-on-surface-variant">Estimado: 6 horas</p>
+</div>
+</div>
+<span class="px-3 py-1 bg-surface-container-highest border border-outline-variant text-on-surface-variant font-label-sm rounded-full">Pendiente</span>
+</div>
+<div class="group flex items-center justify-between p-4 bg-surface-container-lowest border border-white/5 rounded-lg hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">storage</span>
+</div>
+<div>
+<p class="font-title-lg text-on-surface">Almacenamiento Persistente</p>
+<p class="font-label-sm text-on-surface-variant">Estimado: 3 horas</p>
+</div>
+</div>
+<span class="px-3 py-1 bg-surface-container-highest border border-outline-variant text-on-surface-variant font-label-sm rounded-full">Pendiente</span>
+</div>
+</div>
+</div>
+<!-- Activity Timeline -->
+<div class="glass-panel p-6 rounded-xl">
+<h3 class="font-headline-sm text-headline-sm mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">timeline</span>
+                        Actividad Reciente
+                    </h3>
+<div class="relative pl-8 space-y-10">
+<!-- Vertical Line -->
+<div class="absolute left-[15px] top-2 bottom-2 w-[2px] bg-white/10"></div>
+<!-- Item 1 -->
+<div class="relative">
+<div class="absolute -left-[24px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-surface-container shadow-[0_0_10px_rgba(124,58,237,0.5)]"></div>
+<div>
+<p class="font-title-lg text-on-surface">Módulo 3 completado</p>
+<p class="font-body-md text-on-surface-variant mb-1">Configuración de Ingress y Balanceadores</p>
+<span class="font-label-sm text-outline">Ayer, 18:45</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="relative">
+<div class="absolute -left-[24px] top-1 w-4 h-4 rounded-full bg-primary-container border-4 border-surface-container"></div>
+<div>
+<p class="font-title-lg text-on-surface">Quiz aprobado</p>
+<div class="flex items-center gap-2 mb-1">
+<span class="text-on-tertiary-container bg-tertiary-container px-2 py-0.5 rounded text-label-sm">95% Score</span>
+<p class="font-body-md text-on-surface-variant">Fundamentos de Networking</p>
+</div>
+<span class="font-label-sm text-outline">Hace 3 días</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="relative">
+<div class="absolute -left-[24px] top-1 w-4 h-4 rounded-full bg-white/20 border-4 border-surface-container"></div>
+<div>
+<p class="font-title-lg text-on-surface">Sesión de estudio iniciada</p>
+<p class="font-body-md text-on-surface-variant mb-1">Duración: 2h 15min</p>
+<span class="font-label-sm text-outline">Lunes, 14:00</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-8 mt-section-gap border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto w-full gap-4">
+<div class="flex flex-col items-center md:items-start gap-1">
+<span class="font-title-lg text-title-lg font-bold text-on-surface">RetAIM AI</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-80">© 2024 RetAIM AI. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant font-label-sm hover:text-primary transition-colors" href="#">Privacidad</a>
+<a class="text-on-surface-variant font-label-sm hover:text-primary transition-colors" href="#">Términos</a>
+<a class="text-on-surface-variant font-label-sm hover:text-primary transition-colors" href="#">Soporte</a>
+</div>
+</div>
+</footer>
+</body></html>

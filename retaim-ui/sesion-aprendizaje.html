@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sesión de Aprendizaje | RetAIM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+        }
+        .inner-glow {
+            box-shadow: inset 0 1px 20px rgba(124, 58, 237, 0.1);
+        }
+        .ai-glow {
+            animation: pulse-glow 4s infinite ease-in-out;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { filter: drop-shadow(0 0 5px rgba(124, 58, 237, 0.3)); }
+            50% { filter: drop-shadow(0 0 15px rgba(124, 58, 237, 0.6)); }
+        }
+        body {
+            background-color: #0F172A; /* Base background from design system Level 0 */
+            color: #e0e2e6;
+            scroll-behavior: smooth;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 10px; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-tint": "#d2bbff",
+                      "surface-container-high": "#272a2d",
+                      "surface-bright": "#363a3d",
+                      "outline": "#958da1",
+                      "primary-fixed": "#eaddff",
+                      "outline-variant": "#4a4455",
+                      "tertiary-fixed-dim": "#c3c0ff",
+                      "tertiary-container": "#564eec",
+                      "surface": "#101417",
+                      "surface-dim": "#101417",
+                      "on-secondary-fixed-variant": "#003ea8",
+                      "on-tertiary-fixed": "#0f0069",
+                      "on-secondary-fixed": "#00174b",
+                      "error-container": "#93000a",
+                      "inverse-on-surface": "#2d3134",
+                      "background": "#101417",
+                      "on-background": "#e0e2e6",
+                      "on-primary-container": "#ede0ff",
+                      "on-primary-fixed": "#25005a",
+                      "on-error": "#690005",
+                      "on-tertiary": "#1d00a5",
+                      "primary-container": "#7c3aed",
+                      "surface-container-lowest": "#0b0f11",
+                      "on-secondary": "#002a78",
+                      "on-secondary-container": "#cdd7ff",
+                      "surface-container-low": "#191c1f",
+                      "error": "#ffb4ab",
+                      "primary": "#d2bbff",
+                      "on-primary-fixed-variant": "#5a00c6",
+                      "secondary-fixed-dim": "#b4c5ff",
+                      "surface-container-highest": "#323538",
+                      "inverse-surface": "#e0e2e6",
+                      "inverse-primary": "#732ee4",
+                      "tertiary": "#c3c0ff",
+                      "on-primary": "#3f008e",
+                      "surface-container": "#1d2023",
+                      "secondary-fixed": "#dbe1ff",
+                      "on-tertiary-fixed-variant": "#3323cc",
+                      "primary-fixed-dim": "#d2bbff",
+                      "tertiary-fixed": "#e2dfff",
+                      "on-surface-variant": "#ccc3d8",
+                      "secondary": "#b4c5ff",
+                      "on-tertiary-container": "#e6e3ff",
+                      "surface-variant": "#323538",
+                      "on-error-container": "#ffdad6",
+                      "secondary-container": "#0053db",
+                      "on-surface": "#e0e2e6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "section-gap": "80px",
+                      "container-max": "1280px",
+                      "base": "4px",
+                      "margin-desktop": "48px"
+              },
+              "fontFamily": {
+                      "headline-sm": ["Plus Jakarta Sans"],
+                      "label-md": ["Inter"],
+                      "title-lg": ["Plus Jakarta Sans"],
+                      "display-lg": ["Plus Jakarta Sans"],
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "label-sm": ["Inter"],
+                      "display-lg-mobile": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 left-0 w-full z-50 h-[72px] flex items-center justify-between px-margin-desktop bg-surface/70 backdrop-blur-md dark:bg-surface/70 border-b border-white/10 shadow-sm max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<span class="font-display-lg text-display-lg-mobile text-primary dark:text-primary tracking-tight">RetAIM</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Inicio</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Mi Plan</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Sesiones</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Brechas</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-surface-variant/30 text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<img alt="User Profile Avatar" class="w-10 h-10 rounded-full border-2 border-primary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVOpGxnfuzUM0LpeSuEKkc_KAXJ0JRG9o2ZzWlyy5X5yDl74DvpyEKVGzQQ51wcWLUDiG4EQGtUVVRK9ILNxxmb_98wsYaG84ZCiCUIepYyZRYsXsmY4nSAlA4mHvYgqKCb9satgWbJKHZUveEuGWOspqFdbmdnhLG9jJ6ZHQD7B7fzFnut70ZGQEqNCXpQVMmkB3nmhSqrXyRRdPf-epzmY-sQ8SOp213x0he1Px-77zFpB7Rx28v3Lfozrd9fqF1g9bcJKgx9JaJ"/>
+</div>
+</header>
+<main class="max-w-container-max mx-auto pt-[104px] pb-24 px-margin-desktop min-h-screen">
+<div class="flex flex-col md:flex-row gap-gutter">
+<!-- Left Column: Content -->
+<section class="flex-1 space-y-8 max-w-[calc(100%-404px)]">
+<!-- Session Header -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-primary font-label-sm text-label-sm tracking-widest uppercase">
+<span class="material-symbols-outlined text-[18px]">architecture</span>
+<span>Módulo 04: Redes Cloud</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface tracking-tight">Implementación de Redes Virtuales</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Aprende a configurar infraestructuras aisladas y escalables dentro de entornos cloud empresariales, dominando subredes, tablas de ruteo y firewalls virtuales.</p>
+</div>
+<!-- Content Image / Hero -->
+<div class="rounded-xl overflow-hidden border border-white/10 bg-surface-container-low shadow-2xl shadow-primary/5">
+<img alt="Network Infrastructure Overview" class="w-full aspect-video object-cover" data-alt="A futuristic technical visualization of a virtual private cloud network. The image shows glowing blue and violet fiber optic pathways connecting 3D translucent server racks in a dark, ethereal digital space. Thin lines of light represent data flow, with a polished, high-tech glassmorphism aesthetic that matches a professional AI certification platform. The lighting is moody and focused." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLD1qXLFYQpwwEoOkqtDGUzuLcqHUqE2josIcsy-Kfi8noGkmmpQ5o55Vdk44A2nDmdkMQDhuokGVG6eB36vOG1hx4-BgNxAN54D1Pko9FoowqgLuTJYmRpHbJZL-27lML_lN9ZILNaZtR7t4oGfvTLBvTc2HyFKU1i4x4TezccjKvyAGDVWilb1ID0vdPKRLis2YvV7VbRiDMOJC9ni6sAuHdE80GfWIiLSlu0lMLccVFyC47FJaLUd2kcVG8R9HnJI064hNPOHAb"/>
+</div>
+<!-- Resources Shelf -->
+<div class="space-y-4">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Recursos Recomendados</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<a class="flex items-center p-4 rounded-xl bg-surface-container border border-white/10 hover:border-primary/50 transition-all group" href="#">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary mr-4">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+</div>
+<div class="flex-1">
+<p class="font-label-md text-label-md text-on-surface">Guía de VPC Avanzada</p>
+<p class="text-[12px] text-on-surface-variant">PDF • 4.2 MB</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">chevron_right</span>
+</a>
+<a class="flex items-center p-4 rounded-xl bg-surface-container border border-white/10 hover:border-primary/50 transition-all group" href="#">
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/20 flex items-center justify-center text-tertiary mr-4">
+<span class="material-symbols-outlined">code</span>
+</div>
+<div class="flex-1">
+<p class="font-label-md text-label-md text-on-surface">Scripts de Configuración</p>
+<p class="text-[12px] text-on-surface-variant">GITHUB • Repository</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Evaluation Bento Card -->
+<div class="p-8 rounded-2xl bg-surface-container-high border border-primary/20 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-6 opacity-10">
+<span class="material-symbols-outlined text-[120px] text-primary">quiz</span>
+</div>
+<div class="relative z-10 space-y-6">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary font-label-sm text-label-sm">Evaluación Rápida</span>
+<span class="text-on-surface-variant text-[12px]">Pregunta 1 de 5</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface max-w-xl">¿Cuál es la función principal de un Internet Gateway en una arquitectura de red virtualizada?</h3>
+<div class="space-y-3 max-w-2xl">
+<button class="w-full text-left p-4 rounded-xl border border-white/10 bg-surface/40 hover:bg-primary/5 hover:border-primary/40 transition-all flex items-center gap-4 group">
+<div class="w-6 h-6 rounded-full border-2 border-on-surface-variant group-hover:border-primary flex items-center justify-center text-[0px]">.</div>
+<span class="font-body-md text-body-md text-on-surface">Permitir la comunicación entre subredes privadas.</span>
+</button>
+<button class="w-full text-left p-4 rounded-xl border border-primary bg-primary-container/10 transition-all flex items-center gap-4 group">
+<div class="w-6 h-6 rounded-full border-2 border-primary flex items-center justify-center">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Proporcionar un destino en las tablas de ruteo para tráfico hacia Internet.</span>
+</button>
+<button class="w-full text-left p-4 rounded-xl border border-white/10 bg-surface/40 hover:bg-primary/5 hover:border-primary/40 transition-all flex items-center gap-4 group">
+<div class="w-6 h-6 rounded-full border-2 border-on-surface-variant group-hover:border-primary flex items-center justify-center text-[0px]">.</div>
+<span class="font-body-md text-body-md text-on-surface">Cifrar automáticamente todo el tráfico saliente de la red.</span>
+</button>
+</div>
+<div class="pt-4 flex justify-end">
+<button class="px-8 py-3 rounded-full bg-gradient-to-br from-[#7C3AED] to-[#2563EB] text-white font-semibold hover:shadow-[0_0_20px_rgba(124,58,237,0.4)] transition-all">
+                                Siguiente Pregunta
+                            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Column: AI Agent (Shared Component Context) -->
+<aside class="fixed right-margin-desktop top-[104px] bottom-margin-desktop w-[380px] hidden md:flex flex-col z-40">
+<div class="glass-panel inner-glow h-full rounded-2xl flex flex-col shadow-2xl shadow-primary/15 overflow-hidden">
+<!-- AI Header -->
+<div class="p-5 border-b border-white/10 flex items-center justify-between bg-surface-container/50">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container/30 flex items-center justify-center border border-primary/30 ai-glow">
+<span class="material-symbols-outlined text-primary" data-weight="fill">smart_toy</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-primary leading-tight">RetAIM Assistant</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">AI-Powered Expert • En línea</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-white transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<!-- Chat Content -->
+<div class="flex-1 overflow-y-auto p-5 space-y-6">
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[16px]" data-weight="fill">smart_toy</span>
+</div>
+<div class="bg-surface-variant/50 p-4 rounded-2xl rounded-tl-none border border-white/5">
+<p class="font-body-md text-body-md text-on-surface">¡Hola! Estoy analizando el tema de **Redes Virtuales**. ¿Tienes alguna duda sobre la configuración de subredes o la tabla de ruteo de la evaluación?</p>
+</div>
+</div>
+<div class="flex gap-3 justify-end">
+<div class="bg-primary-container text-on-primary-container p-4 rounded-2xl rounded-tr-none">
+<p class="font-body-md text-body-md">¿Podrías explicarme la diferencia entre una subred pública y una privada?</p>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[16px]" data-weight="fill">smart_toy</span>
+</div>
+<div class="bg-surface-variant/50 p-4 rounded-2xl rounded-tl-none border border-white/5 space-y-3">
+<p class="font-body-md text-body-md text-on-surface">Claro. La diferencia radica en su **ruteo**:</p>
+<ul class="list-disc ml-4 space-y-1 text-on-surface-variant font-body-md text-body-md">
+<li><span class="text-on-surface">Pública:</span> Tiene ruteo directo a un Internet Gateway.</li>
+<li><span class="text-on-surface">Privada:</span> Solo tiene acceso a Internet mediante un NAT Gateway o se mantiene aislada.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Chat Input -->
+<div class="p-4 bg-surface-container/50 border-t border-white/10">
+<div class="relative">
+<input class="w-full bg-[#000000] border border-[#1E293B] focus:border-[#7C3AED] focus:ring-0 rounded-xl py-3 px-4 text-on-surface pr-12 transition-all" placeholder="Pregúntame algo sobre la sesión..." type="text"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container hover:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+<div class="flex gap-2 mt-3 overflow-x-auto no-scrollbar pb-1">
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-variant/30 border border-white/5 text-[11px] text-on-surface-variant hover:bg-surface-variant/50 transition-colors">Resumen de clase</button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-variant/30 border border-white/5 text-[11px] text-on-surface-variant hover:bg-surface-variant/50 transition-colors">Glosario técnico</button>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer with Progress Bar -->
+<footer class="fixed bottom-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md border-t border-white/5">
+<div class="max-w-container-max mx-auto px-margin-desktop py-4 flex items-center justify-between">
+<div class="flex items-center gap-6 flex-1">
+<div class="flex flex-col gap-1 w-full max-w-xs">
+<div class="flex justify-between text-[11px] font-label-sm text-on-surface-variant">
+<span>Progreso de Sesión</span>
+<span>65%</span>
+</div>
+<div class="h-[6px] w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full w-[65%] bg-gradient-to-r from-[#4F46E5] to-[#7C3AED] rounded-full transition-all duration-1000"></div>
+</div>
+</div>
+<div class="hidden sm:flex items-center gap-4 border-l border-white/10 pl-6">
+<div class="flex -space-x-2">
+<img alt="Student" class="w-6 h-6 rounded-full border border-surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDcb5IgeH3SwNTaRVWIIlFrxhKmJIuIFhS0IZl3G0U43Xccuhpfaw1psIoYywST-QWCR-uT_5BA3fy_ZQwDcV_bnI-XXCIt6ujy7y-Ty2UbH3r0NzIW1oJEcYBAJwTKa3i13xORlaheYxYHafao1tJDfN2VgOuQfFowgNtXmxV11xrXbND93ppdjRV81DddJlATgCPyAGBoOrJD99YR2ZPeJCWJVk-egYaNd9CwRmek8lSbHfWDqdxlxzePnBo--uScA1sPwdZBWjx"/>
+<img alt="Student" class="w-6 h-6 rounded-full border border-surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkFiMmjqvFbqhvikE0zu9Pwj9knWHhQR05pfk02MIqCn_CKDpERzHuClHDeqKKZaacr8fbjXI1ZerPfT3-_GDuOK6a031G9ORt8Pbwp-dAxO2wcarhMUrs4atZdsCrnps5sZdqVO1ZpYqEPr6mfAkcjzTK3CupvA5Uk_13j9HUPym7GNmIbQZbfeAeR5VFWV-wDwuzOr1I9XInrg9v8iBvAcGL6VdZZdFFNvG1IXAPjHnYGHNlnmk9_Vx6IwF0rA0x9VNdWIjO0YHZ"/>
+<img alt="Student" class="w-6 h-6 rounded-full border border-surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ2VHCC5F3TAqXW7DC3v4S18rohykAVsqQLnnXoEHcS0360Dhe2uppph7TblaDI28b87lKEwgcMjqPtH8YK5_KPpSaQ7_7q0xhf_uDWwUtcj1O0S2QpVd4sfWBqBmo40_ukdHgLN0BU7zDJgJt5PcXnveMVobDplKeM3yhTVpXDRJO_gp1NIc6PrRow__F4lB8O16l9OdSt9SQAcUWhgbQxFZrfuSXacvpa7820rFDdmjBYXnRRJ3aXL5TRzCEqnrTKbnNdMa3nUpU"/>
+</div>
+<span class="text-[12px] text-on-surface-variant">12 compañeros estudiando ahora</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-lg hover:bg-surface-variant/30 text-on-surface-variant">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="px-6 py-2 rounded-full border border-white/10 text-on-surface hover:bg-white/5 transition-all font-label-md text-label-md">
+                    Marcar como completado
+                </button>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for quiz options
+        const options = document.querySelectorAll('button.group');
+        options.forEach(option => {
+            option.addEventListener('click', function() {
+                options.forEach(o => {
+                    o.classList.remove('border-primary', 'bg-primary-container/10');
+                    o.classList.add('border-white/10', 'bg-surface/40');
+                    const dot = o.querySelector('.rounded-full');
+                    if (dot) {
+                        dot.classList.remove('border-primary');
+                        dot.classList.add('border-on-surface-variant');
+                        dot.innerHTML = '.';
+                    }
+                });
+                
+                this.classList.remove('border-white/10', 'bg-surface/40');
+                this.classList.add('border-primary', 'bg-primary-container/10');
+                const dot = this.querySelector('.rounded-full');
+                dot.classList.remove('border-on-surface-variant');
+                dot.classList.add('border-primary');
+                dot.innerHTML = '<div class="w-3 h-3 rounded-full bg-primary"></div>';
+            });
+        });
+
+        // Chat input focus effect
+        const chatInput = document.querySelector('input');
+        chatInput.addEventListener('focus', () => {
+            chatInput.parentElement.parentElement.classList.add('ring-1', 'ring-primary/20');
+        });
+        chatInput.addEventListener('blur', () => {
+            chatInput.parentElement.parentElement.classList.remove('ring-1', 'ring-primary/20');
+        });
+    </script>
+</body></html>

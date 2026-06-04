@@ -18,6 +18,8 @@ client/node_modules/
 client/.angular/
 client/dist/
 
+infra/.generated/
+
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json

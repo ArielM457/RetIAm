@@ -14,15 +14,15 @@
       </p>
 
       <div class="mt-10 grid gap-4 md:grid-cols-3">
-        <div class="rounded-3xl border border-[var(--line)] bg-white/65 p-4">
+        <div class="auth-highlight-card rounded-3xl p-4">
           <p class="text-sm text-[var(--muted)]">Auth</p>
-          <p class="mt-2 font-semibold">Correo corporativo y sesion Supabase</p>
+          <p class="mt-2 font-semibold">Correo valido y sesion Supabase</p>
         </div>
-        <div class="rounded-3xl border border-[var(--line)] bg-white/65 p-4">
+        <div class="auth-highlight-card rounded-3xl p-4">
           <p class="text-sm text-[var(--muted)]">Perfil</p>
           <p class="mt-2 font-semibold">Sincronizacion inicial con tabla `profiles`</p>
         </div>
-        <div class="rounded-3xl border border-[var(--line)] bg-white/65 p-4">
+        <div class="auth-highlight-card rounded-3xl p-4">
           <p class="text-sm text-[var(--muted)]">Paso siguiente</p>
           <p class="mt-2 font-semibold">Equipos, rutas y dashboard manager</p>
         </div>
@@ -30,18 +30,18 @@
     </article>
 
     <article class="glass-card rounded-[2rem] p-6 md:p-8">
-      <div class="mb-6 flex rounded-full border border-[var(--line)] bg-white/70 p-1">
+      <div class="auth-mode-toggle mb-6 flex rounded-full p-1">
         <button
-          class="flex-1 rounded-full px-4 py-3 text-sm font-semibold transition"
-          [ngClass]="mode() === 'signin' ? 'bg-[var(--ink)] text-white' : ''"
+          class="auth-mode-button flex-1 rounded-full px-4 py-3 text-sm font-semibold transition"
+          [ngClass]="mode() === 'signin' ? 'auth-mode-button-active' : ''"
           (click)="setMode('signin')"
           type="button"
         >
           Iniciar sesion
         </button>
         <button
-          class="flex-1 rounded-full px-4 py-3 text-sm font-semibold transition"
-          [ngClass]="mode() === 'signup' ? 'bg-[var(--ink)] text-white' : ''"
+          class="auth-mode-button flex-1 rounded-full px-4 py-3 text-sm font-semibold transition"
+          [ngClass]="mode() === 'signup' ? 'auth-mode-button-active' : ''"
           (click)="setMode('signup')"
           type="button"
         >
@@ -54,7 +54,7 @@
           <label class="block">
             <span class="mb-2 block text-sm font-medium">Nombre</span>
             <input
-              class="w-full rounded-2xl border border-[var(--line)] bg-white/80 px-4 py-3 outline-none transition focus:border-[var(--brand)]"
+              class="auth-input w-full rounded-2xl px-4 py-3 outline-none transition"
               formControlName="fullName"
               placeholder="Ana Torres"
               type="text"
@@ -64,7 +64,7 @@
           <label class="block">
             <span class="mb-2 block text-sm font-medium">Rol inicial</span>
             <select
-              class="w-full rounded-2xl border border-[var(--line)] bg-white/80 px-4 py-3 outline-none transition focus:border-[var(--brand)]"
+              class="auth-input w-full rounded-2xl px-4 py-3 outline-none transition"
               formControlName="role"
             >
               <option value="employee">Employee</option>
@@ -74,9 +74,9 @@
         }
 
         <label class="block">
-          <span class="mb-2 block text-sm font-medium">Correo corporativo</span>
+          <span class="mb-2 block text-sm font-medium">Correo electronico</span>
           <input
-            class="w-full rounded-2xl border border-[var(--line)] bg-white/80 px-4 py-3 outline-none transition focus:border-[var(--brand)]"
+            class="auth-input w-full rounded-2xl px-4 py-3 outline-none transition"
             formControlName="email"
             placeholder="persona@empresa.com"
             type="email"
@@ -88,12 +88,21 @@
 
         <label class="block">
           <span class="mb-2 block text-sm font-medium">Contrasena</span>
-          <input
-            class="w-full rounded-2xl border border-[var(--line)] bg-white/80 px-4 py-3 outline-none transition focus:border-[var(--brand)]"
-            formControlName="password"
-            placeholder="Minimo 8 caracteres"
-            type="password"
-          />
+          <div class="auth-password-wrap relative">
+            <input
+              class="auth-input auth-input-with-toggle w-full rounded-2xl px-4 py-3 outline-none transition"
+              formControlName="password"
+              placeholder="Minimo 8 caracteres"
+              [type]="showPassword() ? 'text' : 'password'"
+            />
+            <button
+              class="auth-password-toggle absolute right-3 top-1/2 -translate-y-1/2"
+              type="button"
+              (click)="togglePasswordVisibility()"
+            >
+              {{ showPassword() ? 'Ocultar' : 'Ver' }}
+            </button>
+          </div>
           @if (submitted() && form.controls.password.invalid) {
             <span class="mt-2 block text-sm text-red-600">
               Usa una contrasena de al menos 8 caracteres.
@@ -108,7 +117,7 @@
         }
 
         <button
-          class="w-full rounded-2xl bg-[var(--ink)] px-4 py-3 font-semibold text-white transition hover:translate-y-[-1px] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
+          class="auth-submit-button w-full rounded-2xl px-4 py-3 font-semibold text-white transition hover:translate-y-[-1px] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
           [disabled]="loading()"
           type="submit"
         >

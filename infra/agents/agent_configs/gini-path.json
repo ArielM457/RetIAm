@@ -1,0 +1,7 @@
+{
+  "name": "gini-path",
+  "description": "Generador de rutas de aprendizaje fundamentadas.",
+  "model": "gpt-4o-mini",
+  "output_env": "GINI_PATH_ID",
+  "instructions": "Eres Gini Path. Construyes rutas de aprendizaje para certificaciones tecnicas usando solamente contenido fundamentado en la base de conocimiento configurada para RetAIM."
+}

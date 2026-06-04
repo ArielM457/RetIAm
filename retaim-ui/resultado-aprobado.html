@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Certificación Aprobada - RetAIM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #101417; /* surface-dim */
+            color: #e0e2e6; /* on-surface */
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(124, 58, 237, 0.15);
+        }
+        .inner-glow {
+            box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        .score-gradient {
+            background: linear-gradient(135deg, #d2bbff 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .atmospheric-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, rgba(16, 20, 23, 0) 70%);
+            z-index: -1;
+            filter: blur(60px);
+        }
+        .seal-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#3323cc",
+                    "on-primary-fixed": "#25005a",
+                    "on-tertiary-container": "#e6e3ff",
+                    "tertiary-fixed-dim": "#c3c0ff",
+                    "tertiary-fixed": "#e2dfff",
+                    "secondary-container": "#0053db",
+                    "outline-variant": "#4a4455",
+                    "on-tertiary-fixed": "#0f0069",
+                    "inverse-on-surface": "#2d3134",
+                    "surface-container-highest": "#323538",
+                    "on-secondary-fixed-variant": "#003ea8",
+                    "on-error-container": "#ffdad6",
+                    "on-background": "#e0e2e6",
+                    "error": "#ffb4ab",
+                    "surface-container-low": "#191c1f",
+                    "primary": "#d2bbff",
+                    "primary-fixed": "#eaddff",
+                    "on-secondary-fixed": "#00174b",
+                    "surface-container-lowest": "#0b0f11",
+                    "on-primary": "#3f008e",
+                    "tertiary-container": "#564eec",
+                    "on-surface-variant": "#ccc3d8",
+                    "surface": "#101417",
+                    "error-container": "#93000a",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "on-tertiary": "#1d00a5",
+                    "surface-dim": "#101417",
+                    "inverse-surface": "#e0e2e6",
+                    "on-surface": "#e0e2e6",
+                    "surface-tint": "#d2bbff",
+                    "primary-fixed-dim": "#d2bbff",
+                    "surface-container-high": "#272a2d",
+                    "on-secondary-container": "#cdd7ff",
+                    "inverse-primary": "#732ee4",
+                    "surface-container": "#1d2023",
+                    "primary-container": "#7c3aed",
+                    "tertiary": "#c3c0ff",
+                    "on-secondary": "#002a78",
+                    "on-error": "#690005",
+                    "surface-bright": "#363a3d",
+                    "outline": "#958da1",
+                    "on-primary-container": "#ede0ff",
+                    "background": "#101417",
+                    "secondary": "#b4c5ff",
+                    "surface-variant": "#323538",
+                    "secondary-fixed": "#dbe1ff",
+                    "on-primary-fixed-variant": "#5a00c6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "container-max": "1280px",
+                    "section-gap": "80px",
+                    "margin-desktop": "48px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "display-lg-mobile": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "title-lg": ["Plus Jakarta Sans"],
+                    "headline-sm": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="min-h-screen flex flex-col font-body-md text-body-md">
+<!-- Background Atmospheric Elements -->
+<div class="atmospheric-glow top-0 -left-40"></div>
+<div class="atmospheric-glow bottom-0 -right-40"></div>
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 left-0 w-full z-50 h-[72px] flex items-center justify-between px-margin-desktop max-w-container-max mx-auto bg-surface/70 backdrop-blur-md dark:bg-surface/70 border-b border-white/10 shadow-sm">
+<div class="flex items-center gap-8">
+<span class="font-display-lg text-display-lg-mobile text-primary dark:text-primary tracking-tight">RetAIM</span>
+<div class="hidden md:flex gap-6">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Inicio</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Mi Plan</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Sesiones</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Brechas</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="h-10 w-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmNLgrBNjTk0Da3sXOqOnqIJoNG8mUfRsL_sdm493wqUTCernY-Ak_g39hLTndhIDJxvQTInfUPAy5i4o4B-7vywM1koPcIkLpnvrbDUcSJrVMqvIs31r3H2SqNyFfcfndcsIUnA7oiX7RxUVuj8nHEZBbQuZ9B5R4dqFXryXSW43njuqaye702rsRLJnif6ISmUdtTTVTpD7DF0nUpsno-SyWElq1anPv8GYiQk4wC0GOl9tblyGoRb6vFIXe2hGhbZUqXACuVESi"/>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[120px] pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full flex flex-col items-center">
+<!-- Hero Celebration Section -->
+<section class="w-full max-w-4xl text-center flex flex-col items-center mb-12">
+<!-- Badge / Seal Area -->
+<div class="relative mb-8 seal-animation">
+<div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full"></div>
+<div class="relative w-48 h-48 md:w-56 md:h-56 glass-card rounded-full flex items-center justify-center border-2 border-primary/30 inner-glow">
+<div class="absolute inset-2 border border-dashed border-primary/20 rounded-full"></div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-6xl text-primary" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<div class="mt-2 flex flex-col items-center">
+<span class="font-headline-md text-headline-md score-gradient">87%</span>
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase">SCORE</span>
+</div>
+</div>
+</div>
+<!-- Floating Icons Decoration -->
+<div class="absolute -top-4 -right-4 w-12 h-12 glass-card rounded-lg flex items-center justify-center animate-bounce">
+<span class="material-symbols-outlined text-tertiary" data-icon="auto_awesome">auto_awesome</span>
+</div>
+</div>
+<!-- Congratulatory Text -->
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">
+                ¡Felicidades, Ariel!
+            </h1>
+<p class="font-headline-sm text-headline-sm text-on-surface-variant max-w-2xl mx-auto mb-10 leading-relaxed">
+                Has obtenido la certificación <span class="text-primary font-bold">Azure Solutions Architect</span> tras completar con éxito el examen final.
+            </p>
+<!-- Primary Action -->
+<button class="px-10 py-4 rounded-xl bg-gradient-to-br from-primary-container to-secondary-container text-on-primary-container font-semibold flex items-center gap-3 hover:scale-105 transition-all shadow-lg shadow-primary/20 group">
+<span class="material-symbols-outlined group-hover:animate-pulse" data-icon="download">download</span>
+                Descargar Certificado PDF
+            </button>
+</section>
+<!-- Stats/Details Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter w-full mb-section-gap">
+<div class="glass-card p-6 rounded-xl flex flex-col gap-2">
+<span class="font-label-md text-label-md text-primary">Precisión Técnica</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md">92%</span>
+<span class="text-on-surface-variant text-sm text-green-400 flex items-center"><span class="material-symbols-outlined text-sm" data-icon="arrow_upward">arrow_upward</span> +4%</span>
+</div>
+<div class="w-full h-1 bg-white/10 rounded-full mt-2 overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-secondary w-[92%]"></div>
+</div>
+</div>
+<div class="glass-card p-6 rounded-xl flex flex-col gap-2">
+<span class="font-label-md text-label-md text-primary">Tiempo de Respuesta</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md">45m</span>
+<span class="text-on-surface-variant text-sm">de 60m</span>
+</div>
+<div class="w-full h-1 bg-white/10 rounded-full mt-2 overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-secondary w-[75%]"></div>
+</div>
+</div>
+<div class="glass-card p-6 rounded-xl flex flex-col gap-2">
+<span class="font-label-md text-label-md text-primary">Nivel de Maestría</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-tertiary">Senior</span>
+</div>
+<div class="flex gap-1 mt-2">
+<div class="h-1 flex-grow bg-primary rounded-full"></div>
+<div class="h-1 flex-grow bg-primary rounded-full"></div>
+<div class="h-1 flex-grow bg-primary rounded-full"></div>
+<div class="h-1 flex-grow bg-white/10 rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Next Step Card (The "Shelf" logic) -->
+<section class="w-full max-w-4xl">
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Continuar Ruta de Aprendizaje</h2>
+<a class="text-primary font-label-md text-label-md flex items-center gap-1 hover:underline" href="#">Ver mapa completo <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
+</div>
+<div class="group cursor-pointer glass-card rounded-2xl overflow-hidden flex flex-col md:flex-row items-stretch transition-all hover:bg-surface-container-high border-primary/20 hover:border-primary/40">
+<div class="md:w-1/3 relative h-48 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A sophisticated digital rendering of neural network paths and circuit board patterns glowing in deep indigo and violet light, representing advanced artificial intelligence architecture. The image features high-contrast lighting with a premium cinematic tech aesthetic, suitable for an enterprise learning platform dashboard. The mood is futuristic and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChqzdOVJkusIS-pSbsPc1H8FtfwU2cQqi_ivzeXW5iMbXghhmMJ1AeXAuzp95MBVmwCIPemWCio_CYKNh2AP96rWbDHRtmSOHAPgbX_dJphWcff3RPoYmWx4k_HMq3-oZEvoembxIvOxYpqOC_z_37wJpaAlUCQ9ZQ1gVtKiTAr1NPiQAyEbNGdQFJn_xlJzUj54w7PPfR78K8CyoF2DQZDnUTbcikj7Cv4_VvlTkgaRJK4JLm-ZRnTi-8Ll87GI1ycnvHS1rM4CQP"/>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-surface-container/90"></div>
+</div>
+<div class="p-8 md:w-2/3 flex flex-col justify-center gap-4">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded-full bg-tertiary-container/30 border border-tertiary/20 text-tertiary font-label-sm text-label-sm uppercase tracking-wider">Siguiente paso</span>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+<span class="text-label-sm font-label-sm">40 horas estimadas</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">AI Engineer Associate</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Domina el diseño de soluciones de IA utilizando servicios cognitivos, aprendizaje automático y minería de conocimientos sobre infraestructuras escalables.</p>
+</div>
+<div class="flex items-center gap-4 pt-2">
+<button class="px-6 py-2 rounded-lg bg-surface-variant text-on-surface font-semibold hover:bg-primary hover:text-on-primary transition-colors">Empezar ahora</button>
+<span class="text-on-surface-variant font-label-md text-label-md">7 módulos pendientes</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- SideNavBar / AI Agent (Shared Component) -->
+<aside class="fixed right-0 top-0 h-full z-40 flex flex-col p-4 w-[380px] bg-surface-container/70 backdrop-blur-xl dark:bg-surface-container/70 border-l border-white/10 shadow-2xl shadow-primary/15 hidden lg:flex">
+<div class="flex items-center gap-4 mb-8 p-2">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-primary to-tertiary flex items-center justify-center shadow-lg relative overflow-hidden">
+<div class="absolute inset-0 bg-white/20 animate-pulse"></div>
+<span class="material-symbols-outlined text-on-primary relative z-10" data-icon="smart_toy">smart_toy</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-primary">RetAIM Assistant</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">AI-Powered Expert • Online</p>
+</div>
+</div>
+<div class="flex-grow flex flex-col gap-4">
+<div class="bg-surface-container-low/50 rounded-2xl p-4 border border-white/5">
+<p class="text-on-surface-variant text-sm italic mb-4 leading-relaxed">"¡Ariel, qué gran desempeño! Tu puntuación en Arquitectura de Datos fue perfecta. ¿Te gustaría explorar cómo estos conceptos se conectan con el nuevo módulo de IA?"</p>
+<button class="w-full py-3 rounded-xl bg-primary-container/20 border border-primary/30 text-primary font-bold hover:bg-primary-container/40 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="chat">chat</span>
+                    New Chat
+                </button>
+</div>
+<div class="mt-4 flex flex-col gap-1">
+<div class="flex items-center gap-3 p-3 bg-primary-container text-on-primary-container rounded-xl cursor-pointer">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+<span class="font-label-sm text-label-sm">AI Agent</span>
+</div>
+<div class="flex items-center gap-3 p-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl cursor-pointer transition-all">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-label-sm text-label-sm">History</span>
+</div>
+<div class="flex items-center gap-3 p-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl cursor-pointer transition-all">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-label-sm text-label-sm">Resources</span>
+</div>
+<div class="flex items-center gap-3 p-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl cursor-pointer transition-all">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</div>
+</div>
+</div>
+<div class="mt-auto pt-4 border-t border-white/10">
+<div class="bg-surface-variant/30 rounded-lg p-3 flex items-center justify-between">
+<span class="text-xs text-on-surface-variant">Uso de API mensual</span>
+<span class="text-xs text-primary font-bold">12%</span>
+</div>
+</div>
+</aside>
+<script>
+        // Micro-interaction: Confetti effect or glow pulses could be added here
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.querySelector('button');
+            btn.addEventListener('mousedown', () => {
+                btn.style.transform = 'scale(0.95)';
+            });
+            btn.addEventListener('mouseup', () => {
+                btn.style.transform = 'scale(1.05)';
+            });
+        });
+    </script>
+</body></html>

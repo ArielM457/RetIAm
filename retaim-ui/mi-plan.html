@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#363a3d",
+                        "secondary-container": "#0053db",
+                        "on-secondary": "#002a78",
+                        "inverse-on-surface": "#2d3134",
+                        "on-tertiary-fixed-variant": "#3323cc",
+                        "on-surface": "#e0e2e6",
+                        "primary-fixed-dim": "#d2bbff",
+                        "outline-variant": "#4a4455",
+                        "on-tertiary-fixed": "#0f0069",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#00174b",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#ccc3d8",
+                        "outline": "#958da1",
+                        "background": "#101417",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "tertiary-container": "#564eec",
+                        "surface-container-high": "#272a2d",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "error-container": "#93000a",
+                        "on-secondary-container": "#cdd7ff",
+                        "primary-fixed": "#eaddff",
+                        "surface-container-lowest": "#0b0f11",
+                        "surface-container-highest": "#323538",
+                        "surface": "#101417",
+                        "on-primary": "#3f008e",
+                        "surface-tint": "#d2bbff",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "secondary-fixed": "#dbe1ff",
+                        "primary": "#d2bbff",
+                        "on-tertiary-container": "#e6e3ff",
+                        "surface-dim": "#101417",
+                        "surface-container": "#1d2023",
+                        "surface-variant": "#323538",
+                        "tertiary-fixed-dim": "#c3c0ff",
+                        "surface-container-low": "#191c1f",
+                        "on-tertiary": "#1d00a5",
+                        "inverse-primary": "#732ee4",
+                        "tertiary-fixed": "#e2dfff",
+                        "secondary": "#b4c5ff",
+                        "inverse-surface": "#e0e2e6",
+                        "on-primary-fixed": "#25005a",
+                        "primary-container": "#7c3aed",
+                        "on-primary-container": "#ede0ff",
+                        "tertiary": "#c3c0ff",
+                        "on-background": "#e0e2e6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "section-gap": "80px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "title-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                        "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(124, 58, 237, 0.15);
+        }
+        .inner-glow {
+            box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        .timeline-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .atmospheric-halo {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.08) 0%, rgba(37, 99, 235, 0.05) 50%, transparent 100%);
+            z-index: -1;
+            filter: blur(60px);
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen font-body-md overflow-x-hidden">
+<!-- Atmospheric Decorations -->
+<div class="atmospheric-halo top-[-200px] left-[-200px]"></div>
+<div class="atmospheric-halo bottom-[-200px] right-[-200px]"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 h-[72px] flex items-center justify-between px-margin-desktop max-w-container-max mx-auto bg-surface/70 backdrop-blur-md border-b border-white/10 shadow-sm">
+<div class="flex items-center gap-12">
+<span class="font-display-lg text-display-lg-mobile text-primary tracking-tight">RetAIM</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Inicio</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 transition-colors duration-200" href="#">Mi Plan</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Sesiones</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Brechas</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-on-surface-variant hover:text-primary transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-primary/20">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWp2WLK_WJla1CiDXJLLxjpMv2owniNCMrkfyF00M_3Rp2X2cQ8XB96UphyRXmeOyQNLYS3qOiAMcgcZVvtEk4v2wSjWMAvmJSg5UGj50IKz55vtbZ2T5ItkSEaBkGG_WxfZHV7MAKVL63ertlHyWpE8SSZyRzeVhmNg3NWW0xztQkRYjp0VyS-MqvPa-N2FpGt4ti6_NPaiqEqdwudpZTp_iwmYJPQ2frQOCfPlJGC_9fubFiLAS4_SY1sMPvgoRWoqP1Ewp0esRp"/>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-[120px] pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Header Section -->
+<header class="mb-section-gap flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<div class="flex items-center gap-3 mb-4">
+<span class="px-3 py-1 rounded-full text-[12px] font-semibold border border-tertiary text-tertiary bg-tertiary/5 uppercase tracking-wider">Certificación Activa</span>
+<span class="text-on-surface-variant text-label-sm font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="calendar_today">calendar_today</span>
+                        Límite: 24 Oct, 2024
+                    </span>
+</div>
+<h1 class="font-headline-md text-headline-md md:text-display-lg md:font-display-lg text-on-surface mb-4 leading-tight">Arquitectura de Soluciones de IA Generativa</h1>
+<p class="text-on-surface-variant text-body-lg font-body-lg max-w-xl">Domina el diseño de sistemas escalables utilizando LLMs y arquitecturas RAG para despliegues empresariales de alto rendimiento.</p>
+</div>
+<div class="flex flex-col items-start md:items-end gap-4">
+<button class="group relative px-8 py-4 rounded-xl bg-gradient-to-br from-[#7C3AED] to-[#2563EB] text-white font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all hover:-translate-y-1 active:scale-95 overflow-hidden">
+<span class="relative z-10 flex items-center gap-2">
+                        Iniciar sesión del día
+                        <span class="material-symbols-outlined" data-icon="bolt" data-weight="fill">bolt</span>
+</span>
+<div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</button>
+</div>
+</header>
+<!-- Weekly Timeline Shelf -->
+<section class="mb-section-gap">
+<h2 class="font-title-lg text-title-lg mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="timeline">timeline</span>
+                Ruta Crítica Semanal
+            </h2>
+<div class="relative">
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-white/10 -translate-y-1/2"></div>
+<div class="flex items-center justify-between gap-4 overflow-x-auto pb-8 timeline-scroll relative">
+<!-- Day 1 -->
+<div class="flex-shrink-0 flex flex-col items-center gap-6 group">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Lunes 14</span>
+<div class="w-4 h-4 rounded-full bg-primary border-4 border-background ring-4 ring-primary/10 z-10"></div>
+<div class="glass inner-glow p-4 rounded-xl w-48 transition-all group-hover:bg-surface-variant/40">
+<p class="text-label-sm font-label-sm text-primary mb-1">Hito: Fundamentos</p>
+<p class="text-body-md font-body-md text-on-surface leading-tight">Configuración de Embeddings</p>
+</div>
+</div>
+<!-- Day 2 (Active) -->
+<div class="flex-shrink-0 flex flex-col items-center gap-6 group">
+<span class="text-label-sm font-label-sm text-primary font-bold">Martes 15</span>
+<div class="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-secondary border-4 border-background ring-8 ring-primary/15 z-10 shadow-[0_0_20px_rgba(124,58,237,0.5)]"></div>
+<div class="glass inner-glow p-4 rounded-xl w-48 border-primary/30 bg-primary/10 scale-105 shadow-xl">
+<p class="text-label-sm font-label-sm text-primary mb-1">Hoy</p>
+<p class="text-body-md font-body-md text-on-surface leading-tight font-bold">Optimización de Prompts</p>
+</div>
+</div>
+<!-- Day 3 -->
+<div class="flex-shrink-0 flex flex-col items-center gap-6 group">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Miércoles 16</span>
+<div class="w-4 h-4 rounded-full bg-white/20 border-4 border-background z-10"></div>
+<div class="glass inner-glow p-4 rounded-xl w-48 opacity-60">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-1">Próximo</p>
+<p class="text-body-md font-body-md text-on-surface leading-tight">Vector DB Strategies</p>
+</div>
+</div>
+<!-- Day 4 -->
+<div class="flex-shrink-0 flex flex-col items-center gap-6 group">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Jueves 17</span>
+<div class="w-4 h-4 rounded-full bg-white/20 border-4 border-background z-10"></div>
+<div class="glass inner-glow p-4 rounded-xl w-48 opacity-60">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-1">Pendiente</p>
+<p class="text-body-md font-body-md text-on-surface leading-tight">Evaluación RAG</p>
+</div>
+</div>
+<!-- Day 5 -->
+<div class="flex-shrink-0 flex flex-col items-center gap-6 group">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Viernes 18</span>
+<div class="w-4 h-4 rounded-full bg-white/20 border-4 border-background z-10"></div>
+<div class="glass inner-glow p-4 rounded-xl w-48 opacity-60">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-1">Meta</p>
+<p class="text-body-md font-body-md text-on-surface leading-tight">Proyecto Integrador I</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Course Modules (Left) -->
+<div class="lg:col-span-8 space-y-6">
+<h2 class="font-title-lg text-title-lg mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="list_alt">list_alt</span>
+                    Contenido del Curso
+                </h2>
+<!-- Module 1 -->
+<article class="bg-surface-container/50 border border-white/5 rounded-2xl p-6 transition-all hover:bg-surface-container hover:border-white/10">
+<div class="flex items-start justify-between mb-4">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg">Módulo 1: Arquitecturas Base</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">4 de 5 lecciones completadas</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-green-400" data-icon="check_circle" data-weight="fill">check_circle</span>
+</div>
+<div class="w-full h-1 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-secondary w-[80%]"></div>
+</div>
+</article>
+<!-- Module 2 -->
+<article class="bg-surface-container/50 border border-white/5 rounded-2xl p-6 transition-all hover:bg-surface-container hover:border-white/10">
+<div class="flex items-start justify-between mb-4">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="memory">memory</span>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg">Módulo 2: Fine-tuning y RAG</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">1 de 6 lecciones completadas</p>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-tertiary font-bold px-2 py-1 bg-tertiary/10 rounded">EN PROGRESO</span>
+</div>
+<div class="w-full h-1 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-tertiary to-primary w-[16%]"></div>
+</div>
+</article>
+<!-- Module 3 -->
+<article class="bg-surface-container/50 border border-white/5 rounded-2xl p-6 opacity-60">
+<div class="flex items-start justify-between mb-4">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-variant/20 flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg">Módulo 3: Despliegue y Ética</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Bloqueado hasta completar Módulo 2</p>
+</div>
+</div>
+</div>
+<div class="w-full h-1 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-white/10 w-0"></div>
+</div>
+</article>
+</div>
+<!-- Suggested Schedule (Right) -->
+<aside class="lg:col-span-4 space-y-6">
+<h2 class="font-title-lg text-title-lg mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+                    Horarios Sugeridos
+                </h2>
+<div class="glass inner-glow rounded-2xl p-6 space-y-4">
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface/40 border border-white/5">
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Enfoque Profundo</span>
+<span class="text-body-md font-bold">08:00 - 09:30</span>
+</div>
+<button class="p-2 rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="notifications_active">notifications_active</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-3 rounded-xl bg-primary/5 border border-primary/20">
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-primary">Recomendado Hoy</span>
+<span class="text-body-md font-bold">14:00 - 15:00</span>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="star" data-weight="fill">star</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface/40 border border-white/5">
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Repaso Rápido</span>
+<span class="text-body-md font-bold">18:30 - 19:00</span>
+</div>
+<button class="p-2 rounded-lg bg-white/5 text-on-surface-variant hover:bg-white/10 transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+<div class="pt-4 border-t border-white/10">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-8 h-8 rounded-full overflow-hidden border border-tertiary/30">
+<img alt="AI Agent Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBOPY7sMCLY6VbKuaa2BeIwkiNL02Ta4-yzS-KTgHAxlB8jmptEt3l8E6xxRU1ikMK5GJ8juE76RwHqhhUdqBCuwUCSb0MqggjW5X0_0Ugr0VAAHgn0-9Q7ZuxA6TN7LPHDRsENEO7bQLhpdWBGczzsn3d2GHZSYG1dBa2ixbb2KIonF1HiASDruP4CPGGp0Uq0esjJTF6Lk0-1CN22phn7BkCBNIv5mjqlfpqB2QjcbWXDCx8BLz5lox8TrAqsLoMdoEe4KOZjYmU"/>
+</div>
+<span class="text-label-sm font-label-sm text-tertiary">Sugerencia de RetAIM</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant leading-relaxed">
+                            "Tu curva de aprendizaje es óptima por las mañanas. Intenta completar el lab de Optimización de Prompts antes de las 10 AM."
+                        </p>
+</div>
+</div>
+<!-- Quick Stats Card -->
+<div class="bg-gradient-to-br from-[#1E293B] to-[#0F172A] border border-white/10 rounded-2xl p-6 relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all"></div>
+<div class="relative z-10">
+<h4 class="text-label-sm font-label-sm text-primary uppercase tracking-tighter mb-4">Rendimiento Semanal</h4>
+<div class="flex items-baseline gap-1">
+<span class="text-headline-md font-headline-md">94%</span>
+<span class="text-green-400 text-label-sm font-bold flex items-center">
+<span class="material-symbols-outlined text-[14px]" data-icon="arrow_upward">arrow_upward</span>
+                                12%
+                            </span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-1">Superior al promedio del equipo</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- SideNavBar (Hidden/AI Assistant Panel) -->
+<div class="fixed right-0 top-0 h-full z-40 flex flex-col p-4 bg-surface-container/70 backdrop-blur-xl border-l border-white/10 shadow-2xl shadow-primary/15 transition-transform translate-x-full md:w-[380px]" id="ai-panel">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="smart_toy">smart_toy</span>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg text-primary">RetAIM Assistant</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">IA Experta</p>
+</div>
+</div>
+<button class="p-2 hover:bg-white/5 rounded-lg" onclick="toggleAI()">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<div class="flex-grow space-y-4 overflow-y-auto pr-2">
+<div class="bg-primary/5 rounded-xl p-4 border border-primary/20">
+<p class="text-label-sm font-label-sm text-on-surface leading-relaxed">¿En qué puedo ayudarte hoy con tu plan de arquitectura?</p>
+</div>
+</div>
+<div class="mt-auto pt-4 border-t border-white/10">
+<div class="relative">
+<input class="w-full bg-black border-outline-variant focus:border-primary rounded-xl py-3 px-4 text-on-surface text-body-md transition-all" placeholder="Pregunta algo..." type="text"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+<!-- AI Toggle Button -->
+<button class="fixed bottom-8 right-8 w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary text-white shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-[60] group" onclick="toggleAI()">
+<span class="material-symbols-outlined text-[32px] group-hover:rotate-12 transition-transform" data-icon="smart_toy">smart_toy</span>
+<div class="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-background"></div>
+</button>
+<script>
+        let aiOpen = false;
+        function toggleAI() {
+            const panel = document.getElementById('ai-panel');
+            aiOpen = !aiOpen;
+            if(aiOpen) {
+                panel.classList.remove('translate-x-full');
+            } else {
+                panel.classList.add('translate-x-full');
+            }
+        }
+    </script>
+</body></html>

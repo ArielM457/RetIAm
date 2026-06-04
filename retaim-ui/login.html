@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RetAIM - Acceso Inteligente</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #7C3AED 0%, #4F46E5 100%);
+        }
+        .cta-gradient {
+            background: linear-gradient(135deg, #7C3AED 0%, #2563EB 100%);
+        }
+        .atmospheric-glow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, rgba(124, 58, 237, 0) 70%);
+            pointer-events: none;
+        }
+        .input-dark {
+            background-color: #000000;
+            border-color: #1E293B;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .input-dark:focus {
+            border-color: #7C3AED;
+            box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
+            outline: none;
+        }
+        .tab-transition {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#363a3d",
+                        "secondary-container": "#0053db",
+                        "on-secondary": "#002a78",
+                        "inverse-on-surface": "#2d3134",
+                        "on-tertiary-fixed-variant": "#3323cc",
+                        "on-surface": "#e0e2e6",
+                        "primary-fixed-dim": "#d2bbff",
+                        "outline-variant": "#4a4455",
+                        "on-tertiary-fixed": "#0f0069",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#00174b",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#ccc3d8",
+                        "outline": "#958da1",
+                        "background": "#101417",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "tertiary-container": "#564eec",
+                        "surface-container-high": "#272a2d",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "error-container": "#93000a",
+                        "on-secondary-container": "#cdd7ff",
+                        "primary-fixed": "#eaddff",
+                        "surface-container-lowest": "#0b0f11",
+                        "surface-container-highest": "#323538",
+                        "surface": "#101417",
+                        "on-primary": "#3f008e",
+                        "surface-tint": "#d2bbff",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "secondary-fixed": "#dbe1ff",
+                        "primary": "#d2bbff",
+                        "on-tertiary-container": "#e6e3ff",
+                        "surface-dim": "#101417",
+                        "surface-container": "#1d2023",
+                        "surface-variant": "#323538",
+                        "tertiary-fixed-dim": "#c3c0ff",
+                        "surface-container-low": "#191c1f",
+                        "on-tertiary": "#1d00a5",
+                        "inverse-primary": "#732ee4",
+                        "tertiary-fixed": "#e2dfff",
+                        "secondary": "#b4c5ff",
+                        "inverse-surface": "#e0e2e6",
+                        "on-primary-fixed": "#25005a",
+                        "primary-container": "#7c3aed",
+                        "on-primary-container": "#ede0ff",
+                        "tertiary": "#c3c0ff",
+                        "on-background": "#e0e2e6"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "section-gap": "80px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "title-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                        "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen overflow-x-hidden">
+<main class="flex min-h-screen">
+<!-- Columna Izquierda: Hero Visual -->
+<section class="hidden lg:flex lg:w-1/2 hero-gradient relative items-center justify-center p-margin-desktop overflow-hidden">
+<!-- Decorative Elements -->
+<div class="absolute top-0 left-0 w-full h-full">
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-white/10 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-primary-container/20 blur-[150px] rounded-full"></div>
+</div>
+<div class="relative z-10 max-w-lg text-center lg:text-left">
+<!-- Logo -->
+<div class="mb-12">
+<h1 class="font-display-lg text-display-lg text-white tracking-tight flex items-center gap-3">
+<span class="material-symbols-outlined !text-5xl" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+                        RetAIM
+                    </h1>
+</div>
+<!-- Messaging -->
+<h2 class="font-headline-md text-headline-md text-white mb-6 leading-tight">
+                    Domina el futuro técnico con el poder de la Inteligencia Artificial.
+                </h2>
+<p class="font-body-lg text-body-lg text-on-primary-container/80 mb-8">
+                    Certificaciones de grado empresarial diseñadas para cerrar brechas de conocimiento mediante rutas de aprendizaje adaptativas y tutoría 24/7.
+                </p>
+<!-- Visual Asset Placeholder -->
+<div class="relative w-full aspect-square max-w-md mx-auto lg:mx-0 group">
+<div class="absolute inset-0 bg-white/5 border border-white/20 rounded-3xl backdrop-blur-sm transform group-hover:scale-[1.02] transition-transform duration-500"></div>
+<img alt="RetAIM Intelligence Visual" class="w-full h-full object-cover rounded-3xl opacity-90 mix-blend-screen" data-alt="A high-tech digital interface displaying neural network nodes and glowing data streams in vibrant shades of electric violet and deep sapphire blue. The visualization is futuristic and sleek, set against a dark glass-like surface with soft bokeh lights in the background. The overall aesthetic is professional, sophisticated, and aligns perfectly with an advanced AI technical certification platform, conveying intelligence and mastery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAqQW1z73iz-I0OP89YT_bIU_ThyFeNk3N2RgrucPZiE02LEY8pbEPoWt4detJz7lHuKZIhEVUp9MprGxq_-I61gssxgdRf415L7iCypbm2_sq4Ucp7JdHn-w0oPbffYd6FjNFDpJAI0gmwH-N2Z8v_asgI4b18ao0jSEle7t_HDR6yNyJ12yhyp4QRmCYgIf_ZybDaVXxMAlR6KnR_YTknP70WsWOfDpFZcDY9O8oBhirQtddsr46VCOZsVXgUSM32EHD9Wo5afHW"/>
+</div>
+</div>
+</section>
+<!-- Columna Derecha: Formulario -->
+<section class="w-full lg:w-1/2 bg-background flex flex-col items-center justify-center p-margin-mobile md:p-margin-desktop relative">
+<div class="atmospheric-glow top-1/4 right-1/4"></div>
+<div class="w-full max-w-md z-10">
+<!-- Mobile Logo -->
+<div class="lg:hidden flex justify-center mb-8">
+<h1 class="font-display-lg text-display-lg-mobile text-primary tracking-tight flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+                        RetAIM
+                    </h1>
+</div>
+<!-- Header Content -->
+<div class="text-center mb-10">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Bienvenido de nuevo</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Tu camino hacia la maestría técnica comienza aquí.</p>
+</div>
+<!-- Tabs Container -->
+<div class="flex p-1 bg-surface-container rounded-xl mb-8">
+<button class="flex-1 py-2 font-label-md text-label-md rounded-lg tab-transition bg-primary-container text-on-primary-container shadow-lg" id="tab-login" onclick="switchTab('login')">
+                        Iniciar Sesión
+                    </button>
+<button class="flex-1 py-2 font-label-md text-label-md rounded-lg tab-transition text-on-surface-variant hover:text-on-surface" id="tab-register" onclick="switchTab('register')">
+                        Crear Cuenta
+                    </button>
+</div>
+<!-- Forms Area -->
+<form class="space-y-6" id="auth-form">
+<!-- Dynamic Fields Container -->
+<div class="hidden space-y-6" id="registration-fields">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Nombre Completo</label>
+<input class="w-full h-12 px-4 rounded-lg input-dark text-on-surface font-body-md" placeholder="Ej. Alex Thompson" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Rol en la Organización</label>
+<select class="w-full h-12 px-4 rounded-lg input-dark text-on-surface font-body-md appearance-none">
+<option value="employee">Empleado / Especialista</option>
+<option value="manager">Manager / Líder de Equipo</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Correo Electrónico</label>
+<input class="w-full h-12 px-4 rounded-lg input-dark text-on-surface font-body-md" placeholder="nombre@empresa.com" type="email"/>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="block font-label-sm text-label-sm text-on-surface-variant">Contraseña</label>
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="#" id="forgot-pass">¿Olvidaste tu contraseña?</a>
+</div>
+<input class="w-full h-12 px-4 rounded-lg input-dark text-on-surface font-body-md" placeholder="••••••••" type="password"/>
+</div>
+<!-- CTA Button -->
+<button class="w-full h-12 cta-gradient text-white font-label-md text-label-md rounded-lg shadow-xl shadow-primary/20 hover:scale-[1.01] active:scale-95 transition-all duration-200" type="submit">
+<span id="cta-text">Ingresar a la Plataforma</span>
+</button>
+<!-- Social Login Divider -->
+<div class="relative flex items-center py-4">
+<div class="flex-grow border-t border-outline-variant"></div>
+<span class="flex-shrink mx-4 font-label-sm text-label-sm text-on-surface-variant">O continúa con</span>
+<div class="flex-grow border-t border-outline-variant"></div>
+</div>
+<!-- Social Buttons -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center h-12 rounded-lg border border-outline-variant hover:bg-surface-variant/50 transition-colors" type="button">
+<img alt="Google Logo" class="w-5 h-5 mr-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSOKdH4bmEr8lXFUfoa4dP29DzHKatTR3F1MpKdCwru84chTMKUtLDyrEpzsDcu4YnMku_flGJFOWzQZdaePkycblspN5JG9U8N6pU0tGYciDMYOouWbcCn84TR-fFGM_OYB7WJRolvUlwkiMHFxz4QmEJZwRy-f1pSrGKAS5_P-ULo618JwCdke2W-eN2nHK6puN5AAC-IlaiuYPO59hQgaUgUzlhgDJQRPYum-mKlRbGPH_Ids6NTMrVkB73c6GbCzFsEbTqCIAn"/>
+<span class="font-label-md text-label-md text-on-surface">Google</span>
+</button>
+<button class="flex items-center justify-center h-12 rounded-lg border border-outline-variant hover:bg-surface-variant/50 transition-colors" type="button">
+<span class="material-symbols-outlined mr-2 !text-xl">terminal</span>
+<span class="font-label-md text-label-md text-on-surface">SSO</span>
+</button>
+</div>
+</form>
+<!-- Footer Legal -->
+<p class="mt-10 text-center font-label-sm text-label-sm text-on-surface-variant">
+                    Al continuar, aceptas nuestros 
+                    <a class="text-on-surface underline" href="#">Términos de Servicio</a> y 
+                    <a class="text-on-surface underline" href="#">Política de Privacidad</a>.
+                </p>
+</div>
+</section>
+</main>
+<script>
+        function switchTab(mode) {
+            const loginTab = document.getElementById('tab-login');
+            const registerTab = document.getElementById('tab-register');
+            const registrationFields = document.getElementById('registration-fields');
+            const ctaText = document.getElementById('cta-text');
+            const forgotPass = document.getElementById('forgot-pass');
+
+            if (mode === 'register') {
+                // Style updates
+                registerTab.classList.add('bg-primary-container', 'text-on-primary-container', 'shadow-lg');
+                registerTab.classList.remove('text-on-surface-variant');
+                loginTab.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-lg');
+                loginTab.classList.add('text-on-surface-variant');
+                
+                // Form updates
+                registrationFields.classList.remove('hidden');
+                ctaText.textContent = 'Crear mi Cuenta Pro';
+                forgotPass.classList.add('invisible');
+            } else {
+                // Style updates
+                loginTab.classList.add('bg-primary-container', 'text-on-primary-container', 'shadow-lg');
+                loginTab.classList.remove('text-on-surface-variant');
+                registerTab.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-lg');
+                registerTab.classList.add('text-on-surface-variant');
+                
+                // Form updates
+                registrationFields.classList.add('hidden');
+                ctaText.textContent = 'Ingresar a la Plataforma';
+                forgotPass.classList.remove('invisible');
+            }
+        }
+
+        // Form submission handling (Prevent default for demo)
+        document.getElementById('auth-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span>';
+            setTimeout(() => {
+                btn.innerHTML = document.getElementById('cta-text').textContent;
+                alert('Funcionalidad de demostración: En un entorno real, esto procesaría sus credenciales.');
+            }, 1500);
+        });
+    </script>
+</body></html>

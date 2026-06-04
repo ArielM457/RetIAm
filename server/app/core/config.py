@@ -13,10 +13,36 @@ class Settings(BaseSettings):
     supabase_anon_key: str
     supabase_service_role_key: str
     supabase_profiles_table: str = "profiles"
+    supabase_organizations_table: str = "organizations"
+    supabase_teams_table: str = "teams"
+    supabase_team_members_table: str = "team_members"
+    supabase_team_invitations_table: str = "team_invitations"
+    supabase_profile_assessments_table: str = "profile_assessments"
+    supabase_learning_routes_table: str = "learning_routes"
+    supabase_study_plans_table: str = "study_plans"
+    supabase_team_cert_assignments_table: str = "team_certification_assignments"
+    supabase_learning_sessions_table: str = "learning_sessions"
+    supabase_coach_reminders_table: str = "coach_reminders"
+    supabase_suggestions_table: str = "suggestions"
+    supabase_exam_attempts_table: str = "exam_attempts"
+    supabase_certificates_table: str = "certificates"
+    supabase_integrity_events_table: str = "integrity_events"
 
-    blocked_email_domains: str = (
+    public_email_domains: str = (
         "gmail.com,hotmail.com,outlook.com,yahoo.com,icloud.com,live.com"
     )
+    azure_foundry_endpoint: str | None = None
+    azure_foundry_project: str | None = None
+    azure_foundry_deployment: str | None = None
+    azure_foundry_api_key: str | None = None
+    azure_search_endpoint: str | None = None
+    azure_search_key: str | None = None
+    azure_search_index: str | None = None
+    azure_blob_connection_string: str | None = None
+    workiq_tenant_id: str | None = None
+    workiq_client_id: str | None = None
+    workiq_client_secret: str | None = None
+    enable_external_ai: bool = False
 
     model_config = SettingsConfigDict(
         env_file=(".env", "server/.env"),
@@ -26,10 +52,10 @@ class Settings(BaseSettings):
     )
 
     @property
-    def blocked_domains(self) -> set[str]:
+    def public_domains(self) -> set[str]:
         return {
             domain.strip().lower()
-            for domain in self.blocked_email_domains.split(",")
+            for domain in self.public_email_domains.split(",")
             if domain.strip()
         }
 

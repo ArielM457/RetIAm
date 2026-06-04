@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #101417; /* surface-dim */
+            color: #e0e2e6; /* on-surface */
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(124, 58, 237, 0.1);
+        }
+        .shelf-card {
+            background-color: #1d2023; /* surface-container */
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .shelf-card:hover {
+            border-color: rgba(124, 58, 237, 0.4);
+            box-shadow: 0 0 20px rgba(124, 58, 237, 0.15);
+        }
+        .ai-glow {
+            background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#0053db",
+                    "on-surface": "#e0e2e6",
+                    "on-error-container": "#ffdad6",
+                    "surface-variant": "#323538",
+                    "on-tertiary-container": "#e6e3ff",
+                    "secondary": "#b4c5ff",
+                    "on-surface-variant": "#ccc3d8",
+                    "tertiary-fixed": "#e2dfff",
+                    "primary-fixed-dim": "#d2bbff",
+                    "on-tertiary-fixed-variant": "#3323cc",
+                    "secondary-fixed": "#dbe1ff",
+                    "surface-container": "#1d2023",
+                    "on-primary": "#3f008e",
+                    "tertiary": "#c3c0ff",
+                    "inverse-primary": "#732ee4",
+                    "surface-container-highest": "#323538",
+                    "inverse-surface": "#e0e2e6",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "primary": "#d2bbff",
+                    "on-primary-fixed-variant": "#5a00c6",
+                    "surface-container-low": "#191c1f",
+                    "on-secondary-container": "#cdd7ff",
+                    "error": "#ffb4ab",
+                    "on-secondary": "#002a78",
+                    "surface-container-lowest": "#0b0f11",
+                    "primary-container": "#7c3aed",
+                    "on-tertiary": "#1d00a5",
+                    "on-primary-fixed": "#25005a",
+                    "on-error": "#690005",
+                    "on-primary-container": "#ede0ff",
+                    "on-background": "#e0e2e6",
+                    "background": "#101417",
+                    "inverse-on-surface": "#2d3134",
+                    "error-container": "#93000a",
+                    "on-tertiary-fixed": "#0f0069",
+                    "on-secondary-fixed-variant": "#003ea8",
+                    "on-secondary-fixed": "#00174b",
+                    "surface-dim": "#101417",
+                    "surface": "#101417",
+                    "tertiary-fixed-dim": "#c3c0ff",
+                    "tertiary-container": "#564eec",
+                    "outline-variant": "#4a4455",
+                    "primary-fixed": "#eaddff",
+                    "outline": "#958da1",
+                    "surface-bright": "#363a3d",
+                    "surface-container-high": "#272a2d",
+                    "surface-tint": "#d2bbff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "48px",
+                    "base": "4px",
+                    "section-gap": "80px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "title-lg": ["Plus Jakarta Sans"],
+                    "label-md": ["Inter"],
+                    "headline-sm": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "label-sm": ["Inter"],
+                    "display-lg-mobile": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="min-h-screen pt-[72px]">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full h-[72px] z-50 bg-surface/70 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_rgba(124,58,237,0.15)] transition-all duration-300">
+<div class="flex justify-between items-center px-margin-desktop max-w-container-max mx-auto w-full h-full">
+<div class="flex items-center gap-8">
+<span class="font-headline-sm text-headline-sm font-extrabold text-primary tracking-tight">RetAIM</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 ease-in-out active:scale-95 transform font-label-md text-label-md" href="#">Inicio</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 ease-in-out active:scale-95 transform font-label-md text-label-md" href="#">Equipo</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 ease-in-out active:scale-95 transform font-label-md text-label-md" href="#">Brechas</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-bold font-label-md text-label-md" href="#">Resumen</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:text-on-surface transition-all active:scale-95">notifications</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container/30">
+<img alt="Manager Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTaf-UtxAsStjZXx4_vHo7J1G_7hPTJzPAK-G-fudVoIT4T9o7kzq9s1n-NxxByXwIzvg93iwEN4RjrU3zkpTwb6vWLSNOOrOm9vsryRKWaGjl0Kvk0opKWkOAk8ZOgPxzoob6_V8aXEEj6g_6cTWGzwmo32xHIYLIdsxkg9ZYcR2m0F--aClZ60mVKTAoxUziRMAjzWYa6mitp6DJw6KWWRDmTCTxuN-aervc7Co6kjOIv1_zdb0fLXlT5r4F5ISeVjX9aqivSSe2"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-margin-desktop py-10">
+<!-- Header Section -->
+<header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
+<div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Resumen Semanal: 14 - 20 Oct</h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg mt-2">Visión ejecutiva del rendimiento y progreso técnico del departamento.</p>
+</div>
+<button class="flex items-center gap-2 px-6 py-3 border border-outline-variant text-on-surface rounded-lg hover:bg-white/5 transition-all active:scale-95 font-label-md text-label-md">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+                Exportar PDF
+            </button>
+</header>
+<!-- Highlights Shelf -->
+<section class="mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="shelf-card p-8 rounded-xl relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all"></div>
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">trending_up</span>
+<span class="text-on-surface-variant font-label-md text-label-md">Progreso Global</span>
+</div>
+<div class="text-4xl font-extrabold text-primary mb-2">+12%</div>
+<div class="w-full h-1.5 bg-white/10 rounded-full">
+<div class="h-full ai-glow rounded-full" style="width: 72%"></div>
+</div>
+</div>
+<div class="shelf-card p-8 rounded-xl relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-tertiary/10 rounded-full blur-2xl group-hover:bg-tertiary/20 transition-all"></div>
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-tertiary text-3xl">workspace_premium</span>
+<span class="text-on-surface-variant font-label-md text-label-md">Nuevos Logros</span>
+</div>
+<div class="text-4xl font-extrabold text-on-surface mb-2">3 Certificaciones</div>
+<p class="text-on-surface-variant text-sm">Completadas esta semana</p>
+</div>
+<div class="shelf-card p-8 rounded-xl relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-secondary/10 rounded-full blur-2xl group-hover:bg-secondary/20 transition-all"></div>
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl">group</span>
+<span class="text-on-surface-variant font-label-md text-label-md">Uso de Plataforma</span>
+</div>
+<div class="text-4xl font-extrabold text-on-surface mb-2">94% Engagement</div>
+<p class="text-on-surface-variant text-sm">Actividad diaria activa</p>
+</div>
+</div>
+</section>
+<!-- Main Insights Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Risks Panel -->
+<div class="lg:col-span-5 flex flex-col">
+<div class="glass-panel rounded-xl p-8 h-full">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline-sm text-headline-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-error">warning</span>
+                            Miembros en Riesgo
+                        </h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 Detectados</span>
+</div>
+<div class="space-y-4">
+<!-- Risk Item 1 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-lg border border-white/5 hover:border-error/30 transition-all">
+<div class="flex items-center gap-4">
+<img alt="Elena Martínez" class="w-10 h-10 rounded-full bg-surface-container-highest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-bGQzp7swON04ir8LWMpvJ-gZpG20jxB4p7axff6TxOSTBIvXdGcAQwKzKxTn_-4Jjrm2Win9h-OOiEw-YP5Hg06Pe5aDMMloBV6UNugCcqbQypyiXpJ-EZvHjwe54e2vKD4O68FVIA9h3utq6E-2vjM_U46DCOByBdT-O98iv9SBn_V1LP6IgqkTLzaiC08v3-4IejCJODYkZgCVf1D7zZ-6eCqnNhrzbqr41YORlH8Ev0L0QRwaUcGqyAvi0fYXudftJQ1LvZAX"/>
+<div>
+<div class="font-title-lg text-title-lg">Elena Martínez</div>
+<div class="text-sm text-on-surface-variant">Cloud Architecture</div>
+</div>
+</div>
+<span class="px-3 py-1 bg-error-container text-on-error-container border border-error/20 rounded-full text-[10px] font-bold uppercase tracking-wider">En Riesgo</span>
+</div>
+<!-- Risk Item 2 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-lg border border-white/5 hover:border-error/30 transition-all">
+<div class="flex items-center gap-4">
+<img alt="David Ramos" class="w-10 h-10 rounded-full bg-surface-container-highest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8tD-XLp-Xazdx41cOWPn3J-MgzYz_sEcsxI9spfvymNA4yXNuLQe3iGCHaPnhPKrWUNOJAJtP_jY7liOw1Q8cYXuFCe5NbYUwEfxVTcINCAK11lwgMfWlUi95c-ZjVl-gQupPat8L4gAzreOGy12GrenFBHGMqo-B2cA5feVlobXvuQ42IB7pLvMGs14IPeVjOgygZ44aMfI87RiWU9G3YQ_nZ8Rtv206OhuMvceTH2KGcVtfZ1WItISM8hezCUG9Jo-YWy2l8fmz"/>
+<div>
+<div class="font-title-lg text-title-lg">David Ramos</div>
+<div class="text-sm text-on-surface-variant">Python for AI</div>
+</div>
+</div>
+<span class="px-3 py-1 bg-error-container text-on-error-container border border-error/20 rounded-full text-[10px] font-bold uppercase tracking-wider">En Riesgo</span>
+</div>
+</div>
+<div class="mt-10 p-4 bg-primary/5 border border-primary/20 rounded-lg">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">auto_awesome</span>
+<div>
+<p class="text-sm text-primary font-bold mb-1">Recomendación de RetAIM</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Elena ha reducido su actividad un 40%. Se recomienda una sesión de mentoría de 15 minutos para desbloquear el módulo de Seguridad.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Deadlines Timeline -->
+<div class="lg:col-span-7">
+<div class="shelf-card rounded-xl p-8 h-full">
+<h2 class="font-headline-sm text-headline-sm mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">event_available</span>
+                        Próximas Fechas Límite
+                    </h2>
+<div class="relative pl-8 space-y-12 before:content-[''] before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-gradient-to-b before:from-primary before:to-transparent">
+<!-- Timeline Item 1 -->
+<div class="relative">
+<div class="absolute -left-[30px] top-1 w-6 h-6 rounded-full bg-background border-2 border-primary flex items-center justify-center z-10 shadow-[0_0_10px_rgba(124,58,237,0.5)]">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Lucas Silva</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Certificación Microsoft Azure</p>
+</div>
+<div class="text-right">
+<span class="px-4 py-1.5 bg-primary-container/20 text-primary border border-primary/30 rounded-lg text-label-md font-bold">En 2 días</span>
+<p class="text-xs text-on-surface-variant mt-1">22 Octubre</p>
+</div>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative">
+<div class="absolute -left-[30px] top-1 w-6 h-6 rounded-full bg-background border-2 border-outline flex items-center justify-center z-10">
+<div class="w-2 h-2 bg-outline rounded-full"></div>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Ana Paz</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">AWS Certified Solutions Architect</p>
+</div>
+<div class="text-right">
+<span class="px-4 py-1.5 bg-surface-container-highest text-on-surface-variant border border-white/5 rounded-lg text-label-md font-bold">En 5 días</span>
+<p class="text-xs text-on-surface-variant mt-1">25 Octubre</p>
+</div>
+</div>
+</div>
+<!-- Timeline Item 3 (Visual Placeholder) -->
+<div class="relative opacity-50">
+<div class="absolute -left-[30px] top-1 w-6 h-6 rounded-full bg-background border-2 border-outline-variant flex items-center justify-center z-10"></div>
+<div class="flex items-center justify-between">
+<p class="text-on-surface-variant font-label-md text-label-md">Más eventos la próxima semana...</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Team Status Shelf -->
+<section class="mt-section-gap">
+<h2 class="font-headline-sm text-headline-sm mb-6 px-2">Estado Reciente del Equipo</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Team Card 1 -->
+<div class="shelf-card p-6 rounded-xl">
+<img class="w-full h-32 rounded-lg object-cover mb-4" data-alt="A futuristic abstract digital graphic featuring glowing interconnected nodes and binary patterns in a deep violet and electric blue color scheme. The composition is sleek and professional, symbolizing high-end technical certification and AI-driven skill mapping in a modern SaaS context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoKFbFcpsU3wsnWkChV1X1jzevz-NkKU34hOgiefhLOVtaAK9sCP45UHv2_ux7oDf2gDWcC0ef1MsCReIa8C5cpv21c8bdzVnvQ1tqO_sBz7BJu3dhTT4WiAQTt6TwTnfe6yKKEr-6pTyi3lkEawJFaypecfz5qTxbDubyVU2cA2Rm4iNx9SGobodymqKCylAB39jgE6cJHzgvlNUQQYNT0lmUqrwMVjBfPCK8u098fAlea7PaImxCkk6KygXCmwtB7nxIRZZ6Dvi4"/>
+<div class="font-title-lg text-title-lg mb-1">Módulo Completado</div>
+<p class="text-sm text-on-surface-variant mb-4">Roberto Ruiz completó 'Advanced React Patterns'.</p>
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary" data-weight="fill">verified</span>
+<span class="text-xs text-on-surface-variant">Hace 2 horas</span>
+</div>
+</div>
+<!-- Team Card 2 -->
+<div class="shelf-card p-6 rounded-xl">
+<img class="w-full h-32 rounded-lg object-cover mb-4" data-alt="An elegant dark-themed visualization of data streams flowing into a central glowing core, representing an AI agent processing information. The lighting is low-key with vibrant purple and indigo highlights, creating an atmosphere of technological sophistication and deep learning expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI1OBDCi_1ULafKaOnpx4W0rCUL2TMk4MNmL50266MdmJbij3f_y6sbwU-mmmAILtiNzRSgmRZmU8t04H7Wiq5noUN9iZkDnqymp5UwtMcJX3ZYlgI2IgCNuxGuPe1OkaGnfsDW0VLQNnonkHtEuJpv38ECA7J0OSkdb7BHIJ5eCLEHnZsW6Ydo88sPeAf9OeHmqYrSpCLYRuxaTE4rK0cUIbcdpc9rpnm8Lzm4G5v4xBE8I8c93bdWGOJnJxx9dp-rf4D_vyW1n0X"/>
+<div class="font-title-lg text-title-lg mb-1">Insignia Obtenida</div>
+<p class="text-sm text-on-surface-variant mb-4">Carla Gomez alcanzó el nivel 'Expert' en GraphQL.</p>
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-tertiary" data-weight="fill">stars</span>
+<span class="text-xs text-on-surface-variant">Ayer</span>
+</div>
+</div>
+<!-- Team Card 3 -->
+<div class="shelf-card p-6 rounded-xl">
+<img class="w-full h-32 rounded-lg object-cover mb-4" data-alt="A minimalist and high-performance corporate dashboard visualization showing smooth curves of progress and growth. The background is a rich charcoal grey with accents of neon violet, embodying a pro-grade study environment designed for focus and mastery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG4t9lGvAVFReeJOOE_5d7eRXeMkBGvqGMQ7GM10uRd1Qm06jmAS0koTCRRQ5sADe_lhUP_P4hz44iaTLitY99eW83lDsV4m_qLhL6vre3AWe814WdDQ6sHHMp2sqwZq6glF2lc2dj9huqGnUsW43umhy7P9kOb0hjWQ66Lh4LHZ44jdqbnObgsv9TX24SWa2oAFdXiEPa-MhrvemK6vX2n5TA75FM-v3RkTbrb4rQVu-W-8VioGKTIguymS3ve1BwyMj0rjwxMtsK"/>
+<div class="font-title-lg text-title-lg mb-1">Hito Grupal</div>
+<p class="text-sm text-on-surface-variant mb-4">El equipo de Frontend superó el 80% de avance.</p>
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-secondary" data-weight="fill">rocket_launch</span>
+<span class="text-xs text-on-surface-variant">3 días atrás</span>
+</div>
+</div>
+<!-- Team Card 4 -->
+<div class="shelf-card p-6 rounded-xl border-dashed border-white/10 flex flex-col items-center justify-center text-center group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">add_chart</span>
+</div>
+<div class="font-title-lg text-title-lg mb-1">Personalizar Vista</div>
+<p class="text-sm text-on-surface-variant">Añade nuevos widgets a tu resumen.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-8 mt-section-gap bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto w-full gap-4">
+<div class="flex items-center gap-6">
+<span class="font-title-lg text-title-lg font-bold text-on-surface">RetAIM AI</span>
+<span class="font-body-md text-body-md text-on-surface-variant opacity-80">© 2024 RetAIM AI. All rights reserved.</span>
+</div>
+<div class="flex gap-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacidad</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Términos</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Soporte</a>
+</div>
+</div>
+</footer>
+<!-- Bottom Navigation for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface/90 backdrop-blur-lg border-t border-white/10 flex justify-around items-center z-50">
+<button class="flex flex-col items-center text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold">Inicio</span>
+</button>
+<button class="flex flex-col items-center text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-bold">Equipo</span>
+</button>
+<button class="flex flex-col items-center text-primary">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-bold">Resumen</span>
+</button>
+<button class="flex flex-col items-center text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Perfil</span>
+</button>
+</nav>
+<script>
+        // Micro-interactions for hovering cards
+        document.querySelectorAll('.shelf-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

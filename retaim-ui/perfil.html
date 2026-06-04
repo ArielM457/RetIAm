@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RetAIM | Perfil de Empleado</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(124, 58, 237, 0.15);
+        }
+        .inner-glow {
+            box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.05);
+        }
+        .atmospheric-halo {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.08) 0%, rgba(37, 99, 235, 0) 70%);
+            filter: blur(60px);
+            z-index: -1;
+        }
+        .shelf-scroll::-webkit-scrollbar {
+            height: 4px;
+        }
+        .shelf-scroll::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .shelf-scroll::-webkit-scrollbar-thumb {
+            background: #7C3AED;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#3323cc",
+                      "on-primary-fixed": "#25005a",
+                      "on-tertiary-container": "#e6e3ff",
+                      "tertiary-fixed-dim": "#c3c0ff",
+                      "tertiary-fixed": "#e2dfff",
+                      "secondary-container": "#0053db",
+                      "outline-variant": "#4a4455",
+                      "on-tertiary-fixed": "#0f0069",
+                      "inverse-on-surface": "#2d3134",
+                      "surface-container-highest": "#323538",
+                      "on-secondary-fixed-variant": "#003ea8",
+                      "on-error-container": "#ffdad6",
+                      "on-background": "#e0e2e6",
+                      "error": "#ffb4ab",
+                      "surface-container-low": "#191c1f",
+                      "primary": "#d2bbff",
+                      "primary-fixed": "#eaddff",
+                      "on-secondary-fixed": "#00174b",
+                      "surface-container-lowest": "#0b0f11",
+                      "on-primary": "#3f008e",
+                      "tertiary-container": "#564eec",
+                      "on-surface-variant": "#ccc3d8",
+                      "surface": "#101417",
+                      "error-container": "#93000a",
+                      "secondary-fixed-dim": "#b4c5ff",
+                      "on-tertiary": "#1d00a5",
+                      "surface-dim": "#101417",
+                      "inverse-surface": "#e0e2e6",
+                      "on-surface": "#e0e2e6",
+                      "surface-tint": "#d2bbff",
+                      "primary-fixed-dim": "#d2bbff",
+                      "surface-container-high": "#272a2d",
+                      "on-secondary-container": "#cdd7ff",
+                      "inverse-primary": "#732ee4",
+                      "surface-container": "#1d2023",
+                      "primary-container": "#7c3aed",
+                      "tertiary": "#c3c0ff",
+                      "on-secondary": "#002a78",
+                      "on-error": "#690005",
+                      "surface-bright": "#363a3d",
+                      "outline": "#958da1",
+                      "on-primary-container": "#ede0ff",
+                      "background": "#101417",
+                      "secondary": "#b4c5ff",
+                      "surface-variant": "#323538",
+                      "secondary-fixed": "#dbe1ff",
+                      "on-primary-fixed-variant": "#5a00c6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "container-max": "1280px",
+                      "section-gap": "80px",
+                      "margin-desktop": "48px",
+                      "base": "4px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "display-lg-mobile": ["Plus Jakarta Sans"],
+                      "body-lg": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-md": ["Inter"],
+                      "display-lg": ["Plus Jakarta Sans"],
+                      "title-lg": ["Plus Jakarta Sans"],
+                      "headline-sm": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                      "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container/30">
+<div class="atmospheric-halo top-[-200px] left-[-200px]"></div>
+<div class="atmospheric-halo bottom-[-100px] right-[-100px]" style="background: radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, rgba(124, 58, 237, 0) 70%);"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 h-[72px] flex items-center justify-between px-margin-desktop max-w-container-max mx-auto bg-surface/70 backdrop-blur-md dark:bg-surface/70 border-b border-white/10 shadow-sm">
+<div class="flex items-center gap-12">
+<span class="font-display-lg text-display-lg-mobile text-primary dark:text-primary tracking-tight">RetAIM</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Inicio</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Mi Plan</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Sesiones</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Brechas</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all">notifications</button>
+<div class="w-10 h-10 rounded-full border-2 border-primary overflow-hidden">
+<img alt="Ariel Ortega" class="w-full h-full object-cover" data-alt="Close-up studio portrait of Ariel Ortega, a sophisticated Hispanic man in his late 30s with a confident expression. He has short groomed hair and a subtle beard, wearing a charcoal grey professional turtleneck. The background is a deep, dark studio setting with a soft atmospheric violet glow highlighting his silhouette, matching the modern corporate AI aesthetic. High-end editorial lighting with crisp details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA3VBCzs5iwKloWLtHMiQhnX8dClX9JrrjzOFGJXNfUuZnBjMejfrW4iKyNUwqIYQ_eDXZkF3OVrayduaW_LJEO6eNOfOmTkK2NAy00ktYrzQNe-FOCF5vIBhlmZao6i06t-UijVMKqmcOTqbv7xt_nWtmjqXumyg-xwnEBBmL2MFZEhotfDcWeIa_7OI_7R6kAKGzEfSjkNuzBZxLmU3Zldx0PzcOCkLi5wCq81a9TAa-u_SWVUP20ip8kp7Wu60_KVVMNKEuQWds"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (AI Assistant Overlay) -->
+<aside class="fixed right-0 top-0 h-full z-40 flex flex-col p-4 w-[380px] bg-surface-container/70 backdrop-blur-xl dark:bg-surface-container/70 border-l border-white/10 shadow-2xl shadow-primary/15 translate-x-full transition-transform duration-500 lg:translate-x-0">
+<div class="mt-20 px-4">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-on-primary text-3xl">smart_toy</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-primary">RetAIM Assistant</h3>
+<p class="text-on-surface-variant text-label-sm font-label-sm">AI-Powered Expert</p>
+</div>
+</div>
+<button class="w-full bg-gradient-to-r from-primary-container to-secondary-container text-white py-4 rounded-xl font-bold mb-8 hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-primary/20">
+                New Chat
+            </button>
+<nav class="space-y-2">
+<div class="flex items-center gap-4 p-3 bg-primary-container text-on-primary-container rounded-xl cursor-pointer">
+<span class="material-symbols-outlined">smart_toy</span>
+<span class="font-label-sm text-label-sm">AI Agent</span>
+</div>
+<div class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl cursor-pointer transition-all">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-sm text-label-sm">History</span>
+</div>
+<div class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl cursor-pointer transition-all">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-sm text-label-sm">Resources</span>
+</div>
+<div class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl cursor-pointer transition-all">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</div>
+</nav>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="pt-[112px] pb-[80px] px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto lg:pr-[420px]">
+<!-- Header Section (Asymmetric Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-section-gap">
+<!-- Profile Info Column -->
+<div class="lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left">
+<div class="relative group mb-8">
+<div class="absolute inset-0 bg-primary/20 rounded-3xl blur-2xl group-hover:bg-primary/30 transition-all duration-500"></div>
+<div class="relative w-48 h-48 md:w-64 md:h-64 rounded-3xl overflow-hidden border border-white/10 glass-panel p-2">
+<img alt="Ariel Ortega Portrait" class="w-full h-full object-cover rounded-2xl" data-alt="A detailed, cinematic portrait of Ariel Ortega, a senior professional architect. He is in his late 30s, looking directly at the camera with a poised and intellectual gaze. He wears a premium dark tech-fabric blazer over a simple black tee. The lighting is dramatic, coming from the side to create deep shadows and highlight facial contours, with a subtle blue and violet rim light. The environment is a blurred, high-tech server room background with glowing data points." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb6TUpbl3BFYIsrx8aUoLOjNCasae6G1EwVkUs5pImdmk90Uppytn0Vkk5pw045R0ZGg2chG__SzfUT_FbkdfS-SKS--nUjYxtLwsn7g7qDQRR4MxIeM6FBhcQbBgMkCShiXccbdDiwSjhXCn6TLyP4-0nIqomxU0f2Nf4rt_7r67B_wsKzsvLvz4Lj-JkhI5-lRAbs1CFQl_oOmEbU_DpvBLvMeir2-JKDANyWLTw3iy81AxJY95zIMadWbl7q9D6MOfoElMkX6Hp"/>
+</div>
+<div class="absolute -bottom-4 -right-4 bg-primary text-on-primary px-4 py-2 rounded-full font-bold shadow-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                        Activo
+                    </div>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-2">Ariel Ortega</h1>
+<p class="text-primary font-headline-sm text-headline-sm mb-6">Senior Cloud Architect</p>
+<div class="flex flex-col items-center lg:items-start gap-4">
+<div class="flex items-center gap-3 px-4 py-2 bg-surface-container-high rounded-full border border-white/5">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">cloud</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Certificación actual:</span>
+<span class="font-label-md text-label-md text-on-surface">Azure Solutions Architect</span>
+</div>
+<div class="w-full max-w-[320px]">
+<div class="flex justify-between mb-2">
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-widest">Progreso de Certificación</span>
+<span class="text-label-sm font-label-sm text-primary">74%</span>
+</div>
+<div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary-container to-primary-container" style="width: 74%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Settings Sections Column -->
+<div class="lg:col-span-7 space-y-6">
+<div class="glass-panel p-8 rounded-3xl inner-glow relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl">schedule</span>
+</div>
+<div class="flex justify-between items-start mb-6">
+<div>
+<h4 class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest mb-1">Dedicación</h4>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Horas Semanales</h3>
+</div>
+<button class="px-4 py-2 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition-all text-label-md font-label-md text-on-surface">Editar</button>
+</div>
+<div class="text-[48px] font-bold text-primary tracking-tight">10h <span class="text-label-md font-medium text-on-surface-variant">/ semana</span></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="glass-panel p-8 rounded-3xl inner-glow flex flex-col justify-between group">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-secondary p-3 bg-secondary/10 rounded-2xl">event_available</span>
+<button class="p-2 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition-all">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+<div>
+<h4 class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest mb-1">Horario Preferido</h4>
+<p class="font-title-lg text-title-lg text-on-surface">10:00 - 11:30</p>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-3xl inner-glow flex flex-col justify-between group">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-primary p-3 bg-primary/10 rounded-2xl">psychology</span>
+<button class="p-2 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition-all">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+<div>
+<h4 class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest mb-1">Estilo de Aprendizaje</h4>
+<p class="font-title-lg text-title-lg text-on-surface">Directo (Hands-on)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Horizontal Shelf: Certificados Obtenidos -->
+<section class="mt-section-gap">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-4">
+                    Certificados Obtenidos
+                    <span class="px-3 py-1 bg-surface-container-highest rounded-full text-label-sm font-label-sm text-primary border border-white/5">3 Totales</span>
+</h2>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex gap-gutter overflow-x-auto pb-8 shelf-scroll snap-x">
+<!-- Badge 1 -->
+<div class="min-w-[300px] md:min-w-[380px] snap-start glass-panel p-6 rounded-[32px] inner-glow group cursor-pointer hover:border-primary/50 transition-all">
+<div class="relative w-full aspect-video mb-6 rounded-2xl overflow-hidden">
+<img alt="AWS Solutions Architect" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A futuristic, digital representation of an AWS Solutions Architect certificate badge. The badge glows with neon orange and blue tones, set against a backdrop of deep black obsidian and circuit board patterns. Soft ambient lighting illuminates the geometric glass edges of the badge. High-tech, clean corporate style with a focus on technological mastery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-4TXRPPS35lSvkl2nXzmPJCcwfMPb0qZOOownRlKPmI9MlSUYbd_Yr4hGWsP5fA7QuQ_7s69Nz7QV-oQdiPDICZBoCc__lrY50oZM0trQkV0lr4cJYKBAsJV3cnkx6ViDosAzlvj3go-q5VxBn9_kbzGmsT3bcycTO6umT73WUONz4xPd830gXQeMmFJ5JS_HBlmkoesxpGILxrUmPAS0jzcw1yFAdkrcQQWZTRVOhThCsOQIg59pMCxRqTDllz3c3SnUpnQs5r4R"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent opacity-60"></div>
+<div class="absolute bottom-4 left-4">
+<span class="px-3 py-1 bg-green-500/20 text-green-400 border border-green-500/30 rounded-full text-label-sm font-label-sm backdrop-blur-md">Finalizado</span>
+</div>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2">AWS Solutions Architect - Associate</h3>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm">
+<span>Obtenido: Ene 2024</span>
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+</div>
+<!-- Badge 2 -->
+<div class="min-w-[300px] md:min-w-[380px] snap-start glass-panel p-6 rounded-[32px] inner-glow group cursor-pointer hover:border-primary/50 transition-all">
+<div class="relative w-full aspect-video mb-6 rounded-2xl overflow-hidden">
+<img alt="CKAD Certificate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A premium digital badge for Certified Kubernetes Application Developer (CKAD). The badge features a stylized nautilus steering wheel icon in deep blue and white, floating within a crystalline cube. The atmosphere is professional and sophisticated, with deep navy and subtle violet light refracting through glass surfaces. Intricate digital details suggest high-end engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB13i0dhBB-ptEjPhk3PjFg3X-XYF9vfR6-4ynf0O8CNWqeWxWgaMp8A-N4L4iyQmHiwkbF99Cgt2ABipX4PS7ukgDGjPpGvWF3xbmY8J7YWT_Z8yDOpJJOrsmYMZkUSzLnIM9_2Ydp4y3W38-tvaD7wKugbknMIik88EbN-CZCHnEYde_qSaHie1YYEoAfh08phhORPcPplFav2ZyYBZLgsZm4b5cixzytsMx5FuhKBYQyQF_83aDWkcL_ygtjLUnxfUs7IM-5F_2k"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent opacity-60"></div>
+<div class="absolute bottom-4 left-4">
+<span class="px-3 py-1 bg-green-500/20 text-green-400 border border-green-500/30 rounded-full text-label-sm font-label-sm backdrop-blur-md">Finalizado</span>
+</div>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2">Kubernetes App Developer (CKAD)</h3>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm">
+<span>Obtenido: Oct 2023</span>
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+</div>
+<!-- Badge 3 -->
+<div class="min-w-[300px] md:min-w-[380px] snap-start glass-panel p-6 rounded-[32px] inner-glow group cursor-pointer hover:border-primary/50 transition-all">
+<div class="relative w-full aspect-video mb-6 rounded-2xl overflow-hidden">
+<img alt="Google Cloud Engineer" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="An ethereal digital badge representation for Google Cloud Associate Engineer. It features a minimalist cloud icon pulsing with soft primary colors (blue, red, yellow, green) against a dark, star-like data field. The lighting is soft and volumetric, creating a sense of infinite digital space. The design is clean, authoritative, and visionary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQifX-SGl1F_H2gq1_-Exny5DfnASMaKblhDJS6A2RGa7fQs7NsBO7PSXIXcexj5yzhmpEnNeGV2XrImiS9t4-MOGEL_NQlTCpyxbRbXgxwIuP6k4zN-aiGNxd_z6nolCNNzjfsTy3nREB0gaKZjvB3EMmazzh2n85F6Dtm7fBEdmkKr6FsO4EYFKWI-Rh94Yo-O0skzMF9K7mZzIjEejQnGLyLWnTH_SJwjiTAYBHrPj6VnLzbm_7r44n0EiZfJ2lYWrgovs1JvG9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent opacity-60"></div>
+<div class="absolute bottom-4 left-4">
+<span class="px-3 py-1 bg-green-500/20 text-green-400 border border-green-500/30 rounded-full text-label-sm font-label-sm backdrop-blur-md">Finalizado</span>
+</div>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2">Google Associate Cloud Engineer</h3>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm">
+<span>Obtenido: Jul 2023</span>
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script>
+        // Micro-interactions for glass panels
+        document.querySelectorAll('.glass-panel').forEach(panel => {
+            panel.addEventListener('mousemove', (e) => {
+                const rect = panel.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                panel.style.setProperty('--mouse-x', `${x}px`);
+                panel.style.setProperty('--mouse-y', `${y}px`);
+                
+                // Add a very subtle tilt effect could go here
+            });
+        });
+
+        // Pulsing thinking effect for the header
+        const halo = document.querySelector('.atmospheric-halo');
+        let scale = 1;
+        let growing = true;
+
+        function animateHalo() {
+            if (growing) {
+                scale += 0.002;
+                if (scale >= 1.1) growing = false;
+            } else {
+                scale -= 0.002;
+                if (scale <= 0.9) growing = true;
+            }
+            halo.style.transform = `scale(${scale})`;
+            requestAnimationFrame(animateHalo);
+        }
+        animateHalo();
+    </script>
+</body></html>

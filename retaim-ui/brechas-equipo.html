@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RetAIM - Brechas del Equipo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(124, 58, 237, 0.1);
+        }
+        .ai-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, rgba(37, 99, 235, 0) 70%);
+            filter: blur(40px);
+            z-index: -1;
+        }
+        body {
+            background-color: #0F172A;
+            color: #e0e2e6;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-container": "#0053db",
+                      "on-surface": "#e0e2e6",
+                      "on-error-container": "#ffdad6",
+                      "surface-variant": "#323538",
+                      "on-tertiary-container": "#e6e3ff",
+                      "secondary": "#b4c5ff",
+                      "on-surface-variant": "#ccc3d8",
+                      "tertiary-fixed": "#e2dfff",
+                      "primary-fixed-dim": "#d2bbff",
+                      "on-tertiary-fixed-variant": "#3323cc",
+                      "secondary-fixed": "#dbe1ff",
+                      "surface-container": "#1d2023",
+                      "on-primary": "#3f008e",
+                      "tertiary": "#c3c0ff",
+                      "inverse-primary": "#732ee4",
+                      "surface-container-highest": "#323538",
+                      "inverse-surface": "#e0e2e6",
+                      "secondary-fixed-dim": "#b4c5ff",
+                      "primary": "#d2bbff",
+                      "on-primary-fixed-variant": "#5a00c6",
+                      "surface-container-low": "#191c1f",
+                      "on-secondary-container": "#cdd7ff",
+                      "error": "#ffb4ab",
+                      "on-secondary": "#002a78",
+                      "surface-container-lowest": "#0b0f11",
+                      "primary-container": "#7c3aed",
+                      "on-tertiary": "#1d00a5",
+                      "on-primary-fixed": "#25005a",
+                      "on-error": "#690005",
+                      "on-primary-container": "#ede0ff",
+                      "on-background": "#e0e2e6",
+                      "background": "#101417",
+                      "inverse-on-surface": "#2d3134",
+                      "error-container": "#93000a",
+                      "on-tertiary-fixed": "#0f0069",
+                      "on-secondary-fixed-variant": "#003ea8",
+                      "on-secondary-fixed": "#00174b",
+                      "surface-dim": "#101417",
+                      "surface": "#101417",
+                      "tertiary-fixed-dim": "#c3c0ff",
+                      "tertiary-container": "#564eec",
+                      "outline-variant": "#4a4455",
+                      "primary-fixed": "#eaddff",
+                      "outline": "#958da1",
+                      "surface-bright": "#363a3d",
+                      "surface-container-high": "#272a2d",
+                      "surface-tint": "#d2bbff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "48px",
+                      "base": "4px",
+                      "section-gap": "80px",
+                      "container-max": "1280px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "title-lg": ["Plus Jakarta Sans"],
+                      "label-md": ["Inter"],
+                      "headline-sm": ["Plus Jakarta Sans"],
+                      "display-lg": ["Plus Jakarta Sans"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "label-sm": ["Inter"],
+                      "display-lg-mobile": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="min-h-screen font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full h-[72px] z-50 bg-surface/70 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_rgba(124,58,237,0.15)]">
+<div class="flex justify-between items-center px-margin-desktop max-w-container-max mx-auto w-full h-full">
+<div class="flex items-center gap-8">
+<span class="font-headline-sm text-headline-sm font-extrabold text-primary tracking-tight">RetAIM</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant font-medium hover:text-on-surface hover:text-primary transition-all duration-300 ease-in-out" href="#">Inicio</a>
+<a class="text-on-surface-variant font-medium hover:text-on-surface hover:text-primary transition-all duration-300 ease-in-out" href="#">Equipo</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-bold hover:text-primary transition-all duration-300 ease-in-out" href="#">Brechas</a>
+<a class="text-on-surface-variant font-medium hover:text-on-surface hover:text-primary transition-all duration-300 ease-in-out" href="#">Resumen</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all duration-300 ease-in-out active:scale-95 transform">notifications</button>
+<div class="w-10 h-10 rounded-full border-2 border-primary/30 overflow-hidden">
+<img alt="Manager Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a senior technology manager in his 40s with a confident and approachable expression. He is wearing a modern charcoal blazer over a clean white shirt. The background is a soft-focus corporate office with cool blue and violet ambient lighting, matching a high-end tech SaaS aesthetic. The lighting is crisp and cinematic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBueHpaW74gKIwKFnYZuSGr8Q2rCYAh5j6zNMEETPy07nuInjYWOi2Jbcjorbh19H8RVDFk1NMJsZ8wkmMq-C0rNJ8WVLm5ChcmHD4YK02ViLZZHYJhzhHEX7KziF6uj3G1t-VAUWLBGxd1zerC1Sbxn0ybCJGAWSsJQBTBgmXvmnLpu78wv8QP-j4FCAR0zi6rjoPYKuvU2DNtumU5dnqpbrYXdS7b2CFlxc6qxcErFAoLmXO2muPasH95zcjYcr0_HSYsU3TlAMiA"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-28 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Header Section -->
+<header class="mb-12 relative">
+<div class="ai-glow -top-20 -left-20"></div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-4">Brechas detectadas en el equipo</h1>
+<p class="text-on-surface-variant font-body-lg max-w-2xl">Visualización en tiempo real de los desafíos técnicos identificados mediante el análisis predictivo de RetAIM.</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Main Content: Topic Shelves -->
+<div class="lg:col-span-8 space-y-6">
+<!-- Shelf Item 1 -->
+<section class="glass-panel p-8 rounded-xl group hover:shadow-[0_8px_48px_rgba(124,58,237,0.2)] transition-all duration-500">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary mb-1">Arquitectura Serverless</h2>
+<p class="text-on-surface-variant text-label-md">Nivel Crítico de Desempeño</p>
+</div>
+<span class="px-3 py-1 rounded-full border border-error text-error text-label-sm bg-error/10 uppercase tracking-wider">Prioridad Alta</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between text-label-md mb-2">
+<span class="text-on-surface-variant">Dificultad del Módulo</span>
+<span class="text-error font-bold">65%</span>
+</div>
+<div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-error to-error/60" style="width: 65%"></div>
+</div>
+</div>
+<div class="mt-8 flex items-center gap-4 p-4 bg-surface-container-low rounded-lg border border-white/5">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">group</span>
+<p class="font-body-md text-on-surface">
+<span class="font-bold text-primary">8 miembros</span> necesitan refuerzo inmediato en escalado y persistencia.
+                        </p>
+</div>
+</section>
+<!-- Shelf Item 2 -->
+<section class="glass-panel p-8 rounded-xl group hover:shadow-[0_8px_48px_rgba(124,58,237,0.1)] transition-all duration-500">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-1">Seguridad en Contenedores</h2>
+<p class="text-on-surface-variant text-label-md">Nivel Moderado de Desempeño</p>
+</div>
+<span class="px-3 py-1 rounded-full border border-yellow-500/50 text-yellow-500 text-label-sm bg-yellow-500/10 uppercase tracking-wider">En Observación</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between text-label-md mb-2">
+<span class="text-on-surface-variant">Dificultad del Módulo</span>
+<span class="text-yellow-500 font-bold">40%</span>
+</div>
+<div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-yellow-500 to-yellow-300" style="width: 40%"></div>
+</div>
+</div>
+</section>
+<!-- Shelf Item 3 -->
+<section class="glass-panel p-8 rounded-xl group hover:shadow-[0_8px_48px_rgba(124,58,237,0.1)] transition-all duration-500">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-1">Optimización de Costos</h2>
+<p class="text-on-surface-variant text-label-md">Nivel Inicial de Desempeño</p>
+</div>
+<span class="px-3 py-1 rounded-full border border-yellow-500/50 text-yellow-500 text-label-sm bg-yellow-500/10 uppercase tracking-wider">Estable</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between text-label-md mb-2">
+<span class="text-on-surface-variant">Dificultad del Módulo</span>
+<span class="text-yellow-500 font-bold">25%</span>
+</div>
+<div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-yellow-500 to-yellow-300" style="width: 25%"></div>
+</div>
+</div>
+</section>
+</div>
+<!-- Side Content: Action Panel -->
+<div class="lg:col-span-4">
+<div class="sticky top-28 space-y-6">
+<!-- Group Action Card -->
+<div class="glass-panel overflow-hidden rounded-xl border-primary/20 bg-gradient-to-br from-surface-container to-background relative">
+<div class="ai-glow top-0 right-0 opacity-50"></div>
+<div class="p-8 relative z-10">
+<div class="w-12 h-12 bg-primary-container/20 rounded-lg flex items-center justify-center mb-6 border border-primary/30">
+<span class="material-symbols-outlined text-primary-fixed text-3xl" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-4">Sugerencia del Agente IA</h3>
+<p class="text-on-surface-variant font-body-md mb-8 leading-relaxed">
+                                Hemos detectado una brecha crítica que afecta a la mayoría del equipo. Recomendamos: <br/><br/>
+<span class="text-on-surface font-semibold">Programar sesión de refuerzo grupal sobre Serverless para este jueves.</span>
+</p>
+<button class="w-full py-4 px-6 rounded-lg bg-gradient-to-r from-[#7C3AED] to-[#2563EB] text-white font-bold text-body-md hover:shadow-[0_0_20px_rgba(124,58,237,0.4)] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 group">
+                                Programar ahora
+                                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">calendar_month</span>
+</button>
+</div>
+</div>
+<!-- Additional Context -->
+<div class="p-6 bg-surface-container-lowest rounded-xl border border-white/5">
+<h4 class="font-title-lg text-title-lg mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                            Impacto en Proyecto
+                        </h4>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant text-label-md">Retraso Estimado</span>
+<span class="text-error font-mono text-label-md">~12 días</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant text-label-md">Eficiencia del Equipo</span>
+<span class="text-primary font-mono text-label-md">78%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-8 mt-section-gap bg-surface-container-lowest border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto w-full gap-4">
+<span class="font-title-lg text-title-lg font-bold text-on-surface">RetAIM</span>
+<div class="flex gap-6">
+<a class="text-on-surface-variant text-label-sm hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Privacidad</a>
+<a class="text-on-surface-variant text-label-sm hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Términos</a>
+<a class="text-on-surface-variant text-label-sm hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Soporte</a>
+</div>
+<p class="text-on-surface-variant text-label-sm">© 2024 RetAIM AI. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions for progress bars animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const bars = document.querySelectorAll('.h-full');
+            bars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.transition = 'width 1.5s cubic-bezier(0.22, 1, 0.36, 1)';
+                    bar.style.width = width;
+                }, 300);
+            });
+        });
+    </script>
+</body></html>

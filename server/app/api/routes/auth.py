@@ -1,20 +1,27 @@
 from fastapi import APIRouter
 
-from app.models.auth import EmailValidationRequest, EmailValidationResponse
-from app.services.auth_service import validate_corporate_email
+from app.models.auth import (
+    AuthSessionResponse,
+    EmailValidationRequest,
+    EmailValidationResponse,
+    LoginRequest,
+    RegisterRequest,
+)
+from app.services.auth_service import analyze_email_address, register_mock_user, sign_in_mock_user
 
 router = APIRouter()
 
 
 @router.post("/validate-email", response_model=EmailValidationResponse)
 def validate_email(payload: EmailValidationRequest) -> EmailValidationResponse:
-    valid = validate_corporate_email(payload.email)
-    return EmailValidationResponse(
-        email=payload.email,
-        is_valid=valid,
-        message=(
-            "Correo corporativo valido para la demo."
-            if valid
-            else "Usa un correo corporativo. Los dominios publicos estan bloqueados."
-        ),
-    )
+    return analyze_email_address(payload.email)
+
+
+@router.post("/register", response_model=AuthSessionResponse, status_code=201)
+def register(payload: RegisterRequest) -> AuthSessionResponse:
+    return register_mock_user(payload)
+
+
+@router.post("/login", response_model=AuthSessionResponse)
+def login(payload: LoginRequest) -> AuthSessionResponse:
+    return sign_in_mock_user(payload)

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RetAIM - Examen Final</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+        }
+        .atmospheric-halo {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, rgba(37, 99, 235, 0.05) 50%, transparent 100%);
+            filter: blur(80px);
+            z-index: -1;
+        }
+        .option-radio:checked + label {
+            border-color: #7C3AED;
+            background: rgba(124, 58, 237, 0.1);
+        }
+        .timer-glow {
+            text-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#3323cc",
+                        "on-primary-fixed": "#25005a",
+                        "on-tertiary-container": "#e6e3ff",
+                        "tertiary-fixed-dim": "#c3c0ff",
+                        "tertiary-fixed": "#e2dfff",
+                        "secondary-container": "#0053db",
+                        "outline-variant": "#4a4455",
+                        "on-tertiary-fixed": "#0f0069",
+                        "inverse-on-surface": "#2d3134",
+                        "surface-container-highest": "#323538",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#e0e2e6",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#191c1f",
+                        "primary": "#d2bbff",
+                        "primary-fixed": "#eaddff",
+                        "on-secondary-fixed": "#00174b",
+                        "surface-container-lowest": "#0b0f11",
+                        "on-primary": "#3f008e",
+                        "tertiary-container": "#564eec",
+                        "on-surface-variant": "#ccc3d8",
+                        "surface": "#101417",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "on-tertiary": "#1d00a5",
+                        "surface-dim": "#101417",
+                        "inverse-surface": "#e0e2e6",
+                        "on-surface": "#e0e2e6",
+                        "surface-tint": "#d2bbff",
+                        "primary-fixed-dim": "#d2bbff",
+                        "surface-container-high": "#272a2d",
+                        "on-secondary-container": "#cdd7ff",
+                        "inverse-primary": "#732ee4",
+                        "surface-container": "#1d2023",
+                        "primary-container": "#7c3aed",
+                        "tertiary": "#c3c0ff",
+                        "on-secondary": "#002a78",
+                        "on-error": "#690005",
+                        "surface-bright": "#363a3d",
+                        "outline": "#958da1",
+                        "on-primary-container": "#ede0ff",
+                        "background": "#101417",
+                        "secondary": "#b4c5ff",
+                        "surface-variant": "#323538",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-primary-fixed-variant": "#5a00c6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "section-gap": "80px",
+                        "margin-desktop": "48px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "title-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen relative overflow-x-hidden">
+<!-- Background Effects -->
+<div class="atmospheric-halo top-[-100px] left-[-100px]"></div>
+<div class="atmospheric-halo bottom-[-200px] right-[-100px]" style="background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);"></div>
+<!-- Top Progress Bar (Mandatory Rule) -->
+<div class="fixed top-0 left-0 w-full h-1.5 bg-white/10 z-[60]">
+<div class="h-full bg-gradient-to-r from-secondary-container to-primary-container w-[15%] transition-all duration-1000"></div>
+</div>
+<!-- TopNavBar (Minimalist version for exam focus) -->
+<nav class="fixed top-0 left-0 w-full z-50 h-[72px] flex items-center justify-between px-margin-desktop bg-surface/70 backdrop-blur-md border-b border-white/10">
+<div class="flex items-center gap-6">
+<span class="font-display-lg text-[24px] text-primary tracking-tight font-extrabold">RetAIM</span>
+<div class="h-6 w-[1px] bg-white/20"></div>
+<span class="font-label-md text-on-surface-variant">EXAMEN FINAL: AZURE CLOUD</span>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 group">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">timer</span>
+<span class="font-headline-sm text-primary timer-glow tabular-nums" id="exam-timer">45:00</span>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container-high hover:bg-surface-variant transition-all text-label-md">
+<span class="material-symbols-outlined text-[18px]">flag</span>
+                Marcar
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-[120px] pb-20 px-4 max-w-container-max mx-auto flex flex-col items-center">
+<!-- Header Info -->
+<div class="w-full max-w-3xl mb-8 flex items-end justify-between">
+<div>
+<span class="font-label-md text-primary uppercase tracking-widest mb-2 block">Cuestionario</span>
+<h1 class="font-headline-md text-on-surface">Pregunta 3 de 20</h1>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-on-surface-variant">Puntuación actual: 2/20</span>
+</div>
+</div>
+<!-- Question Card -->
+<div class="w-full max-w-3xl glass-panel rounded-2xl p-8 md:p-12 mb-8 relative">
+<div class="absolute -top-3 -left-3 bg-primary-container text-white px-4 py-1 rounded-lg font-label-md shadow-lg">
+                FÁCIL
+            </div>
+<h2 class="font-headline-sm text-on-surface mb-10 leading-relaxed">
+                ¿Cuál es la ventaja principal de usar Azure Functions en una arquitectura orientada a microservicios?
+            </h2>
+<div class="space-y-4">
+<!-- Options -->
+<div class="relative">
+<input checked="" class="hidden option-radio" id="opt1" name="azure-q" type="radio"/>
+<label class="flex items-center gap-4 p-5 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-primary/50 transition-all duration-200 group" for="opt1">
+<span class="w-6 h-6 rounded-full border-2 border-outline flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="w-2.5 h-2.5 rounded-full bg-primary opacity-0 transition-opacity"></span>
+</span>
+<span class="font-body-md text-on-surface">Escalabilidad automática e infraestructura sin servidor (Serverless).</span>
+</label>
+</div>
+<div class="relative">
+<input class="hidden option-radio" id="opt2" name="azure-q" type="radio"/>
+<label class="flex items-center gap-4 p-5 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-primary/50 transition-all duration-200 group" for="opt2">
+<span class="w-6 h-6 rounded-full border-2 border-outline flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="w-2.5 h-2.5 rounded-full bg-primary opacity-0 transition-opacity"></span>
+</span>
+<span class="font-body-md text-on-surface">Mayor control sobre el hardware subyacente de la red.</span>
+</label>
+</div>
+<div class="relative">
+<input class="hidden option-radio" id="opt3" name="azure-q" type="radio"/>
+<label class="flex items-center gap-4 p-5 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-primary/50 transition-all duration-200 group" for="opt3">
+<span class="w-6 h-6 rounded-full border-2 border-outline flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="w-2.5 h-2.5 rounded-full bg-primary opacity-0 transition-opacity"></span>
+</span>
+<span class="font-body-md text-on-surface">Costo fijo mensual independientemente de las ejecuciones.</span>
+</label>
+</div>
+<div class="relative">
+<input class="hidden option-radio" id="opt4" name="azure-q" type="radio"/>
+<label class="flex items-center gap-4 p-5 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-primary/50 transition-all duration-200 group" for="opt4">
+<span class="w-6 h-6 rounded-full border-2 border-outline flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="w-2.5 h-2.5 rounded-full bg-primary opacity-0 transition-opacity"></span>
+</span>
+<span class="font-body-md text-on-surface">Capacidad de ejecutar aplicaciones de escritorio legadas sin cambios.</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="w-full max-w-3xl flex items-center justify-between">
+<button class="px-6 py-4 rounded-xl font-label-md text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined">arrow_back</span>
+                Anterior
+            </button>
+<button class="bg-gradient-to-br from-[#7C3AED] to-[#2563EB] text-white px-10 py-4 rounded-xl font-headline-sm text-[18px] shadow-[0_0_20px_rgba(124,58,237,0.3)] hover:shadow-[0_0_30px_rgba(124,58,237,0.5)] hover:scale-[1.02] active:scale-95 transition-all duration-300 flex items-center gap-3">
+                Siguiente Pregunta
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Helper Floating Side Info -->
+<div class="fixed bottom-8 right-8 flex flex-col gap-4">
+<div class="glass-panel p-4 rounded-2xl flex items-center gap-4 animate-pulse">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="font-label-sm text-on-surface-variant">Sesión monitorizada por RetAIM AI</span>
+</div>
+</div>
+<!-- Background Image Asset (Shelf Logic) -->
+<div class="fixed bottom-0 left-0 w-full h-[300px] opacity-20 pointer-events-none overflow-hidden z-[-2]">
+<img class="w-full h-full object-cover" data-alt="A sophisticated digital abstract of interconnected data nodes and glowing neural networks in deep space blues and purples. The visual features thin architectural lines of light and microscopic detail, representing high-performance cloud computing and AI intelligence. Soft cinematic bokeh effects create depth, with a futuristic and authoritative atmosphere that complements a premium dark-mode interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbOox1CtK-UpNBvF4feYkYOchGAg_oXHYdL1fFJF5ZodHmqg55eBL62pflDbnI-1zDKNPJXJDA081E9NJlP1EabJrtJajE-C6nHrdYPsZObqihTkFBPx_lrHhu4x5hb42FhvjMXgaJow1i47C_0VgcPpeBNxSaXhxV0xNpBQnr-R6oXuP4npyhKIpci6H7fykZ2NmOEfUZeMXAC5b7FjgtC7CwJA0SXEyOBhed-tSWtNq2X2dfTLm_SYKiedDtNux7tapAS73lMV99"/>
+</div>
+<script>
+        // Micro-interaction: Timer Logic
+        let time = 2700; // 45:00 in seconds
+        const timerDisplay = document.getElementById('exam-timer');
+        
+        setInterval(() => {
+            time--;
+            const minutes = Math.floor(time / 60);
+            const seconds = time % 60;
+            timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (time < 300) { // Last 5 mins
+                timerDisplay.classList.remove('text-primary');
+                timerDisplay.classList.add('text-error');
+            }
+        }, 1000);
+
+        // Custom Radio Styling Logic
+        document.querySelectorAll('.option-radio').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                document.querySelectorAll('.option-radio').forEach(r => {
+                    const circle = r.nextElementSibling.querySelector('.bg-primary');
+                    circle.style.opacity = r.checked ? '1' : '0';
+                });
+            });
+        });
+
+        // Initialize first check
+        document.getElementById('opt1').dispatchEvent(new Event('change'));
+    </script>
+</body></html>

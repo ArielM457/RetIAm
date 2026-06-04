@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Session, User } from '@supabase/supabase-js';
 
 import { supabase } from '../config/supabase-client';
-import { ApiService, UserProfile } from '../services/api.service';
+import { ApiService, AuthSessionResponse, UserProfile } from '../services/api.service';
 
 type AuthMode = 'signin' | 'signup';
 
@@ -46,6 +46,7 @@ export class AuthStore {
   readonly profile = computed(() => this.state().profile);
   readonly mode = computed(() => this.state().mode);
   readonly error = computed(() => this.state().error);
+  readonly isManager = computed(() => this.profile()?.role === 'manager');
 
   constructor() {
     void this.ensureInitialized();
@@ -107,14 +108,12 @@ export class AuthStore {
     this.clearError();
 
     try {
-      const { error } = await supabase.auth.signInWithPassword({
+      const response = await this.apiService.login({
         email: payload.email,
         password: payload.password,
       });
 
-      if (error) {
-        throw error;
-      }
+      await this.applyBackendSession(response);
 
       await this.refreshProfile();
       await this.router.navigate(['/dashboard']);
@@ -130,33 +129,19 @@ export class AuthStore {
     this.clearError();
 
     try {
-      const emailCheck = await this.apiService.validateCorporateEmail(payload.email);
+      const emailCheck = await this.apiService.validateEmail(payload.email);
       if (!emailCheck.is_valid) {
         throw new Error(emailCheck.message);
       }
 
-      const { data, error } = await supabase.auth.signUp({
+      const response = await this.apiService.register({
         email: payload.email,
         password: payload.password,
-        options: {
-          data: {
-            full_name: payload.fullName,
-            role: payload.role ?? 'employee',
-          },
-        },
+        full_name: payload.fullName,
+        role: payload.role ?? 'employee',
       });
 
-      if (error) {
-        throw error;
-      }
-
-      if (!data.session) {
-        this.setMode('signin');
-        this.setError(
-          'Cuenta creada. Si Supabase pide confirmacion por correo, desactiva esa opcion para la demo o confirma el usuario antes de entrar.',
-        );
-        return;
-      }
+      await this.applyBackendSession(response);
 
       await this.refreshProfile();
       await this.router.navigate(['/dashboard']);
@@ -209,5 +194,16 @@ export class AuthStore {
 
   private clearError(): void {
     this.setError(null);
+  }
+
+  private async applyBackendSession(payload: AuthSessionResponse): Promise<void> {
+    const { error } = await supabase.auth.setSession({
+      access_token: payload.access_token,
+      refresh_token: payload.refresh_token,
+    });
+
+    if (error) {
+      throw error;
+    }
   }
 }

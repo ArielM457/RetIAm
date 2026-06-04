@@ -1,0 +1,88 @@
+<div class="halo-violet"></div>
+<div class="halo-blue"></div>
+
+<div class="relative z-10 min-h-dvh">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-[rgba(16,20,23,0.72)] backdrop-blur-xl">
+    <div class="page-shell flex h-[72px] items-center justify-between gap-6">
+      <div class="flex items-center gap-6 lg:gap-10">
+        <a class="font-['Plus_Jakarta_Sans'] text-3xl font-extrabold tracking-tight text-[#d2bbff]" routerLink="/dashboard">
+          RetAIM
+        </a>
+
+        <nav class="hidden items-center gap-6 md:flex">
+          @for (link of links(); track link.path) {
+            <a
+              [routerLink]="link.path"
+              routerLinkActive="border-[#d2bbff] text-[#d2bbff]"
+              class="border-b-2 border-transparent pb-1 text-sm font-semibold text-[var(--muted)] transition hover:text-white"
+            >
+              {{ link.label }}
+            </a>
+          }
+        </nav>
+      </div>
+
+      <div class="hidden items-center gap-4 md:flex">
+        <button class="flex h-10 w-10 items-center justify-center rounded-full text-[var(--muted)] transition hover:bg-white/5 hover:text-[#d2bbff]" type="button">
+          <app-icon name="notification" className="h-5 w-5"></app-icon>
+        </button>
+        <a
+          class="flex items-center gap-3 border-l border-white/10 pl-4"
+          routerLink="/profile"
+        >
+          <div class="hidden text-right lg:block">
+            <p class="text-sm font-semibold text-white">{{ profile()?.full_name || 'Usuario' }}</p>
+            <p class="text-xs text-[var(--muted)]">{{ profile()?.role === 'manager' ? 'Manager' : 'Employee' }}</p>
+          </div>
+          <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-sm font-semibold text-[#d2bbff]">
+            {{ (profile()?.full_name || profile()?.email || 'U').charAt(0).toUpperCase() }}
+          </div>
+        </a>
+      </div>
+
+      <button
+        class="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-white md:hidden"
+        type="button"
+        (click)="toggleMenu()"
+      >
+        <app-icon [name]="menuOpen() ? 'close' : 'menu'" className="h-5 w-5"></app-icon>
+      </button>
+    </div>
+
+    @if (menuOpen()) {
+      <div class="border-t border-white/10 bg-[rgba(9,12,20,0.94)] px-4 py-4 md:hidden">
+        <div class="space-y-1">
+          @for (link of links(); track link.path) {
+            <a
+              [routerLink]="link.path"
+              routerLinkActive="bg-white/10 text-white"
+              class="block rounded-2xl px-4 py-3 text-sm font-medium text-[var(--muted)] transition hover:bg-white/[0.06] hover:text-white"
+              (click)="closeMenu()"
+            >
+              {{ link.label }}
+            </a>
+          }
+          <a
+            routerLink="/profile"
+            routerLinkActive="bg-white/10 text-white"
+            class="block rounded-2xl px-4 py-3 text-sm font-medium text-[var(--muted)] transition hover:bg-white/[0.06] hover:text-white"
+            (click)="closeMenu()"
+          >
+            Perfil
+          </a>
+        </div>
+      </div>
+    }
+  </header>
+
+  <main class="page-shell pb-20 pt-10">
+    <router-outlet></router-outlet>
+  </main>
+
+  <button
+    class="fixed bottom-8 right-8 z-30 flex h-14 w-14 items-center justify-center rounded-2xl border border-[#c4b5fd]/20 bg-[linear-gradient(135deg,#7c3aed,#2563eb)] text-white shadow-[0_18px_42px_rgba(124,58,237,0.36)] transition hover:scale-105"
+    type="button"
+  >
+    <app-icon name="ai" className="h-6 w-6"></app-icon>
+  </button>
+</div>

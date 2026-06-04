@@ -1,0 +1,78 @@
+<section class="grid gap-6 xl:grid-cols-[0.9fr_1.1fr]">
+  <article class="glass-card rounded-[2rem] p-6">
+    <p class="eyebrow">Gini Eval</p>
+    <h1 class="mt-3 text-3xl">Sesion de aprendizaje</h1>
+    <p class="mt-3 text-[var(--muted)]">
+      Recursos, pregunta obligatoria, dudas libres y evaluacion de avance antes de continuar.
+    </p>
+
+    @if (plan() && currentSection()) {
+      <div class="mt-6 rounded-[1.5rem] bg-white/[0.04] p-5">
+        <p class="text-sm text-[var(--muted)]">Plan activo</p>
+        <h3 class="mt-2 text-2xl font-semibold">{{ currentSection()?.title }}</h3>
+        <p class="mt-2 text-sm text-[var(--muted)]">{{ currentSection()?.estimated_hours }} horas estimadas</p>
+        <button class="mt-5 rounded-2xl bg-[var(--hero-strong)] px-4 py-3 font-semibold text-white" type="button" (click)="startSession()">
+          Crear sesion
+        </button>
+      </div>
+    } @else {
+      <div class="mt-6">
+        <app-empty-state title="Sin plan ni ruta activos" message="Genera primero tu ruta y plan para poder iniciar una sesion."></app-empty-state>
+      </div>
+    }
+  </article>
+
+  <article class="glass-card rounded-[2rem] p-6">
+    <div class="flex items-center justify-between">
+      <h2 class="panel-title">Workspace</h2>
+      <app-status-pill [label]="session()?.status || 'sin sesion'" tone="info"></app-status-pill>
+    </div>
+
+    @if (session()) {
+      <div class="mt-6 space-y-5">
+        <div class="rounded-[1.5rem] bg-white/[0.04] p-4">
+          <p class="text-sm text-[var(--muted)]">Pregunta obligatoria</p>
+          <p class="mt-2 font-semibold">{{ session()?.mandatory_question?.prompt }}</p>
+          <textarea class="mt-4 min-h-24 w-full rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3" [(ngModel)]="mandatoryAnswer"></textarea>
+          <button class="mt-3 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-[var(--ink-soft)]" type="button" (click)="sendMandatoryAnswer()">
+            Enviar respuesta
+          </button>
+        </div>
+
+        <div class="rounded-[1.5rem] bg-white/[0.04] p-4">
+          <p class="text-sm text-[var(--muted)]">Pregunta libre al agente</p>
+          <input class="mt-3 w-full rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3" [(ngModel)]="freeQuestion" type="text" />
+          <button class="mt-3 rounded-2xl border border-white/10 px-4 py-3 text-sm font-semibold" type="button" (click)="sendFreeQuestion()">
+            Consultar
+          </button>
+          @if (session()?.free_questions?.length) {
+            <div class="mt-4 space-y-3">
+              @for (item of session()?.free_questions || []; track item.question) {
+                <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-3">
+                  <p class="font-semibold">{{ item.question }}</p>
+                  <p class="mt-2 text-sm text-[var(--muted)]">{{ item.answer }}</p>
+                </div>
+              }
+            </div>
+          }
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <button class="rounded-2xl bg-[var(--hero-strong)] px-4 py-3 text-sm font-semibold text-white" type="button" (click)="passEvaluation()">
+            Evaluar avance
+          </button>
+          <button class="rounded-2xl border border-white/10 px-4 py-3 text-sm font-semibold" type="button" (click)="saveSurvey(false)">
+            Guardar encuesta
+          </button>
+          <button class="rounded-2xl border border-white/10 px-4 py-3 text-sm font-semibold" type="button" (click)="saveSurvey(true)">
+            Saltar encuesta
+          </button>
+        </div>
+      </div>
+    } @else {
+      <div class="mt-6">
+        <app-empty-state title="Todavia no hay sesion" message="Crea una sesion desde el bloque izquierdo para empezar a trabajar una seccion."></app-empty-state>
+      </div>
+    }
+  </article>
+</section>

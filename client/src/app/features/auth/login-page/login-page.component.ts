@@ -17,6 +17,7 @@ export class LoginPageComponent {
   protected readonly loading = computed(() => this.authStore.loading());
   protected readonly error = computed(() => this.authStore.error());
   protected readonly submitted = signal(false);
+  protected readonly showPassword = signal(false);
 
   protected readonly form = this.fb.nonNullable.group({
     fullName: [''],
@@ -28,6 +29,10 @@ export class LoginPageComponent {
   protected setMode(mode: 'signin' | 'signup'): void {
     this.authStore.setMode(mode);
     this.submitted.set(false);
+  }
+
+  protected togglePasswordVisibility(): void {
+    this.showPassword.update((value) => !value);
   }
 
   protected async submit(): Promise<void> {

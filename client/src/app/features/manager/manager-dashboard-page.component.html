@@ -1,0 +1,209 @@
+<section class="space-y-10">
+  <header class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+    <div>
+      <h1 class="text-3xl font-bold text-white md:text-4xl">Panel de Control</h1>
+      <p class="mt-3 max-w-3xl text-base text-[var(--muted)]">
+        Supervisa el progreso tecnico del equipo y detecta brechas de conocimiento en tiempo real con la IA de RetAIM.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap gap-3">
+      <button
+        class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/[0.08]"
+        type="button"
+        (click)="exportPdf()"
+      >
+        <app-icon name="document" className="h-4 w-4"></app-icon>
+        Exportar reporte PDF
+      </button>
+      <a
+        class="inline-flex items-center gap-2 rounded-xl bg-[linear-gradient(135deg,#7c3aed,#2563eb)] px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(124,58,237,0.28)]"
+        routerLink="/manager/weekly-summary"
+      >
+        <app-icon name="ai" className="h-4 w-4"></app-icon>
+        Generar resumen semanal
+      </a>
+    </div>
+  </header>
+
+  @if (teams().length > 1) {
+    <div class="flex flex-wrap gap-3">
+      @for (team of teams(); track team.id) {
+        <button
+          class="rounded-full border px-4 py-2 text-sm font-semibold transition"
+          [class.border-[#d2bbff]/30]="selectedTeamId() === team.id"
+          [class.bg-[#7c3aed]/10]="selectedTeamId() === team.id"
+          [class.text-[#d2bbff]]="selectedTeamId() === team.id"
+          [class.border-white/10]="selectedTeamId() !== team.id"
+          [class.text-[var(--muted)]]="selectedTeamId() !== team.id"
+          type="button"
+          (click)="selectTeam(team.id)"
+        >
+          {{ team.name }}
+        </button>
+      }
+    </div>
+  }
+
+  @if (dashboard()) {
+    <section class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <article class="glass-card rounded-[1.5rem] p-6">
+        <div class="mb-4 flex items-start justify-between">
+          <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#7c3aed]/12 text-[#d2bbff]">
+            <app-icon name="progress" className="h-6 w-6"></app-icon>
+          </div>
+          <span class="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2 py-1 text-xs font-bold text-emerald-300">
+            +{{ teamProgressDelta() }}%
+          </span>
+        </div>
+        <h3 class="text-sm font-semibold text-[var(--muted)]">Progreso promedio del equipo</h3>
+        <div class="mt-3 flex items-end gap-3">
+          <span class="text-4xl font-bold tracking-tight text-white">{{ dashboard()?.team_progress_percent || 0 }}%</span>
+          <span class="pb-2 text-xs uppercase tracking-[0.2em] text-[var(--muted)]">{{ dashboard()?.team_name }}</span>
+        </div>
+      </article>
+
+      <article class="glass-card rounded-[1.5rem] p-6">
+        <div class="mb-4 flex items-start justify-between">
+          <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-red-500/12 text-red-300">
+            <app-icon name="warning" className="h-6 w-6"></app-icon>
+          </div>
+        </div>
+        <h3 class="text-sm font-semibold text-[var(--muted)]">Miembros en riesgo</h3>
+        <div class="mt-3 flex items-end gap-3">
+          <span class="text-4xl font-bold tracking-tight text-white">{{ teamRiskCount() }}</span>
+          <span class="pb-2 text-sm text-[var(--muted)]">Requieren intervencion prioritaria</span>
+        </div>
+      </article>
+
+      <article class="glass-card rounded-[1.5rem] p-6">
+        <div class="mb-4 flex items-start justify-between">
+          <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500/12 text-indigo-200">
+            <app-icon name="check-circle" className="h-6 w-6"></app-icon>
+          </div>
+        </div>
+        <h3 class="text-sm font-semibold text-[var(--muted)]">Objetivos bien encaminados</h3>
+        <div class="mt-3 flex items-end gap-3">
+          <span class="text-4xl font-bold tracking-tight text-white">{{ completedGoalCount() }}</span>
+          <span class="pb-2 text-sm text-[var(--muted)]">Miembros con avance fuerte</span>
+        </div>
+      </article>
+    </section>
+
+    <div class="grid gap-6 lg:grid-cols-3">
+      <section class="glass-card overflow-hidden rounded-[1.75rem] lg:col-span-2">
+        <div class="flex items-center justify-between border-b border-white/5 px-7 py-6">
+          <h2 class="text-xl font-semibold text-white">Resumen del equipo</h2>
+          <a class="text-sm font-semibold text-[#d2bbff]" routerLink="/manager/team">Ver todos</a>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full min-w-[720px] text-left">
+            <thead>
+              <tr class="bg-white/[0.02]">
+                <th class="px-7 py-4 text-xs uppercase tracking-[0.22em] text-[var(--muted)]">Miembro</th>
+                <th class="px-7 py-4 text-xs uppercase tracking-[0.22em] text-[var(--muted)]">Certificacion activa</th>
+                <th class="px-7 py-4 text-xs uppercase tracking-[0.22em] text-[var(--muted)]">Progreso</th>
+                <th class="px-7 py-4 text-xs uppercase tracking-[0.22em] text-[var(--muted)]">Riesgo</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              @for (member of dashboard()?.members || []; track member.user_id) {
+                <tr class="transition hover:bg-white/[0.03]">
+                  <td class="px-7 py-5">
+                    <div class="flex items-center gap-3">
+                      <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-sm font-semibold text-[#d2bbff]">
+                        {{ (member.full_name || member.user_id).charAt(0).toUpperCase() }}
+                      </div>
+                      <div>
+                        <p class="font-semibold text-white">{{ member.full_name || member.user_id }}</p>
+                        <p class="text-xs text-[var(--muted)]">{{ member.days_to_deadline ?? '-' }} dias al deadline</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-7 py-5">
+                    <span class="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-medium text-white">
+                      {{ member.certification || 'Sin certificacion activa' }}
+                    </span>
+                  </td>
+                  <td class="px-7 py-5">
+                    <div class="flex w-44 flex-col gap-2">
+                      <div class="flex justify-between text-xs font-bold text-white">
+                        <span>{{ member.progress_percent }}%</span>
+                      </div>
+                      <div class="h-1.5 overflow-hidden rounded-full bg-white/10">
+                        <div
+                          class="h-full rounded-full"
+                          [class.bg-[#7c3aed]]="member.risk_status !== 'red'"
+                          [class.bg-red-400]="member.risk_status === 'red'"
+                          [style.width.%]="member.progress_percent"
+                        ></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-7 py-5">
+                    <app-status-pill
+                      [label]="member.risk_status"
+                      [tone]="member.risk_status === 'red' ? 'danger' : member.risk_status === 'yellow' ? 'warning' : 'success'"
+                    ></app-status-pill>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="glass-card flex flex-col rounded-[1.75rem] p-7">
+        <div class="mb-8 flex items-center gap-3">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#7c3aed]/18 text-[#d2bbff]">
+            <app-icon name="ai" className="h-5 w-5"></app-icon>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-white">RetAIM Assistant</h3>
+            <p class="text-xs text-[var(--muted)]">Inteligencia activa</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="rounded-xl border border-[#7c3aed]/20 bg-[#7c3aed]/10 p-4">
+            <p class="text-sm leading-relaxed text-white">
+              @if ((dashboard()?.top_gaps?.length || 0) > 0) {
+                He detectado que tu equipo necesita refuerzo en
+                <strong>{{ dashboard()?.top_gaps?.[0] }}</strong>.
+              } @else {
+                No detecto brechas criticas nuevas. Mantengan el ritmo actual.
+              }
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">Alertas rapidas</h4>
+            @for (gap of dashboard()?.top_gaps || []; track gap) {
+              <div class="flex items-center gap-3 rounded-xl bg-white/[0.03] p-3">
+                <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/[0.05] text-[#d2bbff]">
+                  <app-icon name="book" className="h-4 w-4"></app-icon>
+                </div>
+                <span class="text-sm text-[var(--muted)]">{{ gap }}</span>
+              </div>
+            }
+          </div>
+
+          @if (exportUrl()) {
+            <a
+              class="inline-flex items-center gap-2 text-sm font-semibold text-[#d2bbff]"
+              [href]="exportUrl()!"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Abrir ultimo PDF generado
+              <app-icon name="arrow-right" className="h-4 w-4"></app-icon>
+            </a>
+          }
+        </div>
+      </aside>
+    </div>
+  } @else {
+    <app-empty-state title="Sin equipo activo" message="Crea o selecciona un equipo para ver el dashboard agregado del manager."></app-empty-state>
+  }
+</section>

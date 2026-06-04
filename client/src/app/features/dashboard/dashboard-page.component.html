@@ -1,57 +1,155 @@
-<section class="min-h-dvh px-4 py-8 md:px-8">
-  <div class="mx-auto max-w-6xl">
-    <header class="glass-card flex flex-col gap-6 rounded-[2rem] p-6 md:flex-row md:items-center md:justify-between md:p-8">
-      <div>
-        <p class="text-sm uppercase tracking-[0.3em] text-[var(--brand)]">RetAIM dashboard</p>
-        <h1 class="mt-2 text-3xl md:text-5xl">
-          {{ profile()?.full_name || user()?.email || 'Usuario autenticado' }}
-        </h1>
-        <p class="mt-3 max-w-3xl text-[var(--muted)]">
-          Este dashboard ya esta leyendo la sesion de Supabase y el perfil base desde el backend.
-          Desde aqui podemos crecer hacia equipos, planes de certificacion y visibilidad del manager.
-        </p>
+<section class="space-y-10">
+  <header class="pt-2">
+    <h1 class="text-3xl font-bold text-white md:text-4xl">
+      Bienvenido de vuelta,
+      <span class="text-[#d2bbff]">{{ profile()?.full_name || 'Profesional' }}</span>.
+    </h1>
+    <p class="mt-3 max-w-2xl text-base text-[var(--muted)]">
+      Continua tu camino hacia la certificacion con una vista clara del progreso, los hitos y las siguientes acciones.
+    </p>
+  </header>
+
+  <section class="glass-card relative overflow-hidden rounded-[2rem] p-8 md:p-10">
+    <div class="absolute -right-20 -top-16 h-56 w-56 rounded-full bg-[rgba(124,58,237,0.18)] blur-3xl"></div>
+    <div class="grid gap-10 lg:grid-cols-[1.3fr_0.7fr]">
+      <div class="relative z-10 space-y-6">
+        <div>
+          <span class="inline-flex rounded-full border border-[#c4b5fd]/25 bg-[#7c3aed]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-[#d2bbff]">
+            En curso
+          </span>
+          <h2 class="mt-4 text-4xl font-extrabold text-white md:text-5xl">
+            {{ latestRoute()?.target_certification || profile()?.target_certification || 'Selecciona tu certificacion' }}
+          </h2>
+        </div>
+
+        <div class="space-y-3">
+          <div class="flex items-end justify-between gap-4">
+            <span class="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--muted)]">Progreso del plan</span>
+            <span class="text-2xl font-bold text-[#d2bbff]">{{ completionRatio() }}%</span>
+          </div>
+          <div class="h-2 overflow-hidden rounded-full bg-white/10">
+            <div
+              class="h-full rounded-full bg-[linear-gradient(90deg,#2563eb,#7c3aed)] shadow-[0_0_20px_rgba(124,58,237,0.45)]"
+              [style.width.%]="completionRatio()"
+            ></div>
+          </div>
+          <p class="flex items-center gap-2 text-sm text-[var(--muted)]">
+            <app-icon name="clock" className="h-4 w-4 text-[#d2bbff]"></app-icon>
+            {{ latestPlan()?.deadline_at ? 'Tu deadline ya esta definido y listo para seguimiento.' : 'Todavia no definiste tu fecha objetivo.' }}
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-4">
+          <a
+            class="inline-flex items-center gap-2 rounded-xl bg-[linear-gradient(135deg,#7c3aed,#2563eb)] px-7 py-4 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(124,58,237,0.28)] transition hover:scale-[1.02]"
+            routerLink="/sessions"
+          >
+            Continuar sesion
+            <app-icon name="arrow-right" className="h-4 w-4"></app-icon>
+          </a>
+          <a
+            class="inline-flex items-center rounded-xl border border-white/10 bg-white/5 px-7 py-4 text-sm font-semibold text-white transition hover:bg-white/10"
+            routerLink="/plan"
+          >
+            Ver detalles
+          </a>
+        </div>
       </div>
 
-      <button
-        class="rounded-full border border-[var(--line)] px-5 py-3 font-semibold text-[var(--ink)] transition hover:bg-white/70"
-        type="button"
-        (click)="signOut()"
-      >
-        Cerrar sesion
-      </button>
-    </header>
-
-    <div class="mt-6 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-      <article class="glass-card rounded-[2rem] p-6">
-        <h2 class="text-2xl">Perfil sincronizado</h2>
-        <div class="mt-5 grid gap-4 md:grid-cols-2">
-          <div class="rounded-3xl border border-[var(--line)] bg-white/70 p-4">
-            <p class="text-sm text-[var(--muted)]">Correo</p>
-            <p class="mt-2 font-semibold">{{ profile()?.email || user()?.email }}</p>
-          </div>
-          <div class="rounded-3xl border border-[var(--line)] bg-white/70 p-4">
-            <p class="text-sm text-[var(--muted)]">Rol</p>
-            <p class="mt-2 font-semibold">{{ profile()?.role || 'employee' }}</p>
-          </div>
-          <div class="rounded-3xl border border-[var(--line)] bg-white/70 p-4">
-            <p class="text-sm text-[var(--muted)]">Certificacion objetivo</p>
-            <p class="mt-2 font-semibold">{{ profile()?.target_certification || 'Pendiente' }}</p>
-          </div>
-          <div class="rounded-3xl border border-[var(--line)] bg-white/70 p-4">
-            <p class="text-sm text-[var(--muted)]">Estilo de aprendizaje</p>
-            <p class="mt-2 font-semibold">{{ learningStyle() }}</p>
+      <div class="relative z-10">
+        <div class="flex h-full min-h-[280px] items-end overflow-hidden rounded-[1.5rem] border border-white/10 bg-[radial-gradient(circle_at_top,rgba(124,58,237,0.22),transparent_45%),linear-gradient(180deg,rgba(255,255,255,0.05),rgba(3,7,18,0.82))] p-6">
+          <div>
+            <p class="text-sm uppercase tracking-[0.2em] text-[var(--muted)]">Nivel detectado</p>
+            <p class="mt-2 text-3xl font-bold text-white">{{ profile()?.detected_level || 'Pendiente' }}</p>
+            <p class="mt-3 text-sm text-[var(--muted)]">
+              {{ profile()?.professional_role || 'Completa onboarding para personalizar la ruta y el ritmo.' }}
+            </p>
           </div>
         </div>
-      </article>
-
-      <article class="glass-card rounded-[2rem] p-6">
-        <h2 class="text-2xl">Lo que sigue</h2>
-        <ul class="mt-5 space-y-3 pl-5 text-[var(--muted)]">
-          <li>Crear onboarding de Gini Profile para nivel, horas y preferencia.</li>
-          <li>Modelar organizaciones, equipos e invitaciones del manager.</li>
-          <li>Montar catalogo de certificaciones y primer plan semanal.</li>
-        </ul>
-      </article>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section class="grid gap-6 md:grid-cols-2">
+    <article class="glass-card rounded-[1.75rem] p-7">
+      <div class="mb-8 flex items-start justify-between">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#2563eb]/15 text-[#b4c5ff]">
+          <app-icon name="clock" className="h-6 w-6"></app-icon>
+        </div>
+        <span class="text-xs uppercase tracking-[0.22em] text-[var(--muted)]">Proximo hito</span>
+      </div>
+
+      @if (nextMilestone()) {
+        <h3 class="text-2xl font-bold text-white">{{ nextMilestone()?.title }}</h3>
+        <p class="mt-2 text-lg font-semibold text-[#d2bbff]">Semana {{ nextMilestone()?.week }}</p>
+        <p class="mt-4 text-sm text-[var(--muted)]">
+          {{ nextMilestone()?.section_ids?.length }} secciones y {{ nextMilestone()?.estimated_hours }} horas estimadas para esta fase.
+        </p>
+      } @else {
+        <h3 class="text-2xl font-bold text-white">Aun no tienes un hito activo</h3>
+        <p class="mt-4 text-sm text-[var(--muted)]">Completa onboarding y genera tu plan para ver hitos semanales.</p>
+      }
+    </article>
+
+    <article class="glass-card relative overflow-hidden rounded-[1.75rem] p-7">
+      <div class="absolute right-0 top-0 p-8 opacity-10">
+        <app-icon name="ai" className="h-24 w-24 text-[#d2bbff]"></app-icon>
+      </div>
+      <div class="relative z-10">
+        <div class="mb-5 flex items-center gap-3">
+          <div class="flex gap-1">
+            <span class="h-4 w-1.5 rounded-full bg-[#d2bbff]"></span>
+            <span class="h-4 w-1.5 rounded-full bg-[#d2bbff]/60"></span>
+            <span class="h-4 w-1.5 rounded-full bg-[#d2bbff]/35"></span>
+          </div>
+          <span class="text-xs font-semibold uppercase tracking-[0.26em] text-[#d2bbff]">AI Insight</span>
+        </div>
+        <h3 class="max-w-xl text-2xl font-semibold leading-relaxed text-white">
+          "{{ pendingReminderMessage() }}"
+        </h3>
+        <p class="mt-5 text-sm text-[var(--muted)]">
+          Basado en tu ruta actual, el ritmo de estudio y las alertas activas del sistema.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <div class="mb-8 flex items-center gap-6">
+      <h2 class="text-2xl font-semibold text-white">Acciones rapidas</h2>
+      <div class="h-px flex-1 bg-white/5"></div>
+    </div>
+
+    <div class="grid gap-5 lg:grid-cols-3">
+      <a class="glass-card flex items-center gap-5 rounded-[1.5rem] p-6 transition hover:bg-white/[0.06]" routerLink="/reminders">
+        <div class="flex h-14 w-14 items-center justify-center rounded-xl border border-white/5 bg-white/[0.04] text-[#d2bbff]">
+          <app-icon name="notification" className="h-6 w-6"></app-icon>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-white">Generar recordatorios</p>
+          <p class="mt-1 text-sm text-[var(--muted)]">Configura alertas de estudio</p>
+        </div>
+      </a>
+
+      <a class="glass-card flex items-center gap-5 rounded-[1.5rem] p-6 transition hover:bg-white/[0.06]" routerLink="/plan">
+        <div class="flex h-14 w-14 items-center justify-center rounded-xl border border-white/5 bg-white/[0.04] text-[#d2bbff]">
+          <app-icon name="plan" className="h-6 w-6"></app-icon>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-white">Ver plan</p>
+          <p class="mt-1 text-sm text-[var(--muted)]">Hoja de ruta detallada</p>
+        </div>
+      </a>
+
+      <a class="glass-card flex items-center gap-5 rounded-[1.5rem] p-6 transition hover:bg-white/[0.06]" routerLink="/certificates">
+        <div class="flex h-14 w-14 items-center justify-center rounded-xl border border-white/5 bg-white/[0.04] text-[#d2bbff]">
+          <app-icon name="award" className="h-6 w-6"></app-icon>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-white">Ver certificados</p>
+          <p class="mt-1 text-sm text-[var(--muted)]">Logros y badges disponibles</p>
+        </div>
+      </a>
+    </div>
+  </section>
 </section>

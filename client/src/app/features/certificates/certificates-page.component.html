@@ -1,0 +1,29 @@
+<section class="space-y-6">
+  <header class="glass-card rounded-[2rem] p-6">
+    <p class="eyebrow">RetAIM Certificates</p>
+    <h1 class="mt-3 text-3xl">Logros y certificados</h1>
+    <p class="mt-2 text-[var(--muted)]">
+      Cuando apruebes el examen final, aqui veras tu certificado verificable y el acceso al PDF.
+    </p>
+  </header>
+
+  @if (certificates().length) {
+    <div class="grid gap-4 lg:grid-cols-2">
+      @for (certificate of certificates(); track certificate.id) {
+        <article class="glass-card rounded-[1.75rem] p-5">
+          <p class="text-sm text-[var(--muted)]">{{ certificate.target_certification }}</p>
+          <h2 class="mt-2 text-2xl font-semibold">{{ certificate.recipient_name || 'Usuario demo' }}</h2>
+          <p class="mt-2 text-[var(--muted)]">Score final: {{ certificate.score }}</p>
+          <p class="mt-1 text-sm text-[var(--muted)]">Codigo: {{ certificate.verification_code }}</p>
+          @if (certificate.pdf_url) {
+            <a class="mt-4 inline-flex rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-[var(--ink-soft)]" [href]="certificate.pdf_url" target="_blank" rel="noreferrer">
+              Abrir PDF
+            </a>
+          }
+        </article>
+      }
+    </div>
+  } @else {
+    <app-empty-state title="Aun no hay certificados" message="Completa tu recorrido, rinde el examen final y aqui apareceran los certificados con su PDF verificable."></app-empty-state>
+  }
+</section>

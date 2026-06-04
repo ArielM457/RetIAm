@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RetAIM | Manager Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#d2bbff",
+                    "surface-container-high": "#272a2d",
+                    "surface-bright": "#363a3d",
+                    "outline": "#958da1",
+                    "primary-fixed": "#eaddff",
+                    "outline-variant": "#4a4455",
+                    "tertiary-fixed-dim": "#c3c0ff",
+                    "tertiary-container": "#564eec",
+                    "surface": "#101417",
+                    "surface-dim": "#101417",
+                    "on-secondary-fixed-variant": "#003ea8",
+                    "on-tertiary-fixed": "#0f0069",
+                    "on-secondary-fixed": "#00174b",
+                    "error-container": "#93000a",
+                    "inverse-on-surface": "#2d3134",
+                    "background": "#101417",
+                    "on-background": "#e0e2e6",
+                    "on-primary-container": "#ede0ff",
+                    "on-primary-fixed": "#25005a",
+                    "on-error": "#690005",
+                    "on-tertiary": "#1d00a5",
+                    "primary-container": "#7c3aed",
+                    "surface-container-lowest": "#0b0f11",
+                    "on-secondary": "#002a78",
+                    "on-secondary-container": "#cdd7ff",
+                    "surface-container-low": "#191c1f",
+                    "error": "#ffb4ab",
+                    "primary": "#d2bbff",
+                    "on-primary-fixed-variant": "#5a00c6",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "surface-container-highest": "#323538",
+                    "inverse-surface": "#e0e2e6",
+                    "inverse-primary": "#732ee4",
+                    "tertiary": "#c3c0ff",
+                    "on-primary": "#3f008e",
+                    "surface-container": "#1d2023",
+                    "secondary-fixed": "#dbe1ff",
+                    "on-tertiary-fixed-variant": "#3323cc",
+                    "primary-fixed-dim": "#d2bbff",
+                    "tertiary-fixed": "#e2dfff",
+                    "on-surface-variant": "#ccc3d8",
+                    "secondary": "#b4c5ff",
+                    "on-tertiary-container": "#e6e3ff",
+                    "surface-variant": "#323538",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#0053db",
+                    "on-surface": "#e0e2e6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "section-gap": "80px",
+                    "container-max": "1280px",
+                    "base": "4px",
+                    "margin-desktop": "48px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Plus Jakarta Sans"],
+                    "label-md": ["Inter"],
+                    "title-lg": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "label-sm": ["Inter"],
+                    "display-lg-mobile": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #101417;
+            overflow-x: hidden;
+        }
+        .glow-halo {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, rgba(124, 58, 237, 0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 25px 50px -12px rgba(124, 58, 237, 0.05);
+        }
+        .inner-glow {
+            box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.05);
+        }
+        .sparkline {
+            height: 40px;
+            display: flex;
+            align-items: flex-end;
+            gap: 3px;
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- Atmospheric Halos -->
+<div class="glow-halo top-[-200px] left-[-100px]"></div>
+<div class="glow-halo bottom-[-200px] right-[-100px]"></div>
+<!-- Navigation Shell (TopNavBar from JSON) -->
+<header class="fixed top-0 left-0 w-full z-50 h-[72px] flex items-center justify-between px-margin-desktop max-w-container-max mx-auto bg-surface/70 backdrop-blur-md dark:bg-surface/70 border-b border-white/10 shadow-sm">
+<div class="flex items-center gap-12">
+<span class="font-display-lg text-display-lg-mobile text-primary dark:text-primary tracking-tight">RetAIM</span>
+<nav class="hidden md:flex gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#">Inicio</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#">Equipo</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#">Brechas</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#">Resumen</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-variant/50 transition-all">
+<span class="material-symbols-outlined text-primary" data-icon="notifications">notifications</span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-white/10">
+<span class="font-label-md text-label-md text-on-surface text-right hidden lg:block">Admin Manager</span>
+<img alt="User Profile Avatar" class="w-10 h-10 rounded-full object-cover border border-primary/20" data-alt="A professional headshot of a middle-aged male manager with a confident expression, wearing a modern dark suit. The lighting is soft and cinematic with subtle purple backlighting that complements the dark-mode dashboard aesthetic. High-quality corporate portrait photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXn_FosQi3NtW30k-e0HrJLuz-EaJagB0GrJUpB4_pB4NL_uxHbuASj2wP5T_k-dySJJEuKFbslE-TOUPUeUVpkQpkUx7ktZ7bMcCwGA645dIsZJBE_Rvod0PIA0RDq_7vMnZAEDfOe-cs2cYtw60HvrUzCyifvVDkYHTFodaeIU6c58gz4v8svLP780T0uEWszAbW15mp7AGcRYPTCdrh8EjlN7h7v-ltZGDNtGOzESAbOgQspRO_s0K4sZsX-W08ygkqprgiGGKW"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="relative z-10 pt-[120px] pb-20 px-margin-desktop max-w-container-max mx-auto">
+<!-- Welcome Section -->
+<header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="font-headline-md text-headline-md text-on-surface mb-2">Panel de Control</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Supervisa el progreso técnico de tu equipo y detecta brechas de conocimiento en tiempo real con la IA de RetAIM.</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-surface-variant/30 border border-outline-variant/30 text-on-surface px-6 py-2.5 rounded-xl font-label-md text-label-md flex items-center gap-2 hover:bg-surface-variant/50 transition-all active:scale-95">
+<span class="material-symbols-outlined text-base" data-icon="picture_as_pdf">picture_as_pdf</span>
+                    Exportar Reporte PDF
+                </button>
+<button class="bg-gradient-to-br from-[#7C3AED] to-[#2563EB] text-white px-6 py-2.5 rounded-xl font-label-md text-label-md flex items-center gap-2 shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all active:scale-95">
+<span class="material-symbols-outlined text-base" data-icon="auto_awesome">auto_awesome</span>
+                    Generar Resumen Semanal
+                </button>
+</div>
+</header>
+<!-- Executive Metrics Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter mb-section-gap">
+<!-- Metric Card 1 -->
+<div class="glass-card inner-glow p-6 rounded-2xl flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="monitoring">monitoring</span>
+</div>
+<span class="bg-green-500/10 text-green-400 border border-green-500/20 px-2 py-1 rounded-full text-[12px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>
+                        +5%
+                    </span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-1">Progreso Promedio Equipo</h3>
+<div class="flex items-end gap-3">
+<span class="font-display-lg text-4xl text-on-surface tracking-tighter">72%</span>
+<div class="sparkline mb-2">
+<div class="w-1.5 bg-primary/20 rounded-full h-[40%]"></div>
+<div class="w-1.5 bg-primary/20 rounded-full h-[60%]"></div>
+<div class="w-1.5 bg-primary/40 rounded-full h-[55%]"></div>
+<div class="w-1.5 bg-primary/60 rounded-full h-[80%]"></div>
+<div class="w-1.5 bg-primary rounded-full h-[100%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Metric Card 2 -->
+<div class="glass-card inner-glow p-6 rounded-2xl">
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 bg-error/10 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-error" data-icon="warning">warning</span>
+</div>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-1">Miembros en Riesgo</h3>
+<div class="flex items-center gap-3">
+<span class="font-display-lg text-4xl text-on-surface tracking-tighter">2</span>
+<p class="font-body-md text-[13px] text-on-surface-variant">Requieren intervención en AWS Solutions</p>
+</div>
+</div>
+<div class="mt-6 flex -space-x-3">
+<img class="w-8 h-8 rounded-full border-2 border-surface" data-alt="Close up portrait of a young professional man looking serious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqt-2HGv1FgXZvLx7cSXyav6KggAdpulckrT7Zr3pDxylpOOUDms9BpllV4Lma2v2lY2GlO0Xd0XRZTF3mC0qYuMI1IQzMCkXhIARYufEcGlrrtjatcKEjw8c9Bcs8Z7Lh_-LuVbsZjqOnbtx3ImQucZYHds_EWygfXvCDgCxT-JImUHvUqzl6Fd7zFwQom90AIW0AyCNotwi-RscqX_zR_0kwMFVi5N02ALUlITo7Jf5--9JiOCYlI2ympS_3tNr7a5KMIlTtOJ5L"/>
+<img class="w-8 h-8 rounded-full border-2 border-surface" data-alt="Close up portrait of a professional woman with a neutral expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACD-WEzvwvReJnJbGyDWZooJ213R-jdV7KGh70oO1biTd5LrL2tP5WPhBhG3veLrBCMG3wfqs0J55aw61hA8g9tjRpf0boIVyJIS_ppjSlApxT-MLkZdaUHMLLgiowEQViaxoYuWCTGMMKpFh5PlkWHfG8p33Obxk_RxIpMaSJJrnCDT-vnSK7Xqvqz1PSddm8f6dKjDmihJmRPluR9LpMHddjmOIgNOWUoqXmf71SGJL9BJiF9b0n0ii7XI-OPnWmR-s3cI2dyp6y"/>
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-surface-container flex items-center justify-center text-[10px] font-bold">+0</div>
+</div>
+</div>
+<!-- Metric Card 3 -->
+<div class="glass-card inner-glow p-6 rounded-2xl">
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 bg-tertiary/10 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="verified">verified</span>
+</div>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-1">Certificaciones Completadas</h3>
+<div class="flex items-center gap-3">
+<span class="font-display-lg text-4xl text-on-surface tracking-tighter">14</span>
+<p class="font-body-md text-[13px] text-on-surface-variant">Meta mensual: 20</p>
+</div>
+</div>
+<div class="mt-6 w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-tertiary to-primary-container" style="width: 70%"></div>
+</div>
+</div>
+</section>
+<!-- Main Content Layout (Bento Grid Style) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Team Table Section -->
+<section class="lg:col-span-2 glass-card inner-glow rounded-3xl overflow-hidden">
+<div class="p-8 border-b border-white/5 flex items-center justify-between">
+<h2 class="font-title-lg text-title-lg">Resumen del Equipo</h2>
+<button class="text-primary font-label-md text-label-md hover:underline">Ver todos</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-white/[0.02]">
+<th class="px-8 py-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Miembro</th>
+<th class="px-8 py-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Certificación Activa</th>
+<th class="px-8 py-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Progreso</th>
+<th class="px-8 py-4"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-white/5">
+<tr class="hover:bg-white/[0.03] transition-colors group">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Portrait of a young tech professional man in a clean studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoYq33hlUyYbR9kX-ogyPJZNBxEc3XQt0HeGPeourtvvLa2Q6ir7teRPeXT69PvcA17NMwmvXjz8Wn1jagfjrMP2267ShxpLbJODdKFGukhr_EleHH1699AhgepFCxzX78I1XDtYmsgol1380oVN7KoUk7lA87F4LMn4wb4vgQ8CedU48uqUIpw9VfG2rWfclAXRMqZypbVGgmIFuWtPNOPz0NExbPcdKbSDiUhXpTSQSX8zvAYuci9jIOsURnfIy3soE_AnLHmXRV"/>
+<div>
+<p class="font-label-md text-label-md">Lucas Silva</p>
+<p class="font-label-sm text-[12px] text-on-surface-variant">Cloud Engineer</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-5">
+<span class="bg-surface-container px-3 py-1 rounded-lg border border-white/10 font-label-sm text-[12px]">Azure Architect</span>
+</td>
+<td class="px-8 py-5 w-48">
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between text-[11px] font-bold">
+<span>88%</span>
+</div>
+<div class="h-1 bg-white/10 rounded-full w-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 88%"></div>
+</div>
+</div>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity" data-icon="chevron_right">chevron_right</button>
+</td>
+</tr>
+<tr class="hover:bg-white/[0.03] transition-colors group">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Portrait of a female professional developer with an intelligent look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy6g3neaIaDbQccILj0vrjHTdNwvP8nI9YrF-T4TQF-7q1ha17BN0etHGbGOjTZQmbSykvSg5LjVNLQ96y5URhOdnjYvKBHEn5oSjbd_CtzeLrUhMDqJA_hN56G-UbVIrByEU0KYf5EtLYaciZdIdG21vBzON7pU3H6_tlA8g_ydTDl26ZCrvBJ-95kTLVTpWfJq37BUB_2q9Emv-hoz0kuj4VK7kmHd1iHDdzBDF4Td12ndf5XC8G0mbApceP3shmxN3qPUCWvBhE"/>
+<div>
+<p class="font-label-md text-label-md">Elena Martínez</p>
+<p class="font-label-sm text-[12px] text-on-surface-variant">Security Specialist</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-5">
+<span class="bg-surface-container px-3 py-1 rounded-lg border border-white/10 font-label-sm text-[12px]">CompTIA Security+</span>
+</td>
+<td class="px-8 py-5">
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between text-[11px] font-bold">
+<span>45%</span>
+</div>
+<div class="h-1 bg-white/10 rounded-full w-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 45%"></div>
+</div>
+</div>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity" data-icon="chevron_right">chevron_right</button>
+</td>
+</tr>
+<tr class="hover:bg-white/[0.03] transition-colors group">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Portrait of a smiling male tech manager in a modern office environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYr2Vfzpir4ZXg_IwcT0TKKNazX40Q5oLGYPG8ZMTsTvlVcsJF_jyUfkb0jlyW0R0SOi0XJqxdBedTqLxmGvV1CPog8NqC4svQJ59TlLpT9wpRET1vc-CV6WchZMz3m4Z5pTQw2IWH1h45t0gaAmdAc8TrkS-r-ySt3Zz1M9jYkPIZwxSCCkJ8sWK83uNHrtU1BNlPh1ffFUEqThepVDCJoz-8oHa2smBZm3U9jixuPG0k6LLp78dcYDk5BRQ6OZ52yTK0T9rnJGIL"/>
+<div>
+<p class="font-label-md text-label-md">David Ramos</p>
+<p class="font-label-sm text-[12px] text-on-surface-variant">DevOps Lead</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-5">
+<span class="bg-surface-container px-3 py-1 rounded-lg border border-white/10 font-label-sm text-[12px]">Kubernetes Admin</span>
+</td>
+<td class="px-8 py-5">
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between text-[11px] font-bold">
+<span>12%</span>
+</div>
+<div class="h-1 bg-white/10 rounded-full w-full overflow-hidden">
+<div class="h-full bg-error" style="width: 12%"></div>
+</div>
+</div>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity" data-icon="chevron_right">chevron_right</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- AI Insights Panel (SideNavBar variant from JSON logic) -->
+<aside class="glass-card inner-glow rounded-3xl p-8 h-full flex flex-col">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-primary" data-icon="smart_toy">smart_toy</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">RetAIM Assistant</h4>
+<p class="text-[11px] text-on-surface-variant">Inteligencia Artificial Activa</p>
+</div>
+</div>
+<div class="space-y-6 flex-grow">
+<div class="p-4 bg-primary-container/10 border border-primary/20 rounded-xl">
+<p class="font-body-md text-[13px] text-on-surface leading-relaxed">
+                            "He detectado que David Ramos tiene dificultades con los módulos de <strong>Network Security</strong>. ¿Quieres asignar una sesión de refuerzo?"
+                        </p>
+<button class="mt-4 text-primary font-label-md text-label-sm flex items-center gap-1 hover:gap-2 transition-all">
+                            Programar sesión <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="space-y-4">
+<h5 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Alertas Rápidas</h5>
+<div class="flex items-center gap-3 group cursor-pointer">
+<div class="w-8 h-8 rounded-lg bg-surface-variant/50 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-sm text-on-surface-variant group-hover:text-primary" data-icon="history">history</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Historial de brechas actualizado</span>
+</div>
+<div class="flex items-center gap-3 group cursor-pointer">
+<div class="w-8 h-8 rounded-lg bg-surface-variant/50 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-sm text-on-surface-variant group-hover:text-primary" data-icon="menu_book">menu_book</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Nuevos recursos para AWS SysOps</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 bg-surface-container py-3 rounded-xl border border-white/5 font-label-md text-label-md hover:bg-surface-variant/50 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-base" data-icon="chat">chat</span>
+                    Abrir Chat Completo
+                </button>
+</aside>
+</div>
+</main>
+<!-- Floating Action Button (FAB) logic -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-on-primary rounded-2xl shadow-2xl shadow-primary/40 flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined" data-icon="add" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+<script>
+        // Simple micro-interaction for hover glow
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            const halo = document.querySelector('.glow-halo');
+            // Subtle movement of halo 1
+            halo.style.transform = `translate(${x * 0.05}px, ${y * 0.05}px)`;
+        });
+    </script>
+</body></html>

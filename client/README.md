@@ -10,6 +10,16 @@ To start a local development server, run:
 ng serve
 ```
 
+Before starting the frontend, complete `public/runtime-config.js` with:
+
+```js
+window.__RETAIM_CONFIG__ = {
+  apiBaseUrl: 'http://localhost:8000/api',
+  supabaseUrl: 'https://YOUR_PROJECT.supabase.co',
+  supabaseAnonKey: 'YOUR_SUPABASE_ANON_KEY',
+};
+```
+
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
 ## Code scaffolding
