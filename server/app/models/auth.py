@@ -21,6 +21,7 @@ class RegisterRequest(BaseModel):
     password: str
     full_name: str | None = None
     role: Literal["manager", "employee"] = "employee"
+    team_access_code: str | None = None
 
 
 class LoginRequest(BaseModel):

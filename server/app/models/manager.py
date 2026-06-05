@@ -13,6 +13,10 @@ class MemberRiskSummary(BaseModel):
 class ManagerDashboardResponse(BaseModel):
     team_id: str
     team_name: str
+    organization_name: str | None = None
+    sector: str | None = None
+    member_capacity: int | None = None
+    work_style: str | None = None
     team_progress_percent: int
     members: list[MemberRiskSummary] = Field(default_factory=list)
     top_gaps: list[str] = Field(default_factory=list)
@@ -31,9 +35,16 @@ class WeeklyTeamSummaryResponse(BaseModel):
 class ManagerMemberDetailResponse(BaseModel):
     user_id: str
     full_name: str | None = None
+    email: str | None = None
+    professional_role: str | None = None
     certification: str | None = None
     detected_level: str | None = None
+    preferred_time: str | None = None
+    learning_style: list[str] = Field(default_factory=list)
+    recommended_study_pattern: str | None = None
     progress_percent: int
+    completed_sessions: int = 0
+    completed_certifications: int = 0
     days_to_deadline: int | None = None
     risk_status: str
     pending_sections: list[str] = Field(default_factory=list)

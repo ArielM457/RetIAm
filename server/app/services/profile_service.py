@@ -12,15 +12,27 @@ def ensure_profile_for_user(auth_user: object) -> UserProfileResponse:
     metadata = read_field(auth_user, "user_metadata", {}) or {}
     email = read_field(auth_user, "email")
     user_id = read_field(auth_user, "id")
+    existing_response = (
+        supabase.table(settings.supabase_profiles_table).select("*").eq("id", user_id).limit(1).execute()
+    )
+    existing_raw = response_data(existing_response, [])
+    existing_profile = existing_raw[0] if isinstance(existing_raw, list) and existing_raw else {}
 
     payload = {
         "id": user_id,
         "email": email,
-        "full_name": metadata.get("full_name"),
-        "role": metadata.get("role", "employee"),
-        "professional_role": metadata.get("professional_role"),
-        "learning_style": metadata.get("learning_style", []),
-        "profile_version": 1,
+        "full_name": metadata.get("full_name") or existing_profile.get("full_name"),
+        "role": metadata.get("role") or existing_profile.get("role") or "employee",
+        "professional_role": metadata.get("professional_role") or existing_profile.get("professional_role"),
+        "org_id": existing_profile.get("org_id"),
+        "team_id": existing_profile.get("team_id"),
+        "target_certification": existing_profile.get("target_certification"),
+        "detected_level": existing_profile.get("detected_level"),
+        "weekly_hours_available": existing_profile.get("weekly_hours_available"),
+        "preferred_time": existing_profile.get("preferred_time"),
+        "learning_style": metadata.get("learning_style") or existing_profile.get("learning_style", []),
+        "profile_version": existing_profile.get("profile_version", 1),
+        "onboarding_completed_at": existing_profile.get("onboarding_completed_at"),
     }
 
     try:

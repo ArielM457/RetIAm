@@ -12,6 +12,46 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'onboarding',
+    canActivate: [authGuard],
+    loadComponent: () =>
+      import('./features/onboarding/onboarding-page.component').then(
+        (module) => module.OnboardingPageComponent,
+      ),
+  },
+  {
+    path: 'team-user-transition',
+    canActivate: [authGuard],
+    loadComponent: () =>
+      import('./features/onboarding/team-user-transition-page.component').then(
+        (module) => module.TeamUserTransitionPageComponent,
+      ),
+  },
+  {
+    path: 'course-onboarding',
+    canActivate: [authGuard],
+    loadComponent: () =>
+      import('./features/learning/course-onboarding-page.component').then(
+        (module) => module.CourseOnboardingPageComponent,
+      ),
+  },
+  {
+    path: 'team/join',
+    canActivate: [authGuard],
+    loadComponent: () =>
+      import('./features/team/team-join-page.component').then(
+        (module) => module.TeamJoinPageComponent,
+      ),
+  },
+  {
+    path: 'manager/team',
+    canActivate: [authGuard, managerGuard],
+    loadComponent: () =>
+      import('./features/manager/manager-team-page.component').then(
+        (module) => module.ManagerTeamPageComponent,
+      ),
+  },
+  {
     path: '',
     canActivate: [authGuard],
     loadComponent: () =>
@@ -27,13 +67,6 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./features/dashboard/dashboard-page.component').then(
             (module) => module.DashboardPageComponent,
-          ),
-      },
-      {
-        path: 'onboarding',
-        loadComponent: () =>
-          import('./features/onboarding/onboarding-page.component').then(
-            (module) => module.OnboardingPageComponent,
           ),
       },
       {
@@ -84,14 +117,6 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./features/manager/manager-dashboard-page.component').then(
             (module) => module.ManagerDashboardPageComponent,
-          ),
-      },
-      {
-        path: 'manager/team',
-        canActivate: [managerGuard],
-        loadComponent: () =>
-          import('./features/manager/manager-team-page.component').then(
-            (module) => module.ManagerTeamPageComponent,
           ),
       },
       {

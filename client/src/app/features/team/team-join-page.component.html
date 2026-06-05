@@ -1,0 +1,50 @@
+<section class="mx-auto max-w-3xl space-y-6">
+  <article class="glass-card rounded-[2rem] p-7">
+    <p class="eyebrow">Ingreso al equipo</p>
+    <h1 class="mt-3 text-3xl">Unete con tu codigo temporal</h1>
+    <p class="mt-3 text-[var(--muted)]">
+      Si tu manager ya creo el equipo, pega aqui el codigo de acceso de 24 horas para asociar tu cuenta al equipo correcto.
+    </p>
+
+    <div class="mt-6 space-y-4">
+      <label class="block">
+        <span class="mb-2 block text-sm font-medium">Codigo del equipo</span>
+        <input
+          class="team-join-field w-full rounded-2xl px-4 py-3 uppercase"
+          [(ngModel)]="accessCode"
+          maxlength="12"
+          placeholder="ABC123"
+          type="text"
+        />
+      </label>
+
+      @if (error()) {
+        <div class="rounded-2xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+          {{ error() }}
+        </div>
+      }
+
+      <button
+        class="w-full rounded-2xl bg-[var(--hero-strong)] px-4 py-3 font-semibold text-white"
+        type="button"
+        (click)="joinWithCode()"
+        [disabled]="loading() || !accessCode.trim()"
+      >
+        {{ loading() ? 'Uniendo al equipo...' : 'Unirme al equipo' }}
+      </button>
+    </div>
+  </article>
+
+  @if (joinedTeam()) {
+    <article class="glass-card rounded-[1.75rem] p-6">
+      <h2 class="text-2xl font-semibold text-white">Equipo encontrado</h2>
+      <p class="mt-3 text-sm text-[var(--muted)]">{{ joinedTeam()?.name }} · {{ joinedTeam()?.organization_name }}</p>
+      <p class="mt-2 text-sm text-[var(--muted)]">Sector: {{ joinedTeam()?.sector || 'No definido todavia' }}</p>
+    </article>
+  } @else {
+    <app-empty-state
+      title="Aun no estas dentro de un equipo"
+      message="Pide al manager un codigo vigente. Apenas entres te llevaremos al onboarding para personalizar tu ruta."
+    ></app-empty-state>
+  }
+</section>

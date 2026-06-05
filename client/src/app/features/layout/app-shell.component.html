@@ -5,12 +5,12 @@
   <header class="sticky top-0 z-40 border-b border-white/10 bg-[rgba(16,20,23,0.72)] backdrop-blur-xl">
     <div class="page-shell flex h-[72px] items-center justify-between gap-6">
       <div class="flex items-center gap-6 lg:gap-10">
-        <a class="font-['Plus_Jakarta_Sans'] text-3xl font-extrabold tracking-tight text-[#d2bbff]" routerLink="/dashboard">
+        <a class="font-['Plus_Jakarta_Sans'] text-3xl font-extrabold tracking-tight text-[#d2bbff]" [routerLink]="homePath()">
           RetAIM
         </a>
 
         <nav class="hidden items-center gap-6 md:flex">
-          @for (link of links(); track link.path) {
+          @for (link of primaryLinks(); track link.path) {
             <a
               [routerLink]="link.path"
               routerLinkActive="border-[#d2bbff] text-[#d2bbff]"
@@ -19,6 +19,32 @@
               {{ link.label }}
             </a>
           }
+
+          <div class="relative">
+            <button
+              class="flex items-center gap-2 border-b-2 border-transparent pb-1 text-sm font-semibold text-[var(--muted)] transition hover:text-white"
+              type="button"
+              (click)="toggleProgressMenu()"
+            >
+              Progreso
+              <app-icon [name]="progressMenuOpen() ? 'close' : 'menu'" className="h-4 w-4"></app-icon>
+            </button>
+
+            @if (progressMenuOpen()) {
+              <div class="layout-dropdown absolute left-0 top-full mt-4 min-w-[220px] rounded-[1.25rem] border border-white/10 p-2 shadow-[0_24px_56px_rgba(2,6,23,0.38)]">
+                @for (link of progressLinks(); track link.path) {
+                  <a
+                    [routerLink]="link.path"
+                    routerLinkActive="bg-white/10 text-white"
+                    class="block rounded-2xl px-4 py-3 text-sm font-medium text-[var(--muted)] transition hover:bg-white/[0.06] hover:text-white"
+                    (click)="closeProgressMenu()"
+                  >
+                    {{ link.label }}
+                  </a>
+                }
+              </div>
+            }
+          </div>
         </nav>
       </div>
 
@@ -38,6 +64,14 @@
             {{ (profile()?.full_name || profile()?.email || 'U').charAt(0).toUpperCase() }}
           </div>
         </a>
+        <button
+          class="flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2 text-sm font-semibold text-[var(--muted)] transition hover:border-[#d2bbff]/30 hover:text-white"
+          type="button"
+          (click)="signOut()"
+        >
+          <app-icon name="logout" className="h-4 w-4"></app-icon>
+          Salir
+        </button>
       </div>
 
       <button
@@ -52,7 +86,7 @@
     @if (menuOpen()) {
       <div class="border-t border-white/10 bg-[rgba(9,12,20,0.94)] px-4 py-4 md:hidden">
         <div class="space-y-1">
-          @for (link of links(); track link.path) {
+          @for (link of primaryLinks(); track link.path) {
             <a
               [routerLink]="link.path"
               routerLinkActive="bg-white/10 text-white"
@@ -62,6 +96,28 @@
               {{ link.label }}
             </a>
           }
+          <button
+            class="flex w-full items-center justify-between rounded-2xl px-4 py-3 text-sm font-medium text-[var(--muted)] transition hover:bg-white/[0.06] hover:text-white"
+            type="button"
+            (click)="toggleMobileProgressMenu()"
+          >
+            <span>Progreso</span>
+            <app-icon [name]="mobileProgressMenuOpen() ? 'close' : 'menu'" className="h-4 w-4"></app-icon>
+          </button>
+          @if (mobileProgressMenuOpen()) {
+            <div class="space-y-1 pl-3">
+              @for (link of progressLinks(); track link.path) {
+                <a
+                  [routerLink]="link.path"
+                  routerLinkActive="bg-white/10 text-white"
+                  class="block rounded-2xl px-4 py-3 text-sm font-medium text-[var(--muted)] transition hover:bg-white/[0.06] hover:text-white"
+                  (click)="closeMenu()"
+                >
+                  {{ link.label }}
+                </a>
+              }
+            </div>
+          }
           <a
             routerLink="/profile"
             routerLinkActive="bg-white/10 text-white"
@@ -70,6 +126,14 @@
           >
             Perfil
           </a>
+          <button
+            class="flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-sm font-medium text-[var(--muted)] transition hover:bg-white/[0.06] hover:text-white"
+            type="button"
+            (click)="signOut(); closeMenu()"
+          >
+            <app-icon name="logout" className="h-4 w-4"></app-icon>
+            Salir
+          </button>
         </div>
       </div>
     }

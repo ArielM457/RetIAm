@@ -2,6 +2,10 @@ from fastapi import APIRouter, Depends
 
 from app.core.security import get_current_supabase_user
 from app.models.onboarding import (
+    AgentIntakeAssistRequest,
+    AgentIntakeAssistResponse,
+    AgentIntakeRequest,
+    AgentIntakeResponse,
     OnboardingEvaluationRequest,
     OnboardingEvaluationResponse,
     OnboardingQuestionsResponse,
@@ -13,6 +17,8 @@ from app.services.onboarding_service import (
     evaluate_onboarding,
     get_latest_assessment,
     get_onboarding_questions,
+    assist_agent_intake,
+    save_agent_intake,
 )
 from app.services.profile_service import ensure_profile_for_user, update_my_profile
 
@@ -51,3 +57,19 @@ def get_my_latest_assessment(
     current_user=Depends(get_current_supabase_user),
 ) -> SavedAssessmentResponse | None:
     return get_latest_assessment(current_user)
+
+
+@router.post("/me/onboarding/intake", response_model=AgentIntakeResponse)
+def post_my_agent_intake(
+    payload: AgentIntakeRequest,
+    current_user=Depends(get_current_supabase_user),
+) -> AgentIntakeResponse:
+    return save_agent_intake(current_user, payload)
+
+
+@router.post("/me/onboarding/assist", response_model=AgentIntakeAssistResponse)
+def post_my_agent_intake_assist(
+    payload: AgentIntakeAssistRequest,
+    current_user=Depends(get_current_supabase_user),
+) -> AgentIntakeAssistResponse:
+    return assist_agent_intake(current_user, payload)

@@ -17,6 +17,7 @@ class Settings(BaseSettings):
     supabase_teams_table: str = "teams"
     supabase_team_members_table: str = "team_members"
     supabase_team_invitations_table: str = "team_invitations"
+    supabase_team_access_codes_table: str = "team_access_codes"
     supabase_profile_assessments_table: str = "profile_assessments"
     supabase_learning_routes_table: str = "learning_routes"
     supabase_study_plans_table: str = "study_plans"

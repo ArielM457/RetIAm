@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RetAIm — Wave Intro</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0B0B0F;
+    --purple: #A855F7;
+    --purple-b: #BF5AF2;
+    --purple-dim: rgba(168,85,247,0.5);
+  }
+
+  html, body {
+    width: 100%; height: 100%;
+    background: var(--bg);
+    overflow: hidden;
+    font-family: 'Syne', sans-serif;
+  }
+
+  /* scanline grain */
+  body::before {
+    content: ''; position: fixed; inset: 0; z-index: 1000; pointer-events: none;
+    background: repeating-linear-gradient(
+      to bottom, transparent 0px, transparent 3px,
+      rgba(0,0,0,0.045) 3px, rgba(0,0,0,0.045) 4px
+    );
+  }
+
+  /* ambient orbs */
+  .orb {
+    position: fixed; border-radius: 50%;
+    filter: blur(100px); pointer-events: none; z-index: 0;
+  }
+  #orb1 { width: 500px; height: 500px; top: -160px; right: -100px;
+           background: rgba(168,85,247,0.08); }
+  #orb2 { width: 380px; height: 380px; bottom: -100px; left: -80px;
+           background: rgba(191,90,242,0.06); }
+
+  /* ── TITLE ───────────────────────────────────── */
+  #title-wrap {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 10px;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  #title {
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(191,90,242,0.92);
+    text-shadow:
+      0 0 30px rgba(168,85,247,0.4),
+      0 0 60px rgba(168,85,247,0.15);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  #title.show { opacity: 1; transform: translateY(0); }
+  #title.hide { opacity: 0; transform: translateY(-14px); transition-duration: 0.6s; }
+
+  /* ── CANVAS ───────────────────────────────────── */
+  #wave-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 5;
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<div class="orb" id="orb1"></div>
+<div class="orb" id="orb2"></div>
+
+<div id="title-wrap">
+  <div id="title">Datos de usuario</div>
+</div>
+
+<canvas id="wave-canvas"></canvas>
+
+<script>
+/* ═══════════════════════════════════════════════════════
+   STATE MACHINE
+   0 → blank screen (1.0s)
+   1 → wave enters from right (1.4s)
+   2 → wave centered (hold for a beat)
+   3 → clip mask collapses from sides → only center visible
+   4 → waveform running (title hidden, wave active forever)
+═══════════════════════════════════════════════════════ */
+const canvas = document.getElementById('wave-canvas');
+const ctx    = canvas.getContext('2d');
+
+let W, H, DPR;
+function resize() {
+  DPR = window.devicePixelRatio || 1;
+  W = window.innerWidth;
+  H = window.innerHeight;
+  canvas.width  = W * DPR;
+  canvas.height = H * DPR;
+  canvas.style.width  = W + 'px';
+  canvas.style.height = H + 'px';
+  ctx.scale(DPR, DPR);
+}
+window.addEventListener('resize', () => { resize(); });
+resize();
+
+// ── Animation state ──────────────────────────────────
+let phase     = 0;   // state machine
+let phaseT    = 0;   // time inside current phase (0..1)
+let globalT   = 0;   // ever-increasing time for wave motion
+let waveX     = 0;   // current X offset of entire wave (0=fully right, 1=centered)
+let clipLeft  = 0;   // normalised clip left edge (0..0.5)
+let clipRight = 1;   // normalised clip right edge (0.5..1)
+let waveOn    = false; // true once wave is visible
+
+// Easing
+function easeInOut(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+function easeOut(t)   { return 1 - Math.pow(1-t, 3); }
+
+// Title DOM
+const titleEl = document.getElementById('title');
+
+/* ─── Timeline ─────────────────────────────────────── */
+const TIMINGS = {
+  blank:   1000,    // ms — empty screen
+  enter:   1500,    // wave slides in from right
+  hold:     600,    // wave fully centered, title visible
+  clip:    1100,    // sides collapse
+  settle:   400,    // brief pause before perpetual wave
+};
+
+let startTime = null;
+let currentPhase = 'blank';
+const phases = ['blank','enter','hold','clip','active'];
+
+function getPhaseTime(p) { return TIMINGS[p] || 0; }
+
+// Cumulative start times
+const phaseStart = {};
+let acc = 0;
+phases.forEach(p => { phaseStart[p] = acc; acc += getPhaseTime(p); });
+
+function getPhase(elapsed) {
+  for (let i = phases.length - 1; i >= 0; i--) {
+    if (elapsed >= phaseStart[phases[i]]) return { name: phases[i], t: Math.min(1,(elapsed - phaseStart[phases[i]]) / getPhaseTime(phases[i])) };
+  }
+  return { name: 'blank', t: 0 };
+}
+
+// Show title after wave arrives
+let titleShown = false, titleHidden = false;
+
+/* ─── Draw ─────────────────────────────────────────── */
+function drawWave(t, offsetNorm, leftClip, rightClip, intensity) {
+  // offsetNorm: 0 = centered, 1 = completely off right side
+  const CY = H / 2;
+  const totalLen = W * 1.6;  // wave is wider than screen
+
+  // actual draw X offset: wave center at W/2, slides in from right
+  const waveCenter = W / 2;
+  const startX = waveCenter - totalLen / 2 + offsetNorm * (W * 1.0);
+
+  // clip region (in pixels)
+  const cL = leftClip  * W;
+  const cR = rightClip * W;
+
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(cL, 0, cR - cL, H);
+  ctx.clip();
+
+  // 3 stacked wave layers
+  const layers = [
+    { amp: 42,  freq: 2.6,  speed: 1.0,  alpha: 0.92, lw: 2.4, blur: 18 },
+    { amp: 26,  freq: 5.0,  speed: 1.65, alpha: 0.50, lw: 1.3, blur: 9  },
+    { amp: 16,  freq: 8.8,  speed: 2.5,  alpha: 0.25, lw: 0.9, blur: 5  },
+  ];
+
+  layers.forEach(({ amp, freq, speed, alpha, lw, blur }) => {
+    const pts = 300;
+    ctx.beginPath();
+    for (let i = 0; i <= pts; i++) {
+      const frac = i / pts;
+      const x = startX + frac * totalLen;
+      const localFrac = (x - cL) / (cR - cL);
+      // envelope: taper near clip edges for smooth fade
+      const edgeFade = Math.pow(Math.sin(Math.PI * Math.max(0, Math.min(1, localFrac))), 0.5);
+      // inner envelope (Gaussian shape)
+      const center = (x - waveCenter) / (totalLen * 0.38);
+      const gauss  = Math.exp(-center * center * 0.8);
+      const y = CY + Math.sin(frac * Math.PI * 2 * freq + t * speed) * amp * intensity * gauss * edgeFade;
+      i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    const g = ctx.createLinearGradient(cL, 0, cR, 0);
+    g.addColorStop(0,    `rgba(168,85,247,0)`);
+    g.addColorStop(0.12, `rgba(168,85,247,${alpha})`);
+    g.addColorStop(0.5,  `rgba(191,90,242,${alpha})`);
+    g.addColorStop(0.88, `rgba(168,85,247,${alpha})`);
+    g.addColorStop(1,    `rgba(168,85,247,0)`);
+    ctx.strokeStyle = g;
+    ctx.lineWidth = lw;
+    ctx.shadowColor = '#A855F7';
+    ctx.shadowBlur = blur;
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+  });
+
+  // flat baseline behind wave (when intensity < 1)
+  if (intensity < 1) {
+    const fa = (1 - intensity) * 0.7;
+    const fg = ctx.createLinearGradient(cL, 0, cR, 0);
+    fg.addColorStop(0,    'rgba(168,85,247,0)');
+    fg.addColorStop(0.1,  `rgba(168,85,247,${fa})`);
+    fg.addColorStop(0.9,  `rgba(168,85,247,${fa})`);
+    fg.addColorStop(1,    'rgba(168,85,247,0)');
+    ctx.beginPath();
+    ctx.moveTo(cL, CY); ctx.lineTo(cR, CY);
+    ctx.strokeStyle = fg;
+    ctx.lineWidth = 1.5;
+    ctx.shadowColor = '#A855F7';
+    ctx.shadowBlur = 8;
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+  }
+
+  // tick decorations at clip edges
+  const tickPositions = [[cL - 16, -1], [cR + 16, 1]];
+  tickPositions.forEach(([bx, dir]) => {
+    for (let k = -3; k <= 3; k++) {
+      const ty = CY + k * 9;
+      const tl = k === 0 ? 9 : 4;
+      ctx.beginPath();
+      ctx.moveTo(bx, ty);
+      ctx.lineTo(bx + dir * tl, ty);
+      ctx.strokeStyle = `rgba(168,85,247,${k === 0 ? 0.65 : 0.22})`;
+      ctx.lineWidth = k === 0 ? 1.5 : 0.8;
+      ctx.stroke();
+    }
+  });
+
+  ctx.restore();
+}
+
+/* ─── Main loop ──────────────────────────────────────── */
+function loop(ts) {
+  if (!startTime) startTime = ts;
+  const elapsed = ts - startTime;
+  globalT += 0.044;
+
+  ctx.clearRect(0, 0, W, H);
+
+  const { name, t } = getPhase(elapsed);
+
+  if (name === 'blank') {
+    // nothing — empty screen
+    currentPhase = 'blank';
+
+  } else if (name === 'enter') {
+    currentPhase = 'enter';
+    // wave slides from right (offsetNorm: 1→0)
+    const progress = easeOut(t);
+    const offsetNorm = 1 - progress;
+    const intensity  = easeOut(Math.min(1, t * 1.8));
+    drawWave(globalT, offsetNorm, 0, 1, intensity);
+
+    // show title when wave is ~60% in
+    if (t > 0.55 && !titleShown) {
+      titleShown = true;
+      titleEl.classList.add('show');
+    }
+
+  } else if (name === 'hold') {
+    currentPhase = 'hold';
+    drawWave(globalT, 0, 0, 1, 1);
+    if (!titleShown) { titleShown = true; titleEl.classList.add('show'); }
+
+  } else if (name === 'clip') {
+    currentPhase = 'clip';
+    // collapse clip from both sides: left 0→target, right 1→target
+    const progress = easeInOut(t);
+    // final clip window: show center 30% of screen
+    const targetL = 0.35;
+    const targetR = 0.65;
+    const cL = progress * targetL;
+    const cR = 1 - progress * (1 - targetR);
+    drawWave(globalT, 0, cL, cR, 1);
+
+    // hide title as clip begins
+    if (t > 0.1 && !titleHidden) {
+      titleHidden = true;
+      titleEl.classList.add('hide');
+    }
+
+  } else if (name === 'active' || name === 'settle') {
+    currentPhase = 'active';
+    const targetL = 0.35;
+    const targetR = 0.65;
+    drawWave(globalT, 0, targetL, targetR, 1);
+  }
+
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>

@@ -30,8 +30,17 @@ create table if not exists public.teams (
     org_id uuid not null references public.organizations (id) on delete cascade,
     name text not null,
     manager_id uuid not null references public.profiles (id) on delete restrict,
+    sector text,
+    member_capacity integer,
+    work_style text,
+    notes text,
     created_at timestamptz not null default timezone('utc', now())
 );
+
+alter table public.teams add column if not exists sector text;
+alter table public.teams add column if not exists member_capacity integer;
+alter table public.teams add column if not exists work_style text;
+alter table public.teams add column if not exists notes text;
 
 alter table public.profiles
     add constraint profiles_team_id_fkey
@@ -59,6 +68,23 @@ create table if not exists public.team_invitations (
 
 create unique index if not exists team_invitations_team_email_idx
 on public.team_invitations (team_id, email);
+
+create table if not exists public.team_access_codes (
+    id uuid primary key default gen_random_uuid(),
+    team_id uuid not null references public.teams (id) on delete cascade,
+    org_id uuid not null references public.organizations (id) on delete cascade,
+    code text not null unique,
+    role text not null default 'employee' check (role in ('manager', 'employee')),
+    status text not null default 'active' check (status in ('active', 'used', 'expired', 'cancelled')),
+    created_by uuid not null references public.profiles (id) on delete cascade,
+    used_by uuid references public.profiles (id) on delete set null,
+    expires_at timestamptz not null,
+    created_at timestamptz not null default timezone('utc', now()),
+    used_at timestamptz
+);
+
+create index if not exists team_access_codes_active_team_idx
+on public.team_access_codes (team_id, status);
 
 create table if not exists public.profile_assessments (
     id uuid primary key default gen_random_uuid(),
@@ -218,6 +244,7 @@ alter table public.profiles enable row level security;
 alter table public.teams enable row level security;
 alter table public.team_members enable row level security;
 alter table public.team_invitations enable row level security;
+alter table public.team_access_codes enable row level security;
 alter table public.profile_assessments enable row level security;
 alter table public.learning_routes enable row level security;
 alter table public.study_plans enable row level security;

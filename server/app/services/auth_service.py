@@ -1,4 +1,5 @@
 from email.utils import parseaddr
+from datetime import datetime, timezone
 
 from fastapi import HTTPException, status
 
@@ -54,10 +55,78 @@ def analyze_email_address(email: str) -> EmailValidationResponse:
     )
 
 
+def _get_active_team_access_code_or_raise(code: str) -> dict:
+    normalized_code = code.strip().upper()
+    if not normalized_code:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="Ingresa un codigo de equipo valido.",
+        )
+
+    settings = get_settings()
+    response = (
+        get_supabase_service_client()
+        .table(settings.supabase_team_access_codes_table)
+        .select("*")
+        .eq("code", normalized_code)
+        .eq("status", "active")
+        .limit(1)
+        .execute()
+    )
+    data = read_field(response, "data") or []
+    code_data = data[0] if data else None
+    if not code_data:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="No encontramos un codigo activo con ese valor.",
+        )
+
+    if datetime.fromisoformat(code_data["expires_at"].replace("Z", "+00:00")) < datetime.now(timezone.utc):
+        get_supabase_service_client().table(settings.supabase_team_access_codes_table).update(
+            {"status": "expired"}
+        ).eq("id", code_data["id"]).execute()
+        raise HTTPException(
+            status_code=status.HTTP_410_GONE,
+            detail="Ese codigo ya vencio. Pide uno nuevo al manager.",
+        )
+
+    return code_data
+
+
+def _attach_employee_to_team(user_id: str, code_data: dict) -> None:
+    settings = get_settings()
+    get_supabase_service_client().table(settings.supabase_profiles_table).update(
+        {
+            "org_id": code_data["org_id"],
+            "team_id": code_data["team_id"],
+            "role": "employee",
+        }
+    ).eq("id", user_id).execute()
+
+    get_supabase_service_client().table(settings.supabase_team_members_table).upsert(
+        {
+            "team_id": code_data["team_id"],
+            "user_id": user_id,
+        }
+    ).execute()
+
+    get_supabase_service_client().table(settings.supabase_team_access_codes_table).update(
+        {
+            "status": "used",
+            "used_by": user_id,
+            "used_at": datetime.now(timezone.utc).isoformat(),
+        }
+    ).eq("id", code_data["id"]).execute()
+
+
 def register_mock_user(payload: RegisterRequest) -> AuthSessionResponse:
     assessment = analyze_email_address(payload.email)
     if not assessment.is_valid:
         raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=assessment.message)
+
+    active_team_code: dict | None = None
+    if payload.role == "employee" and payload.team_access_code:
+        active_team_code = _get_active_team_access_code_or_raise(payload.team_access_code)
 
     try:
         created_user = get_supabase_service_client().auth.admin.create_user(
@@ -88,7 +157,13 @@ def register_mock_user(payload: RegisterRequest) -> AuthSessionResponse:
         success_message="Cuenta creada correctamente para la demo.",
     )
 
-    ensure_profile_for_user(read_field(created_user, "user"))
+    profile = ensure_profile_for_user(read_field(created_user, "user"))
+    if active_team_code:
+        _attach_employee_to_team(profile.id, active_team_code)
+        auth_response = sign_in_mock_user(
+            LoginRequest(email=assessment.email, password=payload.password),
+            success_message="Cuenta creada y asociada al equipo correctamente.",
+        )
     return auth_response
 
 

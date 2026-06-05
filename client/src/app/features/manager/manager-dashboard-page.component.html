@@ -1,28 +1,41 @@
 <section class="space-y-10">
   <header class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
     <div>
-      <h1 class="text-3xl font-bold text-white md:text-4xl">Panel de Control</h1>
+      <h1 class="text-3xl font-bold text-white md:text-4xl">Equipo</h1>
       <p class="mt-3 max-w-3xl text-base text-[var(--muted)]">
-        Supervisa el progreso tecnico del equipo y detecta brechas de conocimiento en tiempo real con la IA de RetAIM.
+        Desde aqui puedes alternar entre el panel de control del equipo y las acciones para sumar nuevas personas.
       </p>
     </div>
 
     <div class="flex flex-wrap gap-3">
       <button
-        class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/[0.08]"
+        class="inline-flex items-center gap-2 rounded-xl border px-5 py-3 text-sm font-semibold transition"
+        [class.border-[#d2bbff]/30]="activeSection() === 'control'"
+        [class.bg-[#7c3aed]/10]="activeSection() === 'control'"
+        [class.text-white]="activeSection() === 'control'"
+        [class.border-white/10]="activeSection() !== 'control'"
+        [class.bg-white/[0.04]]="activeSection() !== 'control'"
+        [class.text-[var(--muted)]]="activeSection() !== 'control'"
         type="button"
-        (click)="exportPdf()"
+        (click)="setSection('control')"
       >
-        <app-icon name="document" className="h-4 w-4"></app-icon>
-        Exportar reporte PDF
+        <app-icon name="chart" className="h-4 w-4"></app-icon>
+        Panel de control
       </button>
-      <a
-        class="inline-flex items-center gap-2 rounded-xl bg-[linear-gradient(135deg,#7c3aed,#2563eb)] px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(124,58,237,0.28)]"
-        routerLink="/manager/weekly-summary"
+      <button
+        class="inline-flex items-center gap-2 rounded-xl border px-5 py-3 text-sm font-semibold transition"
+        [class.border-[#d2bbff]/30]="activeSection() === 'members'"
+        [class.bg-[#7c3aed]/10]="activeSection() === 'members'"
+        [class.text-white]="activeSection() === 'members'"
+        [class.border-white/10]="activeSection() !== 'members'"
+        [class.bg-white/[0.04]]="activeSection() !== 'members'"
+        [class.text-[var(--muted)]]="activeSection() !== 'members'"
+        type="button"
+        (click)="setSection('members')"
       >
-        <app-icon name="ai" className="h-4 w-4"></app-icon>
-        Generar resumen semanal
-      </a>
+        <app-icon name="team" className="h-4 w-4"></app-icon>
+        Añadir miembro
+      </button>
     </div>
   </header>
 
@@ -45,7 +58,25 @@
     </div>
   }
 
-  @if (dashboard()) {
+  @if (dashboard() && activeSection() === 'control') {
+    <div class="flex flex-wrap gap-3">
+      <button
+        class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/[0.08]"
+        type="button"
+        (click)="exportPdf()"
+      >
+        <app-icon name="document" className="h-4 w-4"></app-icon>
+        Exportar reporte PDF
+      </button>
+      <a
+        class="inline-flex items-center gap-2 rounded-xl bg-[linear-gradient(135deg,#7c3aed,#2563eb)] px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(124,58,237,0.28)]"
+        routerLink="/manager/weekly-summary"
+      >
+        <app-icon name="ai" className="h-4 w-4"></app-icon>
+        Generar resumen semanal
+      </a>
+    </div>
+
     <section class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
       <article class="glass-card rounded-[1.5rem] p-6">
         <div class="mb-4 flex items-start justify-between">
@@ -94,7 +125,7 @@
       <section class="glass-card overflow-hidden rounded-[1.75rem] lg:col-span-2">
         <div class="flex items-center justify-between border-b border-white/5 px-7 py-6">
           <h2 class="text-xl font-semibold text-white">Resumen del equipo</h2>
-          <a class="text-sm font-semibold text-[#d2bbff]" routerLink="/manager/team">Ver todos</a>
+          <a class="text-sm font-semibold text-[#d2bbff]" routerLink="/manager/dashboard">Ver todos</a>
         </div>
 
         <div class="overflow-x-auto">
@@ -203,6 +234,131 @@
         </div>
       </aside>
     </div>
+  } @else if (selectedTeam() && activeSection() === 'members') {
+    <section class="grid gap-6 xl:grid-cols-[0.95fr_1.05fr]">
+      <article class="glass-card space-y-6 rounded-[1.75rem] p-7">
+        <div class="space-y-2">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#d2bbff]">Acceso al equipo</p>
+          <h2 class="text-2xl font-bold text-white">Añadir miembros</h2>
+          <p class="text-sm text-[var(--muted)]">
+            Genera un codigo temporal o envia correos para que nuevas personas entren a {{ selectedTeam()!.name }}.
+          </p>
+        </div>
+
+        <div class="rounded-[1.25rem] border border-white/10 bg-white/[0.04] p-5">
+          <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <p class="text-sm font-semibold text-white">Codigo de acceso de 24 horas</p>
+              <p class="mt-1 text-xs text-[var(--muted)]">Ideal para compartirlo rapido durante el registro.</p>
+            </div>
+            <button
+              class="inline-flex items-center justify-center gap-2 rounded-xl bg-[linear-gradient(135deg,#7c3aed,#2563eb)] px-4 py-3 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(124,58,237,0.28)]"
+              type="button"
+              (click)="generateAccessCode()"
+            >
+              <app-icon name="spark" className="h-4 w-4"></app-icon>
+              Generar codigo
+            </button>
+          </div>
+
+          @if (accessCode()) {
+            <div class="mt-5 rounded-[1rem] border border-[#7c3aed]/20 bg-[#7c3aed]/10 p-4">
+              <p class="text-xs uppercase tracking-[0.2em] text-[#d2bbff]">Codigo activo</p>
+              <p class="mt-2 text-3xl font-black tracking-[0.26em] text-white">{{ accessCode()!.code }}</p>
+              <p class="mt-2 text-sm text-[var(--muted)]">
+                Expira: {{ accessCode()!.expires_at | date:'medium' }}
+              </p>
+            </div>
+          }
+        </div>
+
+        <div class="rounded-[1.25rem] border border-white/10 bg-white/[0.04] p-5">
+          <p class="text-sm font-semibold text-white">Invitar por correo</p>
+          <p class="mt-1 text-xs text-[var(--muted)]">Separa varios correos con coma y los agregamos al flujo del equipo.</p>
+          <textarea
+            class="mt-4 min-h-[120px] w-full rounded-[1rem] border border-white/10 bg-[rgba(10,14,24,0.7)] px-4 py-3 text-sm text-white outline-none transition focus:border-[#d2bbff]/40"
+            [(ngModel)]="inviteEmails"
+            placeholder="ana@empresa.com, luis@empresa.com"
+          ></textarea>
+          <button
+            class="mt-4 inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/[0.08]"
+            type="button"
+            (click)="inviteMembers()"
+            [disabled]="!inviteEmails.trim()"
+          >
+            <app-icon name="arrow-right" className="h-4 w-4"></app-icon>
+            Enviar invitaciones
+          </button>
+        </div>
+      </article>
+
+      <article class="glass-card rounded-[1.75rem] p-7">
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#d2bbff]">Miembros</p>
+            <h2 class="mt-2 text-2xl font-bold text-white">Equipo actual</h2>
+          </div>
+          <span class="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-sm font-semibold text-white">
+            {{ members().length }} personas
+          </span>
+        </div>
+
+        @if (loadingMembers()) {
+          <div class="mt-6 rounded-[1rem] border border-white/10 bg-white/[0.04] p-5 text-sm text-[var(--muted)]">
+            Cargando miembros del equipo...
+          </div>
+        } @else {
+          <div class="mt-6 space-y-3">
+            @for (member of members(); track member.user_id) {
+              <button
+                class="flex w-full items-center justify-between rounded-[1rem] border border-white/10 bg-white/[0.03] px-4 py-4 text-left transition hover:bg-white/[0.06]"
+                type="button"
+                (click)="openMember(member.user_id)"
+              >
+                <div class="flex items-center gap-3">
+                  <div class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-sm font-semibold text-[#d2bbff]">
+                    {{ (member.full_name || member.email).charAt(0).toUpperCase() }}
+                  </div>
+                  <div>
+                    <p class="font-semibold text-white">{{ member.full_name || 'Sin nombre' }}</p>
+                    <p class="text-xs text-[var(--muted)]">{{ member.email }}</p>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <p class="text-xs uppercase tracking-[0.18em] text-[var(--muted)]">{{ member.role }}</p>
+                  <p class="mt-1 text-sm text-white">{{ member.certification || 'Sin certificacion activa' }}</p>
+                </div>
+              </button>
+            }
+          </div>
+        }
+
+        @if (selectedMember()) {
+          <div class="mt-6 rounded-[1.25rem] border border-[#7c3aed]/20 bg-[#7c3aed]/10 p-5">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#d2bbff]">Detalle</p>
+            <h3 class="mt-2 text-xl font-bold text-white">{{ selectedMember()!.full_name || 'Miembro del equipo' }}</h3>
+            <div class="mt-4 grid gap-3 md:grid-cols-2">
+              <div class="rounded-[0.9rem] bg-white/[0.04] p-3">
+                <p class="text-xs text-[var(--muted)]">Rol profesional</p>
+                <p class="mt-1 text-sm font-semibold text-white">{{ selectedMember()!.professional_role || 'Sin registrar' }}</p>
+              </div>
+              <div class="rounded-[0.9rem] bg-white/[0.04] p-3">
+                <p class="text-xs text-[var(--muted)]">Nivel detectado</p>
+                <p class="mt-1 text-sm font-semibold text-white">{{ selectedMember()!.detected_level || 'Pendiente' }}</p>
+              </div>
+              <div class="rounded-[0.9rem] bg-white/[0.04] p-3">
+                <p class="text-xs text-[var(--muted)]">Patron recomendado</p>
+                <p class="mt-1 text-sm font-semibold text-white">{{ selectedMember()!.recommended_study_pattern || 'Sin patron calculado aun' }}</p>
+              </div>
+              <div class="rounded-[0.9rem] bg-white/[0.04] p-3">
+                <p class="text-xs text-[var(--muted)]">Sesiones completadas</p>
+                <p class="mt-1 text-sm font-semibold text-white">{{ selectedMember()!.completed_sessions }}</p>
+              </div>
+            </div>
+          </div>
+        }
+      </article>
+    </section>
   } @else {
     <app-empty-state title="Sin equipo activo" message="Crea o selecciona un equipo para ver el dashboard agregado del manager."></app-empty-state>
   }

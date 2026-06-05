@@ -71,6 +71,24 @@
               <option value="manager">Manager</option>
             </select>
           </label>
+
+          @if (isEmployeeSignup()) {
+            <label class="block">
+              <span class="mb-2 block text-sm font-medium">Codigo del equipo</span>
+              <input
+                class="auth-input w-full rounded-2xl px-4 py-3 uppercase outline-none transition"
+                formControlName="teamAccessCode"
+                placeholder="ABC123"
+                maxlength="12"
+                type="text"
+              />
+              @if (submitted() && form.controls.teamAccessCode.invalid) {
+                <span class="mt-2 block text-sm text-red-600">
+                  Ingresa un codigo activo del equipo para unirte durante el registro.
+                </span>
+              }
+            </label>
+          }
         }
 
         <label class="block">

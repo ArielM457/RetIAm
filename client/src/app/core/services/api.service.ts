@@ -102,6 +102,46 @@ export type OnboardingEvaluationResponse = {
   }>;
 };
 
+export type SavedAssessmentResponse = {
+  id: string;
+  user_id: string;
+  professional_role: string;
+  target_certification: string;
+  detected_level: string;
+  weekly_hours_available: number;
+  preferred_time: string;
+  learning_style: string[];
+  score: number;
+  max_score: number;
+  notes: string | null;
+  questions: Array<Record<string, unknown>>;
+  answers: Array<{
+    key?: string;
+    title?: string;
+    answer?: string;
+    question_id?: string;
+    selected_option_key?: string;
+    correct_option_key?: string;
+    is_correct?: boolean;
+    difficulty?: string;
+    topic?: string;
+  }>;
+  created_at: string;
+};
+
+export type AgentIntakeResponse = {
+  summary: string;
+  saved_answers: number;
+  onboarding_completed_at: string;
+};
+
+export type AgentIntakeAssistResponse = {
+  message: string;
+  should_advance: boolean;
+  normalized_answer: string | null;
+  extracted_answers: Record<string, string>;
+};
+
 export type CertificationSummary = {
   code: string;
   title: string;
@@ -157,8 +197,26 @@ export type TeamSummary = {
   org_id: string;
   manager_id: string;
   organization_name: string | null;
+  sector: string | null;
+  member_capacity: number | null;
+  work_style: string | null;
+  notes: string | null;
   member_count: number;
   pending_invites: number;
+};
+
+export type TeamAccessCodeSummary = {
+  id: string;
+  team_id: string;
+  org_id: string;
+  code: string;
+  role: 'manager' | 'employee';
+  status: 'active' | 'used' | 'expired' | 'cancelled';
+  created_by: string;
+  used_by: string | null;
+  expires_at: string;
+  created_at: string | null;
+  used_at: string | null;
 };
 
 export type TeamMemberSummary = {
@@ -168,6 +226,12 @@ export type TeamMemberSummary = {
   role: 'manager' | 'employee';
   certification: string | null;
   team_id: string | null;
+};
+
+export type ManagerSetupAgentAssistResponse = {
+  message: string;
+  should_advance: boolean;
+  normalized_answer: string | null;
 };
 
 export type LearningSessionResponse = {
@@ -243,6 +307,10 @@ export type FinalExamAttemptResponse = {
 export type ManagerDashboardResponse = {
   team_id: string;
   team_name: string;
+  organization_name: string | null;
+  sector: string | null;
+  member_capacity: number | null;
+  work_style: string | null;
   team_progress_percent: number;
   top_gaps: string[];
   members: Array<{
@@ -258,9 +326,16 @@ export type ManagerDashboardResponse = {
 export type ManagerMemberDetailResponse = {
   user_id: string;
   full_name: string | null;
+  email: string | null;
+  professional_role: string | null;
   certification: string | null;
   detected_level: string | null;
+  preferred_time: string | null;
+  learning_style: string[];
+  recommended_study_pattern: string | null;
   progress_percent: number;
+  completed_sessions: number;
+  completed_certifications: number;
   days_to_deadline: number | null;
   risk_status: string;
   pending_sections: string[];
@@ -308,6 +383,7 @@ export class ApiService {
     password: string;
     full_name?: string;
     role?: 'manager' | 'employee';
+    team_access_code?: string;
   }): Promise<AuthSessionResponse> {
     return firstValueFrom(
       this.http.post<AuthSessionResponse>(`${this.apiBaseUrl}/auth/register`, payload),
@@ -348,11 +424,36 @@ export class ApiService {
     );
   }
 
-  getLatestAssessment(): Promise<OnboardingEvaluationResponse | null> {
+  getLatestAssessment(): Promise<SavedAssessmentResponse | null> {
     return firstValueFrom(
-      this.http.get<OnboardingEvaluationResponse | null>(
+      this.http.get<SavedAssessmentResponse | null>(
         `${this.apiBaseUrl}/users/me/onboarding/latest`,
       ),
+    );
+  }
+
+  saveAgentIntake(payload: {
+    professional_role: string;
+    weekly_hours_available: number;
+    preferred_time: 'morning' | 'afternoon' | 'night';
+    learning_style: string[];
+    target_certification?: string | null;
+    answers: Array<{ key: string; title: string; answer: string }>;
+  }): Promise<AgentIntakeResponse> {
+    return firstValueFrom(
+      this.http.post<AgentIntakeResponse>(`${this.apiBaseUrl}/users/me/onboarding/intake`, payload),
+    );
+  }
+
+  assistAgentIntake(payload: {
+    question_key: string;
+    question_title: string;
+    question_prompt: string;
+    user_message: string;
+    collected_answers: Record<string, string>;
+  }): Promise<AgentIntakeAssistResponse> {
+    return firstValueFrom(
+      this.http.post<AgentIntakeAssistResponse>(`${this.apiBaseUrl}/users/me/onboarding/assist`, payload),
     );
   }
 
@@ -399,9 +500,27 @@ export class ApiService {
     team_name: string;
     organization_name?: string;
     organization_id?: string;
+    sector?: string;
+    member_capacity?: number;
+    work_style?: string;
+    notes?: string;
     member_emails?: string[];
   }): Promise<TeamSummary> {
     return firstValueFrom(this.http.post<TeamSummary>(`${this.apiBaseUrl}/teams`, payload));
+  }
+
+  createTeamAccessCode(teamId: string, role: 'manager' | 'employee' = 'employee') {
+    return firstValueFrom(
+      this.http.post<TeamAccessCodeSummary>(`${this.apiBaseUrl}/teams/${teamId}/access-code`, {
+        role,
+      }),
+    );
+  }
+
+  joinTeamWithCode(code: string): Promise<TeamSummary> {
+    return firstValueFrom(
+      this.http.post<TeamSummary>(`${this.apiBaseUrl}/teams/join-with-code`, { code }),
+    );
   }
 
   listTeamMembers(teamId: string): Promise<TeamMemberSummary[]> {
@@ -416,6 +535,21 @@ export class ApiService {
         emails,
         role,
       }),
+    );
+  }
+
+  assistManagerSetup(payload: {
+    question_key: string;
+    question_title: string;
+    question_prompt: string;
+    user_message: string;
+    collected_answers: Record<string, string>;
+  }): Promise<ManagerSetupAgentAssistResponse> {
+    return firstValueFrom(
+      this.http.post<ManagerSetupAgentAssistResponse>(
+        `${this.apiBaseUrl}/teams/setup-agent/assist`,
+        payload,
+      ),
     );
   }
 

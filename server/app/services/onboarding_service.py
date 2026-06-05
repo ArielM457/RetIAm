@@ -1,3 +1,4 @@
+import re
 from datetime import datetime, timezone
 
 from fastapi import HTTPException, status
@@ -5,6 +6,10 @@ from fastapi import HTTPException, status
 from app.core.config import get_settings
 from app.db.supabase import get_supabase_service_client
 from app.models.onboarding import (
+    AgentIntakeAssistRequest,
+    AgentIntakeAssistResponse,
+    AgentIntakeRequest,
+    AgentIntakeResponse,
     LearningProfileSnapshot,
     OnboardingAnswerResult,
     OnboardingEvaluationRequest,
@@ -230,3 +235,199 @@ def get_latest_assessment(auth_user: object) -> SavedAssessmentResponse | None:
     if not data:
         return None
     return SavedAssessmentResponse.model_validate(data[0])
+
+
+def save_agent_intake(auth_user: object, payload: AgentIntakeRequest) -> AgentIntakeResponse:
+    settings = get_settings()
+    profile = ensure_profile_for_user(auth_user)
+    completed_at = datetime.now(timezone.utc).isoformat()
+    current_version = getattr(profile, "profile_version", 1) if hasattr(profile, "profile_version") else 1
+    next_version = current_version + 1
+
+    summary = (
+        f"Perfil inicial registrado para {payload.professional_role}. "
+        f"Disponibilidad estimada: {payload.weekly_hours_available} horas por semana, "
+        f"preferencia horaria {payload.preferred_time} y estilos {', '.join(payload.learning_style)}."
+    )
+
+    get_supabase_service_client().table(settings.supabase_profiles_table).update(
+        {
+            "professional_role": payload.professional_role,
+            "weekly_hours_available": payload.weekly_hours_available,
+            "preferred_time": payload.preferred_time,
+            "learning_style": payload.learning_style,
+            "target_certification": payload.target_certification,
+            "profile_version": next_version,
+            "onboarding_completed_at": completed_at,
+        }
+    ).eq("id", profile.id).execute()
+
+    get_supabase_service_client().table(settings.supabase_profile_assessments_table).insert(
+        {
+            "user_id": profile.id,
+            "professional_role": payload.professional_role,
+            "target_certification": payload.target_certification or "pending",
+            "detected_level": "basic",
+            "weekly_hours_available": payload.weekly_hours_available,
+            "preferred_time": payload.preferred_time,
+            "learning_style": payload.learning_style,
+            "questions": [
+                {"key": answer.key, "title": answer.title}
+                for answer in payload.answers
+            ],
+            "answers": [answer.model_dump() for answer in payload.answers],
+            "score": 0,
+            "max_score": 0,
+            "notes": summary,
+        }
+    ).execute()
+
+    return AgentIntakeResponse(
+        summary=summary,
+        saved_answers=len(payload.answers),
+        onboarding_completed_at=completed_at,
+    )
+
+
+def _extract_weekly_hours(message: str) -> str | None:
+    digits = "".join(char for char in message if char.isdigit())
+    if not digits:
+        return None
+    return str(max(1, min(60, int(digits))))
+
+
+def _extract_preferred_time(message: str) -> str | None:
+    lowered = message.lower()
+    if any(token in lowered for token in ("morning", "mañana", "manana", "temprano")):
+        return "morning"
+    if any(token in lowered for token in ("afternoon", "tarde", "mediodia", "medio día")):
+        return "afternoon"
+    if any(token in lowered for token in ("night", "noche", "nights")):
+        return "night"
+    return None
+
+
+def _extract_learning_style(message: str) -> str | None:
+    lowered = message.lower()
+    matches: list[str] = []
+    if any(token in lowered for token in ("video", "videos", "visual")):
+        matches.append("video")
+    if any(token in lowered for token in ("texto", "textos", "documentacion", "documentación", "lectura")):
+        matches.append("textos")
+    if any(token in lowered for token in ("practica", "práctica", "hands-on", "laboratorio", "lab")):
+        matches.append("practica")
+    if any(token in lowered for token in ("codigo", "código", "ejemplos")):
+        matches.append("codigo")
+    if "mixto" in lowered or "mixed" in lowered:
+        matches.append("mixto")
+    if not matches:
+        return None
+    unique_matches = list(dict.fromkeys(matches))
+    return ", ".join(unique_matches)
+
+
+def _extract_age_range(message: str) -> str | None:
+    range_match = re.search(r"(\d{2})\s*[-a]\s*(\d{2})", message)
+    if range_match:
+        return f"{range_match.group(1)}-{range_match.group(2)}"
+    digits = _extract_weekly_hours(message)
+    if not digits:
+        return None
+    age = int(digits)
+    if 18 <= age <= 24:
+        return "18-24"
+    if 25 <= age <= 34:
+        return "25-34"
+    if 35 <= age <= 44:
+        return "35-44"
+    if 45 <= age <= 54:
+        return "45-54"
+    if age >= 55:
+        return "55+"
+    return None
+
+
+def _extract_study_techniques(message: str) -> str | None:
+    lowered = message.lower()
+    matches: list[str] = []
+    if "pomodoro" in lowered:
+        matches.append("pomodoro")
+    if "5 minutos" in lowered or "5 minute" in lowered:
+        matches.append("regla de 5 minutos")
+    if "continuo" in lowered or "continuo" in lowered or "aprendizaje continuo" in lowered:
+        matches.append("aprendizaje continuo")
+    if not matches:
+        return None
+    return ", ".join(dict.fromkeys(matches))
+
+
+def assist_agent_intake(auth_user: object, payload: AgentIntakeAssistRequest) -> AgentIntakeAssistResponse:
+    ensure_profile_for_user(auth_user)
+    message = payload.user_message.strip()
+    lowered = message.lower()
+    extracted_answers: dict[str, str] = {}
+
+    weekly_hours = _extract_weekly_hours(message)
+    preferred_time = _extract_preferred_time(message)
+    learning_style = _extract_learning_style(message)
+    age_range = _extract_age_range(message)
+    study_techniques = _extract_study_techniques(message)
+
+    if weekly_hours:
+        extracted_answers["weekly_hours_available"] = weekly_hours
+    if preferred_time:
+        extracted_answers["preferred_time"] = preferred_time
+    if learning_style:
+        extracted_answers["learning_style"] = learning_style
+    if age_range:
+        extracted_answers["age_range"] = age_range
+    if study_techniques:
+        extracted_answers["study_techniques"] = study_techniques
+
+    if "?" in message or lowered.startswith(("que ", "qué ", "como ", "cómo ", "cual ", "cuál ", "puedo ", "debo ")):
+        help_map = {
+            "professional_role": "Puedes responder con tu puesto real o el rol con el que trabajas hoy en el equipo.",
+            "age_range": "Si no quieres decir la edad exacta, basta con un rango como 25-34 o 35-44.",
+            "weekly_hours_available": "Aqui necesito una estimacion realista de horas por semana para estudiar.",
+            "preferred_time": "Puedes decir morning, afternoon o night, o expresarlo como mañana, tarde o noche.",
+            "learning_style": "Puedes combinar formatos como video, textos, practica o ejemplos de codigo.",
+            "content_preferences": "Aqui sirve una frase corta como laboratorios reales, casos de uso, resúmenes o guias paso a paso.",
+            "technology_experience": "Aqui me sirve una lista breve de tecnologias que ya usas o has probado.",
+            "learning_goals": "Aqui puedes contar que te gustaria aprender o mejorar primero.",
+            "study_techniques": "Aqui puedes mencionar pomodoro, regla de 5 minutos, aprendizaje continuo u otra tecnica propia.",
+        }
+        return AgentIntakeAssistResponse(
+            message=f"{help_map.get(payload.question_key, 'Voy a ayudarte solo con este paso del perfil inicial.')} Cuando quieras, responde este paso: {payload.question_title}.",
+            extracted_answers=extracted_answers,
+        )
+
+    normalized_answer = message
+    if payload.question_key == "weekly_hours_available":
+        if weekly_hours:
+            normalized_answer = weekly_hours
+        else:
+            return AgentIntakeAssistResponse(
+                message="Para este paso necesito una cantidad aproximada de horas. Puedes responder algo como 4, 6 u 8.",
+                extracted_answers=extracted_answers,
+            )
+    elif payload.question_key == "preferred_time":
+        if preferred_time:
+            normalized_answer = preferred_time
+        else:
+            return AgentIntakeAssistResponse(
+                message="Para este paso dime si te funciona mejor morning, afternoon o night.",
+                extracted_answers=extracted_answers,
+            )
+    elif payload.question_key == "learning_style":
+        if learning_style:
+            normalized_answer = learning_style
+    elif payload.question_key == "age_range":
+        if age_range:
+            normalized_answer = age_range
+
+    return AgentIntakeAssistResponse(
+        message=f"Entiendo. Voy a tomar tu respuesta para {payload.question_title.lower()} como {normalized_answer}.",
+        should_advance=True,
+        normalized_answer=normalized_answer,
+        extracted_answers=extracted_answers,
+    )
