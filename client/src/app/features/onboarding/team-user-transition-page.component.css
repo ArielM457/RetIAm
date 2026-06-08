@@ -1,0 +1,94 @@
+.transition-screen {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(168, 85, 247, 0.14), transparent 32%),
+    radial-gradient(circle at bottom left, rgba(191, 90, 242, 0.12), transparent 30%),
+    #05070d;
+}
+
+.transition-screen::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    rgba(0, 0, 0, 0.045) 3px,
+    rgba(0, 0, 0, 0.045) 4px
+  );
+}
+
+.orb {
+  position: fixed;
+  border-radius: 999px;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.orb-one {
+  top: -160px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: rgba(168, 85, 247, 0.08);
+}
+
+.orb-two {
+  bottom: -100px;
+  left: -80px;
+  width: 380px;
+  height: 380px;
+  background: rgba(191, 90, 242, 0.06);
+}
+
+#title-wrap {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+#title {
+  color: rgba(191, 90, 242, 0.92);
+  font-family: 'Syne', 'Segoe UI', sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 30px rgba(168, 85, 247, 0.4),
+    0 0 60px rgba(168, 85, 247, 0.15);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+#title.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#title.hide {
+  opacity: 0;
+  transform: translateY(-14px);
+  transition-duration: 0.6s;
+}
+
+#wave-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}

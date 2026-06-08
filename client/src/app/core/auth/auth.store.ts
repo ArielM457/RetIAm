@@ -22,6 +22,7 @@ type AuthPayload = {
   password: string;
   fullName?: string;
   role?: 'manager' | 'employee';
+  teamAccessCode?: string;
 };
 
 @Injectable({ providedIn: 'root' })
@@ -115,8 +116,8 @@ export class AuthStore {
 
       await this.applyBackendSession(response);
 
-      await this.refreshProfile();
-      await this.router.navigate(['/dashboard']);
+      const profile = await this.refreshProfile();
+      await this.navigateAfterAuth(profile);
     } catch (error) {
       this.setError(error instanceof Error ? error.message : 'No se pudo iniciar sesion.');
     } finally {
@@ -139,12 +140,13 @@ export class AuthStore {
         password: payload.password,
         full_name: payload.fullName,
         role: payload.role ?? 'employee',
+        team_access_code: payload.teamAccessCode?.trim() || undefined,
       });
 
       await this.applyBackendSession(response);
 
-      await this.refreshProfile();
-      await this.router.navigate(['/dashboard']);
+      const profile = await this.refreshProfile();
+      await this.navigateAfterAuth(profile);
     } catch (error) {
       this.setError(error instanceof Error ? error.message : 'No se pudo crear la cuenta.');
     } finally {
@@ -152,7 +154,7 @@ export class AuthStore {
     }
   }
 
-  async refreshProfile(): Promise<void> {
+  async refreshProfile(): Promise<UserProfile | null> {
     try {
       const profile = await this.apiService.getCurrentProfile();
       this.state.update((current) => ({
@@ -160,6 +162,7 @@ export class AuthStore {
         profile,
         loading: false,
       }));
+      return profile;
     } catch (error) {
       this.setError(
         error instanceof Error
@@ -167,6 +170,7 @@ export class AuthStore {
           : 'No se pudo cargar el perfil desde el backend.',
       );
       this.setLoading(false);
+      return null;
     }
   }
 
@@ -205,5 +209,24 @@ export class AuthStore {
     if (error) {
       throw error;
     }
+  }
+
+  private async navigateAfterAuth(profile: UserProfile | null): Promise<void> {
+    if (profile?.role === 'manager' && !profile?.team_id) {
+      await this.router.navigate(['/manager/team']);
+      return;
+    }
+
+    if (profile?.role === 'employee' && !profile?.team_id) {
+      await this.router.navigate(['/team/join']);
+      return;
+    }
+
+    if (!profile?.onboarding_completed_at) {
+      await this.router.navigate(['/onboarding']);
+      return;
+    }
+
+    await this.router.navigate([profile?.role === 'manager' ? '/manager/dashboard' : '/dashboard']);
   }
 }

@@ -17,7 +17,7 @@ from app.models.manager import (
 from app.services._shared import response_data
 from app.services.pdf_service import generate_simple_pdf
 from app.services.profile_service import ensure_profile_for_user
-from app.services.team_service import _ensure_manager_access, _get_team_record
+from app.services.team_service import _ensure_manager_access, _get_org_name, _get_team_record
 
 
 def _member_progress(member_id: str) -> tuple[int, list[str], str | None]:
@@ -145,6 +145,10 @@ def get_team_dashboard(auth_user: object, team_id: str) -> ManagerDashboardRespo
     return ManagerDashboardResponse(
         team_id=team_id,
         team_name=team["name"],
+        organization_name=_get_org_name(team["org_id"]),
+        sector=team.get("sector"),
+        member_capacity=team.get("member_capacity"),
+        work_style=team.get("work_style"),
         team_progress_percent=average,
         members=summaries,
         top_gaps=_compute_top_gaps(member_ids),
@@ -168,12 +172,40 @@ def get_member_detail(auth_user: object, team_id: str, member_id: str) -> Manage
         raise HTTPException(status_code=404, detail="Miembro no encontrado.")
     progress, pending_sections, deadline = _member_progress(member_id)
     risk, days = _risk_status(progress, deadline)
+    sessions_response = (
+        get_supabase_service_client()
+        .table(settings.supabase_learning_sessions_table)
+        .select("id")
+        .eq("user_id", member_id)
+        .eq("status", "completed")
+        .execute()
+    )
+    certificates_response = (
+        get_supabase_service_client()
+        .table(settings.supabase_certificates_table)
+        .select("id")
+        .eq("user_id", member_id)
+        .execute()
+    )
+    learning_style = member.get("learning_style") or []
+    recommended_pattern = None
+    if learning_style:
+        recommended_pattern = f"Aprende mejor con {', '.join(learning_style)}"
+        if member.get("preferred_time"):
+            recommended_pattern += f" en horario {member['preferred_time']}"
     return ManagerMemberDetailResponse(
         user_id=member["id"],
         full_name=member.get("full_name"),
+        email=member.get("email"),
+        professional_role=member.get("professional_role"),
         certification=member.get("target_certification"),
         detected_level=member.get("detected_level"),
+        preferred_time=member.get("preferred_time"),
+        learning_style=learning_style,
+        recommended_study_pattern=recommended_pattern,
         progress_percent=progress,
+        completed_sessions=len(response_data(sessions_response, []) or []),
+        completed_certifications=len(response_data(certificates_response, []) or []),
         days_to_deadline=days,
         risk_status=risk,
         pending_sections=pending_sections[:6],
@@ -186,8 +218,21 @@ def send_support_message(
     member_id: str,
     payload: SupportMessageRequest,
 ) -> SupportMessageResponse:
+    settings = get_settings()
     profile = ensure_profile_for_user(auth_user)
     _ensure_manager_access(team_id, profile.id)
+    get_supabase_service_client().table(settings.supabase_coach_reminders_table).insert(
+        {
+            "user_id": member_id,
+            "plan_id": None,
+            "kind": "manager_support",
+            "tone": "formal",
+            "delivery_channel": "platform",
+            "message": payload.message,
+            "scheduled_for": datetime.now(timezone.utc).isoformat(),
+            "status": "scheduled",
+        }
+    ).execute()
     return SupportMessageResponse(
         delivered=True,
         channel="platform",

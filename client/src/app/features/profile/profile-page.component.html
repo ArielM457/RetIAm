@@ -1,45 +1,153 @@
-<section class="grid gap-6 xl:grid-cols-[0.9fr_1.1fr]">
-  <article class="glass-card rounded-[2rem] p-6">
-    <p class="eyebrow">Perfil</p>
-    <h1 class="mt-3 text-3xl">Ajustes de aprendizaje</h1>
-    <p class="mt-2 text-[var(--muted)]">Edita tu perfil base para que el sistema adapte mejor tus planes, sesiones y recordatorios.</p>
-  </article>
+<section class="profile-page">
+  <div class="profile-orb profile-orb-one"></div>
+  <div class="profile-orb profile-orb-two"></div>
 
-  <article class="glass-card rounded-[2rem] p-6">
-    <form class="grid gap-4 md:grid-cols-2" [formGroup]="form">
-      <label class="block md:col-span-2">
-        <span class="mb-2 block text-sm font-medium">Nombre completo</span>
-        <input class="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3" formControlName="full_name" type="text" />
-      </label>
-      <label class="block">
-        <span class="mb-2 block text-sm font-medium">Rol profesional</span>
-        <input class="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3" formControlName="professional_role" type="text" />
-      </label>
-      <label class="block">
-        <span class="mb-2 block text-sm font-medium">Certificacion</span>
-        <input class="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3" formControlName="target_certification" type="text" />
-      </label>
-      <label class="block">
-        <span class="mb-2 block text-sm font-medium">Horas por semana</span>
-        <input class="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3" formControlName="weekly_hours_available" type="number" />
-      </label>
-      <label class="block">
-        <span class="mb-2 block text-sm font-medium">Horario preferido</span>
-        <select class="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3" formControlName="preferred_time">
-          <option value="morning">Morning</option>
-          <option value="afternoon">Afternoon</option>
-          <option value="night">Night</option>
-        </select>
-      </label>
-      <label class="block md:col-span-2">
-        <span class="mb-2 block text-sm font-medium">Estilo de aprendizaje</span>
-        <input class="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3" formControlName="learning_style" type="text" />
-      </label>
-      <div class="md:col-span-2">
-        <button class="rounded-2xl bg-[var(--hero-strong)] px-5 py-3 font-semibold text-white" type="button" (click)="save()">
-          Guardar cambios
-        </button>
+  <div class="profile-shell">
+    <article class="profile-hero">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">Perfil</p>
+        <h1>{{ authStore.profile()?.full_name || 'Tu perfil de aprendizaje' }}</h1>
+        <p>
+          Aqui ves el contexto real que RetAIM ya registro sobre ti y puedes afinar los ajustes
+          base para que las recomendaciones, planes y sesiones se adapten mejor.
+        </p>
       </div>
-    </form>
-  </article>
+
+      <div class="hero-chip-grid">
+        @for (fact of profileFacts().slice(0, 4); track fact.label) {
+          <div class="hero-chip">
+            <span>{{ fact.label }}</span>
+            <strong>{{ fact.value }}</strong>
+          </div>
+        }
+      </div>
+    </article>
+
+    <section class="profile-grid">
+      <article class="profile-card">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Resumen actual</p>
+            <h2>Datos guardados</h2>
+          </div>
+          <div class="section-icon">
+            <app-icon name="profile" className="h-5 w-5"></app-icon>
+          </div>
+        </div>
+
+        <div class="facts-grid">
+          @for (fact of profileFacts(); track fact.label) {
+            <div class="fact-row">
+              <span>{{ fact.label }}</span>
+              <strong>{{ fact.value }}</strong>
+            </div>
+          }
+        </div>
+      </article>
+
+      <article class="profile-card">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Memoria del agente</p>
+            <h2>Lo que respondiste</h2>
+          </div>
+          <div class="section-icon">
+            <app-icon name="ai" className="h-5 w-5"></app-icon>
+          </div>
+        </div>
+
+        @if (assessmentSummary()) {
+          <div class="agent-summary">
+            <div class="agent-summary-pill">
+              <span>Ultima captura</span>
+              <strong>{{ assessmentSummary()!.createdAt }}</strong>
+            </div>
+            <div class="agent-summary-pill">
+              <span>Resultado</span>
+              <strong>{{ assessmentSummary()!.scoreLabel }}</strong>
+            </div>
+            <p>{{ assessmentSummary()!.notes }}</p>
+          </div>
+        }
+
+        @if (intakeAnswers().length) {
+          <div class="answer-list">
+            @for (answer of intakeAnswers(); track answer.title) {
+              <div class="answer-row">
+                <span>{{ answer.title }}</span>
+                <strong>{{ answer.value }}</strong>
+              </div>
+            }
+          </div>
+        } @else {
+          <div class="empty-note">
+            Aun no hay respuestas extendidas visibles. Cuando completes o actualices el flujo inicial,
+            aqui apareceran los datos detallados del agente.
+          </div>
+        }
+      </article>
+
+      <article class="profile-card profile-card-wide">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Edicion</p>
+            <h2>Ajustes base del perfil</h2>
+          </div>
+          <div class="section-icon">
+            <app-icon name="spark" className="h-5 w-5"></app-icon>
+          </div>
+        </div>
+
+        <form class="profile-form" [formGroup]="form">
+          <label class="field field-wide">
+            <span>Nombre completo</span>
+            <input formControlName="full_name" type="text" />
+          </label>
+          <label class="field">
+            <span>Rol profesional</span>
+            <select formControlName="professional_role">
+              <option value="">Selecciona un rol</option>
+              @for (role of roleOptionsForSelect(); track role) {
+                <option [value]="role">{{ role }}</option>
+              }
+            </select>
+          </label>
+          <label class="field">
+            <span>Certificacion objetivo</span>
+            <input formControlName="target_certification" type="text" />
+          </label>
+          <label class="field">
+            <span>Horas por semana</span>
+            <input formControlName="weekly_hours_available" type="number" />
+          </label>
+          <label class="field">
+            <span>Horario preferido</span>
+            <select formControlName="preferred_time">
+              <option value="morning">Morning</option>
+              <option value="afternoon">Afternoon</option>
+              <option value="night">Night</option>
+            </select>
+          </label>
+          <label class="field field-wide">
+            <span>Estilo de aprendizaje</span>
+            <input formControlName="learning_style" type="text" />
+          </label>
+        </form>
+
+        <div class="actions-row">
+          <button class="save-button" type="button" (click)="save()" [disabled]="saving()">
+            {{ saving() ? 'Guardando...' : 'Guardar cambios' }}
+          </button>
+
+          @if (saved()) {
+            <span class="saved-state">Cambios guardados correctamente.</span>
+          }
+
+          @if (saveError()) {
+            <span class="error-state">{{ saveError() }}</span>
+          }
+        </div>
+      </article>
+    </section>
+  </div>
 </section>

@@ -15,11 +15,14 @@
       <div class="relative z-10 space-y-6">
         <div>
           <span class="inline-flex rounded-full border border-[#c4b5fd]/25 bg-[#7c3aed]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-[#d2bbff]">
-            En curso
+            {{ dashboardBadge() }}
           </span>
           <h2 class="mt-4 text-4xl font-extrabold text-white md:text-5xl">
-            {{ latestRoute()?.target_certification || profile()?.target_certification || 'Selecciona tu certificacion' }}
+            {{ heroTitle() }}
           </h2>
+          <p class="mt-4 max-w-2xl text-base text-[var(--muted)]">
+            {{ heroDescription() }}
+          </p>
         </div>
 
         <div class="space-y-3">
@@ -35,23 +38,55 @@
           </div>
           <p class="flex items-center gap-2 text-sm text-[var(--muted)]">
             <app-icon name="clock" className="h-4 w-4 text-[#d2bbff]"></app-icon>
-            {{ latestPlan()?.deadline_at ? 'Tu deadline ya esta definido y listo para seguimiento.' : 'Todavia no definiste tu fecha objetivo.' }}
+            {{
+              latestPlan()?.deadline_at
+                ? 'Tu deadline ya esta definido y listo para seguimiento.'
+                : needsOnboarding()
+                  ? 'Primero completa tu perfil para sugerir una certificacion adecuada.'
+                  : 'Todavia no generaste un plan con fecha objetivo.'
+            }}
           </p>
         </div>
 
         <div class="flex flex-wrap gap-4">
-          <a
-            class="inline-flex items-center gap-2 rounded-xl bg-[linear-gradient(135deg,#7c3aed,#2563eb)] px-7 py-4 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(124,58,237,0.28)] transition hover:scale-[1.02]"
-            routerLink="/sessions"
-          >
-            Continuar sesion
-            <app-icon name="arrow-right" className="h-4 w-4"></app-icon>
-          </a>
+          @if (needsOnboarding()) {
+            <a
+              class="inline-flex items-center gap-2 rounded-xl bg-[linear-gradient(135deg,#7c3aed,#2563eb)] px-7 py-4 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(124,58,237,0.28)] transition hover:scale-[1.02]"
+              routerLink="/onboarding"
+            >
+              Completar perfil
+              <app-icon name="arrow-right" className="h-4 w-4"></app-icon>
+            </a>
+          } @else if (!hasRoute()) {
+            <a
+              class="inline-flex items-center gap-2 rounded-xl bg-[linear-gradient(135deg,#7c3aed,#2563eb)] px-7 py-4 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(124,58,237,0.28)] transition hover:scale-[1.02]"
+              routerLink="/plan"
+            >
+              Elegir certificacion
+              <app-icon name="arrow-right" className="h-4 w-4"></app-icon>
+            </a>
+          } @else if (!hasPlan()) {
+            <a
+              class="inline-flex items-center gap-2 rounded-xl bg-[linear-gradient(135deg,#7c3aed,#2563eb)] px-7 py-4 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(124,58,237,0.28)] transition hover:scale-[1.02]"
+              routerLink="/plan"
+            >
+              Generar plan
+              <app-icon name="arrow-right" className="h-4 w-4"></app-icon>
+            </a>
+          } @else {
+            <a
+              class="inline-flex items-center gap-2 rounded-xl bg-[linear-gradient(135deg,#7c3aed,#2563eb)] px-7 py-4 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(124,58,237,0.28)] transition hover:scale-[1.02]"
+              routerLink="/sessions"
+            >
+              Continuar sesion
+              <app-icon name="arrow-right" className="h-4 w-4"></app-icon>
+            </a>
+          }
           <a
             class="inline-flex items-center rounded-xl border border-white/10 bg-white/5 px-7 py-4 text-sm font-semibold text-white transition hover:bg-white/10"
-            routerLink="/plan"
+            [routerLink]="needsOnboarding() ? '/profile' : '/plan'"
           >
-            Ver detalles
+            {{ needsOnboarding() ? 'Ver perfil' : 'Ver detalles' }}
           </a>
         </div>
       </div>
@@ -87,7 +122,9 @@
         </p>
       } @else {
         <h3 class="text-2xl font-bold text-white">Aun no tienes un hito activo</h3>
-        <p class="mt-4 text-sm text-[var(--muted)]">Completa onboarding y genera tu plan para ver hitos semanales.</p>
+        <p class="mt-4 text-sm text-[var(--muted)]">
+          {{ needsOnboarding() ? 'Completa tu perfil primero para que podamos recomendarte una certificacion.' : 'Genera tu ruta y tu plan para ver hitos semanales reales.' }}
+        </p>
       }
     </article>
 
@@ -108,7 +145,11 @@
           "{{ pendingReminderMessage() }}"
         </h3>
         <p class="mt-5 text-sm text-[var(--muted)]">
-          Basado en tu ruta actual, el ritmo de estudio y las alertas activas del sistema.
+          {{
+            hasPlan()
+              ? 'Basado en tu ruta actual, el ritmo de estudio y las alertas activas del sistema.'
+              : 'Este espacio mostrara insights reales cuando tengas ruta, plan y recordatorios generados.'
+          }}
         </p>
       </div>
     </article>
@@ -146,6 +187,50 @@
     </div>
   </section>
 
+  <section class="space-y-5">
+    <div class="flex items-center gap-6">
+      <h2 class="text-2xl font-semibold text-white">Certificaciones disponibles</h2>
+      <div class="h-px flex-1 bg-white/5"></div>
+    </div>
+
+    <div class="grid gap-5 lg:grid-cols-2">
+      @for (certification of recommendedCertifications(); track certification.code) {
+        <article class="dashboard-cert-card glass-card rounded-[1.5rem] p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-xs uppercase tracking-[0.22em] text-[#d2bbff]">{{ certification.provider }}</p>
+              <h3 class="mt-2 text-2xl font-semibold text-white">{{ certification.code }}</h3>
+              <p class="mt-2 text-sm text-white/90">{{ certification.title }}</p>
+            </div>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.14em] text-[var(--muted)]">
+              {{ certification.level }}
+            </span>
+          </div>
+          <p class="mt-4 text-sm text-[var(--muted)]">{{ certification.description }}</p>
+          <p class="mt-4 text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
+            Recomendado para {{ certification.recommended_for.join(', ') }}
+          </p>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a
+              class="inline-flex items-center gap-2 rounded-xl bg-[linear-gradient(135deg,#0f766e,#2563eb)] px-5 py-3 text-sm font-semibold text-white transition hover:scale-[1.02]"
+              routerLink="/course-onboarding"
+              [queryParams]="{ cert: certification.code }"
+            >
+              Iniciar curso
+              <app-icon name="arrow-right" className="h-4 w-4"></app-icon>
+            </a>
+            <a
+              class="inline-flex items-center rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              routerLink="/plan"
+            >
+              Ver ruta
+            </a>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+
   <section>
     <div class="mb-8 flex items-center gap-6">
       <h2 class="text-2xl font-semibold text-white">Acciones rapidas</h2>
@@ -153,33 +238,51 @@
     </div>
 
     <div class="grid gap-5 lg:grid-cols-3">
-      <a class="glass-card flex items-center gap-5 rounded-[1.5rem] p-6 transition hover:bg-white/[0.06]" routerLink="/reminders">
+      <button
+        class="glass-card flex items-center gap-5 rounded-[1.5rem] p-6 text-left transition hover:bg-white/[0.06]"
+        type="button"
+        (click)="generateReminders()"
+        [disabled]="creatingReminders() || !hasPlan()"
+      >
         <div class="flex h-14 w-14 items-center justify-center rounded-xl border border-white/5 bg-white/[0.04] text-[#d2bbff]">
           <app-icon name="notification" className="h-6 w-6"></app-icon>
         </div>
         <div>
-          <p class="text-sm font-semibold text-white">Generar recordatorios</p>
-          <p class="mt-1 text-sm text-[var(--muted)]">Configura alertas de estudio</p>
+          <p class="text-sm font-semibold text-white">
+            {{ creatingReminders() ? 'Generando recordatorios...' : 'Generar recordatorios' }}
+          </p>
+          <p class="mt-1 text-sm text-[var(--muted)]">
+            {{ hasPlan() ? 'Crea alertas de estudio desde el inicio' : 'Disponible cuando tengas un plan activo' }}
+          </p>
         </div>
-      </a>
+      </button>
 
       <a class="glass-card flex items-center gap-5 rounded-[1.5rem] p-6 transition hover:bg-white/[0.06]" routerLink="/plan">
         <div class="flex h-14 w-14 items-center justify-center rounded-xl border border-white/5 bg-white/[0.04] text-[#d2bbff]">
           <app-icon name="plan" className="h-6 w-6"></app-icon>
         </div>
         <div>
-          <p class="text-sm font-semibold text-white">Ver plan</p>
-          <p class="mt-1 text-sm text-[var(--muted)]">Hoja de ruta detallada</p>
+          <p class="text-sm font-semibold text-white">{{ hasRoute() ? 'Ver ruta y plan' : 'Explorar certificaciones' }}</p>
+          <p class="mt-1 text-sm text-[var(--muted)]">
+            {{ hasRoute() ? 'Hoja de ruta detallada y hitos' : 'Elige una certificacion y crea tu ruta' }}
+          </p>
         </div>
       </a>
 
-      <a class="glass-card flex items-center gap-5 rounded-[1.5rem] p-6 transition hover:bg-white/[0.06]" routerLink="/certificates">
+      <a
+        class="glass-card flex items-center gap-5 rounded-[1.5rem] p-6 transition hover:bg-white/[0.06]"
+        [routerLink]="needsOnboarding() ? '/onboarding' : '/certificates'"
+      >
         <div class="flex h-14 w-14 items-center justify-center rounded-xl border border-white/5 bg-white/[0.04] text-[#d2bbff]">
-          <app-icon name="award" className="h-6 w-6"></app-icon>
+          <app-icon [name]="needsOnboarding() ? 'profile' : 'award'" className="h-6 w-6"></app-icon>
         </div>
         <div>
-          <p class="text-sm font-semibold text-white">Ver certificados</p>
-          <p class="mt-1 text-sm text-[var(--muted)]">Logros y badges disponibles</p>
+          <p class="text-sm font-semibold text-white">
+            {{ needsOnboarding() ? 'Completar onboarding' : 'Ver certificados' }}
+          </p>
+          <p class="mt-1 text-sm text-[var(--muted)]">
+            {{ needsOnboarding() ? 'Activa recomendaciones y nivel detectado' : 'Logros y badges disponibles' }}
+          </p>
         </div>
       </a>
     </div>

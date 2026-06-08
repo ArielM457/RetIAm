@@ -24,11 +24,16 @@ export class LoginPageComponent {
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(8)]],
     role: ['employee' as 'manager' | 'employee'],
+    teamAccessCode: [''],
   });
 
   protected setMode(mode: 'signin' | 'signup'): void {
     this.authStore.setMode(mode);
     this.submitted.set(false);
+  }
+
+  protected isEmployeeSignup(): boolean {
+    return this.mode() === 'signup' && this.form.controls.role.value === 'employee';
   }
 
   protected togglePasswordVisibility(): void {
@@ -37,6 +42,12 @@ export class LoginPageComponent {
 
   protected async submit(): Promise<void> {
     this.submitted.set(true);
+    if (this.isEmployeeSignup()) {
+      this.form.controls.teamAccessCode.addValidators(Validators.required);
+    } else {
+      this.form.controls.teamAccessCode.clearValidators();
+    }
+    this.form.controls.teamAccessCode.updateValueAndValidity({ emitEvent: false });
     if (this.form.invalid) {
       this.form.markAllAsTouched();
       return;

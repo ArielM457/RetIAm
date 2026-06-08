@@ -25,3 +25,5 @@ class UpdateMyProfileRequest(BaseModel):
     weekly_hours_available: int | None = None
     preferred_time: str | None = None
     learning_style: list[str] | None = None
+    profile_version: int | None = None
+    onboarding_completed_at: str | None = None

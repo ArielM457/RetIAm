@@ -82,4 +82,42 @@ class SavedAssessmentResponse(BaseModel):
     score: int
     max_score: int
     notes: str | None = None
+    questions: list[dict] = Field(default_factory=list)
+    answers: list[dict] = Field(default_factory=list)
     created_at: str
+
+
+class AgentIntakeAnswer(BaseModel):
+    key: str
+    title: str
+    answer: str
+
+
+class AgentIntakeRequest(BaseModel):
+    professional_role: str
+    weekly_hours_available: int = Field(ge=1, le=60)
+    preferred_time: PreferredTime
+    learning_style: list[str] = Field(min_length=1, max_length=12)
+    target_certification: str | None = None
+    answers: list[AgentIntakeAnswer] = Field(min_length=6, max_length=20)
+
+
+class AgentIntakeResponse(BaseModel):
+    summary: str
+    saved_answers: int
+    onboarding_completed_at: str
+
+
+class AgentIntakeAssistRequest(BaseModel):
+    question_key: str
+    question_title: str
+    question_prompt: str
+    user_message: str
+    collected_answers: dict[str, str] = Field(default_factory=dict)
+
+
+class AgentIntakeAssistResponse(BaseModel):
+    message: str
+    should_advance: bool = False
+    normalized_answer: str | None = None
+    extracted_answers: dict[str, str] = Field(default_factory=dict)

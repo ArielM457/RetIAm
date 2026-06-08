@@ -1,4 +1,5 @@
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
+import secrets
 
 from fastapi import HTTPException, status
 
@@ -7,7 +8,12 @@ from app.db.supabase import get_supabase_service_client
 from app.models.team import (
     AcceptInvitationResponse,
     CreateTeamRequest,
+    CreateTeamAccessCodeRequest,
+    JoinTeamWithCodeRequest,
     InviteTeamMembersRequest,
+    ManagerSetupAgentAssistRequest,
+    ManagerSetupAgentAssistResponse,
+    TeamAccessCodeSummary,
     TeamInvitationSummary,
     TeamMemberSummary,
     TeamSummary,
@@ -89,6 +95,10 @@ def _build_team_summary(team: dict) -> TeamSummary:
         org_id=team["org_id"],
         manager_id=team["manager_id"],
         organization_name=_get_org_name(team["org_id"]),
+        sector=team.get("sector"),
+        member_capacity=team.get("member_capacity"),
+        work_style=team.get("work_style"),
+        notes=team.get("notes"),
         member_count=member_count,
         pending_invites=pending_invites,
     )
@@ -140,6 +150,10 @@ def create_team(auth_user: object, payload: CreateTeamRequest) -> TeamSummary:
                 "name": payload.team_name,
                 "org_id": org_id,
                 "manager_id": profile.id,
+                "sector": payload.sector,
+                "member_capacity": payload.member_capacity,
+                "work_style": payload.work_style,
+                "notes": payload.notes,
             }
         )
         .execute()
@@ -150,6 +164,7 @@ def create_team(auth_user: object, payload: CreateTeamRequest) -> TeamSummary:
         {
             "role": "manager",
             "org_id": org_id,
+            "team_id": team_data["id"],
         }
     ).eq("id", profile.id).execute()
 
@@ -300,6 +315,114 @@ def invite_team_members(
     return invitations
 
 
+def _expire_stale_access_codes(team_id: str | None = None) -> None:
+    settings = get_settings()
+    query = (
+        get_supabase_service_client()
+        .table(settings.supabase_team_access_codes_table)
+        .update({"status": "expired"})
+        .eq("status", "active")
+        .lt("expires_at", datetime.now(timezone.utc).isoformat())
+    )
+    if team_id:
+        query = query.eq("team_id", team_id)
+    query.execute()
+
+
+def create_team_access_code(
+    auth_user: object,
+    team_id: str,
+    payload: CreateTeamAccessCodeRequest,
+) -> TeamAccessCodeSummary:
+    settings = get_settings()
+    profile = ensure_profile_for_user(auth_user)
+    team = _ensure_manager_access(team_id, profile.id)
+    _expire_stale_access_codes(team_id)
+    get_supabase_service_client().table(settings.supabase_team_access_codes_table).update(
+        {"status": "cancelled"}
+    ).eq("team_id", team_id).eq("status", "active").execute()
+
+    code = secrets.token_hex(3).upper()
+    expires_at = datetime.now(timezone.utc).replace(microsecond=0) + timedelta(hours=24)
+    response = (
+        get_supabase_service_client()
+        .table(settings.supabase_team_access_codes_table)
+        .insert(
+            {
+                "team_id": team_id,
+                "org_id": team["org_id"],
+                "code": code,
+                "role": payload.role,
+                "status": "active",
+                "created_by": profile.id,
+                "expires_at": expires_at.isoformat(),
+            }
+        )
+        .execute()
+    )
+    data = response_data(response, [])[0]
+    return TeamAccessCodeSummary.model_validate(data)
+
+
+def join_team_with_code(auth_user: object, payload: JoinTeamWithCodeRequest) -> TeamSummary:
+    settings = get_settings()
+    profile = ensure_profile_for_user(auth_user)
+    current_profile = _get_profile_record(profile.id)
+    if current_profile.get("team_id"):
+        return _build_team_summary(_get_team_record(current_profile["team_id"]))
+
+    _expire_stale_access_codes()
+    response = (
+        get_supabase_service_client()
+        .table(settings.supabase_team_access_codes_table)
+        .select("*")
+        .eq("code", payload.code.strip().upper())
+        .eq("status", "active")
+        .limit(1)
+        .execute()
+    )
+    code_data = (response_data(response, []) or [None])[0]
+    if not code_data:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="No encontramos un codigo activo con ese valor.",
+        )
+
+    if datetime.fromisoformat(code_data["expires_at"].replace("Z", "+00:00")) < datetime.now(timezone.utc):
+        get_supabase_service_client().table(settings.supabase_team_access_codes_table).update(
+            {"status": "expired"}
+        ).eq("id", code_data["id"]).execute()
+        raise HTTPException(
+            status_code=status.HTTP_410_GONE,
+            detail="Ese codigo ya vencio. Pide uno nuevo al manager.",
+        )
+
+    get_supabase_service_client().table(settings.supabase_profiles_table).update(
+        {
+            "org_id": code_data["org_id"],
+            "team_id": code_data["team_id"],
+            "role": code_data["role"],
+        }
+    ).eq("id", profile.id).execute()
+
+    get_supabase_service_client().table(settings.supabase_team_members_table).upsert(
+        {
+            "team_id": code_data["team_id"],
+            "user_id": profile.id,
+        }
+    ).execute()
+
+    get_supabase_service_client().table(settings.supabase_team_access_codes_table).update(
+        {
+            "status": "used",
+            "used_by": profile.id,
+            "used_at": datetime.now(timezone.utc).isoformat(),
+        }
+    ).eq("id", code_data["id"]).execute()
+
+    return _build_team_summary(_get_team_record(code_data["team_id"]))
+
+
 def list_my_invitations(auth_user: object) -> list[TeamInvitationSummary]:
     settings = get_settings()
     profile = ensure_profile_for_user(auth_user)
@@ -419,4 +542,89 @@ def update_member_role(
         role=updated["role"],
         certification=updated.get("target_certification"),
         team_id=updated.get("team_id"),
+    )
+
+
+def assist_manager_setup(
+    auth_user: object,
+    payload: ManagerSetupAgentAssistRequest,
+) -> ManagerSetupAgentAssistResponse:
+    ensure_profile_for_user(auth_user)
+    user_message = payload.user_message.strip()
+    lowered = user_message.lower()
+    question_key = payload.question_key.strip().lower()
+
+    if not user_message:
+        return ManagerSetupAgentAssistResponse(
+            message="Necesito una respuesta corta para continuar con este paso.",
+        )
+
+    if question_key == "member_capacity":
+        digits = "".join(char for char in user_message if char.isdigit())
+        if digits:
+            normalized = str(max(1, int(digits)))
+            return ManagerSetupAgentAssistResponse(
+                message=(
+                    f"Entiendo. Tomare {normalized} como la cantidad aproximada de personas del equipo."
+                ),
+                should_advance=True,
+                normalized_answer=normalized,
+            )
+        return ManagerSetupAgentAssistResponse(
+            message=(
+                "Para este paso necesito un numero aproximado de personas. "
+                "Puedes responder algo como 5, 8 o 12."
+            ),
+        )
+
+    if "?" in user_message or lowered.startswith(
+        (
+            "que ",
+            "qué ",
+            "como ",
+            "cómo ",
+            "cual ",
+            "cuál ",
+            "puedo ",
+            "debo ",
+            "me recomiendas",
+        )
+    ):
+        help_map = {
+            "professional_role": "Puedes responder con tu rol real, por ejemplo Team Lead, Engineering Manager o Project Manager.",
+            "organization_name": "Aqui necesito el nombre de la empresa, startup o unidad con la que trabajara el equipo.",
+            "team_name": "Aqui necesito el nombre del equipo, por ejemplo Plataforma Cloud o Delivery LATAM.",
+            "sector": "Aqui sirve el rubro principal, por ejemplo tecnologia, producto, ventas, soporte o educacion.",
+            "work_style": "Aqui basta una modalidad corta como remoto, hibrido o presencial.",
+            "notes": "Aqui puedes escribir metas, retos o contexto. Si no quieres agregar nada responde sin notas.",
+        }
+        return ManagerSetupAgentAssistResponse(
+            message=(
+                f"{help_map.get(question_key, 'Voy a ayudarte solo con esta recopilacion inicial.')} "
+                f"Cuando quieras, responde este paso: {payload.question_title}."
+            ),
+        )
+
+    if lowered in {"no se", "nose", "no estoy seguro", "no estoy segura", "depende", "cualquiera"}:
+        clarify_map = {
+            "professional_role": "Si todavia no lo tienes formalizado, usa el rol que mejor te describa hoy dentro del equipo.",
+            "organization_name": "Si el equipo pertenece a una empresa, usa ese nombre. Si es una iniciativa interna, usa el area principal.",
+            "team_name": "Usa el nombre con el que normalmente identifican al equipo o un nombre corto que lo represente.",
+            "sector": "Elige el rubro que mejor describa lo que hacen la mayor parte del tiempo.",
+            "work_style": "Responde con la modalidad que mas usan en la semana.",
+            "notes": "Si no hay contexto adicional, puedes responder sin notas.",
+        }
+        return ManagerSetupAgentAssistResponse(
+            message=(
+                f"{clarify_map.get(question_key, 'Necesito una respuesta concreta para este paso.')} "
+                "Responde en una sola frase corta y seguimos."
+            ),
+        )
+
+    return ManagerSetupAgentAssistResponse(
+        message=(
+            f"Entiendo. Para este paso voy a tomar tu respuesta como {user_message}."
+        ),
+        should_advance=True,
+        normalized_answer=user_message,
     )
