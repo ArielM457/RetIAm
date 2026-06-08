@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-secure-application-platform-services",
+  "track": "azure",
+  "title": "Secure Azure application platform services for the cloud and AI security engineer",
+  "summary": "Implement security controls across Azure application platform services—from container workloads to the API layer. Configure Microsoft Defender for Containers, secure Azure Kubernetes Service (AKS), Azure Container Registry (ACR), Container Instances, and Container Apps. Then apply authentication, network access, and policy controls across Azure Function apps, Logic apps, App Services, Web Application Firewall, and Azure API Management.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 189,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/secure-application-platform-services/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-secure-application-platform-services",
+      "title": "Secure Azure application platform services for the cloud and AI security engineer",
+      "summary": "Implement security controls across Azure application platform services—from container workloads to the API layer. Configure Microsoft Defender for Containers, secure Azure Kubernetes Service (AKS), Azure Container Registry (ACR), Container Instances, and Container Apps. Then apply authentication, network access, and policy controls across Azure Function apps, Logic apps, App Services, Web Application Firewall, and Azure API Management.",
+      "order": 1,
+      "duration_minutes": 189,
+      "lessons": [
+        {
+          "lesson_key": "wwl-detect-container-risks-defender-containers",
+          "title": "Detect container risks using Microsoft Defender for Containers",
+          "order": 1,
+          "duration_minutes": 36,
+          "content_md": "Detect misconfigurations and runtime risks across container workloads using Microsoft Defender for Containers. Enable and configure the Defender for Containers plan, and assess container image vulnerabilities in Azure Container Registry. Then respond to runtime threat alerts and security posture recommendations for Azure Kubernetes Service (AKS) clusters.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/detect-container-risks-defender-containers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Detect container risks using Microsoft Defender for Containers",
+              "url": "https://learn.microsoft.com/en-us/training/modules/detect-container-risks-defender-containers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-security-controls-aks",
+          "title": "Implement security controls for Azure Kubernetes Service",
+          "order": 2,
+          "duration_minutes": 31,
+          "content_md": "Implement security controls for Azure Kubernetes Service. Configure Microsoft Entra integration and Kubernetes RBAC for API server authentication and authorization, enforce network policies and private cluster access. Then apply workload identity and pod security standards to harden containerized workloads in Azure Kubernetes Service (AKS).\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-security-controls-kubernetes/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement security controls for Azure Kubernetes Service",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-security-controls-kubernetes/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-security-controls-containers",
+          "title": "Implement security controls for Azure Container Registry, Container Instances, and Container Apps",
+          "order": 3,
+          "duration_minutes": 28,
+          "content_md": "Implement security controls across Azure Container Registry, Azure Container Instances, and Azure Container Apps. Configure RBAC, private endpoints, and content trust for ACR; apply managed identities and virtual network integration for Container Instances; and enforce ingress controls, managed identities, and secrets management for Container Apps environments.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-security-controls-containers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement security controls for Azure Container Registry, Container Instances, and Container Apps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-security-controls-containers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-security-controls-function-logic-apps",
+          "title": "Implement security controls for Azure Function apps and Logic apps",
+          "order": 4,
+          "duration_minutes": 28,
+          "content_md": "Implement security controls for Azure Function apps and Logic apps. Configure authentication and authorization, managed identities, virtual network integration, and private endpoints for Function apps, and apply managed identity, connector security, and network isolation for Logic apps.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-security-controls-function-logic-apps/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement security controls for Azure Function apps and Logic apps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-security-controls-function-logic-apps/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-security-web-application-firewall",
+          "title": "Implement security controls for Azure App Services and Web Application Firewall",
+          "order": 5,
+          "duration_minutes": 30,
+          "content_md": "Implement security controls for Azure App Services and Web Application Firewall. Configure authentication, managed identities, VNet integration, and private endpoints for App Service, and deploy WAF policies on Azure Application Gateway to protect web workloads at the network edge.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-security-web-application-firewall/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement security controls for Azure App Services and Web Application Firewall",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-security-web-application-firewall/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-api-security-api-management",
+          "title": "Implement API backend security using Azure API Management",
+          "order": 6,
+          "duration_minutes": 36,
+          "content_md": "Implement security policies for backend API protection using Azure API Management. Configure subscription key management, JSON Web Token (JWT) validation, and OAuth 2.0 policies, and apply IP filtering and rate limiting. Then enforce mutual Transport Layer Security (mTLS) for secure backend API connections, and configure AI Gateway to secure and govern AI model endpoints.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-application-interface-security-management/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement API backend security using Azure API Management",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-application-interface-security-management/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-secure-application-platform-services",
+          "title": "Laboratorio opcional: aplica Secure Azure application platform services for the cloud and AI security engineer",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Secure Azure application platform services for the cloud and AI security engineer**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

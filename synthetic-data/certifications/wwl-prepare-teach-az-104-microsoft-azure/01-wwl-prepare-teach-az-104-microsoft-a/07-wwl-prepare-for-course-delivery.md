@@ -1,0 +1,132 @@
+# Microsoft Learn for Educators preparing for course delivery
+
+> Curso: Prepare to teach AZ-104 Microsoft Azure Administrator in the classroom (wwl-prepare-teach-az-104-microsoft-azure-administr) · Seccion: Prepare to teach AZ-104 Microsoft Azure Administrator in the classroom
+> Duracion estimada: 18 min
+
+## Objetivos
+- (pendiente de expansion por agente)
+
+## Contenido
+## Introduction
+
+The few weeks leading up to the start of the term are filled with many activities to ensure you're prepared for class: You're finalizing your syllabus, ensuring that all of your course materials and assignments are posted to your class page, and figuring out first day activities to engage your students.
+
+#### Learning objectives
+
+After completing this module, you'll be able to:
+
+* Understand the recommended steps to help you prepare to teach Microsoft Fundamentals or Advanced Role\-Based curriculum in your classes
+* Understand the recommended steps to help you wrap up the term and support your students so that they can be successful on their certification exams
+
+---
+
+## Prepare for course delivery
+
+As you're now a part of the Microsoft Learn for Educators (MSLE) program, preparing to deliver a class is the most exciting, crucial, and possibly overwhelming part of this journey. You're empowering your students with the technical skills and industry\-recognized certifications needed to prepare them for their future careers. In order to ensure the success of your class and your students, we have some tips and a checklist to help you in preparing for your upcoming class.
+
+Getting ready to teach checklist:
+
+1. Draft my syllabus
+2. Record my class in the [MSLE portal](https://aka.ms/MSLEPort)
+3. Set up my lab seats
+4. Review [MOC Virtual Educator Prep Sessions (VEPS)](https://aka.ms/msletrainingtools)
+5. Engage with other educators in the [MSLE Teams community](https://aka.ms/JoinEdTeams)
+6. Finalize my student certification plan
+7. Finalize syllabus, set expectations, and set\-up Learning Management System (LMS)
+
+---
+
+## Get ready teach checklist
+
+The new term is going to start in a few weeks, and you're incorporating Microsoft Official Curriculum (MOC) into your class for the first time. Maybe you've taught this subject before and want a refresher, or maybe you've been teaching Microsoft Fundamentals and you're going to teach Advanced Role\-Based content for the first time. Regardless, this module and checklist are for you.
+
+Getting ready to teach checklist:
+
+1. Draft my syllabus
+
+	* Download the most up\-to\-date version of the Microsoft Official Curriculum from the [Microsoft Learning Download Center](https://techcommunity.microsoft.com/blog/mctnews/current-courseware-downloading-process/4196123)
+	* Check out the Course Data sheet. This resource contains an outline that provides detailed information about the content included in the instructor\-led course modules, including topic areas, interactive guides and videos
+2. Record my class in the [MSLE portal](https://aka.ms/MSLEPort)
+
+	* Go into the MSLE Portal to record your class information using the Course Intake Form or update your class details on the Courses tab in the left navigation
+3. Set up my lab seats:
+
+	* Connect with the Authorized Lab Hosting provider to request the lab seats for your class
+	* Ensure that you have set up the labs
+	* Work through the labs yourself before you assign them or demo them in class
+4. Review [MOC Virtual Educator Prep Sessions (VEPS)](https://aka.ms/msletrainingtools)
+
+	* MOC VEPS provides tips and tricks from Microsoft technical trainers on how to prepare your classes. You'll learn which labs to use and when, how to introduce topics, and other resources and materials that might help your students to be more successful on their exams.
+	* Review the updated list of [Training and Tools](https://aka.ms/MSLETrainingTools) or through the training events tab on the [MSLE portal](https://aka.ms/MSLEPort).
+5. Engage with other educators in the [MSLE Teams community](https://aka.ms/JoinEdTeams)
+
+	* Find who else might be teaching the same content that you're teaching this term and talk about what you're doing in class. You can learn from what they might be doing or from the questions that their students are asking.
+	* This community is important network and can help you feel supported and connected even beyond the term.
+6. Finalize my student certification plan
+
+	* To take an exam, students will first need exam vouchers, or access to an institution’s certification license to sit the exams and use practice exams.
+	* Communicate the plan to your students through your syllabus and ensure that everyone is set up for success.
+7. Finalize syllabus, set expectations, and set up Learning Management System (LMS)
+
+	* Make sure your course page is fully set up in your LMS. Revisit the Microsoft Learn for Educators [course planning module](https://aka.ms/MSLEcourseplan) for more information on how to set up your LMS.
+	* Ensure that information is clearly communicated in the syllabus.
+	* Make sure that your course page has the latest resources from [Microsoft Learn](https://aka.ms/learn), GitHub, and others that you want your students to access for the course.
+	* Send students an email that welcomes them to class, let them know about the exam they'll be taking, and that they can create their Azure for Students account to access $100 Azure credits. No payment is necessary. These credits are valid for 12 months of free Azure services.
+	* You'll receive an email about 14 days before your course starts that contains an email template with a link to a pre\-survey that has been created specifically for your students. About 14 days before your class ends, you'll receive another email template to send to your students with a post\-survey link. The survey results will enable you to get insights into your students’ experiences, get feedback, and provide them with the best tools for the course.
+
+---
+
+## Close out the course
+
+Your course has helped to build your students technical skills and knowledge and the materials you have been using from Microsoft are aligned to industry recognized certifications. These certifications can augment your students’ degree path and validate the skills they've gained, skills that are needed to be successful across various in\-demand technical careers.
+
+Demand for technical certifications is growing. For students who are looking to stand out in the job market, and for you their faculty member looking to support them, technical certifications can be a differentiator. For a student, adding a Microsoft Certification to their profile alongside artifacts from class demonstrates not only their learning from coursework, but also a commitment to keeping up with the evolving forefront of technology.
+
+Let’s work on wrapping up the term and supporting your students so that they can be successful on their certification exams.
+
+Checklist for closing out the term:
+
+1. Review the certification plan with your students – ensure expectations are clear
+
+	* If your plan is to have your students apply the free Fundamentals certification exam vouchers from Microsoft, then ensure that they've all visited the [Student Certification page](https://aka.ms/studentcertification) to review the details
+	* Ensure that you're explicit with your students about the date in which they'll take their exam and any expectations around knowing the results of their exam
+2. Help improve MSLE
+
+	* Take a moment to complete a post\-course survey so we can better understand your experience as a faculty member within the Microsoft Learn for Educators program. You can find this survey by navigating the Courses tab on the [MSLE portal](https://aka.ms/MSLEPort)
+3. Determine what you’ll teach next
+
+	* Once you have completed teaching your course, take a quick breather and celebrate this milestone!
+	* We hope your course was a success and that you consider continuing to use Microsoft curriculum and teaching materials in your classes.
+	* Check out [MSLE](https://aka.ms/MSLE) to find new materials we've added to the program. Once you determine what you're going to be teaching next, add those course details to the [MSLE portal](https://aka.ms/MSLEPort) so that we can support you and your students.
+
+---
+
+## Module assessment
+
+Choose the best response for each question.
+
+### Check your knowledge
+
+---
+
+## Summary
+
+Your students want skills that make them employable. Using the resources available from Microsoft to help prepare to teach your course will help you feel confident you're providing your students the skills they need skills to be successful across various in\-demand technical careers.
+
+Supplemental Resources:
+
+* [Microsoft Learn](https://aka.ms/learn)
+* [Microsoft Learn for Educators](https://aka.ms/msle)
+* [Microsoft Learn for Educators Portal](https://aka.ms/MSLEPort)
+* [Microsoft Learn for Educators course planning module](/en-us/training/modules/microsoft-learn-educators-course-plan/)
+* [Microsoft Learn for Educators Training and Tools](/en-us/training/educator-center/programs/msle/training)
+* [MSLE Teams community](https://aka.ms/JoinEdTeams)
+* [MOC Virtual Educator Prep Sessions (VEPS)](https://aka.ms/msletrainingtools)
+* [Student Certification](https://aka.ms/studentcertification)
+
+---
+
+_Fuente oficial: https://learn.microsoft.com/en-us/training/modules/prepare-for-course-delivery/_
+
+## Fuentes
+- [Microsoft Learn for Educators preparing for course delivery](https://learn.microsoft.com/en-us/training/modules/prepare-for-course-delivery/?WT.mc_id=api_CatalogApi)

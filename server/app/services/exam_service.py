@@ -8,54 +8,26 @@ from app.core.config import get_settings
 from app.db.supabase import get_supabase_service_client
 from app.models.exam import (
     CertificateResponse,
+    CertificateVerificationResponse,
     ExamQuestion,
+    ExamQuestionPublic,
     FinalExamAttemptResponse,
     StartFinalExamRequest,
     SubmitFinalExamRequest,
 )
 from app.services._shared import response_data
-from app.services.pdf_service import generate_simple_pdf
+from app.services.assessment_service import generate_exam_questions
+from app.services.pdf_service import generate_certificate_pdf
 from app.services.profile_service import ensure_profile_for_user
 
 
-def _build_exam_questions(route: dict) -> list[ExamQuestion]:
+def _build_exam_questions(route: dict, certification: str) -> list[ExamQuestion]:
     sections = route["sections"]
     target_questions = min(25, max(15, len(sections) * 5))
-    total_hours = sum(section["estimated_hours"] for section in sections) or len(sections)
-    allocations = []
-    assigned = 0
-    for section in sections:
-        proportional = max(1, round((section["estimated_hours"] / total_hours) * target_questions))
-        allocations.append(proportional)
-        assigned += proportional
-
-    while assigned > target_questions:
-        for index, value in enumerate(allocations):
-            if value > 1 and assigned > target_questions:
-                allocations[index] -= 1
-                assigned -= 1
-    while assigned < target_questions:
-        for index in range(len(allocations)):
-            if assigned < target_questions:
-                allocations[index] += 1
-                assigned += 1
-
-    questions: list[ExamQuestion] = []
-    question_number = 1
-    for section, amount in zip(sections, allocations, strict=False):
-        for section_index in range(amount):
-            questions.append(
-                ExamQuestion(
-                    question_id=f"exam-{question_number}",
-                    prompt=f"Pregunta {question_number} sobre {section['title']} enfocada en el criterio {section_index + 1}.",
-                    options=["Opcion A", "Opcion B", "Opcion C", "Opcion D"],
-                    correct_option_index=(section_index % 4),
-                    source=section["resources"][0]["source"],
-                    section_id=section["section_id"],
-                )
-            )
-            question_number += 1
-    return questions
+    raw_questions, _source_mode = generate_exam_questions(
+        certification, sections, target_questions=target_questions
+    )
+    return [ExamQuestion.model_validate(item) for item in raw_questions]
 
 
 def _next_certification(current_certification: str) -> str | None:
@@ -122,7 +94,7 @@ def start_final_exam(auth_user: object, payload: StartFinalExamRequest) -> Final
             detail="Debes completar todas las secciones del plan antes de iniciar el examen final.",
         )
 
-    questions = _build_exam_questions(route)
+    questions = _build_exam_questions(route, plan["target_certification"])
     time_limit_minutes = payload.time_limit_minutes
     response = (
         get_supabase_service_client()
@@ -150,7 +122,7 @@ def start_final_exam(auth_user: object, payload: StartFinalExamRequest) -> Final
         id=data["id"],
         plan_id=data["plan_id"],
         target_certification=data["target_certification"],
-        questions=questions,
+        questions=[ExamQuestionPublic.model_validate(q.model_dump()) for q in questions],
         time_limit_minutes=data.get("time_limit_minutes", time_limit_minutes),
         score=data["score"],
         max_score=data["max_score"],
@@ -216,16 +188,14 @@ def submit_final_exam(auth_user: object, attempt_id: str, payload: SubmitFinalEx
         certificate_id = f"CERT-{attempt['target_certification'].replace(' ', '').upper()}-{profile.id[:8]}-{datetime.now(timezone.utc).strftime('%Y%m%d')}"
         verification_code = str(uuid4())[:8].upper()
         pdf_path = Path(__file__).resolve().parents[2] / "generated" / "certificates" / f"{certificate_id}.pdf"
-        generate_simple_pdf(
+        generate_certificate_pdf(
             pdf_path,
-            "Certificado RetAIM",
-            [
-                f"Participante: {profile.full_name or 'Usuario demo'}",
-                f"Certificacion: {attempt['target_certification']}",
-                f"Puntaje final: {score_percent}",
-                f"Fecha: {submitted_at[:10]}",
-                f"Codigo de verificacion: {verification_code}",
-            ],
+            recipient=profile.full_name or "Usuario demo",
+            certification=attempt["target_certification"],
+            score=score_percent,
+            date_str=submitted_at[:10],
+            verification_code=verification_code,
+            verify_url=f"/api/exams/certificates/verify/{verification_code}",
         )
         get_supabase_service_client().table(settings.supabase_certificates_table).upsert(
             {
@@ -246,7 +216,7 @@ def submit_final_exam(auth_user: object, attempt_id: str, payload: SubmitFinalEx
         id=attempt_id,
         plan_id=attempt["plan_id"],
         target_certification=attempt["target_certification"],
-        questions=questions,
+        questions=[ExamQuestionPublic.model_validate(q.model_dump()) for q in questions],
         time_limit_minutes=time_limit_minutes,
         score=score_percent,
         max_score=100,
@@ -257,6 +227,31 @@ def submit_final_exam(auth_user: object, attempt_id: str, payload: SubmitFinalEx
         certificate_id=certificate_id,
         started_at=attempt["started_at"],
         submitted_at=submitted_at,
+    )
+
+
+def verify_certificate(verification_code: str) -> CertificateVerificationResponse:
+    """Verificacion publica de un certificado por su codigo. No requiere auth."""
+    settings = get_settings()
+    rows = response_data(
+        get_supabase_service_client()
+        .table(settings.supabase_certificates_table)
+        .select("*")
+        .eq("verification_code", verification_code)
+        .limit(1)
+        .execute(),
+        [],
+    ) or []
+    if not rows:
+        return CertificateVerificationResponse(valid=False)
+    cert = rows[0]
+    return CertificateVerificationResponse(
+        valid=True,
+        certificate_id=cert["id"],
+        recipient_name=cert.get("recipient_name"),
+        target_certification=cert.get("target_certification"),
+        score=cert.get("score"),
+        issued_at=cert.get("issued_at"),
     )
 
 

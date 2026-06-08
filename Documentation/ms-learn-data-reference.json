@@ -1,0 +1,154 @@
+{
+  "_README": {
+    "que_es": "Referencia de qué datos obtenemos de Microsoft Learn por cada curso y cómo se transforman en RetAIM. Pásale este archivo a tu amigo: documenta las 3 etapas del pipeline de ingesta (infra/ingest_content.py).",
+    "fuente": "API pública y gratuita de Microsoft Learn Catalog",
+    "endpoint": "https://learn.microsoft.com/api/catalog/?type=learningPaths,modules&locale=en-us",
+    "autenticacion": "Ninguna. Es público, GET simple.",
+    "mapa_de_conceptos": {
+      "learningPath (API)": "= un CURSO en RetAIM",
+      "module (API)": "= una LECCIÓN en RetAIM",
+      "unit (API)": "= una página/paso dentro de un módulo. NO viene en el JSON del catálogo; su texto completo se baja por scraping HTML solo cuando se usa --rag."
+    },
+    "etapas": [
+      "1) raw_api_*  -> lo que devuelve TAL CUAL la API del catálogo (solo los campos que usamos).",
+      "2) curso_transformado_retaim -> el snapshot que generamos en synthetic-data/courses/<cert>.json y subimos a Supabase.",
+      "3) rag_lesson_chunks -> lo que se baja y guarda en pgvector SOLO con la bandera --rag (texto completo troceado + embedding)."
+    ]
+  },
+
+  "1_raw_api_learningPath": {
+    "_descripcion": "Un elemento del array data.learningPaths[] de la API. Mostramos solo los campos que RetAIM consume; la API devuelve más (icon_url, social_image_url, etc.) que ignoramos.",
+    "uid": "learn.aspnet-core-web-app",
+    "title": "Build web apps with ASP.NET Core for beginners",
+    "summary": "Get started with web development using ASP.NET Core. In this beginner-friendly pathway, you'll learn the basics of C#, HTML, Razor Pages, and more!",
+    "url": "https://learn.microsoft.com/en-us/training/paths/aspnet-core-web-app/?WT.mc_id=api_CatalogApi",
+    "levels": ["beginner"],
+    "products": ["aspnet-core", "dotnet"],
+    "modules": [
+      "learn.languages.csharp-write-first",
+      "learn.learn-windows.introduction-to-web-development",
+      "learn.student-evangelism.web-development-101-accessibility",
+      "learn.create-razor-pages-aspnet-core",
+      "learn.build-web-api-net-core"
+    ]
+  },
+
+  "2_raw_api_module": {
+    "_descripcion": "Un elemento del array data.modules[]. Cada uid listado en learningPath.modules se resuelve aquí. De nuevo, solo los campos que usamos.",
+    "uid": "learn.languages.csharp-write-first",
+    "title": "Write your first C# code",
+    "summary": "Get started by writing code examples to learn the basics of the C# syntax.",
+    "duration_in_minutes": 27,
+    "url": "https://learn.microsoft.com/en-us/training/modules/csharp-write-first/?WT.mc_id=api_CatalogApi",
+    "units": [
+      "learn.languages.csharp-write-first.introduction",
+      "learn.languages.csharp-write-first.exercise-hello-world",
+      "learn.languages.csharp-write-first.knowledge-check",
+      "learn.languages.csharp-write-first.summary"
+    ]
+  },
+
+  "3_curso_transformado_retaim": {
+    "_descripcion": "EJEMPLO REAL (synthetic-data/courses/aspnet-core-web-app.json). Así queda el curso tras transformar la API: learningPath -> course, sus modules -> lessons de una sección, + un lab opcional autogenerado. content_md = summary del módulo + link a la fuente oficial. Esto es lo que se sube a Supabase.",
+    "certification_code": "aspnet-core-web-app",
+    "track": "azure",
+    "title": "Build web apps with ASP.NET Core for beginners",
+    "summary": "Get started with web development using ASP.NET Core. In this beginner-friendly pathway, you'll learn the basics of C#, HTML, Razor Pages, and more!",
+    "provider": "Microsoft",
+    "level": "basic",
+    "total_duration_minutes": 172,
+    "source": "ms_learn",
+    "source_url": "https://learn.microsoft.com/en-us/training/paths/aspnet-core-web-app/?WT.mc_id=api_CatalogApi",
+    "sections": [
+      {
+        "section_key": "aspnet-core-web-app",
+        "title": "Build web apps with ASP.NET Core for beginners",
+        "summary": "Get started with web development using ASP.NET Core. In this beginner-friendly pathway, you'll learn the basics of C#, HTML, Razor Pages, and more!",
+        "order": 1,
+        "duration_minutes": 172,
+        "lessons": [
+          {
+            "lesson_key": "languages-csharp-write-first",
+            "title": "Write your first C# code",
+            "order": 1,
+            "duration_minutes": 27,
+            "content_md": "Get started by writing code examples to learn the basics of the C# syntax.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/csharp-write-first/?WT.mc_id=api_CatalogApi",
+            "learning_objectives": [],
+            "sources": [
+              {
+                "title": "Write your first C# code",
+                "url": "https://learn.microsoft.com/en-us/training/modules/csharp-write-first/?WT.mc_id=api_CatalogApi",
+                "source": "ms_learn"
+              }
+            ]
+          },
+          {
+            "lesson_key": "create-razor-pages-aspnet-core",
+            "title": "Create a web UI with ASP.NET Core",
+            "order": 4,
+            "duration_minutes": 45,
+            "content_md": "Learn how to create web pages using Razor with ASP.NET Core.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-razor-pages-aspnet-core/?WT.mc_id=api_CatalogApi",
+            "learning_objectives": [],
+            "sources": [
+              {
+                "title": "Create a web UI with ASP.NET Core",
+                "url": "https://learn.microsoft.com/en-us/training/modules/create-razor-pages-aspnet-core/?WT.mc_id=api_CatalogApi",
+                "source": "ms_learn"
+              }
+            ]
+          }
+        ],
+        "labs": [
+          {
+            "lab_key": "lab-aspnet-core-web-app",
+            "title": "Laboratorio opcional: aplica Build web apps with ASP.NET Core for beginners",
+            "is_optional": true,
+            "estimated_minutes": 30,
+            "instructions_md": "Lleva a la practica lo aprendido en **Build web apps with ASP.NET Core for beginners**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+            "rubric": [
+              { "criterion": "Funcionalidad", "weight": 40, "description": "La solucion cumple el objetivo del laboratorio." },
+              { "criterion": "Claridad", "weight": 30, "description": "La explicacion es comprensible y ordenada." },
+              { "criterion": "Buenas practicas", "weight": 30, "description": "Aplica recomendaciones del modulo." }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  "4_rag_lesson_chunks": {
+    "_descripcion": "SOLO con --rag. Por cada módulo (lección) se baja el TEXTO COMPLETO de sus units (scraping de la página HTML de cada unidad en learn.microsoft.com), se limpia, se trocea (~1800 chars, 200 de solape) y cada trozo se embebe con multilingual-e5-large (1024 dims, local). Cada trozo es una fila en la tabla lesson_chunks de Supabase pgvector. content_md (etapa 3) = solo el resumen; estos chunks = el contenido REAL completo para que el tutor no invente.",
+    "_url_de_unidad_construida": "Patrón: <module_url_base>/<n>-<último-segmento-del-uid-de-la-unit>. Ej: .../modules/csharp-write-first/1-introduction",
+    "tabla_supabase": "lesson_chunks",
+    "ejemplo_de_filas": [
+      {
+        "certification_code": "aspnet-core-web-app",
+        "lesson_key": "languages-csharp-write-first",
+        "lesson_title": "Write your first C# code",
+        "chunk_index": 0,
+        "content": "C# is a general-purpose programming language developed by Microsoft. In this module you'll write your first lines of C# code, learn how the Console.WriteLine() method prints text to the output, understand the role of the semicolon as a statement terminator, and see how C# is case-sensitive... (texto real completo de la unidad, truncado aquí solo para el ejemplo)",
+        "source_url": "https://learn.microsoft.com/en-us/training/modules/csharp-write-first/",
+        "embedding": "[0.0123, -0.0345, 0.0987, ... 1024 floats en total ...]"
+      },
+      {
+        "certification_code": "aspnet-core-web-app",
+        "lesson_key": "languages-csharp-write-first",
+        "lesson_title": "Write your first C# code",
+        "chunk_index": 1,
+        "content": "...continúa el contenido del módulo con el solape de 200 caracteres del trozo anterior, cubriendo el ejercicio Hello World y la explicación de literales de cadena...",
+        "source_url": "https://learn.microsoft.com/en-us/training/modules/csharp-write-first/",
+        "embedding": "[-0.0091, 0.0210, 0.0456, ... 1024 floats ...]"
+      }
+    ]
+  },
+
+  "5_parametros_de_ingesta": {
+    "comando_basico": "python infra/ingest_content.py --catalog --push",
+    "comando_con_rag": "python infra/ingest_content.py --catalog --rag --push",
+    "limit_default": 50,
+    "products_default": "azure,github",
+    "levels_default": "beginner,intermediate",
+    "troceo": { "size_chars": 1800, "overlap_chars": 200, "min_chars_para_guardar": 60 },
+    "modelo_embeddings": { "nombre": "intfloat/multilingual-e5-large", "dimensiones": 1024, "donde_corre": "local CPU (fastembed/ONNX)", "costo": 0 }
+  }
+}

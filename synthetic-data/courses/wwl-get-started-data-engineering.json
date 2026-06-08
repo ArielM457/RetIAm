@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-get-started-data-engineering",
+  "track": "azure",
+  "title": "Get started with data engineering on Azure",
+  "summary": "Learn how to perform core data engineering workloads on Microsoft Azure.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 56,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/get-started-data-engineering/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-get-started-data-engineering",
+      "title": "Get started with data engineering on Azure",
+      "summary": "Learn how to perform core data engineering workloads on Microsoft Azure.",
+      "order": 1,
+      "duration_minutes": 56,
+      "lessons": [
+        {
+          "lesson_key": "wwl-introduction-data-engineering-azure",
+          "title": "Introduction to data engineering on Azure",
+          "order": 1,
+          "duration_minutes": 26,
+          "content_md": "This module describes how Microsoft Azure provides a comprehensive platform for data engineering.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-to-data-engineering-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to data engineering on Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-data-engineering-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "data-ai-introduction-to-azure-data-lake-storage",
+          "title": "Introduction to Azure Data Lake Storage Gen2",
+          "order": 2,
+          "duration_minutes": 30,
+          "content_md": "Discover how Data Lake Storage provides a repository where you can upload and store unstructured data bringing new efficiencies to processing big data analytics.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-data-lake-storage/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure Data Lake Storage Gen2",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-data-lake-storage/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-get-started-data-engineering",
+          "title": "Laboratorio opcional: aplica Get started with data engineering on Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Get started with data engineering on Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

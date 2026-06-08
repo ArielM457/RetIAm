@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-work-powershell-providers-powershell-drives-wi",
+  "track": "azure",
+  "title": "Work with PowerShell providers and PowerShell drives in Windows PowerShell",
+  "summary": "This learning path explains two technologies: PowerShell providers and PowerShell drives, which let you work with many forms of storage by using the commands and techniques that you use to manage the file system.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 73,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/work-powershell-providers-powershell-drives-windows-powershell/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-work-powershell-providers-powershell-drives-windows-powe",
+      "title": "Work with PowerShell providers and PowerShell drives in Windows PowerShell",
+      "summary": "This learning path explains two technologies: PowerShell providers and PowerShell drives, which let you work with many forms of storage by using the commands and techniques that you use to manage the file system.",
+      "order": 1,
+      "duration_minutes": 73,
+      "lessons": [
+        {
+          "lesson_key": "wwl-connect-data-stores-use-powershell-providers",
+          "title": "Connect with data stores using PowerShell providers",
+          "order": 1,
+          "duration_minutes": 24,
+          "content_md": "This module covers PowerShell providers that connect Windows PowerShell to data stores. They offer an easier-to-understand and consistent interface for working with data stores.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/connect-data-stores-use-powershell-providers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Connect with data stores using PowerShell providers",
+              "url": "https://learn.microsoft.com/en-us/training/modules/connect-data-stores-use-powershell-providers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-use-powershell-drives-powershell",
+          "title": "Use PowerShell drives in PowerShell",
+          "order": 2,
+          "duration_minutes": 49,
+          "content_md": "This module explains how to work with PowerShell drives.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/use-powershell-drives-powershell/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use PowerShell drives in PowerShell",
+              "url": "https://learn.microsoft.com/en-us/training/modules/use-powershell-drives-powershell/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-work-powershell-providers-powershell-drives-windows-powe",
+          "title": "Laboratorio opcional: aplica Work with PowerShell providers and PowerShell drives in Windows PowerShell",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Work with PowerShell providers and PowerShell drives in Windows PowerShell**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

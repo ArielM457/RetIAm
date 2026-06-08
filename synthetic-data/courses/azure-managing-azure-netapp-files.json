@@ -1,0 +1,108 @@
+{
+  "certification_code": "azure-managing-azure-netapp-files",
+  "track": "azure",
+  "title": "Managing Azure NetApp Files",
+  "summary": "Build your knowledge and skills in managing Azure NetApp Files. Start with fundamental setup tasks and registration steps needed to deploy and manage Azure NetApp Files resources.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 228,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/manage-azure-netapp-files/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "azure-managing-azure-netapp-files",
+      "title": "Managing Azure NetApp Files",
+      "summary": "Build your knowledge and skills in managing Azure NetApp Files. Start with fundamental setup tasks and registration steps needed to deploy and manage Azure NetApp Files resources.",
+      "order": 1,
+      "duration_minutes": 228,
+      "lessons": [
+        {
+          "lesson_key": "azure-register-and-setup",
+          "title": "Register and Set Up Azure NetApp Files",
+          "order": 1,
+          "duration_minutes": 44,
+          "content_md": "Learn to register and set up Azure NetApp Files by registering the NetApp Resource Provider and create a NetApp account. Also learn how to delegate a subnet to Azure NetApp Files and request access to a region\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/managing-azure-netapp-files-register-setup/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Register and Set Up Azure NetApp Files",
+              "url": "https://learn.microsoft.com/en-us/training/modules/managing-azure-netapp-files-register-setup/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-manage-active-directory",
+          "title": "Manage Active Directory for Azure NetApp Files",
+          "order": 2,
+          "duration_minutes": 64,
+          "content_md": "Learn how to create and manage Active Directory connections for Azure NetApp Files. Also, learn how to modify Active Directory connections and configure AD DS LDAP over TLS for Azure NetApp Files. Finally, you learn to join a Linux VM to a Microsoft Entra Domain to enable users to sign into to VMs with one set of credentials.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/managing-azure-netapp-files-manage-active-directory/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage Active Directory for Azure NetApp Files",
+              "url": "https://learn.microsoft.com/en-us/training/modules/managing-azure-netapp-files-manage-active-directory/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-manage-capacity-pool",
+          "title": "Manage capacity pool for Azure NetApp Files",
+          "order": 3,
+          "duration_minutes": 54,
+          "content_md": "Learn to create a capacity pool, which enables you to create volumes. Learn ways to manage a QoS capacity pool by setting it up and monitoring throughput. Use tags to help you manage Azure NetApp Files billing and expenses.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-capacity-pool-azure-netapp-files/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage capacity pool for Azure NetApp Files",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-capacity-pool-azure-netapp-files/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-manage-nfs-volumes",
+          "title": "Manage NFS volumes in Azure NetApp Files",
+          "order": 4,
+          "duration_minutes": 66,
+          "content_md": "Learn how to create and manage NFS volumes. Learn to configure NFSv4.1 ID domain and Kerberos, enable Active Directory Domain Services and LDAP authentication for NFS volumes. Also, understand how to convert NFS volumes between supported versions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-nfs-volumes-azure-netapp-files/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage NFS volumes in Azure NetApp Files",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-nfs-volumes-azure-netapp-files/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-azure-managing-azure-netapp-files",
+          "title": "Laboratorio opcional: aplica Managing Azure NetApp Files",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Managing Azure NetApp Files**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

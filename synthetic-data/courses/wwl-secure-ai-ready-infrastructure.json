@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-secure-ai-ready-infrastructure",
+  "track": "azure",
+  "title": "Secure AI-ready infrastructure",
+  "summary": "This course teaches how to build production‑ready AI infrastructure using Microsoft Foundry Hubs and Projects, applying enterprise security controls, network isolation, managed identities, and container governance to enable compliant, scalable AI development across organizations.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 254,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/secure-ai-ready-infrastructure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-secure-ai-ready-infrastructure",
+      "title": "Secure AI-ready infrastructure",
+      "summary": "This course teaches how to build production‑ready AI infrastructure using Microsoft Foundry Hubs and Projects, applying enterprise security controls, network isolation, managed identities, and container governance to enable compliant, scalable AI development across organizations.",
+      "order": 1,
+      "duration_minutes": 254,
+      "lessons": [
+        {
+          "lesson_key": "wwl-implement-secure-ai-ready-infrastructure-azure-services",
+          "title": "Implement secure AI-ready infrastructure with Azure services",
+          "order": 1,
+          "duration_minutes": 61,
+          "content_md": "This course explains how to design secure AI platforms using Microsoft Foundry, applying centralized governance, managed identities, private networking, Azure OpenAI security controls, and container image protection to ensure compliant, production‑ready AI workloads across enterprise environments.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-secure-ai-ready-infrastructure-azure-services/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement secure AI-ready infrastructure with Azure services",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-secure-ai-ready-infrastructure-azure-services/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-secure-azure-openai-content-safety-controls",
+          "title": "Secure Azure OpenAI with content safety controls",
+          "order": 2,
+          "duration_minutes": 57,
+          "content_md": "This module shows you how to secure Azure OpenAI workloads in Microsoft Foundry by using centralized governance, managed identities, private networking, content safety controls, and container image protection for compliant enterprise deployments.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/secure-azure-openai-content-safety-controls/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure Azure OpenAI with content safety controls",
+              "url": "https://learn.microsoft.com/en-us/training/modules/secure-azure-openai-content-safety-controls/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-identity-based-security-azure-machine-learning",
+          "title": "Implement identity-based security for Azure Machine Learning workspaces",
+          "order": 3,
+          "duration_minutes": 73,
+          "content_md": "This course teaches how to govern AI platforms using Microsoft Entra and Azure Machine Learning, covering security groups, Conditional Access, managed identities, enterprise application integration, and audit logging to continuously monitor, enforce, and improve identity‑centric security for AI workloads.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-identity-based-security-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement identity-based security for Azure Machine Learning workspaces",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-identity-based-security-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-security-controls-azure-ai-ready-infrastructur",
+          "title": "Implement security controls for Azure AI-ready infrastructure",
+          "order": 4,
+          "duration_minutes": 63,
+          "content_md": "This module equips you to configure Azure's foundational security controls for AI workloads. You'll start by configuring Microsoft Entra ID security principals that define *who* and *what* can access your AI resources—from data scientists needing interactive workspace access to managed identities enabling secure service-to-service communication.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-security-controls-azure-ai-ready-infrastructure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement security controls for Azure AI-ready infrastructure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-security-controls-azure-ai-ready-infrastructure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-secure-ai-ready-infrastructure",
+          "title": "Laboratorio opcional: aplica Secure AI-ready infrastructure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Secure AI-ready infrastructure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

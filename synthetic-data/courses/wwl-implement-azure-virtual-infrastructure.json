@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-implement-azure-virtual-infrastructure",
+  "track": "azure",
+  "title": "Implement an Azure Virtual Desktop infrastructure",
+  "summary": "Implement an Azure Virtual Desktop infrastructure",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 223,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-azure-virtual-infrastructure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-azure-virtual-infrastructure",
+      "title": "Implement an Azure Virtual Desktop infrastructure",
+      "summary": "Implement an Azure Virtual Desktop infrastructure",
+      "order": 1,
+      "duration_minutes": 223,
+      "lessons": [
+        {
+          "lesson_key": "wwl-implement-manage-networking-for-azure-virtual-desktop",
+          "title": "Implement and manage networking for Azure Virtual Desktop",
+          "order": 1,
+          "duration_minutes": 71,
+          "content_md": "Implement and manage networking for Azure Virtual Desktop\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-manage-networking-azure-virtual-desktop/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement and manage networking for Azure Virtual Desktop",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-manage-networking-azure-virtual-desktop/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-manage-storage-for-azure-virtual-desktop",
+          "title": "Implement and manage storage for Azure Virtual Desktop",
+          "order": 2,
+          "duration_minutes": 42,
+          "content_md": "FSLogix roams profiles in remote computing environments, such as Azure Virtual Desktop. You set up a FSLogix profile container share for a host pool using a virtual machine-based file share.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-manage-storage-azure-virtual-desktop/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement and manage storage for Azure Virtual Desktop",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-manage-storage-azure-virtual-desktop/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-create-configure-host-pools-session-hosts",
+          "title": "Create and configure host pools and session hosts for Azure Virtual Desktop",
+          "order": 3,
+          "duration_minutes": 57,
+          "content_md": "Create and configure host pools and session hosts for Azure Virtual Desktop\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-configure-host-pools-session-hosts/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create and configure host pools and session hosts for Azure Virtual Desktop",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-configure-host-pools-session-hosts/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-create-manage-session-host-image",
+          "title": "Create and manage session host image for Azure Virtual Desktop",
+          "order": 4,
+          "duration_minutes": 53,
+          "content_md": "A Shared Image Gallery simplifies custom image sharing across your organization. Custom images can be used to bootstrap deployment tasks like preloading applications, application configurations, and other OS configurations.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-manage-session-host-image/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create and manage session host image for Azure Virtual Desktop",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-manage-session-host-image/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-azure-virtual-infrastructure",
+          "title": "Laboratorio opcional: aplica Implement an Azure Virtual Desktop infrastructure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement an Azure Virtual Desktop infrastructure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

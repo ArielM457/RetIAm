@@ -1,0 +1,78 @@
+{
+  "certification_code": "architect-network-infrastructure",
+  "track": "azure",
+  "title": "Architect network infrastructure in Azure",
+  "summary": "Learn how to architect a secure, flexible, network infrastructure in Azure and connect on-premises networks to your Azure resources.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 93,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/architect-network-infrastructure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "architect-network-infrastructure",
+      "title": "Architect network infrastructure in Azure",
+      "summary": "Learn how to architect a secure, flexible, network infrastructure in Azure and connect on-premises networks to your Azure resources.",
+      "order": 1,
+      "duration_minutes": 93,
+      "lessons": [
+        {
+          "lesson_key": "secure-and-isolate-with-nsg-and-service-endpoints",
+          "title": "Secure and isolate access to Azure resources by using network security groups and service endpoints",
+          "order": 1,
+          "duration_minutes": 43,
+          "content_md": "Find out how Azure network security groups and service endpoints help you secure your virtual machines and Azure services from unauthorized network access.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure and isolate access to Azure resources by using network security groups and service endpoints",
+              "url": "https://learn.microsoft.com/en-us/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "control-network-traffic-flow-with-routes",
+          "title": "Manage and control traffic flow in your Azure deployment with routes",
+          "order": 2,
+          "duration_minutes": 50,
+          "content_md": "Learn how to control Azure virtual network traffic by implementing custom routes.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/control-network-traffic-flow-with-routes/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage and control traffic flow in your Azure deployment with routes",
+              "url": "https://learn.microsoft.com/en-us/training/modules/control-network-traffic-flow-with-routes/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-architect-network-infrastructure",
+          "title": "Laboratorio opcional: aplica Architect network infrastructure in Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Architect network infrastructure in Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

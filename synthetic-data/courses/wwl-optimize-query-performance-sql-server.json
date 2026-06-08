@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-optimize-query-performance-sql-server",
+  "track": "azure",
+  "title": "Optimize query performance in Azure SQL",
+  "summary": "Optimize query performance in Azure SQL",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 236,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/optimize-query-performance-sql-server/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-optimize-query-performance-sql-server",
+      "title": "Optimize query performance in Azure SQL",
+      "summary": "Optimize query performance in Azure SQL",
+      "order": 1,
+      "duration_minutes": 236,
+      "lessons": [
+        {
+          "lesson_key": "wwl-explore-query-performance-optimization",
+          "title": "Explore query performance optimization",
+          "order": 1,
+          "duration_minutes": 103,
+          "content_md": "Explore query performance optimization\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore query performance optimization",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-explore-performance-based-design",
+          "title": "Explore performance-based database design",
+          "order": 2,
+          "duration_minutes": 59,
+          "content_md": "Explore performance-based database design\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-performance-based-design/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore performance-based database design",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-performance-based-design/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-evaluate-performance-improvements",
+          "title": "Evaluate performance improvements",
+          "order": 3,
+          "duration_minutes": 74,
+          "content_md": "Evaluate performance improvements\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/evaluate-performance-improvements/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Evaluate performance improvements",
+              "url": "https://learn.microsoft.com/en-us/training/modules/evaluate-performance-improvements/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-optimize-query-performance-sql-server",
+          "title": "Laboratorio opcional: aplica Optimize query performance in Azure SQL",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Optimize query performance in Azure SQL**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

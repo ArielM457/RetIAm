@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-create-manage-background-jobs-scheduled-window",
+  "track": "azure",
+  "title": "Create and manage background jobs and scheduled jobs in Windows PowerShell",
+  "summary": "Create and manage background jobs and scheduled jobs in Windows PowerShell",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 85,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/create-manage-background-jobs-scheduled-windows-powershell/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-create-manage-background-jobs-scheduled-windows-powershe",
+      "title": "Create and manage background jobs and scheduled jobs in Windows PowerShell",
+      "summary": "Create and manage background jobs and scheduled jobs in Windows PowerShell",
+      "order": 1,
+      "duration_minutes": 85,
+      "lessons": [
+        {
+          "lesson_key": "wwl-create-manage-background-jobs-use-windows-powershell",
+          "title": "Create and manage background jobs using Windows PowerShell",
+          "order": 1,
+          "duration_minutes": 37,
+          "content_md": "This module explains the three types of jobs: local jobs, Windows PowerShell remote jobs, and Common Information Model (CIM)/Windows Management Instrumentation (WMI) jobs. These job types form the basis of the Windows PowerShell job system.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-manage-background-jobs-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create and manage background jobs using Windows PowerShell",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-manage-background-jobs-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-create-manage-scheduled-jobs-use-windows-powershell",
+          "title": "Create and manage scheduled jobs using Windows PowerShell",
+          "order": 2,
+          "duration_minutes": 48,
+          "content_md": "Create and manage scheduled jobs using Windows PowerShell\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-manage-scheduled-jobs-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create and manage scheduled jobs using Windows PowerShell",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-manage-scheduled-jobs-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-create-manage-background-jobs-scheduled-windows-powershe",
+          "title": "Laboratorio opcional: aplica Create and manage background jobs and scheduled jobs in Windows PowerShell",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Create and manage background jobs and scheduled jobs in Windows PowerShell**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

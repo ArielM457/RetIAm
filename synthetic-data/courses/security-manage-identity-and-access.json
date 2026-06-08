@@ -1,0 +1,93 @@
+{
+  "certification_code": "security-manage-identity-and-access",
+  "track": "azure",
+  "title": "Manage identity and access in Microsoft Entra ID",
+  "summary": "Learn how to work with subscriptions, users, and groups by configuring Microsoft Entra ID for workloads.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 119,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/manage-identity-and-access/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "security-manage-identity-and-access",
+      "title": "Manage identity and access in Microsoft Entra ID",
+      "summary": "Learn how to work with subscriptions, users, and groups by configuring Microsoft Entra ID for workloads.",
+      "order": 1,
+      "duration_minutes": 119,
+      "lessons": [
+        {
+          "lesson_key": "azure-security-manage-users-and-groups-in-aad",
+          "title": "Manage users and groups in Microsoft Entra ID",
+          "order": 1,
+          "duration_minutes": 50,
+          "content_md": "Manage users and groups in Microsoft Entra ID\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-users-and-groups-in-aad/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage users and groups in Microsoft Entra ID",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-users-and-groups-in-aad/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-security-secure-aad-users-with-mfa",
+          "title": "Secure Microsoft Entra users with multifactor authentication",
+          "order": 2,
+          "duration_minutes": 38,
+          "content_md": "Learn how to use multifactor authentication with Microsoft Entra ID to harden your user accounts.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/secure-aad-users-with-mfa/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure Microsoft Entra users with multifactor authentication",
+              "url": "https://learn.microsoft.com/en-us/training/modules/secure-aad-users-with-mfa/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-allow-users-to-reset-their-password",
+          "title": "Allow users to reset their password with Microsoft Entra self-service password reset",
+          "order": 3,
+          "duration_minutes": 31,
+          "content_md": "Learn how to allow users to reset their password with Microsoft Entra self-service password reset.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Allow users to reset their password with Microsoft Entra self-service password reset",
+              "url": "https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-security-manage-identity-and-access",
+          "title": "Laboratorio opcional: aplica Manage identity and access in Microsoft Entra ID",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Manage identity and access in Microsoft Entra ID**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

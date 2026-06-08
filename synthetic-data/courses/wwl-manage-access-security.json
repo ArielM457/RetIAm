@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-manage-access-security",
+  "track": "azure",
+  "title": "Manage access and security for Azure Virtual Desktop",
+  "summary": "Manage access and security for Azure Virtual Desktop",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 81,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/manage-access-security/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-manage-access-security",
+      "title": "Manage access and security for Azure Virtual Desktop",
+      "summary": "Manage access and security for Azure Virtual Desktop",
+      "order": 1,
+      "duration_minutes": 81,
+      "lessons": [
+        {
+          "lesson_key": "wwl-manage-access",
+          "title": "Manage access for Azure Virtual Desktop",
+          "order": 1,
+          "duration_minutes": 40,
+          "content_md": "Manage access for Azure Virtual Desktop\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-access/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage access for Azure Virtual Desktop",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-access/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-security",
+          "title": "Manage security for Azure Virtual Desktop",
+          "order": 2,
+          "duration_minutes": 41,
+          "content_md": "The Windows client for Azure Virtual Desktop integrates Azure Virtual Desktop on local machines. You’ll learn the critical actions for keeping your users safe.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-security/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage security for Azure Virtual Desktop",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-security/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-manage-access-security",
+          "title": "Laboratorio opcional: aplica Manage access and security for Azure Virtual Desktop",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Manage access and security for Azure Virtual Desktop**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "certification_code": "build-community-driven-projects-github",
+  "track": "github",
+  "title": "Build community-driven software projects on GitHub",
+  "summary": "Learn how GitHub enables you to build communities that foster communication and collaboration while reinforcing recommended guidelines, codes of conduct, and security best practices.",
+  "provider": "GitHub",
+  "level": "basic",
+  "total_duration_minutes": 394,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/build-community-driven-projects-github/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "build-community-driven-projects-github",
+      "title": "Build community-driven software projects on GitHub",
+      "summary": "Learn how GitHub enables you to build communities that foster communication and collaboration while reinforcing recommended guidelines, codes of conduct, and security best practices.",
+      "order": 1,
+      "duration_minutes": 394,
+      "lessons": [
+        {
+          "lesson_key": "github-introduction-to-github",
+          "title": "Introduction to GitHub",
+          "order": 1,
+          "duration_minutes": 105,
+          "content_md": "Learn to use key GitHub features, including issues, notifications, branches, commits, and pull requests.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-to-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-manage-innersource-program-github",
+          "title": "Manage an InnerSource program by using GitHub",
+          "order": 2,
+          "duration_minutes": 50,
+          "content_md": "Learn to manage a successful InnerSource program on GitHub through effective discoverability, guidance, and maintenance.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-innersource-program-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage an InnerSource program by using GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-innersource-program-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-create-open-source-program-github",
+          "title": "Create an open-source program by using GitHub best practices",
+          "order": 3,
+          "duration_minutes": 91,
+          "content_md": "Learn to create a successful open-source program by establishing contributor guidance, following proven processes, and by using community standards.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-open-source-program-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create an open-source program by using GitHub best practices",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-open-source-program-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-upload-project-github",
+          "title": "Upload your project by using GitHub best practices",
+          "order": 4,
+          "duration_minutes": 43,
+          "content_md": "Learn to upload your existing project to GitHub.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/upload-project-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Upload your project by using GitHub best practices",
+              "url": "https://learn.microsoft.com/en-us/training/modules/upload-project-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-migrate-repository-github",
+          "title": "Migrate your repository by using GitHub best practices",
+          "order": 5,
+          "duration_minutes": 43,
+          "content_md": "Learn to move your existing project to GitHub from a legacy version control system.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-repository-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate your repository by using GitHub best practices",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-repository-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-maintain-secure-repository-github",
+          "title": "Maintain a secure repository by using GitHub best practices",
+          "order": 6,
+          "duration_minutes": 35,
+          "content_md": "Learn best practices for building, hosting, and maintaining a secure repository on GitHub.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/maintain-secure-repository-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Maintain a secure repository by using GitHub best practices",
+              "url": "https://learn.microsoft.com/en-us/training/modules/maintain-secure-repository-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-contribute-opensource",
+          "title": "Contribute to an open-source project on GitHub",
+          "order": 7,
+          "duration_minutes": 27,
+          "content_md": "Learn how to contribute to an open-source project on GitHub.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/contribute-open-source/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Contribute to an open-source project on GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/contribute-open-source/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-build-community-driven-projects-github",
+          "title": "Laboratorio opcional: aplica Build community-driven software projects on GitHub",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Build community-driven software projects on GitHub**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

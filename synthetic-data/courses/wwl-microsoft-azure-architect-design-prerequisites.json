@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-microsoft-azure-architect-design-prerequisites",
+  "track": "azure",
+  "title": "AZ-305 Microsoft Azure Architect Design Prerequisites",
+  "summary": "Learn the basic Azure concepts you'll need to know as an Azure infrastructure architect. This path gives you the knowledge to be successful as you begin studying for AZ-305: Designing Microsoft Azure Infrastructure Solutions.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 265,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-architect-design-prerequisites/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-microsoft-azure-architect-design-prerequisites",
+      "title": "AZ-305 Microsoft Azure Architect Design Prerequisites",
+      "summary": "Learn the basic Azure concepts you'll need to know as an Azure infrastructure architect. This path gives you the knowledge to be successful as you begin studying for AZ-305: Designing Microsoft Azure Infrastructure Solutions.",
+      "order": 1,
+      "duration_minutes": 265,
+      "lessons": [
+        {
+          "lesson_key": "wwl-describe-core-architectural-components-of-azure",
+          "title": "Describe the core architectural components of Azure",
+          "order": 1,
+          "duration_minutes": 28,
+          "content_md": "Describe the core architectural components of Azure\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe the core architectural components of Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-azure-compute-networking-services",
+          "title": "Describe Azure compute services",
+          "order": 2,
+          "duration_minutes": 33,
+          "content_md": "Introduction to Azure compute services (virtual machines, containers, Azure Functions), application hosting options, and AI/ML and IoT/Edge service categories.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe Azure compute services",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-azure-storage-services",
+          "title": "Describe Azure storage services",
+          "order": 3,
+          "duration_minutes": 36,
+          "content_md": "Azure storage services, tiers, redundancy options, and migration options and tools.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe Azure storage services",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-azure-identity-access-security",
+          "title": "Describe Azure identity, access, and security",
+          "order": 4,
+          "duration_minutes": 47,
+          "content_md": "Describe Azure identity, access, and security\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe Azure identity, access, and security",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-cloud-adoption-framework",
+          "title": "Introduction to the Microsoft Cloud Adoption Framework",
+          "order": 5,
+          "duration_minutes": 107,
+          "content_md": "This module covers the basics of how to use the Cloud Adoption Framework to help you align your strategy for business, people, and technology.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/cloud-adoption-framework/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to the Microsoft Cloud Adoption Framework",
+              "url": "https://learn.microsoft.com/en-us/training/modules/cloud-adoption-framework/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-well-architected-introduction",
+          "title": "Introduction to the Microsoft Azure Well-Architected Framework",
+          "order": 6,
+          "duration_minutes": 14,
+          "content_md": "Learn how using key principles throughout your cloud architecture can help you design and build a solid architectural foundation that you can continuously improve.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-well-architected-introduction/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to the Microsoft Azure Well-Architected Framework",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-well-architected-introduction/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-microsoft-azure-architect-design-prerequisites",
+          "title": "Laboratorio opcional: aplica AZ-305 Microsoft Azure Architect Design Prerequisites",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **AZ-305 Microsoft Azure Architect Design Prerequisites**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

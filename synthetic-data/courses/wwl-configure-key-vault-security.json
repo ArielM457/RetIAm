@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-configure-key-vault-security",
+  "track": "azure",
+  "title": "Secure Azure Key Vault with defense in depth for the cloud and AI workloads",
+  "summary": "Implement a defense-in-depth security strategy for Azure Key Vault. Configure hardened vault settings, control access through RBAC and just-in-time privilege, manage keys, secrets, and certificates, and detect threats using Microsoft Defender for Key Vault and Defender CSPM.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 104,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/configure-key-vault-security/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-configure-key-vault-security",
+      "title": "Secure Azure Key Vault with defense in depth for the cloud and AI workloads",
+      "summary": "Implement a defense-in-depth security strategy for Azure Key Vault. Configure hardened vault settings, control access through RBAC and just-in-time privilege, manage keys, secrets, and certificates, and detect threats using Microsoft Defender for Key Vault and Defender CSPM.",
+      "order": 1,
+      "duration_minutes": 104,
+      "lessons": [
+        {
+          "lesson_key": "wwl-configure-secure-key-vault",
+          "title": "Configure and secure Azure Key Vault",
+          "order": 1,
+          "duration_minutes": 27,
+          "content_md": "Configure a security-hardened Azure Key Vault for enterprise workloads. Apply soft delete and purge protection, enforce least-privilege RBAC access with just-in-time activation, and secure the network perimeter using firewall rules and private endpoints.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-secure-key-vault/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure and secure Azure Key Vault",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-secure-key-vault/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-keys-secrets-key-vault",
+          "title": "Manage keys and secrets in Azure Key Vault",
+          "order": 2,
+          "duration_minutes": 25,
+          "content_md": "Manage the security lifecycle of cryptographic keys and secrets in Azure Key Vault. Configure HSM-backed keys, implement BYOK, automate key rotation, and build zero-downtime secret rotation using dual-credential patterns.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-keys-secrets-key-vault/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage keys and secrets in Azure Key Vault",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-keys-secrets-key-vault/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-certificates-monitor-key-vault",
+          "title": "Manage certificates and monitor Azure Key Vault",
+          "order": 3,
+          "duration_minutes": 20,
+          "content_md": "Manage certificate lifecycle in Azure Key Vault through integrated CA issuance and autorenewal, and enable diagnostic logging to create an investigation-ready audit trail for security operations.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-certificates-monitor-key-vault/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage certificates and monitor Azure Key Vault",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-certificates-monitor-key-vault/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-defend-key-vault-defender-cloud",
+          "title": "Protect Azure Key Vault with Microsoft Defender for Cloud",
+          "order": 4,
+          "duration_minutes": 32,
+          "content_md": "Protect Azure Key Vault with Microsoft Defender for Cloud. Use Defender Cloud Security Posture Management (CSPM) agentless secret scanning to discover exposed credentials, enable Microsoft Defender for Key Vault to detect malicious access patterns, and respond effectively to Key Vault security alerts.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/defend-key-vault-defender-cloud/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Protect Azure Key Vault with Microsoft Defender for Cloud",
+              "url": "https://learn.microsoft.com/en-us/training/modules/defend-key-vault-defender-cloud/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-configure-key-vault-security",
+          "title": "Laboratorio opcional: aplica Secure Azure Key Vault with defense in depth for the cloud and AI workloads",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Secure Azure Key Vault with defense in depth for the cloud and AI workloads**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

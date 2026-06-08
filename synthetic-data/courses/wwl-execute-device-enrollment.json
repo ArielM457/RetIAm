@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-execute-device-enrollment",
+  "track": "azure",
+  "title": "MD-102 Execute device enrollment",
+  "summary": "This learning path will cover Microsoft Entra join and will introduce Microsoft Endpoint Manager. We'll also discuss how to configure policies for enrolling devices to Configuration Manager and Microsoft Intune.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 79,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/execute-device-enrollment/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-execute-device-enrollment",
+      "title": "MD-102 Execute device enrollment",
+      "summary": "This learning path will cover Microsoft Entra join and will introduce Microsoft Endpoint Manager. We'll also discuss how to configure policies for enrolling devices to Configuration Manager and Microsoft Intune.",
+      "order": 1,
+      "duration_minutes": 79,
+      "lessons": [
+        {
+          "lesson_key": "wwl-administer-device-authentication",
+          "title": "Manage device authentication",
+          "order": 1,
+          "duration_minutes": 17,
+          "content_md": "In this module, you learn about device authentication and management in Microsoft Entra ID. MD-102\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/administer-device-authentication/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage device authentication",
+              "url": "https://learn.microsoft.com/en-us/training/modules/administer-device-authentication/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-enroll-devices-use-endpoint-configuration-manager",
+          "title": "Enroll devices using Microsoft Configuration Manager",
+          "order": 2,
+          "duration_minutes": 12,
+          "content_md": "This module introduces students to client deployment options and some of the high-level management and monitoring options that are available using Configuration Manager\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-endpoint-configuration-manager/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Enroll devices using Microsoft Configuration Manager",
+              "url": "https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-endpoint-configuration-manager/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-enroll-devices-use-intune",
+          "title": "Enroll devices using Microsoft Intune",
+          "order": 3,
+          "duration_minutes": 50,
+          "content_md": "Students will learn how to configure and setup Intune to more easily manage Windows, Android, and iOS devices.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-intune/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Enroll devices using Microsoft Intune",
+              "url": "https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-intune/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-execute-device-enrollment",
+          "title": "Laboratorio opcional: aplica MD-102 Execute device enrollment",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **MD-102 Execute device enrollment**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

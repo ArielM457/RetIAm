@@ -158,6 +158,34 @@ export type ResourceReference = {
   url: string;
 };
 
+export type LessonSource = {
+  title: string;
+  url: string | null;
+  source: string | null;
+};
+
+export type CourseLesson = {
+  id: string | null;
+  section_id?: string | null;
+  lesson_key: string;
+  title: string;
+  order: number;
+  duration_minutes: number;
+  content_md: string | null;
+  learning_objectives: string[];
+  sources: LessonSource[];
+};
+
+export type CourseLab = {
+  id: string | null;
+  lab_key: string;
+  title: string;
+  is_optional: boolean;
+  estimated_minutes: number;
+  instructions_md: string | null;
+  rubric: Array<{ criterion: string; weight: number; description?: string | null }>;
+};
+
 export type RouteSection = {
   section_id: string;
   title: string;
@@ -165,6 +193,102 @@ export type RouteSection = {
   estimated_hours: number;
   resources: ResourceReference[];
   prerequisite_sections: string[];
+  duration_minutes: number;
+  course_section_id: string | null;
+  lessons: CourseLesson[];
+  labs: CourseLab[];
+};
+
+export type CourseCatalogSummary = {
+  id: string | null;
+  certification_code: string;
+  track: string;
+  title: string;
+  summary: string | null;
+  provider: string | null;
+  level: string;
+  total_duration_minutes: number;
+  section_count: number;
+  lesson_count: number;
+};
+
+export type CourseSectionContent = {
+  id: string | null;
+  course_id: string | null;
+  section_key: string;
+  title: string;
+  summary: string | null;
+  order: number;
+  duration_minutes: number;
+  lessons: CourseLesson[];
+  labs: CourseLab[];
+};
+
+export type CourseDetail = {
+  id: string | null;
+  certification_code: string;
+  track: string;
+  title: string;
+  summary: string | null;
+  provider: string | null;
+  level: string;
+  total_duration_minutes: number;
+  source: string;
+  source_url: string | null;
+  sections: CourseSectionContent[];
+};
+
+export type QuizQuestionPublic = {
+  question_id: string;
+  prompt: string;
+  options: string[];
+  source: string;
+  section_id?: string | null;
+};
+
+export type LessonChatMessage = {
+  id: string | null;
+  role: 'user' | 'assistant';
+  content: string;
+  sources: LessonSource[];
+  suggested_questions: string[];
+  source_mode: string;
+  created_at: string | null;
+};
+
+export type LessonChatResponse = {
+  lesson_id: string;
+  answer: LessonChatMessage;
+  history: LessonChatMessage[];
+};
+
+export type SuggestedQuestionsResponse = {
+  lesson_id: string;
+  questions: string[];
+  source_mode: string;
+};
+
+export type CompleteLessonResponse = {
+  lesson_id: string;
+  status: string;
+  completed_lessons: number;
+  total_lessons: number;
+  progress_percent: number;
+  insight_note: string | null;
+  coach_message: string | null;
+  coach_scheduled_for: string | null;
+  next_action: 'continue' | 'final_exam' | string;
+  next_action_label: string | null;
+  source_mode: string;
+};
+
+export type CertificateVerificationResponse = {
+  valid: boolean;
+  certificate_id: string | null;
+  recipient_name: string | null;
+  target_certification: string | null;
+  score: number | null;
+  issued_at: string | null;
 };
 
 export type CertificationRouteResponse = {
@@ -228,6 +352,26 @@ export type TeamMemberSummary = {
   team_id: string | null;
 };
 
+export type SessionEvaluation = {
+  mandatory_answer?: { submitted_answer: string; is_correct: boolean; feedback: string };
+  quiz_questions?: QuizQuestionPublic[];
+  quiz_source_mode?: string;
+  quiz?: {
+    score: number;
+    passed: boolean;
+    total_questions: number;
+    correct_answers?: number;
+    source_mode?: string;
+  };
+  lab?: {
+    score: number;
+    passed: boolean;
+    feedback: string;
+    criteria?: Record<string, number>;
+    source_mode?: string;
+  };
+};
+
 export type ManagerSetupAgentAssistResponse = {
   message: string;
   should_advance: boolean;
@@ -247,8 +391,8 @@ export type LearningSessionResponse = {
     answer: string;
     source: string;
   } | null;
-  free_questions: Array<{ question: string; answer: string; source: string }>;
-  evaluation: Record<string, unknown>;
+  free_questions: Array<{ question: string; answer: string; source: string; source_mode?: string }>;
+  evaluation: SessionEvaluation;
   survey: Record<string, unknown> | null;
   started_at: string | null;
   completed_at: string | null;
@@ -599,12 +743,92 @@ export class ApiService {
 
   submitEvaluation(
     sessionId: string,
-    payload: { answers?: Array<{ is_correct: boolean }>; lab_solution_summary?: string },
+    payload: {
+      quiz_answers?: Array<{ question_id: string; selected_option_index: number }>;
+      lab_solution_summary?: string;
+    },
   ): Promise<LearningSessionResponse> {
     return firstValueFrom(
       this.http.post<LearningSessionResponse>(
         `${this.apiBaseUrl}/sessions/${sessionId}/evaluation`,
         payload,
+      ),
+    );
+  }
+
+  // --- Catalogo de cursos ---
+  listCourses(): Promise<CourseCatalogSummary[]> {
+    return firstValueFrom(this.http.get<CourseCatalogSummary[]>(`${this.apiBaseUrl}/courses`));
+  }
+
+  getCourse(certificationCode: string): Promise<CourseDetail> {
+    return firstValueFrom(
+      this.http.get<CourseDetail>(`${this.apiBaseUrl}/courses/${encodeURIComponent(certificationCode)}`),
+    );
+  }
+
+  // --- Tutor por leccion (Gini Eval) ---
+  askTutor(sessionId: string, lessonId: string, question: string): Promise<LessonChatResponse> {
+    return firstValueFrom(
+      this.http.post<LessonChatResponse>(
+        `${this.apiBaseUrl}/sessions/${sessionId}/lessons/${lessonId}/chat`,
+        { question },
+      ),
+    );
+  }
+
+  getLessonChat(sessionId: string, lessonId: string): Promise<LessonChatMessage[]> {
+    return firstValueFrom(
+      this.http.get<LessonChatMessage[]>(
+        `${this.apiBaseUrl}/sessions/${sessionId}/lessons/${lessonId}/chat`,
+      ),
+    );
+  }
+
+  getSuggestedQuestions(sessionId: string, lessonId: string): Promise<SuggestedQuestionsResponse> {
+    return firstValueFrom(
+      this.http.get<SuggestedQuestionsResponse>(
+        `${this.apiBaseUrl}/sessions/${sessionId}/lessons/${lessonId}/suggested-questions`,
+      ),
+    );
+  }
+
+  // --- Tutor por leccion SIN sesion (pagina de lectura del curso) ---
+  askLessonTutor(lessonId: string, question: string): Promise<LessonChatResponse> {
+    return firstValueFrom(
+      this.http.post<LessonChatResponse>(`${this.apiBaseUrl}/lessons/${lessonId}/chat`, {
+        question,
+      }),
+    );
+  }
+
+  getLessonChatByLesson(lessonId: string): Promise<LessonChatMessage[]> {
+    return firstValueFrom(
+      this.http.get<LessonChatMessage[]>(`${this.apiBaseUrl}/lessons/${lessonId}/chat`),
+    );
+  }
+
+  getLessonSuggestions(lessonId: string): Promise<SuggestedQuestionsResponse> {
+    return firstValueFrom(
+      this.http.get<SuggestedQuestionsResponse>(
+        `${this.apiBaseUrl}/lessons/${lessonId}/suggested-questions`,
+      ),
+    );
+  }
+
+  completeLesson(sessionId: string, lessonId: string): Promise<CompleteLessonResponse> {
+    return firstValueFrom(
+      this.http.post<CompleteLessonResponse>(
+        `${this.apiBaseUrl}/sessions/${sessionId}/lessons/${lessonId}/complete`,
+        {},
+      ),
+    );
+  }
+
+  verifyCertificate(verificationCode: string): Promise<CertificateVerificationResponse> {
+    return firstValueFrom(
+      this.http.get<CertificateVerificationResponse>(
+        `${this.apiBaseUrl}/exams/certificates/verify/${encodeURIComponent(verificationCode)}`,
       ),
     );
   }

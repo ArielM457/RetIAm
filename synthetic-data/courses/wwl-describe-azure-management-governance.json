@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-describe-azure-management-governance",
+  "track": "azure",
+  "title": "Introduction to Cloud Infrastructure: Describe Azure management and governance",
+  "summary": "Management and governance focused portion of Introduction to Cloud Infrastructure training.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 81,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/describe-azure-management-governance/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-describe-azure-management-governance",
+      "title": "Introduction to Cloud Infrastructure: Describe Azure management and governance",
+      "summary": "Management and governance focused portion of Introduction to Cloud Infrastructure training.",
+      "order": 1,
+      "duration_minutes": 81,
+      "lessons": [
+        {
+          "lesson_key": "wwl-describe-cost-management-azure",
+          "title": "Describe cost management in Azure",
+          "order": 1,
+          "duration_minutes": 27,
+          "content_md": "Describe cost management in Azure\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe cost management in Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-features-tools-azure-for-governance-compliance",
+          "title": "Describe features and tools in Azure for governance and compliance",
+          "order": 2,
+          "duration_minutes": 19,
+          "content_md": "Describe features and tools in Azure for governance and compliance\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe features and tools in Azure for governance and compliance",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-features-tools-manage-deploy-azure-resources",
+          "title": "Describe features and tools for managing and deploying Azure resources",
+          "order": 3,
+          "duration_minutes": 22,
+          "content_md": "This module discusses tools and features that assist in managing and deploying resources within Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe features and tools for managing and deploying Azure resources",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-monitoring-tools-azure",
+          "title": "Describe monitoring tools in Azure",
+          "order": 4,
+          "duration_minutes": 13,
+          "content_md": "Describe monitoring tools in Azure\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe monitoring tools in Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-describe-azure-management-governance",
+          "title": "Laboratorio opcional: aplica Introduction to Cloud Infrastructure: Describe Azure management and governance",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduction to Cloud Infrastructure: Describe Azure management and governance**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

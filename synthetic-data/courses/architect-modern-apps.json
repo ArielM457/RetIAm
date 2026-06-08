@@ -1,0 +1,108 @@
+{
+  "certification_code": "architect-modern-apps",
+  "track": "azure",
+  "title": "Architect modern applications in Azure",
+  "summary": "Learn how to build modern applications using PaaS services for applications, caching, containers and Kubernetes in Azure.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 155,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/architect-modern-apps/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "architect-modern-apps",
+      "title": "Architect modern applications in Azure",
+      "summary": "Learn how to build modern applications using PaaS services for applications, caching, containers and Kubernetes in Azure.",
+      "order": 1,
+      "duration_minutes": 155,
+      "lessons": [
+        {
+          "lesson_key": "intro-to-containers",
+          "title": "Build a containerized web application with Docker",
+          "order": 1,
+          "duration_minutes": 57,
+          "content_md": "Use Docker to build, store, and manage private container images with the Azure Container Registry.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-containers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build a containerized web application with Docker",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-containers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-container-registry",
+          "title": "Build and store container images with Azure Container Registry",
+          "order": 2,
+          "duration_minutes": 42,
+          "content_md": "Learn how to use Docker to build, store, and manage private container images with the Azure Container Registry.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/build-and-store-container-images/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build and store container images with Azure Container Registry",
+              "url": "https://learn.microsoft.com/en-us/training/modules/build-and-store-container-images/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "host-a-web-application-with-azure-web-apps",
+          "title": "Host a web application with Azure App Service",
+          "order": 3,
+          "duration_minutes": 31,
+          "content_md": "Create a website using C#, Java, Python, or Node.js and deploy it through the hosted web app platform in Azure App Service.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/host-a-web-app-with-azure-app-service/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Host a web application with Azure App Service",
+              "url": "https://learn.microsoft.com/en-us/training/modules/host-a-web-app-with-azure-app-service/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "intro-to-azure-kubernetes-service",
+          "title": "Introduction to Azure Kubernetes Service",
+          "order": 4,
+          "duration_minutes": 25,
+          "content_md": "Get acquainted with the Azure Kubernetes open-source container-orchestration system for automating application deployment, scaling, and management.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-azure-kubernetes-service/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure Kubernetes Service",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-azure-kubernetes-service/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-architect-modern-apps",
+          "title": "Laboratorio opcional: aplica Architect modern applications in Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Architect modern applications in Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

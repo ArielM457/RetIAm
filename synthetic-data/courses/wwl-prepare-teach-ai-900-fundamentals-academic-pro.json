@@ -1,0 +1,168 @@
+{
+  "certification_code": "wwl-prepare-teach-ai-900-fundamentals-academic-pro",
+  "track": "azure",
+  "title": "Prepare to teach AI-900 Microsoft Azure AI fundamentals in academic programs",
+  "summary": "Prepare to teach AI-900 Microsoft Azure AI fundamentals in academic programs",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 225,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/prepare-teach-ai-900-fundamentals-academic-programs/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-prepare-teach-ai-900-fundamentals-academic-programs",
+      "title": "Prepare to teach AI-900 Microsoft Azure AI fundamentals in academic programs",
+      "summary": "Prepare to teach AI-900 Microsoft Azure AI fundamentals in academic programs",
+      "order": 1,
+      "duration_minutes": 225,
+      "lessons": [
+        {
+          "lesson_key": "wwl-introduction-microsoft-learn-educators-program",
+          "title": "Introduction to Microsoft Learn for Educators program",
+          "order": 1,
+          "duration_minutes": 33,
+          "content_md": "The Microsoft Learn for Educators program provides eligible educators and faculty members at colleges, universities, community colleges, polytechnics, and some STEM-focused secondary schools access to Microsoft's ready-to-teach curriculum and teaching materials aligned to industry-recognized Microsoft Certifications. The Microsoft certifications enhance your students' credibility by giving them a professional advantage through globally recognized, industry-endorsed evidence of skills mastery.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-microsoft-learn-educators-program/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Microsoft Learn for Educators program",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-microsoft-learn-educators-program/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-onboard-microsoft-learn-educators-program",
+          "title": "Onboard to Microsoft Learn for Educators program",
+          "order": 2,
+          "duration_minutes": 40,
+          "content_md": "Joining MSLE, getting certified in the content you'll be teaching, integrating Microsoft Official Course materials, and leveraging the various benefits will help ensure your students are well prepared for today’s job opportunities.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/onboard-microsoft-learn-educators-program/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Onboard to Microsoft Learn for Educators program",
+              "url": "https://learn.microsoft.com/en-us/training/modules/onboard-microsoft-learn-educators-program/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-microsoft-learn-educators-course-preparation",
+          "title": "Microsoft Learn for Educators Course Preparation",
+          "order": 3,
+          "duration_minutes": 17,
+          "content_md": "Your students want skills that make them employable. Using the resources available from Microsoft will help you feel confident to teach your students the skills they need to help them pass a Microsoft Certification exam.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/microsoft-learn-educators-course-preparation/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Microsoft Learn for Educators Course Preparation",
+              "url": "https://learn.microsoft.com/en-us/training/modules/microsoft-learn-educators-course-preparation/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-microsoft-learn-educators-course-plan",
+          "title": "Microsoft Learn for Educators course planning",
+          "order": 4,
+          "duration_minutes": 22,
+          "content_md": "As you begin to prepare for your course delivery, begin by determining the curriculum integration approach. Once you have developed an implementation plan, you can set up your LMS to integrate with Microsoft Learn for benefits such as getting details about published Microsoft Learn content and student reporting. Set certification expectations with your students, provide clarity about certification, why, when, and how; this sets your students up for success. Finally, make sure to record your course in the MSLE portal to ensure you receive updates like resources like lab seats for your class, curriculum updates, and information about student events.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/microsoft-learn-educators-course-plan/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Microsoft Learn for Educators course planning",
+              "url": "https://learn.microsoft.com/en-us/training/modules/microsoft-learn-educators-course-plan/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-learn-best-practices-from-microsoft-technical-trainers",
+          "title": "Learn best practices from Microsoft Technical Trainers",
+          "order": 5,
+          "duration_minutes": 26,
+          "content_md": "Learn best practices from Microsoft Technical Trainers\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/learn-best-practices-from-microsoft-technical-trainers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Learn best practices from Microsoft Technical Trainers",
+              "url": "https://learn.microsoft.com/en-us/training/modules/learn-best-practices-from-microsoft-technical-trainers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-get-tips-tricks-teach-ai-900-microsoft-azure-ai-fundamen",
+          "title": "Get tips and tricks for teaching AI-900 Microsoft Azure AI Fundamentals",
+          "order": 6,
+          "duration_minutes": 54,
+          "content_md": "Get tips and tricks for teaching AI-900 Microsoft Azure AI Fundamentals\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/get-tips-tricks-teach-ai-900-microsoft-azure-ai-fundamentals/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Get tips and tricks for teaching AI-900 Microsoft Azure AI Fundamentals",
+              "url": "https://learn.microsoft.com/en-us/training/modules/get-tips-tricks-teach-ai-900-microsoft-azure-ai-fundamentals/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-prepare-for-course-delivery",
+          "title": "Microsoft Learn for Educators preparing for course delivery",
+          "order": 7,
+          "duration_minutes": 18,
+          "content_md": "Microsoft Learn for Educators preparing for course delivery\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/prepare-for-course-delivery/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Microsoft Learn for Educators preparing for course delivery",
+              "url": "https://learn.microsoft.com/en-us/training/modules/prepare-for-course-delivery/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-close-out-course",
+          "title": "Microsoft Learn for Educators student certification",
+          "order": 8,
+          "duration_minutes": 15,
+          "content_md": "Microsoft Learn for Educators student certification\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/close-out-course/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Microsoft Learn for Educators student certification",
+              "url": "https://learn.microsoft.com/en-us/training/modules/close-out-course/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-prepare-teach-ai-900-fundamentals-academic-programs",
+          "title": "Laboratorio opcional: aplica Prepare to teach AI-900 Microsoft Azure AI fundamentals in academic programs",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Prepare to teach AI-900 Microsoft Azure AI fundamentals in academic programs**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

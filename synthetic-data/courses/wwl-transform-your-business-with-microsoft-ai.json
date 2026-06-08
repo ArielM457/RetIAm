@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-transform-your-business-with-microsoft-ai",
+  "track": "azure",
+  "title": "Transform your business with AI",
+  "summary": "In this learning path, business leaders will find the knowledge and resources to adopt AI in their organizations. It explores planning, strategizing, and scaling AI projects in a responsible way.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 154,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/transform-your-business-with-microsoft-ai/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-transform-your-business-with-microsoft-ai",
+      "title": "Transform your business with AI",
+      "summary": "In this learning path, business leaders will find the knowledge and resources to adopt AI in their organizations. It explores planning, strategizing, and scaling AI projects in a responsible way.",
+      "order": 1,
+      "duration_minutes": 154,
+      "lessons": [
+        {
+          "lesson_key": "wwl-leverage-ai-tools",
+          "title": "Leverage AI tools and resources for your business",
+          "order": 1,
+          "duration_minutes": 42,
+          "content_md": "Learn how to use AI tools and resources for your business.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/leverage-ai-tools/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Leverage AI tools and resources for your business",
+              "url": "https://learn.microsoft.com/en-us/training/modules/leverage-ai-tools/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-create-business-value",
+          "title": "Create business value with AI",
+          "order": 2,
+          "duration_minutes": 31,
+          "content_md": "Learn how to align AI to business strategy and ensure readiness using essential drivers for scalable, impactful, secure adoption.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-business-value/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create business value with AI",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-business-value/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-embrace-responsible-ai-principles-practices",
+          "title": "Embrace responsible AI principles and practices",
+          "order": 3,
+          "duration_minutes": 58,
+          "content_md": "Explore six principles to guide AI development and use - fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/embrace-responsible-ai-principles-practices/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Embrace responsible AI principles and practices",
+              "url": "https://learn.microsoft.com/en-us/training/modules/embrace-responsible-ai-principles-practices/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-scale-ai",
+          "title": "Scale AI in your organization",
+          "order": 4,
+          "duration_minutes": 23,
+          "content_md": "Learn enterprise AI management with our free open online course, including scaling AI.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/scale-ai/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Scale AI in your organization",
+              "url": "https://learn.microsoft.com/en-us/training/modules/scale-ai/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-transform-your-business-with-microsoft-ai",
+          "title": "Laboratorio opcional: aplica Transform your business with AI",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Transform your business with AI**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "certification_code": "learn-bizapps-connected-field-service",
+  "track": "azure",
+  "title": "Working with Connected Field Service for Dynamics 365 and Azure IoT",
+  "summary": "This learning path introduces you to connected Field Service and Azure IoT. Included in this learning path is identifying exceptions, register and manage devices, remotely monitor and service equipment, and using IoT central with connected Field Service.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 368,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/working-with-connected-field-service-iot/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "learn-bizapps-connected-field-service",
+      "title": "Working with Connected Field Service for Dynamics 365 and Azure IoT",
+      "summary": "This learning path introduces you to connected Field Service and Azure IoT. Included in this learning path is identifying exceptions, register and manage devices, remotely monitor and service equipment, and using IoT central with connected Field Service.",
+      "order": 1,
+      "duration_minutes": 368,
+      "lessons": [
+        {
+          "lesson_key": "learn-bizapps-get-started-with-connected-field-service",
+          "title": "Get started with Connected Field Service for Dynamics 365 and Azure IoT",
+          "order": 1,
+          "duration_minutes": 66,
+          "content_md": "This module will focus on the initial deployment of the Connected Field Service add-on for Dynamics 365 for Field Service.  The module will walk you through the installation and an understanding of the components installed as part of the out of the box template application.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/get-started-with-connected-field-service/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Get started with Connected Field Service for Dynamics 365 and Azure IoT",
+              "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-connected-field-service/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-bizapps-remotely-monitor-and-service-customer-equipmen",
+          "title": "Remotely monitor and service equipment with Connected Field Service for Dynamics 365 and Azure IoT",
+          "order": 2,
+          "duration_minutes": 65,
+          "content_md": "Configure IoT devices to remotely monitor customer equipment.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/remotely-monitor-and-service-customer-equipment/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Remotely monitor and service equipment with Connected Field Service for Dynamics 365 and Azure IoT",
+              "url": "https://learn.microsoft.com/en-us/training/modules/remotely-monitor-and-service-customer-equipment/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-bizapps-register-and-manage-customer-devices-with-conn",
+          "title": "Register and manage devices with Connected Field Service for Dynamics 365 and Azure IoT",
+          "order": 3,
+          "duration_minutes": 86,
+          "content_md": "Register and Manage Customer Devices with Connected Field Service.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/register-and-manage-customer-devices-with-connected-field-service/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Register and manage devices with Connected Field Service for Dynamics 365 and Azure IoT",
+              "url": "https://learn.microsoft.com/en-us/training/modules/register-and-manage-customer-devices-with-connected-field-service/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-bizapps-using-iot-central-with-connected-field-service",
+          "title": "Using IoT Central with Connected Field Service for Dynamics 365",
+          "order": 4,
+          "duration_minutes": 58,
+          "content_md": "Explore the integration of IoT Central with Dynamics 365 Field Service using Connected Field Service add-on in this module.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/using-iot-central-with-connected-field-service/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Using IoT Central with Connected Field Service for Dynamics 365",
+              "url": "https://learn.microsoft.com/en-us/training/modules/using-iot-central-with-connected-field-service/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-bizapps-identify-exceptions-with-connected-field-servi",
+          "title": "Identify Exceptions with Connected Field Service for Dynamics 365 and Azure IoT",
+          "order": 5,
+          "duration_minutes": 93,
+          "content_md": "This module will focus on the proactive detection of anomalies in the IoT device telemetry.  Additionally, this module will cover the customization of the Connected Field Service components to handle different telemetry from the device and options for storing detail data for future analysis.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/identify-exceptions-with-connected-field-service/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Identify Exceptions with Connected Field Service for Dynamics 365 and Azure IoT",
+              "url": "https://learn.microsoft.com/en-us/training/modules/identify-exceptions-with-connected-field-service/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-learn-bizapps-connected-field-service",
+          "title": "Laboratorio opcional: aplica Working with Connected Field Service for Dynamics 365 and Azure IoT",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Working with Connected Field Service for Dynamics 365 and Azure IoT**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

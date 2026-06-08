@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-secure-compute-storage-databases",
+  "track": "azure",
+  "title": "Protect compute, storage, and databases",
+  "summary": "Protect compute, storage, and databases",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 249,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/secure-compute-storage-databases/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-secure-compute-storage-databases",
+      "title": "Protect compute, storage, and databases",
+      "summary": "Protect compute, storage, and databases",
+      "order": 1,
+      "duration_minutes": 249,
+      "lessons": [
+        {
+          "lesson_key": "wwl-advanced-security-compute",
+          "title": "Plan and implement advanced security for compute",
+          "order": 1,
+          "duration_minutes": 82,
+          "content_md": "This module is designed to provide administrators with the knowledge and skills needed to plan and implement advanced security measures for Azure compute resources, safeguarding applications and data against evolving security threats.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/advanced-security-compute/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan and implement advanced security for compute",
+              "url": "https://learn.microsoft.com/en-us/training/modules/advanced-security-compute/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-security-storage",
+          "title": "Plan and implement security for storage",
+          "order": 2,
+          "duration_minutes": 89,
+          "content_md": "This module is designed to provide administrators with the knowledge and skills required to plan and implement comprehensive security measures for Azure storage resources, safeguarding data integrity, confidentiality, and availability.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/security-storage/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan and implement security for storage",
+              "url": "https://learn.microsoft.com/en-us/training/modules/security-storage/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-security-azure-sql-database-azure-sql-managed-instance",
+          "title": "Plan and implement security for Azure SQL Database and Azure SQL Managed Instance",
+          "order": 3,
+          "duration_minutes": 78,
+          "content_md": "This module is designed to empower administrators with the knowledge and skills needed to plan and implement robust security measures for Azure SQL Database and Azure SQL Managed Instance, ensuring data protection and regulatory compliance.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/security-azure-sql-database-azure-sql-managed-instance/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan and implement security for Azure SQL Database and Azure SQL Managed Instance",
+              "url": "https://learn.microsoft.com/en-us/training/modules/security-azure-sql-database-azure-sql-managed-instance/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-secure-compute-storage-databases",
+          "title": "Laboratorio opcional: aplica Protect compute, storage, and databases",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Protect compute, storage, and databases**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "certification_code": "dotnet-create-microservices-with-dotnet",
+  "track": "azure",
+  "title": "Create cloud-native apps and services with .NET and ASP.NET Core",
+  "summary": "Create independently deployable, highly scalable, and resilient apps and services using the free and open-source .NET platform. With .NET you can use popular microservice technology like Docker, Kubernetes, Dapr, Azure Container Registry, and more for .NET and ASP.NET Core applications and services.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 265,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/create-microservices-with-dotnet/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "dotnet-create-microservices-with-dotnet",
+      "title": "Create cloud-native apps and services with .NET and ASP.NET Core",
+      "summary": "Create independently deployable, highly scalable, and resilient apps and services using the free and open-source .NET platform. With .NET you can use popular microservice technology like Docker, Kubernetes, Dapr, Azure Container Registry, and more for .NET and ASP.NET Core applications and services.",
+      "order": 1,
+      "duration_minutes": 265,
+      "lessons": [
+        {
+          "lesson_key": "languages-dotnet-microservices",
+          "title": "Build your first microservice with .NET",
+          "order": 1,
+          "duration_minutes": 28,
+          "content_md": "Microservice applications are composed of small, independently versioned, and scalable customer-focused services that communicate with each other by using standard protocols and well-defined interfaces. Each microservice typically encapsulates simple business logic, which you can scale out or in. You test, deploy, and manage the microservice independently. Smaller teams develop a microservice based on a customer scenario, and choose the technologies that they use. This module teaches you how to build your first microservice by using .NET.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/dotnet-microservices/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build your first microservice with .NET",
+              "url": "https://learn.microsoft.com/en-us/training/modules/dotnet-microservices/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "languages-dotnet-deploy-microservices-kubernetes",
+          "title": "Deploy a .NET microservice to Kubernetes",
+          "order": 2,
+          "duration_minutes": 26,
+          "content_md": "Microservice applications are composed of small, independently versioned, and scalable customer-focused services. Microservices applications deployed in containers make it possible to scale out apps, and respond to increased demand by deploying more container instances, and to scale back if demand is decreasing. In complex solutions of many microservices the process of deploying, updating, monitoring, and removing containers introduces challenges. This module explains some of those challenges and shows how Kubernetes can help.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/dotnet-deploy-microservices-kubernetes/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy a .NET microservice to Kubernetes",
+              "url": "https://learn.microsoft.com/en-us/training/modules/dotnet-deploy-microservices-kubernetes/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "microservices-resiliency-aspnet-core",
+          "title": "Implement resiliency in a cloud-native .NET microservice",
+          "order": 3,
+          "duration_minutes": 60,
+          "content_md": "This module guides you through implementing resiliency in an .NET microservices app in a Kubernetes Service.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/microservices-resiliency-aspnet-core/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement resiliency in a cloud-native .NET microservice",
+              "url": "https://learn.microsoft.com/en-us/training/modules/microservices-resiliency-aspnet-core/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "implement-observability-cloud-native-app-with-opentelemetry",
+          "title": "Implement observability in a cloud-native .NET 8 application with OpenTelemetry",
+          "order": 4,
+          "duration_minutes": 43,
+          "content_md": "Learn about observability and how to implement it in a cloud-native application. Use OpenTelemetry packages to output logs, metrics, and tracing data and analyze the data in Application Insights and third-party applications.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-observability-cloud-native-app-with-opentelemetry/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement observability in a cloud-native .NET 8 application with OpenTelemetry",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-observability-cloud-native-app-with-opentelemetry/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "implement-compliance-cloud-native-applications",
+          "title": "Implement compliance in a cloud-native .NET 8 application",
+          "order": 5,
+          "duration_minutes": 32,
+          "content_md": "Microservice applications, because of their distributed nature, can be difficult to secure. In this module, you'll learn how to classify sensitive data in a cloud-native application, redact sensitive data in log files, and generate compliance reports for a cloud-native application.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/dotnet-compliance-cloud-native-applications/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement compliance in a cloud-native .NET 8 application",
+              "url": "https://learn.microsoft.com/en-us/training/modules/dotnet-compliance-cloud-native-applications/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "microservices-configuration-aspnet-core",
+          "title": "Implement feature flags in a cloud-native ASP.NET Core microservices app",
+          "order": 6,
+          "duration_minutes": 42,
+          "content_md": "This module guides you through implementing a feature flag in an ASP.NET Core microservices app using Azure App Configuration.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/microservices-configuration-aspnet-core/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement feature flags in a cloud-native ASP.NET Core microservices app",
+              "url": "https://learn.microsoft.com/en-us/training/modules/microservices-configuration-aspnet-core/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "microservices-devops-aspnet-core",
+          "title": "Deploy a cloud-native .NET microservice automatically with GitHub Actions and Azure Pipelines",
+          "order": 7,
+          "duration_minutes": 34,
+          "content_md": "Use a GitHub Actions CI/CD pipeline to build a container image and deploy it to Azure Kubernetes Service (AKS).\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/microservices-devops-aspnet-core/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy a cloud-native .NET microservice automatically with GitHub Actions and Azure Pipelines",
+              "url": "https://learn.microsoft.com/en-us/training/modules/microservices-devops-aspnet-core/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-dotnet-create-microservices-with-dotnet",
+          "title": "Laboratorio opcional: aplica Create cloud-native apps and services with .NET and ASP.NET Core",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Create cloud-native apps and services with .NET and ASP.NET Core**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

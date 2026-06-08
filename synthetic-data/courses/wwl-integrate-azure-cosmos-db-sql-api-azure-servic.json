@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-integrate-azure-cosmos-db-sql-api-azure-servic",
+  "track": "azure",
+  "title": "Integrate Azure Cosmos DB for NoSQL with Azure services",
+  "summary": "Integrate Azure Cosmos DB for NoSQL with Azure services",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 117,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/integrate-azure-cosmos-db-sql-api-azure-services/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-integrate-azure-cosmos-db-sql-api-azure-services",
+      "title": "Integrate Azure Cosmos DB for NoSQL with Azure services",
+      "summary": "Integrate Azure Cosmos DB for NoSQL with Azure services",
+      "order": 1,
+      "duration_minutes": 117,
+      "lessons": [
+        {
+          "lesson_key": "wwl-consume-azure-cosmos-db-sql-api-change-feed-using-sdk",
+          "title": "Consume an Azure Cosmos DB for NoSQL change feed using the SDK",
+          "order": 1,
+          "duration_minutes": 39,
+          "content_md": "Process change feed events using the change feed processor in the Azure Cosmos DB for NoSQL .NET SDK.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/consume-azure-cosmos-db-sql-api-change-feed-use-sdk/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Consume an Azure Cosmos DB for NoSQL change feed using the SDK",
+              "url": "https://learn.microsoft.com/en-us/training/modules/consume-azure-cosmos-db-sql-api-change-feed-use-sdk/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-handle-events-azure-functions-azure-cosmos-db-sql-api-ch",
+          "title": "Handle events with Azure Functions and Azure Cosmos DB for NoSQL change feed",
+          "order": 2,
+          "duration_minutes": 46,
+          "content_md": "Use Azure Functions bindings to integrate a function with Azure Cosmos DB for NoSQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/handle-events-azure-functions-azure-cosmos-db-sql-api-change-feed/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Handle events with Azure Functions and Azure Cosmos DB for NoSQL change feed",
+              "url": "https://learn.microsoft.com/en-us/training/modules/handle-events-azure-functions-azure-cosmos-db-sql-api-change-feed/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-search-azure-cosmos-db-sql-api-data-azure-cognitive-sear",
+          "title": "Search Azure Cosmos DB for NoSQL data with Azure Cognitive Search",
+          "order": 3,
+          "duration_minutes": 32,
+          "content_md": "Index Azure Cosmos DB for NoSQL data with Azure Cognitive Search.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/search-azure-cosmos-db-sql-api-data-azure-cognitive-search/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Search Azure Cosmos DB for NoSQL data with Azure Cognitive Search",
+              "url": "https://learn.microsoft.com/en-us/training/modules/search-azure-cosmos-db-sql-api-data-azure-cognitive-search/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-integrate-azure-cosmos-db-sql-api-azure-services",
+          "title": "Laboratorio opcional: aplica Integrate Azure Cosmos DB for NoSQL with Azure services",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Integrate Azure Cosmos DB for NoSQL with Azure services**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

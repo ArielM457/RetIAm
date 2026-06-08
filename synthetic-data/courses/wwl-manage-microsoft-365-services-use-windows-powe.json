@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-manage-microsoft-365-services-use-windows-powe",
+  "track": "azure",
+  "title": "Manage Microsoft 365 services by using Windows PowerShell",
+  "summary": "This learning path explains how to efficiently manage the most commonly used services in Microsoft 365, such as Microsoft Entra ID, Microsoft Exchange Online, Microsoft SharePoint Online, and Microsoft Teams.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 188,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/manage-microsoft-365-services-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-manage-microsoft-365-services-use-windows-powershell",
+      "title": "Manage Microsoft 365 services by using Windows PowerShell",
+      "summary": "This learning path explains how to efficiently manage the most commonly used services in Microsoft 365, such as Microsoft Entra ID, Microsoft Exchange Online, Microsoft SharePoint Online, and Microsoft Teams.",
+      "order": 1,
+      "duration_minutes": 188,
+      "lessons": [
+        {
+          "lesson_key": "wwl-manage-users-groups-licenses-azure-active-directory-use",
+          "title": "Manage users, groups, and licenses in Microsoft Entra ID by using Windows PowerShell",
+          "order": 1,
+          "duration_minutes": 72,
+          "content_md": "This module covers how to give access to the services in Microsoft 365, so that you can create user accounts and then assign licenses that provide access to the services.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-users-groups-licenses-azure-active-directory-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage users, groups, and licenses in Microsoft Entra ID by using Windows PowerShell",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-users-groups-licenses-azure-active-directory-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-exchange-online-use-windows-powershell",
+          "title": "Manage Exchange Online by using Windows PowerShell",
+          "order": 2,
+          "duration_minutes": 43,
+          "content_md": "This module covers managing mailboxes, resources, and admin roles in Exchange Online with PowerShell.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-exchange-online-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage Exchange Online by using Windows PowerShell",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-exchange-online-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-sharepoint-online-use-windows-powershell",
+          "title": "Manage SharePoint Online by using Windows PowerShell",
+          "order": 3,
+          "duration_minutes": 46,
+          "content_md": "Manage SharePoint Online by using Windows PowerShell\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-sharepoint-online-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage SharePoint Online by using Windows PowerShell",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-sharepoint-online-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-microsoft-teams-use-windows-powershell",
+          "title": "Manage Microsoft Teams by using Windows PowerShell",
+          "order": 4,
+          "duration_minutes": 27,
+          "content_md": "This module explains how to use Microsoft Teams PowerShell module to perform tasks such as creating teams and managing user permissions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-microsoft-teams-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage Microsoft Teams by using Windows PowerShell",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-microsoft-teams-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-manage-microsoft-365-services-use-windows-powershell",
+          "title": "Laboratorio opcional: aplica Manage Microsoft 365 services by using Windows PowerShell",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Manage Microsoft 365 services by using Windows PowerShell**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

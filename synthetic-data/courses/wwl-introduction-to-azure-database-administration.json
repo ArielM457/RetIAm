@@ -1,0 +1,63 @@
+{
+  "certification_code": "wwl-introduction-to-azure-database-administration",
+  "track": "azure",
+  "title": "Introduction to Azure database administration",
+  "summary": "Introduction to Azure database administration",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 31,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/introduction-to-azure-database-administration/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-introduction-to-azure-database-administration",
+      "title": "Introduction to Azure database administration",
+      "summary": "Introduction to Azure database administration",
+      "order": 1,
+      "duration_minutes": 31,
+      "lessons": [
+        {
+          "lesson_key": "wwl-prepare-to-maintain-sql-databases-azure",
+          "title": "Prepare to maintain SQL Server-based databases on Azure",
+          "order": 1,
+          "duration_minutes": 31,
+          "content_md": "Prepare to maintain SQL Server-based databases on Azure\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/prepare-to-maintain-sql-databases-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Prepare to maintain SQL Server-based databases on Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/prepare-to-maintain-sql-databases-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-introduction-to-azure-database-administration",
+          "title": "Laboratorio opcional: aplica Introduction to Azure database administration",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduction to Azure database administration**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

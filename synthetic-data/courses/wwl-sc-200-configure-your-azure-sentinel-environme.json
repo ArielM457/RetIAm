@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-sc-200-configure-your-azure-sentinel-environme",
+  "track": "azure",
+  "title": "Configure your Microsoft Sentinel environment",
+  "summary": "Configure your Microsoft Sentinel environment",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 215,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/sc-200-configure-azure-sentinel-environment/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-sc-200-configure-your-azure-sentinel-environment",
+      "title": "Configure your Microsoft Sentinel environment",
+      "summary": "Configure your Microsoft Sentinel environment",
+      "order": 1,
+      "duration_minutes": 215,
+      "lessons": [
+        {
+          "lesson_key": "intro-to-azure-sentinel",
+          "title": "Introduction to Microsoft Sentinel",
+          "order": 1,
+          "duration_minutes": 29,
+          "content_md": "Get familiar with Microsoft Sentinel, a cloud-native, security information and event management (SIEM) service.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Microsoft Sentinel",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-create-manage-azure-sentinel-workspaces",
+          "title": "Create and manage Microsoft Sentinel workspaces",
+          "order": 2,
+          "duration_minutes": 41,
+          "content_md": "Create and manage Microsoft Sentinel workspaces\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-manage-azure-sentinel-workspaces/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create and manage Microsoft Sentinel workspaces",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-manage-azure-sentinel-workspaces/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-query-logs-azure-sentinel",
+          "title": "Query logs in Microsoft Sentinel",
+          "order": 3,
+          "duration_minutes": 18,
+          "content_md": "Query logs in Microsoft Sentinel\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/query-logs-azure-sentinel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Query logs in Microsoft Sentinel",
+              "url": "https://learn.microsoft.com/en-us/training/modules/query-logs-azure-sentinel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-use-watchlists-azure-sentinel",
+          "title": "Use watchlists in Microsoft Sentinel",
+          "order": 4,
+          "duration_minutes": 21,
+          "content_md": "Use watchlists in Microsoft Sentinel\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/use-watchlists-azure-sentinel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use watchlists in Microsoft Sentinel",
+              "url": "https://learn.microsoft.com/en-us/training/modules/use-watchlists-azure-sentinel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-utilize-threat-intelligence-azure-sentinel",
+          "title": "Utilize threat intelligence in Microsoft Sentinel",
+          "order": 5,
+          "duration_minutes": 18,
+          "content_md": "Utilize threat intelligence in Microsoft Sentinel\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/utilize-threat-intelligence-azure-sentinel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Utilize threat intelligence in Microsoft Sentinel",
+              "url": "https://learn.microsoft.com/en-us/training/modules/utilize-threat-intelligence-azure-sentinel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-integrate-microsoft-defender-xdr-with-microsoft-sentinel",
+          "title": "Integrate Microsoft Defender XDR with Microsoft Sentinel",
+          "order": 6,
+          "duration_minutes": 88,
+          "content_md": "In this module, you learn how to integrate Microsoft Defender XDR with Microsoft Sentinel.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/integrate-microsoft-defender-xdr-with-microsoft-sentinel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Integrate Microsoft Defender XDR with Microsoft Sentinel",
+              "url": "https://learn.microsoft.com/en-us/training/modules/integrate-microsoft-defender-xdr-with-microsoft-sentinel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-sc-200-configure-your-azure-sentinel-environment",
+          "title": "Laboratorio opcional: aplica Configure your Microsoft Sentinel environment",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Configure your Microsoft Sentinel environment**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

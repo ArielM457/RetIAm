@@ -1,0 +1,93 @@
+{
+  "certification_code": "github-actions-2",
+  "track": "github",
+  "title": "Automate your workflow with GitHub Actions Part 2 of 2",
+  "summary": "This is part two of a GitHub Action Learning Path. Learn how GitHub Actions enables you to automate your software development cycle.",
+  "provider": "GitHub",
+  "level": "basic",
+  "total_duration_minutes": 128,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/github-actions-2/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "github-actions-2",
+      "title": "Automate your workflow with GitHub Actions Part 2 of 2",
+      "summary": "This is part two of a GitHub Action Learning Path. Learn how GitHub Actions enables you to automate your software development cycle.",
+      "order": 1,
+      "duration_minutes": 128,
+      "lessons": [
+        {
+          "lesson_key": "github-github-actions-packages",
+          "title": "Leverage GitHub Actions to publish to GitHub Packages",
+          "order": 1,
+          "duration_minutes": 41,
+          "content_md": "Publish your code libraries or Docker images automatically and securely with GitHub Packages.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/github-actions-packages/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Leverage GitHub Actions to publish to GitHub Packages",
+              "url": "https://learn.microsoft.com/en-us/training/modules/github-actions-packages/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-create-custom-github-actions",
+          "title": "Create and publish custom GitHub actions",
+          "order": 2,
+          "duration_minutes": 26,
+          "content_md": "Learn how to create and publish custom GitHub actions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-custom-github-actions/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create and publish custom GitHub actions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-custom-github-actions/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-manage-github-actions-enterprise",
+          "title": "Manage GitHub Actions in the enterprise",
+          "order": 3,
+          "duration_minutes": 61,
+          "content_md": "Learn how to manage GitHub Actions in the enterprise.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-github-actions-enterprise/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage GitHub Actions in the enterprise",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-github-actions-enterprise/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-github-actions-2",
+          "title": "Laboratorio opcional: aplica Automate your workflow with GitHub Actions Part 2 of 2",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Automate your workflow with GitHub Actions Part 2 of 2**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

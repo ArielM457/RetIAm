@@ -1,6 +1,16 @@
+import logging
+
+from app.core.config import get_settings
+from app.db.supabase import get_supabase_service_client
 from app.models.certification import CertificationSummary
+from app.services._shared import response_data
+
+logger = logging.getLogger(__name__)
 
 
+# Catalogo curado de respaldo: se usa solo si la tabla `courses` esta vacia
+# (p.ej. antes de correr la ingesta). Una vez ingeridos los cursos, el catalogo
+# se sirve desde Supabase.
 CERTIFICATIONS = [
     CertificationSummary(
         code="AZ-900",
@@ -38,4 +48,33 @@ CERTIFICATIONS = [
 
 
 def list_certifications() -> list[CertificationSummary]:
-    return CERTIFICATIONS
+    """Lista el catalogo desde la tabla `courses` (una sola query). Cae al curado si esta vacia."""
+    settings = get_settings()
+    try:
+        rows = response_data(
+            get_supabase_service_client()
+            .table(settings.supabase_courses_table)
+            .select("certification_code,title,provider,level,summary,track")
+            .order("track")
+            .order("title")
+            .execute(),
+            [],
+        ) or []
+    except Exception as exc:
+        logger.warning("No se pudo leer el catalogo de cursos; uso el curado: %s", exc)
+        return CERTIFICATIONS
+
+    if not rows:
+        return CERTIFICATIONS
+
+    return [
+        CertificationSummary(
+            code=row["certification_code"],
+            title=row.get("title") or row["certification_code"],
+            provider=row.get("provider") or (row.get("track") or "").title(),
+            level=row.get("level") or "basic",
+            description=row.get("summary") or "",
+            recommended_for=[row["track"]] if row.get("track") else [],
+        )
+        for row in rows
+    ]

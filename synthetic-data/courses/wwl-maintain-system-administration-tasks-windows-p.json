@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-maintain-system-administration-tasks-windows-p",
+  "track": "azure",
+  "title": "Maintain system administration tasks in Windows PowerShell",
+  "summary": "This learning path covers cmdlets that are commonly used for system administration tasks related to Active Directory, network configuration, server administration, and Windows 10 device administration.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 123,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/maintain-system-administration-tasks-windows-powershell/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-maintain-system-administration-tasks-windows-powershell",
+      "title": "Maintain system administration tasks in Windows PowerShell",
+      "summary": "This learning path covers cmdlets that are commonly used for system administration tasks related to Active Directory, network configuration, server administration, and Windows 10 device administration.",
+      "order": 1,
+      "duration_minutes": 123,
+      "lessons": [
+        {
+          "lesson_key": "wwl-manage-active-directory-domain-services-use-powershell-c",
+          "title": "Manage Active Directory Domain Services using PowerShell cmdlets",
+          "order": 1,
+          "duration_minutes": 40,
+          "content_md": "This module covers the cmdlets that are used to administer Active Directory Domain Services.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-active-directory-domain-services-use-powershell-cmdlets/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage Active Directory Domain Services using PowerShell cmdlets",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-active-directory-domain-services-use-powershell-cmdlets/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-network-service-settings-for-windows-devices-use",
+          "title": "Manage network service settings for Windows devices using PowerShell cmdlets",
+          "order": 2,
+          "duration_minutes": 28,
+          "content_md": "This module covers the PowerShell modules and cmdlets that are used to configure network settings for Windows devices.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-network-service-settings-for-windows-devices-use-powershell-cmdlets/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage network service settings for Windows devices using PowerShell cmdlets",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-network-service-settings-for-windows-devices-use-powershell-cmdlets/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-windows-server-settings-use-powershell-cmdlets",
+          "title": "Manage Windows Server settings using PowerShell cmdlets",
+          "order": 3,
+          "duration_minutes": 28,
+          "content_md": "This module covers cmdlets that are used to configure settings related to Group Policy, Server Manager, Hyper-V, and Internet Information Services (IIS).\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-windows-server-settings-use-powershell-cmdlets/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage Windows Server settings using PowerShell cmdlets",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-windows-server-settings-use-powershell-cmdlets/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-settings-for-local-windows-machine-use-powershell",
+          "title": "Manage settings for a local Windows machine using PowerShell cmdlets",
+          "order": 4,
+          "duration_minutes": 27,
+          "content_md": "This module covers common PowerShell cmdlets that can be used to perform tasks on a local Windows 10 or Windows 11 computer.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-settings-for-local-windows-machine-use-powershell-cmdlets/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage settings for a local Windows machine using PowerShell cmdlets",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-settings-for-local-windows-machine-use-powershell-cmdlets/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-maintain-system-administration-tasks-windows-powershell",
+          "title": "Laboratorio opcional: aplica Maintain system administration tasks in Windows PowerShell",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Maintain system administration tasks in Windows PowerShell**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

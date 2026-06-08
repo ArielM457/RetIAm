@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-deploy-monitor-apps-azure-kubernetes-service",
+  "track": "azure",
+  "title": "Deploy and monitor applications on Azure Kubernetes Service",
+  "summary": "Learn how to deploy, configure, and troubleshoot apps on Azure Kubernetes Service.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 212,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/deploy-monitor-apps-azure-kubernetes-service/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-deploy-monitor-apps-azure-kubernetes-service",
+      "title": "Deploy and monitor applications on Azure Kubernetes Service",
+      "summary": "Learn how to deploy, configure, and troubleshoot apps on Azure Kubernetes Service.",
+      "order": 1,
+      "duration_minutes": 212,
+      "lessons": [
+        {
+          "lesson_key": "wwl-deploy-apps-azure-kubernetes-service",
+          "title": "Deploy applications to Azure Kubernetes Service",
+          "order": 1,
+          "duration_minutes": 75,
+          "content_md": "Learn how to deploy applications to Azure Kubernetes Service.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-apps-azure-kubernetes-service/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy applications to Azure Kubernetes Service",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-apps-azure-kubernetes-service/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-apps-azure-kubernetes-service",
+          "title": "Configure applications on Azure Kubernetes Service",
+          "order": 2,
+          "duration_minutes": 72,
+          "content_md": "Externalize configuration, secure sensitive settings, and attach persistent storage for applications running on Azure Kubernetes Service.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-apps-azure-kubernetes-service/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure applications on Azure Kubernetes Service",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-apps-azure-kubernetes-service/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-monitor-apps-azure-kubernetes-service",
+          "title": "Monitor and troubleshoot applications on Azure Kubernetes Service",
+          "order": 3,
+          "duration_minutes": 65,
+          "content_md": "Monitor application health, debug issues, and verify connectivity for AI workloads running on Azure Kubernetes Service (AKS).\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-apps-azure-kubernetes-service/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Monitor and troubleshoot applications on Azure Kubernetes Service",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-apps-azure-kubernetes-service/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-deploy-monitor-apps-azure-kubernetes-service",
+          "title": "Laboratorio opcional: aplica Deploy and monitor applications on Azure Kubernetes Service",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Deploy and monitor applications on Azure Kubernetes Service**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

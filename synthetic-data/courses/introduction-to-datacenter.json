@@ -1,0 +1,138 @@
+{
+  "certification_code": "introduction-to-datacenter",
+  "track": "azure",
+  "title": "Introduction to Datacenter",
+  "summary": "Learn the fundamentals of datacenters, their roles, components, sustainability, and career opportunities.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 275,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/introduction-to-datacenter/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "introduction-to-datacenter",
+      "title": "Introduction to Datacenter",
+      "summary": "Learn the fundamentals of datacenters, their roles, components, sustainability, and career opportunities.",
+      "order": 1,
+      "duration_minutes": 275,
+      "lessons": [
+        {
+          "lesson_key": "philanthropies-understand-purpose-evolution-datacenters",
+          "title": "Understand the purpose and evolution of datacenters",
+          "order": 1,
+          "duration_minutes": 46,
+          "content_md": "In this module, you'll learn the basics of datacenters—what they are, why they exist, and their critical role in modern IT infrastructure. We'll explore the evolution of datacenters from mainframes to the cloud and look at different types, such as enterprise, colocation, cloud, and edge datacenters. You'll also discover the core components that make up a datacenter, including power supply, cooling, security. By the end, you'll have a clear understanding of the purpose and structure of datacenters.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/understand-purpose-evolution-datacenters/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand the purpose and evolution of datacenters",
+              "url": "https://learn.microsoft.com/en-us/training/modules/understand-purpose-evolution-datacenters/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-learn-about-datacenter-design",
+          "title": "Learn about datacenter design, architecture, and infrastructure management",
+          "order": 2,
+          "duration_minutes": 49,
+          "content_md": "In this module, we'll explore the key factors of datacenter design, delving into why they're crucial for building a reliable, scalable, and efficient infrastructure. You'll learn about site selection considerations such as power availability, climate, and risks from natural disasters. We'll also look at the layout of a datacenter, covering important elements like topologies, IT infrastructure, and space allocation. By the end of this module, you understand the importance of a well-architected datacenter.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/learn-about-datacenter-design/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Learn about datacenter design, architecture, and infrastructure management",
+              "url": "https://learn.microsoft.com/en-us/training/modules/learn-about-datacenter-design/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-identify-key-hardware-and-it-infrastructure-c",
+          "title": "Identify key hardware and IT infrastructure components of datacenters",
+          "order": 3,
+          "duration_minutes": 26,
+          "content_md": "In this module, we'll dive into the essential hardware and IT infrastructure that power datacenters. You'll learn about the different types of servers and their components, as well as various storage options like SAN, NAS, and object storage. We explore the network infrastructure inside a datacenter, including key components like switches, routers, and firewalls, along with how external connectivity is managed. Additionally, you discover the important IT apparatus such as racks and enclosures and application delivery controllers that help optimize performance and organization within the datacenter. By the end, you have a solid understanding of the hardware that supports the data storage, processing, and networking needs of a modern datacenter.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/identify-key-hardware-it-infrastructure-components/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Identify key hardware and IT infrastructure components of datacenters",
+              "url": "https://learn.microsoft.com/en-us/training/modules/identify-key-hardware-it-infrastructure-components/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-describe-best-practices-datacenter-operations",
+          "title": "Describe the best practices for datacenter operations",
+          "order": 4,
+          "duration_minutes": 55,
+          "content_md": "In this module, we'll explore the essential operations that ensure the efficiency, reliability, and security of datacenters. Topics include the importance of monitoring key systems like environmental conditions, performance, and security, using tools like the DCIM (Datacenter Infrastructure Management). You'll learn how KPIs such as uptime and energy efficiency are tracked to optimize performance. We'll also cover maintenance practices for hardware, software, cooling systems, and power systems to prevent downtime. The end of the module will touch on regulations, reliability strategies, and disaster recovery.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-best-practices-datacenter-operations/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe the best practices for datacenter operations",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-best-practices-datacenter-operations/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-describe-sustainability-practices-datacenters",
+          "title": "Describe the sustainability practices in datacenters",
+          "order": 5,
+          "duration_minutes": 42,
+          "content_md": "Datacenters are the backbone of our connected world, powering everything from social media to critical business operations. Recognizing their significant role, the datacenter industry is embracing sustainability with a strong commitment to reducing its carbon footprint and enhancing energy efficiency. These efforts are paving the way for a greener, more sustainable future while continuing to support our digital lives. In this module, we focus on the importance of sustainability in datacenter operations. Topics include the use of renewable energy sources like solar and wind, and strategies for optimizing energy usage, and emergency power systems. We'll also explore advanced cooling techniques, including waste heat reuse, and water conservation practices. Additionally, you'll learn how KPIs help track sustainability progress and discover real-world case studies showcasing successful innovations in green datacenter design and operations.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-sustainability-practices-datacenters/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe the sustainability practices in datacenters",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-sustainability-practices-datacenters/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-learn-contributing-local-economies-through-da",
+          "title": "Learn about contributing to local economies through datacenters",
+          "order": 6,
+          "duration_minutes": 57,
+          "content_md": "In this module, you'll explore the vital role datacenters play in shaping local economies and communities. More than just hubs of technology, datacenters serve as engines of opportunity, driving investment, innovation, and long-term prosperity. You'll learn how these digital infrastructure sites contribute to job creation, enhance local services, and foster economic growth. Additionally, this module examines how datacenters collaborate with local organizations through education, workforce training, and corporate social responsibility (CSR) initiatives. By the end of this module, you'll have a deeper understanding of the transformative impact datacenters have on the regions they serve.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/learn-contributing-local-economies-through-datacenters/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Learn about contributing to local economies through datacenters",
+              "url": "https://learn.microsoft.com/en-us/training/modules/learn-contributing-local-economies-through-datacenters/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-introduction-to-datacenter",
+          "title": "Laboratorio opcional: aplica Introduction to Datacenter",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduction to Datacenter**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

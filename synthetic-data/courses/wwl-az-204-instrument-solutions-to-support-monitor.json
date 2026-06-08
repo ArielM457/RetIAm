@@ -1,0 +1,63 @@
+{
+  "certification_code": "wwl-az-204-instrument-solutions-to-support-monitor",
+  "track": "azure",
+  "title": "Troubleshoot solutions by using Application Insights",
+  "summary": "Learn how to instrument apps to enable Application Insights to monitor performance and help troubleshoot issues.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 44,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/az-204-instrument-solutions-support-monitoring-logging/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-az-204-instrument-solutions-to-support-monitoring-loggin",
+      "title": "Troubleshoot solutions by using Application Insights",
+      "summary": "Learn how to instrument apps to enable Application Insights to monitor performance and help troubleshoot issues.",
+      "order": 1,
+      "duration_minutes": 44,
+      "lessons": [
+        {
+          "lesson_key": "wwl-monitor-app-performance",
+          "title": "Monitor app performance",
+          "order": 1,
+          "duration_minutes": 44,
+          "content_md": "Monitor app performance\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-app-performance/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Monitor app performance",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-app-performance/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-az-204-instrument-solutions-to-support-monitoring-loggin",
+          "title": "Laboratorio opcional: aplica Troubleshoot solutions by using Application Insights",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Troubleshoot solutions by using Application Insights**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

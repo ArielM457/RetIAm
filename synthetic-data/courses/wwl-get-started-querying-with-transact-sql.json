@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-get-started-querying-with-transact-sql",
+  "track": "azure",
+  "title": "Query and modify data with Transact-SQL",
+  "summary": "Learn how to use Transact-SQL (T-SQL) to interact with relational databases by querying and modifying data. This course covers essential operations such as inserting, updating, deleting, and merging data across tables. You'll also explore how to generate automatic values and apply changes efficiently using SQL Server or Azure SQL environments.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 345,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/get-started-querying-with-transact-sql/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-get-started-querying-with-transact-sql",
+      "title": "Query and modify data with Transact-SQL",
+      "summary": "Learn how to use Transact-SQL (T-SQL) to interact with relational databases by querying and modifying data. This course covers essential operations such as inserting, updating, deleting, and merging data across tables. You'll also explore how to generate automatic values and apply changes efficiently using SQL Server or Azure SQL environments.",
+      "order": 1,
+      "duration_minutes": 345,
+      "lessons": [
+        {
+          "lesson_key": "wwl-intro-to-transact-sql",
+          "title": "Introduction to Transact-SQL",
+          "order": 1,
+          "duration_minutes": 61,
+          "content_md": "Introduction to Transact-SQL\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-to-transact-sql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Transact-SQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-transact-sql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-sort-and-filter-queries",
+          "title": "Sort and filter results in T-SQL",
+          "order": 2,
+          "duration_minutes": 57,
+          "content_md": "Sort and filter results in T-SQL\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/sort-filter-queries/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Sort and filter results in T-SQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/sort-filter-queries/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-query-multiple-tables-with-joins",
+          "title": "Combine multiple tables with JOINs in T-SQL",
+          "order": 3,
+          "duration_minutes": 62,
+          "content_md": "Combine multiple tables with JOINs in T-SQL\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/query-multiple-tables-with-joins/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Combine multiple tables with JOINs in T-SQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/query-multiple-tables-with-joins/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-write-subqueries",
+          "title": "Write Subqueries in T-SQL",
+          "order": 4,
+          "duration_minutes": 50,
+          "content_md": "Write Subqueries in T-SQL\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/write-subqueries/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Write Subqueries in T-SQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/write-subqueries/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-use-built-functions-transact-sql",
+          "title": "Use built-in functions and GROUP BY in Transact-SQL",
+          "order": 5,
+          "duration_minutes": 59,
+          "content_md": "Use built-in functions and GROUP BY in Transact-SQL\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/use-built-functions-transact-sql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use built-in functions and GROUP BY in Transact-SQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/use-built-functions-transact-sql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-modify-data-with-transact-sql",
+          "title": "Modify data with T-SQL",
+          "order": 6,
+          "duration_minutes": 56,
+          "content_md": "Modify data with T-SQL\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/modify-data-with-transact-sql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Modify data with T-SQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/modify-data-with-transact-sql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-get-started-querying-with-transact-sql",
+          "title": "Laboratorio opcional: aplica Query and modify data with Transact-SQL",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Query and modify data with Transact-SQL**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

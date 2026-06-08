@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-get-know-microsoft-azure-cloud-platform-busine",
+  "track": "azure",
+  "title": "Get to know Microsoft Azure cloud platform: An overview for business professionals",
+  "summary": "Enhance your cloud fluency with this 90-minute, highly informative training designed to bridge the gap between cloud computing and business strategy. Take a tour of the transformative power of the cloud to drive business success, growth and cost savings with Microsoft Azure as your trusted partner. With practical insights and actual case studies, three streamlined modules cover the basics of cloud for business, the many business benefits of Azure, and best practices for transitioning your business to the cloud. This learning path, created especially for non-technical business leaders, requires no technical background.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 88,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/get-know-microsoft-azure-cloud-platform-business-professionals/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-get-know-microsoft-azure-cloud-platform-business-profess",
+      "title": "Get to know Microsoft Azure cloud platform: An overview for business professionals",
+      "summary": "Enhance your cloud fluency with this 90-minute, highly informative training designed to bridge the gap between cloud computing and business strategy. Take a tour of the transformative power of the cloud to drive business success, growth and cost savings with Microsoft Azure as your trusted partner. With practical insights and actual case studies, three streamlined modules cover the basics of cloud for business, the many business benefits of Azure, and best practices for transitioning your business to the cloud. This learning path, created especially for non-technical business leaders, requires no technical background.",
+      "order": 1,
+      "duration_minutes": 88,
+      "lessons": [
+        {
+          "lesson_key": "wwl-describe-basics-azure-business",
+          "title": "Describe the basics of Azure for business",
+          "order": 1,
+          "duration_minutes": 30,
+          "content_md": "This module describes what the cloud is and what Microsoft Azure is, and how businesses can grow and transform with Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-basics-azure-business/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe the basics of Azure for business",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-basics-azure-business/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-business-benefits-azure",
+          "title": "Describe the business benefits of Azure",
+          "order": 2,
+          "duration_minutes": 35,
+          "content_md": "This module explores various business benefits of Azure, including cost-efficiency, innovation, agility, and security.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-business-benefits-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe the business benefits of Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-business-benefits-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-transition-your-business-azure",
+          "title": "Transition your business to Azure",
+          "order": 3,
+          "duration_minutes": 23,
+          "content_md": "This module introduces various decisions that business decision makers can anticipate when considering a transition to Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/transition-your-business-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Transition your business to Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/transition-your-business-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-get-know-microsoft-azure-cloud-platform-business-profess",
+          "title": "Laboratorio opcional: aplica Get to know Microsoft Azure cloud platform: An overview for business professionals",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Get to know Microsoft Azure cloud platform: An overview for business professionals**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

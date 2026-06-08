@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-explore-microsoft-dev-box-improve-developer-pr",
+  "track": "azure",
+  "title": "Explore Microsoft Dev Box and improve developer productivity",
+  "summary": "This learning path provides a comprehensive introduction to Microsoft Dev Box, covering core service fundamentals, deployment best practices, key customization and imaging features, and guidance for using and optimizing your experience in the developer portal.  &nbsp;",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 112,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/explore-microsoft-dev-box-improve-developer-productivity/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-explore-microsoft-dev-box-improve-developer-productivity",
+      "title": "Explore Microsoft Dev Box and improve developer productivity",
+      "summary": "This learning path provides a comprehensive introduction to Microsoft Dev Box, covering core service fundamentals, deployment best practices, key customization and imaging features, and guidance for using and optimizing your experience in the developer portal.  &nbsp;",
+      "order": 1,
+      "duration_minutes": 112,
+      "lessons": [
+        {
+          "lesson_key": "wwl-understand-basics-microsoft-dev-box",
+          "title": "Understand the basics of Microsoft Dev Box",
+          "order": 1,
+          "duration_minutes": 32,
+          "content_md": "This module discusses the fundamentals of the Microsoft dev Box, its key concepts, and architecture.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/understand-basics-microsoft-dev-box/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand the basics of Microsoft Dev Box",
+              "url": "https://learn.microsoft.com/en-us/training/modules/understand-basics-microsoft-dev-box/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-explore-microsoft-dev-box-deployment-guidelines-best-pra",
+          "title": "Explore Microsoft Dev Box deployment guidelines and best practices",
+          "order": 2,
+          "duration_minutes": 80,
+          "content_md": "This module describes the details and the best practices for deploying Microsoft Dev Box in your organization.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-microsoft-dev-box-deployment-guidelines-best-practices/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore Microsoft Dev Box deployment guidelines and best practices",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-microsoft-dev-box-deployment-guidelines-best-practices/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-explore-microsoft-dev-box-improve-developer-productivity",
+          "title": "Laboratorio opcional: aplica Explore Microsoft Dev Box and improve developer productivity",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Explore Microsoft Dev Box and improve developer productivity**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

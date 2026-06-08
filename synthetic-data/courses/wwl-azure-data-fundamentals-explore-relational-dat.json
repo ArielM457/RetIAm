@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-azure-data-fundamentals-explore-relational-dat",
+  "track": "azure",
+  "title": "Introduction to Microsoft Azure Data relational data in Azure",
+  "summary": "Introduction to Microsoft Azure Data relational data in Azure",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 79,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/azure-data-fundamentals-explore-relational-data/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-azure-data-fundamentals-explore-relational-data",
+      "title": "Introduction to Microsoft Azure Data relational data in Azure",
+      "summary": "Introduction to Microsoft Azure Data relational data in Azure",
+      "order": 1,
+      "duration_minutes": 79,
+      "lessons": [
+        {
+          "lesson_key": "wwl-explore-relational-data-offerings",
+          "title": "Explore fundamental relational data concepts",
+          "order": 1,
+          "duration_minutes": 37,
+          "content_md": "This content is a part of Explore fundamental relational data concepts.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-relational-data-offerings/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore fundamental relational data concepts",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-relational-data-offerings/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-explore-provision-deploy-relational-database-offerings-a",
+          "title": "Explore relational database services in Azure",
+          "order": 2,
+          "duration_minutes": 42,
+          "content_md": "This content is a part of Explore relational database services in Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-provision-deploy-relational-database-offerings-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore relational database services in Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-provision-deploy-relational-database-offerings-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-azure-data-fundamentals-explore-relational-data",
+          "title": "Laboratorio opcional: aplica Introduction to Microsoft Azure Data relational data in Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduction to Microsoft Azure Data relational data in Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

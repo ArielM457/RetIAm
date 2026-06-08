@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-optimize-query-performance-azure-cosmos-db-sql",
+  "track": "azure",
+  "title": "Optimize query and operation performance in Azure Cosmos DB for NoSQL",
+  "summary": "Optimize query and operation performance in Azure Cosmos DB for NoSQL",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 114,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/optimize-query-performance-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-optimize-query-performance-azure-cosmos-db-sql-api",
+      "title": "Optimize query and operation performance in Azure Cosmos DB for NoSQL",
+      "summary": "Optimize query and operation performance in Azure Cosmos DB for NoSQL",
+      "order": 1,
+      "duration_minutes": 114,
+      "lessons": [
+        {
+          "lesson_key": "wwl-choose-indexes-azure-cosmos-db-sql-api",
+          "title": "Customize an indexing policy in Azure Cosmos DB for NoSQL",
+          "order": 1,
+          "duration_minutes": 43,
+          "content_md": "Tune the indexing policy based on your SQL queries in Azure Cosmos DB for NoSQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/choose-indexes-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Customize an indexing policy in Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/choose-indexes-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-measure-index-azure-cosmos-db-sql-api",
+          "title": "Measure index performance in Azure Cosmos DB for NoSQL",
+          "order": 2,
+          "duration_minutes": 47,
+          "content_md": "Measure the performance of an indexing policy in Azure Cosmos DB for NoSQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/measure-index-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Measure index performance in Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/measure-index-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-integrated-cache",
+          "title": "Implement integrated cache in Azure Cosmos DB for NoSQL",
+          "order": 3,
+          "duration_minutes": 24,
+          "content_md": "Implement integrated cache in Azure Cosmos DB for NoSQL\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-integrated-cache/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement integrated cache in Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-integrated-cache/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-optimize-query-performance-azure-cosmos-db-sql-api",
+          "title": "Laboratorio opcional: aplica Optimize query and operation performance in Azure Cosmos DB for NoSQL",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Optimize query and operation performance in Azure Cosmos DB for NoSQL**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

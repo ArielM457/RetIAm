@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-perform-basic-azure-management-tasks",
+  "track": "azure",
+  "title": "Perform basic Azure Management Tasks (Security and Monitoring)",
+  "summary": "Perform basic Azure Management Tasks (Security and Monitoring)",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 276,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/perform-basic-azure-management-tasks/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-perform-basic-azure-management-tasks",
+      "title": "Perform basic Azure Management Tasks (Security and Monitoring)",
+      "summary": "Perform basic Azure Management Tasks (Security and Monitoring)",
+      "order": 1,
+      "duration_minutes": 276,
+      "lessons": [
+        {
+          "lesson_key": "wwl-microsoft-defender-cloud-threat-protection",
+          "title": "Configure and manage threat protection by using Microsoft Defender for Cloud",
+          "order": 1,
+          "duration_minutes": 200,
+          "content_md": "This module focuses on the essential techniques for configuring and managing threat protection exclusively with Microsoft Defender for Cloud, empowering cybersecurity specialists to strengthen the security posture of their cloud environments.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/microsoft-defender-cloud-threat-protection/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure and manage threat protection by using Microsoft Defender for Cloud",
+              "url": "https://learn.microsoft.com/en-us/training/modules/microsoft-defender-cloud-threat-protection/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "introduction-azure-firewall",
+          "title": "Introduction to Azure Firewall",
+          "order": 2,
+          "duration_minutes": 48,
+          "content_md": "Describe how Azure Firewall protects Azure Virtual Network resources, including the Azure Firewall features, rules, deployment options, and administration with Azure Firewall Manager.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-azure-firewall/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure Firewall",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-azure-firewall/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-create-configure-log-analytics-workspace",
+          "title": "Create and configure a Log Analytics workspace",
+          "order": 3,
+          "duration_minutes": 28,
+          "content_md": "In this module, you learn how to create and configure access to a Log Analytics workspace. You also learn how to configure data retention and to enable health status alerts for a Log Analytics workspace.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-configure-log-analytics-workspace/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create and configure a Log Analytics workspace",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-configure-log-analytics-workspace/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-perform-basic-azure-management-tasks",
+          "title": "Laboratorio opcional: aplica Perform basic Azure Management Tasks (Security and Monitoring)",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Perform basic Azure Management Tasks (Security and Monitoring)**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-azure-cosmos-db-api-for-mongodb",
+  "track": "azure",
+  "title": "Azure Cosmos DB for MongoDB",
+  "summary": "Azure Cosmos DB for MongoDB",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 280,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/azure-cosmos-db-api-for-mongodb/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-azure-cosmos-db-api-for-mongodb",
+      "title": "Azure Cosmos DB for MongoDB",
+      "summary": "Azure Cosmos DB for MongoDB",
+      "order": 1,
+      "duration_minutes": 280,
+      "lessons": [
+        {
+          "lesson_key": "wwl-get-started-mongodb-api-azure-cosmos-db",
+          "title": "Get started with the MongoDB API in Azure Cosmos DB",
+          "order": 1,
+          "duration_minutes": 63,
+          "content_md": "Learn Azure Cosmos DB for MongoDB basics.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/get-started-mongodb-api-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Get started with the MongoDB API in Azure Cosmos DB",
+              "url": "https://learn.microsoft.com/en-us/training/modules/get-started-mongodb-api-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-design-mongodb-database-for-azure-cosmos-db",
+          "title": "Design an Azure Cosmos DB for MongoDB database",
+          "order": 2,
+          "duration_minutes": 50,
+          "content_md": "Design an Azure Cosmos DB for MongoDB database\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/design-mongodb-database-for-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Design an Azure Cosmos DB for MongoDB database",
+              "url": "https://learn.microsoft.com/en-us/training/modules/design-mongodb-database-for-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-migrate-mongodb-database-to-azure-cosmos-db",
+          "title": "Migrate a MongoDB database to Azure Cosmos DB",
+          "order": 3,
+          "duration_minutes": 79,
+          "content_md": "Online and offline migration option to Azure Cosmos DB API for MongoDB.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-mongodb-database-to-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate a MongoDB database to Azure Cosmos DB",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-mongodb-database-to-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-replicate-monitor-azure-cosmos-db-api-mongodb-account",
+          "title": "Replicate and monitor an Azure Cosmos DB for MongoDB account",
+          "order": 4,
+          "duration_minutes": 88,
+          "content_md": "Replicate and monitor an Azure Cosmos DB for MongoDB account\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/replicate-monitor-azure-cosmos-db-api-mongodb-account/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Replicate and monitor an Azure Cosmos DB for MongoDB account",
+              "url": "https://learn.microsoft.com/en-us/training/modules/replicate-monitor-azure-cosmos-db-api-mongodb-account/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-azure-cosmos-db-api-for-mongodb",
+          "title": "Laboratorio opcional: aplica Azure Cosmos DB for MongoDB",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Azure Cosmos DB for MongoDB**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

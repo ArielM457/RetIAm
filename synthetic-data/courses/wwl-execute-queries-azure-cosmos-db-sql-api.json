@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-execute-queries-azure-cosmos-db-sql-api",
+  "track": "azure",
+  "title": "Execute queries and build a Generative AI application with Azure Cosmos DB",
+  "summary": "Execute queries and build a Generative AI application with Azure Cosmos DB",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 218,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/execute-queries-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-execute-queries-azure-cosmos-db-sql-api",
+      "title": "Execute queries and build a Generative AI application with Azure Cosmos DB",
+      "summary": "Execute queries and build a Generative AI application with Azure Cosmos DB",
+      "order": 1,
+      "duration_minutes": 218,
+      "lessons": [
+        {
+          "lesson_key": "wwl-query-azure-cosmos-db-sql-api",
+          "title": "Query the Azure Cosmos DB for NoSQL",
+          "order": 1,
+          "duration_minutes": 61,
+          "content_md": "Author queries for Azure Cosmos DB for NoSQL using the SQL query language.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/query-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Query the Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/query-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-author-complex-queries-azure-cosmos-db-sql-api",
+          "title": "Author complex queries with the Azure Cosmos DB for NoSQL",
+          "order": 2,
+          "duration_minutes": 49,
+          "content_md": "Create SQL queries for Azure Cosmos DB for NoSQL that uses subqueries or cross-products.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/author-complex-queries-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Author complex queries with the Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/author-complex-queries-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-build-generative-ai-applications-with-azure-cosmos-db-no",
+          "title": "Build Generative AI applications with Azure Cosmos DB",
+          "order": 3,
+          "duration_minutes": 108,
+          "content_md": "Build advanced Generative AI application with Python and Azure Cosmos DB for NoSQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/build-generative-ai-applications-with-azure-cosmos-db-nosql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build Generative AI applications with Azure Cosmos DB",
+              "url": "https://learn.microsoft.com/en-us/training/modules/build-generative-ai-applications-with-azure-cosmos-db-nosql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-execute-queries-azure-cosmos-db-sql-api",
+          "title": "Laboratorio opcional: aplica Execute queries and build a Generative AI application with Azure Cosmos DB",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Execute queries and build a Generative AI application with Azure Cosmos DB**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

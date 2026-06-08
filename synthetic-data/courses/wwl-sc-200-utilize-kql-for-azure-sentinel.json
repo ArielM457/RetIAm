@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-sc-200-utilize-kql-for-azure-sentinel",
+  "track": "azure",
+  "title": "Create queries for Microsoft Sentinel using Kusto Query Language (KQL)",
+  "summary": "Create queries for Microsoft Sentinel using Kusto Query Language (KQL)",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 130,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/sc-200-utilize-kql-for-azure-sentinel/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-sc-200-utilize-kql-for-azure-sentinel",
+      "title": "Create queries for Microsoft Sentinel using Kusto Query Language (KQL)",
+      "summary": "Create queries for Microsoft Sentinel using Kusto Query Language (KQL)",
+      "order": 1,
+      "duration_minutes": 130,
+      "lessons": [
+        {
+          "lesson_key": "wwl-construct-kql-statements",
+          "title": "Construct KQL statements for Microsoft Sentinel",
+          "order": 1,
+          "duration_minutes": 36,
+          "content_md": "Construct KQL statements for Microsoft Sentinel\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/construct-kusto-query-language-statements/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Construct KQL statements for Microsoft Sentinel",
+              "url": "https://learn.microsoft.com/en-us/training/modules/construct-kusto-query-language-statements/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-analyze-results-kql",
+          "title": "Analyze query results using KQL",
+          "order": 2,
+          "duration_minutes": 37,
+          "content_md": "Analyze query results using KQL\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/analyze-results-kusto-query-language/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Analyze query results using KQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/analyze-results-kusto-query-language/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-build-multi-table-statements-kql",
+          "title": "Build multi-table statements using KQL",
+          "order": 3,
+          "duration_minutes": 21,
+          "content_md": "Build multi-table statements using KQL\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/build-multi-table-statements-kusto-query-language/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build multi-table statements using KQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/build-multi-table-statements-kusto-query-language/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-work-with-data-kql",
+          "title": "Work with data in Microsoft Sentinel using Kusto Query Language",
+          "order": 4,
+          "duration_minutes": 36,
+          "content_md": "Work with data in Microsoft Sentinel using Kusto Query Language\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/work-with-data-kusto-query-language/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Work with data in Microsoft Sentinel using Kusto Query Language",
+              "url": "https://learn.microsoft.com/en-us/training/modules/work-with-data-kusto-query-language/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-sc-200-utilize-kql-for-azure-sentinel",
+          "title": "Laboratorio opcional: aplica Create queries for Microsoft Sentinel using Kusto Query Language (KQL)",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Create queries for Microsoft Sentinel using Kusto Query Language (KQL)**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

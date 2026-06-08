@@ -6,6 +6,7 @@ import {
   ApiService,
   CertificationRouteResponse,
   CertificationSummary,
+  CourseCatalogSummary,
   ReminderResponse,
   StudyPlanResponse,
 } from '../../core/services/api.service';
@@ -28,8 +29,32 @@ export class DashboardPageComponent {
   protected readonly latestPlan = signal<StudyPlanResponse | null>(null);
   protected readonly latestRoute = signal<CertificationRouteResponse | null>(null);
   protected readonly reminders = signal<ReminderResponse[]>([]);
+  protected readonly courses = signal<CourseCatalogSummary[]>([]);
   protected readonly loading = signal(true);
   protected readonly creatingReminders = signal(false);
+
+  protected readonly recommendedCourses = computed(() =>
+    [...this.courses()].sort((a, b) => b.lesson_count - a.lesson_count).slice(0, 10),
+  );
+
+  protected coverClass(track: string): string {
+    if (track === 'github') return 'cover-github';
+    if (track === 'aws') return 'cover-aws';
+    return 'cover-azure';
+  }
+
+  protected levelLabel(level: string): string {
+    return { basic: 'Básico', intermediate: 'Intermedio', advanced: 'Avanzado' }[level] ?? level;
+  }
+
+  protected formatDuration(minutes: number): string {
+    if (!minutes) return '—';
+    const h = Math.floor(minutes / 60);
+    const m = minutes % 60;
+    if (h && m) return `${h} h ${m} min`;
+    if (h) return `${h} h`;
+    return `${m} min`;
+  }
 
   constructor() {
     void this.load();
@@ -107,16 +132,18 @@ export class DashboardPageComponent {
   private async load(): Promise<void> {
     this.loading.set(true);
     try {
-      const [catalog, route, plan, reminders] = await Promise.all([
+      const [catalog, route, plan, reminders, courses] = await Promise.all([
         this.api.listCertifications().catch(() => []),
         this.api.getLatestRoute(),
         this.api.getLatestPlan(),
         this.api.listMyReminders().catch(() => []),
+        this.api.listCourses().catch(() => []),
       ]);
       this.catalog.set(catalog);
       this.latestRoute.set(route);
       this.latestPlan.set(plan);
       this.reminders.set(reminders);
+      this.courses.set(courses);
     } finally {
       this.loading.set(false);
     }

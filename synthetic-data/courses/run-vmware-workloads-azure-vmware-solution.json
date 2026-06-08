@@ -1,0 +1,138 @@
+{
+  "certification_code": "run-vmware-workloads-azure-vmware-solution",
+  "track": "azure",
+  "title": "Run VMware resources on Azure VMware Solution",
+  "summary": "Learn about Azure VMware Solution, how to deploy the resource, and how to migrate VMware virtual machines on-premises.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 284,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/run-vmware-workloads-azure-vmware-solution/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "run-vmware-workloads-azure-vmware-solution",
+      "title": "Run VMware resources on Azure VMware Solution",
+      "summary": "Learn about Azure VMware Solution, how to deploy the resource, and how to migrate VMware virtual machines on-premises.",
+      "order": 1,
+      "duration_minutes": 284,
+      "lessons": [
+        {
+          "lesson_key": "azure-intro-azure-vmware-solution",
+          "title": "Introduction to Azure VMware Solution",
+          "order": 1,
+          "duration_minutes": 21,
+          "content_md": "Learn about Azure VMware Solution to host your VMware workloads in Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-azure-vmware-solution/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure VMware Solution",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-azure-vmware-solution/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "deploy-azure-vmware-solution",
+          "title": "Prepare to migrate VMware resources to Azure by deploying Azure VMware Solution",
+          "order": 2,
+          "duration_minutes": 56,
+          "content_md": "Prepare to migrate VMware resources to Azure by deploying an Azure VMware Solution resource. Then, connect your VMware environment to Azure VMware Solution.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-azure-vmware-solution/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Prepare to migrate VMware resources to Azure by deploying Azure VMware Solution",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-azure-vmware-solution/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "migrate-vmware-workloads-on-premises-azure-vmware-solution",
+          "title": "Migrate VMware vSphere resources from on-premises to Azure VMware Solution",
+          "order": 3,
+          "duration_minutes": 53,
+          "content_md": "Learn how to migrate virtual machines from an on-premises VMware environment to Azure VMware Solution by using VMware HCX.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-vmware-workloads-on-premises-azure-vmware-solution/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate VMware vSphere resources from on-premises to Azure VMware Solution",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-vmware-workloads-on-premises-azure-vmware-solution/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-azure-vmware-solution",
+          "title": "Secure outbound internet connectivity for Azure VMware Solution",
+          "order": 4,
+          "duration_minutes": 80,
+          "content_md": "Secure outbound internet connectivity for Azure VMware Solution using Azure Route Server, Azure Firewall, and third-party NVA\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-vmware-solution/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure outbound internet connectivity for Azure VMware Solution",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-vmware-solution/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-arc-enabled-vmware",
+          "title": "Introduction to Azure Arc-enabled VMware vSphere",
+          "order": 5,
+          "duration_minutes": 40,
+          "content_md": "Learn about Azure Arc enabled VMware vSphere\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-azure-arc-enabled-vmware-vsphere/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure Arc-enabled VMware vSphere",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-azure-arc-enabled-vmware-vsphere/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-netapp-files-with-vmware-solution",
+          "title": "Using Azure NetApp Files with Azure VMware Solution",
+          "order": 6,
+          "duration_minutes": 34,
+          "content_md": "This module helps you understand Azure NetApp Files and how to use it with the Azure VMware Solution.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-with-vmware-solution/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Using Azure NetApp Files with Azure VMware Solution",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-with-vmware-solution/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-run-vmware-workloads-azure-vmware-solution",
+          "title": "Laboratorio opcional: aplica Run VMware resources on Azure VMware Solution",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Run VMware resources on Azure VMware Solution**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

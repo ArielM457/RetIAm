@@ -1,0 +1,138 @@
+{
+  "certification_code": "quantum-computing-fundamentals",
+  "track": "azure",
+  "title": "Get started with Azure Quantum",
+  "summary": "Intrigued by quantum computing but don't know where to start? This learning path helps prepare you for this exciting next generation of computing.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 200,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/quantum-computing-fundamentals/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "quantum-computing-fundamentals",
+      "title": "Get started with Azure Quantum",
+      "summary": "Intrigued by quantum computing but don't know where to start? This learning path helps prepare you for this exciting next generation of computing.",
+      "order": 1,
+      "duration_minutes": 200,
+      "lessons": [
+        {
+          "lesson_key": "quantum-intro-to-azure-quantum",
+          "title": "Introduction to quantum computing with Azure Quantum",
+          "order": 1,
+          "duration_minutes": 29,
+          "content_md": "Get started with quantum computing and the Azure Quantum service.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-azure-quantum/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to quantum computing with Azure Quantum",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-azure-quantum/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "quantum-choose-the-best-azure-quantum",
+          "title": "Choose the best Azure Quantum option for your needs",
+          "order": 2,
+          "duration_minutes": 27,
+          "content_md": "Learn how to get started with Azure Quantum and choose the best option for your needs.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/choose-the-best-azure-quantum/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Choose the best Azure Quantum option for your needs",
+              "url": "https://learn.microsoft.com/en-us/training/modules/choose-the-best-azure-quantum/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "quantum-qsharp-create-first-quantum-development-kit",
+          "title": "Create your first Q# program with the Microsoft Quantum Development Kit",
+          "order": 3,
+          "duration_minutes": 33,
+          "content_md": "Get started with Q# programming by building a quantum random number generator.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/qsharp-create-first-quantum-development-kit/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create your first Q# program with the Microsoft Quantum Development Kit",
+              "url": "https://learn.microsoft.com/en-us/training/modules/qsharp-create-first-quantum-development-kit/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "quantum-explore-superposition",
+          "title": "Explore quantum superposition with Q#",
+          "order": 4,
+          "duration_minutes": 34,
+          "content_md": "Learn about the concept of superposition in quantum computing, how to represent superposition states for a single qubit with the Bloch sphere, and how to create and analyze superposition states with Q#.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-superposition/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore quantum superposition with Q#",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-superposition/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "quantum-explore-entanglement",
+          "title": "Teleport entangled qubits with Q#",
+          "order": 5,
+          "duration_minutes": 36,
+          "content_md": "Teleport entangled qubits with Q#\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-entanglement/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Teleport entangled qubits with Q#",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-entanglement/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "quantum-estimate-resources-quantum-algorithms",
+          "title": "Estimate physical resource requirements for quantum algorithms with the Microsoft Quantum resource estimator",
+          "order": 6,
+          "duration_minutes": 41,
+          "content_md": "Learn how to get started with Microsoft Quantum resource estimator.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/estimate-resources-quantum-algorithms/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Estimate physical resource requirements for quantum algorithms with the Microsoft Quantum resource estimator",
+              "url": "https://learn.microsoft.com/en-us/training/modules/estimate-resources-quantum-algorithms/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-quantum-computing-fundamentals",
+          "title": "Laboratorio opcional: aplica Get started with Azure Quantum",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Get started with Azure Quantum**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

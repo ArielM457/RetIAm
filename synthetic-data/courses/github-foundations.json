@@ -1,0 +1,168 @@
+{
+  "certification_code": "github-foundations",
+  "track": "github",
+  "title": "GitHub Foundations Part 1 of 2",
+  "summary": "The GitHub Foundations Learning Path Part 1 of 2 is a concise and beginner-friendly journey designed to introduce you to the fundamental concepts and products of GitHub.",
+  "provider": "GitHub",
+  "level": "basic",
+  "total_duration_minutes": 404,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/github-foundations/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "github-foundations",
+      "title": "GitHub Foundations Part 1 of 2",
+      "summary": "The GitHub Foundations Learning Path Part 1 of 2 is a concise and beginner-friendly journey designed to introduce you to the fundamental concepts and products of GitHub.",
+      "order": 1,
+      "duration_minutes": 404,
+      "lessons": [
+        {
+          "lesson_key": "student-evangelism-introduction-to-git",
+          "title": "Introduction to Git",
+          "order": 1,
+          "duration_minutes": 86,
+          "content_md": "Use Git to track changes and collaborate with other developers.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-git/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Git",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-git/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-introduction-to-github",
+          "title": "Introduction to GitHub",
+          "order": 2,
+          "duration_minutes": 105,
+          "content_md": "Learn to use key GitHub features, including issues, notifications, branches, commits, and pull requests.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-to-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-github-introduction-products",
+          "title": "Introduction to GitHub's products",
+          "order": 3,
+          "duration_minutes": 32,
+          "content_md": "Overview of GitHub's products, plans, associated features, and billing.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/github-introduction-products/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to GitHub's products",
+              "url": "https://learn.microsoft.com/en-us/training/modules/github-introduction-products/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-configure-code-scanning",
+          "title": "Configure code scanning on GitHub",
+          "order": 4,
+          "duration_minutes": 33,
+          "content_md": "This module introduces you to code scanning and its features. You'll learn how to implement code scanning using CodeQL, third party tools, and GitHub Actions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-code-scanning/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure code scanning on GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-code-scanning/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-introduction-to-github-copilot",
+          "title": "Introduction to GitHub Copilot",
+          "order": 5,
+          "duration_minutes": 19,
+          "content_md": "GitHub Copilot is an AI-powered coding assistant that helps you write, understand, refactor, and maintain code directly from your editor and chat interface.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to GitHub Copilot",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-code-with-github-codespaces",
+          "title": "Code with GitHub Codespaces",
+          "order": 6,
+          "duration_minutes": 27,
+          "content_md": "In this tutorial, you learn about GitHub Codespaces, its lifecycle, how to personalize your codespace, the differences between Codespaces and github.dev, and build a personalized and customized codespace with devcontainer.json files.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/code-with-github-codespaces/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Code with GitHub Codespaces",
+              "url": "https://learn.microsoft.com/en-us/training/modules/code-with-github-codespaces/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-manage-work-github-projects",
+          "title": "Manage your work with GitHub Projects",
+          "order": 7,
+          "duration_minutes": 36,
+          "content_md": "Visualize large projects as spreadsheets or boards, and automate everything with code.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-work-github-projects/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage your work with GitHub Projects",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-work-github-projects/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-communicate-using-markdown",
+          "title": "Communicate effectively on GitHub using Markdown",
+          "order": 8,
+          "duration_minutes": 66,
+          "content_md": "Learn to use Markdown to communicate with brevity, clarity, and expression.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/communicate-using-markdown/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Communicate effectively on GitHub using Markdown",
+              "url": "https://learn.microsoft.com/en-us/training/modules/communicate-using-markdown/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-github-foundations",
+          "title": "Laboratorio opcional: aplica GitHub Foundations Part 1 of 2",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **GitHub Foundations Part 1 of 2**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

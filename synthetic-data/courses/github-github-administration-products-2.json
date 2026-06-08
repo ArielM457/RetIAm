@@ -1,0 +1,123 @@
+{
+  "certification_code": "github-github-administration-products-2",
+  "track": "github",
+  "title": "GitHub fundamentals - Administration basics and product features Part 2 of 2",
+  "summary": "In this learning path, learn the basics of GitHub administration and discover the products that GitHub offers. This is the second learning path in a two part series.",
+  "provider": "GitHub",
+  "level": "intermediate",
+  "total_duration_minutes": 296,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/github-admin-2/github-admin-2/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "github-github-administration-products-2",
+      "title": "GitHub fundamentals - Administration basics and product features Part 2 of 2",
+      "summary": "In this learning path, learn the basics of GitHub administration and discover the products that GitHub offers. This is the second learning path in a two part series.",
+      "order": 1,
+      "duration_minutes": 296,
+      "lessons": [
+        {
+          "lesson_key": "github-manage-sensitive-data-security-policies",
+          "title": "Manage sensitive data and security policies within GitHub",
+          "order": 1,
+          "duration_minutes": 96,
+          "content_md": "Familiarize yourself with GitHub's basic security tools, which prepare repositories for secure development and industry-standard response to threats.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-sensitive-data-security-policies/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage sensitive data and security policies within GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-sensitive-data-security-policies/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-authenticate-authorize-user-identities-github",
+          "title": "Authenticate and authorize user identities on GitHub",
+          "order": 2,
+          "duration_minutes": 33,
+          "content_md": "Learn how to manage the authentication and authorization of user identities on GitHub.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/authenticate-authorize-user-identities-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Authenticate and authorize user identities on GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/authenticate-authorize-user-identities-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-administration-for-enterprise-support-adoption",
+          "title": "GitHub administration for enterprise support and adoption",
+          "order": 3,
+          "duration_minutes": 65,
+          "content_md": "Learn how GitHub Enterprise can make your administrative duties easier.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/github-administration-for-enterprise-support-adoption/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "GitHub administration for enterprise support and adoption",
+              "url": "https://learn.microsoft.com/en-us/training/modules/github-administration-for-enterprise-support-adoption/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-manage-github-actions-enterprise",
+          "title": "Manage GitHub Actions in the enterprise",
+          "order": 4,
+          "duration_minutes": 61,
+          "content_md": "Learn how to manage GitHub Actions in the enterprise.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-github-actions-enterprise/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage GitHub Actions in the enterprise",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-github-actions-enterprise/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-github-actions-packages",
+          "title": "Leverage GitHub Actions to publish to GitHub Packages",
+          "order": 5,
+          "duration_minutes": 41,
+          "content_md": "Publish your code libraries or Docker images automatically and securely with GitHub Packages.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/github-actions-packages/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Leverage GitHub Actions to publish to GitHub Packages",
+              "url": "https://learn.microsoft.com/en-us/training/modules/github-actions-packages/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-github-github-administration-products-2",
+          "title": "Laboratorio opcional: aplica GitHub fundamentals - Administration basics and product features Part 2 of 2",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **GitHub fundamentals - Administration basics and product features Part 2 of 2**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -26,7 +26,15 @@ class FreeQuestionRequest(BaseModel):
     question: str
 
 
+class QuizAnswer(BaseModel):
+    question_id: str
+    selected_option_index: int
+
+
 class EvaluationSubmissionRequest(BaseModel):
+    # quiz_answers: respuestas elegidas, calificadas en el servidor contra la clave.
+    quiz_answers: list[QuizAnswer] | None = None
+    # answers: compatibilidad hacia atras (ya no se confia en is_correct del cliente).
     answers: list[dict] | None = None
     lab_solution_summary: str | None = None
 

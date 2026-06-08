@@ -1,0 +1,93 @@
+{
+  "certification_code": "azure-operationalize-ai-responsibly",
+  "track": "azure",
+  "title": "Operationalize AI responsibly with Azure AI Foundry",
+  "summary": "Explore Azure AI Foundry's tools for generative AI security, privacy, and quality. Shift from reactive risk management to agile, responsible-by-design governance for better observability and efficiency.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 153,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/operationalize-ai-responsibly/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "azure-operationalize-ai-responsibly",
+      "title": "Operationalize AI responsibly with Azure AI Foundry",
+      "summary": "Explore Azure AI Foundry's tools for generative AI security, privacy, and quality. Shift from reactive risk management to agile, responsible-by-design governance for better observability and efficiency.",
+      "order": 1,
+      "duration_minutes": 153,
+      "lessons": [
+        {
+          "lesson_key": "moderate-content-detect-harm-azure-ai-content-safety-studio",
+          "title": "Implement generative AI guardrails in Azure AI Foundry",
+          "order": 1,
+          "duration_minutes": 40,
+          "content_md": "Learn how to choose and configure generative AI guardrails in Azure AI Foundry.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/moderate-content-detect-harm-azure-ai-content-safety-studio/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement generative AI guardrails in Azure AI Foundry",
+              "url": "https://learn.microsoft.com/en-us/training/modules/moderate-content-detect-harm-azure-ai-content-safety-studio/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "moderate-content-detect-harm-azure-ai-content-safety",
+          "title": "Implement generative AI guardrails with Azure AI Content Safety",
+          "order": 2,
+          "duration_minutes": 38,
+          "content_md": "Learn how to implement generative AI guardrails with Azure AI Content Safety.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/moderate-content-detect-harm-azure-ai-content-safety/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement generative AI guardrails with Azure AI Content Safety",
+              "url": "https://learn.microsoft.com/en-us/training/modules/moderate-content-detect-harm-azure-ai-content-safety/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "measure-mitigate-risks-azure-ai-studio",
+          "title": "Measure and mitigate risks for a generative AI app in Azure AI Foundry",
+          "order": 3,
+          "duration_minutes": 75,
+          "content_md": "Learn how to measure and mitigate risks for a generative AI app leveraging responsible AI tools and features within Azure AI Foundry.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/measure-mitigate-risks-azure-ai-studio/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Measure and mitigate risks for a generative AI app in Azure AI Foundry",
+              "url": "https://learn.microsoft.com/en-us/training/modules/measure-mitigate-risks-azure-ai-studio/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-azure-operationalize-ai-responsibly",
+          "title": "Laboratorio opcional: aplica Operationalize AI responsibly with Azure AI Foundry",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Operationalize AI responsibly with Azure AI Foundry**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "certification_code": "get-started-java-azure",
+  "track": "azure",
+  "title": "Get started with Java on Azure",
+  "summary": "Start here and learn how you can build, migrate and scale Java applications on Azure using Azure services. Use tools and frameworks that you know and love – Spring, Tomcat, WildFly, JBoss, WebLogic, WebSphere, Maven, Gradle, IntelliJ, Eclipse, Jenkins, Terraform and more.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 261,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/get-started-java-azure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "get-started-java-azure",
+      "title": "Get started with Java on Azure",
+      "summary": "Start here and learn how you can build, migrate and scale Java applications on Azure using Azure services. Use tools and frameworks that you know and love – Spring, Tomcat, WildFly, JBoss, WebLogic, WebSphere, Maven, Gradle, IntelliJ, Eclipse, Jenkins, Terraform and more.",
+      "order": 1,
+      "duration_minutes": 261,
+      "lessons": [
+        {
+          "lesson_key": "azure-intro-to-java-azure",
+          "title": "Introduction to Java on Azure",
+          "order": 1,
+          "duration_minutes": 37,
+          "content_md": "In this module, you'll begin to discover the opportunities for Java developers on Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-java-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Java on Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-java-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "java-target-destinations",
+          "title": "Choose the right Azure service for deploying your Java application",
+          "order": 2,
+          "duration_minutes": 25,
+          "content_md": "In this module, you learn about running your Java applications on Azure. You also choose the best service option among Azure Virtual Machines, Azure App Service, Azure Functions, Azure Kubernetes Service (AKS), and Azure Container Apps.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/java-target-destinations/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Choose the right Azure service for deploying your Java application",
+              "url": "https://learn.microsoft.com/en-us/training/modules/java-target-destinations/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-deploy-java-quarkus-azure-container-app-postgres",
+          "title": "Deploy a Quarkus application to Azure Container Apps",
+          "order": 3,
+          "duration_minutes": 51,
+          "content_md": "Create a Quarkus application, connect it to a PostgreSQL database, and then deploy it to Azure Container Apps.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-java-quarkus-azure-container-app-postgres/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy a Quarkus application to Azure Container Apps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-java-quarkus-azure-container-app-postgres/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-build-tomcat-java-appservice",
+          "title": "Deploy a Java web app to a Tomcat server on Azure App Service",
+          "order": 4,
+          "duration_minutes": 28,
+          "content_md": "Learn how to create a Java Tomcat web app and deploy it to Azure App Service using Maven.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-java-webapp-to-app-service-linux/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy a Java web app to a Tomcat server on Azure App Service",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-java-webapp-to-app-service-linux/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-deploy-event-driven-real-time",
+          "title": "Build a real-time event-driven Java solution in Azure",
+          "order": 5,
+          "duration_minutes": 33,
+          "content_md": "Send event-based telemetric data in real time to Azure Cosmos DB by using Azure Functions and an event hub.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-real-time-event-driven-app/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build a real-time event-driven Java solution in Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-real-time-event-driven-app/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-deploy-java-ee-app-to-app-service",
+          "title": "Deploy a Jakarta EE application to Azure",
+          "order": 6,
+          "duration_minutes": 47,
+          "content_md": "Deploy a Jakarta EE application to JBoss EAP on Azure App Service and bind it to Azure Database for MySQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-java-ee-app-to-jboss-app-service/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy a Jakarta EE application to Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-java-ee-app-to-jboss-app-service/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "containerize-deploy-java-app-aks",
+          "title": "Containerize and deploy a Java app to Azure",
+          "order": 7,
+          "duration_minutes": 40,
+          "content_md": "Containerize a Java app, push the container image to Azure Container Registry, and then deploy to Azure Kubernetes Service.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/containerize-deploy-java-app-aks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Containerize and deploy a Java app to Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/containerize-deploy-java-app-aks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-get-started-java-azure",
+          "title": "Laboratorio opcional: aplica Get started with Java on Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Get started with Java on Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

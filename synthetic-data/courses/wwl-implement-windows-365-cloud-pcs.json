@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-implement-windows-365-cloud-pcs",
+  "track": "azure",
+  "title": "MD-015 Implement Windows 365 Cloud PCs",
+  "summary": "This learning path provides instruction on the implementation of Windows 365, including application management, and provisioning, deploying, and managing Windows 365 Cloud PCs.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 118,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-windows-365-cloud-pcs/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-windows-365-cloud-pcs",
+      "title": "MD-015 Implement Windows 365 Cloud PCs",
+      "summary": "This learning path provides instruction on the implementation of Windows 365, including application management, and provisioning, deploying, and managing Windows 365 Cloud PCs.",
+      "order": 1,
+      "duration_minutes": 118,
+      "lessons": [
+        {
+          "lesson_key": "wwl-examine-windows-365",
+          "title": "Examine Windows 365",
+          "order": 1,
+          "duration_minutes": 29,
+          "content_md": "This module introduces the different Windows 365 editions that are available and examines foundational Windows 365 concepts including architecture, lifecycle, and customer data handling.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/examine-windows-365/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Examine Windows 365",
+              "url": "https://learn.microsoft.com/en-us/training/modules/examine-windows-365/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-provision-windows-365-cloud-pcs",
+          "title": "Provision and deploy Windows 365 Cloud PCs",
+          "order": 2,
+          "duration_minutes": 33,
+          "content_md": "This module covers the deployment, provisioning, and imaging options available for each edition of Windows 365. It also covers the Windows 365 Boot feature that enables users to sign-in directly to their Cloud PC.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/provision-windows-365-cloud-pcs/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Provision and deploy Windows 365 Cloud PCs",
+              "url": "https://learn.microsoft.com/en-us/training/modules/provision-windows-365-cloud-pcs/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-explore-windows-365-cloud-pc-management",
+          "title": "Explore Windows 365 Cloud PC management options",
+          "order": 3,
+          "duration_minutes": 38,
+          "content_md": "Management options for Windows 365 range from web portal to Microsoft Intune. The topics covered in this module include: Cloud PC management options. Windows 365 security. Role-based access control. Windows 365 reports.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-windows-365-cloud-pc-management/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore Windows 365 Cloud PC management options",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-windows-365-cloud-pc-management/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-apps-windows-365-cloud-pcs",
+          "title": "Manage Apps in Windows 365 Cloud PCs",
+          "order": 4,
+          "duration_minutes": 18,
+          "content_md": "After provisioning your Windows 365 Cloud PCs, you can either install apps manually or by using Microsoft Intune. This module covers application installation, nested virtualization, and Microsoft Teams installation and optimization.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-apps-windows-365-cloud-pcs/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage Apps in Windows 365 Cloud PCs",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-apps-windows-365-cloud-pcs/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-windows-365-cloud-pcs",
+          "title": "Laboratorio opcional: aplica MD-015 Implement Windows 365 Cloud PCs",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **MD-015 Implement Windows 365 Cloud PCs**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

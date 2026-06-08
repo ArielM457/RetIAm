@@ -1,0 +1,78 @@
+{
+  "certification_code": "security-implement-resource-mgmt-security",
+  "track": "azure",
+  "title": "Implement resource management security in Azure",
+  "summary": "Learn how to secure resources using policy, role-based access control, and other Azure services",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 83,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-resource-mgmt-security/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "security-implement-resource-mgmt-security",
+      "title": "Implement resource management security in Azure",
+      "summary": "Learn how to secure resources using policy, role-based access control, and other Azure services",
+      "order": 1,
+      "duration_minutes": 83,
+      "lessons": [
+        {
+          "lesson_key": "control-and-organize-with-resource-manager",
+          "title": "Control and organize Azure resources with Azure Resource Manager",
+          "order": 1,
+          "duration_minutes": 46,
+          "content_md": "Use Azure Resource Manager to organize resources, enforce standards, and protect critical assets from deletion.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/control-and-organize-with-azure-resource-manager/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Control and organize Azure resources with Azure Resource Manager",
+              "url": "https://learn.microsoft.com/en-us/training/modules/control-and-organize-with-azure-resource-manager/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "secure-azure-resources-with-rbac",
+          "title": "Secure your Azure resources with Azure role-based access control (Azure RBAC)",
+          "order": 2,
+          "duration_minutes": 37,
+          "content_md": "Learn how to use Azure role-based access control to effectively manage your team's access to Azure resources.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/secure-azure-resources-with-rbac/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure your Azure resources with Azure role-based access control (Azure RBAC)",
+              "url": "https://learn.microsoft.com/en-us/training/modules/secure-azure-resources-with-rbac/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-security-implement-resource-mgmt-security",
+          "title": "Laboratorio opcional: aplica Implement resource management security in Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement resource management security in Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

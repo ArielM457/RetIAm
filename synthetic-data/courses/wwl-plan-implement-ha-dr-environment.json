@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-plan-implement-ha-dr-environment",
+  "track": "azure",
+  "title": "Plan and implement a high availability and disaster recovery environment",
+  "summary": "Data must be available when needed. Configure, test and manage a solution for high availability and disaster recovery using Azure tools and SQL Server tools.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 191,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/plan-implement-high-availability-disaster-recovery-environment/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-plan-implement-ha-dr-environment",
+      "title": "Plan and implement a high availability and disaster recovery environment",
+      "summary": "Data must be available when needed. Configure, test and manage a solution for high availability and disaster recovery using Azure tools and SQL Server tools.",
+      "order": 1,
+      "duration_minutes": 191,
+      "lessons": [
+        {
+          "lesson_key": "wwl-describe-high-availability-disaster-recovery-strategies",
+          "title": "Describe high availability and disaster recovery strategies",
+          "order": 1,
+          "duration_minutes": 59,
+          "content_md": "Describe high availability and disaster recovery strategies\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-high-availability-disaster-recovery-strategies/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe high availability and disaster recovery strategies",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-high-availability-disaster-recovery-strategies/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-explore-iaas-paas-platform-tools-for-ha-dr",
+          "title": "Explore IaaS and PaaS solutions for high availability and disaster recovery",
+          "order": 2,
+          "duration_minutes": 71,
+          "content_md": "Explore IaaS and PaaS solutions for high availability and disaster recovery\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-iaas-paas-platform-tools-for-high-availability-disaster-recovery/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore IaaS and PaaS solutions for high availability and disaster recovery",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-iaas-paas-platform-tools-for-high-availability-disaster-recovery/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-backup-restore-databases",
+          "title": "Back up and restore databases",
+          "order": 3,
+          "duration_minutes": 61,
+          "content_md": "Back up and restore databases\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/backup-restore-databases/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Back up and restore databases",
+              "url": "https://learn.microsoft.com/en-us/training/modules/backup-restore-databases/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-plan-implement-ha-dr-environment",
+          "title": "Laboratorio opcional: aplica Plan and implement a high availability and disaster recovery environment",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Plan and implement a high availability and disaster recovery environment**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

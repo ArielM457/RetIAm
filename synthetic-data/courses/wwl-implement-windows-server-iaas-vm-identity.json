@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-implement-windows-server-iaas-vm-identity",
+  "track": "azure",
+  "title": "Implement Windows Server IaaS VM Identity",
+  "summary": "After completing this learning path, you’ll know how to implement identity in Azure. You’ll be able to extend an existing on-premises Active Directory identity service into Azure.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 148,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-windows-server-iaas-virtual-machine-identity/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-windows-server-iaas-vm-identity",
+      "title": "Implement Windows Server IaaS VM Identity",
+      "summary": "After completing this learning path, you’ll know how to implement identity in Azure. You’ll be able to extend an existing on-premises Active Directory identity service into Azure.",
+      "order": 1,
+      "duration_minutes": 148,
+      "lessons": [
+        {
+          "lesson_key": "wwl-implement-hybrid-identity-with-windows-server",
+          "title": "Implement hybrid identity with Windows Server",
+          "order": 1,
+          "duration_minutes": 109,
+          "content_md": "Implement hybrid identity with Windows Server\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-hybrid-identity-windows-server/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement hybrid identity with Windows Server",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-hybrid-identity-windows-server/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-deploy-manage-azure-iaas-active-directory-domain-control",
+          "title": "Deploy and manage Azure IaaS Active Directory domain controllers in Azure",
+          "order": 2,
+          "duration_minutes": 39,
+          "content_md": "Learn to deploy and manage Azure IaaS Active Directory domain controllers in Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-manage-azure-iaas-active-directory-domain-controllers-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy and manage Azure IaaS Active Directory domain controllers in Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-manage-azure-iaas-active-directory-domain-controllers-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-windows-server-iaas-vm-identity",
+          "title": "Laboratorio opcional: aplica Implement Windows Server IaaS VM Identity",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement Windows Server IaaS VM Identity**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

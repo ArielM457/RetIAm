@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-connect-to-azure-cosmos-db-sql-api-sdk",
+  "track": "azure",
+  "title": "Connect to Azure Cosmos DB for NoSQL with the SDK",
+  "summary": "Connect to Azure Cosmos DB for NoSQL with the SDK",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 89,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/connect-to-azure-cosmos-db-sql-api-sdk/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-connect-to-azure-cosmos-db-sql-api-sdk",
+      "title": "Connect to Azure Cosmos DB for NoSQL with the SDK",
+      "summary": "Connect to Azure Cosmos DB for NoSQL with the SDK",
+      "order": 1,
+      "duration_minutes": 89,
+      "lessons": [
+        {
+          "lesson_key": "wwl-use-azure-cosmos-db-sql-api-sdk",
+          "title": "Use the Azure Cosmos DB for NoSQL SDK",
+          "order": 1,
+          "duration_minutes": 45,
+          "content_md": "Learn about the Azure Cosmos DB libraries, and then download the libraries to use in a .NET, Python, or JavaScript (Node.JS) application.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/use-azure-cosmos-db-sql-api-sdk/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use the Azure Cosmos DB for NoSQL SDK",
+              "url": "https://learn.microsoft.com/en-us/training/modules/use-azure-cosmos-db-sql-api-sdk/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-azure-cosmos-db-sql-api-sdk",
+          "title": "Configure the Azure Cosmos DB for NoSQL SDK",
+          "order": 2,
+          "duration_minutes": 44,
+          "content_md": "Learn how to configure the Azure Cosmos DB for NoSQL SDK in various ways including how to integrate with the emulator, implement parallelism, and create a custom logger.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-azure-cosmos-db-sql-api-sdk/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure the Azure Cosmos DB for NoSQL SDK",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-azure-cosmos-db-sql-api-sdk/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-connect-to-azure-cosmos-db-sql-api-sdk",
+          "title": "Laboratorio opcional: aplica Connect to Azure Cosmos DB for NoSQL with the SDK",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Connect to Azure Cosmos DB for NoSQL with the SDK**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

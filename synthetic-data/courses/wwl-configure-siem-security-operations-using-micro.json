@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-configure-siem-security-operations-using-micro",
+  "track": "azure",
+  "title": "Configure SIEM security operations using Microsoft Sentinel",
+  "summary": "Configure Security Information and Event Management (SIEM) operations using Microsoft Sentinel. (SC-5001)",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 268,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/configure-security-information-event-management-operations-using-microsoft-sentinel/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-configure-siem-security-operations-using-microsoft-senti",
+      "title": "Configure SIEM security operations using Microsoft Sentinel",
+      "summary": "Configure Security Information and Event Management (SIEM) operations using Microsoft Sentinel. (SC-5001)",
+      "order": 1,
+      "duration_minutes": 268,
+      "lessons": [
+        {
+          "lesson_key": "wwl-create-manage-azure-sentinel-workspaces",
+          "title": "Create and manage Microsoft Sentinel workspaces",
+          "order": 1,
+          "duration_minutes": 41,
+          "content_md": "Create and manage Microsoft Sentinel workspaces\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-manage-azure-sentinel-workspaces/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create and manage Microsoft Sentinel workspaces",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-manage-azure-sentinel-workspaces/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-connect-microsoft-services-to-azure-sentinel",
+          "title": "Connect Microsoft services to Microsoft Sentinel",
+          "order": 2,
+          "duration_minutes": 26,
+          "content_md": "Connect Microsoft services to Microsoft Sentinel\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/connect-microsoft-services-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Connect Microsoft services to Microsoft Sentinel",
+              "url": "https://learn.microsoft.com/en-us/training/modules/connect-microsoft-services-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-connect-windows-hosts-to-azure-sentinel",
+          "title": "Connect Windows hosts to Microsoft Sentinel",
+          "order": 3,
+          "duration_minutes": 26,
+          "content_md": "Connect Windows hosts to Microsoft Sentinel\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/connect-windows-hosts-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Connect Windows hosts to Microsoft Sentinel",
+              "url": "https://learn.microsoft.com/en-us/training/modules/connect-windows-hosts-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-analyze-data-in-sentinel",
+          "title": "Threat detection with Microsoft Sentinel analytics",
+          "order": 4,
+          "duration_minutes": 70,
+          "content_md": "Threat detection with Microsoft Sentinel analytics\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/analyze-data-in-sentinel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Threat detection with Microsoft Sentinel analytics",
+              "url": "https://learn.microsoft.com/en-us/training/modules/analyze-data-in-sentinel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-automation-microsoft-sentinel",
+          "title": "Automation in Microsoft Sentinel",
+          "order": 5,
+          "duration_minutes": 15,
+          "content_md": "Automation in Microsoft Sentinel\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/automation-microsoft-sentinel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Automation in Microsoft Sentinel",
+              "url": "https://learn.microsoft.com/en-us/training/modules/automation-microsoft-sentinel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-siem-security-operations-using-microsoft-senti",
+          "title": "Configure SIEM security operations using Microsoft Sentinel",
+          "order": 6,
+          "duration_minutes": 90,
+          "content_md": "Configure security information and event management (SIEM) security operations using Microsoft Sentinel.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-siem-security-operations-using-microsoft-sentinel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure SIEM security operations using Microsoft Sentinel",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-siem-security-operations-using-microsoft-sentinel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-configure-siem-security-operations-using-microsoft-senti",
+          "title": "Laboratorio opcional: aplica Configure SIEM security operations using Microsoft Sentinel",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Configure SIEM security operations using Microsoft Sentinel**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "certification_code": "deploy-manage-resource-manager-templates",
+  "track": "azure",
+  "title": "Deploy and manage resources in Azure by using JSON ARM templates",
+  "summary": "Learn how JSON ARM templates enable you to manage both basic and complex infrastructure deployments on Azure.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 101,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/deploy-manage-resource-manager-templates/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "deploy-manage-resource-manager-templates",
+      "title": "Deploy and manage resources in Azure by using JSON ARM templates",
+      "summary": "Learn how JSON ARM templates enable you to manage both basic and complex infrastructure deployments on Azure.",
+      "order": 1,
+      "duration_minutes": 101,
+      "lessons": [
+        {
+          "lesson_key": "azure-create-resource-manager-template-vs-code",
+          "title": "Deploy Azure infrastructure by using JSON ARM templates",
+          "order": 1,
+          "duration_minutes": 43,
+          "content_md": "Write JSON Azure Resource Manager templates by using Visual Studio Code to deploy your infrastructure to Azure consistently and reliably.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-azure-resource-manager-template-vs-code/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy Azure infrastructure by using JSON ARM templates",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-azure-resource-manager-template-vs-code/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "arm-template-test",
+          "title": "Validate Azure resources by using the ARM Template Test Toolkit",
+          "order": 2,
+          "duration_minutes": 25,
+          "content_md": "Use the ARM Template Test Toolkit and apply it on your Azure Resource Manager templates to ensure the templates follow good practices before deployment.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/arm-template-test/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Validate Azure resources by using the ARM Template Test Toolkit",
+              "url": "https://learn.microsoft.com/en-us/training/modules/arm-template-test/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-extend-resource-manager-template-deployment-scripts",
+          "title": "Extend Bicep and ARM templates using deployment scripts",
+          "order": 3,
+          "duration_minutes": 33,
+          "content_md": "Learn how to add custom steps to your Azure Resource Manager templates (ARM templates) and Bicep files by using deployment scripts.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/extend-resource-manager-template-deployment-scripts/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Extend Bicep and ARM templates using deployment scripts",
+              "url": "https://learn.microsoft.com/en-us/training/modules/extend-resource-manager-template-deployment-scripts/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-deploy-manage-resource-manager-templates",
+          "title": "Laboratorio opcional: aplica Deploy and manage resources in Azure by using JSON ARM templates",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Deploy and manage resources in Azure by using JSON ARM templates**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

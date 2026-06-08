@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-use-azure-machine-learning-pipelines-for-autom",
+  "track": "azure",
+  "title": "Optimize model training with Azure Machine Learning",
+  "summary": "Learn how to optimize model training in Azure Machine Learning by using scripts, jobs, components and pipelines.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 157,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/use-azure-machine-learning-pipelines-for-automation/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-use-azure-machine-learning-pipelines-for-automation",
+      "title": "Optimize model training with Azure Machine Learning",
+      "summary": "Learn how to optimize model training in Azure Machine Learning by using scripts, jobs, components and pipelines.",
+      "order": 1,
+      "duration_minutes": 157,
+      "lessons": [
+        {
+          "lesson_key": "wwl-run-training-script-command-job-azure-machine-learning",
+          "title": "Run a training script as a command job in Azure Machine Learning",
+          "order": 1,
+          "duration_minutes": 37,
+          "content_md": "Run a command job with the Azure Machine Learning Python SDK v2.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/run-training-script-command-job-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Run a training script as a command job in Azure Machine Learning",
+              "url": "https://learn.microsoft.com/en-us/training/modules/run-training-script-command-job-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-train-models-training-mlflow-jobs",
+          "title": "Track model training with MLflow in jobs",
+          "order": 2,
+          "duration_minutes": 34,
+          "content_md": "Learn how to track model training with MLflow in jobs when running scripts.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/train-models-training-mlflow-jobs/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Track model training with MLflow in jobs",
+              "url": "https://learn.microsoft.com/en-us/training/modules/train-models-training-mlflow-jobs/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-perform-hyperparameter-tuning-azure-machine-learning-pip",
+          "title": "Perform hyperparameter tuning with Azure Machine Learning",
+          "order": 3,
+          "duration_minutes": 46,
+          "content_md": "Learn how to perform hyperparameter tuning with a sweep job in Azure Machine Learning.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/perform-hyperparameter-tuning-azure-machine-learning-pipelines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Perform hyperparameter tuning with Azure Machine Learning",
+              "url": "https://learn.microsoft.com/en-us/training/modules/perform-hyperparameter-tuning-azure-machine-learning-pipelines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-run-pipelines-azure-machine-learning",
+          "title": "Run pipelines in Azure Machine Learning",
+          "order": 4,
+          "duration_minutes": 40,
+          "content_md": "Learn how to create and use components to build pipeline in Azure Machine Learning. Run and schedule Azure Machine Learning pipelines to automate machine learning workflows.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/run-pipelines-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Run pipelines in Azure Machine Learning",
+              "url": "https://learn.microsoft.com/en-us/training/modules/run-pipelines-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-use-azure-machine-learning-pipelines-for-automation",
+          "title": "Laboratorio opcional: aplica Optimize model training with Azure Machine Learning",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Optimize model training with Azure Machine Learning**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

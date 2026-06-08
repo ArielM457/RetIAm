@@ -1,0 +1,153 @@
+{
+  "certification_code": "wwl-configure-secure-workloads-use-azure-virtual-n",
+  "track": "azure",
+  "title": "Configure secure access to your workloads using Azure virtual networking",
+  "summary": "Configure secure access to your workloads using Azure virtual networking. (AZ-1002)",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 363,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/configure-secure-workloads-using-azure-virtual-networking/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-configure-secure-workloads-use-azure-virtual-networking",
+      "title": "Configure secure access to your workloads using Azure virtual networking",
+      "summary": "Configure secure access to your workloads using Azure virtual networking. (AZ-1002)",
+      "order": 1,
+      "duration_minutes": 363,
+      "lessons": [
+        {
+          "lesson_key": "wwl-configure-virtual-networks",
+          "title": "Configure virtual networks",
+          "order": 1,
+          "duration_minutes": 42,
+          "content_md": "Learn how to configure virtual networks and subnets, including IP addressing.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-virtual-networks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure virtual networks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-virtual-networks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-vnet-peering",
+          "title": "Configure Azure Virtual Network peering",
+          "order": 2,
+          "duration_minutes": 38,
+          "content_md": "Learn to configure an Azure Virtual Network peering connection and address transit and connectivity concerns.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-vnet-peering/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure Azure Virtual Network peering",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-vnet-peering/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "control-network-traffic-flow-with-routes",
+          "title": "Manage and control traffic flow in your Azure deployment with routes",
+          "order": 3,
+          "duration_minutes": 50,
+          "content_md": "Learn how to control Azure virtual network traffic by implementing custom routes.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/control-network-traffic-flow-with-routes/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage and control traffic flow in your Azure deployment with routes",
+              "url": "https://learn.microsoft.com/en-us/training/modules/control-network-traffic-flow-with-routes/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-host-domain-azure-dns",
+          "title": "Host your domain on Azure DNS",
+          "order": 4,
+          "duration_minutes": 43,
+          "content_md": "Learn how to host the Domain Name System (DNS) records for your domains on Azure infrastructure by using Azure DNS.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/host-domain-azure-dns/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Host your domain on Azure DNS",
+              "url": "https://learn.microsoft.com/en-us/training/modules/host-domain-azure-dns/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-network-security-groups",
+          "title": "Configure network security groups",
+          "order": 5,
+          "duration_minutes": 43,
+          "content_md": "Learn how to implement network security groups, and ensure network security group rules are correctly applied.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-network-security-groups/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure network security groups",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-network-security-groups/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "introduction-azure-firewall",
+          "title": "Introduction to Azure Firewall",
+          "order": 6,
+          "duration_minutes": 48,
+          "content_md": "Describe how Azure Firewall protects Azure Virtual Network resources, including the Azure Firewall features, rules, deployment options, and administration with Azure Firewall Manager.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-azure-firewall/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure Firewall",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-azure-firewall/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-guided-project-configure-secure-access-workloads",
+          "title": "Guided Project - Configure secure access to workloads with Azure virtual networking services",
+          "order": 7,
+          "duration_minutes": 99,
+          "content_md": "In this module, you practice configuring secure access to workloads using Azure virtual networking. The lab combines both learning and hands-on practice.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/guided-project-configure-secure-access-workloads/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Guided Project - Configure secure access to workloads with Azure virtual networking services",
+              "url": "https://learn.microsoft.com/en-us/training/modules/guided-project-configure-secure-access-workloads/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-configure-secure-workloads-use-azure-virtual-networking",
+          "title": "Laboratorio opcional: aplica Configure secure access to your workloads using Azure virtual networking",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Configure secure access to your workloads using Azure virtual networking**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

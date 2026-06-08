@@ -1,0 +1,198 @@
+{
+  "certification_code": "azure-netapp-files",
+  "track": "azure",
+  "title": "Azure NetApp Files fundamentals",
+  "summary": "Learn how to deploy, monitor, secure, and optimize Azure NetApp Files.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 291,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/azure-netapp-files/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "azure-netapp-files",
+      "title": "Azure NetApp Files fundamentals",
+      "summary": "Learn how to deploy, monitor, secure, and optimize Azure NetApp Files.",
+      "order": 1,
+      "duration_minutes": 291,
+      "lessons": [
+        {
+          "lesson_key": "azure-introduction-to-azure-netapp-files",
+          "title": "Introduction to Azure NetApp Files",
+          "order": 1,
+          "duration_minutes": 42,
+          "content_md": "Evaluate whether Microsoft Azure NetApp Files is appropriate for migrating and running your organization's file-based workloads.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-netapp-files/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure NetApp Files",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-netapp-files/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-azure-netapp-files-volumes-service",
+          "title": "Understand how Azure NetApp Files provides volumes as a service",
+          "order": 2,
+          "duration_minutes": 22,
+          "content_md": "Understand network attached storage (NAS) concepts and various NAS protocols supported in Azure NetApp Files.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-volumes-service/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand how Azure NetApp Files provides volumes as a service",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-volumes-service/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-netapp-files-essentials",
+          "title": "Understand Azure NetApp Files essentials",
+          "order": 3,
+          "duration_minutes": 48,
+          "content_md": "Learn about the key parts of Azure NetApp Files, including storage terminology and monitoring strategies, to help you optimize your setup and deployment processes.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-essentials/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand Azure NetApp Files essentials",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-essentials/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-azure-netapp-file-cost-optimization",
+          "title": "Optimize costs with Azure NetApp Files",
+          "order": 4,
+          "duration_minutes": 23,
+          "content_md": "This module looks at cost models and cost optimization features in Azure NetApp Files.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-cost-optimization/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Optimize costs with Azure NetApp Files",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-cost-optimization/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-azure-netapp-files-quotas",
+          "title": "Understand quotas in Azure NetApp Files",
+          "order": 5,
+          "duration_minutes": 29,
+          "content_md": "Learn how to manage and monitor capacity in Azure NetApp Files.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-quotas/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand quotas in Azure NetApp Files",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-quotas/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-azure-netapp-files-performance",
+          "title": "Understand and tune Azure NetApp Files performance",
+          "order": 6,
+          "duration_minutes": 25,
+          "content_md": "Learn about the different factors that influence performance in Azure NetApp Files and make choices to optimize the performance to meet the needs of your workloads.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-performance/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand and tune Azure NetApp Files performance",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-performance/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-azure-netapp-files-application-volume-group",
+          "title": "Using Azure NetApp Files application volume group",
+          "order": 7,
+          "duration_minutes": 19,
+          "content_md": "Learn how to use Azure NetApp Files application volume groups to optimize deployments with Oracle and SAP HANA.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-application-volume-group/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Using Azure NetApp Files application volume group",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-application-volume-group/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-azure-netapp-files-data-protection",
+          "title": "Understand data protection and resiliency in Azure NetApp Files",
+          "order": 8,
+          "duration_minutes": 40,
+          "content_md": "This module teaches you about data protection options in Azure NetApp Files to help you improve the resiliency of your data.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-data-protection/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand data protection and resiliency in Azure NetApp Files",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-data-protection/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-azure-netapp-files-solutions-benefits",
+          "title": "Solutions and benefits for using Azure NetApp Files",
+          "order": 9,
+          "duration_minutes": 24,
+          "content_md": "Learn about applications for Azure NetApp Files with Linux OSS applications and databases, Windows applications and SQL Server solutions, SAP on Azure solutions, and other products.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-solutions-benefits/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Solutions and benefits for using Azure NetApp Files",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-solutions-benefits/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-azure-netapp-files-security",
+          "title": "Azure security for Azure NetApp Files",
+          "order": 10,
+          "duration_minutes": 19,
+          "content_md": "Learn about data encryption options available in Azure NetApp Files to improve the security of your data.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-security/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Azure security for Azure NetApp Files",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-netapp-files-security/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-azure-netapp-files",
+          "title": "Laboratorio opcional: aplica Azure NetApp Files fundamentals",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Azure NetApp Files fundamentals**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

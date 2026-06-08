@@ -21,6 +21,7 @@ export class AppShellComponent {
 
   protected readonly employeePrimaryLinks = [
     { label: 'Inicio', path: '/dashboard', icon: 'home' },
+    { label: 'Cursos', path: '/catalog', icon: 'plan' },
   ];
 
   protected readonly employeeProgressLinks = [

@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-implement-windows-server-hybrid-cloud-infrastr",
+  "track": "azure",
+  "title": "Implement a Windows Server hybrid cloud infrastructure",
+  "summary": "Hybrid cloud infrastructure implementation.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 430,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-windows-server-hybrid-cloud-infrastructure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-windows-server-hybrid-cloud-infrastructure",
+      "title": "Implement a Windows Server hybrid cloud infrastructure",
+      "summary": "Hybrid cloud infrastructure implementation.",
+      "order": 1,
+      "duration_minutes": 430,
+      "lessons": [
+        {
+          "lesson_key": "wwl-implement-hybrid-network-infrastructure",
+          "title": "Implement hybrid network infrastructure",
+          "order": 1,
+          "duration_minutes": 69,
+          "content_md": "You learn to connect your on-premises environment to Azure, implement subnets and routing between your on-premises and cloud environments, and ensure that workloads in the cloud and on-premises perform DNS resolution to locate each other.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-hybrid-network-infrastructure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement hybrid network infrastructure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-hybrid-network-infrastructure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-hybrid-identity-with-windows-server",
+          "title": "Implement hybrid identity with Windows Server",
+          "order": 2,
+          "duration_minutes": 109,
+          "content_md": "Implement hybrid identity with Windows Server\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-hybrid-identity-windows-server/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement hybrid identity with Windows Server",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-hybrid-identity-windows-server/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-migrate-premises-windows-server-instances-to-azure-iaas",
+          "title": "Migrate on-premises Windows Server instances to Azure IaaS virtual machines",
+          "order": 3,
+          "duration_minutes": 41,
+          "content_md": "You're able to plan a migration and select appropriate server migration tools. You'll also learn how to use Azure Migrate, how to assess physical servers, and how to migrate those servers.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-premises-windows-server-instances-azure-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate on-premises Windows Server instances to Azure IaaS virtual machines",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-premises-windows-server-instances-azure-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-hybrid-file-server-infrastructure",
+          "title": "Implement a hybrid file server infrastructure",
+          "order": 4,
+          "duration_minutes": 92,
+          "content_md": "Implement a hybrid file server infrastructure using Azure Files and Azure File Sync, and migrate SMB file servers to Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-hybrid-file-server-infrastructure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement a hybrid file server infrastructure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-hybrid-file-server-infrastructure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-hybrid-backup-recovery-with-windows-server-iaa",
+          "title": "Implement hybrid backup and recovery with Windows Server IaaS",
+          "order": 5,
+          "duration_minutes": 61,
+          "content_md": "Learn about Azure Backup before learning to implement Recovery Vaults and Azure Backup Policies. Learn to implement Windows IaaS VM recovery, perform backup and restore of on-premises workloads, and manage Azure VM backups.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-hybrid-backup-recovery-windows-server-iaas/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement hybrid backup and recovery with Windows Server IaaS",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-hybrid-backup-recovery-windows-server-iaas/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-scale-high-availability-with-windows-server-vm",
+          "title": "Implement scale and high availability with Windows Server VM",
+          "order": 6,
+          "duration_minutes": 58,
+          "content_md": "Learn how to implement scaling for virtual machine scale sets and load-balanced VMs. Also learn how to implement Azure Site Recovery.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-scale-high-availability-windows-server-virtual-machine/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement scale and high availability with Windows Server VM",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-scale-high-availability-windows-server-virtual-machine/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-windows-server-hybrid-cloud-infrastructure",
+          "title": "Laboratorio opcional: aplica Implement a Windows Server hybrid cloud infrastructure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement a Windows Server hybrid cloud infrastructure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

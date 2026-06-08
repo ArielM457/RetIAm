@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-query-use-common-information-model-windows-man",
+  "track": "azure",
+  "title": "Query management information by using Common Information Model and Windows Management Instrumentation",
+  "summary": "This learning path covers Windows Management Instrumentation (WMI) and Common Information Model (CIM). These technologies help to access information about a computer. Additionally, both technologies provide local and remote access to management information from the operating system, computer hardware, and installed software.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 99,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/query-use-common-information-model-windows-management/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-query-use-common-information-model-windows-management",
+      "title": "Query management information by using Common Information Model and Windows Management Instrumentation",
+      "summary": "This learning path covers Windows Management Instrumentation (WMI) and Common Information Model (CIM). These technologies help to access information about a computer. Additionally, both technologies provide local and remote access to management information from the operating system, computer hardware, and installed software.",
+      "order": 1,
+      "duration_minutes": 99,
+      "lessons": [
+        {
+          "lesson_key": "wwl-review-common-information-model-windows-management-instr",
+          "title": "Review CIM and WMI",
+          "order": 1,
+          "duration_minutes": 29,
+          "content_md": "This module covers CIM and WMI technologies to connect to a common information repository that contains management information that you can query and manipulate. The repository contains all kinds of information about a computer system or device, including hardware, software, hardware drivers, components, roles, services, user settings, and just about every configurable item and the current state of that item. An understanding of the framework and syntax of CIM and WMI will help you know and control almost every aspect of an operating system environment.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/review-common-information-model-windows-management-instrumentation/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Review CIM and WMI",
+              "url": "https://learn.microsoft.com/en-us/training/modules/review-common-information-model-windows-management-instrumentation/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-query-configuration-information",
+          "title": "Query configuration information by using CIM and WMI",
+          "order": 2,
+          "duration_minutes": 41,
+          "content_md": "This module explains the structure of the namespaces that contain classes and also how to query instances of a class. It covers how to query remote computers by using ad-hoc connections and CIM sessions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/query-configuration-information/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Query configuration information by using CIM and WMI",
+              "url": "https://learn.microsoft.com/en-us/training/modules/query-configuration-information/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-query-manipulate-repository-objects",
+          "title": "Query and manipulate repository objects by using CIM and WMI methods",
+          "order": 3,
+          "duration_minutes": 29,
+          "content_md": "This module explains how to use CIM and WMI to make changes by using methods. The methods available vary depending on the type of object. Discovering and understanding these methods is an important step in querying and manipulating the repository information.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/query-manipulate-repository-objects/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Query and manipulate repository objects by using CIM and WMI methods",
+              "url": "https://learn.microsoft.com/en-us/training/modules/query-manipulate-repository-objects/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-query-use-common-information-model-windows-management",
+          "title": "Laboratorio opcional: aplica Query management information by using Common Information Model and Windows Management Instrumentation",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Query management information by using Common Information Model and Windows Management Instrumentation**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

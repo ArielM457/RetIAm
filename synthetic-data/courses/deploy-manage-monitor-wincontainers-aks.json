@@ -1,0 +1,183 @@
+{
+  "certification_code": "deploy-manage-monitor-wincontainers-aks",
+  "track": "azure",
+  "title": "Deploy, manage, and monitor Windows containers on Azure Kubernetes Service",
+  "summary": "Learn how to deploy, manage, monitor, and operate Windows containers on Azure Kubernetes Service and AKS Hybrid by examining the core principles of Windows containers and Kubernetes.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 446,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/deploy-manage-monitor-wincontainers-aks/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "deploy-manage-monitor-wincontainers-aks",
+      "title": "Deploy, manage, and monitor Windows containers on Azure Kubernetes Service",
+      "summary": "Learn how to deploy, manage, monitor, and operate Windows containers on Azure Kubernetes Service and AKS Hybrid by examining the core principles of Windows containers and Kubernetes.",
+      "order": 1,
+      "duration_minutes": 446,
+      "lessons": [
+        {
+          "lesson_key": "intro-to-docker-containers",
+          "title": "Introduction to Docker containers",
+          "order": 1,
+          "duration_minutes": 32,
+          "content_md": "Introduction to Docker containers\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-docker-containers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Docker containers",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-docker-containers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-run-containers-windows-server",
+          "title": "Run containers on Windows Server",
+          "order": 2,
+          "duration_minutes": 48,
+          "content_md": "Run containers on Windows Server\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/run-containers-windows-server/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Run containers on Windows Server",
+              "url": "https://learn.microsoft.com/en-us/training/modules/run-containers-windows-server/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "intro-to-containers",
+          "title": "Build a containerized web application with Docker",
+          "order": 3,
+          "duration_minutes": 57,
+          "content_md": "Use Docker to build, store, and manage private container images with the Azure Container Registry.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-containers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build a containerized web application with Docker",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-containers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "intro-to-kubernetes",
+          "title": "Introduction to Kubernetes",
+          "order": 4,
+          "duration_minutes": 53,
+          "content_md": "Get acquainted with the Kubernetes open-source container-orchestration system for automating application deployment, scaling, and management.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-kubernetes/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Kubernetes",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-kubernetes/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "intro-to-azure-kubernetes-service",
+          "title": "Introduction to Azure Kubernetes Service",
+          "order": 5,
+          "duration_minutes": 25,
+          "content_md": "Get acquainted with the Azure Kubernetes open-source container-orchestration system for automating application deployment, scaling, and management.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-azure-kubernetes-service/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure Kubernetes Service",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-azure-kubernetes-service/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-azure-kubernetes-service-azure-stack-hci",
+          "title": "Manage Azure Kubernetes Service on Azure Stack HCI",
+          "order": 6,
+          "duration_minutes": 66,
+          "content_md": "Manage Azure Kubernetes Service on Azure Stack HCI\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-azure-kubernetes-service-azure-stack-hci/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage Azure Kubernetes Service on Azure Stack HCI",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-azure-kubernetes-service-azure-stack-hci/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "aks-deploy-container-app",
+          "title": "Deploy a containerized application on Azure Kubernetes Service",
+          "order": 7,
+          "duration_minutes": 44,
+          "content_md": "Explore how to create and deploy a containerized application by using Azure Kubernetes Service declarative manifest files.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/aks-deploy-container-app/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy a containerized application on Azure Kubernetes Service",
+              "url": "https://learn.microsoft.com/en-us/training/modules/aks-deploy-container-app/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-apply-storage-concepts-to-windows-containers",
+          "title": "Apply storage concepts to Windows containers running on Azure Kubernetes Service (AKS) and AKS Hybrid",
+          "order": 8,
+          "duration_minutes": 56,
+          "content_md": "Learn storage concepts that help you solve real problems with Windows containers running on Azure Kubernetes Service (AKS) and AKS Hybrid.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/apply-storage-concepts-to-windows-containers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Apply storage concepts to Windows containers running on Azure Kubernetes Service (AKS) and AKS Hybrid",
+              "url": "https://learn.microsoft.com/en-us/training/modules/apply-storage-concepts-to-windows-containers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-apply-networking-concepts-to-windows-containers",
+          "title": "Apply Networking concepts to Windows containers running on Azure Kubernetes Service (AKS) and AKS Hybrid",
+          "order": 9,
+          "duration_minutes": 65,
+          "content_md": "Learn networking concepts that help you solve real problems with Windows containers running on Azure Kubernetes Service (AKS) and AKS Hybrid.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/apply-networking-concepts-to-windows-containers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Apply Networking concepts to Windows containers running on Azure Kubernetes Service (AKS) and AKS Hybrid",
+              "url": "https://learn.microsoft.com/en-us/training/modules/apply-networking-concepts-to-windows-containers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-deploy-manage-monitor-wincontainers-aks",
+          "title": "Laboratorio opcional: aplica Deploy, manage, and monitor Windows containers on Azure Kubernetes Service",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Deploy, manage, and monitor Windows containers on Azure Kubernetes Service**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

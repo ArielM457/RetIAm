@@ -1,0 +1,123 @@
+{
+  "certification_code": "wwl-discover-microsoft-ai-leaders-healthcare-indus",
+  "track": "azure",
+  "title": "Discover AI for leaders in healthcare",
+  "summary": "In this learning path, healthcare business leaders will find the knowledge and resources to adopt AI in their organizations. It discusses available resources, strategy, responsible practices, and finance use cases.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 187,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/discover-microsoft-ai-leaders-healthcare-industry/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-discover-microsoft-ai-leaders-healthcare-industry",
+      "title": "Discover AI for leaders in healthcare",
+      "summary": "In this learning path, healthcare business leaders will find the knowledge and resources to adopt AI in their organizations. It discusses available resources, strategy, responsible practices, and finance use cases.",
+      "order": 1,
+      "duration_minutes": 187,
+      "lessons": [
+        {
+          "lesson_key": "wwl-leverage-ai-tools",
+          "title": "Leverage AI tools and resources for your business",
+          "order": 1,
+          "duration_minutes": 42,
+          "content_md": "Learn how to use AI tools and resources for your business.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/leverage-ai-tools/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Leverage AI tools and resources for your business",
+              "url": "https://learn.microsoft.com/en-us/training/modules/leverage-ai-tools/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-create-business-value",
+          "title": "Create business value with AI",
+          "order": 2,
+          "duration_minutes": 31,
+          "content_md": "Learn how to align AI to business strategy and ensure readiness using essential drivers for scalable, impactful, secure adoption.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-business-value/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create business value with AI",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-business-value/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-embrace-responsible-ai-principles-practices",
+          "title": "Embrace responsible AI principles and practices",
+          "order": 3,
+          "duration_minutes": 58,
+          "content_md": "Explore six principles to guide AI development and use - fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/embrace-responsible-ai-principles-practices/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Embrace responsible AI principles and practices",
+              "url": "https://learn.microsoft.com/en-us/training/modules/embrace-responsible-ai-principles-practices/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-scale-ai",
+          "title": "Scale AI in your organization",
+          "order": 4,
+          "duration_minutes": 23,
+          "content_md": "Learn enterprise AI management with our free open online course, including scaling AI.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/scale-ai/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Scale AI in your organization",
+              "url": "https://learn.microsoft.com/en-us/training/modules/scale-ai/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-define-microsoft-ai-strategy-healthcare",
+          "title": "Define a Microsoft AI strategy to create business value in healthcare",
+          "order": 5,
+          "duration_minutes": 33,
+          "content_md": "Discover AI use cases and scenarios for healthcare. Get familiar with Microsoft AI tools and services for healthcare. Learn from real success stories.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/define-microsoft-ai-strategy-healthcare/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Define a Microsoft AI strategy to create business value in healthcare",
+              "url": "https://learn.microsoft.com/en-us/training/modules/define-microsoft-ai-strategy-healthcare/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-discover-microsoft-ai-leaders-healthcare-industry",
+          "title": "Laboratorio opcional: aplica Discover AI for leaders in healthcare",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Discover AI for leaders in healthcare**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

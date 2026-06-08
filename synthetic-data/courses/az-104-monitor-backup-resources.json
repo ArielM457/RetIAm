@@ -1,0 +1,93 @@
+{
+  "certification_code": "az-104-monitor-backup-resources",
+  "track": "azure",
+  "title": "AZ-104: Monitor and back up Azure resources",
+  "summary": "AZ-104: Monitor and back up Azure resources",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 88,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/az-104-monitor-backup-resources/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "az-104-monitor-backup-resources",
+      "title": "AZ-104: Monitor and back up Azure resources",
+      "summary": "AZ-104: Monitor and back up Azure resources",
+      "order": 1,
+      "duration_minutes": 88,
+      "lessons": [
+        {
+          "lesson_key": "introduction-to-azure-backup",
+          "title": "Introduction to Azure Backup",
+          "order": 1,
+          "duration_minutes": 18,
+          "content_md": "Evaluate whether Azure Backup is appropriate to use for your backup needs and describe how the features of Azure Backup work to provide backup solutions for your needs.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-azure-backup/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure Backup",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-azure-backup/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "protect-virtual-machines-with-azure-backup",
+          "title": "Protect your virtual machines by using Azure Backup",
+          "order": 2,
+          "duration_minutes": 35,
+          "content_md": "Use Azure Backup to help protect on-premises servers, virtual machines, SQL Server, Azure file shares, and other workloads.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/protect-virtual-machines-with-azure-backup/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Protect your virtual machines by using Azure Backup",
+              "url": "https://learn.microsoft.com/en-us/training/modules/protect-virtual-machines-with-azure-backup/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-monitor-azure-vm-using-diagnostic-data",
+          "title": "Monitor your Azure virtual machines with Azure Monitor",
+          "order": 3,
+          "duration_minutes": 35,
+          "content_md": "Learn how to monitor your Azure VMs by using Azure Monitor to collect and analyze VM host and client metrics and logs.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Monitor your Azure virtual machines with Azure Monitor",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-az-104-monitor-backup-resources",
+          "title": "Laboratorio opcional: aplica AZ-104: Monitor and back up Azure resources",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **AZ-104: Monitor and back up Azure resources**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-implement-azure-functions",
+  "track": "azure",
+  "title": "Implement Azure Functions",
+  "summary": "Learn how to create and deploy Azure Functions. Explore hosting options, bindings, and triggers.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 58,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-azure-functions/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-azure-functions",
+      "title": "Implement Azure Functions",
+      "summary": "Learn how to create and deploy Azure Functions. Explore hosting options, bindings, and triggers.",
+      "order": 1,
+      "duration_minutes": 58,
+      "lessons": [
+        {
+          "lesson_key": "wwl-explore-azure-functions",
+          "title": "Explore Azure Functions",
+          "order": 1,
+          "duration_minutes": 20,
+          "content_md": "Learn how Azure Functions can be a great solution for data processing, systems integration, and building simple APIs and microservices.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-azure-functions/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore Azure Functions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-azure-functions/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-develop-azure-functions",
+          "title": "Develop Azure Functions",
+          "order": 2,
+          "duration_minutes": 38,
+          "content_md": "Learn how to create and deploy Azure Functions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/develop-azure-functions/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Develop Azure Functions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/develop-azure-functions/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-azure-functions",
+          "title": "Laboratorio opcional: aplica Implement Azure Functions",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement Azure Functions**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

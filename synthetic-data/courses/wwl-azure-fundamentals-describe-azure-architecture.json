@@ -1,0 +1,123 @@
+{
+  "certification_code": "wwl-azure-fundamentals-describe-azure-architecture",
+  "track": "azure",
+  "title": "Introduction to Cloud Infrastructure: Describe Azure architecture and services",
+  "summary": "Architecture and services component of the Introduction to Cloud Infrastructure training",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 168,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/azure-fundamentals-describe-azure-architecture-services/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-azure-fundamentals-describe-azure-architecture-services",
+      "title": "Introduction to Cloud Infrastructure: Describe Azure architecture and services",
+      "summary": "Architecture and services component of the Introduction to Cloud Infrastructure training",
+      "order": 1,
+      "duration_minutes": 168,
+      "lessons": [
+        {
+          "lesson_key": "wwl-describe-core-architectural-components-of-azure",
+          "title": "Describe the core architectural components of Azure",
+          "order": 1,
+          "duration_minutes": 28,
+          "content_md": "Describe the core architectural components of Azure\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe the core architectural components of Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-azure-compute-networking-services",
+          "title": "Describe Azure compute services",
+          "order": 2,
+          "duration_minutes": 33,
+          "content_md": "Introduction to Azure compute services (virtual machines, containers, Azure Functions), application hosting options, and AI/ML and IoT/Edge service categories.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe Azure compute services",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-azure-networking-services",
+          "title": "Describe Azure networking services",
+          "order": 3,
+          "duration_minutes": 24,
+          "content_md": "Introduction to core Azure networking services, including virtual networks, VPN Gateway, ExpressRoute, and Azure DNS.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-azure-networking-services/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe Azure networking services",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-azure-networking-services/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-azure-storage-services",
+          "title": "Describe Azure storage services",
+          "order": 4,
+          "duration_minutes": 36,
+          "content_md": "Azure storage services, tiers, redundancy options, and migration options and tools.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe Azure storage services",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-azure-identity-access-security",
+          "title": "Describe Azure identity, access, and security",
+          "order": 5,
+          "duration_minutes": 47,
+          "content_md": "Describe Azure identity, access, and security\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe Azure identity, access, and security",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-azure-fundamentals-describe-azure-architecture-services",
+          "title": "Laboratorio opcional: aplica Introduction to Cloud Infrastructure: Describe Azure architecture and services",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduction to Cloud Infrastructure: Describe Azure architecture and services**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

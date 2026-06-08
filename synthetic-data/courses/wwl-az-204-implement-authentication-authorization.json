@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-az-204-implement-authentication-authorization",
+  "track": "azure",
+  "title": "Implement user authentication and authorization",
+  "summary": "Learn how to implement authentication and authorization to resources by using the Microsoft identity platform, Microsoft Authentication Library, shared access signatures, and use Microsoft Graph.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 105,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/az-204-implement-authentication-authorization/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-az-204-implement-authentication-authorization",
+      "title": "Implement user authentication and authorization",
+      "summary": "Learn how to implement authentication and authorization to resources by using the Microsoft identity platform, Microsoft Authentication Library, shared access signatures, and use Microsoft Graph.",
+      "order": 1,
+      "duration_minutes": 105,
+      "lessons": [
+        {
+          "lesson_key": "wwl-explore-microsoft-identity-platform",
+          "title": "Explore the Microsoft identity platform",
+          "order": 1,
+          "duration_minutes": 21,
+          "content_md": "Learn the core features and functionality of the Microsoft identity platform including authentication, libraries, and app management tools.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-microsoft-identity-platform/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore the Microsoft identity platform",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-microsoft-identity-platform/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-authentication-by-using-microsoft-authenticati",
+          "title": "Implement authentication by using the Microsoft Authentication Library",
+          "order": 2,
+          "duration_minutes": 30,
+          "content_md": "Implement authentication by using the Microsoft Authentication Library\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-authentication-by-using-microsoft-authentication-library/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement authentication by using the Microsoft Authentication Library",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-authentication-by-using-microsoft-authentication-library/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-shared-access-signatures",
+          "title": "Implement shared access signatures",
+          "order": 3,
+          "duration_minutes": 18,
+          "content_md": "Implement shared access signatures\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-shared-access-signatures/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement shared access signatures",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-shared-access-signatures/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-microsoft-graph",
+          "title": "Explore Microsoft Graph",
+          "order": 4,
+          "duration_minutes": 36,
+          "content_md": "Explore Microsoft Graph\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/microsoft-graph/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore Microsoft Graph",
+              "url": "https://learn.microsoft.com/en-us/training/modules/microsoft-graph/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-az-204-implement-authentication-authorization",
+          "title": "Laboratorio opcional: aplica Implement user authentication and authorization",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement user authentication and authorization**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

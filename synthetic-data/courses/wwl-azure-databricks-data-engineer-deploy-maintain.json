@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-azure-databricks-data-engineer-deploy-maintain",
+  "track": "azure",
+  "title": "Deploy and maintain data pipelines and workloads with Azure Databricks",
+  "summary": "Master the complete lifecycle of building, deploying, and maintaining production-ready data pipelines in Azure Databricks—from design and orchestration to monitoring and optimization.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 371,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/azure-databricks-data-engineer-deploy-maintain-data-pipelines-workloads/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-azure-databricks-data-engineer-deploy-maintain-data-pipe",
+      "title": "Deploy and maintain data pipelines and workloads with Azure Databricks",
+      "summary": "Master the complete lifecycle of building, deploying, and maintaining production-ready data pipelines in Azure Databricks—from design and orchestration to monitoring and optimization.",
+      "order": 1,
+      "duration_minutes": 371,
+      "lessons": [
+        {
+          "lesson_key": "wwl-design-implement-data-pipelines",
+          "title": "Design and implement data pipelines with Azure Databricks",
+          "order": 1,
+          "duration_minutes": 96,
+          "content_md": "Learn how to design and implement robust data pipelines using Lakehouse architecture principles, medallion architecture, and Lakeflow Spark Declarative Pipelines in Azure Databricks.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/design-implement-data-pipelines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Design and implement data pipelines with Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/design-implement-data-pipelines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-lakeflow-jobs",
+          "title": "Implement Lakeflow Jobs with Azure Databricks",
+          "order": 2,
+          "duration_minutes": 97,
+          "content_md": "Learn how to create, configure, schedule, and monitor Lakeflow Jobs in Azure Databricks to automate your data pipelines.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-lakeflow-jobs/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement Lakeflow Jobs with Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-lakeflow-jobs/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-development-lifecycle-processes-azure-databric",
+          "title": "Implement development lifecycle processes in Azure Databricks",
+          "order": 3,
+          "duration_minutes": 87,
+          "content_md": "Learn how to implement development lifecycle processes in Azure Databricks, including Git version control, branching strategies, testing approaches, and Declarative Automation Bundle deployment using the CLI.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-development-lifecycle-processes-in-azure-databricks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement development lifecycle processes in Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-development-lifecycle-processes-in-azure-databricks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-monitor-troubleshoot-optimize-workloads-azure-databricks",
+          "title": "Monitor, troubleshoot and optimize workloads in Azure Databricks",
+          "order": 4,
+          "duration_minutes": 91,
+          "content_md": "Learn how to monitor cluster consumption, troubleshoot job failures, diagnose Spark performance issues, and implement log streaming to Azure Log Analytics for centralized monitoring of Azure Databricks workloads.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-troubleshoot-optimize-workloads-azure-databricks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Monitor, troubleshoot and optimize workloads in Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-troubleshoot-optimize-workloads-azure-databricks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-azure-databricks-data-engineer-deploy-maintain-data-pipe",
+          "title": "Laboratorio opcional: aplica Deploy and maintain data pipelines and workloads with Azure Databricks",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Deploy and maintain data pipelines and workloads with Azure Databricks**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

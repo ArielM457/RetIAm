@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-plan-implement-azure-cosmos-db-sql-api",
+  "track": "azure",
+  "title": "Plan and implement Azure Cosmos DB for NoSQL",
+  "summary": "Plan and implement Azure Cosmos DB for NoSQL",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 111,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/plan-implement-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-plan-implement-azure-cosmos-db-sql-api",
+      "title": "Plan and implement Azure Cosmos DB for NoSQL",
+      "summary": "Plan and implement Azure Cosmos DB for NoSQL",
+      "order": 1,
+      "duration_minutes": 111,
+      "lessons": [
+        {
+          "lesson_key": "wwl-plan-resource-requirements",
+          "title": "Plan Resource Requirements",
+          "order": 1,
+          "duration_minutes": 23,
+          "content_md": "Familiarize yourself with the various configuration options for a new Azure Cosmos DB for NoSQL account.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/plan-resource-requirements/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan Resource Requirements",
+              "url": "https://learn.microsoft.com/en-us/training/modules/plan-resource-requirements/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-azure-cosmos-db-sql-api",
+          "title": "Configure Azure Cosmos DB for NoSQL",
+          "order": 2,
+          "duration_minutes": 36,
+          "content_md": "Select between the various throughput offerings in Azure Cosmos DB for NoSQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-moving-data-into-out-of-azure-cosmos-db-sql-api",
+          "title": "Move data into and out of Azure Cosmos DB for NoSQL",
+          "order": 3,
+          "duration_minutes": 52,
+          "content_md": "Migrate data into and out of Azure Cosmos DB for NoSQL using Azure services and open-source solutions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/move-data-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Move data into and out of Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/move-data-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-plan-implement-azure-cosmos-db-sql-api",
+          "title": "Laboratorio opcional: aplica Plan and implement Azure Cosmos DB for NoSQL",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Plan and implement Azure Cosmos DB for NoSQL**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

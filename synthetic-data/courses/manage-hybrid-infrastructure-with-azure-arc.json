@@ -1,0 +1,108 @@
+{
+  "certification_code": "manage-hybrid-infrastructure-with-azure-arc",
+  "track": "azure",
+  "title": "Bring Azure innovation to your hybrid environments with Azure Arc",
+  "summary": "Learn how to work with Azure Arc enabled servers, data services and Kubernetes.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 146,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/manage-hybrid-infrastructure-with-azure-arc/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "manage-hybrid-infrastructure-with-azure-arc",
+      "title": "Bring Azure innovation to your hybrid environments with Azure Arc",
+      "summary": "Learn how to work with Azure Arc enabled servers, data services and Kubernetes.",
+      "order": 1,
+      "duration_minutes": 146,
+      "lessons": [
+        {
+          "lesson_key": "azure-plan-deploy-azure-arc-enabled-servers",
+          "title": "Plan and deploy Azure Arc-enabled servers at scale",
+          "order": 1,
+          "duration_minutes": 43,
+          "content_md": "Understand the capabilities and architecture of Azure Arc-enabled servers. Learn how to test and select the right deployment method for your machines. Finally, adopt best practices and advanced security considerations for Azure Arc-enabled servers.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/plan-deploy-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan and deploy Azure Arc-enabled servers at scale",
+              "url": "https://learn.microsoft.com/en-us/training/modules/plan-deploy-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-secure-azure-arc-enabled-servers",
+          "title": "Secure your hybrid and multicloud machines by using Azure Arc-enabled servers",
+          "order": 2,
+          "duration_minutes": 38,
+          "content_md": "Learn about the benefits of and how to onboard Azure Arc-enabled servers to Microsoft Defender for Cloud, Microsoft Defender for Servers, and Microsoft Sentinel.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/secure-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure your hybrid and multicloud machines by using Azure Arc-enabled servers",
+              "url": "https://learn.microsoft.com/en-us/training/modules/secure-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-monitor-azure-arc-enabled-servers",
+          "title": "Monitor your hybrid and multicloud machines through Azure Arc-enabled servers",
+          "order": 3,
+          "duration_minutes": 36,
+          "content_md": "Understand the monitoring capabilities of Azure Arc-enabled servers. Learn about the benefits of and how to onboard Azure Arc-enabled servers to Azure Logs and Metrics, VM Insights, and Azure Monitor Alerts.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Monitor your hybrid and multicloud machines through Azure Arc-enabled servers",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-govern-azure-arc-enabled-servers",
+          "title": "Govern your hybrid and multicloud machines through Azure Arc-enabled servers",
+          "order": 4,
+          "duration_minutes": 29,
+          "content_md": "Understand the governance capabilities of Azure Arc-enabled servers. Learn about the benefits of and how to onboard Azure Arc-enabled servers to Azure Policy, Azure Automation, and Azure Automanage.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/govern-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Govern your hybrid and multicloud machines through Azure Arc-enabled servers",
+              "url": "https://learn.microsoft.com/en-us/training/modules/govern-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-manage-hybrid-infrastructure-with-azure-arc",
+          "title": "Laboratorio opcional: aplica Bring Azure innovation to your hybrid environments with Azure Arc",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Bring Azure innovation to your hybrid environments with Azure Arc**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

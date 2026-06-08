@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-implement-azure-sql-database-security",
+  "track": "azure",
+  "title": "Implement security for Azure SQL databases",
+  "summary": "Implement end-to-end security for Azure SQL Database and SQL Managed Instance. Configure Entra ID authentication with managed identity access, deploy private endpoints, and apply encryption and access controls to protect sensitive financial data. Establish compliant audit trails and enable Microsoft Defender for Databases to detect SQL injection, anomalous access, and vulnerability exposures.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 62,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-azure-sql-database-security/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-azure-sql-database-security",
+      "title": "Implement security for Azure SQL databases",
+      "summary": "Implement end-to-end security for Azure SQL Database and SQL Managed Instance. Configure Entra ID authentication with managed identity access, deploy private endpoints, and apply encryption and access controls to protect sensitive financial data. Establish compliant audit trails and enable Microsoft Defender for Databases to detect SQL injection, anomalous access, and vulnerability exposures.",
+      "order": 1,
+      "duration_minutes": 62,
+      "lessons": [
+        {
+          "lesson_key": "wwl-configure-azure-sql-platform-security",
+          "title": "Configure platform-level security for Azure SQL",
+          "order": 1,
+          "duration_minutes": 21,
+          "content_md": "Configure authentication, network isolation, encryption, and access controls for Azure SQL Database and SQL Managed Instance. Implement Microsoft Entra ID–only authentication with managed identity access for AI workloads, deploy private endpoints, and apply transparent data encryption, dynamic data masking, and row-level security to protect sensitive financial data.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-azure-sql-platform-security/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure platform-level security for Azure SQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-azure-sql-platform-security/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-azure-sql-auditing",
+          "title": "Configure auditing for Azure SQL Database and SQL Managed Instance",
+          "order": 2,
+          "duration_minutes": 20,
+          "content_md": "Configure audit logging for Azure SQL Database and SQL Managed Instance to create tamper-resistant compliance records. Set audit action groups, route logs to Azure Monitor, Event Hubs, and immutable blob storage, and configure SQL Managed Instance–specific auditing to meet financial regulatory audit requirements.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-azure-sql-auditing/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure auditing for Azure SQL Database and SQL Managed Instance",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-azure-sql-auditing/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-defender-databases",
+          "title": "Implement Microsoft Defender for Databases",
+          "order": 3,
+          "duration_minutes": 21,
+          "content_md": "Enable Microsoft Defender for Databases to detect SQL injection, anomalous query patterns, and vulnerability exposures across Azure SQL services. Enable protection at subscription scope using Azure Policy, configure vulnerability assessment baselines, and route security alerts to the security operations team.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-defender-databases/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement Microsoft Defender for Databases",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-defender-databases/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-azure-sql-database-security",
+          "title": "Laboratorio opcional: aplica Implement security for Azure SQL databases",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement security for Azure SQL databases**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

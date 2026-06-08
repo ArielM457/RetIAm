@@ -1,0 +1,153 @@
+{
+  "certification_code": "wwl-secure-azure-services-workloads-defender-cloud",
+  "track": "azure",
+  "title": "Secure Azure services and workloads with Microsoft Defender for Cloud regulatory compliance controls",
+  "summary": "Explore network traffic filtering with Network Security Group, set up Microsoft Defender for Cloud, create a Log Analytics workspace, configure Log Analytics agent integration, Azure Key Vault networking, and connect an Azure SQL server using Azure Private Endpoint in the Azure portal. Enhance cloud security effectively. (SC-5002)",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 550,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/secure-azure-services-workloads-defender-cloud/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-secure-azure-services-workloads-defender-cloud",
+      "title": "Secure Azure services and workloads with Microsoft Defender for Cloud regulatory compliance controls",
+      "summary": "Explore network traffic filtering with Network Security Group, set up Microsoft Defender for Cloud, create a Log Analytics workspace, configure Log Analytics agent integration, Azure Key Vault networking, and connect an Azure SQL server using Azure Private Endpoint in the Azure portal. Enhance cloud security effectively. (SC-5002)",
+      "order": 1,
+      "duration_minutes": 550,
+      "lessons": [
+        {
+          "lesson_key": "wwl-examine-defender-cloud-regulatory-compliance-standards",
+          "title": "Examine Defender for Cloud regulatory compliance standards",
+          "order": 1,
+          "duration_minutes": 35,
+          "content_md": "Learn how to use Microsoft Defender for Cloud to streamline regulatory compliance by identifying and addressing issues that hinder meeting compliance standards and achieving certifications.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/examine-defender-cloud-regulatory-compliance-standards/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Examine Defender for Cloud regulatory compliance standards",
+              "url": "https://learn.microsoft.com/en-us/training/modules/examine-defender-cloud-regulatory-compliance-standards/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-enable-defender-cloud-azure-subscription",
+          "title": "Enable Defender for Cloud on your Azure subscription",
+          "order": 2,
+          "duration_minutes": 49,
+          "content_md": "Learn how to connect your Azure subscriptions to Microsoft Defender for Cloud, enabling enhanced security monitoring, compliance management, and the implementation of best practices for threat protection.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/enable-defender-cloud-azure-subscription/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Enable Defender for Cloud on your Azure subscription",
+              "url": "https://learn.microsoft.com/en-us/training/modules/enable-defender-cloud-azure-subscription/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-filter-network-traffic-network-security-group-using-azur",
+          "title": "Filter network traffic with a network security group using the Azure portal",
+          "order": 3,
+          "duration_minutes": 97,
+          "content_md": "Learn to regulate network traffic to your Azure resources by configuring and applying network security groups in the Azure portal, improving your network's security posture.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/filter-network-traffic-network-security-group-using-azure-portal/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Filter network traffic with a network security group using the Azure portal",
+              "url": "https://learn.microsoft.com/en-us/training/modules/filter-network-traffic-network-security-group-using-azure-portal/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-integrate-analytics-agent-defender-cloud",
+          "title": "Collect guest operating system monitoring data from Azure and hybrid virtual machines using Azure Monitor Agent",
+          "order": 4,
+          "duration_minutes": 77,
+          "content_md": "Discover how to set up and integrate a Log Analytics agent with a workspace in Defender for Cloud using the Azure portal, enhancing security data analysis capabilities.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-integrate-analytics-agent-defender-cloud/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Collect guest operating system monitoring data from Azure and hybrid virtual machines using Azure Monitor Agent",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-integrate-analytics-agent-defender-cloud/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-just-in-time-access",
+          "title": "Explore just-in-time virtual machine access",
+          "order": 5,
+          "duration_minutes": 68,
+          "content_md": "Discover how to use Microsoft Defender for Cloud through the Azure portal to ensure the security of your Azure services and workloads, offering continuous threat detection and prevention.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/just-in-time-access/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore just-in-time virtual machine access",
+              "url": "https://learn.microsoft.com/en-us/training/modules/just-in-time-access/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-azure-key-vault-networking-settings",
+          "title": "Configure Azure Key Vault networking settings",
+          "order": 6,
+          "duration_minutes": 147,
+          "content_md": "Learn to configure Azure Key Vault networking settings via the Azure portal, enabling secure access control to your vault, protecting sensitive keys and secrets.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-azure-key-vault-networking-settings/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure Azure Key Vault networking settings",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-azure-key-vault-networking-settings/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-connect-azure-server-private-endpoint-using-azure-portal",
+          "title": "Connect an Azure SQL server using an Azure Private Endpoint using the Azure portal",
+          "order": 7,
+          "duration_minutes": 77,
+          "content_md": "Learn how to securely connect an Azure SQL server using an Azure Private Endpoint via the Azure portal, ensuring private and safe communication with your SQL server.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/connect-azure-server-private-endpoint-using-azure-portal/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Connect an Azure SQL server using an Azure Private Endpoint using the Azure portal",
+              "url": "https://learn.microsoft.com/en-us/training/modules/connect-azure-server-private-endpoint-using-azure-portal/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-secure-azure-services-workloads-defender-cloud",
+          "title": "Laboratorio opcional: aplica Secure Azure services and workloads with Microsoft Defender for Cloud regulatory compliance controls",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Secure Azure services and workloads with Microsoft Defender for Cloud regulatory compliance controls**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -17,6 +17,8 @@ SUFFIX="${SUFFIX:-$(date '+%m%d%H%M')}"
 BASE_NAME="$(sanitize_name "${PROJECT_PREFIX}${SUFFIX}")"
 
 AZURE_SEARCH_SERVICE="${AZURE_SEARCH_SERVICE:-${BASE_NAME}search}"
+# free = $0 (1 por suscripcion, 50MB, suficiente para el demo). basic ~ $75/mes.
+AZURE_SEARCH_SKU="${AZURE_SEARCH_SKU:-free}"
 AZURE_SEARCH_INDEX="${AZURE_SEARCH_INDEX:-retaim-knowledge}"
 AZURE_STORAGE_ACCOUNT="${AZURE_STORAGE_ACCOUNT:-${BASE_NAME}blob}"
 AZURE_BLOB_CONTAINER="${AZURE_BLOB_CONTAINER:-certifications}"
@@ -29,7 +31,7 @@ if ! az search service show --name "${AZURE_SEARCH_SERVICE}" --resource-group "$
     --name "${AZURE_SEARCH_SERVICE}" \
     --resource-group "${RESOURCE_GROUP}" \
     --location "${LOCATION}" \
-    --sku basic \
+    --sku "${AZURE_SEARCH_SKU}" \
     --partition-count 1 \
     --replica-count 1 >/dev/null
 fi

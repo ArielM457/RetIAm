@@ -1,0 +1,93 @@
+{
+  "certification_code": "learn-m365-cybersecurity-multifactor-authenticatio",
+  "track": "azure",
+  "title": "Learn how Microsoft supports using multifactor authentication as part of a cybersecurity solution",
+  "summary": "Multifactor authentication helps secure your environment and resources by requiring that your users confirm their identity by using multiple authentication methods, like a phone call, text message, mobile app notification, or one-time password. You can use multifactor authentication both on-premises and in the cloud to add security for accessing Microsoft online services, remote access applications, and more. This learning path provides an overview of how to use multifactor authentication as part of a cybersecurity solution.The deadline for agencies to adopt multifactor authentication and encryption at rest and in transit to the maximum extent (and report on progress every 60 days), per Section 3 of the Executive Order on Improving the Nation's Cybersecurity, is **November 8, 2021**.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 137,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-mfa-for-cybersecurity/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "learn-m365-cybersecurity-multifactor-authentication",
+      "title": "Learn how Microsoft supports using multifactor authentication as part of a cybersecurity solution",
+      "summary": "Multifactor authentication helps secure your environment and resources by requiring that your users confirm their identity by using multiple authentication methods, like a phone call, text message, mobile app notification, or one-time password. You can use multifactor authentication both on-premises and in the cloud to add security for accessing Microsoft online services, remote access applications, and more. This learning path provides an overview of how to use multifactor authentication as part of a cybersecurity solution.The deadline for agencies to adopt multifactor authentication and encryption at rest and in transit to the maximum extent (and report on progress every 60 days), per Section 3 of the Executive Order on Improving the Nation's Cybersecurity, is **November 8, 2021**.",
+      "order": 1,
+      "duration_minutes": 137,
+      "lessons": [
+        {
+          "lesson_key": "azure-security-secure-aad-users-with-mfa",
+          "title": "Secure Microsoft Entra users with multifactor authentication",
+          "order": 1,
+          "duration_minutes": 38,
+          "content_md": "Learn how to use multifactor authentication with Microsoft Entra ID to harden your user accounts.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/secure-aad-users-with-mfa/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure Microsoft Entra users with multifactor authentication",
+              "url": "https://learn.microsoft.com/en-us/training/modules/secure-aad-users-with-mfa/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-m365-audit-identity-access-management",
+          "title": "Understand Microsoft 365 identity and access management",
+          "order": 2,
+          "duration_minutes": 29,
+          "content_md": "Learn how Microsoft 365 implements the principle of Zero Standing Access (ZSA) to protect production environments and customer data using Just-In-Time (JIT) and Just-Enough-Access (JEA).\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/audit-identity-access-management/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand Microsoft 365 identity and access management",
+              "url": "https://learn.microsoft.com/en-us/training/modules/audit-identity-access-management/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-manage-hybrid-identity",
+          "title": "Implement and manage hybrid identity",
+          "order": 3,
+          "duration_minutes": 70,
+          "content_md": "Creating a hybrid-identity solution to use your on-premises active directory can be challenging. Explore how to implement a secure hybrid-identity solution.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-manage-hybrid-identity/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement and manage hybrid identity",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-manage-hybrid-identity/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-learn-m365-cybersecurity-multifactor-authentication",
+          "title": "Laboratorio opcional: aplica Learn how Microsoft supports using multifactor authentication as part of a cybersecurity solution",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Learn how Microsoft supports using multifactor authentication as part of a cybersecurity solution**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

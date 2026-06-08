@@ -1,0 +1,108 @@
+{
+  "certification_code": "intro-to-kubernetes-on-azure",
+  "track": "azure",
+  "title": "Introduction to Kubernetes on Azure",
+  "summary": "Learn about the basics of Docker containers, container orchestration with Kubernetes, and managed clusters on Azure Kubernetes Service.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 154,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/intro-to-kubernetes-on-azure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "intro-to-kubernetes-on-azure",
+      "title": "Introduction to Kubernetes on Azure",
+      "summary": "Learn about the basics of Docker containers, container orchestration with Kubernetes, and managed clusters on Azure Kubernetes Service.",
+      "order": 1,
+      "duration_minutes": 154,
+      "lessons": [
+        {
+          "lesson_key": "intro-to-docker-containers",
+          "title": "Introduction to Docker containers",
+          "order": 1,
+          "duration_minutes": 32,
+          "content_md": "Introduction to Docker containers\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-docker-containers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Docker containers",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-docker-containers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "intro-to-kubernetes",
+          "title": "Introduction to Kubernetes",
+          "order": 2,
+          "duration_minutes": 53,
+          "content_md": "Get acquainted with the Kubernetes open-source container-orchestration system for automating application deployment, scaling, and management.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-kubernetes/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Kubernetes",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-kubernetes/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "intro-to-azure-kubernetes-service",
+          "title": "Introduction to Azure Kubernetes Service",
+          "order": 3,
+          "duration_minutes": 25,
+          "content_md": "Get acquainted with the Azure Kubernetes open-source container-orchestration system for automating application deployment, scaling, and management.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-azure-kubernetes-service/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure Kubernetes Service",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-azure-kubernetes-service/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "aks-deploy-container-app",
+          "title": "Deploy a containerized application on Azure Kubernetes Service",
+          "order": 4,
+          "duration_minutes": 44,
+          "content_md": "Explore how to create and deploy a containerized application by using Azure Kubernetes Service declarative manifest files.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/aks-deploy-container-app/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy a containerized application on Azure Kubernetes Service",
+              "url": "https://learn.microsoft.com/en-us/training/modules/aks-deploy-container-app/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-intro-to-kubernetes-on-azure",
+          "title": "Laboratorio opcional: aplica Introduction to Kubernetes on Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduction to Kubernetes on Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

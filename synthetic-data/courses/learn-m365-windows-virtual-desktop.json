@@ -1,0 +1,168 @@
+{
+  "certification_code": "learn-m365-windows-virtual-desktop",
+  "track": "azure",
+  "title": "Deliver remote desktops and apps with Azure Virtual Desktop",
+  "summary": "Azure Virtual Desktop on Microsoft Azure is a desktop and app virtualization service that runs on the cloud. Azure Virtual Desktop works across devices – including Windows, Mac, iOS, and Android – with full-featured apps that you can use to access remote desktops and apps.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 335,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/m365-wvd/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "learn-m365-windows-virtual-desktop",
+      "title": "Deliver remote desktops and apps with Azure Virtual Desktop",
+      "summary": "Azure Virtual Desktop on Microsoft Azure is a desktop and app virtualization service that runs on the cloud. Azure Virtual Desktop works across devices – including Windows, Mac, iOS, and Android – with full-featured apps that you can use to access remote desktops and apps.",
+      "order": 1,
+      "duration_minutes": 335,
+      "lessons": [
+        {
+          "lesson_key": "learn-m365-wvd-intro",
+          "title": "Introduction to Azure Virtual Desktop",
+          "order": 1,
+          "duration_minutes": 28,
+          "content_md": "Learn how to use Azure Virtual Desktop to deliver remote desktop and remote app experiences in Microsoft Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/m365-wvd-intro/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure Virtual Desktop",
+              "url": "https://learn.microsoft.com/en-us/training/modules/m365-wvd-intro/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-m365-prepare-for-wvd",
+          "title": "Prepare for Azure Virtual Desktop",
+          "order": 2,
+          "duration_minutes": 32,
+          "content_md": "Learn how to prepare for Azure Virtual Desktop - a cloud-based virtualization solution running on Microsoft Azure. Azure Virtual Desktop is an elastically scalable service to deliver remote desktop and remote app experiences - without having to manage the underlying server infrastructure. Review the prerequisites and tools provided by Microsoft get ready to provision your first Azure Virtual Desktop host pool.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/m365-prepare-for-wvd/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Prepare for Azure Virtual Desktop",
+              "url": "https://learn.microsoft.com/en-us/training/modules/m365-prepare-for-wvd/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-m365-deploy-wvd",
+          "title": "Deploy Azure Virtual Desktop",
+          "order": 3,
+          "duration_minutes": 39,
+          "content_md": "Learn how to deploy Azure Virtual Desktop and customize the workspace for your users.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/m365-deploy-wvd/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy Azure Virtual Desktop",
+              "url": "https://learn.microsoft.com/en-us/training/modules/m365-deploy-wvd/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-m365-optimize-wvd",
+          "title": "Optimize Azure Virtual Desktop",
+          "order": 4,
+          "duration_minutes": 14,
+          "content_md": "Learn how to optimize deployment and infrastructure costs using Azure Virtual Desktops native scaling tool Autoscale. Learn how to configure Autoscale so that session host VMs are only running when you need them to be.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/m365-optimize-wvd/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Optimize Azure Virtual Desktop",
+              "url": "https://learn.microsoft.com/en-us/training/modules/m365-optimize-wvd/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-m365-wvd-security",
+          "title": "Secure an Azure Virtual Desktop deployment",
+          "order": 5,
+          "duration_minutes": 56,
+          "content_md": "Introduction to Microsoft security capabilities that can help keep your applications and data secure in your Azure Virtual Desktop deployment.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/m365-wvd-security/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure an Azure Virtual Desktop deployment",
+              "url": "https://learn.microsoft.com/en-us/training/modules/m365-wvd-security/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-m365-wvd-msix-app-attach",
+          "title": "Deploy applications by using MSIX app attach for Azure Virtual Desktop",
+          "order": 6,
+          "duration_minutes": 54,
+          "content_md": "Learn how to deliver applications by using MSIX app attach. MSIX app attach is an application delivery technology that separates applications and their state from the operating system and assigns applications to users dynamically.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/m365-wvd-application-management/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy applications by using MSIX app attach for Azure Virtual Desktop",
+              "url": "https://learn.microsoft.com/en-us/training/modules/m365-wvd-application-management/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "protect-virtual-desktop-deployment-azure-firewall",
+          "title": "Protect your Azure Virtual Desktop deployment by using Azure Firewall",
+          "order": 7,
+          "duration_minutes": 78,
+          "content_md": "Learn how to deploy and configure Azure Firewall to protect outbound network traffic for Azure Virtual Desktop.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/protect-virtual-desktop-deployment-azure-firewall/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Protect your Azure Virtual Desktop deployment by using Azure Firewall",
+              "url": "https://learn.microsoft.com/en-us/training/modules/protect-virtual-desktop-deployment-azure-firewall/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-m365-business-continuity-disaster-recovery-azure-virtu",
+          "title": "Business continuity and disaster recovery for Azure Virtual Desktop",
+          "order": 8,
+          "duration_minutes": 34,
+          "content_md": "Microsoft Azure Virtual Desktop is a cloud service that helps you give users a secure remote desktop that they can use anywhere. With Azure Virtual Desktop, you can plan appropriate business continuity and disaster recovery (BCDR) strategies to help protect against both unplanned and planned failures and to provide redundancy.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/business-continuity-disaster-recovery-azure-virtual-desktop/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Business continuity and disaster recovery for Azure Virtual Desktop",
+              "url": "https://learn.microsoft.com/en-us/training/modules/business-continuity-disaster-recovery-azure-virtual-desktop/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-learn-m365-windows-virtual-desktop",
+          "title": "Laboratorio opcional: aplica Deliver remote desktops and apps with Azure Virtual Desktop",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Deliver remote desktops and apps with Azure Virtual Desktop**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "certification_code": "philanthropies-ai-toolbox-for-trainers",
+  "track": "azure",
+  "title": "An AI toolbox for trainers",
+  "summary": "In today's fast-paced digital era, artificial intelligence (AI) is changing the way we train and educate. This learning path is designed to equip you with an understanding of how AI tools can transform a learning environment. Throughout this learning path, you'll explore how AI can elevate the training experience, build engaging content, and foster a more inclusive training environment. You'll also explore the advantages of integrating AI-powered productivity tools into your daily educational practices. By the end of this learning path, you'll be equipped to design and implement training ecosystems that apply AI tools to enhance the training process.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 173,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/ai-toolbox-for-trainers/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "philanthropies-ai-toolbox-for-trainers",
+      "title": "An AI toolbox for trainers",
+      "summary": "In today's fast-paced digital era, artificial intelligence (AI) is changing the way we train and educate. This learning path is designed to equip you with an understanding of how AI tools can transform a learning environment. Throughout this learning path, you'll explore how AI can elevate the training experience, build engaging content, and foster a more inclusive training environment. You'll also explore the advantages of integrating AI-powered productivity tools into your daily educational practices. By the end of this learning path, you'll be equipped to design and implement training ecosystems that apply AI tools to enhance the training process.",
+      "order": 1,
+      "duration_minutes": 173,
+      "lessons": [
+        {
+          "lesson_key": "philanthropies-implement-ai-tools-into-training-environment",
+          "title": "Implement AI tools into a training environment",
+          "order": 1,
+          "duration_minutes": 17,
+          "content_md": "Explore the power of AI tools in education and training plans. Learn how to integrate AI tools to enhance creativity, productivity, and efficiency in your training sessions. Understand the potential and limitations of AI through real-life examples and enhance your training experience.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-ai-tools-into-training-environment/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement AI tools into a training environment",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-ai-tools-into-training-environment/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-streamline-training-plans-with-ai-tools",
+          "title": "Streamline training plans with AI tools",
+          "order": 2,
+          "duration_minutes": 18,
+          "content_md": "AI tools can aid in streamlining training plans. It helps in building learning objectives, streamlining research, creating assessments, providing feedback, and improving writing quality. Collaboration is boosted with tools like Microsoft Copilot.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/streamline-training-plans-with-ai-tools/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Streamline training plans with AI tools",
+              "url": "https://learn.microsoft.com/en-us/training/modules/streamline-training-plans-with-ai-tools/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-use-ai-tools-to-create-inclusive-learning-env",
+          "title": "Use AI tools to create an inclusive learning environment",
+          "order": 3,
+          "duration_minutes": 22,
+          "content_md": "In this module, you learn how AI tools can help foster inclusive and adaptive learning environments, enabling trainers to address the varied needs of their learners.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/use-ai-tools-to-create-inclusive-learning-environment/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use AI tools to create an inclusive learning environment",
+              "url": "https://learn.microsoft.com/en-us/training/modules/use-ai-tools-to-create-inclusive-learning-environment/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-training-with-ai-tools",
+          "title": "Training with AI tools",
+          "order": 4,
+          "duration_minutes": 116,
+          "content_md": "In this module, you learn various AI-powered tools and how to effectively use them in your training sessions for an optimized learning experience.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/training-with-ai-tools/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Training with AI tools",
+              "url": "https://learn.microsoft.com/en-us/training/modules/training-with-ai-tools/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-philanthropies-ai-toolbox-for-trainers",
+          "title": "Laboratorio opcional: aplica An AI toolbox for trainers",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **An AI toolbox for trainers**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

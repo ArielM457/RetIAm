@@ -1,0 +1,123 @@
+{
+  "certification_code": "wwl-migrate-servers-workloads-premises-hybrid-envi",
+  "track": "azure",
+  "title": "Migrate servers and workloads in on-premises and hybrid environments",
+  "summary": "Migrate servers and workloads in on-premises and hybrid environments",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 176,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/migrate-servers-workloads-premises-hybrid-environments/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-migrate-servers-workloads-premises-hybrid-environments",
+      "title": "Migrate servers and workloads in on-premises and hybrid environments",
+      "summary": "Migrate servers and workloads in on-premises and hybrid environments",
+      "order": 1,
+      "duration_minutes": 176,
+      "lessons": [
+        {
+          "lesson_key": "wwl-migrate-premises-windows-server-instances-to-azure-iaas",
+          "title": "Migrate on-premises Windows Server instances to Azure IaaS virtual machines",
+          "order": 1,
+          "duration_minutes": 41,
+          "content_md": "You're able to plan a migration and select appropriate server migration tools. You'll also learn how to use Azure Migrate, how to assess physical servers, and how to migrate those servers.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-premises-windows-server-instances-azure-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate on-premises Windows Server instances to Azure IaaS virtual machines",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-premises-windows-server-instances-azure-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-upgrade-migrate-windows-server-iaas-virtual-machines",
+          "title": "Upgrade and migrate Windows Server IaaS virtual machines",
+          "order": 2,
+          "duration_minutes": 53,
+          "content_md": "Learn to migrate a workload running in Windows Server to an infrastructure as a service (IaaS) virtual machine (VM) and to Windows Server 2025 by using Windows Server migration tools or the Storage Migration Service.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/upgrade-migrate-windows-server-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Upgrade and migrate Windows Server IaaS virtual machines",
+              "url": "https://learn.microsoft.com/en-us/training/modules/upgrade-migrate-windows-server-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-active-directory-domain-services-migration",
+          "title": "Active Directory Domain Services migration",
+          "order": 3,
+          "duration_minutes": 30,
+          "content_md": "Determine the best approach to moving domain controllers to Windows Server 2025.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/active-directory-domain-services-migration/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Active Directory Domain Services migration",
+              "url": "https://learn.microsoft.com/en-us/training/modules/active-directory-domain-services-migration/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-migrate-file-server-workloads-using-storage-migration-se",
+          "title": "Migrate file server workloads using Storage Migration Service",
+          "order": 4,
+          "duration_minutes": 28,
+          "content_md": "Learn to use Storage Migration Service to migrate files and files shares from existing file server to new servers running Windows Server. Configure storage migration for optimum performance of data migration.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-file-server-workloads-using-storage-migration-service/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate file server workloads using Storage Migration Service",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-file-server-workloads-using-storage-migration-service/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-migrate-windows-server-roles",
+          "title": "Migrate Windows Server roles",
+          "order": 5,
+          "duration_minutes": 24,
+          "content_md": "Learn how to install and use the Windows Server Migration Tools cmdlets to migrate commonly used server roles from earlier versions of Windows Server.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-windows-server-roles/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate Windows Server roles",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-windows-server-roles/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-migrate-servers-workloads-premises-hybrid-environments",
+          "title": "Laboratorio opcional: aplica Migrate servers and workloads in on-premises and hybrid environments",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Migrate servers and workloads in on-premises and hybrid environments**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

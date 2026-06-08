@@ -1,0 +1,108 @@
+{
+  "certification_code": "az-104-manage-storage",
+  "track": "azure",
+  "title": "AZ-104: Implement and manage storage in Azure",
+  "summary": "AZ-104: Implement and manage storage in Azure",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 187,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/az-104-manage-storage/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "az-104-manage-storage",
+      "title": "AZ-104: Implement and manage storage in Azure",
+      "summary": "AZ-104: Implement and manage storage in Azure",
+      "order": 1,
+      "duration_minutes": 187,
+      "lessons": [
+        {
+          "lesson_key": "wwl-configure-storage-accounts",
+          "title": "Configure storage accounts",
+          "order": 1,
+          "duration_minutes": 47,
+          "content_md": "Learn how to configure storage accounts, including replication and endpoints.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-storage-accounts/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure storage accounts",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-storage-accounts/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-blob-storage",
+          "title": "Configure Azure Blob Storage",
+          "order": 2,
+          "duration_minutes": 70,
+          "content_md": "Learn how to configure Azure Blob Storage, including tiers and object replication.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-blob-storage/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure Azure Blob Storage",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-blob-storage/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-storage-security",
+          "title": "Configure Azure Storage security",
+          "order": 3,
+          "duration_minutes": 34,
+          "content_md": "Learn how to configure common Azure Storage security features like storage access signatures.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-storage-security/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure Azure Storage security",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-storage-security/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-azure-files-file-sync",
+          "title": "Configure Azure Files",
+          "order": 4,
+          "duration_minutes": 36,
+          "content_md": "Learn how to configure Azure Files for cloud file shares.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-azure-files-file-sync/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure Azure Files",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-azure-files-file-sync/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-az-104-manage-storage",
+          "title": "Laboratorio opcional: aplica AZ-104: Implement and manage storage in Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **AZ-104: Implement and manage storage in Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

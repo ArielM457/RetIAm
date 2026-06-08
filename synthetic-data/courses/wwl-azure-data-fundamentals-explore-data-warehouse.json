@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-azure-data-fundamentals-explore-data-warehouse",
+  "track": "azure",
+  "title": "Introduction to Microsoft Azure Data analytics in Azure",
+  "summary": "Introduction to Microsoft Azure Data analytics in Azure",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 128,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/azure-data-fundamentals-explore-data-warehouse-analytics/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-azure-data-fundamentals-explore-data-warehouse-analytics",
+      "title": "Introduction to Microsoft Azure Data analytics in Azure",
+      "summary": "Introduction to Microsoft Azure Data analytics in Azure",
+      "order": 1,
+      "duration_minutes": 128,
+      "lessons": [
+        {
+          "lesson_key": "wwl-examine-components-of-modern-data-warehouse",
+          "title": "Explore fundamentals of large-scale analytics",
+          "order": 1,
+          "duration_minutes": 51,
+          "content_md": "Organizations use analytics platforms to build large scale data analytics solutions that generate insights and drive success. Microsoft provides multiple technologies that you can combine to build a large scale data analytics solution.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/examine-components-of-modern-data-warehouse/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore fundamentals of large-scale analytics",
+              "url": "https://learn.microsoft.com/en-us/training/modules/examine-components-of-modern-data-warehouse/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-explore-fundamentals-of-stream-processing",
+          "title": "Explore fundamentals of real-time analytics",
+          "order": 2,
+          "duration_minutes": 38,
+          "content_md": "Learn about the basics of stream processing, and the services in Microsoft Azure that you can use to implement real-time analytics solutions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-fundamentals-stream-processing/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore fundamentals of real-time analytics",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-fundamentals-stream-processing/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-explore-fundamentals-of-data-visualization",
+          "title": "Explore fundamentals of data visualization",
+          "order": 3,
+          "duration_minutes": 39,
+          "content_md": "Learn the fundamental principles of analytical data modeling and data visualization, using Microsoft Power BI as a platform to explore these principles in action.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-fundamentals-data-visualization/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore fundamentals of data visualization",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-fundamentals-data-visualization/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-azure-data-fundamentals-explore-data-warehouse-analytics",
+          "title": "Laboratorio opcional: aplica Introduction to Microsoft Azure Data analytics in Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduction to Microsoft Azure Data analytics in Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

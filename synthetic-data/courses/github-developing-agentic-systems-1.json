@@ -1,0 +1,93 @@
+{
+  "certification_code": "github-developing-agentic-systems-1",
+  "track": "github",
+  "title": "Developing in Agentic AI Systems Part 1 of 2",
+  "summary": "Learn how to design, deploy, and manage agentic AI systems within the software development lifecycle by integrating, orchestrating, and governing autonomous agents using GitHub to ensure safe, reliable, and scalable delivery.",
+  "provider": "GitHub",
+  "level": "basic",
+  "total_duration_minutes": 120,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/gh-developing-agentic-systems-1/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "github-developing-agentic-systems-1",
+      "title": "Developing in Agentic AI Systems Part 1 of 2",
+      "summary": "Learn how to design, deploy, and manage agentic AI systems within the software development lifecycle by integrating, orchestrating, and governing autonomous agents using GitHub to ensure safe, reliable, and scalable delivery.",
+      "order": 1,
+      "duration_minutes": 120,
+      "lessons": [
+        {
+          "lesson_key": "github-foundations-agentic-ai",
+          "title": "Foundations of Agentic AI in GitHub",
+          "order": 1,
+          "duration_minutes": 40,
+          "content_md": "Explore how agentic AI changes the developer role from only writing code to guiding, reviewing, and validating systems that can take action across the SDLC. Understand GitHub's role as the system of record and control plane for safe, traceable agent workflows.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/foundations-agentic-ai/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Foundations of Agentic AI in GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/foundations-agentic-ai/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-design-agent-architecture-integration",
+          "title": "Designing Agent Architecture and SDLC Integration",
+          "order": 2,
+          "duration_minutes": 45,
+          "content_md": "Illustration showing how agentic systems use GitHub workflows such as branches, pull requests, checks, and repository rules to safely build and maintain software.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/design-agent-architecture-integration/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Designing Agent Architecture and SDLC Integration",
+              "url": "https://learn.microsoft.com/en-us/training/modules/design-agent-architecture-integration/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-agent-tooling-mcp-execution-environments",
+          "title": "Tooling, MCP, and Agent Execution Environments",
+          "order": 3,
+          "duration_minutes": 35,
+          "content_md": "This module introduces how modern software agents interact with tools, APIs, and execution environments to perform meaningful tasks. It covers the role of Model Context Protocol (MCP), GitHub Actions, and agentic workflows in enabling scalable and controlled agent execution. You will also learn how GitHub ensures security and governance through defined execution boundaries and safeguards.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/agent-tooling-mcp-execution-environments/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Tooling, MCP, and Agent Execution Environments",
+              "url": "https://learn.microsoft.com/en-us/training/modules/agent-tooling-mcp-execution-environments/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-github-developing-agentic-systems-1",
+          "title": "Laboratorio opcional: aplica Developing in Agentic AI Systems Part 1 of 2",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Developing in Agentic AI Systems Part 1 of 2**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

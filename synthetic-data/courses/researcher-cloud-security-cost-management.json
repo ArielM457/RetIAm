@@ -1,0 +1,63 @@
+{
+  "certification_code": "researcher-cloud-security-cost-management",
+  "track": "azure",
+  "title": "Azure for Researchers part 2: Cloud Security and Cost Management",
+  "summary": "In this learning path, you'll learn how to ensure your Azure consumption is planned and predictable by using cost prediction and budgets, and how to ensure your application secrets and virtual machines are safe from unauthorized access.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 40,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/researcher-cloud-security-cost-management/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "researcher-cloud-security-cost-management",
+      "title": "Azure for Researchers part 2: Cloud Security and Cost Management",
+      "summary": "In this learning path, you'll learn how to ensure your Azure consumption is planned and predictable by using cost prediction and budgets, and how to ensure your application secrets and virtual machines are safe from unauthorized access.",
+      "order": 1,
+      "duration_minutes": 40,
+      "lessons": [
+        {
+          "lesson_key": "azure-analyze-costs-create-budgets-azure-cost-management",
+          "title": "Introduction to analyzing costs and creating budgets with Microsoft Cost Management",
+          "order": 1,
+          "duration_minutes": 40,
+          "content_md": "Learn how to use cost analysis to understand how your costs accrue each month.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/analyze-costs-create-budgets-azure-cost-management/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to analyzing costs and creating budgets with Microsoft Cost Management",
+              "url": "https://learn.microsoft.com/en-us/training/modules/analyze-costs-create-budgets-azure-cost-management/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-researcher-cloud-security-cost-management",
+          "title": "Laboratorio opcional: aplica Azure for Researchers part 2: Cloud Security and Cost Management",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Azure for Researchers part 2: Cloud Security and Cost Management**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

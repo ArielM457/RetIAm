@@ -1,0 +1,123 @@
+{
+  "certification_code": "wwl-explore-azure-machine-learning-workspace",
+  "track": "azure",
+  "title": "Explore and configure the Azure Machine Learning workspace",
+  "summary": "Explore and configure the Azure Machine Learning workspace, its resources and its assets. Explore which developer tools you can use to interact with the workspace, focusing on the CLI and Python SDK v2.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 217,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/explore-azure-machine-learning-workspace/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-explore-azure-machine-learning-workspace",
+      "title": "Explore and configure the Azure Machine Learning workspace",
+      "summary": "Explore and configure the Azure Machine Learning workspace, its resources and its assets. Explore which developer tools you can use to interact with the workspace, focusing on the CLI and Python SDK v2.",
+      "order": 1,
+      "duration_minutes": 217,
+      "lessons": [
+        {
+          "lesson_key": "wwl-explore-azure-machine-learning-workspace-resources-asset",
+          "title": "Explore Azure Machine Learning workspace resources and assets",
+          "order": 1,
+          "duration_minutes": 42,
+          "content_md": "As a data scientist, you can use Azure Machine Learning to train and manage your machine learning models. Learn what Azure Machine Learning is, and get familiar with all its resources and assets.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-azure-machine-learning-workspace-resources-assets/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore Azure Machine Learning workspace resources and assets",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-azure-machine-learning-workspace-resources-assets/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-explore-developer-tools-for-workspace-interaction",
+          "title": "Explore developer tools for workspace interaction",
+          "order": 2,
+          "duration_minutes": 57,
+          "content_md": "Learn how you can interact with the Azure Machine Learning workspace. You can use the Azure Machine Learning studio, the Python SDK (v2), or the Azure CLI (v2).\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-developer-tools-for-workspace-interaction/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore developer tools for workspace interaction",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-developer-tools-for-workspace-interaction/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-make-data-available-azure-machine-learning",
+          "title": "Make data available in Azure Machine Learning",
+          "order": 3,
+          "duration_minutes": 39,
+          "content_md": "Learn about how to connect to data from the Azure Machine Learning workspace. You're introduced to datastores and data assets.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/make-data-available-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Make data available in Azure Machine Learning",
+              "url": "https://learn.microsoft.com/en-us/training/modules/make-data-available-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-work-compute-resources-azure-machine-learning",
+          "title": "Work with compute targets in Azure Machine Learning",
+          "order": 4,
+          "duration_minutes": 37,
+          "content_md": "Learn how to work with compute targets in Azure Machine Learning. Compute targets allow you to run your machine learning workloads. Explore how and when you can use a compute instance or compute cluster.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/work-compute-resources-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Work with compute targets in Azure Machine Learning",
+              "url": "https://learn.microsoft.com/en-us/training/modules/work-compute-resources-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-work-environments-azure-machine-learning",
+          "title": "Work with environments in Azure Machine Learning",
+          "order": 5,
+          "duration_minutes": 42,
+          "content_md": "Use Azure Machine Learning Python SDK v2 to work with environments\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/work-environments-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Work with environments in Azure Machine Learning",
+              "url": "https://learn.microsoft.com/en-us/training/modules/work-environments-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-explore-azure-machine-learning-workspace",
+          "title": "Laboratorio opcional: aplica Explore and configure the Azure Machine Learning workspace",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Explore and configure the Azure Machine Learning workspace**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

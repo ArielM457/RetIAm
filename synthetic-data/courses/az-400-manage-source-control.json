@@ -1,0 +1,258 @@
+{
+  "certification_code": "az-400-manage-source-control",
+  "track": "github",
+  "title": "Manage source control",
+  "summary": "Use GitHub to build a modern source control strategy and prepare for Exam AZ-400: Designing and Implementing Microsoft DevOps Solutions.",
+  "provider": "GitHub",
+  "level": "basic",
+  "total_duration_minutes": 920,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/az-400-manage-source-control/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "az-400-manage-source-control",
+      "title": "Manage source control",
+      "summary": "Use GitHub to build a modern source control strategy and prepare for Exam AZ-400: Designing and Implementing Microsoft DevOps Solutions.",
+      "order": 1,
+      "duration_minutes": 920,
+      "lessons": [
+        {
+          "lesson_key": "github-introduction-to-github",
+          "title": "Introduction to GitHub",
+          "order": 1,
+          "duration_minutes": 105,
+          "content_md": "Learn to use key GitHub features, including issues, notifications, branches, commits, and pull requests.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-to-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-migrate-repository-github",
+          "title": "Migrate your repository by using GitHub best practices",
+          "order": 2,
+          "duration_minutes": 43,
+          "content_md": "Learn to move your existing project to GitHub from a legacy version control system.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-repository-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate your repository by using GitHub best practices",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-repository-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-upload-project-github",
+          "title": "Upload your project by using GitHub best practices",
+          "order": 3,
+          "duration_minutes": 43,
+          "content_md": "Learn to upload your existing project to GitHub.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/upload-project-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Upload your project by using GitHub best practices",
+              "url": "https://learn.microsoft.com/en-us/training/modules/upload-project-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-manage-changes-pull-requests-github",
+          "title": "Manage repository changes by using pull requests on GitHub",
+          "order": 4,
+          "duration_minutes": 56,
+          "content_md": "Learn how to manage changes to your repository source by using pull requests.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-changes-pull-requests-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage repository changes by using pull requests on GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-changes-pull-requests-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-merge-conflict-resolution-github",
+          "title": "Settle competing commits by using merge conflict resolution on GitHub",
+          "order": 5,
+          "duration_minutes": 52,
+          "content_md": "Learn to settle overlapping commits across branches by using merge conflict resolution.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/resolve-merge-conflicts-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Settle competing commits by using merge conflict resolution on GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/resolve-merge-conflicts-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-search-organize-repository-history-github",
+          "title": "Search and organize repository history by using GitHub",
+          "order": 6,
+          "duration_minutes": 38,
+          "content_md": "Learn to search and organize repository history by using filters, blame, and cross-linking on GitHub.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/search-organize-repository-history-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Search and organize repository history by using GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/search-organize-repository-history-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-manage-innersource-program-github",
+          "title": "Manage an InnerSource program by using GitHub",
+          "order": 7,
+          "duration_minutes": 50,
+          "content_md": "Learn to manage a successful InnerSource program on GitHub through effective discoverability, guidance, and maintenance.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-innersource-program-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage an InnerSource program by using GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-innersource-program-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-communicate-using-markdown",
+          "title": "Communicate effectively on GitHub using Markdown",
+          "order": 8,
+          "duration_minutes": 66,
+          "content_md": "Learn to use Markdown to communicate with brevity, clarity, and expression.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/communicate-using-markdown/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Communicate effectively on GitHub using Markdown",
+              "url": "https://learn.microsoft.com/en-us/training/modules/communicate-using-markdown/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-maintain-secure-repository-github",
+          "title": "Maintain a secure repository by using GitHub best practices",
+          "order": 9,
+          "duration_minutes": 35,
+          "content_md": "Learn best practices for building, hosting, and maintaining a secure repository on GitHub.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/maintain-secure-repository-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Maintain a secure repository by using GitHub best practices",
+              "url": "https://learn.microsoft.com/en-us/training/modules/maintain-secure-repository-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-automate-devops-github-apps",
+          "title": "Automate DevOps processes by using GitHub Apps",
+          "order": 10,
+          "duration_minutes": 43,
+          "content_md": "Learn to automate DevOps processes by using GitHub Apps that handle repetitive tasks, enforce team policies, and maintain a tidy repository.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/automate-devops-github-apps/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Automate DevOps processes by using GitHub Apps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/automate-devops-github-apps/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-automate-github-using-github-script",
+          "title": "Automate GitHub by using GitHub Script",
+          "order": 11,
+          "duration_minutes": 25,
+          "content_md": "Learn to interact with the GitHub API from GitHub Actions by using GitHub Script.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/automate-github-using-github-script/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Automate GitHub by using GitHub Script",
+              "url": "https://learn.microsoft.com/en-us/training/modules/automate-github-using-github-script/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-release-based-workflow-github",
+          "title": "Manage software delivery by using a release based workflow on GitHub",
+          "order": 12,
+          "duration_minutes": 104,
+          "content_md": "Learn to implement a release based workflow on GitHub using project boards, branches, and releases.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/release-based-workflow-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage software delivery by using a release based workflow on GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/release-based-workflow-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-github-actions-ci",
+          "title": "Build continuous integration workflows by using GitHub Actions",
+          "order": 13,
+          "duration_minutes": 81,
+          "content_md": "Learn how to create workflows to add continuous integration (CI) to your projects.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/github-actions-ci/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build continuous integration workflows by using GitHub Actions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/github-actions-ci/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-github-actions-cd",
+          "title": "Build and deploy applications to Azure by using GitHub Actions",
+          "order": 14,
+          "duration_minutes": 179,
+          "content_md": "Create two deployment workflows using GitHub Actions and Microsoft Azure. Learn about triggering a CD workflow and storing credentials.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/github-actions-cd/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build and deploy applications to Azure by using GitHub Actions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/github-actions-cd/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-az-400-manage-source-control",
+          "title": "Laboratorio opcional: aplica Manage source control",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Manage source control**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

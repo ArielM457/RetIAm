@@ -1,0 +1,93 @@
+{
+  "certification_code": "learn-m365-cybersecurity-secure-software",
+  "track": "azure",
+  "title": "Learn how Microsoft supports secure software development as part of a cybersecurity solution",
+  "summary": "Secure software development means integrating security into each phase of your development lifecycle, from requirements analysis to maintenance. Microsoft provides many services that can help you develop more secure code and deploy a more secure application in the cloud. This learning path provides an overview of the services and offerings available to help you build secure software as part of a cybersecurity solution.The deadline for agencies to comply with NIST/CISA/OMB guidance on security measures for critical software (including applying practices of least privilege, network segmentation, and proper configuration), per section 4 of the Executive Order on Improving the Nation's Cybersecurity, is **August 10, 2021**. The deadline for agencies to comply with the guidance identifying practices that enhance the security of the software supply chain with respect to software procurement, also per section 4, is **March 8, 2022**.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 194,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/secure-software-development-for-cybersecurity/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "learn-m365-cybersecurity-secure-software",
+      "title": "Learn how Microsoft supports secure software development as part of a cybersecurity solution",
+      "summary": "Secure software development means integrating security into each phase of your development lifecycle, from requirements analysis to maintenance. Microsoft provides many services that can help you develop more secure code and deploy a more secure application in the cloud. This learning path provides an overview of the services and offerings available to help you build secure software as part of a cybersecurity solution.The deadline for agencies to comply with NIST/CISA/OMB guidance on security measures for critical software (including applying practices of least privilege, network segmentation, and proper configuration), per section 4 of the Executive Order on Improving the Nation's Cybersecurity, is **August 10, 2021**. The deadline for agencies to comply with the guidance identifying practices that enhance the security of the software supply chain with respect to software procurement, also per section 4, is **March 8, 2022**.",
+      "order": 1,
+      "duration_minutes": 194,
+      "lessons": [
+        {
+          "lesson_key": "azure-well-architected-security",
+          "title": "Microsoft Azure Well-Architected Framework - Security",
+          "order": 1,
+          "duration_minutes": 54,
+          "content_md": "Discover the tools that Azure provides to help you design a secure environment throughout your infrastructure, data, network, and applications.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-well-architected-security/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Microsoft Azure Well-Architected Framework - Security",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-well-architected-security/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-introduction-to-github",
+          "title": "Introduction to GitHub",
+          "order": 2,
+          "duration_minutes": 105,
+          "content_md": "Learn to use key GitHub features, including issues, notifications, branches, commits, and pull requests.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-to-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-maintain-secure-repository-github",
+          "title": "Maintain a secure repository by using GitHub best practices",
+          "order": 3,
+          "duration_minutes": 35,
+          "content_md": "Learn best practices for building, hosting, and maintaining a secure repository on GitHub.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/maintain-secure-repository-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Maintain a secure repository by using GitHub best practices",
+              "url": "https://learn.microsoft.com/en-us/training/modules/maintain-secure-repository-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-learn-m365-cybersecurity-secure-software",
+          "title": "Laboratorio opcional: aplica Learn how Microsoft supports secure software development as part of a cybersecurity solution",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Learn how Microsoft supports secure software development as part of a cybersecurity solution**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

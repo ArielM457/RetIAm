@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-create-embed-custom-code-agents",
+  "track": "github",
+  "title": "Develop agents and applications using agentic programming tools",
+  "summary": "Learn how to develop applications using agentic programming tools and techniques. This training covers how to configure custom agents in the development environment, how to develop or update apps using the GitHub Spec Kit, and how to create AI-enabled apps with embedded agents using the GitHub Copilot SDK.",
+  "provider": "GitHub",
+  "level": "intermediate",
+  "total_duration_minutes": 490,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/create-embed-custom-code-agents/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-create-embed-custom-code-agents",
+      "title": "Develop agents and applications using agentic programming tools",
+      "summary": "Learn how to develop applications using agentic programming tools and techniques. This training covers how to configure custom agents in the development environment, how to develop or update apps using the GitHub Spec Kit, and how to create AI-enabled apps with embedded agents using the GitHub Copilot SDK.",
+      "order": 1,
+      "duration_minutes": 490,
+      "lessons": [
+        {
+          "lesson_key": "wwl-configure-customize-github-copilot-visual-studio-code",
+          "title": "Configure GitHub Copilot instructions and create custom agents",
+          "order": 1,
+          "duration_minutes": 101,
+          "content_md": "This module covers how to configure and customize GitHub Copilot in Visual Studio Code using instruction files, prompt files, custom agents, and agent handoffs to create tailored AI-assisted development workflows.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-customize-github-copilot-visual-studio-code/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure GitHub Copilot instructions and create custom agents",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-customize-github-copilot-visual-studio-code/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-spec-driven-development-github-spec-kit-greenfield-intro",
+          "title": "Get started with spec-driven development and GitHub Spec Kit",
+          "order": 2,
+          "duration_minutes": 92,
+          "content_md": "Learn to implement the spec-driven development methodology and GitHub Spec Kit for greenfield applications.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/spec-driven-development-github-spec-kit-greenfield-intro/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Get started with spec-driven development and GitHub Spec Kit",
+              "url": "https://learn.microsoft.com/en-us/training/modules/spec-driven-development-github-spec-kit-greenfield-intro/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "spec-driven-development-github-spec-kit-microsoft-internal",
+          "title": "Implement spec-driven development using the GitHub Spec Kit",
+          "order": 3,
+          "duration_minutes": 180,
+          "content_md": "Implement the spec-driven development methodology using GitHub Spec Kit and GitHub Copilot in Visual Studio Code. Training covers a brownfield scenario for enterprise developers, emphasizing intent-first philosophy with living specifications.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/spec-driven-development-github-spec-kit-enterprise-developers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement spec-driven development using the GitHub Spec Kit",
+              "url": "https://learn.microsoft.com/en-us/training/modules/spec-driven-development-github-spec-kit-enterprise-developers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-develop-ai-enabled-apps-using-github-copilot-sdk",
+          "title": "Develop AI-enabled apps using the GitHub Copilot SDK",
+          "order": 4,
+          "duration_minutes": 117,
+          "content_md": "This module covers how to develop AI-enabled applications using the GitHub Copilot SDK. You install the SDK, explore its features, and build AI agents that can be integrated into your applications to automate tasks and enhance functionality.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/develop-ai-enabled-apps-using-github-copilot-sdk/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Develop AI-enabled apps using the GitHub Copilot SDK",
+              "url": "https://learn.microsoft.com/en-us/training/modules/develop-ai-enabled-apps-using-github-copilot-sdk/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-create-embed-custom-code-agents",
+          "title": "Laboratorio opcional: aplica Develop agents and applications using agentic programming tools",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Develop agents and applications using agentic programming tools**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

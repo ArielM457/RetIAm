@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-describe-capabilities-of-microsoft-compliance",
+  "track": "azure",
+  "title": "Introduction to Microsoft Purview and Microsoft's privacy principles",
+  "summary": "SC-900: Introduction to Microsoft Purview and Microsoft's privacy principles",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 140,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/describe-capabilities-of-microsoft-compliance-solutions/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-describe-capabilities-of-microsoft-compliance-solutions",
+      "title": "Introduction to Microsoft Purview and Microsoft's privacy principles",
+      "summary": "SC-900: Introduction to Microsoft Purview and Microsoft's privacy principles",
+      "order": 1,
+      "duration_minutes": 140,
+      "lessons": [
+        {
+          "lesson_key": "wwl-describe-compliance-management-capabilities-microsoft",
+          "title": "Describe Microsoft’s Service Trust portal and privacy principles",
+          "order": 1,
+          "duration_minutes": 21,
+          "content_md": "Describe Microsoft’s Service Trust portal and privacy principles.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-compliance-management-capabilities-microsoft/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe Microsoft’s Service Trust portal and privacy principles",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-compliance-management-capabilities-microsoft/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "describe-purview-data-solutions",
+          "title": "Describe the data security solutions of Microsoft Purview",
+          "order": 2,
+          "duration_minutes": 55,
+          "content_md": "Describe the data security solutions of Microsoft Purview.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-purview-data-solutions/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe the data security solutions of Microsoft Purview",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-purview-data-solutions/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "describe-purview-risk-compliance-governance",
+          "title": "Describe the data compliance solutions of Microsoft Purview",
+          "order": 3,
+          "duration_minutes": 41,
+          "content_md": "Describe the data compliance solutions of Microsoft Purview.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-purview-risk-compliance-governance/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe the data compliance solutions of Microsoft Purview",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-purview-risk-compliance-governance/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "describe-purview-data-governance",
+          "title": "Describe the data governance solutions of Microsoft Purview",
+          "order": 4,
+          "duration_minutes": 23,
+          "content_md": "Describe the data governance solutions of Microsoft Purview.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-purview-data-governance/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe the data governance solutions of Microsoft Purview",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-purview-data-governance/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-describe-capabilities-of-microsoft-compliance-solutions",
+          "title": "Laboratorio opcional: aplica Introduction to Microsoft Purview and Microsoft's privacy principles",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduction to Microsoft Purview and Microsoft's privacy principles**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-implement-ai-capabilities-database-solutions",
+  "track": "azure",
+  "title": "Implement AI capabilities in database solutions",
+  "summary": "Learn to design intelligent search, work with models and embeddings, and build Retrieval Augmented Generation (RAG) patterns in T-SQL.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 220,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-ai-capabilities-database-solutions/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-ai-capabilities-database-solutions",
+      "title": "Implement AI capabilities in database solutions",
+      "summary": "Learn to design intelligent search, work with models and embeddings, and build Retrieval Augmented Generation (RAG) patterns in T-SQL.",
+      "order": 1,
+      "duration_minutes": 220,
+      "lessons": [
+        {
+          "lesson_key": "wwl-design-implement-models-embeddings-with-sql",
+          "title": "Design and implement models and embeddings with SQL",
+          "order": 1,
+          "duration_minutes": 61,
+          "content_md": "Integrate AI models with Azure SQL Database using external models, the vector data type, and built-in AI functions. Design embedding strategies, generate embeddings from text, and implement maintenance patterns.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/design-implement-models-embeddings-with-sql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Design and implement models and embeddings with SQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/design-implement-models-embeddings-with-sql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-design-implement-intelligent-search-with-sql",
+          "title": "Design and implement intelligent search with SQL",
+          "order": 2,
+          "duration_minutes": 84,
+          "content_md": "Implement intelligent search capabilities in SQL Server and Azure SQL by combining traditional full-text search with semantic vector search. Learn to choose search approaches, prepare SQL for vector search, and implement vector, hybrid, and ranking-based search patterns.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/design-implement-intelligent-search-with-sql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Design and implement intelligent search with SQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/design-implement-intelligent-search-with-sql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-design-implement-rag-with-sql",
+          "title": "Design and implement RAG with SQL",
+          "order": 3,
+          "duration_minutes": 75,
+          "content_md": "Learn how to implement Retrieval Augmented Generation (RAG) patterns using Azure SQL Database. Identify RAG use cases, prepare database context for Large Language Model (LLM) processing, construct augmented prompts, and process model responses.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/design-implement-rag-with-sql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Design and implement RAG with SQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/design-implement-rag-with-sql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-ai-capabilities-database-solutions",
+          "title": "Laboratorio opcional: aplica Implement AI capabilities in database solutions",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement AI capabilities in database solutions**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

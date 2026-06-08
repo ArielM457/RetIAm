@@ -1,0 +1,108 @@
+{
+  "certification_code": "security-implement-host-security",
+  "track": "azure",
+  "title": "Implement virtual machine host security in Azure",
+  "summary": "Learn how to protect and harden your virtual machines in Azure",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 219,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-host-security/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "security-implement-host-security",
+      "title": "Implement virtual machine host security in Azure",
+      "summary": "Learn how to protect and harden your virtual machines in Azure",
+      "order": 1,
+      "duration_minutes": 219,
+      "lessons": [
+        {
+          "lesson_key": "azure-well-architected-security",
+          "title": "Microsoft Azure Well-Architected Framework - Security",
+          "order": 1,
+          "duration_minutes": 54,
+          "content_md": "Discover the tools that Azure provides to help you design a secure environment throughout your infrastructure, data, network, and applications.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-well-architected-security/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Microsoft Azure Well-Architected Framework - Security",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-well-architected-security/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "plan-your-linux-environment-in-azure",
+          "title": "Plan your Linux environment in Azure",
+          "order": 2,
+          "duration_minutes": 35,
+          "content_md": "Learn about standards and practices for planning, deploying, managing, and optimizing Linux VMs in Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/plan-your-linux-environment-in-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan your Linux environment in Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/plan-your-linux-environment-in-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "provision-linux-virtual-machine-in-azure",
+          "title": "Provisioning a Linux virtual machine in Microsoft Azure",
+          "order": 3,
+          "duration_minutes": 79,
+          "content_md": "Learn about different methods of provisioning Linux virtual machines in Microsoft Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/provision-linux-virtual-machine-in-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Provisioning a Linux virtual machine in Microsoft Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/provision-linux-virtual-machine-in-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "create-a-windows-vm-in-azure",
+          "title": "Create a Windows virtual machine in Azure",
+          "order": 4,
+          "duration_minutes": 51,
+          "content_md": "Learn to create an Azure virtual machine in minutes that can be used like a local physical desktop or server.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-windows-virtual-machine-in-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create a Windows virtual machine in Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-windows-virtual-machine-in-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-security-implement-host-security",
+          "title": "Laboratorio opcional: aplica Implement virtual machine host security in Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement virtual machine host security in Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

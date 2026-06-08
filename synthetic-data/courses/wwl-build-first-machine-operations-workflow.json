@@ -1,0 +1,153 @@
+{
+  "certification_code": "wwl-build-first-machine-operations-workflow",
+  "track": "github",
+  "title": "Operationalize machine learning models (MLOps)",
+  "summary": "Learn the full MLOps lifecycle for machine learning models, from experimentation and pipeline automation to CI/CD, automated testing, and model deployment in production.",
+  "provider": "GitHub",
+  "level": "intermediate",
+  "total_duration_minutes": 291,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/build-first-machine-operations-workflow/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-build-first-machine-operations-workflow",
+      "title": "Operationalize machine learning models (MLOps)",
+      "summary": "Learn the full MLOps lifecycle for machine learning models, from experimentation and pipeline automation to CI/CD, automated testing, and model deployment in production.",
+      "order": 1,
+      "duration_minutes": 291,
+      "lessons": [
+        {
+          "lesson_key": "wwl-experiment-azure-machine-learning",
+          "title": "Experiment with Azure Machine Learning",
+          "order": 1,
+          "duration_minutes": 65,
+          "content_md": "Learn how to find the best machine learning model with automated machine learning (AutoML), MLflow-tracked notebooks, and the Responsible AI dashboard.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/experiment-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Experiment with Azure Machine Learning",
+              "url": "https://learn.microsoft.com/en-us/training/modules/experiment-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-perform-hyperparameter-tuning-azure-machine-learning-pip",
+          "title": "Perform hyperparameter tuning with Azure Machine Learning",
+          "order": 2,
+          "duration_minutes": 46,
+          "content_md": "Learn how to perform hyperparameter tuning with a sweep job in Azure Machine Learning.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/perform-hyperparameter-tuning-azure-machine-learning-pipelines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Perform hyperparameter tuning with Azure Machine Learning",
+              "url": "https://learn.microsoft.com/en-us/training/modules/perform-hyperparameter-tuning-azure-machine-learning-pipelines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-run-pipelines-azure-machine-learning",
+          "title": "Run pipelines in Azure Machine Learning",
+          "order": 3,
+          "duration_minutes": 40,
+          "content_md": "Learn how to create and use components to build pipeline in Azure Machine Learning. Run and schedule Azure Machine Learning pipelines to automate machine learning workflows.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/run-pipelines-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Run pipelines in Azure Machine Learning",
+              "url": "https://learn.microsoft.com/en-us/training/modules/run-pipelines-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-trigger-azure-machine-learn-jobs-github-actions",
+          "title": "Trigger Azure Machine Learning jobs with GitHub Actions",
+          "order": 4,
+          "duration_minutes": 35,
+          "content_md": "MLOps, machine learning operations\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/trigger-azure-machine-learn-jobs-github-actions/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Trigger Azure Machine Learning jobs with GitHub Actions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/trigger-azure-machine-learn-jobs-github-actions/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-trigger-github-actions-trunk-based-development",
+          "title": "Trigger GitHub Actions with feature-based development",
+          "order": 5,
+          "duration_minutes": 35,
+          "content_md": "Learn how to trigger GitHub Actions with feature-based development to achieve machine learning operations or MLOps.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/trigger-github-actions-trunk-based-development/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Trigger GitHub Actions with feature-based development",
+              "url": "https://learn.microsoft.com/en-us/training/modules/trigger-github-actions-trunk-based-development/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-work-environments-github-actions",
+          "title": "Work with environments in GitHub Actions",
+          "order": 6,
+          "duration_minutes": 36,
+          "content_md": "machine learning operations, MLOps, environments\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/work-environments-github-actions/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Work with environments in GitHub Actions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/work-environments-github-actions/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-deploy-model-github-actions",
+          "title": "Deploy a model with GitHub Actions",
+          "order": 7,
+          "duration_minutes": 34,
+          "content_md": "machine learning operations, MLOps, model deployment, online endpoint\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-model-github-actions/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy a model with GitHub Actions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-model-github-actions/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-build-first-machine-operations-workflow",
+          "title": "Laboratorio opcional: aplica Operationalize machine learning models (MLOps)",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Operationalize machine learning models (MLOps)**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

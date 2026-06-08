@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-implement-access-management-for-apps",
+  "track": "azure",
+  "title": "Implement access management for apps",
+  "summary": "Implement access management for apps",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 154,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-access-management-for-apps/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-access-management-for-apps",
+      "title": "Implement access management for apps",
+      "summary": "Implement access management for apps",
+      "order": 1,
+      "duration_minutes": 154,
+      "lessons": [
+        {
+          "lesson_key": "wwl-plan-design-integration-of-enterprise-apps-for-sso",
+          "title": "Plan and design the integration of enterprise apps for SSO",
+          "order": 1,
+          "duration_minutes": 42,
+          "content_md": "Enterprise app deployment enables control over which users can access the apps, easily log into apps with single-sign-on, and provide integrated usage reports.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/plan-design-integration-of-enterprise-apps-for-sso/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan and design the integration of enterprise apps for SSO",
+              "url": "https://learn.microsoft.com/en-us/training/modules/plan-design-integration-of-enterprise-apps-for-sso/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-monitor-integration-of-enterprise-apps-for-sso",
+          "title": "Implement and monitor the integration of enterprise apps for SSO",
+          "order": 2,
+          "duration_minutes": 41,
+          "content_md": "Deploying and monitoring enterprise applications to Azure solutions can ensure security. Explore how to deploy on-premises and cloud based apps to users.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-monitor-integration-of-enterprise-apps-for-sso/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement and monitor the integration of enterprise apps for SSO",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-monitor-integration-of-enterprise-apps-for-sso/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-app-registration",
+          "title": "Implement app registration",
+          "order": 3,
+          "duration_minutes": 48,
+          "content_md": "Line of business developed in-house need registration in Microsoft Entra ID and assigned to users for a secure Azure solution. Explore how to implement app registration.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-app-registration/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement app registration",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-app-registration/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-register-apps-use-microsoft-entra-id",
+          "title": "Register apps using Microsoft Entra ID",
+          "order": 4,
+          "duration_minutes": 23,
+          "content_md": "In this module, we explore the process of creating an app registration in Microsoft Entra ID. Then explore the settings and configuration options. You create a single page app, register multitenant app, and other options. As part of this process, we dig into granting user access to apps and configure how and when they can use the app and its data.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/register-apps-use-microsoft-entra-id/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Register apps using Microsoft Entra ID",
+              "url": "https://learn.microsoft.com/en-us/training/modules/register-apps-use-microsoft-entra-id/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-access-management-for-apps",
+          "title": "Laboratorio opcional: aplica Implement access management for apps",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement access management for apps**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

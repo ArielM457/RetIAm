@@ -1,0 +1,63 @@
+{
+  "certification_code": "wwl-manage-network-access-ai-workloads",
+  "track": "azure",
+  "title": "Manage Network Access for AI workloads",
+  "summary": "Strengthen your command over securing network access for AI workloads in Azure. This learning path is tailored for Cloud Administrators and IT professionals looking to enforce precise access controls and ensure isolation of sensitive AI resources. Learn how to implement private endpoints, configure virtual networks, and restrict exposure of Azure AI services and Azure Machine Learning workspaces. Whether you're designing robust hybrid networks or hardening cloud-native architectures, this path empowers you with practical skills to safeguard your AI infrastructure in today's security-first digital landscape.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 20,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/manage-network-access-ai-workloads/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-manage-network-access-ai-workloads",
+      "title": "Manage Network Access for AI workloads",
+      "summary": "Strengthen your command over securing network access for AI workloads in Azure. This learning path is tailored for Cloud Administrators and IT professionals looking to enforce precise access controls and ensure isolation of sensitive AI resources. Learn how to implement private endpoints, configure virtual networks, and restrict exposure of Azure AI services and Azure Machine Learning workspaces. Whether you're designing robust hybrid networks or hardening cloud-native architectures, this path empowers you with practical skills to safeguard your AI infrastructure in today's security-first digital landscape.",
+      "order": 1,
+      "duration_minutes": 20,
+      "lessons": [
+        {
+          "lesson_key": "restrict-azure-machine-learning-network-traffic",
+          "title": "Restrict Azure Machine Learning workspace network traffic",
+          "order": 1,
+          "duration_minutes": 20,
+          "content_md": "Overview of planning and securing Azure Machine Learning networking\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/restrict-azure-machine-learning-workspace-network/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Restrict Azure Machine Learning workspace network traffic",
+              "url": "https://learn.microsoft.com/en-us/training/modules/restrict-azure-machine-learning-workspace-network/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-manage-network-access-ai-workloads",
+          "title": "Laboratorio opcional: aplica Manage Network Access for AI workloads",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Manage Network Access for AI workloads**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

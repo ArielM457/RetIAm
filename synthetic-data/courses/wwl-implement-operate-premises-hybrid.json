@@ -1,0 +1,153 @@
+{
+  "certification_code": "wwl-implement-operate-premises-hybrid",
+  "track": "azure",
+  "title": "Implement and operate an on-premises and hybrid networking infrastructure",
+  "summary": "Implement and operate an on-premises and hybrid networking infrastructure",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 425,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-operate-premises-hybrid/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-operate-premises-hybrid",
+      "title": "Implement and operate an on-premises and hybrid networking infrastructure",
+      "summary": "Implement and operate an on-premises and hybrid networking infrastructure",
+      "order": 1,
+      "duration_minutes": 425,
+      "lessons": [
+        {
+          "lesson_key": "wwl-implement-dns-for-windows-server-iaas-vms",
+          "title": "Implement DNS for Windows Server IaaS VMs",
+          "order": 1,
+          "duration_minutes": 50,
+          "content_md": "Implement DNS for Windows Server IaaS VMs\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-dns-for-windows-server-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement DNS for Windows Server IaaS VMs",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-dns-for-windows-server-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-deploy-manage-dhcp",
+          "title": "Deploy and manage DHCP",
+          "order": 2,
+          "duration_minutes": 70,
+          "content_md": "Deploy and manage DHCP\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-manage-dynamic-host-configuration-protocol/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy and manage DHCP",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-manage-dynamic-host-configuration-protocol/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-windows-server-dns",
+          "title": "Implement Windows Server DNS",
+          "order": 3,
+          "duration_minutes": 49,
+          "content_md": "Implement Windows Server DNS\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-windows-server-dns/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement Windows Server DNS",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-windows-server-dns/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-ip-address-management",
+          "title": "Implement IP Address Management",
+          "order": 4,
+          "duration_minutes": 75,
+          "content_md": "Implement IP Address Management\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-ip-address-management/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement IP Address Management",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-ip-address-management/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-remote-access",
+          "title": "Implement remote access",
+          "order": 5,
+          "duration_minutes": 59,
+          "content_md": "Implement remote access\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-remote-access/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement remote access",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-remote-access/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-hybrid-network-infrastructure",
+          "title": "Implement hybrid network infrastructure",
+          "order": 6,
+          "duration_minutes": 69,
+          "content_md": "You learn to connect your on-premises environment to Azure, implement subnets and routing between your on-premises and cloud environments, and ensure that workloads in the cloud and on-premises perform DNS resolution to locate each other.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-hybrid-network-infrastructure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement hybrid network infrastructure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-hybrid-network-infrastructure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-windows-server-iaas-vm-ip-addressing-routing",
+          "title": "Implement Windows Server IaaS VM IP addressing and routing",
+          "order": 7,
+          "duration_minutes": 53,
+          "content_md": "Implement Windows Server IaaS VM IP addressing and routing\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-windows-server-iaas-virtual-machine-ip-addressing-routing/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement Windows Server IaaS VM IP addressing and routing",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-windows-server-iaas-virtual-machine-ip-addressing-routing/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-operate-premises-hybrid",
+          "title": "Laboratorio opcional: aplica Implement and operate an on-premises and hybrid networking infrastructure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement and operate an on-premises and hybrid networking infrastructure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "certification_code": "az-400-facilitate-communication-collaboration",
+  "track": "azure",
+  "title": "Facilitate communication and collaboration",
+  "summary": "Explore DevOps capabilities such as continuous planning and continuous collaboration and prepare for Exam AZ-400: Designing and Implementing Microsoft DevOps Solutions.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 104,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/az-400-facilitate-communication-collaboration/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "az-400-facilitate-communication-collaboration",
+      "title": "Facilitate communication and collaboration",
+      "summary": "Explore DevOps capabilities such as continuous planning and continuous collaboration and prepare for Exam AZ-400: Designing and Implementing Microsoft DevOps Solutions.",
+      "order": 1,
+      "duration_minutes": 104,
+      "lessons": [
+        {
+          "lesson_key": "wwl-analyze-devops-continuous-planning-intergration",
+          "title": "Analyze DevOps Continuous Planning and Continuous Integration",
+          "order": 1,
+          "duration_minutes": 22,
+          "content_md": "Explore the first two capabilities in the DevOps taxonomy, Continuous Planning and Continuous Integration.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/analyze-devops-continuous-planning-intergration/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Analyze DevOps Continuous Planning and Continuous Integration",
+              "url": "https://learn.microsoft.com/en-us/training/modules/analyze-devops-continuous-planning-intergration/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-introduce-foundation-pillars-devops",
+          "title": "Introduce the foundation pillars of DevOps: Culture and Lean Product",
+          "order": 2,
+          "duration_minutes": 25,
+          "content_md": "DevOps is the union of people, process, and products to enable continuous delivery of value to our end users. Discover the first two foundation pillars of DevOps: Culture and Lean Product.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduce-foundation-pillars-devops/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduce the foundation pillars of DevOps: Culture and Lean Product",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduce-foundation-pillars-devops/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-characterize-devops-continous-collaboration-improvement",
+          "title": "Characterize DevOps Continuous Collaboration and Continuous Improvement",
+          "order": 3,
+          "duration_minutes": 17,
+          "content_md": "Characterize DevOps Continuous Collaboration and Continuous Improvement\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/characterize-devops-continous-collaboration-improvement/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Characterize DevOps Continuous Collaboration and Continuous Improvement",
+              "url": "https://learn.microsoft.com/en-us/training/modules/characterize-devops-continous-collaboration-improvement/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-explain-devops-continous-delivery-quality",
+          "title": "Explain DevOps Continuous Delivery and Continuous Quality",
+          "order": 4,
+          "duration_minutes": 18,
+          "content_md": "Explore two capabilities in the DevOps taxonomy, Continuous Delivery and Continuous Quality.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explain-devops-continous-delivery-quality/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explain DevOps Continuous Delivery and Continuous Quality",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explain-devops-continous-delivery-quality/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azdo-route-system-feedback",
+          "title": "Route system feedback to development teams",
+          "order": 5,
+          "duration_minutes": 22,
+          "content_md": "Learn how continuous monitoring and dashboards give you insight into how customers use your software and where patterns of failure occur.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/route-system-feedback/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Route system feedback to development teams",
+              "url": "https://learn.microsoft.com/en-us/training/modules/route-system-feedback/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-az-400-facilitate-communication-collaboration",
+          "title": "Laboratorio opcional: aplica Facilitate communication and collaboration",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Facilitate communication and collaboration**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

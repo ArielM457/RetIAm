@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-plan-implement-identity-governance-strategy",
+  "track": "azure",
+  "title": "Plan and implement an identity governance strategy",
+  "summary": "Plan and implement an identity governance strategy",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 203,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/plan-implement-identity-governance-strategy/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-plan-implement-identity-governance-strategy",
+      "title": "Plan and implement an identity governance strategy",
+      "summary": "Plan and implement an identity governance strategy",
+      "order": 1,
+      "duration_minutes": 203,
+      "lessons": [
+        {
+          "lesson_key": "wwl-plan-implement-entitlement-management",
+          "title": "Plan and implement entitlement management",
+          "order": 1,
+          "duration_minutes": 55,
+          "content_md": "When new users or external users join your site, quickly assigning them access to Azure solutions is a must. Explore how to entitle users to access your site and resources.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/plan-implement-entitlement-management/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan and implement entitlement management",
+              "url": "https://learn.microsoft.com/en-us/training/modules/plan-implement-entitlement-management/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-plan-implement-manage-access-review",
+          "title": "Plan, implement, and manage access review",
+          "order": 2,
+          "duration_minutes": 50,
+          "content_md": "Once identity is deployed, proper governance using access reviews is necessary for a secure solution. Explore how to plan for and implement access reviews.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/plan-implement-manage-access-review/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan, implement, and manage access review",
+              "url": "https://learn.microsoft.com/en-us/training/modules/plan-implement-manage-access-review/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-plan-implement-privileged-access",
+          "title": "Plan and implement privileged access",
+          "order": 3,
+          "duration_minutes": 62,
+          "content_md": "Ensuring that administrative roles are protected and managed to increase your Azure solution security is a must. Explore how to use PIM to protect your data and resources.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/plan-implement-privileged-access/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan and implement privileged access",
+              "url": "https://learn.microsoft.com/en-us/training/modules/plan-implement-privileged-access/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-monitor-maintain-azure-active-directory",
+          "title": "Monitor and maintain Microsoft Entra ID",
+          "order": 4,
+          "duration_minutes": 36,
+          "content_md": "Audit and diagnostic logs within Microsoft Entra ID provide a rich view into how users are accessing your Azure solution. Learn to monitor, troubleshoot, and analyze sign-in data.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-maintain-azure-active-directory/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Monitor and maintain Microsoft Entra ID",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-maintain-azure-active-directory/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-plan-implement-identity-governance-strategy",
+          "title": "Laboratorio opcional: aplica Plan and implement an identity governance strategy",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Plan and implement an identity governance strategy**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

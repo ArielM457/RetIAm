@@ -1,0 +1,93 @@
+{
+  "certification_code": "github-responsible-ai",
+  "track": "github",
+  "title": "GitHub responsible AI",
+  "summary": "Strengthen your AI knowledge through courses covering essential topics such as machine learning, facial recognition, generative AI, and responsible AI practices. Learn how AI tools detect and analyze faces, explore the creation of content with generative models, and embrace responsible considerations in AI development. These foundational classes build expertise in AI while focusing on responsible technology use.",
+  "provider": "GitHub",
+  "level": "basic",
+  "total_duration_minutes": 135,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/github-responsible-ai/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "github-responsible-ai",
+      "title": "GitHub responsible AI",
+      "summary": "Strengthen your AI knowledge through courses covering essential topics such as machine learning, facial recognition, generative AI, and responsible AI practices. Learn how AI tools detect and analyze faces, explore the creation of content with generative models, and embrace responsible considerations in AI development. These foundational classes build expertise in AI while focusing on responsible technology use.",
+      "order": 1,
+      "duration_minutes": 135,
+      "lessons": [
+        {
+          "lesson_key": "wwl-get-started-ai-fundamentals",
+          "title": "Introduction to AI concepts",
+          "order": 1,
+          "duration_minutes": 40,
+          "content_md": "Curious about artificial intelligence? Want to understand what the buzz is about? This module introduces you to the world of AI.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to AI concepts",
+              "url": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-fundamentals-generative-ai",
+          "title": "Introduction to generative AI and agents",
+          "order": 2,
+          "duration_minutes": 37,
+          "content_md": "Ever wondered how AI can create content, answer questions, and assist with tasks? This module introduces you to the world of generative AI and agents.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to generative AI and agents",
+              "url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-embrace-responsible-ai-principles-practices",
+          "title": "Embrace responsible AI principles and practices",
+          "order": 3,
+          "duration_minutes": 58,
+          "content_md": "Explore six principles to guide AI development and use - fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/embrace-responsible-ai-principles-practices/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Embrace responsible AI principles and practices",
+              "url": "https://learn.microsoft.com/en-us/training/modules/embrace-responsible-ai-principles-practices/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-github-responsible-ai",
+          "title": "Laboratorio opcional: aplica GitHub responsible AI",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **GitHub responsible AI**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

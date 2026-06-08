@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-implement-network-security-controls-azure",
+  "track": "azure",
+  "title": "Implement network security controls in Azure",
+  "summary": "Implement defense-in-depth network security controls in Azure. Segment workloads to control lateral movement, centralize traffic inspection with Azure Firewall, harden remote and hybrid connectivity, and eliminate public network exposure of PaaS and AI services using private endpoints.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 172,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-network-security-controls-azure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-network-security-controls-azure",
+      "title": "Implement network security controls in Azure",
+      "summary": "Implement defense-in-depth network security controls in Azure. Segment workloads to control lateral movement, centralize traffic inspection with Azure Firewall, harden remote and hybrid connectivity, and eliminate public network exposure of PaaS and AI services using private endpoints.",
+      "order": 1,
+      "duration_minutes": 172,
+      "lessons": [
+        {
+          "lesson_key": "wwl-segment-isolate-workloads-network-security-controls",
+          "title": "Segment and isolate Azure workloads using network security controls",
+          "order": 1,
+          "duration_minutes": 53,
+          "content_md": "Segment Azure workloads to control lateral movement and enforce least-privilege network access. Design and configure Network Security Group (NSG) and Application Security Group (ASG) rules with a security-first approach, enforce organization-wide policies using Azure Virtual Network Manager, and verify effective security posture using Network Watcher diagnostics.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/segment-isolate-workloads-network-security-controls/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Segment and isolate Azure workloads using network security controls",
+              "url": "https://learn.microsoft.com/en-us/training/modules/segment-isolate-workloads-network-security-controls/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-centralize-traffic-inspection-azure-firewall",
+          "title": "Centralize and enforce traffic inspection using Azure Firewall",
+          "order": 2,
+          "duration_minutes": 37,
+          "content_md": "Deploy Azure Firewall to centralize traffic inspection and enforce filtering policies across your Azure environment. Configure rule collections, apply threat-intelligence-based blocking, and extend centralized inspection to Virtual WAN deployments using Secured Virtual Hubs.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/centralize-traffic-inspection-azure-firewall/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Centralize and enforce traffic inspection using Azure Firewall",
+              "url": "https://learn.microsoft.com/en-us/training/modules/centralize-traffic-inspection-azure-firewall/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-secure-hybrid-connectivity-azure",
+          "title": "Secure remote and hybrid connectivity using VPN gateways and Microsoft Entra Private Access",
+          "order": 3,
+          "duration_minutes": 39,
+          "content_md": "Harden Azure remote and hybrid connectivity to reduce attack surface and enforce Zero Trust access principles. Assess VPN gateway security risks, apply hardening controls, and deploy Microsoft Entra Private Access to replace broad VPN access with identity-aware, per-application access.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/secure-hybrid-connectivity-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure remote and hybrid connectivity using VPN gateways and Microsoft Entra Private Access",
+              "url": "https://learn.microsoft.com/en-us/training/modules/secure-hybrid-connectivity-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-eliminate-public-exposure-paas-private-link",
+          "title": "Eliminate public network exposure of Azure PaaS services",
+          "order": 4,
+          "duration_minutes": 43,
+          "content_md": "Eliminate public network exposure of Azure PaaS and AI services using private endpoints and Azure Private Link. Configure private endpoints, integrate private DNS, expose internal services using Private Link service, and enforce private access adoption using Azure Policy and Defender for Cloud.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/eliminate-public-exposure-paas-private-link/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Eliminate public network exposure of Azure PaaS services",
+              "url": "https://learn.microsoft.com/en-us/training/modules/eliminate-public-exposure-paas-private-link/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-network-security-controls-azure",
+          "title": "Laboratorio opcional: aplica Implement network security controls in Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement network security controls in Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "certification_code": "learn-m365-cybersecurity-data",
+  "track": "azure",
+  "title": "Learn how Microsoft supports data discovery, classification, and protection as part of a cybersecurity solution",
+  "summary": "Know your data, protect your data, and don't lose your data. These are the basic tenets of good information protection - data discovery, classification, and protection. This learning path provides an overview of the Microsoft data protection capabilities and how to use them to protect and govern data as part of a cybersecurity solution.The deadline for the heads of federal civilian agencies to evaluate and classify agency data and provide to DHS and OMB a report of their evaluation, per Section 8 of the Executive Order on Improving the Nation's Cybersecurity, is **August 24, 2021**.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 110,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/data-identification-cybersecurity/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "learn-m365-cybersecurity-data",
+      "title": "Learn how Microsoft supports data discovery, classification, and protection as part of a cybersecurity solution",
+      "summary": "Know your data, protect your data, and don't lose your data. These are the basic tenets of good information protection - data discovery, classification, and protection. This learning path provides an overview of the Microsoft data protection capabilities and how to use them to protect and govern data as part of a cybersecurity solution.The deadline for the heads of federal civilian agencies to evaluate and classify agency data and provide to DHS and OMB a report of their evaluation, per Section 8 of the Executive Order on Improving the Nation's Cybersecurity, is **August 24, 2021**.",
+      "order": 1,
+      "duration_minutes": 110,
+      "lessons": [
+        {
+          "lesson_key": "learn-m365-m365-compliance-information-governance",
+          "title": "Introduction to information security and compliance in Microsoft Purview",
+          "order": 1,
+          "duration_minutes": 42,
+          "content_md": "Discover the tools and concepts in Microsoft Purview for managing and protecting sensitive data. Understand how to keep data secure and compliant throughout its lifecycle across different environments.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/m365-compliance-information-governance/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to information security and compliance in Microsoft Purview",
+              "url": "https://learn.microsoft.com/en-us/training/modules/m365-compliance-information-governance/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-m365-m365-compliance-information-prevent-data-loss",
+          "title": "Prevent data loss with Microsoft Purview",
+          "order": 2,
+          "duration_minutes": 68,
+          "content_md": "Microsoft Purview Data Loss Prevention (DLP) helps safeguard sensitive information by monitoring and preventing accidental data leaks across your organization's digital platforms. In this module, you'll learn how to plan, deploy, and adjust DLP policies to protect sensitive data in your organization, ensuring security without disrupting daily work.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/m365-compliance-information-prevent-data-loss/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Prevent data loss with Microsoft Purview",
+              "url": "https://learn.microsoft.com/en-us/training/modules/m365-compliance-information-prevent-data-loss/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-learn-m365-cybersecurity-data",
+          "title": "Laboratorio opcional: aplica Learn how Microsoft supports data discovery, classification, and protection as part of a cybersecurity solution",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Learn how Microsoft supports data discovery, classification, and protection as part of a cybersecurity solution**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "certification_code": "wwl-monitor-troubleshoot-windows-server-environmen",
+  "track": "azure",
+  "title": "Monitor and troubleshoot Windows Server environments",
+  "summary": "Monitor and troubleshoot Windows Server environments",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 422,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/monitor-troubleshoot-windows-server-environments/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-monitor-troubleshoot-windows-server-environments",
+      "title": "Monitor and troubleshoot Windows Server environments",
+      "summary": "Monitor and troubleshoot Windows Server environments",
+      "order": 1,
+      "duration_minutes": 422,
+      "lessons": [
+        {
+          "lesson_key": "wwl-monitor-windows-server-iaas-vms-hybrid-instances",
+          "title": "Monitor Windows Server IaaS Virtual Machines and hybrid instances",
+          "order": 1,
+          "duration_minutes": 46,
+          "content_md": "Monitor Windows Server IaaS Virtual Machines and hybrid instances\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-windows-server-iaas-virtual-machines-hybrid-instances/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Monitor Windows Server IaaS Virtual Machines and hybrid instances",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-windows-server-iaas-virtual-machines-hybrid-instances/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-monitor-azure-vm-using-diagnostic-data",
+          "title": "Monitor your Azure virtual machines with Azure Monitor",
+          "order": 2,
+          "duration_minutes": 35,
+          "content_md": "Learn how to monitor your Azure VMs by using Azure Monitor to collect and analyze VM host and client metrics and logs.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Monitor your Azure virtual machines with Azure Monitor",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-monitor-windows-server-performance",
+          "title": "Monitor Windows Server performance",
+          "order": 3,
+          "duration_minutes": 79,
+          "content_md": "Learn to use a range of Windows Server tools to monitor the operating system and applications on a server computer. You'll also learn to configure your system to optimize efficiency and to troubleshoot problems.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-windows-server-performance/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Monitor Windows Server performance",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-windows-server-performance/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-monitor-event-logs",
+          "title": "Manage and monitor Windows Server event logs",
+          "order": 4,
+          "duration_minutes": 39,
+          "content_md": "Learn how Event Viewer provides a convenient and accessible location for you to observe events that occur. Access event information quickly and conveniently. Learn how to interpret the data in the event log.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-monitor-event-logs/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage and monitor Windows Server event logs",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-monitor-event-logs/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-windows-server-auditing-diagnostics",
+          "title": "Implement Windows Server auditing and diagnostics",
+          "order": 5,
+          "duration_minutes": 37,
+          "content_md": "Learn to audit and diagnose your Windows Server environment for regulatory compliance, user activity, and troubleshooting. Implement security best practices through regular audits of your network environment to gain early warning of potential malicious activity.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-windows-server-auditing-diagnostics/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement Windows Server auditing and diagnostics",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-windows-server-auditing-diagnostics/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-troubleshoot-premises-hybrid-networking",
+          "title": "Troubleshoot on-premises and hybrid networking",
+          "order": 6,
+          "duration_minutes": 63,
+          "content_md": "Learn to troubleshoot on-premises connectivity and hybrid network connectivity. Diagnose common issues with DHCP, name resolution, IP configuration, and routing that can cause reliability and connectivity problems in an on-premises and a hybrid environment.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/troubleshoot-premises-hybrid-networking/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Troubleshoot on-premises and hybrid networking",
+              "url": "https://learn.microsoft.com/en-us/training/modules/troubleshoot-premises-hybrid-networking/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-troubleshoot-windows-server-virtual-machines-azure",
+          "title": "Troubleshoot Windows Server Virtual Machines in Azure",
+          "order": 7,
+          "duration_minutes": 66,
+          "content_md": "Learn to troubleshoot configuration issues that affect connectivity to your Azure-hosted Windows Server virtual machines (VMs). Explore approaches to resolve issues with VM startup, extensions, performance, storage, and encryption.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/troubleshoot-windows-server-virtual-machines-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Troubleshoot Windows Server Virtual Machines in Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/troubleshoot-windows-server-virtual-machines-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-troubleshoot-active-directory",
+          "title": "Troubleshoot Active Directory",
+          "order": 8,
+          "duration_minutes": 57,
+          "content_md": "Learn how to troubleshoot AD DS service failures or degraded performance. Learn how to recover deleted security objects and the AD DS database, and how to troubleshoot hybrid authentication issues.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/troubleshoot-active-directory/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Troubleshoot Active Directory",
+              "url": "https://learn.microsoft.com/en-us/training/modules/troubleshoot-active-directory/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-monitor-troubleshoot-windows-server-environments",
+          "title": "Laboratorio opcional: aplica Monitor and troubleshoot Windows Server environments",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Monitor and troubleshoot Windows Server environments**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

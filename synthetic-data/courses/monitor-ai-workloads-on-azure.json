@@ -1,0 +1,78 @@
+{
+  "certification_code": "monitor-ai-workloads-on-azure",
+  "track": "azure",
+  "title": "Monitor AI workloads on Azure",
+  "summary": "Optimize your AI operations with the \"Monitor AI Workloads on Azure\" learning path. Through targeted modules, you learn to monitor Azure AI services, evaluate the performance of AI applications with Azure Monitor, and explore the fundamentals of monitoring AI models with Azure AI Foundry. This path equips professionals with the skills to ensure efficient, reliable, and high-performing AI workloads on Azure's robust platform. Start mastering AI monitoring strategies today!",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 70,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/monitor-ai-workloads-on-azure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "monitor-ai-workloads-on-azure",
+      "title": "Monitor AI workloads on Azure",
+      "summary": "Optimize your AI operations with the \"Monitor AI Workloads on Azure\" learning path. Through targeted modules, you learn to monitor Azure AI services, evaluate the performance of AI applications with Azure Monitor, and explore the fundamentals of monitoring AI models with Azure AI Foundry. This path equips professionals with the skills to ensure efficient, reliable, and high-performing AI workloads on Azure's robust platform. Start mastering AI monitoring strategies today!",
+      "order": 1,
+      "duration_minutes": 70,
+      "lessons": [
+        {
+          "lesson_key": "wwl-evaluate-models-azure-ai-studio",
+          "title": "Evaluate generative AI performance in Microsoft Foundry portal",
+          "order": 1,
+          "duration_minutes": 38,
+          "content_md": "Evaluating copilots is essential to ensure your generative AI applications meet user needs, provide accurate responses, and continuously improve over time. Discover how to assess and optimize the performance of your generative AI applications using the tools and features available in the Azure AI Studio.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/evaluate-models-azure-ai-studio/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Evaluate generative AI performance in Microsoft Foundry portal",
+              "url": "https://learn.microsoft.com/en-us/training/modules/evaluate-models-azure-ai-studio/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "introduction-to-azure-machine-learning-monitoring",
+          "title": "Introduction to Azure Machine Learning monitoring",
+          "order": 2,
+          "duration_minutes": 32,
+          "content_md": "Get an introduction to what you need to know about monitoring Azure Machine Learning deployments.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure Machine Learning monitoring",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-monitor-ai-workloads-on-azure",
+          "title": "Laboratorio opcional: aplica Monitor AI workloads on Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Monitor AI workloads on Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-implement-identity-management-solution",
+  "track": "azure",
+  "title": "Implement an identity management solution using Microsoft Entra ID",
+  "summary": "Implement an identity management solution using Microsoft Entra ID",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 256,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-identity-management-solution/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-identity-management-solution",
+      "title": "Implement an identity management solution using Microsoft Entra ID",
+      "summary": "Implement an identity management solution using Microsoft Entra ID",
+      "order": 1,
+      "duration_minutes": 256,
+      "lessons": [
+        {
+          "lesson_key": "wwl-implement-initial-configuration-of-azure-active-director",
+          "title": "Implement initial configuration of Microsoft Entra ID",
+          "order": 1,
+          "duration_minutes": 50,
+          "content_md": "Learn to create an initial Azure Active Directory configuration to ensure all the identity solutions available in Azure are ready to use. This module explores how to build and configure an Azure AD system.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-initial-configuration-of-azure-active-directory/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement initial configuration of Microsoft Entra ID",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-initial-configuration-of-azure-active-directory/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-create-configure-manage-identities",
+          "title": "Create, configure, and manage identities",
+          "order": 2,
+          "duration_minutes": 64,
+          "content_md": "Access to cloud-based workloads needs to be controlled centrally by providing a definitive identity for each user and resource. You can ensure employees and vendors have just enough access to do their job.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-configure-manage-identities/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create, configure, and manage identities",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-configure-manage-identities/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-manage-external-identities",
+          "title": "Implement and manage external identities",
+          "order": 3,
+          "duration_minutes": 72,
+          "content_md": "Inviting external users to use company Azure resources is a great benefit, but you want to do it in a secure way. Explore how to enable secure external collaboration.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-manage-external-identities/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement and manage external identities",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-manage-external-identities/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-manage-hybrid-identity",
+          "title": "Implement and manage hybrid identity",
+          "order": 4,
+          "duration_minutes": 70,
+          "content_md": "Creating a hybrid-identity solution to use your on-premises active directory can be challenging. Explore how to implement a secure hybrid-identity solution.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-manage-hybrid-identity/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement and manage hybrid identity",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-manage-hybrid-identity/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-identity-management-solution",
+          "title": "Laboratorio opcional: aplica Implement an identity management solution using Microsoft Entra ID",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement an identity management solution using Microsoft Entra ID**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

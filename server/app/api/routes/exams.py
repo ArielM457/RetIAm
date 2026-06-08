@@ -3,13 +3,25 @@ from fastapi import APIRouter, Depends
 from app.core.security import get_current_supabase_user
 from app.models.exam import (
     CertificateResponse,
+    CertificateVerificationResponse,
     FinalExamAttemptResponse,
     StartFinalExamRequest,
     SubmitFinalExamRequest,
 )
-from app.services.exam_service import list_my_certificates, start_final_exam, submit_final_exam
+from app.services.exam_service import (
+    list_my_certificates,
+    start_final_exam,
+    submit_final_exam,
+    verify_certificate,
+)
 
 router = APIRouter()
+
+
+@router.get("/certificates/verify/{verification_code}", response_model=CertificateVerificationResponse)
+def get_verify_certificate(verification_code: str) -> CertificateVerificationResponse:
+    # Endpoint publico (sin auth) para validar un certificado compartido.
+    return verify_certificate(verification_code)
 
 
 @router.post("/final", response_model=FinalExamAttemptResponse, status_code=201)

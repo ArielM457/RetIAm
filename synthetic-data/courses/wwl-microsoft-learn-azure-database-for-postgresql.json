@@ -1,0 +1,198 @@
+{
+  "certification_code": "wwl-microsoft-learn-azure-database-for-postgresql",
+  "track": "azure",
+  "title": "Configure and migrate to Azure Database for PostgreSQL",
+  "summary": "Azure Database for PostgreSQL is a Platform as a Service database service in the Microsoft cloud. It bases itself on the PostgreSQL open-source relational database and includes built-in high availability, automatic backup and restore, as well as comprehensive security features. The pay-as-you-go pricing model provides predictable performance and near-instant scaling. In this learning path, you're introduced to the main features of PostgreSQL and how they work in Azure Database for PostgreSQL. You learn about the different Azure Database for PostgreSQL implementation options, and how to configure a server for your needs. (DP-3021)",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 383,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/microsoft-learn-azure-database-for-postgresql/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-microsoft-learn-azure-database-for-postgresql",
+      "title": "Configure and migrate to Azure Database for PostgreSQL",
+      "summary": "Azure Database for PostgreSQL is a Platform as a Service database service in the Microsoft cloud. It bases itself on the PostgreSQL open-source relational database and includes built-in high availability, automatic backup and restore, as well as comprehensive security features. The pay-as-you-go pricing model provides predictable performance and near-instant scaling. In this learning path, you're introduced to the main features of PostgreSQL and how they work in Azure Database for PostgreSQL. You learn about the different Azure Database for PostgreSQL implementation options, and how to configure a server for your needs. (DP-3021)",
+      "order": 1,
+      "duration_minutes": 383,
+      "lessons": [
+        {
+          "lesson_key": "wwl-explore-postgresql-architecture",
+          "title": "Explore PostgreSQL architecture",
+          "order": 1,
+          "duration_minutes": 45,
+          "content_md": "PostgreSQL is an open-source relational database system that is now available as a service in Azure. In this module, you learn about the PostgreSQL architecture, and how to manage different aspects of PostgreSQL in Azure Database for PostgreSQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-postgresql-architecture/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore PostgreSQL architecture",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-postgresql-architecture/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-understand-client-server-communication-postgresql",
+          "title": "Understand client-server communication in PostgreSQL",
+          "order": 2,
+          "duration_minutes": 28,
+          "content_md": "PostgreSQL is a client-server system, which allows many clients to connect to a central server. In this module you learn how PostgreSQL manages connections from clients, and looking at some common PostgreSQL client tools.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/understand-client-server-communication-postgresql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand client-server communication in PostgreSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/understand-client-server-communication-postgresql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-understand-postgresql-query-process",
+          "title": "Understand PostgreSQL query processing",
+          "order": 3,
+          "duration_minutes": 20,
+          "content_md": "The Azure Database for PostgreSQL server receives SQL queries and returns the relevant results. Each SQL query goes through several stages in order to return the correct results as quickly as possible. In this module, you learn about the different stages of processing a query, and the EXPLAIN statement.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/understand-postgresql-query-process/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand PostgreSQL query processing",
+              "url": "https://learn.microsoft.com/en-us/training/modules/understand-postgresql-query-process/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-secure-azure-database-for-postgresql",
+          "title": "Secure Azure Database for PostgreSQL",
+          "order": 4,
+          "duration_minutes": 45,
+          "content_md": "Azure Database for PostgreSQL includes comprehensive security features including encryption in transit and at rest, authentication, and granting permissions to database users. In this module you learn about the security features of Azure Database for PostgreSQL, and how to configure them.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/secure-azure-database-for-postgresql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure Azure Database for PostgreSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/secure-azure-database-for-postgresql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-procedures-functions-postgesql",
+          "title": "Procedures and functions in PostgreSQL",
+          "order": 5,
+          "duration_minutes": 30,
+          "content_md": "PostgreSQL supports stored procedures and functions to make SQL queries reusable. In this module, you learn how to create and run stored procedures and functions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/procedures-functions-postgresql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Procedures and functions in PostgreSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/procedures-functions-postgresql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-understand-write-ahead-logging",
+          "title": "Understand write-ahead logging",
+          "order": 6,
+          "duration_minutes": 46,
+          "content_md": "Azure Database for PostgreSQL is an ACID compliant database service. Write-ahead logging ensures changes are both atomic and durable (the A and D in ACID). Changes are first written to the log before they're committed to the database. In this module, you learn how Azure Database for PostgreSQL implements write-ahead logging, and how the log can be used for replication and logical decoding.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/understand-write-ahead-logging/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand write-ahead logging",
+              "url": "https://learn.microsoft.com/en-us/training/modules/understand-write-ahead-logging/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-manage-postgresql",
+          "title": "Configure and manage Azure Database for PostgreSQL",
+          "order": 7,
+          "duration_minutes": 46,
+          "content_md": "Azure Database for PostgreSQL efficiently manages vast quantities of data and their structures through system catalogs and views. This module explores how to optimize database performance by accessing and configuring metadata, understanding the role of the vacuum process in maintaining database health, and managing server settings. We introduce practical techniques to enhance your PostgreSQL database administration, useful in environments requiring robust data handling and security features.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-manage-postgresql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure and manage Azure Database for PostgreSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-manage-postgresql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-understand-concurrency-postgresql",
+          "title": "Understand concurrency in PostgreSQL",
+          "order": 8,
+          "duration_minutes": 33,
+          "content_md": "Azure Database for PostgreSQL is a multi-user relational database solution. The ability to support many concurrent users enables PostgreSQL databases to scale out and enable applications that support many users and locations at the same time. The increase in users brings a risk of conflicts. For this reason, it's important to understand the concurrency systems that are in place in Azure Database for PostgreSQL to manage concurrency and conflicts. In this module, we look at both isolation levels and locking in Azure Database for PostgreSQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/understand-concurrency-postgresql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand concurrency in PostgreSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/understand-concurrency-postgresql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-tune-queries-azure-database-for-postgresql",
+          "title": "Tune queries in Azure Database for PostgreSQL",
+          "order": 9,
+          "duration_minutes": 31,
+          "content_md": "Relational databases store many different types of data for many different types of applications. Some databases have thousands of users and some have just one user. Some tables have tens of rows while others have millions of rows. Some data is unique while other data is duplicated. All of these variables mean that database management systems (DBMSs) need systems to understand the data and the queries that are running against this data to ensure optimum performance. When you perform tune a database, it's important to understand how performance tuning works and how you can assess performance metrics.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/tune-queries-azure-database-for-postgresql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Tune queries in Azure Database for PostgreSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/tune-queries-azure-database-for-postgresql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-migrate-azure-database-postgresql-flexible-server",
+          "title": "Migrate to Azure Database for PostgreSQL flexible server",
+          "order": 10,
+          "duration_minutes": 59,
+          "content_md": "Azure Database for PostgreSQL Flexible Server supports effective data migration from PostgreSQL servers. This module covers both online and offline migration methods and tools, helping you choose the right approach for your scenario. Learn practical techniques for managing migrations efficiently, ideal for minimizing downtime and maintaining productivity.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-azure-database-postgresql-flexible-server/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate to Azure Database for PostgreSQL flexible server",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-azure-database-postgresql-flexible-server/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-microsoft-learn-azure-database-for-postgresql",
+          "title": "Laboratorio opcional: aplica Configure and migrate to Azure Database for PostgreSQL",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Configure and migrate to Azure Database for PostgreSQL**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

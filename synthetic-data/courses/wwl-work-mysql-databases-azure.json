@@ -1,0 +1,123 @@
+{
+  "certification_code": "wwl-work-mysql-databases-azure",
+  "track": "azure",
+  "title": "Work with MySQL Databases on Azure",
+  "summary": "Work with MySQL Databases on Azure",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 177,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/work-mysql-databases-azure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-work-mysql-databases-azure",
+      "title": "Work with MySQL Databases on Azure",
+      "summary": "Work with MySQL Databases on Azure",
+      "order": 1,
+      "duration_minutes": 177,
+      "lessons": [
+        {
+          "lesson_key": "wwl-explore-mysql-architecture",
+          "title": "Explore MySQL Architecture",
+          "order": 1,
+          "duration_minutes": 32,
+          "content_md": "Explore the component parts of MySQL, and learn how to find your way around Azure Database for MySQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-mysql-architecture/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore MySQL Architecture",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-mysql-architecture/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-understand-client-server-communication-mysql",
+          "title": "Understand client-server communication in MySQL",
+          "order": 2,
+          "duration_minutes": 31,
+          "content_md": "Learn about connection handling in MySQL, back up and restore, and the client interrace options available for MySQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/understand-client-server-communication-mysql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand client-server communication in MySQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/understand-client-server-communication-mysql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-understand-mysql-storage-engine",
+          "title": "Understand the MySQL storage engine",
+          "order": 3,
+          "duration_minutes": 38,
+          "content_md": "Learn about MySQL’s pluggable storage engine model, and learn about common storage engines, and those supported by Azure Database for MySQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/understand-mysql-storage-engine/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand the MySQL storage engine",
+              "url": "https://learn.microsoft.com/en-us/training/modules/understand-mysql-storage-engine/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-secure-mysql",
+          "title": "Secure MySQL",
+          "order": 4,
+          "duration_minutes": 38,
+          "content_md": "Learn about Azure Database for MySQL security, encryption in Azure Database for MySQL, and how to configure Microsoft Entra authentication.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/secure-mysql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure MySQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/secure-mysql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-understand-concurrency-mysql",
+          "title": "Understand concurrency in MySQL",
+          "order": 5,
+          "duration_minutes": 38,
+          "content_md": "Learn about concurrency in MySQL, including how to limit the number of connections, and when to use thread pools.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/understand-concurrency-mysql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand concurrency in MySQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/understand-concurrency-mysql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-work-mysql-databases-azure",
+          "title": "Laboratorio opcional: aplica Work with MySQL Databases on Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Work with MySQL Databases on Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

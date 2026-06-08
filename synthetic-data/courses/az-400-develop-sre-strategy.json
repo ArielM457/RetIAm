@@ -1,0 +1,93 @@
+{
+  "certification_code": "az-400-develop-sre-strategy",
+  "track": "azure",
+  "title": "Develop a Site Reliability Engineering (SRE) strategy",
+  "summary": "Sustainably achieve the appropriate level of reliability in your systems, services, and products and prepare for Exam AZ-400: Designing and Implementing Microsoft DevOps Solutions.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 125,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/az-400-develop-sre-strategy/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "az-400-develop-sre-strategy",
+      "title": "Develop a Site Reliability Engineering (SRE) strategy",
+      "summary": "Sustainably achieve the appropriate level of reliability in your systems, services, and products and prepare for Exam AZ-400: Designing and Implementing Microsoft DevOps Solutions.",
+      "order": 1,
+      "duration_minutes": 125,
+      "lessons": [
+        {
+          "lesson_key": "intro-to-site-reliability-engineering",
+          "title": "Introduction to Site Reliability Engineering (SRE)",
+          "order": 1,
+          "duration_minutes": 55,
+          "content_md": "Learn about SRE, an engineering discipline that helps you sustainably achieve the appropriate level of reliability in your systems, services, and products.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-site-reliability-engineering/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Site Reliability Engineering (SRE)",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-site-reliability-engineering/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azdo-manage-site-reliability",
+          "title": "Manage site reliability",
+          "order": 2,
+          "duration_minutes": 35,
+          "content_md": "Learn how to manage site reliability.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-site-reliability/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage site reliability",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-site-reliability/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-monitor-azure-vm-using-diagnostic-data",
+          "title": "Monitor your Azure virtual machines with Azure Monitor",
+          "order": 5,
+          "duration_minutes": 35,
+          "content_md": "Learn how to monitor your Azure VMs by using Azure Monitor to collect and analyze VM host and client metrics and logs.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Monitor your Azure virtual machines with Azure Monitor",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-az-400-develop-sre-strategy",
+          "title": "Laboratorio opcional: aplica Develop a Site Reliability Engineering (SRE) strategy",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Develop a Site Reliability Engineering (SRE) strategy**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-security-governance-compliance",
+  "track": "azure",
+  "title": "Enforce security governance and regulatory compliance",
+  "summary": "Enforce security governance and regulatory compliance across Azure environments using Azure Policy, Microsoft Defender for Cloud, Azure RBAC. Then enable Azure Backup security features, and infrastructure as code scanning.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 143,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/security-governance-compliance/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-security-governance-compliance",
+      "title": "Enforce security governance and regulatory compliance",
+      "summary": "Enforce security governance and regulatory compliance across Azure environments using Azure Policy, Microsoft Defender for Cloud, Azure RBAC. Then enable Azure Backup security features, and infrastructure as code scanning.",
+      "order": 1,
+      "duration_minutes": 143,
+      "lessons": [
+        {
+          "lesson_key": "wwl-enforce-governance-azure-policy-resource-locks",
+          "title": "Enforce governance with Azure Policy and resource locks",
+          "order": 1,
+          "duration_minutes": 25,
+          "content_md": "Enforce security standards before resources reach production using Azure Policy. Assign built-in policy definitions and initiatives at management group scope, author custom definitions with automated remediation tasks, and protect critical resources from deletion using Azure resource locks.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/enforce-governance-azure-policy-resource-locks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Enforce governance with Azure Policy and resource locks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/enforce-governance-azure-policy-resource-locks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-defender-cloud-security-controls",
+          "title": "Configure security controls and remediate recommendations in Defender for Cloud",
+          "order": 2,
+          "duration_minutes": 21,
+          "content_md": "Configure Defender for Cloud security standards at management group scope and systematically deploy security controls to remediate recommendations at scale using Fix, governance rules, Policy remediation tasks, and exemptions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-defender-cloud-security-controls/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure security controls and remediate recommendations in Defender for Cloud",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-defender-cloud-security-controls/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-evaluate-regulatory-compliance",
+          "title": "Evaluate regulatory compliance in Defender for Cloud",
+          "order": 3,
+          "duration_minutes": 23,
+          "content_md": "Learn to use Microsoft Defender for Cloud to assess, investigate, and report on compliance posture against security frameworks including the Microsoft Cloud Security Benchmark, regulatory standards, and custom standards.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/evaluate-regulatory-compliance/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Evaluate regulatory compliance in Defender for Cloud",
+              "url": "https://learn.microsoft.com/en-us/training/modules/evaluate-regulatory-compliance/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-right-size-rbac-role-assignments",
+          "title": "Manage and right-size RBAC role assignments for least privilege",
+          "order": 4,
+          "duration_minutes": 28,
+          "content_md": "Implement least-privilege access governance across Azure and Microsoft Entra ID. Assign built-in roles at appropriate scope, create custom roles for Azure resources and Microsoft Entra directory operations, and identify and remediate overprivileged access using Microsoft Entra access reviews and Defender for Cloud CSPM identity insights.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-right-size-rbac-role-assignments/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage and right-size RBAC role assignments for least privilege",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-right-size-rbac-role-assignments/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-protect-backup-data-azure-backup-security",
+          "title": "Protect backup data with Azure Backup security features",
+          "order": 5,
+          "duration_minutes": 23,
+          "content_md": "Protect Azure Backup data against ransomware, accidental deletion, and rogue administrators. Configure enhanced soft delete, vault immutability, Multi-User Authorization with Resource Guard, and RBAC controls to achieve an Excellent security posture rating across Recovery Services vaults.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/protect-backup-data-azure-backup-security/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Protect backup data with Azure Backup security features",
+              "url": "https://learn.microsoft.com/en-us/training/modules/protect-backup-data-azure-backup-security/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-security-controls-infrastructure-as-code",
+          "title": "Implement security controls in infrastructure as code",
+          "order": 6,
+          "duration_minutes": 23,
+          "content_md": "Embed security controls into infrastructure as code pipelines to prevent noncompliant Azure resources from reaching production. Integrate IaC security scanning using Microsoft Defender for DevOps and the MSDO extension, and configure Azure Policy in a policy-as-code workflow to enforce security compliance at deployment time.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-security-controls-infrastructure-as-code/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement security controls in infrastructure as code",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-security-controls-infrastructure-as-code/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-security-governance-compliance",
+          "title": "Laboratorio opcional: aplica Enforce security governance and regulatory compliance",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Enforce security governance and regulatory compliance**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "certification_code": "azure-static-web-apps",
+  "track": "azure",
+  "title": "Azure Static Web Apps",
+  "summary": "Azure Static Web Apps is a modern web app service that offers streamlined full-stack development from source code to global high availability.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 18,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/azure-static-web-apps/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "azure-static-web-apps",
+      "title": "Azure Static Web Apps",
+      "summary": "Azure Static Web Apps is a modern web app service that offers streamlined full-stack development from source code to global high availability.",
+      "order": 1,
+      "duration_minutes": 18,
+      "lessons": [
+        {
+          "lesson_key": "azure-publish-static-web-app-and-api",
+          "title": "Publish an Angular, React, Svelte, or Vue JavaScript app with Azure Static Web Apps",
+          "order": 1,
+          "duration_minutes": 18,
+          "content_md": "Publish an Angular, React, Svelte, or Vue JavaScript app with Azure Static Web Apps. Use Visual Studio Code to create and run the web app locally.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/publish-app-service-static-web-app-api/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Publish an Angular, React, Svelte, or Vue JavaScript app with Azure Static Web Apps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/publish-app-service-static-web-app-api/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-azure-static-web-apps",
+          "title": "Laboratorio opcional: aplica Azure Static Web Apps",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Azure Static Web Apps**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 from pydantic import BaseModel, Field
 
+from app.models.course import CourseLab, CourseLesson
+
 
 class CertificationSummary(BaseModel):
     code: str
@@ -24,6 +26,10 @@ class RouteSection(BaseModel):
     estimated_hours: int
     resources: list[ResourceReference] = Field(default_factory=list)
     prerequisite_sections: list[str] = Field(default_factory=list)
+    duration_minutes: int = 0
+    course_section_id: str | None = None
+    lessons: list[CourseLesson] = Field(default_factory=list)
+    labs: list[CourseLab] = Field(default_factory=list)
 
 
 class CertificationRouteResponse(BaseModel):

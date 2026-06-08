@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-microsoft-azure-fundamentals-describe-cloud-co",
+  "track": "azure",
+  "title": "Introduction to Cloud Infrastructure: Describe cloud concepts",
+  "summary": "Introductory learning path that is part of the Azure Infrastructure fundamentals content.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 56,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-microsoft-azure-fundamentals-describe-cloud-concepts",
+      "title": "Introduction to Cloud Infrastructure: Describe cloud concepts",
+      "summary": "Introductory learning path that is part of the Azure Infrastructure fundamentals content.",
+      "order": 1,
+      "duration_minutes": 56,
+      "lessons": [
+        {
+          "lesson_key": "wwl-describe-cloud-compute",
+          "title": "Describe cloud computing",
+          "order": 1,
+          "duration_minutes": 24,
+          "content_md": "Introduction to concepts surrounding cloud computing. Mostly platform agnostic, focused instead on general concepts.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe cloud computing",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-benefits-use-cloud-services",
+          "title": "Describe the benefits of using cloud services",
+          "order": 2,
+          "duration_minutes": 19,
+          "content_md": "Introduction to concepts surrounding cloud computing. Focused on benefits of using cloud services such as reliability and management.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe the benefits of using cloud services",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-cloud-service-types",
+          "title": "Describe cloud service types",
+          "order": 3,
+          "duration_minutes": 13,
+          "content_md": "Introduction to cloud service types (Infrastructure, Platform, and Software as a Service models) and associated use cases for each.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe cloud service types",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-microsoft-azure-fundamentals-describe-cloud-concepts",
+          "title": "Laboratorio opcional: aplica Introduction to Cloud Infrastructure: Describe cloud concepts",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduction to Cloud Infrastructure: Describe cloud concepts**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

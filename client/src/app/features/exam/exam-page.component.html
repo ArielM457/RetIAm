@@ -1,0 +1,89 @@
+<section class="exam page-shell">
+  <!-- Intro / prerrequisito -->
+  <div class="exam-intro glass-card animate-fade-up" *ngIf="phase() === 'intro'">
+    <p class="eyebrow">Examen final</p>
+    <h1 class="intro-title">Demuestra lo que <span class="gradient-text">aprendiste</span></h1>
+    <p class="intro-sub" *ngIf="plan()">
+      Certificación: <strong>{{ plan()?.target_certification }}</strong>
+    </p>
+    <ul class="intro-points">
+      <li>15 a 25 preguntas generadas desde el contenido del curso.</li>
+      <li>Tiempo límite y una pregunta por pantalla.</li>
+      <li>Necesitas 70% para aprobar y obtener tu certificado.</li>
+    </ul>
+    <p class="intro-error" *ngIf="error()">{{ error() }}</p>
+    <div class="intro-actions">
+      <button class="btn btn-primary" [disabled]="starting() || !plan()" (click)="startExam()">
+        {{ starting() ? 'Preparando examen…' : 'Iniciar examen' }}
+      </button>
+      <a class="btn btn-ghost" routerLink="/plan">Volver al plan</a>
+    </div>
+  </div>
+
+  <!-- Examen en curso -->
+  <div class="exam-running" *ngIf="phase() === 'running' && current() as q">
+    <div class="exam-bar glass-card">
+      <span class="exam-counter">Pregunta {{ currentIndex() + 1 }} / {{ questions().length }}</span>
+      <div class="exam-progress"><div class="progress-track"><div class="progress-fill" [style.width.%]="(answeredCount() / questions().length) * 100"></div></div></div>
+      <span class="exam-clock" [class.danger]="remaining() < 60">⏱ {{ clock() }}</span>
+    </div>
+
+    <article class="exam-question glass-card">
+      <p class="q-prompt">{{ q.prompt }}</p>
+      <button
+        *ngFor="let opt of q.options; let oi = index"
+        class="quiz-opt"
+        [class.selected]="isSelected(q.question_id, oi)"
+        (click)="select(q.question_id, oi)"
+      >
+        <span class="opt-mark">{{ ['A','B','C','D'][oi] }}</span>{{ opt }}
+      </button>
+    </article>
+
+    <div class="exam-nav">
+      <button class="btn btn-ghost" [disabled]="currentIndex() === 0" (click)="prev()">Anterior</button>
+      <button class="btn btn-ghost" *ngIf="currentIndex() < questions().length - 1" (click)="next()">Siguiente</button>
+      <button
+        class="btn btn-primary"
+        *ngIf="currentIndex() === questions().length - 1"
+        [disabled]="submitting()"
+        (click)="submit()"
+      >
+        {{ submitting() ? 'Calificando…' : 'Enviar examen' }}
+      </button>
+    </div>
+  </div>
+
+  <!-- Resultado -->
+  <div class="exam-result" *ngIf="result() as r">
+    <div class="result-card glass-card animate-fade-up" [class.passed]="r.passed">
+      <div class="result-badge">{{ r.passed ? '🏆' : '📚' }}</div>
+      <p class="eyebrow">{{ r.passed ? 'Aprobado' : 'Sigue practicando' }}</p>
+      <h1 class="result-score">{{ r.score }}<span>/100</span></h1>
+      <p class="result-cert">{{ r.target_certification }}</p>
+
+      <ng-container *ngIf="r.passed">
+        <p class="result-msg">¡Felicidades! Obtuviste tu certificado RetAIM.</p>
+        <div class="result-actions">
+          <a class="btn btn-primary" routerLink="/certificates">Ver mi certificado</a>
+          <a class="btn btn-ghost" routerLink="/catalog" *ngIf="r.next_certification">
+            Siguiente: {{ r.next_certification }}
+          </a>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="!r.passed">
+        <p class="result-msg">Necesitas 70% para aprobar. Refuerza estas secciones y reintenta.</p>
+        <ul class="result-fail" *ngIf="r.failed_sections?.length">
+          <li *ngFor="let s of r.failed_sections">{{ s }}</li>
+        </ul>
+        <ul class="result-recs" *ngIf="r.recommendations?.length">
+          <li *ngFor="let rec of r.recommendations">{{ rec }}</li>
+        </ul>
+        <div class="result-actions">
+          <a class="btn btn-primary" routerLink="/sessions">Volver a estudiar</a>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,168 @@
+{
+  "certification_code": "github-foundations-2",
+  "track": "github",
+  "title": "GitHub Foundations Part 2 of 2",
+  "summary": "The GitHub Foundations Learning Path Part 2 of 2 is a concise and beginner-friendly journey designed to introduce you to the fundamental concepts and products of GitHub.",
+  "provider": "GitHub",
+  "level": "basic",
+  "total_duration_minutes": 297,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/github-foundations-2/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "github-foundations-2",
+      "title": "GitHub Foundations Part 2 of 2",
+      "summary": "The GitHub Foundations Learning Path Part 2 of 2 is a concise and beginner-friendly journey designed to introduce you to the fundamental concepts and products of GitHub.",
+      "order": 1,
+      "duration_minutes": 297,
+      "lessons": [
+        {
+          "lesson_key": "github-contribute-opensource",
+          "title": "Contribute to an open-source project on GitHub",
+          "order": 1,
+          "duration_minutes": 27,
+          "content_md": "Learn how to contribute to an open-source project on GitHub.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/contribute-open-source/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Contribute to an open-source project on GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/contribute-open-source/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-manage-innersource-program-github",
+          "title": "Manage an InnerSource program by using GitHub",
+          "order": 2,
+          "duration_minutes": 50,
+          "content_md": "Learn to manage a successful InnerSource program on GitHub through effective discoverability, guidance, and maintenance.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-innersource-program-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage an InnerSource program by using GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-innersource-program-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-maintain-secure-repository-github",
+          "title": "Maintain a secure repository by using GitHub best practices",
+          "order": 3,
+          "duration_minutes": 35,
+          "content_md": "Learn best practices for building, hosting, and maintaining a secure repository on GitHub.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/maintain-secure-repository-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Maintain a secure repository by using GitHub best practices",
+              "url": "https://learn.microsoft.com/en-us/training/modules/maintain-secure-repository-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-github-introduction-administration",
+          "title": "Introduction to GitHub administration",
+          "order": 4,
+          "duration_minutes": 36,
+          "content_md": "Understand the security and control measures available to GitHub administrators within an organization or enterprise.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/github-introduction-administration/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to GitHub administration",
+              "url": "https://learn.microsoft.com/en-us/training/modules/github-introduction-administration/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-authenticate-authorize-user-identities-github",
+          "title": "Authenticate and authorize user identities on GitHub",
+          "order": 5,
+          "duration_minutes": 33,
+          "content_md": "Learn how to manage the authentication and authorization of user identities on GitHub.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/authenticate-authorize-user-identities-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Authenticate and authorize user identities on GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/authenticate-authorize-user-identities-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-manage-changes-pull-requests-github",
+          "title": "Manage repository changes by using pull requests on GitHub",
+          "order": 6,
+          "duration_minutes": 56,
+          "content_md": "Learn how to manage changes to your repository source by using pull requests.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-changes-pull-requests-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage repository changes by using pull requests on GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-changes-pull-requests-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-search-organize-repository-history-github",
+          "title": "Search and organize repository history by using GitHub",
+          "order": 7,
+          "duration_minutes": 38,
+          "content_md": "Learn to search and organize repository history by using filters, blame, and cross-linking on GitHub.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/search-organize-repository-history-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Search and organize repository history by using GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/search-organize-repository-history-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-copilot-with-python",
+          "title": "Using GitHub Copilot with Python",
+          "order": 8,
+          "duration_minutes": 22,
+          "content_md": "Make changes and updates to a Python application by using GitHub Copilot with Visual Studio Code.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-copilot-python/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Using GitHub Copilot with Python",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-copilot-python/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-github-foundations-2",
+          "title": "Laboratorio opcional: aplica GitHub Foundations Part 2 of 2",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **GitHub Foundations Part 2 of 2**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -10,6 +10,19 @@ from app.models.session import (
     SessionSurveyRequest,
     StartLearningSessionRequest,
 )
+from app.models.orchestration import CompleteLessonResponse
+from app.models.tutor import (
+    LessonChatMessage,
+    LessonChatRequest,
+    LessonChatResponse,
+    SuggestedQuestionsResponse,
+)
+from app.services.lesson_tutor_service import (
+    ask_tutor,
+    get_chat_history,
+    get_suggested_questions,
+)
+from app.services.orchestrator_service import complete_lesson
 from app.services.session_service import (
     answer_free_question,
     get_learning_session,
@@ -79,3 +92,53 @@ def post_integrity_event(
     current_user=Depends(get_current_supabase_user),
 ) -> dict:
     return record_integrity_event(current_user, session_id, payload)
+
+
+# --- Tutor por leccion (Gini Eval) -----------------------------------------
+
+
+@router.post("/{session_id}/lessons/{lesson_id}/chat", response_model=LessonChatResponse)
+def post_lesson_chat(
+    session_id: str,
+    lesson_id: str,
+    payload: LessonChatRequest,
+    current_user=Depends(get_current_supabase_user),
+) -> LessonChatResponse:
+    return ask_tutor(current_user, lesson_id, payload.question, session_id=session_id)
+
+
+@router.get(
+    "/{session_id}/lessons/{lesson_id}/chat",
+    response_model=list[LessonChatMessage],
+)
+def get_lesson_chat(
+    session_id: str,
+    lesson_id: str,
+    current_user=Depends(get_current_supabase_user),
+) -> list[LessonChatMessage]:
+    return get_chat_history(current_user, lesson_id)
+
+
+@router.get(
+    "/{session_id}/lessons/{lesson_id}/suggested-questions",
+    response_model=SuggestedQuestionsResponse,
+)
+def get_lesson_suggested_questions(
+    session_id: str,
+    lesson_id: str,
+    current_user=Depends(get_current_supabase_user),
+) -> SuggestedQuestionsResponse:
+    return get_suggested_questions(current_user, lesson_id)
+
+
+@router.post(
+    "/{session_id}/lessons/{lesson_id}/complete",
+    response_model=CompleteLessonResponse,
+)
+def post_complete_lesson(
+    session_id: str,
+    lesson_id: str,
+    current_user=Depends(get_current_supabase_user),
+) -> CompleteLessonResponse:
+    # Gini Router orquesta: progreso -> insight -> coach -> proximo paso.
+    return complete_lesson(current_user, session_id, lesson_id)

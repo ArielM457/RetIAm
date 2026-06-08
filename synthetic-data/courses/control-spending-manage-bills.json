@@ -1,0 +1,138 @@
+{
+  "certification_code": "control-spending-manage-bills",
+  "track": "azure",
+  "title": "Control Azure spending and manage bills with Microsoft Cost Management + Billing",
+  "summary": "Learn how to monitor and control your Azure spending and optimize the use of Azure resources.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 226,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/control-spending-manage-bills/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "control-spending-manage-bills",
+      "title": "Control Azure spending and manage bills with Microsoft Cost Management + Billing",
+      "summary": "Learn how to monitor and control your Azure spending and optimize the use of Azure resources.",
+      "order": 1,
+      "duration_minutes": 226,
+      "lessons": [
+        {
+          "lesson_key": "azure-well-architected-cost-optimization",
+          "title": "Microsoft Azure Well-Architected Framework - Cost Optimization",
+          "order": 1,
+          "duration_minutes": 64,
+          "content_md": "Apply cost optimization guidance in your architecture to sustain and improve your return on investment (ROI).\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-well-architected-cost-optimization/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Microsoft Azure Well-Architected Framework - Cost Optimization",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-well-architected-cost-optimization/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-analyze-costs-create-budgets-azure-cost-management",
+          "title": "Introduction to analyzing costs and creating budgets with Microsoft Cost Management",
+          "order": 2,
+          "duration_minutes": 40,
+          "content_md": "Learn how to use cost analysis to understand how your costs accrue each month.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/analyze-costs-create-budgets-azure-cost-management/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to analyzing costs and creating budgets with Microsoft Cost Management",
+              "url": "https://learn.microsoft.com/en-us/training/modules/analyze-costs-create-budgets-azure-cost-management/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "save-money-with-azure-reserved-instances",
+          "title": "Save money with Azure Reserved Instances",
+          "order": 3,
+          "duration_minutes": 34,
+          "content_md": "Learn how to save money by taking advantage of Azure Reserved Instances.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/save-money-with-azure-reserved-instances/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Save money with Azure Reserved Instances",
+              "url": "https://learn.microsoft.com/en-us/training/modules/save-money-with-azure-reserved-instances/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "optimize-costs-data-analysis-powerbi",
+          "title": "Optimize Azure costs with data analysis in Power BI",
+          "order": 4,
+          "duration_minutes": 27,
+          "content_md": "Use Power BI to understand where your money is being spent in Azure so you can help your organization to optimize its costs.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/optimize-costs-data-analysis-powerbi/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Optimize Azure costs with data analysis in Power BI",
+              "url": "https://learn.microsoft.com/en-us/training/modules/optimize-costs-data-analysis-powerbi/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "manage-costs-partner-cost-management",
+          "title": "Configure and manage costs as a Microsoft partner by using Microsoft Cost Management",
+          "order": 5,
+          "duration_minutes": 34,
+          "content_md": "Learn how to reconcile your bill and analyze costs across your customers and resources by using Microsoft Cost Management as a partner.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-costs-partner-cost-management/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure and manage costs as a Microsoft partner by using Microsoft Cost Management",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-costs-partner-cost-management/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-azure-savings-plan-for-compute",
+          "title": "Purchase Azure savings plan for compute ",
+          "order": 6,
+          "duration_minutes": 27,
+          "content_md": "Purchase Azure savings plan for compute helps customers minimize their operational costs.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-savings-plan-for-compute/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Purchase Azure savings plan for compute ",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-savings-plan-for-compute/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-control-spending-manage-bills",
+          "title": "Laboratorio opcional: aplica Control Azure spending and manage bills with Microsoft Cost Management + Billing",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Control Azure spending and manage bills with Microsoft Cost Management + Billing**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

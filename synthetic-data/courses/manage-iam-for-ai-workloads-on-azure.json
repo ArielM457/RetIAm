@@ -1,0 +1,78 @@
+{
+  "certification_code": "manage-iam-for-ai-workloads-on-azure",
+  "track": "azure",
+  "title": "Manage Authentication, Authorization, and RBAC for AI workloads on Azure",
+  "summary": "Boost your expertise in securing Azure's AI solutions with this comprehensive learning path tailored for identity and IT professionals. Dive into securing Azure OpenAI authentication and authorization, safeguarding Azure AI services, and mastering Azure Machine Learning authentication and authorization. This learning path equips you with essential security skills, ensuring your AI-driven solutions remain resilient and compliant in today's evolving digital landscape. Start enhancing your knowledge of AI security best practices today!",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 52,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/manage-iam-for-ai-workloads-on-azure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "manage-iam-for-ai-workloads-on-azure",
+      "title": "Manage Authentication, Authorization, and RBAC for AI workloads on Azure",
+      "summary": "Boost your expertise in securing Azure's AI solutions with this comprehensive learning path tailored for identity and IT professionals. Dive into securing Azure OpenAI authentication and authorization, safeguarding Azure AI services, and mastering Azure Machine Learning authentication and authorization. This learning path equips you with essential security skills, ensuring your AI-driven solutions remain resilient and compliant in today's evolving digital landscape. Start enhancing your knowledge of AI security best practices today!",
+      "order": 1,
+      "duration_minutes": 52,
+      "lessons": [
+        {
+          "lesson_key": "secure-azure-openai-authentication-authorization",
+          "title": "Secure authentication and authorization for Azure OpenAI in Microsoft Foundry",
+          "order": 1,
+          "duration_minutes": 23,
+          "content_md": "Learn how to secure Azure OpenAI in Microsoft Foundry by using Microsoft Entra ID authentication, managed identities, least-privilege Foundry RBAC roles, and local authentication controls.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/secure-azure-openai-authentication-authorization/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure authentication and authorization for Azure OpenAI in Microsoft Foundry",
+              "url": "https://learn.microsoft.com/en-us/training/modules/secure-azure-openai-authentication-authorization/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "introduction-to-azure-machine-learning-auth",
+          "title": "Introduction to Azure Machine Learning authentication and authorization",
+          "order": 2,
+          "duration_minutes": 29,
+          "content_md": "Learn how to configure and manage Azure Machine Learning authentication and authorization.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-azure-machine-learning-auth/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure Machine Learning authentication and authorization",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-azure-machine-learning-auth/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-manage-iam-for-ai-workloads-on-azure",
+          "title": "Laboratorio opcional: aplica Manage Authentication, Authorization, and RBAC for AI workloads on Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Manage Authentication, Authorization, and RBAC for AI workloads on Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

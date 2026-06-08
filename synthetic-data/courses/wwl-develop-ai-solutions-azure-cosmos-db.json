@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-develop-ai-solutions-azure-cosmos-db",
+  "track": "azure",
+  "title": "Develop AI solutions with Azure Cosmos DB for NoSQL",
+  "summary": "Learn how to develop AI solutions using Azure Cosmos DB for NoSQL, including vector search and query optimization for RAG pipelines and semantic retrieval.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 252,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/develop-ai-solutions-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-develop-ai-solutions-azure-cosmos-db",
+      "title": "Develop AI solutions with Azure Cosmos DB for NoSQL",
+      "summary": "Learn how to develop AI solutions using Azure Cosmos DB for NoSQL, including vector search and query optimization for RAG pipelines and semantic retrieval.",
+      "order": 1,
+      "duration_minutes": 252,
+      "lessons": [
+        {
+          "lesson_key": "wwl-build-query-azure-cosmos-db",
+          "title": "Build queries for Azure Cosmos DB for NoSQL",
+          "order": 1,
+          "duration_minutes": 72,
+          "content_md": "Learn how to connect to Azure Cosmos DB for NoSQL, use the SDK to perform CRUD operations, and write SQL queries to retrieve document data for AI applications.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/build-query-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build queries for Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/build-query-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-vector-search-azure-cosmos-db",
+          "title": "Implement vector search on Azure Cosmos DB for NoSQL",
+          "order": 2,
+          "duration_minutes": 84,
+          "content_md": "Learn how to implement vector search capabilities in Azure Cosmos DB for NoSQL to build AI applications that perform semantic similarity queries.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-vector-search-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement vector search on Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-vector-search-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-optimize-query-performance-azure-cosmos-db",
+          "title": "Optimize query performance for Azure Cosmos DB for NoSQL",
+          "order": 3,
+          "duration_minutes": 96,
+          "content_md": "Learn how to optimize query performance and reduce costs for Azure Cosmos DB for NoSQL workloads by configuring indexes and selecting consistency levels.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/optimize-query-performance-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Optimize query performance for Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/optimize-query-performance-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-develop-ai-solutions-azure-cosmos-db",
+          "title": "Laboratorio opcional: aplica Develop AI solutions with Azure Cosmos DB for NoSQL",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Develop AI solutions with Azure Cosmos DB for NoSQL**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

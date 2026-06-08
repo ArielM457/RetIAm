@@ -1,0 +1,222 @@
+{
+  "certification_code": "AWS Cloud Practitioner",
+  "track": "aws",
+  "title": "AWS Certified Cloud Practitioner",
+  "summary": "Fundamentos de la nube de AWS: valor, servicios core, seguridad y facturacion.",
+  "provider": "Amazon",
+  "level": "basic",
+  "total_duration_minutes": 150,
+  "source": "synthetic",
+  "source_url": null,
+  "sections": [
+    {
+      "section_key": "aws-cloud-practitioner-conceptos-de-la-nube-de-aws",
+      "title": "Conceptos de la nube de AWS",
+      "summary": "Propuesta de valor de la nube y el modelo de responsabilidad compartida.",
+      "order": 1,
+      "duration_minutes": 45,
+      "lessons": [
+        {
+          "lesson_key": "aws-cloud-practitioner-conceptos-de-la-nube-de-aws-que-es-la",
+          "title": "Que es la nube y la propuesta de valor de AWS",
+          "order": 1,
+          "duration_minutes": 25,
+          "content_md": "Que es la nube y la propuesta de valor de AWS.\n\nFuente de referencia: https://docs.aws.amazon.com/whitepapers/latest/aws-overview/introduction.html",
+          "learning_objectives": [
+            "Explicar las 6 ventajas de la nube",
+            "Reconocer la propuesta de valor de AWS"
+          ],
+          "sources": [
+            {
+              "title": "AWS Cloud Concepts",
+              "url": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/introduction.html",
+              "source": "synthetic"
+            }
+          ]
+        },
+        {
+          "lesson_key": "aws-cloud-practitioner-conceptos-de-la-nube-de-aws-modelo-de",
+          "title": "Modelo de responsabilidad compartida",
+          "order": 2,
+          "duration_minutes": 20,
+          "content_md": "Modelo de responsabilidad compartida.\n\nFuente de referencia: https://aws.amazon.com/compliance/shared-responsibility-model/",
+          "learning_objectives": [
+            "Distinguir responsabilidades de AWS vs cliente"
+          ],
+          "sources": [
+            {
+              "title": "Shared Responsibility Model",
+              "url": "https://aws.amazon.com/compliance/shared-responsibility-model/",
+              "source": "synthetic"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-aws-cloud-practitioner-conceptos-de-la-nube-de-aws",
+          "title": "Laboratorio opcional: aplica Conceptos de la nube de AWS",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Conceptos de la nube de AWS**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_key": "aws-cloud-practitioner-servicios-core-de-aws",
+      "title": "Servicios core de AWS",
+      "summary": "Compute, storage, redes y bases de datos principales.",
+      "order": 2,
+      "duration_minutes": 60,
+      "lessons": [
+        {
+          "lesson_key": "aws-cloud-practitioner-servicios-core-de-aws-compute-ec2-lam",
+          "title": "Compute: EC2, Lambda y contenedores",
+          "order": 1,
+          "duration_minutes": 30,
+          "content_md": "Compute: EC2, Lambda y contenedores.\n\nFuente de referencia: https://docs.aws.amazon.com/whitepapers/latest/aws-overview/compute-services.html",
+          "learning_objectives": [
+            "Diferenciar EC2, Lambda y ECS/EKS"
+          ],
+          "sources": [
+            {
+              "title": "AWS Compute",
+              "url": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/compute-services.html",
+              "source": "synthetic"
+            }
+          ]
+        },
+        {
+          "lesson_key": "aws-cloud-practitioner-servicios-core-de-aws-storage-y-bases",
+          "title": "Storage y bases de datos: S3, EBS, RDS, DynamoDB",
+          "order": 2,
+          "duration_minutes": 30,
+          "content_md": "Storage y bases de datos: S3, EBS, RDS, DynamoDB.\n\nFuente de referencia: https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html",
+          "learning_objectives": [
+            "Elegir el servicio de storage adecuado",
+            "Reconocer casos de RDS vs DynamoDB"
+          ],
+          "sources": [
+            {
+              "title": "AWS Storage",
+              "url": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html",
+              "source": "synthetic"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-aws-cloud-practitioner-servicios-core-de-aws",
+          "title": "Laboratorio opcional: aplica Servicios core de AWS",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Servicios core de AWS**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_key": "aws-cloud-practitioner-seguridad-identidad-y-facturacion",
+      "title": "Seguridad, identidad y facturacion",
+      "summary": "IAM, seguridad gestionada y modelos de costos.",
+      "order": 3,
+      "duration_minutes": 45,
+      "lessons": [
+        {
+          "lesson_key": "aws-cloud-practitioner-seguridad-identidad-y-facturacion-iam",
+          "title": "IAM y seguridad en AWS",
+          "order": 1,
+          "duration_minutes": 25,
+          "content_md": "IAM y seguridad en AWS.\n\nFuente de referencia: https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html",
+          "learning_objectives": [
+            "Aplicar el principio de menor privilegio con IAM"
+          ],
+          "sources": [
+            {
+              "title": "AWS IAM",
+              "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html",
+              "source": "synthetic"
+            }
+          ]
+        },
+        {
+          "lesson_key": "aws-cloud-practitioner-seguridad-identidad-y-facturacion-pre",
+          "title": "Precios, facturacion y soporte",
+          "order": 2,
+          "duration_minutes": 20,
+          "content_md": "Precios, facturacion y soporte.\n\nFuente de referencia: https://aws.amazon.com/pricing/",
+          "learning_objectives": [
+            "Reconocer los modelos de precios de AWS"
+          ],
+          "sources": [
+            {
+              "title": "AWS Pricing",
+              "url": "https://aws.amazon.com/pricing/",
+              "source": "synthetic"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-aws-cloud-practitioner-seguridad-identidad-y-facturacion",
+          "title": "Laboratorio opcional: aplica Seguridad, identidad y facturacion",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Seguridad, identidad y facturacion**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

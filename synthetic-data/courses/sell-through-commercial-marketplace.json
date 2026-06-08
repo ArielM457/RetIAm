@@ -1,0 +1,108 @@
+{
+  "certification_code": "sell-through-commercial-marketplace",
+  "track": "azure",
+  "title": "Sell through the commercial marketplace",
+  "summary": "The Microsoft commercial marketplace is a catalog of cloud applications and services that contains offerings from Microsoft and thousands of partners. In this learning path, you'll be introduced to concepts that will help your organization get ready to sell your cloud products and services through the commercial marketplace.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 126,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/sell-through-commercial-marketplace/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "sell-through-commercial-marketplace",
+      "title": "Sell through the commercial marketplace",
+      "summary": "The Microsoft commercial marketplace is a catalog of cloud applications and services that contains offerings from Microsoft and thousands of partners. In this learning path, you'll be introduced to concepts that will help your organization get ready to sell your cloud products and services through the commercial marketplace.",
+      "order": 1,
+      "duration_minutes": 126,
+      "lessons": [
+        {
+          "lesson_key": "intro-commercial-marketplace",
+          "title": "Introduction to the Microsoft commercial marketplace",
+          "order": 1,
+          "duration_minutes": 30,
+          "content_md": "Learn about the Microsoft commercial marketplace, including Microsoft AppSource, Azure Marketplace, offer types, and Marketplace Rewards.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-commercial-marketplace/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to the Microsoft commercial marketplace",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-commercial-marketplace/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "go-to-market-commercial-marketplace",
+          "title": "Go to market through the commercial marketplace",
+          "order": 2,
+          "duration_minutes": 31,
+          "content_md": "This module provides tips and best practices to help organizations create their business plan for success in the commercial marketplace\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/go-to-market-commercial-marketplace/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Go to market through the commercial marketplace",
+              "url": "https://learn.microsoft.com/en-us/training/modules/go-to-market-commercial-marketplace/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "create-saas-offer-commercial-marketplace",
+          "title": "Create a SaaS offer for the commercial marketplace",
+          "order": 3,
+          "duration_minutes": 34,
+          "content_md": "This module provides a high-level overview of software as a service (SaaS) offers in the commercial marketplace.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-saas-offer-commercial-marketplace/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create a SaaS offer for the commercial marketplace",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-saas-offer-commercial-marketplace/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "create-vm-offer-commercial-marketplace",
+          "title": "Create a virtual machine offer for the commercial marketplace",
+          "order": 4,
+          "duration_minutes": 31,
+          "content_md": "This module provides a high-level overview of VM offers in the commercial marketplace.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-vm-offer-commercial-marketplace/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create a virtual machine offer for the commercial marketplace",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-vm-offer-commercial-marketplace/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-sell-through-commercial-marketplace",
+          "title": "Laboratorio opcional: aplica Sell through the commercial marketplace",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Sell through the commercial marketplace**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "certification_code": "wwl-describe-capabilities-of-microsoft-security-so",
+  "track": "azure",
+  "title": "Introduction to Microsoft security solutions",
+  "summary": "SC-900: Introduction to Microsoft security solutions",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 216,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/describe-capabilities-of-microsoft-security-solutions/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-describe-capabilities-of-microsoft-security-solutions",
+      "title": "Introduction to Microsoft security solutions",
+      "summary": "SC-900: Introduction to Microsoft security solutions",
+      "order": 1,
+      "duration_minutes": 216,
+      "lessons": [
+        {
+          "lesson_key": "learn-wwl-security-copilot-getting-started",
+          "title": "Describe Microsoft Security Copilot",
+          "order": 1,
+          "duration_minutes": 32,
+          "content_md": "Describe Microsoft Security Copilot.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/security-copilot-getting-started/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe Microsoft Security Copilot",
+              "url": "https://learn.microsoft.com/en-us/training/modules/security-copilot-getting-started/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-basic-security-capabilities-azure",
+          "title": "Describe core infrastructure security services in Azure",
+          "order": 2,
+          "duration_minutes": 29,
+          "content_md": "Describe core infrastructure security services in Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-basic-security-capabilities-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe core infrastructure security services in Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-basic-security-capabilities-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-security-management-capabilities-of-azure",
+          "title": "Describe the security management capabilities in Azure",
+          "order": 3,
+          "duration_minutes": 29,
+          "content_md": "Describe the security management capabilities in Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-security-management-capabilities-of-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe the security management capabilities in Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-security-management-capabilities-of-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-security-capabilities-of-azure-sentinel",
+          "title": "Describe security capabilities of Microsoft Sentinel",
+          "order": 4,
+          "duration_minutes": 14,
+          "content_md": "Describe the capabilities in Microsoft Sentinel\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-security-capabilities-of-azure-sentinel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe security capabilities of Microsoft Sentinel",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-security-capabilities-of-azure-sentinel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-threat-protection-with-microsoft-365-defender",
+          "title": "Describe threat protection with Microsoft Defender XDR",
+          "order": 5,
+          "duration_minutes": 112,
+          "content_md": "Describe threat protection with Microsoft Defender XDR\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-threat-protection-with-microsoft-365-defender/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe threat protection with Microsoft Defender XDR",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-threat-protection-with-microsoft-365-defender/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-describe-capabilities-of-microsoft-security-solutions",
+          "title": "Laboratorio opcional: aplica Introduction to Microsoft security solutions",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduction to Microsoft security solutions**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+<section class="page-shell reader" *ngIf="!loading(); else loadingTpl">
+  <ng-container *ngIf="course() as c; else notFound">
+    <!-- Encabezado -->
+    <header class="reader-head animate-fade-up">
+      <div class="head-top">
+        <a routerLink="/catalog" class="btn btn-ghost btn-sm">← Volver al catálogo</a>
+        <button class="btn btn-ghost btn-sm" (click)="toggleTutor()">
+          {{ tutorOpen() ? 'Ocultar tutor' : 'Preguntar al tutor IA' }}
+        </button>
+      </div>
+      <p class="eyebrow">{{ c.provider || 'Curso' }}</p>
+      <h1 class="reader-title">{{ c.title }}</h1>
+      <div class="reader-meta">
+        <span class="chip-level" [class]="'level-' + c.level">{{ levelLabel(c.level) }}</span>
+        <span class="muted">{{ flatLessons().length }} lecciones · {{ formatDuration(c.total_duration_minutes) }}</span>
+      </div>
+
+      <!-- Progreso del curso -->
+      <div class="course-progress">
+        <div class="cp-top">
+          <span>{{ readCount() }} de {{ flatLessons().length }} lecciones leídas</span>
+          <span>{{ progress() }}%</span>
+        </div>
+        <div class="cp-track"><div class="cp-fill" [style.width.%]="progress()"></div></div>
+      </div>
+    </header>
+
+    <div class="reader-grid" [class.tutor-collapsed]="!tutorOpen()">
+      <!-- Índice del curso -->
+      <aside class="reader-rail glass-card">
+        <p class="rail-title">Temario</p>
+        <div class="rail-section" *ngFor="let s of sections(); let si = index; trackBy: trackSection">
+          <p class="rail-section-title">{{ si + 1 }}. {{ s.title }}</p>
+          <button
+            *ngFor="let lesson of s.lessons"
+            class="rail-item"
+            [class.active]="isActive(lesson)"
+            (click)="selectLesson(lesson)"
+          >
+            <span class="rail-check" [class.done]="isRead(lesson)">{{ isRead(lesson) ? '✓' : '' }}</span>
+            <span class="rail-name">{{ lesson.title }}</span>
+            <span class="rail-time">{{ formatDuration(lesson.duration_minutes) }}</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Contenido de la lección -->
+      <article class="reader-content glass-card" *ngIf="activeLesson() as lesson">
+        <h2 class="lesson-h">{{ lesson.title }}</h2>
+        <p class="lesson-dur" *ngIf="lesson.duration_minutes">{{ formatDuration(lesson.duration_minutes) }}</p>
+
+        <div class="lesson-objectives" *ngIf="lesson.learning_objectives?.length">
+          <p class="mini-label">Objetivos</p>
+          <ul>
+            <li *ngFor="let obj of lesson.learning_objectives">{{ obj }}</li>
+          </ul>
+        </div>
+
+        <app-lesson-content [content]="lesson.content_md" />
+
+        <div class="lesson-sources" *ngIf="lesson.sources?.length">
+          <p class="mini-label">Fuentes</p>
+          <a *ngFor="let src of lesson.sources" class="source-link" [href]="src.url || '#'" target="_blank" rel="noopener">
+            {{ src.title }}
+          </a>
+        </div>
+
+        <!-- Navegación entre lecciones -->
+        <div class="lesson-nav">
+          <button class="btn btn-ghost btn-sm" [disabled]="lessonIndex() <= 0" (click)="goToLessonOffset(-1)">
+            ← Anterior
+          </button>
+          <button class="btn btn-ghost btn-sm" [disabled]="lessonIndex() >= flatLessons().length - 1" (click)="goToLessonOffset(1)">
+            Siguiente →
+          </button>
+        </div>
+
+        <div class="lesson-actions">
+          <button class="btn" [class.btn-primary]="!isRead(lesson)" [class.btn-ghost]="isRead(lesson)" (click)="toggleRead(lesson)">
+            {{ isRead(lesson) ? '✓ Leída' : 'Marcar como leída' }}
+          </button>
+          <button class="btn btn-primary" (click)="completeAndNext()" *ngIf="lessonIndex() < flatLessons().length - 1">
+            Marcar y continuar →
+          </button>
+          <button class="btn btn-ghost" (click)="toggleTutor()" *ngIf="!tutorOpen()">Preguntar al tutor</button>
+        </div>
+      </article>
+
+      <!-- Panel del tutor IA -->
+      <aside class="tutor-panel glass-card" *ngIf="tutorOpen()">
+        <div class="tutor-head">
+          <div class="tutor-avatar">IA</div>
+          <div class="tutor-id">
+            <p class="tutor-name">Gini Eval · Tutor</p>
+            <p class="tutor-sub">{{ activeLesson()?.title || 'Selecciona una lección' }}</p>
+          </div>
+          <button class="tutor-x" (click)="toggleTutor()" aria-label="Cerrar">✕</button>
+        </div>
+
+        <div class="tutor-body">
+          <p class="tutor-empty" *ngIf="!chat().length && !tutorLoading()">
+            Pregúntame lo que no entiendas de esta lección. Cito siempre la fuente.
+          </p>
+          <div class="tutor-bubble" *ngFor="let msg of chat()" [ngClass]="msg.role === 'user' ? 'tutor-user' : 'tutor-ai'">
+            {{ msg.content }}
+            <div class="bubble-sources" *ngIf="msg.sources?.length">
+              <a *ngFor="let s of msg.sources" [href]="s.url || '#'" target="_blank" rel="noopener">{{ s.title }}</a>
+            </div>
+          </div>
+          <div class="tutor-typing" *ngIf="tutorLoading()"><span></span><span></span><span></span></div>
+        </div>
+
+        <div class="tutor-suggested" *ngIf="suggested().length">
+          <button class="suggested-chip" *ngFor="let q of suggested()" (click)="sendTutor(q)">{{ q }}</button>
+        </div>
+
+        <form class="tutor-input" (ngSubmit)="sendTutor()">
+          <input class="input-pill" [(ngModel)]="tutorInput" name="tutorInput" placeholder="Escribe tu pregunta…" autocomplete="off" />
+          <button class="btn btn-primary btn-sm" type="submit" [disabled]="!tutorInput.trim() || tutorLoading()">Enviar</button>
+        </form>
+      </aside>
+    </div>
+  </ng-container>
+
+  <ng-template #notFound>
+    <div class="glass-card not-found">
+      <h2>No encontramos el contenido del curso</h2>
+      <p class="muted">Es posible que aún no esté cargado. Corre la ingesta con <code>--content</code>.</p>
+      <a routerLink="/catalog" class="btn btn-primary">Volver al catálogo</a>
+    </div>
+  </ng-template>
+</section>
+
+<ng-template #loadingTpl>
+  <section class="page-shell"><div class="skeleton" style="height: 70vh; border-radius: 1.5rem"></div></section>
+</ng-template>

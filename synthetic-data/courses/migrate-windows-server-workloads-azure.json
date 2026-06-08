@@ -1,0 +1,108 @@
+{
+  "certification_code": "migrate-windows-server-workloads-azure",
+  "track": "azure",
+  "title": "Migrate Windows Server workloads to Azure",
+  "summary": "Learn to migrate physical and virtual on-premises Windows Server workloads to Azure.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 175,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/migrate-windows-server-workloads-azure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "migrate-windows-server-workloads-azure",
+      "title": "Migrate Windows Server workloads to Azure",
+      "summary": "Learn to migrate physical and virtual on-premises Windows Server workloads to Azure.",
+      "order": 1,
+      "duration_minutes": 175,
+      "lessons": [
+        {
+          "lesson_key": "wwl-prepare-onpremises-workloads-migration-azure",
+          "title": "Prepare on-premises workloads for migration to Azure",
+          "order": 1,
+          "duration_minutes": 35,
+          "content_md": "Prepare on-premises workloads for migration to Azure\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/prepare-onpremises-workloads-migration-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Prepare on-premises workloads for migration to Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/prepare-onpremises-workloads-migration-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-migrate-onpremises-workloads-azure",
+          "title": "Migrate on-premises workloads to Azure",
+          "order": 2,
+          "duration_minutes": 31,
+          "content_md": "Migrate on-premises workloads to Azure\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-on-premises-workloads-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate on-premises workloads to Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-on-premises-workloads-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "deploy-azure-vmware-solution",
+          "title": "Prepare to migrate VMware resources to Azure by deploying Azure VMware Solution",
+          "order": 3,
+          "duration_minutes": 56,
+          "content_md": "Prepare to migrate VMware resources to Azure by deploying an Azure VMware Solution resource. Then, connect your VMware environment to Azure VMware Solution.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-azure-vmware-solution/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Prepare to migrate VMware resources to Azure by deploying Azure VMware Solution",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-azure-vmware-solution/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "migrate-vmware-workloads-on-premises-azure-vmware-solution",
+          "title": "Migrate VMware vSphere resources from on-premises to Azure VMware Solution",
+          "order": 4,
+          "duration_minutes": 53,
+          "content_md": "Learn how to migrate virtual machines from an on-premises VMware environment to Azure VMware Solution by using VMware HCX.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-vmware-workloads-on-premises-azure-vmware-solution/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate VMware vSphere resources from on-premises to Azure VMware Solution",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-vmware-workloads-on-premises-azure-vmware-solution/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-migrate-windows-server-workloads-azure",
+          "title": "Laboratorio opcional: aplica Migrate Windows Server workloads to Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Migrate Windows Server workloads to Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

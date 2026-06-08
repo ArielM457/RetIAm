@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-perform-code-maintenance-tasks-github-copilot",
+  "track": "github",
+  "title": "Perform code maintenance tasks using GitHub Copilot Agent",
+  "summary": "Learn how to accelerate common code maintenance tasks using GitHub Copilot Agent. This training covers how to resolve issues quickly and accurately by using GitHub Copilot Agent to refactor code in a Visual Studio Code environment.",
+  "provider": "GitHub",
+  "level": "intermediate",
+  "total_duration_minutes": 481,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/perform-code-maintenance-tasks-github-copilot-agent/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-perform-code-maintenance-tasks-github-copilot-agent",
+      "title": "Perform code maintenance tasks using GitHub Copilot Agent",
+      "summary": "Learn how to accelerate common code maintenance tasks using GitHub Copilot Agent. This training covers how to resolve issues quickly and accurately by using GitHub Copilot Agent to refactor code in a Visual Studio Code environment.",
+      "order": 1,
+      "duration_minutes": 481,
+      "lessons": [
+        {
+          "lesson_key": "consolidate-duplicate-logic-github-copilot-agent",
+          "title": "Consolidate duplicate logic using GitHub Copilot Agent",
+          "order": 1,
+          "duration_minutes": 48,
+          "content_md": "This module teaches you how to identify and consolidate duplicate logic in your codebase using GitHub Copilot Agent. You learn best practices for refactoring duplicate code and improving code quality.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/consolidate-duplicate-logic-github-copilot-agent/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Consolidate duplicate logic using GitHub Copilot Agent",
+              "url": "https://learn.microsoft.com/en-us/training/modules/consolidate-duplicate-logic-github-copilot-agent/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "refactor-large-functions-github-copilot",
+          "title": "Refactor large functions using GitHub Copilot Agent",
+          "order": 2,
+          "duration_minutes": 73,
+          "content_md": "Learn how to identify large multi-purpose functions and how to refactor large functions into smaller helper classes and static methods by using GitHub Copilot in Visual Studio Code.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/refactor-large-functions-github-copilot/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Refactor large functions using GitHub Copilot Agent",
+              "url": "https://learn.microsoft.com/en-us/training/modules/refactor-large-functions-github-copilot/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "simplify-complex-conditionals-github-copilot-agent",
+          "title": "Simplify complex conditionals using GitHub Copilot Agent",
+          "order": 3,
+          "duration_minutes": 78,
+          "content_md": "This module covers the use of GitHub Copilot's Agent mode to simplify complex conditional statements in code. It provides practical examples and exercises to enhance coding efficiency.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/simplify-complex-conditionals-github-copilot-agent/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Simplify complex conditionals using GitHub Copilot Agent",
+              "url": "https://learn.microsoft.com/en-us/training/modules/simplify-complex-conditionals-github-copilot-agent/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-code-improvements-using-github-copilot-tools",
+          "title": "Implement code improvements using GitHub Copilot tools",
+          "order": 4,
+          "duration_minutes": 80,
+          "content_md": "This module explores using GitHub Copilot Chat to develop improvements for an existing codebase. Exercises provide practical experience implementing GitHub Copilot suggestions that improve code quality, reliability, performance, and security.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-code-improvements-using-github-copilot-tools/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement code improvements using GitHub Copilot tools",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-code-improvements-using-github-copilot-tools/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "resolve-github-issues-github-copilot-agent",
+          "title": "Resolve GitHub issues using GitHub Copilot Agent",
+          "order": 5,
+          "duration_minutes": 92,
+          "content_md": "This module covers how to identify and remediate GitHub issues using GitHub Copilot's Ask and Agent modes. The training focuses on security vulnerabilities such as SQL injection, encryption, logging, and path traversal problems.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/resolve-github-issues-github-copilot-agent/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Resolve GitHub issues using GitHub Copilot Agent",
+              "url": "https://learn.microsoft.com/en-us/training/modules/resolve-github-issues-github-copilot-agent/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "resolve-github-secret-scanning-alerts-github-copilot-agent",
+          "title": "Resolve GitHub Secret Scanning alerts using GitHub Copilot Agent",
+          "order": 6,
+          "duration_minutes": 110,
+          "content_md": "This module covers how to identify and remediate GitHub Secret Scanning alerts using GitHub Copilot's Ask and Agent modes. The training focuses on detecting hard-coded secrets in source code and implementing secure configuration patterns to replace them.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/resolve-github-secret-scanning-alerts-github-copilot-agent/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Resolve GitHub Secret Scanning alerts using GitHub Copilot Agent",
+              "url": "https://learn.microsoft.com/en-us/training/modules/resolve-github-secret-scanning-alerts-github-copilot-agent/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-perform-code-maintenance-tasks-github-copilot-agent",
+          "title": "Laboratorio opcional: aplica Perform code maintenance tasks using GitHub Copilot Agent",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Perform code maintenance tasks using GitHub Copilot Agent**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

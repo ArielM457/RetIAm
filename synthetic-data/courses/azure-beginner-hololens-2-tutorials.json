@@ -1,0 +1,168 @@
+{
+  "certification_code": "azure-beginner-hololens-2-tutorials",
+  "track": "azure",
+  "title": "HoloLens 2 fundamentals: develop mixed reality applications",
+  "summary": "Learn about the best practices for developing Azure-enabled mixed reality applications with the Mixed Reality Toolkit.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 293,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/beginner-hololens-2-tutorials/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "azure-beginner-hololens-2-tutorials",
+      "title": "HoloLens 2 fundamentals: develop mixed reality applications",
+      "summary": "Learn about the best practices for developing Azure-enabled mixed reality applications with the Mixed Reality Toolkit.",
+      "order": 1,
+      "duration_minutes": 293,
+      "lessons": [
+        {
+          "lesson_key": "azure-learn-introduction-tutorials-mrtk",
+          "title": "Introduction to the Mixed Reality Toolkit-Set Up Your Project and Use Hand Interaction",
+          "order": 1,
+          "duration_minutes": 49,
+          "content_md": "This course provides the user with a basic understanding of all the foundational elements of MRTK.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/learn-mrtk-tutorials/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to the Mixed Reality Toolkit-Set Up Your Project and Use Hand Interaction",
+              "url": "https://learn.microsoft.com/en-us/training/modules/learn-mrtk-tutorials/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-place-scene-objects-tutorials-mrtk",
+          "title": "Place a Mars Rover object in the scene and work with grids and intelligent object tracking",
+          "order": 2,
+          "duration_minutes": 54,
+          "content_md": "This course provides you with an understanding of placing objects and tracking objects using solvers.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/place-scene-objects/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Place a Mars Rover object in the scene and work with grids and intelligent object tracking",
+              "url": "https://learn.microsoft.com/en-us/training/modules/place-scene-objects/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-get-started-with-object-interaction-tutorials-mrtk",
+          "title": "Getting started with 3D object interaction",
+          "order": 3,
+          "duration_minutes": 54,
+          "content_md": "This course will provide steps and procedures to follow on how to manipulate and interact with 3D objects.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/get-started-with-object-interaction/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Getting started with 3D object interaction",
+              "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-object-interaction/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-using-eyetracking-and-voice-commands-mrtk",
+          "title": "Enable eye tracking and voice commands for objects on the HoloLens 2",
+          "order": 4,
+          "duration_minutes": 39,
+          "content_md": "This course provides the user an overall understanding on how to use eye tracking and voice commands\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/use-eye-tracking-voice-commands/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Enable eye tracking and voice commands for objects on the HoloLens 2",
+              "url": "https://learn.microsoft.com/en-us/training/modules/use-eye-tracking-voice-commands/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-azure-speech-services-tutorials-mrtk",
+          "title": "Add Azure AI services to your mixed reality project",
+          "order": 5,
+          "duration_minutes": 29,
+          "content_md": "This course explores the use of Azure speech services by integrating to a hololens2 application. You can also deploy your project to a HoloLens.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-speech-services-tutorials-mrtk/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Add Azure AI services to your mixed reality project",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-speech-services-tutorials-mrtk/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-spatial-audio-tutorials-mrtk",
+          "title": "Activate spatial audio for your HoloLens 2 application",
+          "order": 6,
+          "duration_minutes": 23,
+          "content_md": "Activate spatial audio for your HoloLens 2 application\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/spatial-audio-tutorials-mrtk/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Activate spatial audio for your HoloLens 2 application",
+              "url": "https://learn.microsoft.com/en-us/training/modules/spatial-audio-tutorials-mrtk/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-azure-cloud-services-tutorials-mrtk",
+          "title": "Integrate Azure Cloud Services to your Unity project on HoloLens 2",
+          "order": 7,
+          "duration_minutes": 27,
+          "content_md": "Add Azure Cloud Services such as Azure Storage and Azure Custom Vision for your mixed reality application.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-cloud-services-tutorials/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Integrate Azure Cloud Services to your Unity project on HoloLens 2",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-cloud-services-tutorials/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-pc-holographic-remoting-tutorials-mrtk",
+          "title": "Create a Holographic Remoting app to visualize 3D content on HoloLens 2",
+          "order": 8,
+          "duration_minutes": 18,
+          "content_md": "This course explores the use of PC holographic remoting by integrating to a HoloLens 2 application.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/pc-holographic-remoting-tutorials/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create a Holographic Remoting app to visualize 3D content on HoloLens 2",
+              "url": "https://learn.microsoft.com/en-us/training/modules/pc-holographic-remoting-tutorials/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-azure-beginner-hololens-2-tutorials",
+          "title": "Laboratorio opcional: aplica HoloLens 2 fundamentals: develop mixed reality applications",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **HoloLens 2 fundamentals: develop mixed reality applications**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

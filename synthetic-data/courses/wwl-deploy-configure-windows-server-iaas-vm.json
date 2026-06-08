@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-deploy-configure-windows-server-iaas-vm",
+  "track": "azure",
+  "title": "Deploy and configure Windows Server IaaS Virtual Machine",
+  "summary": "In this learning path, you’ll learn how to deploy and configure Azure IaaS Virtual Machine workloads. After completing the learning path, you’ll know how to plan, deploy, and upgrade Windows Server Azure Virtual Machines.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 214,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/deploy-configure-windows-server-iaas-virtual-machine/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-deploy-configure-windows-server-iaas-vm",
+      "title": "Deploy and configure Windows Server IaaS Virtual Machine",
+      "summary": "In this learning path, you’ll learn how to deploy and configure Azure IaaS Virtual Machine workloads. After completing the learning path, you’ll know how to plan, deploy, and upgrade Windows Server Azure Virtual Machines.",
+      "order": 1,
+      "duration_minutes": 214,
+      "lessons": [
+        {
+          "lesson_key": "wwl-plan-deploy-windows-server-iaas-vms",
+          "title": "Plan and deploy Windows Server IaaS Virtual Machines",
+          "order": 1,
+          "duration_minutes": 62,
+          "content_md": "You're able to describe Azure compute and storage in relation to Azure VMs, and deploy Azure VMs by using the Azure portal, Azure CLI, or templates.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/plan-deploy-windows-server-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan and deploy Windows Server IaaS Virtual Machines",
+              "url": "https://learn.microsoft.com/en-us/training/modules/plan-deploy-windows-server-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-customize-windows-server-iaas-vm-images",
+          "title": "Customize Windows Server IaaS Virtual Machine images",
+          "order": 2,
+          "duration_minutes": 50,
+          "content_md": "Learn to create new VMs from generalized images and use Azure Image Builder templates to create and manage images in Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/customize-windows-server-iaas-virtual-machine-images/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Customize Windows Server IaaS Virtual Machine images",
+              "url": "https://learn.microsoft.com/en-us/training/modules/customize-windows-server-iaas-virtual-machine-images/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-automate-configuration-of-windows-server-iaas-vms",
+          "title": "Automate the configuration of Windows Server IaaS Virtual Machines",
+          "order": 3,
+          "duration_minutes": 49,
+          "content_md": "Learn how to deploy Desired State Configuration (DSC) extensions, implement those extensions to remediate noncompliant servers, and use custom script extension.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/automate-configuration-of-windows-server-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Automate the configuration of Windows Server IaaS Virtual Machines",
+              "url": "https://learn.microsoft.com/en-us/training/modules/automate-configuration-of-windows-server-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-upgrade-migrate-windows-server-iaas-virtual-machines",
+          "title": "Upgrade and migrate Windows Server IaaS virtual machines",
+          "order": 4,
+          "duration_minutes": 53,
+          "content_md": "Learn to migrate a workload running in Windows Server to an infrastructure as a service (IaaS) virtual machine (VM) and to Windows Server 2025 by using Windows Server migration tools or the Storage Migration Service.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/upgrade-migrate-windows-server-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Upgrade and migrate Windows Server IaaS virtual machines",
+              "url": "https://learn.microsoft.com/en-us/training/modules/upgrade-migrate-windows-server-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-deploy-configure-windows-server-iaas-vm",
+          "title": "Laboratorio opcional: aplica Deploy and configure Windows Server IaaS Virtual Machine",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Deploy and configure Windows Server IaaS Virtual Machine**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

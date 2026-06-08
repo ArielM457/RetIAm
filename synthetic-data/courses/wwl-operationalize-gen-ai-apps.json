@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-operationalize-gen-ai-apps",
+  "track": "github",
+  "title": "Operationalize generative AI applications (GenAIOps)",
+  "summary": "Learn the full GenAIOps lifecycle for generative AI applications, from planning and prompt management to evaluation, automated testing, monitoring, and tracing in production.",
+  "provider": "GitHub",
+  "level": "intermediate",
+  "total_duration_minutes": 368,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/operationalize-gen-ai-apps/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-operationalize-gen-ai-apps",
+      "title": "Operationalize generative AI applications (GenAIOps)",
+      "summary": "Learn the full GenAIOps lifecycle for generative AI applications, from planning and prompt management to evaluation, automated testing, monitoring, and tracing in production.",
+      "order": 1,
+      "duration_minutes": 368,
+      "lessons": [
+        {
+          "lesson_key": "wwl-plan-prepare-genaiops",
+          "title": "Plan and prepare a GenAIOps solution",
+          "order": 1,
+          "duration_minutes": 50,
+          "content_md": "Learn how to plan and prepare a GenAIOps solution.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/plan-prepare-genaiops/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan and prepare a GenAIOps solution",
+              "url": "https://learn.microsoft.com/en-us/training/modules/plan-prepare-genaiops/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-prompt-versioning-genaiops",
+          "title": "Manage prompts for agents in Microsoft Foundry with GitHub",
+          "order": 2,
+          "duration_minutes": 53,
+          "content_md": "Learn how to manage prompts for agents in Microsoft Foundry using GitHub version control and collaboration features.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/prompt-versioning-genaiops/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage prompts for agents in Microsoft Foundry with GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/prompt-versioning-genaiops/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-evaluate-optimize-agents",
+          "title": "Evaluate and optimize AI agents through structured experiments",
+          "order": 3,
+          "duration_minutes": 66,
+          "content_md": "Learn how to evaluate and optimize AI agents systematically through structured experiments that measure quality, cost, and performance. Design evaluation metrics, apply Git-based workflows, create consistent scoring rubrics, and make evidence-based optimization decisions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/evaluate-optimize-agents/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Evaluate and optimize AI agents through structured experiments",
+              "url": "https://learn.microsoft.com/en-us/training/modules/evaluate-optimize-agents/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-automated-evaluation-genaiops",
+          "title": "Automate AI evaluations with Microsoft Foundry and GitHub Actions",
+          "order": 4,
+          "duration_minutes": 74,
+          "content_md": "Learn how to implement automated evaluations for AI agents using Microsoft Foundry evaluators and GitHub Actions workflows.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/automated-evaluation-genaiops/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Automate AI evaluations with Microsoft Foundry and GitHub Actions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/automated-evaluation-genaiops/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-monitor-generative-ai-app",
+          "title": "Monitor your generative AI application",
+          "order": 5,
+          "duration_minutes": 60,
+          "content_md": "Learn how to monitor the performance of your generative AI application using Microsoft Foundry. This module teaches you to track key metrics like latency and token usage to make informed, cost-effective deployment decisions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-generative-ai-app/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Monitor your generative AI application",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-generative-ai-app/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-tracing-generative-ai-app",
+          "title": "Analyze and debug your generative AI app with tracing",
+          "order": 6,
+          "duration_minutes": 65,
+          "content_md": "Learn how to implement tracing in your generative AI applications using Microsoft Foundry and OpenTelemetry. This module teaches you to capture detailed execution flows, debug complex workflows, and understand application behavior for better reliability and optimization.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/tracing-generative-ai-app/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Analyze and debug your generative AI app with tracing",
+              "url": "https://learn.microsoft.com/en-us/training/modules/tracing-generative-ai-app/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-operationalize-gen-ai-apps",
+          "title": "Laboratorio opcional: aplica Operationalize generative AI applications (GenAIOps)",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Operationalize generative AI applications (GenAIOps)**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

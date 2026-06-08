@@ -1,0 +1,78 @@
+{
+  "certification_code": "azure-migrate-dotnet-apps-azure",
+  "track": "azure",
+  "title": "Migrate ASP.NET Apps to Azure",
+  "summary": "Migrate ASP.NET web applications and their data to Azure App Service and Azure SQL Database to take advantage of the cloud.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 109,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/migrate-dotnet-apps-azure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "azure-migrate-dotnet-apps-azure",
+      "title": "Migrate ASP.NET Apps to Azure",
+      "summary": "Migrate ASP.NET web applications and their data to Azure App Service and Azure SQL Database to take advantage of the cloud.",
+      "order": 1,
+      "duration_minutes": 109,
+      "lessons": [
+        {
+          "lesson_key": "host-a-web-application-with-azure-web-apps",
+          "title": "Host a web application with Azure App Service",
+          "order": 1,
+          "duration_minutes": 31,
+          "content_md": "Create a website using C#, Java, Python, or Node.js and deploy it through the hosted web app platform in Azure App Service.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/host-a-web-app-with-azure-app-service/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Host a web application with Azure App Service",
+              "url": "https://learn.microsoft.com/en-us/training/modules/host-a-web-app-with-azure-app-service/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-wwl-migrate-sql-workloads-azure-sql-databases",
+          "title": "Migrate SQL Server workloads to Azure SQL Database",
+          "order": 2,
+          "duration_minutes": 78,
+          "content_md": "Learn the essentials of Azure SQL Database deployment and migration. Explore its benefits, exclusive features, and migration options while optimizing performance and application connections for a smooth transition to the cloud.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-sql-workloads-azure-sql-databases/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate SQL Server workloads to Azure SQL Database",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-sql-workloads-azure-sql-databases/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-azure-migrate-dotnet-apps-azure",
+          "title": "Laboratorio opcional: aplica Migrate ASP.NET Apps to Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Migrate ASP.NET Apps to Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

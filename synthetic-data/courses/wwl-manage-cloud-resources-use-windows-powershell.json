@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-manage-cloud-resources-use-windows-powershell",
+  "track": "azure",
+  "title": "Manage cloud resources by using Windows PowerShell",
+  "summary": "This learning path explains how to install the necessary modules for cloud services management and use PowerShell commands to perform simple administrative tasks on cloud resources such as Azure virtual machines, Azure storage accounts, and Azure subscriptions. The learning path also covers how to use the Azure Cloud Shell environment to perform PowerShell-based or Bash-based administration directly from the Azure portal.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 125,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/manage-cloud-resources-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-manage-cloud-resources-use-windows-powershell",
+      "title": "Manage cloud resources by using Windows PowerShell",
+      "summary": "This learning path explains how to install the necessary modules for cloud services management and use PowerShell commands to perform simple administrative tasks on cloud resources such as Azure virtual machines, Azure storage accounts, and Azure subscriptions. The learning path also covers how to use the Azure Cloud Shell environment to perform PowerShell-based or Bash-based administration directly from the Azure portal.",
+      "order": 1,
+      "duration_minutes": 125,
+      "lessons": [
+        {
+          "lesson_key": "wwl-review-azure-powershell-module",
+          "title": "Review Azure PowerShell module",
+          "order": 1,
+          "duration_minutes": 45,
+          "content_md": "This module explains the Azure PowerShell environment and the Az module for Windows PowerShell. It also explains how to manage Microsoft Entra ID by using PowerShell modules.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/review-azure-powershell-module/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Review Azure PowerShell module",
+              "url": "https://learn.microsoft.com/en-us/training/modules/review-azure-powershell-module/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-review-features-tools-for-azure-cloud-shell",
+          "title": "Review the features and tools for Azure Cloud Shell",
+          "order": 2,
+          "duration_minutes": 35,
+          "content_md": "This module covers Azure Cloud Shell and its features.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/review-features-tools-for-azure-cloud-shell/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Review the features and tools for Azure Cloud Shell",
+              "url": "https://learn.microsoft.com/en-us/training/modules/review-features-tools-for-azure-cloud-shell/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-azure-resources-windows-powershell",
+          "title": "Manage Azure resources with Windows PowerShell",
+          "order": 3,
+          "duration_minutes": 45,
+          "content_md": "Learn to manage Azure resources with Windows PowerShell.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-azure-resources-windows-powershell/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage Azure resources with Windows PowerShell",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-azure-resources-windows-powershell/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-manage-cloud-resources-use-windows-powershell",
+          "title": "Laboratorio opcional: aplica Manage cloud resources by using Windows PowerShell",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Manage cloud resources by using Windows PowerShell**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

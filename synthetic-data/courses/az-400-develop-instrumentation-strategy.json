@@ -1,0 +1,93 @@
+{
+  "certification_code": "az-400-develop-instrumentation-strategy",
+  "track": "azure",
+  "title": "Develop an instrumentation strategy",
+  "summary": "Develop an effective instrumentation strategy through logging, telemetry, and monitoring and prepare for Exam AZ-400: Designing and Implementing Microsoft DevOps Solutions.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 193,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/az-400-develop-instrumentation-strategy/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "az-400-develop-instrumentation-strategy",
+      "title": "Develop an instrumentation strategy",
+      "summary": "Develop an effective instrumentation strategy through logging, telemetry, and monitoring and prepare for Exam AZ-400: Designing and Implementing Microsoft DevOps Solutions.",
+      "order": 1,
+      "duration_minutes": 193,
+      "lessons": [
+        {
+          "lesson_key": "control-and-organize-with-resource-manager",
+          "title": "Control and organize Azure resources with Azure Resource Manager",
+          "order": 1,
+          "duration_minutes": 46,
+          "content_md": "Use Azure Resource Manager to organize resources, enforce standards, and protect critical assets from deletion.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/control-and-organize-with-azure-resource-manager/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Control and organize Azure resources with Azure Resource Manager",
+              "url": "https://learn.microsoft.com/en-us/training/modules/control-and-organize-with-azure-resource-manager/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-well-architected-performance-efficiency",
+          "title": "Microsoft Azure Well-Architected Framework - Performance Efficiency",
+          "order": 2,
+          "duration_minutes": 65,
+          "content_md": "Learn how to optimize your workload to meet performance requirements while balancing costs, reliability, and security.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-well-architected-performance-efficiency/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Microsoft Azure Well-Architected Framework - Performance Efficiency",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-well-architected-performance-efficiency/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-well-architected-operational-excellence",
+          "title": "Microsoft Azure Well-Architected Framework - Operational Excellence",
+          "order": 3,
+          "duration_minutes": 82,
+          "content_md": "Learn how to design an Azure architecture that uses modern practices and gives you full visibility into what's happening in your environment.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-well-architected-operational-excellence/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Microsoft Azure Well-Architected Framework - Operational Excellence",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-well-architected-operational-excellence/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-az-400-develop-instrumentation-strategy",
+          "title": "Laboratorio opcional: aplica Develop an instrumentation strategy",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Develop an instrumentation strategy**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

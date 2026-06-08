@@ -1,0 +1,93 @@
+{
+  "certification_code": "monitor-hybrid-virtual-machines-containers-network",
+  "track": "azure",
+  "title": "Monitor hybrid virtual machines, containers, and network resources",
+  "summary": "Learn how to monitor virtual machines, containers, and network resources in a hybrid environment with Azure Monitor.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 99,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/monitor-hybrid-virtual-machines-containers-network/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "monitor-hybrid-virtual-machines-containers-network",
+      "title": "Monitor hybrid virtual machines, containers, and network resources",
+      "summary": "Learn how to monitor virtual machines, containers, and network resources in a hybrid environment with Azure Monitor.",
+      "order": 1,
+      "duration_minutes": 99,
+      "lessons": [
+        {
+          "lesson_key": "azure-monitor-azure-vm-using-diagnostic-data",
+          "title": "Monitor your Azure virtual machines with Azure Monitor",
+          "order": 1,
+          "duration_minutes": 35,
+          "content_md": "Learn how to monitor your Azure VMs by using Azure Monitor to collect and analyze VM host and client metrics and logs.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Monitor your Azure virtual machines with Azure Monitor",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-monitor-azure-arc-enabled-servers",
+          "title": "Monitor your hybrid and multicloud machines through Azure Arc-enabled servers",
+          "order": 2,
+          "duration_minutes": 36,
+          "content_md": "Understand the monitoring capabilities of Azure Arc-enabled servers. Learn about the benefits of and how to onboard Azure Arc-enabled servers to Azure Logs and Metrics, VM Insights, and Azure Monitor Alerts.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Monitor your hybrid and multicloud machines through Azure Arc-enabled servers",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-design-implement-network-monitoring",
+          "title": "Design and implement network monitoring",
+          "order": 3,
+          "duration_minutes": 28,
+          "content_md": "You learn to design and implement network monitoring solutions such as Azure Monitor and Network watcher.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/design-implement-network-monitoring/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Design and implement network monitoring",
+              "url": "https://learn.microsoft.com/en-us/training/modules/design-implement-network-monitoring/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-monitor-hybrid-virtual-machines-containers-network",
+          "title": "Laboratorio opcional: aplica Monitor hybrid virtual machines, containers, and network resources",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Monitor hybrid virtual machines, containers, and network resources**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

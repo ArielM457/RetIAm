@@ -1,0 +1,123 @@
+{
+  "certification_code": "wwl-monitor-maintain-windows-server-iaas-vm",
+  "track": "azure",
+  "title": "Monitor and maintain Windows Server IaaS Virtual Machine",
+  "summary": "In this learning path, you’ll learn how to implement remote administration and management in Azure. After completing this path, you’ll be able to monitor your Azure resources, and plan for scale and high-availability.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 247,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/monitor-maintain-windows-server-iaas-virtual-machine/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-monitor-maintain-windows-server-iaas-vm",
+      "title": "Monitor and maintain Windows Server IaaS Virtual Machine",
+      "summary": "In this learning path, you’ll learn how to implement remote administration and management in Azure. After completing this path, you’ll be able to monitor your Azure resources, and plan for scale and high-availability.",
+      "order": 1,
+      "duration_minutes": 247,
+      "lessons": [
+        {
+          "lesson_key": "wwl-administer-manage-windows-server-iaas-vm-remotely",
+          "title": "Administer and manage Windows Server IaaS Virtual Machine remotely",
+          "order": 1,
+          "duration_minutes": 44,
+          "content_md": "Administer and manage Windows Server IaaS Virtual Machine remotely\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/administer-manage-windows-server-iaas-virtual-machine-remotely/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Administer and manage Windows Server IaaS Virtual Machine remotely",
+              "url": "https://learn.microsoft.com/en-us/training/modules/administer-manage-windows-server-iaas-virtual-machine-remotely/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-monitor-windows-server-iaas-vms-hybrid-instances",
+          "title": "Monitor Windows Server IaaS Virtual Machines and hybrid instances",
+          "order": 2,
+          "duration_minutes": 46,
+          "content_md": "Monitor Windows Server IaaS Virtual Machines and hybrid instances\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-windows-server-iaas-virtual-machines-hybrid-instances/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Monitor Windows Server IaaS Virtual Machines and hybrid instances",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-windows-server-iaas-virtual-machines-hybrid-instances/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-understand-windows-server-iaas-vm-cost-management",
+          "title": "Understand Windows Server IaaS Virtual Machine cost management",
+          "order": 3,
+          "duration_minutes": 38,
+          "content_md": "Use the Pricing calculator to assess likely costs, use Azure Advisor to monitor actual costs for Azure resources, implement Spot VMs and Azure Reservations, and describe benefits of Azure Hybrid licensing.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/understand-windows-server-iaas-vm-cost-management/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand Windows Server IaaS Virtual Machine cost management",
+              "url": "https://learn.microsoft.com/en-us/training/modules/understand-windows-server-iaas-vm-cost-management/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-scale-high-availability-with-windows-server-vm",
+          "title": "Implement scale and high availability with Windows Server VM",
+          "order": 4,
+          "duration_minutes": 58,
+          "content_md": "Learn how to implement scaling for virtual machine scale sets and load-balanced VMs. Also learn how to implement Azure Site Recovery.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-scale-high-availability-windows-server-virtual-machine/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement scale and high availability with Windows Server VM",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-scale-high-availability-windows-server-virtual-machine/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-hybrid-backup-recovery-with-windows-server-iaa",
+          "title": "Implement hybrid backup and recovery with Windows Server IaaS",
+          "order": 5,
+          "duration_minutes": 61,
+          "content_md": "Learn about Azure Backup before learning to implement Recovery Vaults and Azure Backup Policies. Learn to implement Windows IaaS VM recovery, perform backup and restore of on-premises workloads, and manage Azure VM backups.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-hybrid-backup-recovery-windows-server-iaas/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement hybrid backup and recovery with Windows Server IaaS",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-hybrid-backup-recovery-windows-server-iaas/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-monitor-maintain-windows-server-iaas-vm",
+          "title": "Laboratorio opcional: aplica Monitor and maintain Windows Server IaaS Virtual Machine",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Monitor and maintain Windows Server IaaS Virtual Machine**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
