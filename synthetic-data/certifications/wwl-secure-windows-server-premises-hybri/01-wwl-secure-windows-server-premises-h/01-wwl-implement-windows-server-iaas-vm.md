@@ -1,0 +1,29 @@
+# Implement Windows Server IaaS VM network security
+
+> Curso: Secure Windows Server on-premises and hybrid infrastructures (wwl-secure-windows-server-premises-hybrid-infrastr) · Seccion: Secure Windows Server on-premises and hybrid infrastructures
+> Duracion estimada: 64 min
+
+## Objetivos
+- (pendiente de expansion por agente)
+
+## Contenido
+## Summary
+
+The Contoso Information Security and Compliance team expressed concerns about potential risks introduced by transitioning some on\-premises workloads to Microsoft Azure, particularly to the Azure networking environment. As a systems engineer on the pilot team, you are responsible for assessing network security for Azure workloads. In this module, you learned how to improve the network security of Windows Server IaaS workloads by implementing NSGs, Azure Firewall, adaptive network hardening, and Azure Network Watcher.
+
+### Learn more
+
+You can learn more by reviewing the following documents.
+
+* [Network security groups](https://aka.ms/security-overview?azure-portal=true)
+* [What is Azure Firewall?](https://aka.ms/azure-firewall-overview?azure-portal=true)
+* [Adaptive Network Hardening in Microsoft Defender for Cloud](https://aka.ms/security-center-adaptive-network-hardening?azure-portal=true)
+* [What is Azure Network Watcher?](https://aka.ms/network-watcher-monitoring-overview?azure-portal=true)
+* [Secure and isolate access to Azure resources by using network security groups and service endpoints](https://aka.ms/secure-and-isolate-with-nsg-and-service-endpoints?azure-portal=true)
+
+---
+
+_Fuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-windows-server-iaas-virtual-machine-network-security/_
+
+## Fuentes
+- [Implement Windows Server IaaS VM network security](https://learn.microsoft.com/en-us/training/modules/implement-windows-server-iaas-virtual-machine-network-security/?WT.mc_id=api_CatalogApi)

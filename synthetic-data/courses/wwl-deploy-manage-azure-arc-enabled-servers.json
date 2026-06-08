@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-deploy-manage-azure-arc-enabled-servers",
+  "track": "azure",
+  "title": "Deploy and manage Azure Arc-enabled Servers",
+  "summary": "In this learning path, you're introduced to Azure Arc-enabled servers. You'll cover Arc-enabled server deployment, updates to Arc-enabled servers using Azure Update Manager and configuring Microsoft Defender for Cloud for Azure Arc-enabled servers. (AZ-1010)",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 462,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/deploy-manage-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-deploy-manage-azure-arc-enabled-servers",
+      "title": "Deploy and manage Azure Arc-enabled Servers",
+      "summary": "In this learning path, you're introduced to Azure Arc-enabled servers. You'll cover Arc-enabled server deployment, updates to Arc-enabled servers using Azure Update Manager and configuring Microsoft Defender for Cloud for Azure Arc-enabled servers. (AZ-1010)",
+      "order": 1,
+      "duration_minutes": 462,
+      "lessons": [
+        {
+          "lesson_key": "azure-plan-deploy-azure-arc-enabled-servers",
+          "title": "Plan and deploy Azure Arc-enabled servers at scale",
+          "order": 1,
+          "duration_minutes": 43,
+          "content_md": "Understand the capabilities and architecture of Azure Arc-enabled servers. Learn how to test and select the right deployment method for your machines. Finally, adopt best practices and advanced security considerations for Azure Arc-enabled servers.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/plan-deploy-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan and deploy Azure Arc-enabled servers at scale",
+              "url": "https://learn.microsoft.com/en-us/training/modules/plan-deploy-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-govern-azure-arc-enabled-servers",
+          "title": "Govern your hybrid and multicloud machines through Azure Arc-enabled servers",
+          "order": 2,
+          "duration_minutes": 29,
+          "content_md": "Understand the governance capabilities of Azure Arc-enabled servers. Learn about the benefits of and how to onboard Azure Arc-enabled servers to Azure Policy, Azure Automation, and Azure Automanage.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/govern-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Govern your hybrid and multicloud machines through Azure Arc-enabled servers",
+              "url": "https://learn.microsoft.com/en-us/training/modules/govern-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-updates-azure-arc-enabled-servers",
+          "title": "Configure updates of Azure Arc-enabled servers by using Azure Update Manager",
+          "order": 3,
+          "duration_minutes": 36,
+          "content_md": "Update Manager  is a unified service that helps manage and govern updates for all your machines. It allows you to monitor Windows and Linux update compliance across Azure and on-premises from a single dashboard.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-updates-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure updates of Azure Arc-enabled servers by using Azure Update Manager",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-updates-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-defender-cloud-azure-arc-enabled-servers",
+          "title": "Configure Microsoft Defender for Cloud for Azure Arc-enabled servers",
+          "order": 4,
+          "duration_minutes": 57,
+          "content_md": "By the end of this module, you'll understand how Microsoft Defender for Cloud for Azure Arc-enabled servers can help you protect your cloud-based applications from various cyber threats.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-defender-cloud-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure Microsoft Defender for Cloud for Azure Arc-enabled servers",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-defender-cloud-azure-arc-enabled-servers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-azure-arc-enabled-servers-scripting",
+          "title": "Manage Azure Arc-enabled servers by using scripting",
+          "order": 5,
+          "duration_minutes": 57,
+          "content_md": "This module covers the topic of enabling Azure Arc for Windows or Linux machines in your environment. Enabling Arc-enabled servers is done either manually or by using an automated method with a provided template script.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-azure-arc-enabled-servers-scripting/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage Azure Arc-enabled servers by using scripting",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-azure-arc-enabled-servers-scripting/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-guided-exercise-manage-on-premises-azure-arc",
+          "title": "Guided exercise - Manage on-premises Windows servers by using Azure Arc",
+          "order": 6,
+          "duration_minutes": 240,
+          "content_md": "In this guided exercise, you practice onboarding, securing, monitoring, and updating on-premises Windows servers by using Azure Arc. The guided exercise combines both learning and hands-on practice.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/guided-exercise-manage-on-premises-azure-arc/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Guided exercise - Manage on-premises Windows servers by using Azure Arc",
+              "url": "https://learn.microsoft.com/en-us/training/modules/guided-exercise-manage-on-premises-azure-arc/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-deploy-manage-azure-arc-enabled-servers",
+          "title": "Laboratorio opcional: aplica Deploy and manage Azure Arc-enabled Servers",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Deploy and manage Azure Arc-enabled Servers**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

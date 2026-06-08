@@ -1,0 +1,108 @@
+{
+  "certification_code": "philanthropies-intro-to-ai-for-trainers",
+  "track": "azure",
+  "title": "Introduction to artificial intelligence for trainers",
+  "summary": "Gain the foundational knowledge about the principles of artificial intelligence (AI) and how it's used in educational settings.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 156,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/introduction-to-artificial-intelligence-for-trainers/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "philanthropies-intro-to-ai-for-trainers",
+      "title": "Introduction to artificial intelligence for trainers",
+      "summary": "Gain the foundational knowledge about the principles of artificial intelligence (AI) and how it's used in educational settings.",
+      "order": 1,
+      "duration_minutes": 156,
+      "lessons": [
+        {
+          "lesson_key": "philanthropies-a-guide-to-artifical-intelligence",
+          "title": "A guide to artificial intelligence",
+          "order": 1,
+          "duration_minutes": 33,
+          "content_md": "This module explores fundamental concepts in artificial intelligence (AI) and machine learning.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/a-guide-to-artificial-intelligence/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "A guide to artificial intelligence",
+              "url": "https://learn.microsoft.com/en-us/training/modules/a-guide-to-artificial-intelligence/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-introduction-to-ai-for-trainers",
+          "title": "Tailoring trainings with AI",
+          "order": 2,
+          "duration_minutes": 17,
+          "content_md": "This module explores the dynamic integration of artificial intelligence (AI) in education.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/tailoring-trainings-with-ai/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Tailoring trainings with AI",
+              "url": "https://learn.microsoft.com/en-us/training/modules/tailoring-trainings-with-ai/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-exploring-artificial-intelligence-in-action",
+          "title": "Exploring artificial intelligence in action",
+          "order": 3,
+          "duration_minutes": 19,
+          "content_md": "This module explores various subsets within artificial intelligence (AI) such as natural language processing (NLP), computer vision, and recommendation systems and discuss the integration of AI-powered tools into a learning environment.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/exploring-artificial-intelligence-in-action/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Exploring artificial intelligence in action",
+              "url": "https://learn.microsoft.com/en-us/training/modules/exploring-artificial-intelligence-in-action/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-ai-powered-tools-for-teaching",
+          "title": "Use AI-powered tools for training",
+          "order": 4,
+          "duration_minutes": 87,
+          "content_md": "This module contains sample activities that demonstrate how to integrate AI-powered tools into your learning environment.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/ai-powered-tools-for-teaching/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use AI-powered tools for training",
+              "url": "https://learn.microsoft.com/en-us/training/modules/ai-powered-tools-for-teaching/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-philanthropies-intro-to-ai-for-trainers",
+          "title": "Laboratorio opcional: aplica Introduction to artificial intelligence for trainers",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduction to artificial intelligence for trainers**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

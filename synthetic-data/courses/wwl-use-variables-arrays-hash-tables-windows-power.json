@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-use-variables-arrays-hash-tables-windows-power",
+  "track": "azure",
+  "title": "Use variables, arrays, and hash tables in Windows PowerShell scripts",
+  "summary": "This learning path explains how to work with variables, arrays, and hash tables in Windows PowerShell scripts.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 72,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/use-variables-arrays-hash-tables-windows-powershell/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-use-variables-arrays-hash-tables-windows-powershell",
+      "title": "Use variables, arrays, and hash tables in Windows PowerShell scripts",
+      "summary": "This learning path explains how to work with variables, arrays, and hash tables in Windows PowerShell scripts.",
+      "order": 1,
+      "duration_minutes": 72,
+      "lessons": [
+        {
+          "lesson_key": "wwl-manage-variables-windows-powershell-scripts",
+          "title": "Manage variables in Windows PowerShell scripts",
+          "order": 1,
+          "duration_minutes": 37,
+          "content_md": "This module explains how to create variables, name them correctly, and assign the correct data type, while ensuring the data you store in variables is in the correct format and easily accessible.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-variables-windows-powershell-scripts/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage variables in Windows PowerShell scripts",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-variables-windows-powershell-scripts/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-work-arrays-hash-tables-window-powershell-scripts",
+          "title": "Work with arrays and hash tables in Windows PowerShell scripts",
+          "order": 2,
+          "duration_minutes": 35,
+          "content_md": "This module explains how to use arrays and hash tables in Windows PowerShell scripts.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/work-arrays-hash-tables-window-powershell-scripts/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Work with arrays and hash tables in Windows PowerShell scripts",
+              "url": "https://learn.microsoft.com/en-us/training/modules/work-arrays-hash-tables-window-powershell-scripts/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-use-variables-arrays-hash-tables-windows-powershell",
+          "title": "Laboratorio opcional: aplica Use variables, arrays, and hash tables in Windows PowerShell scripts",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Use variables, arrays, and hash tables in Windows PowerShell scripts**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "certification_code": "wwl-implement-windows-server-iaas-vm-security",
+  "track": "azure",
+  "title": "Implement Windows Server IaaS VM Security",
+  "summary": "This learning path deals with securing your Azure resources. After completing the learning path, you’ll be able to determine if your Azure IaaS workloads have any security vulnerabilities, and remediate those potential security vulnerabilities.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 234,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-windows-server-iaas-virtual-machine-security/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-windows-server-iaas-vm-security",
+      "title": "Implement Windows Server IaaS VM Security",
+      "summary": "This learning path deals with securing your Azure resources. After completing the learning path, you’ll be able to determine if your Azure IaaS workloads have any security vulnerabilities, and remediate those potential security vulnerabilities.",
+      "order": 1,
+      "duration_minutes": 234,
+      "lessons": [
+        {
+          "lesson_key": "wwl-audit-security-of-windows-server-iaas-vms",
+          "title": "Audit the security of Windows Server IaaS Virtual Machines",
+          "order": 1,
+          "duration_minutes": 45,
+          "content_md": "Learn about Microsoft Defender for Cloud and how to onboard Windows Server computers to the Microsoft Defender for Cloud Service. Also learn about Microsoft Sentinel, security information and event management (SIEM), and security orchestration, automation, and response (SOAR).\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/audit-security-of-windows-server-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Audit the security of Windows Server IaaS Virtual Machines",
+              "url": "https://learn.microsoft.com/en-us/training/modules/audit-security-of-windows-server-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-azure-updates",
+          "title": "Manage Azure updates",
+          "order": 2,
+          "duration_minutes": 40,
+          "content_md": "You'll be able to enable Azure Update Management, deploy updates, review an update assessment, and manage updates for your Azure VMs.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-azure-updates/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage Azure updates",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-azure-updates/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-bitlocker-disk-encryption-for-windows-iaas-vms",
+          "title": "Configure BitLocker disk encryption for Windows IaaS Virtual Machines",
+          "order": 3,
+          "duration_minutes": 35,
+          "content_md": "Configure BitLocker disk encryption for Windows IaaS Virtual Machines\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-bitlocker-disk-encryption-windows-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure BitLocker disk encryption for Windows IaaS Virtual Machines",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-bitlocker-disk-encryption-windows-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-change-tracking-file-integrity-monitoring-for",
+          "title": "Implement change tracking and file integrity monitoring for Windows IaaS VMs",
+          "order": 4,
+          "duration_minutes": 50,
+          "content_md": "Implement change tracking and file integrity monitoring for Windows IaaS VMs\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-change-tracking-file-integrity-monitoring/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement change tracking and file integrity monitoring for Windows IaaS VMs",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-change-tracking-file-integrity-monitoring/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-windows-server-iaas-vm-network-security",
+          "title": "Implement Windows Server IaaS VM network security",
+          "order": 5,
+          "duration_minutes": 64,
+          "content_md": "Implement Windows Server IaaS VM network security\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-windows-server-iaas-virtual-machine-network-security/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement Windows Server IaaS VM network security",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-windows-server-iaas-virtual-machine-network-security/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-windows-server-iaas-vm-security",
+          "title": "Laboratorio opcional: aplica Implement Windows Server IaaS VM Security",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement Windows Server IaaS VM Security**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

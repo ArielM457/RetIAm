@@ -1,0 +1,153 @@
+{
+  "certification_code": "wwl-optimize-devops-ai-agents-azure",
+  "track": "github",
+  "title": "Optimize DevOps with AI agents on Azure",
+  "summary": "Learn the concepts of agentic DevOps. Next, learn how to use GitHub Copilot, Azure DevOps MCP Server, and Azure SRE Agent to accelerate delivery, automate operations, and improve reliability across your DevOps workflows.",
+  "provider": "GitHub",
+  "level": "intermediate",
+  "total_duration_minutes": 671,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/optimize-devops-ai-agents-azure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-optimize-devops-ai-agents-azure",
+      "title": "Optimize DevOps with AI agents on Azure",
+      "summary": "Learn the concepts of agentic DevOps. Next, learn how to use GitHub Copilot, Azure DevOps MCP Server, and Azure SRE Agent to accelerate delivery, automate operations, and improve reliability across your DevOps workflows.",
+      "order": 1,
+      "duration_minutes": 671,
+      "lessons": [
+        {
+          "lesson_key": "wwl-introduction-agentic-devops-microsoft-tools-azure",
+          "title": "Introduction to agentic DevOps using Microsoft tools on Azure",
+          "order": 1,
+          "duration_minutes": 52,
+          "content_md": "Describe the agentic DevOps model for Microsoft DevOps Engineers, identify high-value opportunities in daily DevOps work, and define safe operating boundaries for agentic actions on Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-agentic-devops-microsoft-tools-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to agentic DevOps using Microsoft tools on Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-agentic-devops-microsoft-tools-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-azure-boards-using-github-copilot",
+          "title": "Manage Azure Boards by using GitHub Copilot integration",
+          "order": 2,
+          "duration_minutes": 96,
+          "content_md": "Manage Azure Boards by using GitHub Copilot integration\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-azure-boards-using-github-copilot/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage Azure Boards by using GitHub Copilot integration",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-azure-boards-using-github-copilot/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-ado-mcp-server",
+          "title": "Manage Azure DevOps by using MCP Server",
+          "order": 3,
+          "duration_minutes": 127,
+          "content_md": "Use Azure DevOps MCP Server with GitHub Copilot to manage projects, work items, pull requests, and pipelines through natural language workflows.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-ado-mcp-server/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage Azure DevOps by using MCP Server",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-ado-mcp-server/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-optimize-azure-reliability-using-sre-agent",
+          "title": "Optimize Azure reliability by using Azure SRE Agent",
+          "order": 4,
+          "duration_minutes": 93,
+          "content_md": "Learn how to apply SRE (Site Reliability Engineering) principles and use Azure SRE Agent to improve incident response, reduce operational toil, and govern remediation workflows.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/optimize-azure-reliability-with-sre-agent/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Optimize Azure reliability by using Azure SRE Agent",
+              "url": "https://learn.microsoft.com/en-us/training/modules/optimize-azure-reliability-with-sre-agent/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-use-plan-mode-cloud-ops",
+          "title": "Use GitHub Copilot plan mode for cloud operations tasks",
+          "order": 5,
+          "duration_minutes": 81,
+          "content_md": "Learn how to use GitHub Copilot plan mode to create structured implementation plans for cloud infrastructure changes and system administration tasks.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/use-plan-mode-cloud-ops/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use GitHub Copilot plan mode for cloud operations tasks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/use-plan-mode-cloud-ops/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-use-github-copilot-cloud-operations",
+          "title": "Use GitHub Copilot for cloud operations",
+          "order": 6,
+          "duration_minutes": 136,
+          "content_md": "Learn how to use GitHub Copilot to author Infrastructure as Code templates, apply prompt engineering techniques, and generate Azure CLI and PowerShell scripts for cloud operations tasks.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/use-github-copilot-cloud-operations/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use GitHub Copilot for cloud operations",
+              "url": "https://learn.microsoft.com/en-us/training/modules/use-github-copilot-cloud-operations/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-transition-traditional-ops-agent-automation",
+          "title": "Transition from traditional ops to agentic DevOps workflows",
+          "order": 7,
+          "duration_minutes": 86,
+          "content_md": "Learn how to evolve traditional cloud administration and DevOps tasks into agentic AI workflows using agent instructions, skills, and multi-agent orchestration.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/transition-traditional-ops-agent-automation/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Transition from traditional ops to agentic DevOps workflows",
+              "url": "https://learn.microsoft.com/en-us/training/modules/transition-traditional-ops-agent-automation/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-optimize-devops-ai-agents-azure",
+          "title": "Laboratorio opcional: aplica Optimize DevOps with AI agents on Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Optimize DevOps with AI agents on Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

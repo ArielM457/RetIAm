@@ -1,0 +1,123 @@
+{
+  "certification_code": "deploy-a-website-with-azure-virtual-machines",
+  "track": "azure",
+  "title": "Deploy a website with Azure virtual machines",
+  "summary": "Learn to use a Windows or Linux Azure Virtual Machine to extend the website support that Azure provides.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 274,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/deploy-a-website-with-azure-virtual-machines/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "deploy-a-website-with-azure-virtual-machines",
+      "title": "Deploy a website with Azure virtual machines",
+      "summary": "Learn to use a Windows or Linux Azure Virtual Machine to extend the website support that Azure provides.",
+      "order": 1,
+      "duration_minutes": 274,
+      "lessons": [
+        {
+          "lesson_key": "introduction-to-azure-virtual-machines",
+          "title": "Introduction to Azure virtual machines",
+          "order": 1,
+          "duration_minutes": 67,
+          "content_md": "Learn about the decisions you make before creating a virtual machine, the options to create and manage the VM, and the extensions and services you use to manage your VM.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-azure-virtual-machines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure virtual machines",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-azure-virtual-machines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "plan-your-linux-environment-in-azure",
+          "title": "Plan your Linux environment in Azure",
+          "order": 2,
+          "duration_minutes": 35,
+          "content_md": "Learn about standards and practices for planning, deploying, managing, and optimizing Linux VMs in Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/plan-your-linux-environment-in-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan your Linux environment in Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/plan-your-linux-environment-in-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "provision-linux-virtual-machine-in-azure",
+          "title": "Provisioning a Linux virtual machine in Microsoft Azure",
+          "order": 3,
+          "duration_minutes": 79,
+          "content_md": "Learn about different methods of provisioning Linux virtual machines in Microsoft Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/provision-linux-virtual-machine-in-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Provisioning a Linux virtual machine in Microsoft Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/provision-linux-virtual-machine-in-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "create-a-windows-vm-in-azure",
+          "title": "Create a Windows virtual machine in Azure",
+          "order": 4,
+          "duration_minutes": 51,
+          "content_md": "Learn to create an Azure virtual machine in minutes that can be used like a local physical desktop or server.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-windows-virtual-machine-in-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create a Windows virtual machine in Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-windows-virtual-machine-in-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "build-and-run-a-web-application-with-the-mean-stack-on-an-az",
+          "title": "Build and run a web application with the MEAN stack on an Azure Linux virtual machine",
+          "order": 5,
+          "duration_minutes": 42,
+          "content_md": "Learn how to decide if the MEAN stack (MongoDB, Express.js, AngularJS, and Node.js) is a good choice for you. Set up a MEAN-based web application on a new Azure Linux virtual machine.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/build-a-web-app-with-mean-on-a-linux-vm/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build and run a web application with the MEAN stack on an Azure Linux virtual machine",
+              "url": "https://learn.microsoft.com/en-us/training/modules/build-a-web-app-with-mean-on-a-linux-vm/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-deploy-a-website-with-azure-virtual-machines",
+          "title": "Laboratorio opcional: aplica Deploy a website with Azure virtual machines",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Deploy a website with Azure virtual machines**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

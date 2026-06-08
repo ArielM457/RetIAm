@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-administer-remote-computers-use-windows-powers",
+  "track": "azure",
+  "title": "Administer remote computers by using Windows PowerShell",
+  "summary": "Administer remote computers by using Windows PowerShell",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 143,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/administer-remote-computers-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-administer-remote-computers-use-windows-powershell",
+      "title": "Administer remote computers by using Windows PowerShell",
+      "summary": "Administer remote computers by using Windows PowerShell",
+      "order": 1,
+      "duration_minutes": 143,
+      "lessons": [
+        {
+          "lesson_key": "wwl-manage-single-multiple-computers-use-windows-powershell",
+          "title": "Manage single and multiple computers by using Windows PowerShell remoting",
+          "order": 1,
+          "duration_minutes": 65,
+          "content_md": "This module explains how to use remoting to perform administration on remote computers.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-single-multiple-computers-use-windows-powershell-remoting/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage single and multiple computers by using Windows PowerShell remoting",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-single-multiple-computers-use-windows-powershell-remoting/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-use-advanced-windows-powershell-remoting-techniques",
+          "title": "Use advanced Windows PowerShell remoting techniques",
+          "order": 2,
+          "duration_minutes": 44,
+          "content_md": "This module covers some useful advanced techniques that help overcome the limitations of basic Windows PowerShell remoting.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/use-advanced-windows-powershell-remoting-techniques/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use advanced Windows PowerShell remoting techniques",
+              "url": "https://learn.microsoft.com/en-us/training/modules/use-advanced-windows-powershell-remoting-techniques/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-persistent-connections-to-remote-computers",
+          "title": "Manage persistent connections to remote computers by using Windows PowerShell sessions",
+          "order": 3,
+          "duration_minutes": 34,
+          "content_md": "This module explains how to establish and manage persistent connections to remote computers, known as Windows PowerShell sessions or PSSessions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-persistent-connections-to-remote-computers/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage persistent connections to remote computers by using Windows PowerShell sessions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-persistent-connections-to-remote-computers/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-administer-remote-computers-use-windows-powershell",
+          "title": "Laboratorio opcional: aplica Administer remote computers by using Windows PowerShell",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Administer remote computers by using Windows PowerShell**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

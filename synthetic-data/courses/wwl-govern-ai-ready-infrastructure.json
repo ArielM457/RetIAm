@@ -1,0 +1,123 @@
+{
+  "certification_code": "wwl-govern-ai-ready-infrastructure",
+  "track": "azure",
+  "title": "Govern AI-ready infrastructure",
+  "summary": "This course teaches how to govern AI-ready infrastructure with Microsoft Foundry by enforcing policies, secure access, managing costs, regulating model behavior, and monitor compliance through practical, real-world governance scenarios.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 382,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/govern-ai-ready-infrastructure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-govern-ai-ready-infrastructure",
+      "title": "Govern AI-ready infrastructure",
+      "summary": "This course teaches how to govern AI-ready infrastructure with Microsoft Foundry by enforcing policies, secure access, managing costs, regulating model behavior, and monitor compliance through practical, real-world governance scenarios.",
+      "order": 1,
+      "duration_minutes": 382,
+      "lessons": [
+        {
+          "lesson_key": "wwl-explore-ai-governance-ai-ready-infrastructure",
+          "title": "Explore AI governance for AI ready infrastructure",
+          "order": 1,
+          "duration_minutes": 110,
+          "content_md": "Learn how to govern AI workloads using Microsoft Foundry by enforcing policies, managing costs, ensuring compliance, and applying responsible AI guardrails through hands‑on governance scenarios and exercises.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-ai-governance-ai-ready-infrastructure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore AI governance for AI ready infrastructure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-ai-governance-ai-ready-infrastructure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-govern-ai-ready-workloads-microsoft-foundry",
+          "title": "Govern AI ready workloads with Microsoft Foundry",
+          "order": 2,
+          "duration_minutes": 87,
+          "content_md": "Learn to govern AI workloads using Microsoft Foundry by enforcing policy‑driven controls, securing identity access, monitoring compliance, and managing model lifecycle, quotas, and costs through practical, hands‑on exercises.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/govern-ai-ready-workloads-microsoft-foundry/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Govern AI ready workloads with Microsoft Foundry",
+              "url": "https://learn.microsoft.com/en-us/training/modules/govern-ai-ready-workloads-microsoft-foundry/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-run-governed-ai-workloads-microsoft-foundry",
+          "title": "Run governed AI workloads with Microsoft Foundry",
+          "order": 3,
+          "duration_minutes": 47,
+          "content_md": "Implement enterprise AI governance with Microsoft Foundry by understanding the governance framework, configuring policy‑driven controls, enforcing quotas and safeguards, and applying hands‑on exercises to balance compliance, security, cost management, and innovation.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/run-governed-ai-workloads-microsoft-foundry/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Run governed AI workloads with Microsoft Foundry",
+              "url": "https://learn.microsoft.com/en-us/training/modules/run-governed-ai-workloads-microsoft-foundry/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-apply-governance-controls-ai-ready-workloads",
+          "title": "Apply governance controls to AI-ready workloads",
+          "order": 4,
+          "duration_minutes": 63,
+          "content_md": "Discover classify AI assets enforce Azure Policy guardrails track data lineage and implement hands‑on governance controls securing compliant auditable AI deployments across infrastructure pipelines and sensitive data workflows.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/apply-governance-controls-ai-ready-workloads/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Apply governance controls to AI-ready workloads",
+              "url": "https://learn.microsoft.com/en-us/training/modules/apply-governance-controls-ai-ready-workloads/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-protect-govern-ai-ready-infrastructure-azure",
+          "title": "Protect and govern AI ready infrastructure with Azure",
+          "order": 5,
+          "duration_minutes": 75,
+          "content_md": "Design and deploy governed AI infrastructure by understanding governance frameworks, enforcing policies and access controls, implementing responsible AI safeguards, and completing hands-on exercises to ensure compliant, secure AI workloads.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/protect-govern-ai-ready-infrastructure-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Protect and govern AI ready infrastructure with Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/protect-govern-ai-ready-infrastructure-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-govern-ai-ready-infrastructure",
+          "title": "Laboratorio opcional: aplica Govern AI-ready infrastructure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Govern AI-ready infrastructure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

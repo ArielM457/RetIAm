@@ -1,0 +1,15 @@
+# Manage Azure updates
+
+> Curso: Implement Windows Server IaaS VM Security (wwl-implement-windows-server-iaas-vm-security) · Seccion: Implement Windows Server IaaS VM Security
+> Duracion estimada: 40 min
+
+## Objetivos
+- (pendiente de expansion por agente)
+
+## Contenido
+You'll be able to enable Azure Update Management, deploy updates, review an update assessment, and manage updates for your Azure VMs.
+
+Fuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-azure-updates/?WT.mc_id=api_CatalogApi
+
+## Fuentes
+- [Manage Azure updates](https://learn.microsoft.com/en-us/training/modules/manage-azure-updates/?WT.mc_id=api_CatalogApi)

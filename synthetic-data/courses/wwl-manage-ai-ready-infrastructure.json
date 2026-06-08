@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-manage-ai-ready-infrastructure",
+  "track": "azure",
+  "title": "Manage AI-ready infrastructure",
+  "summary": "Learn to manage AI infrastructure by planning compute capacity, enforcing governance, configuring monitoring, and optimizing costs to support scalable, compliant, and high-performing AI workloads without budget overruns or operational risks.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 358,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/manage-ai-ready-infrastructure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-manage-ai-ready-infrastructure",
+      "title": "Manage AI-ready infrastructure",
+      "summary": "Learn to manage AI infrastructure by planning compute capacity, enforcing governance, configuring monitoring, and optimizing costs to support scalable, compliant, and high-performing AI workloads without budget overruns or operational risks.",
+      "order": 1,
+      "duration_minutes": 358,
+      "lessons": [
+        {
+          "lesson_key": "wwl-configure-ai-ready-infrastructure-microsoft-foundry",
+          "title": "Configure AI-ready infrastructure with Microsoft Foundry",
+          "order": 1,
+          "duration_minutes": 56,
+          "content_md": "Microsoft Foundry uses a hub-and-project architecture to centralize governance, security, and shared resources while enabling team autonomy. Hub-level connections, identities, and policies reduce cost, complexity, and duplication, supporting scalable, secure, enterprise-ready AI deployments.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-ai-ready-infrastructure-microsoft-foundry/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure AI-ready infrastructure with Microsoft Foundry",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-ai-ready-infrastructure-microsoft-foundry/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-monitoring-ai-ready-infrastructure",
+          "title": "Manage monitoring for AI-Ready Infrastructure",
+          "order": 2,
+          "duration_minutes": 108,
+          "content_md": "This module covers Azure Monitor fundamentals, including metrics collection, dashboards, alert and processing rules, and KQL-based log queries. Together, these capabilities enable faster root-cause analysis and improve operational reliability.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-monitoring-ai-ready-infrastructure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage monitoring for AI-Ready Infrastructure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-monitoring-ai-ready-infrastructure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-secure-ai-ready-infrastructure",
+          "title": "Manage secure AI-ready infrastructure",
+          "order": 3,
+          "duration_minutes": 103,
+          "content_md": "This module shows how to secure AI agents using Azure RBAC and Microsoft Entra ID managed identities, eliminating stored credentials while enforcing least‑privilege access. It then demonstrates deploying Azure Cosmos DB for NoSQL as a scalable, compliant conversation store optimized for agent workloads.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-secure-ai-ready-infrastructure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage secure AI-ready infrastructure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-secure-ai-ready-infrastructure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-resilient-ai-ready-infrastructure",
+          "title": "Implement resilient AI-ready infrastructure",
+          "order": 4,
+          "duration_minutes": 91,
+          "content_md": "This module explains building resilient, multi-region AI infrastructure using Microsoft Foundry hubs, geo-redundant storage, and Azure Container Registry geo-replication. It shows how coordinated replication and failover protect data, model images, and AI services during regional outages.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-resilient-ai-ready-infrastructure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement resilient AI-ready infrastructure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-resilient-ai-ready-infrastructure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-manage-ai-ready-infrastructure",
+          "title": "Laboratorio opcional: aplica Manage AI-ready infrastructure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Manage AI-ready infrastructure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

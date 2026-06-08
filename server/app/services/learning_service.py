@@ -16,6 +16,7 @@ from app.models.learning import (
     WeeklyMilestone,
 )
 from app.services._shared import response_data
+from app.services.course_service import get_course_detail
 from app.services.onboarding_catalog import CERTIFICATION_TRACK_HINTS
 from app.services.profile_service import ensure_profile_for_user
 from app.core.config import get_settings
@@ -178,7 +179,7 @@ def _get_profile_data(user_id: str) -> dict:
     return data[0]
 
 
-def _build_route_sections(track: str) -> list[RouteSection]:
+def _build_route_sections_from_template(track: str) -> list[RouteSection]:
     sections: list[RouteSection] = []
     for index, section in enumerate(ROUTE_TEMPLATES[track], start=1):
         sections.append(
@@ -194,11 +195,58 @@ def _build_route_sections(track: str) -> list[RouteSection]:
     return sections
 
 
+def _build_route_sections_from_course(target_certification: str) -> list[RouteSection] | None:
+    """Construye secciones desde el catalogo real (MS Learn ingerido). None si no hay curso."""
+    course = get_course_detail(target_certification)
+    if not course or not course.sections:
+        return None
+    sections: list[RouteSection] = []
+    previous_key: str | None = None
+    for index, section in enumerate(course.sections, start=1):
+        estimated_hours = max(1, round((section.duration_minutes or 0) / 60))
+        resources = [
+            ResourceReference(
+                title=source.title,
+                type="documentation",
+                source=source.source or "ms_learn",
+                url=source.url or "https://learn.microsoft.com/training/",
+            )
+            for lesson in section.lessons
+            for source in lesson.sources
+        ][:4]
+        sections.append(
+            RouteSection(
+                section_id=section.section_key,
+                title=section.title,
+                order=index,
+                estimated_hours=estimated_hours,
+                resources=resources,
+                prerequisite_sections=[] if previous_key is None else [previous_key],
+                duration_minutes=section.duration_minutes or 0,
+                course_section_id=section.id,
+                lessons=section.lessons,
+                labs=section.labs,
+            )
+        )
+        previous_key = section.section_key
+    return sections
+
+
+def _build_route_sections(track: str, target_certification: str) -> list[RouteSection]:
+    """Prefiere el catalogo de cursos real; cae a la plantilla legacy si no existe."""
+    from_course = _build_route_sections_from_course(target_certification)
+    if from_course:
+        return from_course
+    logger.info("Sin curso en catalogo para %s; uso plantilla legacy del track %s", target_certification, track)
+    return _build_route_sections_from_template(track)
+
+
 def _create_route_for_user(user_id: str, target_certification: str, detected_level: str) -> CertificationRouteResponse:
     settings = get_settings()
     track = _resolve_track(target_certification)
-    source_mode = "foundry" if foundry_enabled() else "mock"
-    sections = _build_route_sections(track)
+    sections = _build_route_sections(track, target_certification)
+    has_real_content = any(section.lessons for section in sections)
+    source_mode = "foundry" if (foundry_enabled() or has_real_content) else "mock"
     response = (
         get_supabase_service_client()
         .table(settings.supabase_learning_routes_table)

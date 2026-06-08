@@ -1,0 +1,93 @@
+{
+  "certification_code": "azure-oracle-workloads-to-azure",
+  "track": "azure",
+  "title": "Migrate Oracle workloads to Azure",
+  "summary": "Learn how you can migrate your Oracle workloads to Azure.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 78,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/oracle-workloads-to-azure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "azure-oracle-workloads-to-azure",
+      "title": "Migrate Oracle workloads to Azure",
+      "summary": "Learn how you can migrate your Oracle workloads to Azure.",
+      "order": 1,
+      "duration_minutes": 78,
+      "lessons": [
+        {
+          "lesson_key": "azure-oracle-workload-azure-iaas",
+          "title": "Migrate Oracle workloads to Azure IaaS virtual machines",
+          "order": 1,
+          "duration_minutes": 26,
+          "content_md": "Learn how you can migrate your Oracle workloads to Azure IaaS virtual machines.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/oracle-workload-azure-iaas/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate Oracle workloads to Azure IaaS virtual machines",
+              "url": "https://learn.microsoft.com/en-us/training/modules/oracle-workload-azure-iaas/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-oracle-workload-azure-odaa",
+          "title": "Migrate Oracle workloads to Oracle Database@Azure",
+          "order": 2,
+          "duration_minutes": 27,
+          "content_md": "Learn how to migrate your Oracle workloads to Oracle Database@Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/oracle-workload-azure-odaa/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate Oracle workloads to Oracle Database@Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/oracle-workload-azure-odaa/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-oracle-application-azure-paas",
+          "title": "Migrate Oracle-powered applications by using Azure PaaS database services",
+          "order": 3,
+          "duration_minutes": 25,
+          "content_md": "Learn how to migrate Oracle-powered applications by using Azure PaaS database services.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/oracle-application-azure-paas/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate Oracle-powered applications by using Azure PaaS database services",
+              "url": "https://learn.microsoft.com/en-us/training/modules/oracle-application-azure-paas/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-azure-oracle-workloads-to-azure",
+          "title": "Laboratorio opcional: aplica Migrate Oracle workloads to Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Migrate Oracle workloads to Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

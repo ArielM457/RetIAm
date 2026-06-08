@@ -1,0 +1,108 @@
+{
+  "certification_code": "fundamentals-budgeting-students",
+  "track": "azure",
+  "title": "Introduction to budgeting for students",
+  "summary": "Learn the fundamentals of budgeting and how to use tools such as Microsoft Copilot to manage your money effectively, save for future goals, and reduce financial stress.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 254,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/introduction-budgeting-for-students/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "fundamentals-budgeting-students",
+      "title": "Introduction to budgeting for students",
+      "summary": "Learn the fundamentals of budgeting and how to use tools such as Microsoft Copilot to manage your money effectively, save for future goals, and reduce financial stress.",
+      "order": 1,
+      "duration_minutes": 254,
+      "lessons": [
+        {
+          "lesson_key": "philanthropies-intro-to-budgeting-for-students",
+          "title": "Introduction to budgeting for students",
+          "order": 1,
+          "duration_minutes": 56,
+          "content_md": "Learn the fundamentals of budgeting to manage your money effectively, save for future goals, and reduce financial stress.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-budgeting-for-students/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to budgeting for students",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-budgeting-for-students/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-apply-budgeting-method",
+          "title": "Apply a budgeting method to manage money effectively",
+          "order": 2,
+          "duration_minutes": 50,
+          "content_md": "Learn about four effective budgeting methods to manage your money, save for the future, and achieve your financial goals.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/apply-budgeting-method/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Apply a budgeting method to manage money effectively",
+              "url": "https://learn.microsoft.com/en-us/training/modules/apply-budgeting-method/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-choose-budgeting-tool",
+          "title": "Choose a budgeting tool that fits your preferences and financial goals",
+          "order": 3,
+          "duration_minutes": 74,
+          "content_md": "Discover budgeting tools and apps designed for middle schoolers. Learn how to make money management easy, engaging, and effective with tools that help you save, track expenses, and set financial goals.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/choose-budgeting-tool/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Choose a budgeting tool that fits your preferences and financial goals",
+              "url": "https://learn.microsoft.com/en-us/training/modules/choose-budgeting-tool/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-create-personalized-savings-plan",
+          "title": "Create a personalized savings plan to work toward a financial goal",
+          "order": 4,
+          "duration_minutes": 74,
+          "content_md": "Learn how to build a strong financial foundation by exploring practical saving strategies. Discover how small steps today can lead to achieving large goals tomorrow.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-personalized-savings-plan/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create a personalized savings plan to work toward a financial goal",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-personalized-savings-plan/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-fundamentals-budgeting-students",
+          "title": "Laboratorio opcional: aplica Introduction to budgeting for students",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduction to budgeting for students**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

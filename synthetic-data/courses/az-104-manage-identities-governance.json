@@ -1,0 +1,138 @@
+{
+  "certification_code": "az-104-manage-identities-governance",
+  "track": "azure",
+  "title": "AZ-104: Manage identities and governance in Azure",
+  "summary": "AZ-104: Manage identities and governance in Azure",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 264,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/az-104-manage-identities-governance/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "az-104-manage-identities-governance",
+      "title": "AZ-104: Manage identities and governance in Azure",
+      "summary": "AZ-104: Manage identities and governance in Azure",
+      "order": 1,
+      "duration_minutes": 264,
+      "lessons": [
+        {
+          "lesson_key": "wwl-understand-azure-active-directory",
+          "title": "Understand Microsoft Entra ID",
+          "order": 1,
+          "duration_minutes": 31,
+          "content_md": "This module equips learners to describe Microsoft Entra ID - a cloud-based identity and access management service. They'll compare it with AD DS, understand its role as a directory for cloud services, and learn about its security features. They'll also learn about Microsoft Entra Domain Services.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand Microsoft Entra ID",
+              "url": "https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-create-configure-manage-identities",
+          "title": "Create, configure, and manage identities",
+          "order": 2,
+          "duration_minutes": 64,
+          "content_md": "Access to cloud-based workloads needs to be controlled centrally by providing a definitive identity for each user and resource. You can ensure employees and vendors have just enough access to do their job.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-configure-manage-identities/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create, configure, and manage identities",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-configure-manage-identities/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-core-architectural-components-of-azure",
+          "title": "Describe the core architectural components of Azure",
+          "order": 3,
+          "duration_minutes": 28,
+          "content_md": "Describe the core architectural components of Azure\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe the core architectural components of Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-bizapps-sovereignty-policy-initiatives",
+          "title": "Azure Policy initiatives",
+          "order": 4,
+          "duration_minutes": 73,
+          "content_md": "Azure Policy initiatives are a collection of Azure policy definitions that are grouped together toward a specific goal or purpose. By consolidating multiple Azure policies into a single item, Azure Policy initiatives allow centralized control and enforcement of configurations across Azure resources.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/sovereignty-policy-initiatives/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Azure Policy initiatives",
+              "url": "https://learn.microsoft.com/en-us/training/modules/sovereignty-policy-initiatives/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "secure-azure-resources-with-rbac",
+          "title": "Secure your Azure resources with Azure role-based access control (Azure RBAC)",
+          "order": 5,
+          "duration_minutes": 37,
+          "content_md": "Learn how to use Azure role-based access control to effectively manage your team's access to Azure resources.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/secure-azure-resources-with-rbac/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure your Azure resources with Azure role-based access control (Azure RBAC)",
+              "url": "https://learn.microsoft.com/en-us/training/modules/secure-azure-resources-with-rbac/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-allow-users-to-reset-their-password",
+          "title": "Allow users to reset their password with Microsoft Entra self-service password reset",
+          "order": 6,
+          "duration_minutes": 31,
+          "content_md": "Learn how to allow users to reset their password with Microsoft Entra self-service password reset.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Allow users to reset their password with Microsoft Entra self-service password reset",
+              "url": "https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-az-104-manage-identities-governance",
+          "title": "Laboratorio opcional: aplica AZ-104: Manage identities and governance in Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **AZ-104: Manage identities and governance in Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

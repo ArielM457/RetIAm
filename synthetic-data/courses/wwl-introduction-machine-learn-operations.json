@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-introduction-machine-learn-operations",
+  "track": "github",
+  "title": "Introduction to machine learning operations (MLOps)",
+  "summary": "Introduction to machine learning operations (MLOps)",
+  "provider": "GitHub",
+  "level": "basic",
+  "total_duration_minutes": 118,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/introduction-machine-learn-operations/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-introduction-machine-learn-operations",
+      "title": "Introduction to machine learning operations (MLOps)",
+      "summary": "Introduction to machine learning operations (MLOps)",
+      "order": 1,
+      "duration_minutes": 118,
+      "lessons": [
+        {
+          "lesson_key": "wwl-introduction-development-operations-principles-for-machi",
+          "title": "Introduction to DevOps principles for machine learning",
+          "order": 1,
+          "duration_minutes": 33,
+          "content_md": "Learn about DevOps for machine learning, machine learning operations, and MLOps.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-development-operations-principles-for-machine-learn/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to DevOps principles for machine learning",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-development-operations-principles-for-machine-learn/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-source-control-for-machine-learning-projects",
+          "title": "Source control for machine learning projects",
+          "order": 2,
+          "duration_minutes": 34,
+          "content_md": "Learn about source control for machine learning, machine learning operations, and MLOps.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/source-control-for-machine-learning-projects/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Source control for machine learning projects",
+              "url": "https://learn.microsoft.com/en-us/training/modules/source-control-for-machine-learning-projects/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-automate-machine-learning-workflows",
+          "title": "Automate machine learning workflows",
+          "order": 3,
+          "duration_minutes": 29,
+          "content_md": "Learn about automation for machine learning, machine learning operations, and MLOps.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/automate-machine-learning-workflows/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Automate machine learning workflows",
+              "url": "https://learn.microsoft.com/en-us/training/modules/automate-machine-learning-workflows/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-continuous-deployment-for-machine-learning",
+          "title": "Continuous deployment for machine learning",
+          "order": 4,
+          "duration_minutes": 22,
+          "content_md": "Learn about continuous development for machine learning, machine learning operations, and MLOps.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/continuous-deployment-for-machine-learning/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Continuous deployment for machine learning",
+              "url": "https://learn.microsoft.com/en-us/training/modules/continuous-deployment-for-machine-learning/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-introduction-machine-learn-operations",
+          "title": "Laboratorio opcional: aplica Introduction to machine learning operations (MLOps)",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduction to machine learning operations (MLOps)**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

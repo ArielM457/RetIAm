@@ -29,7 +29,19 @@ set_output_var RESOURCE_GROUP "${RESOURCE_GROUP}"
 set_output_var LOCATION "${LOCATION}"
 
 "${SCRIPT_DIR}/foundry.sh"
-"${SCRIPT_DIR}/knowledge_base.sh"
+
+if [[ "${SKIP_INGEST:-false}" != "true" ]]; then
+  log "Ingestando contenido de cursos (MS Learn) hacia synthetic-data"
+  "${PYTHON_CMD}" "${SCRIPT_DIR}/ingest_content.py" \
+    || warn "La ingesta de contenido fallo (revisa red/SSL). Continuo; el indice quedara vacio si no hay archivos."
+fi
+
+if [[ "${SKIP_SEARCH:-false}" != "true" ]]; then
+  "${SCRIPT_DIR}/knowledge_base.sh"
+else
+  warn "SKIP_SEARCH=true. Se omite Azure AI Search (grounding por contenido en el prompt)."
+fi
+
 "${SCRIPT_DIR}/static_web.sh"
 "${SCRIPT_DIR}/container_apps.sh"
 

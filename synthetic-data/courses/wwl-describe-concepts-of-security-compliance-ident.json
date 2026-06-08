@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-describe-concepts-of-security-compliance-ident",
+  "track": "azure",
+  "title": "Introduction to security, compliance, and identity concepts",
+  "summary": "SC-900: Introduction to security, compliance, and identity concepts",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 97,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/describe-concepts-of-security-compliance-identity/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-describe-concepts-of-security-compliance-identity",
+      "title": "Introduction to security, compliance, and identity concepts",
+      "summary": "SC-900: Introduction to security, compliance, and identity concepts",
+      "order": 1,
+      "duration_minutes": 97,
+      "lessons": [
+        {
+          "lesson_key": "wwl-describe-security-concepts-methodologies",
+          "title": "Describe security and compliance concepts",
+          "order": 1,
+          "duration_minutes": 48,
+          "content_md": "Describe security and compliance concepts.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-security-concepts-methodologies/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe security and compliance concepts",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-security-concepts-methodologies/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-identity-principles-concepts",
+          "title": "Describe identity concepts",
+          "order": 2,
+          "duration_minutes": 49,
+          "content_md": "Describe identity concepts.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-identity-principles-concepts/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe identity concepts",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-identity-principles-concepts/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-describe-concepts-of-security-compliance-identity",
+          "title": "Laboratorio opcional: aplica Introduction to security, compliance, and identity concepts",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduction to security, compliance, and identity concepts**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

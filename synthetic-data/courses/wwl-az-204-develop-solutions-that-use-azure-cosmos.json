@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-az-204-develop-solutions-that-use-azure-cosmos",
+  "track": "azure",
+  "title": "Develop solutions that use Azure Cosmos DB",
+  "summary": "Learn how to create Azure Cosmos DB resources with the appropriate consistency levels, and perform data operations by using the .NET SDK V3 for Azure Cosmos DB.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 94,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/az-204-develop-solutions-that-use-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-az-204-develop-solutions-that-use-azure-cosmos-db",
+      "title": "Develop solutions that use Azure Cosmos DB",
+      "summary": "Learn how to create Azure Cosmos DB resources with the appropriate consistency levels, and perform data operations by using the .NET SDK V3 for Azure Cosmos DB.",
+      "order": 1,
+      "duration_minutes": 94,
+      "lessons": [
+        {
+          "lesson_key": "wwl-explore-azure-cosmos-db",
+          "title": "Explore Azure Cosmos DB",
+          "order": 1,
+          "duration_minutes": 39,
+          "content_md": "Learn the core features and functionality of Azure Cosmos DB.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore Azure Cosmos DB",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-work-with-cosmos-db",
+          "title": "Work with Azure Cosmos DB",
+          "order": 2,
+          "duration_minutes": 55,
+          "content_md": "Work with Azure Cosmos DB\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/work-with-cosmos-db/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Work with Azure Cosmos DB",
+              "url": "https://learn.microsoft.com/en-us/training/modules/work-with-cosmos-db/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-az-204-develop-solutions-that-use-azure-cosmos-db",
+          "title": "Laboratorio opcional: aplica Develop solutions that use Azure Cosmos DB",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Develop solutions that use Azure Cosmos DB**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

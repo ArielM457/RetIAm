@@ -1,0 +1,108 @@
+{
+  "certification_code": "philanthropies-intro-generative-ai-for-trainers",
+  "track": "azure",
+  "title": "Introduction to generative AI for trainers",
+  "summary": "Discover the world of generative AI, including basic concepts, the different applications in various fields, and the skills necessary to use generative AI tools within training environments. Gain knowledge of large language models (LLMs), AI-powered image generators, and Microsoft Copilot. Explore prompt engineering, navigate the limitations of content created by generative AI models, and learn to utilize generative AI models into your trainings critically and responsibly.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 156,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/intro-generative-ai-for-trainers/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "philanthropies-intro-generative-ai-for-trainers",
+      "title": "Introduction to generative AI for trainers",
+      "summary": "Discover the world of generative AI, including basic concepts, the different applications in various fields, and the skills necessary to use generative AI tools within training environments. Gain knowledge of large language models (LLMs), AI-powered image generators, and Microsoft Copilot. Explore prompt engineering, navigate the limitations of content created by generative AI models, and learn to utilize generative AI models into your trainings critically and responsibly.",
+      "order": 1,
+      "duration_minutes": 156,
+      "lessons": [
+        {
+          "lesson_key": "philanthropies-intro-generative-ai-explore-basics",
+          "title": "Introduction to generative AI - Exploring the basics",
+          "order": 1,
+          "duration_minutes": 22,
+          "content_md": "By understanding the basics of generative AI models, you empower yourself to make responsible decisions when using these models. This knowledge allows you to critically evaluate outputs, assess their reliability, and understand potential limitations leading to more informed and effective interactions with generative AI.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-generative-ai-explore-basics/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to generative AI - Exploring the basics",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-generative-ai-explore-basics/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-create-prompts-for-generative-ai-training-too",
+          "title": "Create effective prompts for generative AI training tools",
+          "order": 2,
+          "duration_minutes": 20,
+          "content_md": "Learn how to craft engaging and informative prompts with Microsoft Copilot. This module will teach you the basic concepts of prompt engineering, the elements of an effective prompt, and best practices in prompting.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-prompts-for-generative-ai-training-tools/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create effective prompts for generative AI training tools",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-prompts-for-generative-ai-training-tools/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-create-images-with-generative-ai",
+          "title": "Create images with generative AI",
+          "order": 3,
+          "duration_minutes": 26,
+          "content_md": "Discover AI-powered image generators. Learn about image creation tools like Microsoft Image Creator. Understand their potential applications in the workplace and training settings and discover best practices for optimal results. Enhance your skills and transform your creative process with AI-powered image generators.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-images-with-generative-ai/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create images with generative AI",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-images-with-generative-ai/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-use-copilot-to-create-training-materials",
+          "title": "Use Microsoft Copilot to create training materials",
+          "order": 4,
+          "duration_minutes": 88,
+          "content_md": "Discover how Microsoft Copilot can enhance your training materials and resources. From content generation to image creation, experience a new era of engaging and effective learning.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/use-copilot-to-create-training-materials/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use Microsoft Copilot to create training materials",
+              "url": "https://learn.microsoft.com/en-us/training/modules/use-copilot-to-create-training-materials/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-philanthropies-intro-generative-ai-for-trainers",
+          "title": "Laboratorio opcional: aplica Introduction to generative AI for trainers",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduction to generative AI for trainers**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

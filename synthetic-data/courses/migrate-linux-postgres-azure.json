@@ -1,0 +1,138 @@
+{
+  "certification_code": "migrate-linux-postgres-azure",
+  "track": "azure",
+  "title": "Migrate Linux and PostgreSQL Workloads to Azure",
+  "summary": "Migrate Linux and PostgreSQL workloads to Azure using Azure Virtual Machines and Azure Database for PostgreSQL.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 464,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/migrate-linux-postgres-azure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "migrate-linux-postgres-azure",
+      "title": "Migrate Linux and PostgreSQL Workloads to Azure",
+      "summary": "Migrate Linux and PostgreSQL workloads to Azure using Azure Virtual Machines and Azure Database for PostgreSQL.",
+      "order": 1,
+      "duration_minutes": 464,
+      "lessons": [
+        {
+          "lesson_key": "azure-migrate-linux-postgres",
+          "title": "Migrate Linux and PostgreSQL workloads",
+          "order": 1,
+          "duration_minutes": 190,
+          "content_md": "Migrate Linux and PostgreSQL workloads to Azure by using an Azure virtual machine and Azure Database for PostgreSQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-linux-postgres/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate Linux and PostgreSQL workloads",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-linux-postgres/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "introduction-to-linux-on-azure",
+          "title": "Introduction to Linux on Azure",
+          "order": 2,
+          "duration_minutes": 44,
+          "content_md": "This module introduces the services and platforms that Azure provides for Linux environments.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-linux-on-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Linux on Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-linux-on-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "plan-your-linux-environment-in-azure",
+          "title": "Plan your Linux environment in Azure",
+          "order": 3,
+          "duration_minutes": 35,
+          "content_md": "Learn about standards and practices for planning, deploying, managing, and optimizing Linux VMs in Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/plan-your-linux-environment-in-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan your Linux environment in Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/plan-your-linux-environment-in-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "provision-linux-virtual-machine-in-azure",
+          "title": "Provisioning a Linux virtual machine in Microsoft Azure",
+          "order": 4,
+          "duration_minutes": 79,
+          "content_md": "Learn about different methods of provisioning Linux virtual machines in Microsoft Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/provision-linux-virtual-machine-in-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Provisioning a Linux virtual machine in Microsoft Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/provision-linux-virtual-machine-in-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-migrate-azure-database-postgresql-flexible-server",
+          "title": "Migrate to Azure Database for PostgreSQL flexible server",
+          "order": 5,
+          "duration_minutes": 59,
+          "content_md": "Azure Database for PostgreSQL Flexible Server supports effective data migration from PostgreSQL servers. This module covers both online and offline migration methods and tools, helping you choose the right approach for your scenario. Learn practical techniques for managing migrations efficiently, ideal for minimizing downtime and maintaining productivity.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-azure-database-postgresql-flexible-server/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate to Azure Database for PostgreSQL flexible server",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-azure-database-postgresql-flexible-server/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-get-started-generative-ai-azure-database-postgresql",
+          "title": "Get started with generative AI in Azure Database for PostgreSQL",
+          "order": 6,
+          "duration_minutes": 57,
+          "content_md": "Use generative AI in Azure Database for PostgreSQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/get-started-generative-ai-azure-database-postgresql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Get started with generative AI in Azure Database for PostgreSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/get-started-generative-ai-azure-database-postgresql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-migrate-linux-postgres-azure",
+          "title": "Laboratorio opcional: aplica Migrate Linux and PostgreSQL Workloads to Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Migrate Linux and PostgreSQL Workloads to Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

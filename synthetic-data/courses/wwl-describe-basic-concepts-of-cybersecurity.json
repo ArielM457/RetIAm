@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-describe-basic-concepts-of-cybersecurity",
+  "track": "azure",
+  "title": "Describe the concepts of cybersecurity",
+  "summary": "Describe the concepts of cybersecurity",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 137,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/describe-basic-concepts-of-cybersecurity/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-describe-basic-concepts-of-cybersecurity",
+      "title": "Describe the concepts of cybersecurity",
+      "summary": "Describe the concepts of cybersecurity",
+      "order": 1,
+      "duration_minutes": 137,
+      "lessons": [
+        {
+          "lesson_key": "wwl-describe-basic-cybersecurity-threats-attacks-mitigations",
+          "title": "Describe basic cybersecurity threats, attacks, and mitigations",
+          "order": 1,
+          "duration_minutes": 30,
+          "content_md": "Describe basic cybersecurity threats, attacks, and mitigations.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-basic-cybersecurity-threats-attacks-mitigations/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe basic cybersecurity threats, attacks, and mitigations",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-basic-cybersecurity-threats-attacks-mitigations/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-concepts-of-cryptography",
+          "title": "Describe concepts of cryptography",
+          "order": 2,
+          "duration_minutes": 24,
+          "content_md": "Describe concepts of cryptography.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe concepts of cryptography",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-authentication-authorization-cybersecurity",
+          "title": "Describe authentication and authorization in cybersecurity",
+          "order": 3,
+          "duration_minutes": 18,
+          "content_md": "Describe authentication and authorization in cybersecurity.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-authentication-authorization-cybersecurity/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe authentication and authorization in cybersecurity",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-authentication-authorization-cybersecurity/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-network-based-threats-mitigations",
+          "title": "Describe network-based threats and mitigations",
+          "order": 4,
+          "duration_minutes": 28,
+          "content_md": "Describe basic networking concepts and how they relate to cybersecurity.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-network-based-threats-mitigations/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe network-based threats and mitigations",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-network-based-threats-mitigations/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-device-based-threats-security-controls",
+          "title": "Describe device-based threats and security controls",
+          "order": 5,
+          "duration_minutes": 17,
+          "content_md": "Describe device-based threats and security controls.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-device-based-threats-security-controls/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe device-based threats and security controls",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-device-based-threats-security-controls/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-application-based-threats-security-controls",
+          "title": "Describe application-based threats and how to protect against them",
+          "order": 6,
+          "duration_minutes": 20,
+          "content_md": "Describe application-based threats and security controls.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-application-based-threats-security-controls/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe application-based threats and how to protect against them",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-application-based-threats-security-controls/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-describe-basic-concepts-of-cybersecurity",
+          "title": "Laboratorio opcional: aplica Describe the concepts of cybersecurity",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Describe the concepts of cybersecurity**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

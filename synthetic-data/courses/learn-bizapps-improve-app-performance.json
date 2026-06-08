@@ -1,0 +1,108 @@
+{
+  "certification_code": "learn-bizapps-improve-app-performance",
+  "track": "azure",
+  "title": "View, troubleshoot, and improve app performance for Power Apps canvas apps",
+  "summary": "Do you want to know how your app is performing and how to make it better? This learning path will help you identify your apps performance and share ways to troubleshoot your Power Apps canvas app.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 146,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/improve-app-performance/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "learn-bizapps-improve-app-performance",
+      "title": "View, troubleshoot, and improve app performance for Power Apps canvas apps",
+      "summary": "Do you want to know how your app is performing and how to make it better? This learning path will help you identify your apps performance and share ways to troubleshoot your Power Apps canvas app.",
+      "order": 1,
+      "duration_minutes": 146,
+      "lessons": [
+        {
+          "lesson_key": "learn-bizapps-testing-performance-checks",
+          "title": "Complete testing and performance checks in a Power Apps canvas app",
+          "order": 1,
+          "duration_minutes": 38,
+          "content_md": "Do you want to test your app and improve its performance? This module helps you understand how to test an app and improve performance.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/testing-performance-checks-powerapps/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Complete testing and performance checks in a Power Apps canvas app",
+              "url": "https://learn.microsoft.com/en-us/training/modules/testing-performance-checks-powerapps/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-bizapps-monitor-to-troubleshoot",
+          "title": "Use Monitor to troubleshoot Power Apps",
+          "order": 2,
+          "duration_minutes": 40,
+          "content_md": "Learn how the Monitor tool from Power Apps Studio can help you proactively identify, troubleshoot, and resolve issues within your app.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-to-troubleshoot/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use Monitor to troubleshoot Power Apps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-to-troubleshoot/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-bizapps-optimize-app-load-time",
+          "title": "Optimize app load time",
+          "order": 3,
+          "duration_minutes": 30,
+          "content_md": "Learn how you can evaluate and improve app load times. By regularly reviewing and measuring your app, you can proactively identify and remediate startup performance problems.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/optimize-app-load-time/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Optimize app load time",
+              "url": "https://learn.microsoft.com/en-us/training/modules/optimize-app-load-time/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-bizapps-instrumentation-app-insights",
+          "title": "Use Power Apps Instrumentation with Application Insights",
+          "order": 4,
+          "duration_minutes": 38,
+          "content_md": "This module explores how to set up a Microsoft Power Apps canvas app to send telemetry to Application Insights.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/instrumentation-app-insights/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use Power Apps Instrumentation with Application Insights",
+              "url": "https://learn.microsoft.com/en-us/training/modules/instrumentation-app-insights/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-learn-bizapps-improve-app-performance",
+          "title": "Laboratorio opcional: aplica View, troubleshoot, and improve app performance for Power Apps canvas apps",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **View, troubleshoot, and improve app performance for Power Apps canvas apps**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

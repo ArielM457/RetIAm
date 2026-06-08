@@ -1,0 +1,93 @@
+{
+  "certification_code": "data-ai-data-processing-with-azure-adls",
+  "track": "azure",
+  "title": "Large-Scale Data Processing with Azure Data Lake Storage Gen2",
+  "summary": "Large-Scale Data Processing with Azure Data Lake Storage Gen2",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 110,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/data-processing-with-azure-adls/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "data-ai-data-processing-with-azure-adls",
+      "title": "Large-Scale Data Processing with Azure Data Lake Storage Gen2",
+      "summary": "Large-Scale Data Processing with Azure Data Lake Storage Gen2",
+      "order": 1,
+      "duration_minutes": 110,
+      "lessons": [
+        {
+          "lesson_key": "data-ai-introduction-to-azure-data-lake-storage",
+          "title": "Introduction to Azure Data Lake Storage Gen2",
+          "order": 1,
+          "duration_minutes": 30,
+          "content_md": "Discover how Data Lake Storage provides a repository where you can upload and store unstructured data bringing new efficiencies to processing big data analytics.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-data-lake-storage/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure Data Lake Storage Gen2",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-data-lake-storage/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "data-ai-upload-data-to-azure-data-lake-storage",
+          "title": "Upload data to Azure Data Lake Storage",
+          "order": 2,
+          "duration_minutes": 35,
+          "content_md": "Learn about creating an Azure Data Lake Storage account and uploading data to Data Lake Storage Gen 2 through the Azure Storage Explorer.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/upload-data-to-azure-data-lake-storage/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Upload data to Azure Data Lake Storage",
+              "url": "https://learn.microsoft.com/en-us/training/modules/upload-data-to-azure-data-lake-storage/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-secure-azure-storage-account",
+          "title": "Secure your Azure Storage account",
+          "order": 3,
+          "duration_minutes": 45,
+          "content_md": "Learn how Azure Storage provides multilayered security to protect your data with access keys, secure networks, and Advanced Threat Protection monitoring.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/secure-azure-storage-account/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure your Azure Storage account",
+              "url": "https://learn.microsoft.com/en-us/training/modules/secure-azure-storage-account/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-data-ai-data-processing-with-azure-adls",
+          "title": "Laboratorio opcional: aplica Large-Scale Data Processing with Azure Data Lake Storage Gen2",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Large-Scale Data Processing with Azure Data Lake Storage Gen2**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

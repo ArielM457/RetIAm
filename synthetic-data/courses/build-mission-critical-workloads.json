@@ -1,0 +1,93 @@
+{
+  "certification_code": "build-mission-critical-workloads",
+  "track": "azure",
+  "title": "Build mission-critical workloads on Azure",
+  "summary": "Learn how to design highly reliable, available, and resilient workloads in Azure. Apply core design principles to workloads that typically target maximum uptime.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 222,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/build-mission-critical-workloads/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "build-mission-critical-workloads",
+      "title": "Build mission-critical workloads on Azure",
+      "summary": "Learn how to design highly reliable, available, and resilient workloads in Azure. Apply core design principles to workloads that typically target maximum uptime.",
+      "order": 1,
+      "duration_minutes": 222,
+      "lessons": [
+        {
+          "lesson_key": "azure-mission-critical",
+          "title": "Challenge Project - Design a mission-critical web application",
+          "order": 1,
+          "duration_minutes": 130,
+          "content_md": "Learn to apply key principles in your workload to achieve a highly reliable design with health monitoring checks.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-mission-critical/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Challenge Project - Design a mission-critical web application",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-mission-critical/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "design-health-model-mission-critical-workload",
+          "title": "Design a health model for your mission-critical workload",
+          "order": 2,
+          "duration_minutes": 54,
+          "content_md": "Improve your observability practices by defining a health model for mission-critical applications. A health model helps you quickly identify and troubleshoot issues that might affect the health of your mission-critical solution.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/design-health-model-mission-critical-workload/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Design a health model for your mission-critical workload",
+              "url": "https://learn.microsoft.com/en-us/training/modules/design-health-model-mission-critical-workload/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "continuous-validate-test-mission-critical-workloads",
+          "title": "Continuously validate and test mission-critical workloads",
+          "order": 3,
+          "duration_minutes": 38,
+          "content_md": "Learn how to automate Azure Load Testing and Azure Chaos Studio simultaneously as part of your CI/CD pipelines.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/continuous-validate-test-mission-critical-workloads/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Continuously validate and test mission-critical workloads",
+              "url": "https://learn.microsoft.com/en-us/training/modules/continuous-validate-test-mission-critical-workloads/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-build-mission-critical-workloads",
+          "title": "Laboratorio opcional: aplica Build mission-critical workloads on Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Build mission-critical workloads on Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

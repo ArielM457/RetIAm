@@ -1,0 +1,78 @@
+{
+  "certification_code": "architect-migration-bcdr",
+  "track": "azure",
+  "title": "Architect migration, business continuity, and disaster recovery in Azure",
+  "summary": "Learn how to migrate resources to Azure, how to provide site recovery for your applications in Azure and on-premises, and how to your applications are available through service interruptions and changes in load.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 68,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/architect-migration-bcdr/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "architect-migration-bcdr",
+      "title": "Architect migration, business continuity, and disaster recovery in Azure",
+      "summary": "Learn how to migrate resources to Azure, how to provide site recovery for your applications in Azure and on-premises, and how to your applications are available through service interruptions and changes in load.",
+      "order": 1,
+      "duration_minutes": 68,
+      "lessons": [
+        {
+          "lesson_key": "protect-on-premises-infrastructure-with-azure-site-recovery",
+          "title": "Protect your on-premises infrastructure from disasters with Azure Site Recovery",
+          "order": 1,
+          "duration_minutes": 33,
+          "content_md": "Learn how to provide disaster recovery for your on-premises infrastructure by using Azure Site Recovery to manage and orchestrate replication. Use Site Recovery to perform failover and failback of VMware virtual machines, Hyper-V virtual machines, and physical servers.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/protect-on-premises-infrastructure-with-azure-site-recovery/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Protect your on-premises infrastructure from disasters with Azure Site Recovery",
+              "url": "https://learn.microsoft.com/en-us/training/modules/protect-on-premises-infrastructure-with-azure-site-recovery/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "protect-virtual-machines-with-azure-backup",
+          "title": "Protect your virtual machines by using Azure Backup",
+          "order": 2,
+          "duration_minutes": 35,
+          "content_md": "Use Azure Backup to help protect on-premises servers, virtual machines, SQL Server, Azure file shares, and other workloads.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/protect-virtual-machines-with-azure-backup/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Protect your virtual machines by using Azure Backup",
+              "url": "https://learn.microsoft.com/en-us/training/modules/protect-virtual-machines-with-azure-backup/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-architect-migration-bcdr",
+          "title": "Laboratorio opcional: aplica Architect migration, business continuity, and disaster recovery in Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Architect migration, business continuity, and disaster recovery in Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-secure-networking",
+  "track": "azure",
+  "title": "Protect network infrastructure in Azure",
+  "summary": "Protect network infrastructure in Azure",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 234,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/secure-networking/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-secure-networking",
+      "title": "Protect network infrastructure in Azure",
+      "summary": "Protect network infrastructure in Azure",
+      "order": 1,
+      "duration_minutes": 234,
+      "lessons": [
+        {
+          "lesson_key": "wwl-security-virtual-networks",
+          "title": "Plan and implement security for virtual networks",
+          "order": 1,
+          "duration_minutes": 117,
+          "content_md": "This module is designed to provide administrators with the knowledge and skills needed to plan and implement robust security measures for Azure virtual networks, ensuring the confidentiality, integrity, and availability of network resources.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/security-virtual-networks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan and implement security for virtual networks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/security-virtual-networks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-security-private-access-azure-resources",
+          "title": "Plan and implement security for private access to Azure resources",
+          "order": 2,
+          "duration_minutes": 56,
+          "content_md": "This module focuses on equipping administrators with the knowledge and skills required to plan and implement robust security measures for private access to Azure resources, safeguarding sensitive data and enhancing network integrity.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/security-private-access-azure-resources/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan and implement security for private access to Azure resources",
+              "url": "https://learn.microsoft.com/en-us/training/modules/security-private-access-azure-resources/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-security-public-access-azure-resources",
+          "title": "Plan and implement security for public access to Azure resources",
+          "order": 3,
+          "duration_minutes": 61,
+          "content_md": "Plan and implement security for public access to Azure resources\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/security-public-access-azure-resources/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan and implement security for public access to Azure resources",
+              "url": "https://learn.microsoft.com/en-us/training/modules/security-public-access-azure-resources/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-secure-networking",
+          "title": "Laboratorio opcional: aplica Protect network infrastructure in Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Protect network infrastructure in Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "certification_code": "philanthropies-responsible-use-of-artificial-intel",
+  "track": "azure",
+  "title": "Responsible use of artificial intelligence in education",
+  "summary": "In this learning path, you'll embark on an insightful exploration of Microsoft’s Responsible AI framework, learning how to apply ethical principles to the development and use of AI technologies. You start by learning the frameworks that shape Microsoft’s approach to responsible AI, focusing on the commitment to the six responsible AI principles. As you progress, you discover practical ways to integrate these principles into educational environments, ensuring that AI tools not only enhance learning experiences but also uphold values of fairness and privacy. The learning path concludes with hands-on exercises, translating theoretical knowledge into real-world practice. This learning path equips you with the necessary skills to implement responsible AI systems responsibly in any learning environment.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 162,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/responsible-use-of-artificial-intelligence-in-education/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "philanthropies-responsible-use-of-artificial-intelligence-in",
+      "title": "Responsible use of artificial intelligence in education",
+      "summary": "In this learning path, you'll embark on an insightful exploration of Microsoft’s Responsible AI framework, learning how to apply ethical principles to the development and use of AI technologies. You start by learning the frameworks that shape Microsoft’s approach to responsible AI, focusing on the commitment to the six responsible AI principles. As you progress, you discover practical ways to integrate these principles into educational environments, ensuring that AI tools not only enhance learning experiences but also uphold values of fairness and privacy. The learning path concludes with hands-on exercises, translating theoretical knowledge into real-world practice. This learning path equips you with the necessary skills to implement responsible AI systems responsibly in any learning environment.",
+      "order": 1,
+      "duration_minutes": 162,
+      "lessons": [
+        {
+          "lesson_key": "philanthropies-introduction-to-microsofts-responsible-ai-app",
+          "title": "Introduction to Microsoft's Responsible AI Approach",
+          "order": 1,
+          "duration_minutes": 24,
+          "content_md": "This module provides an overview of Microsoft's responsible AI principles, guidelines, and standards.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-to-microsofts-responsible-ai-approach/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Microsoft's Responsible AI Approach",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-microsofts-responsible-ai-approach/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-apply-responsible-ai-principles",
+          "title": "Apply responsible AI principles in learning environments",
+          "order": 2,
+          "duration_minutes": 39,
+          "content_md": "Discover Microsoft's commitment to ethical AI. Learn about the principles of responsible AI - fairness, reliability & safety, privacy & security, transparency, inclusiveness, and accountability specifically for a learning environment. Principles that are designed to guide and shape the future of AI development and usage.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/apply-responsible-ai-principles/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Apply responsible AI principles in learning environments",
+              "url": "https://learn.microsoft.com/en-us/training/modules/apply-responsible-ai-principles/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "philanthropies-embrace-responsible-ai",
+          "title": "Guided project - Embrace responsible AI",
+          "order": 3,
+          "duration_minutes": 99,
+          "content_md": "Go beyond theory and learn how to implement Responsible AI framework into a learning environment. Learn through real-world examples and interactive exercises. This module is designed to help integrate AI systems into various work environments.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/embrace-responsible-ai/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Guided project - Embrace responsible AI",
+              "url": "https://learn.microsoft.com/en-us/training/modules/embrace-responsible-ai/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-philanthropies-responsible-use-of-artificial-intelligence-in",
+          "title": "Laboratorio opcional: aplica Responsible use of artificial intelligence in education",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Responsible use of artificial intelligence in education**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

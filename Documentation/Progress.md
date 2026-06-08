@@ -369,3 +369,148 @@
 
 - El build ya no reporta advertencias de CSS por imports, pero el bundle inicial sigue por encima del budget actual de Angular.
 - Aun faltan mas pantallas por alinear una a una con `retaim-ui`, pero la base visual ya quedo orientada al diseño correcto.
+
+## 2026-06-05
+
+### Modulo de cursos: implementacion por fases (F0-F6 + infra)
+
+Reescribimos el modulo de cursos para pasar de plantillas hardcodeadas a contenido
+real, tutor con agente y calificacion confiable. Todo degrada a mock si Foundry esta apagado.
+
+- **F0 Modelo de datos**: nuevas tablas en `supabase/schema.sql` (`courses`,
+  `course_sections`, `course_lessons`, `course_labs`, `lesson_completions`,
+  `lesson_chat_messages`) con RLS. Modelos en `server/app/models/course.py`,
+  servicio `course_service.py` (lectura + upsert idempotente) y ruta `/api/courses`.
+- **F1 Ingesta**: `infra/ingest_content.py` baja la API publica de Microsoft Learn
+  Catalog y genera cursos reales (Azure, GitHub) + plantilla sintetica para AWS.
+  Escribe markdown en `synthetic-data/certifications/` (para indexar) y JSON por curso.
+  Con `--push` sube a Supabase. Genera 4 cursos: AZ-900, AZ-204, GitHub Foundations, AWS CP.
+- **F2 Foundry real**: `foundry_adapter.run_agent()` llama al modelo de Foundry con
+  grounding en Azure AI Search, usando el system prompt de cada agente Gini desde sus
+  JSON. La generacion de rutas ahora lee del catalogo real (lecciones, labs, duracion);
+  `content_service.py` adapta el contenido al `learning_style`. Fallback total a mock.
+- **F3 Tutor por leccion**: endpoints `POST/GET /api/sessions/{id}/lessons/{lesson_id}/chat`
+  y `GET .../suggested-questions` con Gini Eval, persistidos en `lesson_chat_messages`.
+  Reemplazamos la respuesta fija de `free-question` por una llamada real al agente.
+- **F4 Calificacion real**: `assessment_service.py` genera quizzes/examen con Gini Eval
+  o el banco real de `onboarding_catalog`, y califica labs por rubrica. El quiz se
+  califica en el servidor contra la clave (ya no se confia en `is_correct` del cliente)
+  y el examen ya no expone `correct_option_index` al cliente (`ExamQuestionPublic`).
+- **F5 Certificado**: `pdf_service.generate_certificate_pdf` con diseño (apaisado,
+  borde, branding) y endpoint publico `GET /api/exams/certificates/verify/{code}`.
+- **F6 Orquestacion**: `orchestrator_service.py` (Gini Router) coordina al completar
+  leccion: progreso -> Gini Insight -> Gini Coach (siguiente recordatorio) -> proximo
+  paso. Endpoint `POST /api/sessions/{id}/lessons/{lesson_id}/complete`.
+- **Infra**: `foundry.sh` ahora despliega el modelo `gpt-4o-mini` automaticamente;
+  `provision.sh` corre la ingesta antes de indexar. Agregamos `openai` a
+  `server/requirements.txt`, `azure_foundry_api_version` a config y creamos `server/.env.example`.
+
+### Verificaciones hechas hoy
+
+- `python -m compileall app` (todo el backend)
+- `import app.main` OK: 52 rutas, incluidas las 6 nuevas de cursos/tutor/verify.
+- `infra/ingest_content.py` corrido contra MS Learn real (4 cursos, archivos generados).
+- Funciones de `assessment_service` probadas en modo fallback (quiz/examen/lab).
+- `generate_certificate_pdf` produce un PDF valido.
+- `bash -n` sobre `provision.sh` y `foundry.sh`.
+
+### Pendientes para correr con servicios reales
+
+- Ejecutar la nueva version de `supabase/schema.sql` (tablas de cursos).
+- Correr `python infra/ingest_content.py --push` con `server/.env` configurado para
+  poblar el catalogo en Supabase (o dejar que `provision.sh` lo haga).
+- Completar variables de Foundry/Search en `server/.env` y `ENABLE_EXTERNAL_AI=true`
+  para activar agentes reales; sin esto todo corre en modo mock funcional.
+- La API de MS Learn requirio SSL relajado en una maquina (usar `--insecure-ssl` o
+  `INGEST_INSECURE_SSL=1` solo si tu red rompe la cadena TLS).
+
+### Ampliacion de cursos y costos (mismo dia)
+
+- **Modo catalogo en `ingest_content.py`**: con `--catalog` ahora convierte CADA
+  learning path de Microsoft Learn en un curso. Verificado: genera **299 cursos**
+  (270 Azure, 28 GitHub, 1 AWS sintetico) con 1278 lecciones reales, 0 errores.
+  Flags: `--products` (default azure,github), `--levels` (default beginner,intermediate),
+  `--limit`. Los 4 cursos curados (AZ-900, AZ-204, etc.) siguen disponibles sin `--catalog`.
+- **Costo de Azure AI Search**: `knowledge_base.sh` pasaba `--sku basic` (~$75/mes).
+  Lo cambiamos a `AZURE_SEARCH_SKU` con default **free ($0)**, suficiente para el demo.
+  Ademas `provision.sh` acepta `SKIP_SEARCH=true` para omitir Search por completo: el
+  grounding del tutor/contenido ya funciona inyectando el contenido de la leccion en el
+  prompt, asi que Azure AI Search es opcional (solo agrega busqueda amplia del KB).
+- Nota: en Windows algunos paths de MS Learn superaban 260 chars; truncamos los nombres
+  de archivo del markdown (el JSON/DB conserva las claves completas).
+- **`/api/certifications` ahora sale de la tabla `courses`** (una sola query, con
+  fallback al catalogo curado de 4 si la tabla esta vacia). Asi el frontend ve los 299
+  cursos ingeridos. `catalog_service.list_certifications()` mapea cada curso a
+  `CertificationSummary`. Verificado con `import app.main`.
+- **Azure AI Search en Free**: confirmado dejar `AZURE_SEARCH_SKU=free` ($0) como
+  default. El provisioning real lo corre el equipo con su cuenta de Azure (`provision.sh`).
+
+### Frontend del modulo de cursos (mismo dia)
+
+Conectamos el frontend Angular a los endpoints nuevos con una UI muy mejorada
+(glassmorphism, gradientes, cards, carrusel, animaciones). Build limpio sin warnings.
+
+- **Cimientos (A)**: `client/.../core/services/api.service.ts` con tipos y metodos para
+  courses, tutor por leccion, completar leccion y verificar certificado. Corregido
+  `submitEvaluation` para enviar `quiz_answers` (antes mandaba `is_correct` falso que el
+  backend ya ignora).
+- **Design system**: nuevas utilidades globales en `src/styles.css` (btn, chip, course-card,
+  shelf/carrusel, drawer, skeleton, tutor bubbles, animaciones).
+- **Catalogo (B)**: nueva pantalla `/catalog` (`features/catalog/`) con buscador, filtros por
+  track y nivel, carrusel de destacados, grid de cards y drawer de detalle con temario
+  (secciones -> lecciones -> labs) y CTA "generar ruta y plan". Link "Cursos" en el nav.
+- **Home (B2)**: el dashboard ahora trae un carrusel "Explorar cursos" con cards.
+- **Sesion + tutor (C)**: `features/learning/learning-session-page` reescrita: navegacion
+  por lecciones, contenido + fuentes citadas, **panel del tutor IA flotante** (chat por
+  leccion + chips de preguntas sugeridas), **quiz real** (render de `quiz_questions`,
+  envia `quiz_answers`, maneja needs_retry), pregunta obligatoria, encuesta, y boton
+  "Completar leccion" que muestra progreso + mensaje de coach + proximo paso (orquestacion).
+- **Examen (D)**: nueva ruta `/exam` (`features/exam/`) full-focus con cronometro, una
+  pregunta por vista, y pantalla de resultado aprobado/no aprobado con secciones a reforzar
+  y siguiente certificacion.
+- **Pulido (E)**: subimos budgets en `angular.json`, build sin warnings.
+
+### Verificaciones hechas hoy (frontend)
+
+- `npx ng build` limpio (corrido dentro de WSL con node nvm; el npm de Windows sobre el
+  share UNC crasheaba con "Exit handler never called").
+
+### Notas / pendientes frontend
+
+- El entorno: las deps del frontend se instalan dentro de WSL (`/home/damon/.nvm/.../npm`),
+  NO con el npm de Windows sobre `\\wsl.localhost` (ese crashea).
+- El tutor y el quiz real lucen mejor con Foundry activo, pero funcionan en modo mock.
+- Pendiente opcional: UI de verificacion publica de certificado, y progreso real del
+  dashboard desde `lesson_completions` (hoy es estimado).
+
+### RAG con Supabase pgvector (reemplaza Azure AI Search) — mismo dia
+
+Decision: en vez de Azure AI Search (caro / free no integrable), usamos Supabase pgvector
+como base vectorial para RAG. El tutor recupera fragmentos REALES del contenido completo
+de las lecciones y los pasa como contexto a GPT-4o con prompt estricto (no inventar).
+Eliminamos el enfoque anterior de inyectar el resumen de la leccion en cada consulta.
+
+- **Schema** (`supabase/schema.sql`): `create extension vector`; tabla `lesson_chunks`
+  (certification_code, lesson_key, content, embedding vector(1024)); indice HNSW cosine;
+  funcion `match_lesson_chunks(query_embedding, match_count, filter_certification)`.
+- **Embeddings**: `server/app/services/embedding_service.py` con **fastembed + BGE-M3**
+  (1024 dim, multilingue, gratis; alternativa multilingual-e5-large). `fastembed==0.4.2`
+  en requirements. Config `embedding_model`/`embedding_dim` en core/config.
+- **RAG**: `server/app/services/rag_service.py` (`upsert_lesson_chunks`, `retrieve`).
+- **Tutor reescrito** (`lesson_tutor_service.py`): retrieve -> contexto -> GPT-4o con prompt
+  estricto; con Foundry genera, sin Foundry responde extractivo (top chunk), sin chunks
+  da mensaje honesto. `answer_free_question` (session_service) tambien pasa por RAG.
+  Borramos `content_service.py` (era el inject de adaptacion, codigo muerto).
+- **Ingesta** (`infra/ingest_content.py`): flag `--rag` baja el TEXTO COMPLETO de las
+  unidades de MS Learn (patron de URL verificado: `<module>/<n>-<ultimo-segmento-uid>`),
+  lo limpia, trocea (~1800 chars, overlap 200), embebe y sube a pgvector. Default de
+  cursos bajado a **50** (`--limit 50`).
+
+Comando para poblar RAG: `python infra/ingest_content.py --catalog --rag --push`
+(la primera vez descarga el modelo BGE-M3 ~2GB; tarda varios minutos por la descarga de
+unidades + embeddings).
+
+Verificado: `compileall` + `import app.main` OK; AST de ingest OK; extraccion de texto de
+unidades probada en vivo. PENDIENTE de correr con Supabase real: ejecutar el nuevo
+`schema.sql` (incluye pgvector), `pip install -r requirements.txt` (fastembed), y la
+ingesta `--rag`.

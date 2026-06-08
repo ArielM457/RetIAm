@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-build-ai-apps-azure-database-postgresql",
+  "track": "azure",
+  "title": "Build AI Apps with Azure Database for PostgreSQL",
+  "summary": "Build AI Apps with Azure Database for PostgreSQL. (AI-3019)",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 410,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/build-ai-apps-azure-database-postgresql/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-build-ai-apps-azure-database-postgresql",
+      "title": "Build AI Apps with Azure Database for PostgreSQL",
+      "summary": "Build AI Apps with Azure Database for PostgreSQL. (AI-3019)",
+      "order": 1,
+      "duration_minutes": 410,
+      "lessons": [
+        {
+          "lesson_key": "wwl-get-started-generative-ai-azure-database-postgresql",
+          "title": "Get started with generative AI in Azure Database for PostgreSQL",
+          "order": 1,
+          "duration_minutes": 57,
+          "content_md": "Use generative AI in Azure Database for PostgreSQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/get-started-generative-ai-azure-database-postgresql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Get started with generative AI in Azure Database for PostgreSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/get-started-generative-ai-azure-database-postgresql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-enable-semantic-search-azure-database-postgresql",
+          "title": "Enable semantic search in Azure Database for PostgreSQL",
+          "order": 2,
+          "duration_minutes": 62,
+          "content_md": "Learn to enable semantic search in Azure Database for PostgreSQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/enable-semantic-search-azure-database-postgresql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Enable semantic search in Azure Database for PostgreSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/enable-semantic-search-azure-database-postgresql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-integrate-ai-services-enrich-azure-database-postgresql",
+          "title": "Integrate AI Services to enrich your applications with intelligent features in Azure Database for PostgreSQL",
+          "order": 3,
+          "duration_minutes": 72,
+          "content_md": "Learn to integrate Azure AI Services with Azure Database for PostgreSQL to add intelligent features like summarization and sentiment analysis.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/integrate-ai-services-enrich-azure-database-postgresql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Integrate AI Services to enrich your applications with intelligent features in Azure Database for PostgreSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/integrate-ai-services-enrich-azure-database-postgresql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-build-rag-applications-azure-database-postgresql",
+          "title": "Build RAG applications with Azure Database for PostgreSQL",
+          "order": 4,
+          "duration_minutes": 101,
+          "content_md": "Learn how to implement Retrieval Augmented Generation (RAG) on Azure Database for PostgreSQL using Azure AI and vector (pgvector) extensions. Build a Python-based application and explore advanced options like GraphRAG.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/build-rag-applications-azure-database-postgresql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build RAG applications with Azure Database for PostgreSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/build-rag-applications-azure-database-postgresql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-generative-ai-agents-azure-postgresql",
+          "title": "Implement generative AI agents with Azure Database for PostgreSQL",
+          "order": 5,
+          "duration_minutes": 62,
+          "content_md": "Learn to build, integrate, and evaluate generative AI agents using Azure Database for PostgreSQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-generative-ai-agents-azure-postgresql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement generative AI agents with Azure Database for PostgreSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-generative-ai-agents-azure-postgresql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-enhance-postgresql-development-github-copilot-visual-stu",
+          "title": "Develop PostgreSQL solutions in Visual Studio Code with the PostgreSQL extension and GitHub Copilot",
+          "order": 6,
+          "duration_minutes": 56,
+          "content_md": "Learn how GitHub Copilot and the PostgreSQL extension improve SQL development workflows in Visual Studio Code.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/enhance-postgresql-development-github-copilot-visual-studio-code/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Develop PostgreSQL solutions in Visual Studio Code with the PostgreSQL extension and GitHub Copilot",
+              "url": "https://learn.microsoft.com/en-us/training/modules/enhance-postgresql-development-github-copilot-visual-studio-code/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-build-ai-apps-azure-database-postgresql",
+          "title": "Laboratorio opcional: aplica Build AI Apps with Azure Database for PostgreSQL",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Build AI Apps with Azure Database for PostgreSQL**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

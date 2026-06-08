@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-plan-azure-virtual-desktop-implementation",
+  "track": "azure",
+  "title": "Plan an Azure Virtual Desktop implementation",
+  "summary": "Plan an Azure Virtual Desktop implementation",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 176,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/plan-azure-virtual-desktop-implementation/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-plan-azure-virtual-desktop-implementation",
+      "title": "Plan an Azure Virtual Desktop implementation",
+      "summary": "Plan an Azure Virtual Desktop implementation",
+      "order": 1,
+      "duration_minutes": 176,
+      "lessons": [
+        {
+          "lesson_key": "wwl-azure-virtual-desktop-architecture",
+          "title": "Azure Virtual Desktop Architecture",
+          "order": 1,
+          "duration_minutes": 53,
+          "content_md": "Azure Virtual Desktop Architecture\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-virtual-desktop-architecture/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Azure Virtual Desktop Architecture",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-virtual-desktop-architecture/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-design-azure-virtual-desktop-architecture",
+          "title": "Design the Azure Virtual Desktop architecture",
+          "order": 2,
+          "duration_minutes": 59,
+          "content_md": "Design the Azure Virtual Desktop architecture\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/design-azure-virtual-desktop-architecture/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Design the Azure Virtual Desktop architecture",
+              "url": "https://learn.microsoft.com/en-us/training/modules/design-azure-virtual-desktop-architecture/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-design-for-user-identities-profiles",
+          "title": "Design for user identities and profiles",
+          "order": 3,
+          "duration_minutes": 64,
+          "content_md": "Design for user identities and profiles\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/design-user-identities-profiles/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Design for user identities and profiles",
+              "url": "https://learn.microsoft.com/en-us/training/modules/design-user-identities-profiles/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-plan-azure-virtual-desktop-implementation",
+          "title": "Laboratorio opcional: aplica Plan an Azure Virtual Desktop implementation",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Plan an Azure Virtual Desktop implementation**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

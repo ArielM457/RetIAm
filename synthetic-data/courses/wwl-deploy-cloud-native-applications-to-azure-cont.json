@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-deploy-cloud-native-applications-to-azure-cont",
+  "track": "azure",
+  "title": "Deploy cloud-native apps using Azure Container Apps",
+  "summary": "Learn how to build, deploy, scale, and manage containerized cloud-native apps using Azure Container Apps, Azure Container Registry, and Azure Pipelines. (AZ-2003)",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 339,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/deploy-cloud-native-applications-to-azure-container-apps/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-deploy-cloud-native-applications-to-azure-container-apps",
+      "title": "Deploy cloud-native apps using Azure Container Apps",
+      "summary": "Learn how to build, deploy, scale, and manage containerized cloud-native apps using Azure Container Apps, Azure Container Registry, and Azure Pipelines. (AZ-2003)",
+      "order": 1,
+      "duration_minutes": 339,
+      "lessons": [
+        {
+          "lesson_key": "wwl-get-started-cloud-native-apps-containerized-deployments",
+          "title": "Get started with cloud native apps and containerized deployments",
+          "order": 1,
+          "duration_minutes": 35,
+          "content_md": "Learn about cloud-native application concepts, containerized deployment benefits and challenges, deployment options, and Azure-specific best practices for managing and scaling containerized applications.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/get-started-cloud-native-apps-containerized-deployments/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Get started with cloud native apps and containerized deployments",
+              "url": "https://learn.microsoft.com/en-us/training/modules/get-started-cloud-native-apps-containerized-deployments/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-azure-container-registry-container-app-deploym",
+          "title": "Configure Azure Container Registry for container app deployments",
+          "order": 2,
+          "duration_minutes": 52,
+          "content_md": "Learn how to create and configure an Azure Container Registry, the process of pushing container images to Azure Container Registry and explore different authentication methods and security features for Azure Container Registry.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-azure-container-registry-container-app-deployments/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure Azure Container Registry for container app deployments",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-azure-container-registry-container-app-deployments/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-container-app-azure-container-apps",
+          "title": "Configure a container app in Azure Container Apps",
+          "order": 3,
+          "duration_minutes": 64,
+          "content_md": "This module guides users through creating, configuring, and managing Container Apps and their environments. It also explores ingress options, scaling, instance management, and security considerations with best practices for configuring Azure Container Apps.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-container-app-azure-container-apps/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure a container app in Azure Container Apps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-container-app-azure-container-apps/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-continuous-deployment-container-apps",
+          "title": "Configure continuous deployment for container apps",
+          "order": 4,
+          "duration_minutes": 44,
+          "content_md": "This module explores deployment options for containerized apps and delves into the features of Azure DevOps and Azure Pipelines. It guides users in setting up automated pipelines for container apps, covering agent pool configuration and secret variables management.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-continuous-deployment-container-apps/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure continuous deployment for container apps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-continuous-deployment-container-apps/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-scale-manage-deployed-container-apps",
+          "title": "Scale and manage deployed container apps",
+          "order": 5,
+          "duration_minutes": 33,
+          "content_md": "This module addresses the concept of revisions in Azure Container Apps and discusses options for application lifecycle management. It also covers scaling choices and ingress settings, including traffic splitting for Azure Container Apps.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/scale-manage-deployed-container-apps/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Scale and manage deployed container apps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/scale-manage-deployed-container-apps/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-deploy-manage-container-app-using-azure-container-apps",
+          "title": "Guided project - Deploy and manage a container app using Azure Container Apps",
+          "order": 6,
+          "duration_minutes": 111,
+          "content_md": "Learn to configure Azure Container Registry, Azure Container Apps, and the other resources required for an app deployment scenario. Learn to configure a container apps solution for continuous integration, scaling, and revision management.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-manage-container-app-using-azure-container-apps/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Guided project - Deploy and manage a container app using Azure Container Apps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-manage-container-app-using-azure-container-apps/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-deploy-cloud-native-applications-to-azure-container-apps",
+          "title": "Laboratorio opcional: aplica Deploy cloud-native apps using Azure Container Apps",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Deploy cloud-native apps using Azure Container Apps**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

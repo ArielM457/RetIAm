@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-describe-purpose-use-source-control",
+  "track": "github",
+  "title": "Describe the purpose and use of source control",
+  "summary": "Introduction to source control as a concept with practical application in the final module.",
+  "provider": "GitHub",
+  "level": "basic",
+  "total_duration_minutes": 96,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/describe-purpose-use-source-control/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-describe-purpose-use-source-control",
+      "title": "Describe the purpose and use of source control",
+      "summary": "Introduction to source control as a concept with practical application in the final module.",
+      "order": 1,
+      "duration_minutes": 96,
+      "lessons": [
+        {
+          "lesson_key": "wwl-explain-control-system-helps-manage-files",
+          "title": "Explain how a source control system helps manage files",
+          "order": 1,
+          "duration_minutes": 13,
+          "content_md": "Explain how a source control system helps manage files\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explain-control-system-helps-manage-files/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explain how a source control system helps manage files",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explain-control-system-helps-manage-files/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-how-git-manages-source-control",
+          "title": "Describe how Git manages source control",
+          "order": 2,
+          "duration_minutes": 30,
+          "content_md": "Describe how Git manages source control\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-how-git-manages-source-control/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe how Git manages source control",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-how-git-manages-source-control/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-guided-project-github-manage-file-updates",
+          "title": "Guided Project –  Use GitHub to manage file updates",
+          "order": 3,
+          "duration_minutes": 53,
+          "content_md": "Hands-on module focused on getting the learner comfortable with basic source control commands through an integrated development environment or web portal.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/guided-project-github-manage-file-updates/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Guided Project –  Use GitHub to manage file updates",
+              "url": "https://learn.microsoft.com/en-us/training/modules/guided-project-github-manage-file-updates/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-describe-purpose-use-source-control",
+          "title": "Laboratorio opcional: aplica Describe the purpose and use of source control",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Describe the purpose and use of source control**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

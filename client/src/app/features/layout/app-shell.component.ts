@@ -19,9 +19,9 @@ export class AppShellComponent {
 
   protected readonly employeeLinks = [
     { label: 'Inicio', path: '/dashboard', icon: 'home' },
-    { label: 'Mi Plan', path: '/plan', icon: 'plan' },
-    { label: 'Sesiones', path: '/sessions', icon: 'session' },
-    { label: 'Brechas', path: '/suggestions', icon: 'spark' },
+    { label: 'Cursos', path: '/catalog', icon: 'plan' },
+    { label: 'Mi Plan', path: '/plan', icon: 'session' },
+    { label: 'Sesiones', path: '/sessions', icon: 'spark' },
     { label: 'Recordatorios', path: '/reminders', icon: 'bell' },
     { label: 'Certificados', path: '/certificates', icon: 'award' },
   ];

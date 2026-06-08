@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-secure-identity-access",
+  "track": "azure",
+  "title": "Protect identity and access in Azure",
+  "summary": "Protect identity and access in Azure",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 432,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/secure-identity-access/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-secure-identity-access",
+      "title": "Protect identity and access in Azure",
+      "summary": "Protect identity and access in Azure",
+      "order": 1,
+      "duration_minutes": 432,
+      "lessons": [
+        {
+          "lesson_key": "wwl-manage-security-controls-identity-access",
+          "title": "Manage security controls for identity and access",
+          "order": 1,
+          "duration_minutes": 367,
+          "content_md": "This module focuses on effectively managing security controls in Microsoft Entra ID by securing identities, authentication, and authorization to protect users, groups, and external identities against threats while ensuring secure and seamless access to resources.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-security-controls-identity-access/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage security controls for identity and access",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-security-controls-identity-access/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-application-access-microsoft-entra-id",
+          "title": "Manage Microsoft Entra application access",
+          "order": 2,
+          "duration_minutes": 65,
+          "content_md": "This module focuses on effectively managing identities and enhancing security in Microsoft Enterprise Identity, ensuring that users, groups, and external identities are protected against security threats and unauthorized access.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-application-access-microsoft-entra-id/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage Microsoft Entra application access",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-application-access-microsoft-entra-id/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-secure-identity-access",
+          "title": "Laboratorio opcional: aplica Protect identity and access in Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Protect identity and access in Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

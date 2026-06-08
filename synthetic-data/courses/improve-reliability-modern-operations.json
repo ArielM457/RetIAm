@@ -1,0 +1,138 @@
+{
+  "certification_code": "improve-reliability-modern-operations",
+  "track": "azure",
+  "title": "Improve your reliability with modern operations practices",
+  "summary": "The reliability of your systems, services and products has a direct impact on your success. Learn the modern operations principles and practices (and the Azure features that support them) that will help you achieve the level of reliability you need.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 174,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/improve-reliability-modern-operations/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "improve-reliability-modern-operations",
+      "title": "Improve your reliability with modern operations practices",
+      "summary": "The reliability of your systems, services and products has a direct impact on your success. Learn the modern operations principles and practices (and the Azure features that support them) that will help you achieve the level of reliability you need.",
+      "order": 1,
+      "duration_minutes": 174,
+      "lessons": [
+        {
+          "lesson_key": "improve-reliability-introduction",
+          "title": "Improve your reliability with modern operations practices: An introduction",
+          "order": 1,
+          "duration_minutes": 10,
+          "content_md": "Discover a map for navigating reliability challenges and sustainably achieving the appropriate level of reliability in your systems, services, and products.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/improve-reliability-introduction/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Improve your reliability with modern operations practices: An introduction",
+              "url": "https://learn.microsoft.com/en-us/training/modules/improve-reliability-introduction/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "improve-reliability-monitoring",
+          "title": "Improve your reliability with modern operations practices: Monitoring",
+          "order": 2,
+          "duration_minutes": 45,
+          "content_md": "Learn how to use monitoring to help you sustainably achieve the appropriate level of reliability in your systems, services, and products.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/improve-reliability-monitoring/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Improve your reliability with modern operations practices: Monitoring",
+              "url": "https://learn.microsoft.com/en-us/training/modules/improve-reliability-monitoring/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "improve-reliability-incidents",
+          "title": "Improve your reliability with modern operations practices: Incident response",
+          "order": 3,
+          "duration_minutes": 33,
+          "content_md": "Learn the incident response fundamentals necessary to help you sustainably achieve the appropriate level of reliability in your systems, services, and products.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/improve-reliability-incidents/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Improve your reliability with modern operations practices: Incident response",
+              "url": "https://learn.microsoft.com/en-us/training/modules/improve-reliability-incidents/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "improve-reliability-failure",
+          "title": "Improve your reliability with modern operations practices: Learning from failure",
+          "order": 4,
+          "duration_minutes": 36,
+          "content_md": "Learn about post-incident reviews, a practice necessary to help you sustainably achieve the appropriate level of reliability in your systems, services, and products.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/improve-reliability-failure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Improve your reliability with modern operations practices: Learning from failure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/improve-reliability-failure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "improve-reliability-deployment",
+          "title": "Improve your reliability with modern operations practices: Deployment",
+          "order": 5,
+          "duration_minutes": 18,
+          "content_md": "Learn deployment practices that help you sustainably achieve the right level of reliability for your systems and services.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/improve-reliability-deployment/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Improve your reliability with modern operations practices: Deployment",
+              "url": "https://learn.microsoft.com/en-us/training/modules/improve-reliability-deployment/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "improve-reliability-scaling",
+          "title": "Improve your reliability with modern operations practices: Capacity planning and scaling",
+          "order": 6,
+          "duration_minutes": 32,
+          "content_md": "Learn about capacity planning and scaling practices that can help you sustainably achieve the appropriate level of reliability in your systems, services, and products.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/improve-reliability-scaling/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Improve your reliability with modern operations practices: Capacity planning and scaling",
+              "url": "https://learn.microsoft.com/en-us/training/modules/improve-reliability-scaling/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-improve-reliability-modern-operations",
+          "title": "Laboratorio opcional: aplica Improve your reliability with modern operations practices",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Improve your reliability with modern operations practices**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

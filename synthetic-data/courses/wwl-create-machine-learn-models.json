@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-create-machine-learn-models",
+  "track": "azure",
+  "title": "Create machine learning models",
+  "summary": "Machine learning is the foundation for predictive modeling and artificial intelligence. Learn some of the core principles of machine learning and how to use common tools and frameworks to train, evaluate, and use machine learning models.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 379,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/create-machine-learn-models/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-create-machine-learn-models",
+      "title": "Create machine learning models",
+      "summary": "Machine learning is the foundation for predictive modeling and artificial intelligence. Learn some of the core principles of machine learning and how to use common tools and frameworks to train, evaluate, and use machine learning models.",
+      "order": 1,
+      "duration_minutes": 379,
+      "lessons": [
+        {
+          "lesson_key": "wwl-fundamentals-machine-learning",
+          "title": "Introduction to machine learning concepts",
+          "order": 1,
+          "duration_minutes": 93,
+          "content_md": "Machine learning is the basis for most modern artificial intelligence solutions. A familiarity with the core concepts on which machine learning is based is an important foundation for understanding AI.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/fundamentals-machine-learning/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to machine learning concepts",
+              "url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-machine-learning/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-explore-analyze-data-with-python",
+          "title": "Explore and analyze data with Python",
+          "order": 2,
+          "duration_minutes": 60,
+          "content_md": "Data exploration and analysis is at the core of data science. Data scientists require skills in programming languages like Python to explore, visualize, and manipulate data.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-analyze-data-with-python/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore and analyze data with Python",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-analyze-data-with-python/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-train-evaluate-regression-models",
+          "title": "Train and evaluate regression models",
+          "order": 3,
+          "duration_minutes": 69,
+          "content_md": "Regression is a commonly used kind of machine learning for predicting numeric values.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/train-evaluate-regression-models/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Train and evaluate regression models",
+              "url": "https://learn.microsoft.com/en-us/training/modules/train-evaluate-regression-models/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-train-evaluate-classification-models",
+          "title": "Train and evaluate classification models",
+          "order": 4,
+          "duration_minutes": 64,
+          "content_md": "Train and evaluate classification models\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/train-evaluate-classification-models/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Train and evaluate classification models",
+              "url": "https://learn.microsoft.com/en-us/training/modules/train-evaluate-classification-models/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-train-evaluate-cluster-models",
+          "title": "Train and evaluate clustering models",
+          "order": 5,
+          "duration_minutes": 46,
+          "content_md": "Clustering is a type of machine learning that is used to group similar items into clusters.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/train-evaluate-cluster-models/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Train and evaluate clustering models",
+              "url": "https://learn.microsoft.com/en-us/training/modules/train-evaluate-cluster-models/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-train-evaluate-deep-learn-models",
+          "title": "Train and evaluate deep learning models",
+          "order": 6,
+          "duration_minutes": 47,
+          "content_md": "Train and evaluate deep learning models\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/train-evaluate-deep-learn-models/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Train and evaluate deep learning models",
+              "url": "https://learn.microsoft.com/en-us/training/modules/train-evaluate-deep-learn-models/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-create-machine-learn-models",
+          "title": "Laboratorio opcional: aplica Create machine learning models",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Create machine learning models**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

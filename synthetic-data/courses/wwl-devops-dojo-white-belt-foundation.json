@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-devops-dojo-white-belt-foundation",
+  "track": "azure",
+  "title": "Introduce DevOps Dojo: Create efficiencies that support your business",
+  "summary": "Start your DevOps Dojo journey.  Create multidisciplinary DevOps teams by using shared tools and processes that are designed to make your organization’s software development and implementation projects more efficient.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 120,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/devops-dojo-white-belt-foundation/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-devops-dojo-white-belt-foundation",
+      "title": "Introduce DevOps Dojo: Create efficiencies that support your business",
+      "summary": "Start your DevOps Dojo journey.  Create multidisciplinary DevOps teams by using shared tools and processes that are designed to make your organization’s software development and implementation projects more efficient.",
+      "order": 1,
+      "duration_minutes": 120,
+      "lessons": [
+        {
+          "lesson_key": "wwl-introduce-foundation-pillars-devops",
+          "title": "Introduce the foundation pillars of DevOps: Culture and Lean Product",
+          "order": 1,
+          "duration_minutes": 25,
+          "content_md": "DevOps is the union of people, process, and products to enable continuous delivery of value to our end users. Discover the first two foundation pillars of DevOps: Culture and Lean Product.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduce-foundation-pillars-devops/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduce the foundation pillars of DevOps: Culture and Lean Product",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduce-foundation-pillars-devops/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-define-foundation-pillars",
+          "title": "Define the foundation pillars of DevOps: Architecture and Technology",
+          "order": 2,
+          "duration_minutes": 16,
+          "content_md": "There are three things required to make DevOps happen: the cultural component, tools and technology, and architecture. Discover the last two foundation pillars of DevOps, Architecture and Technology!\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/define-foundation-pillars/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Define the foundation pillars of DevOps: Architecture and Technology",
+              "url": "https://learn.microsoft.com/en-us/training/modules/define-foundation-pillars/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-analyze-devops-continuous-planning-intergration",
+          "title": "Analyze DevOps Continuous Planning and Continuous Integration",
+          "order": 3,
+          "duration_minutes": 22,
+          "content_md": "Explore the first two capabilities in the DevOps taxonomy, Continuous Planning and Continuous Integration.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/analyze-devops-continuous-planning-intergration/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Analyze DevOps Continuous Planning and Continuous Integration",
+              "url": "https://learn.microsoft.com/en-us/training/modules/analyze-devops-continuous-planning-intergration/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-explain-devops-continous-delivery-quality",
+          "title": "Explain DevOps Continuous Delivery and Continuous Quality",
+          "order": 4,
+          "duration_minutes": 18,
+          "content_md": "Explore two capabilities in the DevOps taxonomy, Continuous Delivery and Continuous Quality.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explain-devops-continous-delivery-quality/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explain DevOps Continuous Delivery and Continuous Quality",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explain-devops-continous-delivery-quality/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-explore-devops-continuous-security-operations",
+          "title": "Explore DevOps Continuous Security and Continuous Operations",
+          "order": 5,
+          "duration_minutes": 22,
+          "content_md": "Explore two capabilities in the DevOps taxonomy, Continuous Security and Continuous Operations.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-devops-continuous-security-operations/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore DevOps Continuous Security and Continuous Operations",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-devops-continuous-security-operations/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-characterize-devops-continous-collaboration-improvement",
+          "title": "Characterize DevOps Continuous Collaboration and Continuous Improvement",
+          "order": 6,
+          "duration_minutes": 17,
+          "content_md": "Characterize DevOps Continuous Collaboration and Continuous Improvement\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/characterize-devops-continous-collaboration-improvement/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Characterize DevOps Continuous Collaboration and Continuous Improvement",
+              "url": "https://learn.microsoft.com/en-us/training/modules/characterize-devops-continous-collaboration-improvement/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-devops-dojo-white-belt-foundation",
+          "title": "Laboratorio opcional: aplica Introduce DevOps Dojo: Create efficiencies that support your business",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduce DevOps Dojo: Create efficiencies that support your business**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

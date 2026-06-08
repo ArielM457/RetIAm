@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-access-manage-data-azure-cosmos-db-sql-api-sdk",
+  "track": "azure",
+  "title": "Access and manage data with the Azure Cosmos DB for NoSQL SDKs",
+  "summary": "Access and manage data with the Azure Cosmos DB for NoSQL SDKs",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 115,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/access-manage-data-azure-cosmos-db-sql-api-sdks/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-access-manage-data-azure-cosmos-db-sql-api-sdks",
+      "title": "Access and manage data with the Azure Cosmos DB for NoSQL SDKs",
+      "summary": "Access and manage data with the Azure Cosmos DB for NoSQL SDKs",
+      "order": 1,
+      "duration_minutes": 115,
+      "lessons": [
+        {
+          "lesson_key": "wwl-implement-azure-cosmos-db-sql-api-point-operations",
+          "title": "Implement Azure Cosmos DB for NoSQL point operations",
+          "order": 1,
+          "duration_minutes": 45,
+          "content_md": "Write code to create, read, update, and delete items in Azure Cosmos DB for NoSQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-azure-cosmos-db-sql-api-point-operations/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement Azure Cosmos DB for NoSQL point operations",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-azure-cosmos-db-sql-api-point-operations/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-perform-cross-document-transactional-operations-azure-co",
+          "title": "Perform cross-document transactional operations with the Azure Cosmos DB for NoSQL",
+          "order": 2,
+          "duration_minutes": 37,
+          "content_md": "Perform operations on multiple items in single logical units of work.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/perform-cross-document-transactional-operations-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Perform cross-document transactional operations with the Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/perform-cross-document-transactional-operations-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-process-bulk-data-azure-cosmos-db-sql-api",
+          "title": "Process bulk data in Azure Cosmos DB for NoSQL",
+          "order": 3,
+          "duration_minutes": 33,
+          "content_md": "Perform bulk operations on Azure Cosmos DB in bulk from code using the SDK.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/process-bulk-data-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Process bulk data in Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/process-bulk-data-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-access-manage-data-azure-cosmos-db-sql-api-sdks",
+          "title": "Laboratorio opcional: aplica Access and manage data with the Azure Cosmos DB for NoSQL SDKs",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Access and manage data with the Azure Cosmos DB for NoSQL SDKs**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

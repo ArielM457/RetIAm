@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-deploy-configure-azure-monitor",
+  "track": "azure",
+  "title": "Deploy and configure Azure Monitor",
+  "summary": "In this learning path, you learn to deploy and configure Azure Monitor, including creating a Log Analytics workspace, and configuring monitoring for applications, virtual machines, and virtual networks. You also learn to create and configure alerts and responses. Finally, you practice these skills in a guided lab project.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 254,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/deploy-configure-azure-monitor/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-deploy-configure-azure-monitor",
+      "title": "Deploy and configure Azure Monitor",
+      "summary": "In this learning path, you learn to deploy and configure Azure Monitor, including creating a Log Analytics workspace, and configuring monitoring for applications, virtual machines, and virtual networks. You also learn to create and configure alerts and responses. Finally, you practice these skills in a guided lab project.",
+      "order": 1,
+      "duration_minutes": 254,
+      "lessons": [
+        {
+          "lesson_key": "wwl-create-configure-log-analytics-workspace",
+          "title": "Create and configure a Log Analytics workspace",
+          "order": 1,
+          "duration_minutes": 28,
+          "content_md": "In this module, you learn how to create and configure access to a Log Analytics workspace. You also learn how to configure data retention and to enable health status alerts for a Log Analytics workspace.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-configure-log-analytics-workspace/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create and configure a Log Analytics workspace",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-configure-log-analytics-workspace/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-monitoring-applications",
+          "title": "Configure monitoring for applications",
+          "order": 2,
+          "duration_minutes": 40,
+          "content_md": "In this module you learn how to use Application Insights to monitor application performance and how to use Azure ASQL Insights to improve performance of Azure SQL database applications.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-monitoring-applications/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure monitoring for applications",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-monitoring-applications/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-monitoring-virtual-machines",
+          "title": "Configure monitoring for virtual machines",
+          "order": 3,
+          "duration_minutes": 36,
+          "content_md": "In this module, you learn how the Azure Monitor Agent can be deployed to IaaS VMs, how VM Insights can be used to monitor IaaS VM performance, and how to enable data collection rules to collect operating system and application logs.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-monitoring-virtual-machines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure monitoring for virtual machines",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-monitoring-virtual-machines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-monitoring-virtual-networks",
+          "title": "Configure monitoring for virtual networks",
+          "order": 4,
+          "duration_minutes": 35,
+          "content_md": "In this module, you learn how to use the following Azure Network Watcher functionality to monitor and diagnose Azure networks: Azure Network Watcher topology. Connection Monitor. IP flow verify and NSG diagnostics. Packet capture.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-monitoring-virtual-networks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure monitoring for virtual networks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-monitoring-virtual-networks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-alerts-responses",
+          "title": "Configure alerts and responses",
+          "order": 5,
+          "duration_minutes": 21,
+          "content_md": "In this module, you learn how Azure Monitoring alerts proactively notify you when Azure Monitor data indicates there might be a problem with your infrastructure or applications before the problem becomes one for your users.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-alerts-responses/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure alerts and responses",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-alerts-responses/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-guided-project-deploy-configure-azure-monitor",
+          "title": "Guided Project – Deploy and configure Azure Monitor",
+          "order": 6,
+          "duration_minutes": 94,
+          "content_md": "In this module, you practice configuring monitoring of various workloads and infrastructure services using Azure Monitor. The skills validated include deploying and configuring Log Analytics, configuring monitoring for Web apps, monitoring compute and networking services, and configuring alerts.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/guided-project-deploy-configure-azure-monitor/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Guided Project – Deploy and configure Azure Monitor",
+              "url": "https://learn.microsoft.com/en-us/training/modules/guided-project-deploy-configure-azure-monitor/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-deploy-configure-azure-monitor",
+          "title": "Laboratorio opcional: aplica Deploy and configure Azure Monitor",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Deploy and configure Azure Monitor**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

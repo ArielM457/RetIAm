@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-run-sap-microsoft-cloud",
+  "track": "azure",
+  "title": "Run SAP on the Microsoft Cloud",
+  "summary": "In this learning path, you learn about the relationship between Microsoft and SAP across the enterprise software landscape, driving technological innovation and delivering significant benefits to customers. Areas of focus include cloud migration with the RISE with SAP program, AI integration, enhancing workplace productivity, security enhancements, IoT collaboration, and data analytics.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 325,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/run-sap-microsoft-cloud/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-run-sap-microsoft-cloud",
+      "title": "Run SAP on the Microsoft Cloud",
+      "summary": "In this learning path, you learn about the relationship between Microsoft and SAP across the enterprise software landscape, driving technological innovation and delivering significant benefits to customers. Areas of focus include cloud migration with the RISE with SAP program, AI integration, enhancing workplace productivity, security enhancements, IoT collaboration, and data analytics.",
+      "order": 1,
+      "duration_minutes": 325,
+      "lessons": [
+        {
+          "lesson_key": "wwl-microsoft-sap-partnership",
+          "title": "The Microsoft and SAP partnership",
+          "order": 1,
+          "duration_minutes": 76,
+          "content_md": "In this module, you learn about the key aspects of the Microsoft and SAP partnership, including cloud migration, AI integration, Copilot for Microsoft Viva Learning, and SAP SuccessFactors.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/microsoft-sap-partnership/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "The Microsoft and SAP partnership",
+              "url": "https://learn.microsoft.com/en-us/training/modules/microsoft-sap-partnership/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-introduction-sap-microsoft-cloud",
+          "title": "Introduction to SAP on Microsoft Cloud",
+          "order": 2,
+          "duration_minutes": 69,
+          "content_md": "In this module, you learn about integrating SAP Business Technology Platform with Azure Cloud, including identity provider setup, data Integration, and implementing Universal Print for SAP front-end printing.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-sap-microsoft-cloud/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to SAP on Microsoft Cloud",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-sap-microsoft-cloud/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-innovate-rise-sap-microsoft-cloud",
+          "title": "Innovate using RISE with SAP on the Microsoft Cloud",
+          "order": 3,
+          "duration_minutes": 26,
+          "content_md": "Explore how to leverage both RISE with SAP and Microsoft Cloud to optimize workflows, automate tasks, enhance decision-making, and improve team communication and collaboration.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/innovate-rise-sap-microsoft-cloud/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Innovate using RISE with SAP on the Microsoft Cloud",
+              "url": "https://learn.microsoft.com/en-us/training/modules/innovate-rise-sap-microsoft-cloud/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-insights-sap-use-unified-analytics-ai-platform",
+          "title": "Insights for SAP using unified analytics and AI platform",
+          "order": 4,
+          "duration_minutes": 30,
+          "content_md": "In this module, you learn about accelerating business transformation with Microsoft AI and SAP integration, enhancing business processes with Microsoft Copilot Studio, Power Platform, and SAP.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/insights-sap-use-unified-analytics-ai-platform/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Insights for SAP using unified analytics and AI platform",
+              "url": "https://learn.microsoft.com/en-us/training/modules/insights-sap-use-unified-analytics-ai-platform/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-explore-azure-networking-sap-rise",
+          "title": "Explore Azure networking for SAP RISE",
+          "order": 5,
+          "duration_minutes": 36,
+          "content_md": "Your SAP RISE architecture running in SAP's Azure subscription and tenant is created and managed by SAP. This module shows you how to use your Azure networks to connect to your SAP RISE instance.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-azure-networking-sap-rise/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore Azure networking for SAP RISE",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-azure-networking-sap-rise/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-secure-sap-microsoft-cloud",
+          "title": "Secure SAP on Microsoft Cloud",
+          "order": 6,
+          "duration_minutes": 88,
+          "content_md": "In this module, you learn about integrating Azure Identity Services with SAP RISE, implementing single sign-on, transitioning from SAP Identity Management to Microsoft Entra, using Microsoft Security Copilot and Microsoft Sentinel with SAP RISE.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/secure-sap-microsoft-cloud/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure SAP on Microsoft Cloud",
+              "url": "https://learn.microsoft.com/en-us/training/modules/secure-sap-microsoft-cloud/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-run-sap-microsoft-cloud",
+          "title": "Laboratorio opcional: aplica Run SAP on the Microsoft Cloud",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Run SAP on the Microsoft Cloud**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

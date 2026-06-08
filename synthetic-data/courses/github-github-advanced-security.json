@@ -1,0 +1,108 @@
+{
+  "certification_code": "github-github-advanced-security",
+  "track": "github",
+  "title": "GitHub Advanced Security Part 1 of 2",
+  "summary": "Learn how to secure your code with advanced security features at every stage of your development lifecycle. GitHub Advanced Security is an add-on to GitHub Enterprise that allows you to use security features, such as secret scanning, code scanning, and dependency management on your private repositories.",
+  "provider": "GitHub",
+  "level": "basic",
+  "total_duration_minutes": 123,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/github-advanced-security/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "github-github-advanced-security",
+      "title": "GitHub Advanced Security Part 1 of 2",
+      "summary": "Learn how to secure your code with advanced security features at every stage of your development lifecycle. GitHub Advanced Security is an add-on to GitHub Enterprise that allows you to use security features, such as secret scanning, code scanning, and dependency management on your private repositories.",
+      "order": 1,
+      "duration_minutes": 123,
+      "lessons": [
+        {
+          "lesson_key": "introduction-github-advanced-security",
+          "title": "Introduction to GitHub Advanced Security",
+          "order": 1,
+          "duration_minutes": 26,
+          "content_md": "This module will help you become familiar with GitHub's Advanced Security features and best practices. As you learn about these features, you'll identify critical areas for eliminating security gaps.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-github-advanced-security/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to GitHub Advanced Security",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-github-advanced-security/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "configure-dependabot-security-updates-on-github-repo",
+          "title": "Configure Dependabot security updates on your GitHub repo",
+          "order": 2,
+          "duration_minutes": 36,
+          "content_md": "Learn how to configure Dependabot security updates on your GitHub repo.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-dependabot-security-updates-on-github-repo/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure Dependabot security updates on your GitHub repo",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-dependabot-security-updates-on-github-repo/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-configure-and-use-secret-scanning-in-your-github-repo",
+          "title": "Configure and use secret scanning in your GitHub repository",
+          "order": 3,
+          "duration_minutes": 28,
+          "content_md": "On completing this module, you'll understand how secret scanning works to configure and use it efficiently.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-use-secret-scanning-github-repository/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure and use secret scanning in your GitHub repository",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-use-secret-scanning-github-repository/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-configure-code-scanning",
+          "title": "Configure code scanning on GitHub",
+          "order": 4,
+          "duration_minutes": 33,
+          "content_md": "This module introduces you to code scanning and its features. You'll learn how to implement code scanning using CodeQL, third party tools, and GitHub Actions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-code-scanning/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure code scanning on GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-code-scanning/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-github-github-advanced-security",
+          "title": "Laboratorio opcional: aplica GitHub Advanced Security Part 1 of 2",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **GitHub Advanced Security Part 1 of 2**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

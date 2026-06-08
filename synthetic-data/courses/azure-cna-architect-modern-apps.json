@@ -1,0 +1,63 @@
+{
+  "certification_code": "azure-cna-architect-modern-apps",
+  "track": "github",
+  "title": "Create cloud native apps with Azure and open-source software",
+  "summary": "Cloud-native apps represent a modern approach to app development, where software systems are designed with cloud scale and capabilities in mind. Cloud-native apps build on open source technologies where feasible, with a focus on architectural modularity.",
+  "provider": "GitHub",
+  "level": "intermediate",
+  "total_duration_minutes": 27,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/create-cloud-native-apps-with-azure-open-source/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "azure-cna-architect-modern-apps",
+      "title": "Create cloud native apps with Azure and open-source software",
+      "summary": "Cloud-native apps represent a modern approach to app development, where software systems are designed with cloud scale and capabilities in mind. Cloud-native apps build on open source technologies where feasible, with a focus on architectural modularity.",
+      "order": 1,
+      "duration_minutes": 27,
+      "lessons": [
+        {
+          "lesson_key": "azure-intro-to-cloud-native-apps",
+          "title": "Introduction to cloud-native apps on Azure",
+          "order": 1,
+          "duration_minutes": 27,
+          "content_md": "This module teaches concepts and ideas associated with cloud-native apps. We cover selecting Open-Source Software (OSS) components like Kubernetes and PostgreSQL, and unique Azure tools like Cosmos DB. We also identify situations that call for building cloud-native apps, and review selecting components in an example scenario.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-to-cloud-native-apps/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to cloud-native apps on Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-cloud-native-apps/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-azure-cna-architect-modern-apps",
+          "title": "Laboratorio opcional: aplica Create cloud native apps with Azure and open-source software",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Create cloud native apps with Azure and open-source software**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

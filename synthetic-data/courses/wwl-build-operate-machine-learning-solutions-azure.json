@@ -1,0 +1,168 @@
+{
+  "certification_code": "wwl-build-operate-machine-learning-solutions-azure",
+  "track": "azure",
+  "title": "Build machine learning solutions using Azure Databricks",
+  "summary": "Azure Databricks is a cloud-scale platform for data analytics and machine learning. Data scientists and machine learning engineers can use Azure Databricks to implement machine learning solutions at scale. (DP-3014)",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 538,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/build-operate-machine-learning-solutions-azure-databricks/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-build-operate-machine-learning-solutions-azure-databrick",
+      "title": "Build machine learning solutions using Azure Databricks",
+      "summary": "Azure Databricks is a cloud-scale platform for data analytics and machine learning. Data scientists and machine learning engineers can use Azure Databricks to implement machine learning solutions at scale. (DP-3014)",
+      "order": 1,
+      "duration_minutes": 538,
+      "lessons": [
+        {
+          "lesson_key": "wwl-explore-azure-databricks",
+          "title": "Explore Azure Databricks",
+          "order": 1,
+          "duration_minutes": 68,
+          "content_md": "Explore Azure Databricks\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-azure-databricks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-azure-databricks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-use-apache-spark-azure-databricks",
+          "title": "Use Apache Spark in Azure Databricks",
+          "order": 2,
+          "duration_minutes": 79,
+          "content_md": "Use Apache Spark in Azure Databricks\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/use-apache-spark-azure-databricks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use Apache Spark in Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/use-apache-spark-azure-databricks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-machine-learning-azure-databricks",
+          "title": "Train a machine learning model in Azure Databricks",
+          "order": 3,
+          "duration_minutes": 84,
+          "content_md": "Learn how to train machine learning models using Spark and the MLlib library in Azure Databricks.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/machine-learning-azure-databricks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Train a machine learning model in Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/machine-learning-azure-databricks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-mlflow-azure-databricks",
+          "title": "Use MLflow in Azure Databricks",
+          "order": 4,
+          "duration_minutes": 63,
+          "content_md": "Learn how to use MLflow in Azure Databricks to track machine learning experiments and deploy models.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/mlflow-azure-databricks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use MLflow in Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/mlflow-azure-databricks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-hyperparameters-azure-databricks",
+          "title": "Tune hyperparameters in Azure Databricks",
+          "order": 5,
+          "duration_minutes": 68,
+          "content_md": "Learn how to use the Optuna library in Azure Databricks to tune machine learning hyperparameters.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/hyperparameters-azure-databricks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Tune hyperparameters in Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/hyperparameters-azure-databricks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-automl-azure-databricks",
+          "title": "Use AutoML in Azure Databricks",
+          "order": 6,
+          "duration_minutes": 44,
+          "content_md": "Learn how to use AutoML to train optimal machine learning models for your data in Azure Databricks.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/automl-azure-databricks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use AutoML in Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/automl-azure-databricks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-deep-learning-azure-databricks",
+          "title": "Train deep learning models in Azure Databricks",
+          "order": 7,
+          "duration_minutes": 70,
+          "content_md": "Learn how to use deep learning libraries like PyTorch in Azure Databricks, and to distribute training by using TorchDistributor\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deep-learning-azure-databricks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Train deep learning models in Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deep-learning-azure-databricks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-machine-learning-production-azure-databricks",
+          "title": "Manage machine learning in production with Azure Databricks",
+          "order": 8,
+          "duration_minutes": 62,
+          "content_md": "Learn how to manage machine learning models in production with Azure Databricks.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/machine-learning-production-azure-databricks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage machine learning in production with Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/machine-learning-production-azure-databricks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-build-operate-machine-learning-solutions-azure-databrick",
+          "title": "Laboratorio opcional: aplica Build machine learning solutions using Azure Databricks",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Build machine learning solutions using Azure Databricks**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

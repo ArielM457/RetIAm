@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-manage-user-environments-apps",
+  "track": "azure",
+  "title": "Manage user environments and apps for Azure Virtual Desktop",
+  "summary": "Manage user environments and apps for Azure Virtual Desktop",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 166,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/manage-user-environments-apps/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-manage-user-environments-apps",
+      "title": "Manage user environments and apps for Azure Virtual Desktop",
+      "summary": "Manage user environments and apps for Azure Virtual Desktop",
+      "order": 1,
+      "duration_minutes": 166,
+      "lessons": [
+        {
+          "lesson_key": "wwl-implement-manage-fslogix",
+          "title": "Implement and manage FSLogix",
+          "order": 1,
+          "duration_minutes": 56,
+          "content_md": "FSLogix provides customers with both ease of configuration and various levels of flexibility.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-manage-fslogix/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement and manage FSLogix",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-manage-fslogix/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-user-experience-settings",
+          "title": "Configure user experience settings",
+          "order": 2,
+          "duration_minutes": 56,
+          "content_md": "Virtual desktop provides users easy and seamless access to their assigned VMs, often with a single sign-on solution.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-user-experience-settings/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure user experience settings",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-user-experience-settings/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-install-configure-apps-session-host",
+          "title": "Install and configure apps on a session host",
+          "order": 3,
+          "duration_minutes": 54,
+          "content_md": "MSIX app attach is a way to deliver MSIX applications to both physical and virtual machines. MSIX app attach is different from regular MSIX because it’s specifically for Azure Virtual Desktop.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/install-configure-apps-session-host/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Install and configure apps on a session host",
+              "url": "https://learn.microsoft.com/en-us/training/modules/install-configure-apps-session-host/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-manage-user-environments-apps",
+          "title": "Laboratorio opcional: aplica Manage user environments and apps for Azure Virtual Desktop",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Manage user environments and apps for Azure Virtual Desktop**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "certification_code": "extract-insights-visual-data-azure",
+  "track": "azure",
+  "title": "Extract insights from visual data on Azure",
+  "summary": "Use generative AI vision and Content Understanding in Azure to extract insights from visual data.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 426,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/insight-visual-data/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "extract-insights-visual-data-azure",
+      "title": "Extract insights from visual data on Azure",
+      "summary": "Use generative AI vision and Content Understanding in Azure to extract insights from visual data.",
+      "order": 1,
+      "duration_minutes": 426,
+      "lessons": [
+        {
+          "lesson_key": "wwl-develop-generative-ai-vision-apps",
+          "title": "Develop a vision-enabled generative AI application",
+          "order": 1,
+          "duration_minutes": 43,
+          "content_md": "A picture says a thousand words, and multimodal generative AI models can interpret images to respond to visual prompts. Learn how to build vision-enabled chat apps.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/develop-generative-ai-vision-apps/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Develop a vision-enabled generative AI application",
+              "url": "https://learn.microsoft.com/en-us/training/modules/develop-generative-ai-vision-apps/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-generate-images-azure-openai",
+          "title": "Generate images with AI",
+          "order": 2,
+          "duration_minutes": 33,
+          "content_md": "Use models in Microsoft Foundry to generate images\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/generate-images-azure-openai/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Generate images with AI",
+              "url": "https://learn.microsoft.com/en-us/training/modules/generate-images-azure-openai/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-generate-video-with-foundry",
+          "title": "Generate videos with Microsoft Foundry",
+          "order": 3,
+          "duration_minutes": 48,
+          "content_md": "Learn how to generate videos from text prompts with Sora 2 in Microsoft Foundry.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/generate-video-with-foundry/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Generate videos with Microsoft Foundry",
+              "url": "https://learn.microsoft.com/en-us/training/modules/generate-video-with-foundry/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-analyze-images-with-content-understanding",
+          "title": "Analyze images with Content Understanding",
+          "order": 4,
+          "duration_minutes": 43,
+          "content_md": "Learn how to analyze images with Azure Content Understanding.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/analyze-images-with-content-understanding/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Analyze images with Content Understanding",
+              "url": "https://learn.microsoft.com/en-us/training/modules/analyze-images-with-content-understanding/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-analyze-content-ai",
+          "title": "Create a multimodal analysis solution with Azure Content Understanding",
+          "order": 5,
+          "duration_minutes": 60,
+          "content_md": "Use Azure Content Understanding for multimodal content analysis and information extraction.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/analyze-content-ai/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create a multimodal analysis solution with Azure Content Understanding",
+              "url": "https://learn.microsoft.com/en-us/training/modules/analyze-content-ai/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-analyze-content-ai-api",
+          "title": "Create an Azure Content Understanding client application",
+          "order": 6,
+          "duration_minutes": 60,
+          "content_md": "Use the Azure Content Understanding API for multimodal content analysis and information extraction.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/analyze-content-ai-api/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create an Azure Content Understanding client application",
+              "url": "https://learn.microsoft.com/en-us/training/modules/analyze-content-ai-api/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-extract-data-with-document-intelligence",
+          "title": "Extract data with Azure Document Intelligence",
+          "order": 7,
+          "duration_minutes": 71,
+          "content_md": "Azure Document Intelligence uses OCR and deep learning to extract text, key-value pairs, tables, and structured data from documents. Learn how to use prebuilt models, train custom models, and build document processing solutions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/extract-data-with-document-intelligence/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Extract data with Azure Document Intelligence",
+              "url": "https://learn.microsoft.com/en-us/training/modules/extract-data-with-document-intelligence/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-ai-knowledge-mining",
+          "title": "Create a knowledge mining solution with Azure AI Search",
+          "order": 8,
+          "duration_minutes": 68,
+          "content_md": "Unlock the hidden insights in your data with Azure AI Search.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/ai-knowldge-mining/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create a knowledge mining solution with Azure AI Search",
+              "url": "https://learn.microsoft.com/en-us/training/modules/ai-knowldge-mining/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-extract-insights-visual-data-azure",
+          "title": "Laboratorio opcional: aplica Extract insights from visual data on Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Extract insights from visual data on Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-define-implement-indexing-strategy-cosmos-db-s",
+  "track": "azure",
+  "title": "Define and implement an indexing strategy for Azure Cosmos DB for NoSQL",
+  "summary": "Define and implement an indexing strategy for Azure Cosmos DB for NoSQL",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 83,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/define-implement-indexing-strategy-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-define-implement-indexing-strategy-cosmos-db-sql-api",
+      "title": "Define and implement an indexing strategy for Azure Cosmos DB for NoSQL",
+      "summary": "Define and implement an indexing strategy for Azure Cosmos DB for NoSQL",
+      "order": 1,
+      "duration_minutes": 83,
+      "lessons": [
+        {
+          "lesson_key": "wwl-define-indexes-azure-cosmos-db-sql-api",
+          "title": "Define indexes in Azure Cosmos DB for NoSQL",
+          "order": 1,
+          "duration_minutes": 43,
+          "content_md": "Discover indexes and indexing policies in Azure Cosmos DB for NoSQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/define-indexes-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Define indexes in Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/define-indexes-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-customize-indexes-azure-cosmos-db-sql-api",
+          "title": "Customize indexes in Azure Cosmos DB for NoSQL",
+          "order": 2,
+          "duration_minutes": 40,
+          "content_md": "Customize indexes in Azure Cosmos DB for NoSQL\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/customize-indexes-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Customize indexes in Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/customize-indexes-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-define-implement-indexing-strategy-cosmos-db-sql-api",
+          "title": "Laboratorio opcional: aplica Define and implement an indexing strategy for Azure Cosmos DB for NoSQL",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Define and implement an indexing strategy for Azure Cosmos DB for NoSQL**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

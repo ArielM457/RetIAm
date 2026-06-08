@@ -1,0 +1,63 @@
+{
+  "certification_code": "az-400-define-implement-continuous-integration",
+  "track": "azure",
+  "title": "Define and implement continuous integration",
+  "summary": "Create automated pipelines that continuously build, test, and deploy your applications and prepare for Exam AZ-400: Designing and Implementing Microsoft DevOps Solutions.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 81,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/az-400-define-implement-continuous-integration/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "az-400-define-implement-continuous-integration",
+      "title": "Define and implement continuous integration",
+      "summary": "Create automated pipelines that continuously build, test, and deploy your applications and prepare for Exam AZ-400: Designing and Implementing Microsoft DevOps Solutions.",
+      "order": 1,
+      "duration_minutes": 81,
+      "lessons": [
+        {
+          "lesson_key": "github-github-actions-ci",
+          "title": "Build continuous integration workflows by using GitHub Actions",
+          "order": 1,
+          "duration_minutes": 81,
+          "content_md": "Learn how to create workflows to add continuous integration (CI) to your projects.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/github-actions-ci/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build continuous integration workflows by using GitHub Actions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/github-actions-ci/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-az-400-define-implement-continuous-integration",
+          "title": "Laboratorio opcional: aplica Define and implement continuous integration",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Define and implement continuous integration**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

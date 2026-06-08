@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-deploy-manage-apps-azure-container-apps",
+  "track": "azure",
+  "title": "Deploy and manage apps on Azure Container Apps",
+  "summary": "Learn how to deploy, manage, and scale containerized applications on Azure Container Apps.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 227,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/deploy-manage-apps-azure-container-apps/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-deploy-manage-apps-azure-container-apps",
+      "title": "Deploy and manage apps on Azure Container Apps",
+      "summary": "Learn how to deploy, manage, and scale containerized applications on Azure Container Apps.",
+      "order": 1,
+      "duration_minutes": 227,
+      "lessons": [
+        {
+          "lesson_key": "wwl-deploy-containers-azure-container-apps",
+          "title": "Deploy containers to Azure Container Apps",
+          "order": 1,
+          "duration_minutes": 72,
+          "content_md": "Create and manage container deployments in Azure Container Apps. Work with environments, runtime configuration, registry authentication, and deployment verification techniques.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-containers-azure-container-apps/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy containers to Azure Container Apps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-containers-azure-container-apps/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-containers-azure-container-apps",
+          "title": "Manage containers in Azure Container Apps",
+          "order": 2,
+          "duration_minutes": 68,
+          "content_md": "Manage container apps across the day-two lifecycle. Update images, manage revisions, diagnose failing deployments, tune resources and scaling, and troubleshoot with logs and health probes.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-containers-azure-container-apps/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage containers in Azure Container Apps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-containers-azure-container-apps/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-scale-containers-azure-container-apps",
+          "title": "Scale containers in Azure Container Apps",
+          "order": 3,
+          "duration_minutes": 87,
+          "content_md": "Learn how to configure automatic horizontal scaling for containerized applications in Azure Container Apps using HTTP rules, KEDA scalers, and traffic management.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/scale-containers-azure-container-apps/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Scale containers in Azure Container Apps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/scale-containers-azure-container-apps/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-deploy-manage-apps-azure-container-apps",
+          "title": "Laboratorio opcional: aplica Deploy and manage apps on Azure Container Apps",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Deploy and manage apps on Azure Container Apps**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -10,6 +10,16 @@ class ExamQuestion(BaseModel):
     section_id: str
 
 
+class ExamQuestionPublic(BaseModel):
+    """Pregunta de examen sin la respuesta correcta (lo que ve el cliente)."""
+
+    question_id: str
+    prompt: str
+    options: list[str] = Field(default_factory=list)
+    source: str
+    section_id: str
+
+
 class StartFinalExamRequest(BaseModel):
     plan_id: str
     time_limit_minutes: int = Field(default=60, ge=30, le=180)
@@ -19,7 +29,7 @@ class FinalExamAttemptResponse(BaseModel):
     id: str | None = None
     plan_id: str
     target_certification: str
-    questions: list[ExamQuestion] = Field(default_factory=list)
+    questions: list[ExamQuestionPublic] = Field(default_factory=list)
     time_limit_minutes: int = 60
     score: int = 0
     max_score: int = 0
@@ -45,3 +55,12 @@ class CertificateResponse(BaseModel):
     pdf_url: str | None = None
     verification_code: str
     issued_at: str
+
+
+class CertificateVerificationResponse(BaseModel):
+    valid: bool
+    certificate_id: str | None = None
+    recipient_name: str | None = None
+    target_certification: str | None = None
+    score: int | None = None
+    issued_at: str | None = None

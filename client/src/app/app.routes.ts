@@ -37,6 +37,13 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'catalog',
+        loadComponent: () =>
+          import('./features/catalog/catalog-page.component').then(
+            (module) => module.CatalogPageComponent,
+          ),
+      },
+      {
         path: 'plan',
         loadComponent: () =>
           import('./features/learning/learning-plan-page.component').then(
@@ -49,6 +56,11 @@ export const routes: Routes = [
           import('./features/learning/learning-session-page.component').then(
             (module) => module.LearningSessionPageComponent,
           ),
+      },
+      {
+        path: 'exam',
+        loadComponent: () =>
+          import('./features/exam/exam-page.component').then((module) => module.ExamPageComponent),
       },
       {
         path: 'reminders',

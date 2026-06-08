@@ -1,0 +1,123 @@
+{
+  "certification_code": "azure-databases-postgresql-playground-learning",
+  "track": "azure",
+  "title": "Azure Database for PostgreSQL Tutorials",
+  "summary": "Learn key PostgreSQL concepts through our Azure Database for PostgreSQL Tutorials. Explore our tutorials to focus on a specific topic, or discover a subject that interest you and delve deeper.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 80,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/playground-learning/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "azure-databases-postgresql-playground-learning",
+      "title": "Azure Database for PostgreSQL Tutorials",
+      "summary": "Learn key PostgreSQL concepts through our Azure Database for PostgreSQL Tutorials. Explore our tutorials to focus on a specific topic, or discover a subject that interest you and delve deeper.",
+      "order": 1,
+      "duration_minutes": 80,
+      "lessons": [
+        {
+          "lesson_key": "azure-databases-postgresql-basic-sql-simple-select",
+          "title": "Getting started: An introduction to SQL and reading data",
+          "order": 1,
+          "duration_minutes": 12,
+          "content_md": "Learn how to use the SQL SELECT statement in PostgreSQL to retrieve, filter, and format data with specific columns, DISTINCT, and expressions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/azure-databases/postgresql/basic-sql-simple-select/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Getting started: An introduction to SQL and reading data",
+              "url": "https://learn.microsoft.com/en-us/training/azure-databases/postgresql/basic-sql-simple-select/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-databases-postgresql-basic-sql-where-clause-subqueries",
+          "title": "Filtering data: The WHERE clause and subqueries",
+          "order": 2,
+          "duration_minutes": 23,
+          "content_md": "Learn how to filter data in PostgreSQL using the WHERE clause, logical operators, pattern matching, and subqueries for advanced query control.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/azure-databases/postgresql/basic-sql-where-clause-subqueries/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Filtering data: The WHERE clause and subqueries",
+              "url": "https://learn.microsoft.com/en-us/training/azure-databases/postgresql/basic-sql-where-clause-subqueries/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-databases-postgresql-basic-sql-limit-offset-order-by",
+          "title": "Organizing data: Using LIMIT, OFFSET, and ORDER BY clauses",
+          "order": 3,
+          "duration_minutes": 12,
+          "content_md": "Learn to control the size and order of query results in PostgreSQL with the LIMIT, OFFSET, and ORDER BY clauses. Master pagination, sorting, and optimizing performance with these essential SQL tools.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/azure-databases/postgresql/basic-sql-limit-offset-order-by/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Organizing data: Using LIMIT, OFFSET, and ORDER BY clauses",
+              "url": "https://learn.microsoft.com/en-us/training/azure-databases/postgresql/basic-sql-limit-offset-order-by/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-databases-postgresql-basic-sql-join-tables",
+          "title": "Combining data from multiple tables: SQL Joins Explained",
+          "order": 4,
+          "duration_minutes": 18,
+          "content_md": "Combine data across multiple PostgreSQL tables using SQL JOINs. Learn INNER, LEFT, RIGHT, FULL OUTER, and NATURAL joins with real examples.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/azure-databases/postgresql/basic-sql-join-tables/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Combining data from multiple tables: SQL Joins Explained",
+              "url": "https://learn.microsoft.com/en-us/training/azure-databases/postgresql/basic-sql-join-tables/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-databases-postgresql-basic-sql-aggregate-functions-gro",
+          "title": "Summarizing data: Aggregate functions and grouping",
+          "order": 5,
+          "duration_minutes": 15,
+          "content_md": "Analyze data in PostgreSQL with aggregate functions and grouping. Learn COUNT, SUM, AVG, and filter results using GROUP BY and HAVING.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/azure-databases/postgresql/basic-sql-aggregate-functions-grouping/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Summarizing data: Aggregate functions and grouping",
+              "url": "https://learn.microsoft.com/en-us/training/azure-databases/postgresql/basic-sql-aggregate-functions-grouping/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-azure-databases-postgresql-playground-learning",
+          "title": "Laboratorio opcional: aplica Azure Database for PostgreSQL Tutorials",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Azure Database for PostgreSQL Tutorials**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

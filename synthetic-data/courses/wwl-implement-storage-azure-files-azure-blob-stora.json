@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-implement-storage-azure-files-azure-blob-stora",
+  "track": "azure",
+  "title": "Secure storage for Azure Files and Azure Blob Storage",
+  "summary": "Secure storage for Azure Files and Azure Blob Storage.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 287,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-storage-azure-files-azure-blob-storage/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-storage-azure-files-azure-blob-storage",
+      "title": "Secure storage for Azure Files and Azure Blob Storage",
+      "summary": "Secure storage for Azure Files and Azure Blob Storage.",
+      "order": 1,
+      "duration_minutes": 287,
+      "lessons": [
+        {
+          "lesson_key": "create-azure-storage-account",
+          "title": "Create an Azure Storage account",
+          "order": 1,
+          "duration_minutes": 30,
+          "content_md": "Discover ways to use an Azure Storage account to manage your data for billing, access, and storage location of your blobs, files, queues, and tables.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-azure-storage-account/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create an Azure Storage account",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-azure-storage-account/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-blob-storage",
+          "title": "Configure Azure Blob Storage",
+          "order": 2,
+          "duration_minutes": 70,
+          "content_md": "Learn how to configure Azure Blob Storage, including tiers and object replication.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-blob-storage/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure Azure Blob Storage",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-blob-storage/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-azure-files-file-sync",
+          "title": "Configure Azure Files",
+          "order": 3,
+          "duration_minutes": 36,
+          "content_md": "Learn how to configure Azure Files for cloud file shares.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-azure-files-file-sync/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure Azure Files",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-azure-files-file-sync/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-storage-security",
+          "title": "Configure Azure Storage security",
+          "order": 4,
+          "duration_minutes": 34,
+          "content_md": "Learn how to configure common Azure Storage security features like storage access signatures.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-storage-security/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure Azure Storage security",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-storage-security/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "secure-and-isolate-with-nsg-and-service-endpoints",
+          "title": "Secure and isolate access to Azure resources by using network security groups and service endpoints",
+          "order": 5,
+          "duration_minutes": 43,
+          "content_md": "Find out how Azure network security groups and service endpoints help you secure your virtual machines and Azure services from unauthorized network access.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure and isolate access to Azure resources by using network security groups and service endpoints",
+              "url": "https://learn.microsoft.com/en-us/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-guided-project-azure-files-azure-blobs",
+          "title": "Guided Project - Azure Files and Azure Blobs",
+          "order": 6,
+          "duration_minutes": 74,
+          "content_md": "Guided Project - Azure Files and Azure Blobs\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/guided-project-azure-files-azure-blobs/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Guided Project - Azure Files and Azure Blobs",
+              "url": "https://learn.microsoft.com/en-us/training/modules/guided-project-azure-files-azure-blobs/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-storage-azure-files-azure-blob-storage",
+          "title": "Laboratorio opcional: aplica Secure storage for Azure Files and Azure Blob Storage",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Secure storage for Azure Files and Azure Blob Storage**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

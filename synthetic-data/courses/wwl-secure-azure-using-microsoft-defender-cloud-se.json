@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-secure-azure-using-microsoft-defender-cloud-se",
+  "track": "azure",
+  "title": "Strengthen security posture using Microsoft Defender for Cloud and Microsoft Sentinel",
+  "summary": "Strengthen security posture using Microsoft Defender for Cloud and Microsoft Sentinel",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 454,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/secure-azure-using-microsoft-defender-cloud-sentinel/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-secure-azure-using-microsoft-defender-cloud-sentinel",
+      "title": "Strengthen security posture using Microsoft Defender for Cloud and Microsoft Sentinel",
+      "summary": "Strengthen security posture using Microsoft Defender for Cloud and Microsoft Sentinel",
+      "order": 1,
+      "duration_minutes": 454,
+      "lessons": [
+        {
+          "lesson_key": "wwl-implement-manage-enforcement-cloud-governance-policies",
+          "title": "Implement and manage enforcement of cloud governance policies",
+          "order": 1,
+          "duration_minutes": 117,
+          "content_md": "This module equips administrators with the skills to design, deploy, and oversee security governance in Azure, ensuring alignment with organizational policies and industry best practices.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-manage-enforcement-cloud-governance-policies/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement and manage enforcement of cloud governance policies",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-manage-enforcement-cloud-governance-policies/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-microsoft-defender-cloud-security-posture",
+          "title": "Manage security posture by using Microsoft Defender for Cloud",
+          "order": 2,
+          "duration_minutes": 65,
+          "content_md": "This module focuses on equipping administrators with the knowledge and skills needed to manage and enhance the security posture of their cloud environment using Microsoft Defender for Cloud, ensuring proactive identification and remediation of security risks.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/microsoft-defender-cloud-security-posture/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage security posture by using Microsoft Defender for Cloud",
+              "url": "https://learn.microsoft.com/en-us/training/modules/microsoft-defender-cloud-security-posture/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-microsoft-defender-cloud-threat-protection",
+          "title": "Configure and manage threat protection by using Microsoft Defender for Cloud",
+          "order": 3,
+          "duration_minutes": 200,
+          "content_md": "This module focuses on the essential techniques for configuring and managing threat protection exclusively with Microsoft Defender for Cloud, empowering cybersecurity specialists to strengthen the security posture of their cloud environments.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/microsoft-defender-cloud-threat-protection/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure and manage threat protection by using Microsoft Defender for Cloud",
+              "url": "https://learn.microsoft.com/en-us/training/modules/microsoft-defender-cloud-threat-protection/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-security-monitoring-automation-solutions",
+          "title": "Configure and manage security monitoring and automation solutions",
+          "order": 4,
+          "duration_minutes": 72,
+          "content_md": "Learn to set up Azure Monitor and Microsoft Sentinel for automatic security monitoring and response in cloud settings.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/security-monitoring-automation-solutions/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure and manage security monitoring and automation solutions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/security-monitoring-automation-solutions/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-secure-azure-using-microsoft-defender-cloud-sentinel",
+          "title": "Laboratorio opcional: aplica Strengthen security posture using Microsoft Defender for Cloud and Microsoft Sentinel",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Strengthen security posture using Microsoft Defender for Cloud and Microsoft Sentinel**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

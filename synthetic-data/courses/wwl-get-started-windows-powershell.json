@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-get-started-windows-powershell",
+  "track": "azure",
+  "title": "Get started with Windows PowerShell",
+  "summary": "This learning path introduces you to Windows PowerShell and provides an overview of the product’s functionality. It explains how to open and configure Windows PowerShell, run commands, and use its built-in Help system.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 133,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/get-started-windows-powershell/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-get-started-windows-powershell",
+      "title": "Get started with Windows PowerShell",
+      "summary": "This learning path introduces you to Windows PowerShell and provides an overview of the product’s functionality. It explains how to open and configure Windows PowerShell, run commands, and use its built-in Help system.",
+      "order": 1,
+      "duration_minutes": 133,
+      "lessons": [
+        {
+          "lesson_key": "wwl-review-windows-powershell",
+          "title": "Review Windows PowerShell",
+          "order": 1,
+          "duration_minutes": 55,
+          "content_md": "Review Windows PowerShell\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/review-windows-powershell/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Review Windows PowerShell",
+              "url": "https://learn.microsoft.com/en-us/training/modules/review-windows-powershell/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-understand-command-syntax-windows-powershell",
+          "title": "Understand the command syntax in Windows PowerShell",
+          "order": 2,
+          "duration_minutes": 28,
+          "content_md": "This module covers the cmdlet structure and parameters for using Windows PowerShell cmdlets. It also explains how to use tab completion and how to display About files content.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/understand-command-syntax-windows-powershell/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand the command syntax in Windows PowerShell",
+              "url": "https://learn.microsoft.com/en-us/training/modules/understand-command-syntax-windows-powershell/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-find-commands-get-help-windows-powershell",
+          "title": "Find commands and Get-Help in Windows PowerShell",
+          "order": 3,
+          "duration_minutes": 50,
+          "content_md": "This module explains how to find Windows PowerShell cmdlets that you can use to perform specific tasks. It also covers how to use Get-Help to retrieve detailed information about a cmdlet and its parameters.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/find-commands-get-help-windows-powershell/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Find commands and Get-Help in Windows PowerShell",
+              "url": "https://learn.microsoft.com/en-us/training/modules/find-commands-get-help-windows-powershell/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-get-started-windows-powershell",
+          "title": "Laboratorio opcional: aplica Get started with Windows PowerShell",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Get started with Windows PowerShell**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

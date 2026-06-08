@@ -1,0 +1,168 @@
+{
+  "certification_code": "administer-infrastructure-resources-in-azure",
+  "track": "azure",
+  "title": "Administer infrastructure resources in Azure",
+  "summary": "This learning path teaches how to create and customize Windows and Linux virtual machines, connect them to virtual networks, and keep them updated.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 397,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/administer-infrastructure-resources-in-azure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "administer-infrastructure-resources-in-azure",
+      "title": "Administer infrastructure resources in Azure",
+      "summary": "This learning path teaches how to create and customize Windows and Linux virtual machines, connect them to virtual networks, and keep them updated.",
+      "order": 1,
+      "duration_minutes": 397,
+      "lessons": [
+        {
+          "lesson_key": "introduction-to-azure-virtual-machines",
+          "title": "Introduction to Azure virtual machines",
+          "order": 1,
+          "duration_minutes": 67,
+          "content_md": "Learn about the decisions you make before creating a virtual machine, the options to create and manage the VM, and the extensions and services you use to manage your VM.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-azure-virtual-machines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure virtual machines",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-azure-virtual-machines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "plan-your-linux-environment-in-azure",
+          "title": "Plan your Linux environment in Azure",
+          "order": 2,
+          "duration_minutes": 35,
+          "content_md": "Learn about standards and practices for planning, deploying, managing, and optimizing Linux VMs in Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/plan-your-linux-environment-in-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan your Linux environment in Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/plan-your-linux-environment-in-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "provision-linux-virtual-machine-in-azure",
+          "title": "Provisioning a Linux virtual machine in Microsoft Azure",
+          "order": 3,
+          "duration_minutes": 79,
+          "content_md": "Learn about different methods of provisioning Linux virtual machines in Microsoft Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/provision-linux-virtual-machine-in-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Provisioning a Linux virtual machine in Microsoft Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/provision-linux-virtual-machine-in-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "create-a-windows-vm-in-azure",
+          "title": "Create a Windows virtual machine in Azure",
+          "order": 4,
+          "duration_minutes": 51,
+          "content_md": "Learn to create an Azure virtual machine in minutes that can be used like a local physical desktop or server.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-windows-virtual-machine-in-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create a Windows virtual machine in Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-windows-virtual-machine-in-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "manage-vms-with-azure-cli",
+          "title": "Manage virtual machines with the Azure CLI",
+          "order": 5,
+          "duration_minutes": 51,
+          "content_md": "Learn how to use the cross-platform Azure CLI to create, start, stop, and perform other management tasks related to virtual machines in Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-virtual-machines-with-azure-cli/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage virtual machines with the Azure CLI",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-virtual-machines-with-azure-cli/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-create-resource-manager-template-vs-code",
+          "title": "Deploy Azure infrastructure by using JSON ARM templates",
+          "order": 6,
+          "duration_minutes": 43,
+          "content_md": "Write JSON Azure Resource Manager templates by using Visual Studio Code to deploy your infrastructure to Azure consistently and reliably.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-azure-resource-manager-template-vs-code/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy Azure infrastructure by using JSON ARM templates",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-azure-resource-manager-template-vs-code/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "add-and-size-disks-in-azure-virtual-machines",
+          "title": "Add and size disks in Azure virtual machines",
+          "order": 7,
+          "duration_minutes": 36,
+          "content_md": "Learn about your virtual machine storage options and how to choose between standard and premium, managed and unmanaged disks for your Azure virtual machine.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/add-and-size-disks-in-azure-virtual-machines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Add and size disks in Azure virtual machines",
+              "url": "https://learn.microsoft.com/en-us/training/modules/add-and-size-disks-in-azure-virtual-machines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-monitor-azure-vm-using-diagnostic-data",
+          "title": "Monitor your Azure virtual machines with Azure Monitor",
+          "order": 8,
+          "duration_minutes": 35,
+          "content_md": "Learn how to monitor your Azure VMs by using Azure Monitor to collect and analyze VM host and client metrics and logs.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Monitor your Azure virtual machines with Azure Monitor",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-administer-infrastructure-resources-in-azure",
+          "title": "Laboratorio opcional: aplica Administer infrastructure resources in Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Administer infrastructure resources in Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

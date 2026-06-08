@@ -1,0 +1,93 @@
+{
+  "certification_code": "learn-wwl-implement-operational-databases-in-micro",
+  "track": "azure",
+  "title": "Implement operational databases in Microsoft Fabric",
+  "summary": "Learn how to work with operational databases in Microsoft Fabric.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 213,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-operational-databases-in-microsoft-fabric/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "learn-wwl-implement-operational-databases-in-microsoft-fabri",
+      "title": "Implement operational databases in Microsoft Fabric",
+      "summary": "Learn how to work with operational databases in Microsoft Fabric.",
+      "order": 1,
+      "duration_minutes": 213,
+      "lessons": [
+        {
+          "lesson_key": "learn-wwl-get-started-sql-database-microsoft-fabric",
+          "title": "Get started with SQL Database in Microsoft Fabric",
+          "order": 1,
+          "duration_minutes": 70,
+          "content_md": "Learn how SQL Database in Microsoft Fabric works, the key concepts, and practical examples to help users SQL Database effectively as part of their analytics solutions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/get-started-sql-database-microsoft-fabric/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Get started with SQL Database in Microsoft Fabric",
+              "url": "https://learn.microsoft.com/en-us/training/modules/get-started-sql-database-microsoft-fabric/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-wwl-get-started-with-graphql-microsoft-fabric",
+          "title": "Get started with GraphQL in Microsoft Fabric",
+          "order": 2,
+          "duration_minutes": 61,
+          "content_md": "Learn how GraphQL in Microsoft Fabric works, the key concepts, and practical examples to help users integrate their applications with GraphQL effectively as part of their solutions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/get-started-with-graphql-microsoft-fabric/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Get started with GraphQL in Microsoft Fabric",
+              "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-graphql-microsoft-fabric/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-use-data-factory-pipelines-fabric",
+          "title": "Orchestrate processes and data movement with Microsoft Fabric",
+          "order": 3,
+          "duration_minutes": 82,
+          "content_md": "Use Data Factory pipelines in Microsoft Fabric\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/use-data-factory-pipelines-fabric/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Orchestrate processes and data movement with Microsoft Fabric",
+              "url": "https://learn.microsoft.com/en-us/training/modules/use-data-factory-pipelines-fabric/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-learn-wwl-implement-operational-databases-in-microsoft-fabri",
+          "title": "Laboratorio opcional: aplica Implement operational databases in Microsoft Fabric",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement operational databases in Microsoft Fabric**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

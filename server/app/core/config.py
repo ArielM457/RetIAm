@@ -27,6 +27,18 @@ class Settings(BaseSettings):
     supabase_exam_attempts_table: str = "exam_attempts"
     supabase_certificates_table: str = "certificates"
     supabase_integrity_events_table: str = "integrity_events"
+    supabase_courses_table: str = "courses"
+    supabase_course_sections_table: str = "course_sections"
+    supabase_course_lessons_table: str = "course_lessons"
+    supabase_course_labs_table: str = "course_labs"
+    supabase_lesson_completions_table: str = "lesson_completions"
+    supabase_lesson_chat_messages_table: str = "lesson_chat_messages"
+    supabase_lesson_chunks_table: str = "lesson_chunks"
+    # Embeddings para el RAG (Supabase pgvector). multilingual-e5-large = 1024 dim,
+    # multilingue, gratis y soportado por fastembed (usa prefijos query:/passage:).
+    # Si cambias a un modelo de otra dimension, ajusta vector(1024) en supabase/schema.sql.
+    embedding_model: str = "intfloat/multilingual-e5-large"
+    embedding_dim: int = 1024
 
     public_email_domains: str = (
         "gmail.com,hotmail.com,outlook.com,yahoo.com,icloud.com,live.com"
@@ -35,6 +47,7 @@ class Settings(BaseSettings):
     azure_foundry_project: str | None = None
     azure_foundry_deployment: str | None = None
     azure_foundry_api_key: str | None = None
+    azure_foundry_api_version: str = "2024-10-21"
     azure_search_endpoint: str | None = None
     azure_search_key: str | None = None
     azure_search_index: str | None = None

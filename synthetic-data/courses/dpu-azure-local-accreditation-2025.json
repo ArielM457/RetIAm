@@ -1,0 +1,108 @@
+{
+  "certification_code": "dpu-azure-local-accreditation-2025",
+  "track": "azure",
+  "title": "Azure Local Accreditation 2025",
+  "summary": "This Learning Path introduces Azure Local, beginning with foundational concepts and progressing into the core technical principles of hyperconverged infrastructure. You’ll explore how Azure Local enables organizations to run virtualized workloads on-premises using tools and technologies that are familiar to IT professionals. This Learning Path also highlights key capabilities and deployment considerations to help you better understand how Azure Local fits into modern hybrid infrastructure strategies.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 70,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/azure-local-accreditation-2025/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "dpu-azure-local-accreditation-2025",
+      "title": "Azure Local Accreditation 2025",
+      "summary": "This Learning Path introduces Azure Local, beginning with foundational concepts and progressing into the core technical principles of hyperconverged infrastructure. You’ll explore how Azure Local enables organizations to run virtualized workloads on-premises using tools and technologies that are familiar to IT professionals. This Learning Path also highlights key capabilities and deployment considerations to help you better understand how Azure Local fits into modern hybrid infrastructure strategies.",
+      "order": 1,
+      "duration_minutes": 70,
+      "lessons": [
+        {
+          "lesson_key": "dpu-azure-local",
+          "title": "Introduction to Azure Local",
+          "order": 1,
+          "duration_minutes": 15,
+          "content_md": "In this module, you’ll learn how Azure Local helps you run virtual machines on-premises using hyperconverged infrastructure. You’ll also discover how you can use Azure services for centralized management, monitoring, and backup.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-local/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure Local",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-local/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "dpu-hci-stack",
+          "title": "Hyperconverged Infrastructure (HCI) Stack",
+          "order": 2,
+          "duration_minutes": 15,
+          "content_md": "In this module, you'll learn how Azure Local functions, how it integrates with hybrid environments, and how deployment and management work using standard tools.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/hci-stack/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Hyperconverged Infrastructure (HCI) Stack",
+              "url": "https://learn.microsoft.com/en-us/training/modules/hci-stack/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "dpu-hybrid-cloud-integration-with-azure-local",
+          "title": "Hybrid cloud integration with Azure Local",
+          "order": 3,
+          "duration_minutes": 18,
+          "content_md": "In this module, you'll learn how Azure Local enables organizations to run virtual machines, containers, and cloud services on-premises while integrating with Azure for centralized management and security. You'll explore technical features such as hybrid cloud connectivity, resource organization, automated updates, container orchestration with AKS, and multi-layered security protections.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/hybrid-cloud-integration-with-azure-local/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Hybrid cloud integration with Azure Local",
+              "url": "https://learn.microsoft.com/en-us/training/modules/hybrid-cloud-integration-with-azure-local/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "dpu-operate-hybrid-infrastructure-with-azure-local",
+          "title": "Operate hybrid infrastructure with Azure Local",
+          "order": 4,
+          "duration_minutes": 22,
+          "content_md": "Learn how to manage and operate hybrid infrastructure using Azure Local with familiar tools like Windows Admin Center, PowerShell, and Azure Arc.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/operate-hybrid-infrastructure-with-azure-local/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Operate hybrid infrastructure with Azure Local",
+              "url": "https://learn.microsoft.com/en-us/training/modules/operate-hybrid-infrastructure-with-azure-local/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-dpu-azure-local-accreditation-2025",
+          "title": "Laboratorio opcional: aplica Azure Local Accreditation 2025",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Azure Local Accreditation 2025**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

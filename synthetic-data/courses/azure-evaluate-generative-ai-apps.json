@@ -1,0 +1,78 @@
+{
+  "certification_code": "azure-evaluate-generative-ai-apps",
+  "track": "azure",
+  "title": "Evaluate generative AI applications",
+  "summary": "Explore how to evaluate generative AI applications.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 96,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/evaluate-generative-ai-apps/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "azure-evaluate-generative-ai-apps",
+      "title": "Evaluate generative AI applications",
+      "summary": "Explore how to evaluate generative AI applications.",
+      "order": 1,
+      "duration_minutes": 96,
+      "lessons": [
+        {
+          "lesson_key": "evaluate-generative-ai-apps",
+          "title": "Evaluating generative AI applications",
+          "order": 1,
+          "duration_minutes": 38,
+          "content_md": "Learn the fundamental concepts of evaluating generative AI applications.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/evaluate-generative-ai-apps/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Evaluating generative AI applications",
+              "url": "https://learn.microsoft.com/en-us/training/modules/evaluate-generative-ai-apps/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "run-evaluations-generate-synthetic-datasets",
+          "title": "Run evaluations and generate synthetic datasets",
+          "order": 2,
+          "duration_minutes": 58,
+          "content_md": "Learn how to run evaluations and generate synthetic datasets with the Azure AI Evaluation SDK.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/run-evaluations-generate-synthetic-datasets/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Run evaluations and generate synthetic datasets",
+              "url": "https://learn.microsoft.com/en-us/training/modules/run-evaluations-generate-synthetic-datasets/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-azure-evaluate-generative-ai-apps",
+          "title": "Laboratorio opcional: aplica Evaluate generative AI applications",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Evaluate generative AI applications**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

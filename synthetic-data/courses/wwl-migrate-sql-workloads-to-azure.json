@@ -1,0 +1,168 @@
+{
+  "certification_code": "wwl-migrate-sql-workloads-to-azure",
+  "track": "azure",
+  "title": "Migrate SQL Server workloads to Azure SQL",
+  "summary": "Learn how to perform online and offline SQL Server migrations to Azure SQL. (DP-3001)",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 550,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/migrate-sql-workloads-azure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-migrate-sql-workloads-to-azure",
+      "title": "Migrate SQL Server workloads to Azure SQL",
+      "summary": "Learn how to perform online and offline SQL Server migrations to Azure SQL. (DP-3001)",
+      "order": 1,
+      "duration_minutes": 550,
+      "lessons": [
+        {
+          "lesson_key": "wwl-introduction-data-platform-modernization",
+          "title": "Design a SQL Server migration strategy",
+          "order": 1,
+          "duration_minutes": 32,
+          "content_md": "Design a SQL Server migration strategy\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-data-platform-modernization/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Design a SQL Server migration strategy",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-data-platform-modernization/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-assess-sql-server-databases-for-migration-to-azure-sql",
+          "title": "Assess SQL Server databases for migration to Azure SQL",
+          "order": 2,
+          "duration_minutes": 45,
+          "content_md": "Learn multiple assessment tools that facilitate the migration of databases to Azure, including SQL Server enabled by Azure Arc, Azure Migrate, and Azure Database Migration Service.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/assess-sql-server-databases-for-migration-to-azure-sql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Assess SQL Server databases for migration to Azure SQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/assess-sql-server-databases-for-migration-to-azure-sql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-deploy-iaas-solutions-with-azure-sql",
+          "title": "Deploy IaaS solutions with Azure SQL",
+          "order": 3,
+          "duration_minutes": 86,
+          "content_md": "Deploy IaaS solutions with Azure SQL\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-iaas-solutions-with-azure-sql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy IaaS solutions with Azure SQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-iaas-solutions-with-azure-sql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-deploy-paas-solutions-with-azure-sql",
+          "title": "Deploy PaaS solutions with Azure SQL",
+          "order": 4,
+          "duration_minutes": 89,
+          "content_md": "Deploy PaaS solutions with Azure SQL\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-paas-solutions-with-azure-sql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy PaaS solutions with Azure SQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-paas-solutions-with-azure-sql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-wwl-migrate-sql-workloads-azure-virtual-machines",
+          "title": "Migrate SQL Server workloads to Azure Virtual Machine",
+          "order": 5,
+          "duration_minutes": 65,
+          "content_md": "Discover the tools and features available to migrate SQL workloads from on-premises to Azure Virtual Machines (VMs).\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-sql-workloads-azure-virtual-machines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate SQL Server workloads to Azure Virtual Machine",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-sql-workloads-azure-virtual-machines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-wwl-migrate-sql-workloads-azure-sql-databases",
+          "title": "Migrate SQL Server workloads to Azure SQL Database",
+          "order": 6,
+          "duration_minutes": 78,
+          "content_md": "Learn the essentials of Azure SQL Database deployment and migration. Explore its benefits, exclusive features, and migration options while optimizing performance and application connections for a smooth transition to the cloud.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-sql-workloads-azure-sql-databases/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate SQL Server workloads to Azure SQL Database",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-sql-workloads-azure-sql-databases/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-wwl-migrate-sql-workloads-azure-managed-instances",
+          "title": "Migrate SQL Server workloads to Azure SQL Managed Instance",
+          "order": 7,
+          "duration_minutes": 69,
+          "content_md": "Migrate SQL Server workloads to Azure SQL Managed Instance\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-sql-workloads-azure-managed-instances/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate SQL Server workloads to Azure SQL Managed Instance",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-sql-workloads-azure-managed-instances/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-wwl-perform-post-migration-tasks-azure-sql",
+          "title": "Perform post-migration tasks on Azure SQL",
+          "order": 8,
+          "duration_minutes": 86,
+          "content_md": "Learn post-migration tasks and the tools available to configure automation, high availability and disaster recovery, and monitoring.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/perform-post-migration-tasks-azure-sql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Perform post-migration tasks on Azure SQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/perform-post-migration-tasks-azure-sql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-migrate-sql-workloads-to-azure",
+          "title": "Laboratorio opcional: aplica Migrate SQL Server workloads to Azure SQL",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Migrate SQL Server workloads to Azure SQL**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

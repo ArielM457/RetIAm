@@ -1,0 +1,123 @@
+{
+  "certification_code": "learn-wwl-develop-data-driven-app-sql-db",
+  "track": "azure",
+  "title": "Develop data-driven applications by using Azure SQL Database",
+  "summary": "Learn how to develop data-driven applications by using Microsoft Azure SQL Database. DP-3020",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 355,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/develop-data-driven-app-sql-db/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "learn-wwl-develop-data-driven-app-sql-db",
+      "title": "Develop data-driven applications by using Azure SQL Database",
+      "summary": "Learn how to develop data-driven applications by using Microsoft Azure SQL Database. DP-3020",
+      "order": 1,
+      "duration_minutes": 355,
+      "lessons": [
+        {
+          "lesson_key": "learn-wwl-get-started-sql-database-application-development",
+          "title": "Get started with Azure SQL Database for modern application development",
+          "order": 1,
+          "duration_minutes": 82,
+          "content_md": "Learn how Azure SQL Database works, the key concepts, and practical examples to help developers effectively utilize Azure SQL Database in their cloud-based applications.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/get-started-sql-database-application-development/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Get started with Azure SQL Database for modern application development",
+              "url": "https://learn.microsoft.com/en-us/training/modules/get-started-sql-database-application-development/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-wwl-develop-azure-sql-database",
+          "title": "Develop for Azure SQL Database",
+          "order": 2,
+          "duration_minutes": 72,
+          "content_md": "Learn how to create and configure an Azure SQL Database. You'll use SQL Database Projects in VS Code, including installing the extension, importing, and modifying a schema. Additionally, you'll build and deploy database projects in GitHub Actions and Azure Pipelines, and automate and invoke the publishing of a database.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/develop-azure-sql-database/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Develop for Azure SQL Database",
+              "url": "https://learn.microsoft.com/en-us/training/modules/develop-azure-sql-database/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-wwl-develop-data-api-azure-sql-database",
+          "title": "Develop a data API for Azure SQL Database",
+          "order": 3,
+          "duration_minutes": 65,
+          "content_md": "Learn how to create modern REST data API for Azure SQL Database. We'll delve into Data API Builder, a powerful cross-platform that simplifies the creation of endpoints for your Azure SQL Database. With features like automatic query generation, granular security controls, and seamless integration with other Azure services, the Data API Builder can effortlessly transform your database into a versatile API.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/develop-data-api-azure-sql-database/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Develop a data API for Azure SQL Database",
+              "url": "https://learn.microsoft.com/en-us/training/modules/develop-data-api-azure-sql-database/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-wwl-explore-data-manipulation-azure-sql-database",
+          "title": "Explore data manipulation options in Azure SQL Database",
+          "order": 4,
+          "duration_minutes": 65,
+          "content_md": "Learn how to invoke REST endpoints in Azure SQL Database and manipulate data using Azure Functions. Also, explore various tools and options for importing and exporting data to and from Azure SQL Database.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-data-manipulation-azure-sql-database/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore data manipulation options in Azure SQL Database",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-data-manipulation-azure-sql-database/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-wwl-explore-security-practices-azure-sql-database",
+          "title": "Explore security practices for Azure SQL Database",
+          "order": 5,
+          "duration_minutes": 71,
+          "content_md": "Learn how security works in Azure SQL Database, the key concepts, and practical examples to help developers effectively utilize Azure SQL Database in their cloud-based applications.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-security-practices-azure-sql-database/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore security practices for Azure SQL Database",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-security-practices-azure-sql-database/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-learn-wwl-develop-data-driven-app-sql-db",
+          "title": "Laboratorio opcional: aplica Develop data-driven applications by using Azure SQL Database",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Develop data-driven applications by using Azure SQL Database**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

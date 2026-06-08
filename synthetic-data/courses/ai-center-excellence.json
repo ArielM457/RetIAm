@@ -1,0 +1,93 @@
+{
+  "certification_code": "ai-center-excellence",
+  "track": "azure",
+  "title": "AI Center of Excellence",
+  "summary": "Learn about the AI Center of Excellence (AI CoE), how it centralizes information about AI adoption, operations, governance, best practices, and security.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 94,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/ai-center-excellence/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "ai-center-excellence",
+      "title": "AI Center of Excellence",
+      "summary": "Learn about the AI Center of Excellence (AI CoE), how it centralizes information about AI adoption, operations, governance, best practices, and security.",
+      "order": 1,
+      "duration_minutes": 94,
+      "lessons": [
+        {
+          "lesson_key": "introduction-generative-ai-center-excellence",
+          "title": "Introduction to the AI Center of Excellence",
+          "order": 1,
+          "duration_minutes": 29,
+          "content_md": "Learn how an AI Center of Excellence guides responsible AI adoption by setting strategy, governance guardrails, reusable patterns, intake priorities, roles, skilling, and operating practices.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-ai-center-excellence/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to the AI Center of Excellence",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-ai-center-excellence/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "workload-operations-generative-ai-center-excellence",
+          "title": "Guide AI workload operations with an AI Center of Excellence",
+          "order": 2,
+          "duration_minutes": 37,
+          "content_md": "How comprehensive operations guidance from an AI Center of Excellence can help an organization to effectively deploy, manage, and maintain AI workloads.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/guide-ai-operations-center-excellence/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Guide AI workload operations with an AI Center of Excellence",
+              "url": "https://learn.microsoft.com/en-us/training/modules/guide-ai-operations-center-excellence/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "introduction-ai-landing-zones",
+          "title": "Introduction to AI Landing Zones",
+          "order": 3,
+          "duration_minutes": 28,
+          "content_md": "Introduction to using Azure landing zones with AI workloads\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-ai-landing-zones/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to AI Landing Zones",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-ai-landing-zones/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-ai-center-excellence",
+          "title": "Laboratorio opcional: aplica AI Center of Excellence",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **AI Center of Excellence**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

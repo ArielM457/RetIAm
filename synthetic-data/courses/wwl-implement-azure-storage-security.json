@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-implement-azure-storage-security",
+  "track": "azure",
+  "title": "Implement security for Azure Storage for the cloud and AI security engineer",
+  "summary": "Implement a defense-in-depth security strategy for Azure Storage. Harden storage accounts, govern access with Microsoft Entra ID and stored access policies, enforce network perimeter controls using firewall rules and private endpoints, and enable Microsoft Defender for Storage to detect threats from malicious uploads and compromised AI agent credentials.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 100,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-azure-storage-security/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-azure-storage-security",
+      "title": "Implement security for Azure Storage for the cloud and AI security engineer",
+      "summary": "Implement a defense-in-depth security strategy for Azure Storage. Harden storage accounts, govern access with Microsoft Entra ID and stored access policies, enforce network perimeter controls using firewall rules and private endpoints, and enable Microsoft Defender for Storage to detect threats from malicious uploads and compromised AI agent credentials.",
+      "order": 1,
+      "duration_minutes": 100,
+      "lessons": [
+        {
+          "lesson_key": "wwl-describe-azure-storage-services",
+          "title": "Describe Azure storage services",
+          "order": 1,
+          "duration_minutes": 36,
+          "content_md": "Azure storage services, tiers, redundancy options, and migration options and tools.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe Azure storage services",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-storage-account-security",
+          "title": "Implement security and manage access for Azure Storage",
+          "order": 2,
+          "duration_minutes": 21,
+          "content_md": "Implement account-level security controls and access governance for Azure Storage. Configure secure transfer settings, choose appropriate authorization models, apply stored access policies for SAS lifecycle management, and enforce Shared Key disable using Azure Policy.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-storage-account-security/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement security and manage access for Azure Storage",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-storage-account-security/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-network-security-azure-storage",
+          "title": "Configure network security for Azure Storage",
+          "order": 3,
+          "duration_minutes": 21,
+          "content_md": "Configure network-layer access controls for Azure Storage accounts. Apply firewall rules, define virtual network and IP-based access, configure resource instance rules for Azure AI services, manage trusted service exceptions, and implement private endpoints to eliminate public endpoint exposure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-network-security-azure-storage/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure network security for Azure Storage",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-network-security-azure-storage/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-defender-storage",
+          "title": "Implement Microsoft Defender for Storage",
+          "order": 4,
+          "duration_minutes": 22,
+          "content_md": "Enable and configure Microsoft Defender for Storage to detect threats against Azure Blob Storage, Azure Files, and Azure Data Lake Storage. Configure activity monitoring, malware scanning with cost controls, sensitive data threat detection, and alert routing to ensure Defender outputs reach the appropriate security team.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-defender-storage/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement Microsoft Defender for Storage",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-defender-storage/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-azure-storage-security",
+          "title": "Laboratorio opcional: aplica Implement security for Azure Storage for the cloud and AI security engineer",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement security for Azure Storage for the cloud and AI security engineer**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

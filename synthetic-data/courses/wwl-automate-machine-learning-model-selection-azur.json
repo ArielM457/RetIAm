@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-automate-machine-learning-model-selection-azur",
+  "track": "azure",
+  "title": "Experiment with Azure Machine Learning",
+  "summary": "Learn how to find the best model with automated machine learning (AutoML) and by experimenting in notebooks.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 70,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/automate-machine-learning-model-selection-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-automate-machine-learning-model-selection-azure-machine",
+      "title": "Experiment with Azure Machine Learning",
+      "summary": "Learn how to find the best model with automated machine learning (AutoML) and by experimenting in notebooks.",
+      "order": 1,
+      "duration_minutes": 70,
+      "lessons": [
+        {
+          "lesson_key": "wwl-find-best-classification-model-automated-machine-learnin",
+          "title": "Find the best classification model with Automated Machine Learning",
+          "order": 1,
+          "duration_minutes": 37,
+          "content_md": "Learn how to find the best classification model with automated machine learning (AutoML). You'll use the Python SDK (v2) to configure and run an AutoML job.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/find-best-classification-model-automated-machine-learning/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Find the best classification model with Automated Machine Learning",
+              "url": "https://learn.microsoft.com/en-us/training/modules/find-best-classification-model-automated-machine-learning/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-track-model-training-jupyter-notebooks-mlflow",
+          "title": "Track model training in Jupyter notebooks with MLflow",
+          "order": 2,
+          "duration_minutes": 33,
+          "content_md": "Learn how to use MLflow for model tracking when experimenting in notebooks.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/track-model-training-jupyter-notebooks-mlflow/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Track model training in Jupyter notebooks with MLflow",
+              "url": "https://learn.microsoft.com/en-us/training/modules/track-model-training-jupyter-notebooks-mlflow/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-automate-machine-learning-model-selection-azure-machine",
+          "title": "Laboratorio opcional: aplica Experiment with Azure Machine Learning",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Experiment with Azure Machine Learning**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

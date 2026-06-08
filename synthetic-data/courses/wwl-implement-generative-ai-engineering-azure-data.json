@@ -1,0 +1,153 @@
+{
+  "certification_code": "wwl-implement-generative-ai-engineering-azure-data",
+  "track": "azure",
+  "title": "Implement Generative AI engineering with Azure Databricks",
+  "summary": "Generative Artificial Intelligence (AI) engineering with Azure Databricks uses the platform's capabilities to explore, fine-tune, evaluate, and integrate advanced language models. By using Apache Spark's scalability and Azure Databricks' collaborative environment, you can design complex AI systems.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 417,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-generative-ai-engineering-azure-databricks/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-generative-ai-engineering-azure-databricks",
+      "title": "Implement Generative AI engineering with Azure Databricks",
+      "summary": "Generative Artificial Intelligence (AI) engineering with Azure Databricks uses the platform's capabilities to explore, fine-tune, evaluate, and integrate advanced language models. By using Apache Spark's scalability and Azure Databricks' collaborative environment, you can design complex AI systems.",
+      "order": 1,
+      "duration_minutes": 417,
+      "lessons": [
+        {
+          "lesson_key": "wwl-introduction-language-models-databricks",
+          "title": "Get started with language models in Azure Databricks",
+          "order": 1,
+          "duration_minutes": 64,
+          "content_md": "Get started with language models in Azure Databricks\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-language-models-databricks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Get started with language models in Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-language-models-databricks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-retrieval-augmented-generation-azure-databricks",
+          "title": "Implement Retrieval Augmented Generation (RAG) with Azure Databricks",
+          "order": 2,
+          "duration_minutes": 62,
+          "content_md": "Implement Retrieval Augmented Generation (RAG) with Azure Databricks\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/retrieval-augmented-generation-azure-databricks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement Retrieval Augmented Generation (RAG) with Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/retrieval-augmented-generation-azure-databricks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-multistage-reasoning-azure-databricks",
+          "title": "Implement multi-stage reasoning in Azure Databricks",
+          "order": 3,
+          "duration_minutes": 68,
+          "content_md": "Implement multi-stage reasoning in Azure Databricks\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/multistage-reasoning-azure-databricks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement multi-stage reasoning in Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/multistage-reasoning-azure-databricks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-fine-tune-azure-databricks",
+          "title": "Fine-tune language models with Azure Databricks",
+          "order": 4,
+          "duration_minutes": 55,
+          "content_md": "Fine-tune language models with Azure Databricks\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/fine-tune-azure-databricks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Fine-tune language models with Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/fine-tune-azure-databricks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-evaluate-language-models-azure-databricks",
+          "title": "Evaluate language models with Azure Databricks",
+          "order": 5,
+          "duration_minutes": 62,
+          "content_md": "Evaluate language models with Azure Databricks\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/evaluate-language-models-azure-databricks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Evaluate language models with Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/evaluate-language-models-azure-databricks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-responsible-language-models-azure-databricks",
+          "title": "Review responsible AI principles for language models in Azure Databricks",
+          "order": 6,
+          "duration_minutes": 43,
+          "content_md": "Review responsible AI principles for language models in in Azure Databricks\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/responsible-language-models-azure-databricks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Review responsible AI principles for language models in Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/responsible-language-models-azure-databricks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-llmops-azure-databricks",
+          "title": "Implement LLMOps in Azure Databricks",
+          "order": 7,
+          "duration_minutes": 63,
+          "content_md": "Implement LLMOps in Azure Databricks\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-llmops-azure-databricks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement LLMOps in Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-llmops-azure-databricks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-generative-ai-engineering-azure-databricks",
+          "title": "Laboratorio opcional: aplica Implement Generative AI engineering with Azure Databricks",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement Generative AI engineering with Azure Databricks**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

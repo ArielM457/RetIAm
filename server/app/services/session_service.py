@@ -4,6 +4,7 @@ from fastapi import HTTPException
 
 from app.core.config import get_settings
 from app.db.supabase import get_supabase_service_client
+from app.integrations.foundry_adapter import run_agent
 from app.models.certification import ResourceReference
 from app.models.session import (
     EvaluationSubmissionRequest,
@@ -15,9 +16,28 @@ from app.models.session import (
     SessionSurveyRequest,
     StartLearningSessionRequest,
 )
+from app.services import rag_service
 from app.services._shared import response_data
+from app.services.assessment_service import PASS_THRESHOLD, generate_quiz_questions, grade_lab
 from app.services.profile_service import ensure_profile_for_user
 from app.services.team_service import _get_team_record
+
+
+def _plan_certification(plan: dict) -> str:
+    return plan.get("target_certification", "AZ-900")
+
+
+def _sanitize_evaluation(evaluation: dict) -> dict:
+    """Copia de evaluation sin filtrar las respuestas correctas del quiz al cliente."""
+    if not evaluation:
+        return {}
+    sanitized = dict(evaluation)
+    quiz_questions = sanitized.get("quiz_questions")
+    if isinstance(quiz_questions, list):
+        sanitized["quiz_questions"] = [
+            {k: v for k, v in q.items() if k != "correct_option_index"} for q in quiz_questions
+        ]
+    return sanitized
 
 
 def _get_plan_for_user(plan_id: str, user_id: str) -> dict:
@@ -101,7 +121,8 @@ def _require_mandatory_passed(session: dict) -> None:
 def start_learning_session(auth_user: object, payload: StartLearningSessionRequest) -> LearningSessionResponse:
     settings = get_settings()
     profile = ensure_profile_for_user(auth_user)
-    _get_plan_for_user(payload.plan_id, profile.id)
+    plan = _get_plan_for_user(payload.plan_id, profile.id)
+    certification = _plan_certification(plan)
 
     resources = _build_resources(payload.section_title)
     mandatory_question = SessionQuestion(
@@ -109,6 +130,17 @@ def start_learning_session(auth_user: object, payload: StartLearningSessionReque
         answer=f"El concepto central de {payload.section_title} debe vincularse con el objetivo de la certificacion y la practica del modulo.",
         source=resources[0].source,
     )
+
+    # Para teoria/quiz generamos un quiz real (Gini Eval o banco) calificado en servidor.
+    initial_evaluation: dict = {}
+    if payload.session_type in {"theory", "quiz"}:
+        quiz_questions, quiz_source_mode = generate_quiz_questions(
+            certification, payload.section_title, None, n=4, section_id=payload.section_id
+        )
+        initial_evaluation = {
+            "quiz_questions": quiz_questions,
+            "quiz_source_mode": quiz_source_mode,
+        }
 
     response = (
         get_supabase_service_client()
@@ -124,7 +156,7 @@ def start_learning_session(auth_user: object, payload: StartLearningSessionReque
                 "resources": [item.model_dump() for item in resources],
                 "mandatory_question": mandatory_question.model_dump(),
                 "free_questions": [],
-                "evaluation": {},
+                "evaluation": initial_evaluation,
             }
         )
         .execute()
@@ -140,7 +172,7 @@ def start_learning_session(auth_user: object, payload: StartLearningSessionReque
         resources=resources,
         mandatory_question=mandatory_question,
         free_questions=[],
-        evaluation={},
+        evaluation=_sanitize_evaluation(data.get("evaluation") or {}),
         started_at=data["started_at"],
         completed_at=data.get("completed_at"),
     )
@@ -161,7 +193,7 @@ def get_learning_session(auth_user: object, session_id: str) -> LearningSessionR
         if data.get("mandatory_question")
         else None,
         free_questions=data.get("free_questions") or [],
-        evaluation=data.get("evaluation") or {},
+        evaluation=_sanitize_evaluation(data.get("evaluation") or {}),
         survey=data.get("survey"),
         started_at=data.get("started_at"),
         completed_at=data.get("completed_at"),
@@ -200,12 +232,44 @@ def answer_free_question(auth_user: object, session_id: str, payload: FreeQuesti
     settings = get_settings()
     profile = ensure_profile_for_user(auth_user)
     session = _get_session(session_id, profile.id)
+    section_title = session.get("section_title", "el modulo actual")
+    plan = _get_plan_for_user(session["plan_id"], profile.id)
+    certification = _plan_certification(plan)
+
+    # Fundamentado con RAG (mismo mecanismo que el tutor por leccion).
+    chunks = rag_service.retrieve(certification, payload.question, k=5)
+    source = (chunks[0].get("source_url") if chunks else None) or "rag"
+
+    if chunks:
+        context_text = "\n\n".join(c.get("content", "") for c in chunks)
+        prompt = (
+            f"Responde la duda del alumno sobre «{section_title}» USANDO SOLO el contexto del "
+            "curso. Si no está en el contexto, dilo y no inventes.\n\n"
+            f"CONTEXTO:\n{context_text}\n\nPregunta: {payload.question}\n\n"
+            "Responde en español, claro y conciso (máx 150 palabras)."
+        )
+        result = run_agent("gini-eval", prompt, temperature=0.2, max_tokens=500, ground=False)
+        if result:
+            answer_text = result["text"]
+            source_mode = "foundry"
+        else:
+            top = chunks[0].get("content", "")
+            answer_text = f"Según el material del curso:\n\n{top[:500]}" + ("…" if len(top) > 500 else "")
+            source_mode = "mock"
+    else:
+        answer_text = (
+            "No encuentro material indexado para responder esa pregunta con seguridad. "
+            "Revisa las fuentes oficiales de la sección."
+        )
+        source_mode = "mock"
+
     free_questions = session.get("free_questions") or []
     free_questions.append(
         {
             "question": payload.question,
-            "answer": "Respuesta sintetica basada en la fuente principal del modulo actual.",
-            "source": (session.get("resources") or [{}])[0].get("source", "synthetic.md"),
+            "answer": answer_text,
+            "source": source,
+            "source_mode": source_mode,
         }
     )
     get_supabase_service_client().table(settings.supabase_learning_sessions_table).update(
@@ -220,35 +284,46 @@ def submit_session_evaluation(auth_user: object, session_id: str, payload: Evalu
     session = _get_session(session_id, profile.id)
     _require_mandatory_passed(session)
     evaluation = session.get("evaluation") or {}
-    pass_threshold = 70
 
     if payload.lab_solution_summary:
-        summary_size = len(payload.lab_solution_summary.strip())
-        score = 90 if summary_size >= 200 else 78 if summary_size >= 90 else 60
-        passed = score >= pass_threshold
-        evaluation["lab"] = {
-            "score": score,
-            "passed": passed,
-            "feedback": (
-                "La solucion cumple el objetivo principal y demuestra criterio tecnico suficiente."
-                if passed
-                else "La solucion aun no demuestra dominio suficiente. Conviene reforzar el recurso principal y reintentar."
-            ),
-            "criteria": {
-                "functionality": min(40, max(20, score - 35)),
-                "clarity": min(30, max(15, score - 45)),
-                "best_practices": min(30, max(15, score - 40)),
-            },
-        }
+        lab_result = grade_lab(
+            session.get("section_title", "la seccion"),
+            instructions=None,
+            solution_summary=payload.lab_solution_summary,
+            rubric=None,
+        )
+        passed = lab_result["passed"]
+        evaluation["lab"] = lab_result
     else:
-        answers = payload.answers or []
-        total = max(1, len(answers))
-        score = int((sum(1 for item in answers if item.get("is_correct")) / total) * 100)
-        passed = score >= pass_threshold
+        quiz_questions = evaluation.get("quiz_questions") or []
+        correct_by_id = {q["question_id"]: q.get("correct_option_index") for q in quiz_questions}
+        submitted = payload.quiz_answers or []
+        if not submitted and payload.answers:
+            # Compat: aceptar [{question_id, selected_option_index}] en answers.
+            submitted = [
+                type("A", (), {"question_id": a.get("question_id"), "selected_option_index": a.get("selected_option_index")})()
+                for a in payload.answers
+                if a.get("question_id") is not None and a.get("selected_option_index") is not None
+            ]
+        if quiz_questions:
+            total = len(quiz_questions)
+            correct = sum(
+                1
+                for answer in submitted
+                if correct_by_id.get(answer.question_id) == answer.selected_option_index
+            )
+        else:
+            # Sin banco almacenado: no se puede calificar de forma confiable.
+            total = max(1, len(submitted))
+            correct = 0
+        score = int((correct / max(1, total)) * 100)
+        passed = score >= PASS_THRESHOLD
         evaluation["quiz"] = {
             "score": score,
             "passed": passed,
             "total_questions": total,
+            "correct_answers": correct,
+            "source_mode": evaluation.get("quiz_source_mode", "mock"),
         }
 
     completed_at = datetime.now(timezone.utc).isoformat() if passed else None

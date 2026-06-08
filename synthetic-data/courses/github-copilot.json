@@ -1,0 +1,183 @@
+{
+  "certification_code": "github-copilot",
+  "track": "github",
+  "title": "GitHub Copilot Fundamentals Part 1 of 2",
+  "summary": "Empower individual developers and businesses to enhance their productivity and foster innovation through a comprehensive exploration of the fundamental concepts of GitHub Copilot. Additionally, gain valuable insights on how to initiate the implementation of GitHub Copilot within your organization, enabling you to kickstart your own transformative journey. This is learning path is split into two and this is part one of two.",
+  "provider": "GitHub",
+  "level": "basic",
+  "total_duration_minutes": 312,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/copilot/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "github-copilot",
+      "title": "GitHub Copilot Fundamentals Part 1 of 2",
+      "summary": "Empower individual developers and businesses to enhance their productivity and foster innovation through a comprehensive exploration of the fundamental concepts of GitHub Copilot. Additionally, gain valuable insights on how to initiate the implementation of GitHub Copilot within your organization, enabling you to kickstart your own transformative journey. This is learning path is split into two and this is part one of two.",
+      "order": 1,
+      "duration_minutes": 312,
+      "lessons": [
+        {
+          "lesson_key": "github-responsible-ai-with-github-copilot",
+          "title": "Responsible AI with GitHub Copilot",
+          "order": 1,
+          "duration_minutes": 15,
+          "content_md": "This module explores the responsible use of AI in the context of GitHub Copilot, a generative AI tool for developers. It will equip you with the knowledge and skills to leverage Copilot effectively while mitigating potential ethical and operational risks associated with AI usage.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/responsible-ai-with-github-copilot/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Responsible AI with GitHub Copilot",
+              "url": "https://learn.microsoft.com/en-us/training/modules/responsible-ai-with-github-copilot/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-introduction-to-github-copilot",
+          "title": "Introduction to GitHub Copilot",
+          "order": 2,
+          "duration_minutes": 19,
+          "content_md": "GitHub Copilot is an AI-powered coding assistant that helps you write, understand, refactor, and maintain code directly from your editor and chat interface.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to GitHub Copilot",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-introduction-prompt-engineering-with-github-copilot",
+          "title": "Introduction to prompt engineering with GitHub Copilot",
+          "order": 3,
+          "duration_minutes": 30,
+          "content_md": "This module highlights the basic core principles of prompt engineering and explains the best practices to create prompts quickly and effectively in GitHub Copilot. Learn the strategies that transform comments into precise code, identify the steps within GitHub Copilot's prompt processing flow, and gain an understanding of the important role that Large Language Models (LLMs) play in enhancing suggestion quality. Discover advanced techniques like role prompting and chat history management to accelerate development workflows and optimize resource usage.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-prompt-engineering-with-github-copilot/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to prompt engineering with GitHub Copilot",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-prompt-engineering-with-github-copilot/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-copilot-spaces",
+          "title": "Introduction to Copilot Spaces",
+          "order": 4,
+          "duration_minutes": 31,
+          "content_md": "Learn how to use GitHub Copilot Spaces to get context-aware, reliable answers, configure custom instructions, and optimize interactions for repositories, issues, and pull requests.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-copilot-spaces/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Copilot Spaces",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-copilot-spaces/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "advanced-github-copilot",
+          "title": "Using advanced GitHub Copilot features",
+          "order": 5,
+          "duration_minutes": 22,
+          "content_md": "Use advanced features of GitHub Copilot with Visual Studio Code to make changes and updates to a Python application.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/advanced-github-copilot/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Using advanced GitHub Copilot features",
+              "url": "https://learn.microsoft.com/en-us/training/modules/advanced-github-copilot/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-github-copilot-across-environments",
+          "title": "GitHub Copilot Across Environments: IDE, Chat, GitHub.com, and Command Line Techniques",
+          "order": 6,
+          "duration_minutes": 48,
+          "content_md": "GitHub Copilot Across Environments: IDE, Chat, GitHub.com, and Command Line Techniques explore the versatile integration of GitHub's AI-powered coding assistance across your entire development workflow. It covers effective use of Copilot's auto-suggestions and multiple panes in IDEs, using natural language interactions in Copilot Chat, and streamlining command-line workflows. The guide delves into optimizing prompts, understanding context-aware code generation, and customizing Copilot's behavior to accelerate code changes and automate routine development tasks across different coding environments.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "GitHub Copilot Across Environments: IDE, Chat, GitHub.com, and Command Line Techniques",
+              "url": "https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-github-copilot-management-and-customizations",
+          "title": "Management and customization considerations with GitHub Copilot",
+          "order": 7,
+          "duration_minutes": 30,
+          "content_md": "Management and customization control are a vital part of using an AI pair programming tool. With a better understanding of the GitHub Copilot plans and their associated features, you can select the right fit for your organization's needs.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/github-copilot-management-and-customizations/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Management and customization considerations with GitHub Copilot",
+              "url": "https://learn.microsoft.com/en-us/training/modules/github-copilot-management-and-customizations/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-developer-use-cases-for-ai-with-github-copilot",
+          "title": "Developer use cases for AI with GitHub Copilot",
+          "order": 8,
+          "duration_minutes": 49,
+          "content_md": "Developer Uses Cases for AI with GitHub Copilot explores ways developers can apply AI using GitHub Copilot to enhance productivity, ultimately enabling teams to save time, improve code quality, and boost developer satisfaction.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/developer-use-cases-for-ai-with-github-copilot/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Developer use cases for AI with GitHub Copilot",
+              "url": "https://learn.microsoft.com/en-us/training/modules/developer-use-cases-for-ai-with-github-copilot/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-develop-unit-tests-using-github-copilot-tools",
+          "title": "Develop unit tests using GitHub Copilot tools",
+          "order": 9,
+          "duration_minutes": 68,
+          "content_md": "This module explores using GitHub Copilot and GitHub Copilot Chat to create unit tests. Exercises provide practical experience creating unit test projects and running unit tests in Visual Studio Code.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/develop-unit-tests-using-github-copilot-tools/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Develop unit tests using GitHub Copilot tools",
+              "url": "https://learn.microsoft.com/en-us/training/modules/develop-unit-tests-using-github-copilot-tools/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-github-copilot",
+          "title": "Laboratorio opcional: aplica GitHub Copilot Fundamentals Part 1 of 2",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **GitHub Copilot Fundamentals Part 1 of 2**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

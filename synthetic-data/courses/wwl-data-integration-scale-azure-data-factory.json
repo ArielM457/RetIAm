@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-data-integration-scale-azure-data-factory",
+  "track": "azure",
+  "title": "Data integration at scale with Azure Data Factory or Azure Synapse Pipeline",
+  "summary": "Data integration at scale with Azure Data Factory or Azure Synapse Pipeline",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 278,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/data-integration-scale-azure-data-factory/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-data-integration-scale-azure-data-factory",
+      "title": "Data integration at scale with Azure Data Factory or Azure Synapse Pipeline",
+      "summary": "Data integration at scale with Azure Data Factory or Azure Synapse Pipeline",
+      "order": 1,
+      "duration_minutes": 278,
+      "lessons": [
+        {
+          "lesson_key": "wwl-integrate-data-azure-data-factory",
+          "title": "Integrate data with Azure Data Factory",
+          "order": 1,
+          "duration_minutes": 62,
+          "content_md": "Integrate data with Azure Data Factory\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/data-integration-azure-data-factory/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Integrate data with Azure Data Factory",
+              "url": "https://learn.microsoft.com/en-us/training/modules/data-integration-azure-data-factory/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-petabyte-scale-ingestion-azure-data-factory",
+          "title": "Petabyte-scale ingestion with Azure Data Factory",
+          "order": 2,
+          "duration_minutes": 43,
+          "content_md": "Petabyte-scale ingestion with Azure Data Factory\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/petabyte-scale-ingestion-azure-data-factory/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Petabyte-scale ingestion with Azure Data Factory",
+              "url": "https://learn.microsoft.com/en-us/training/modules/petabyte-scale-ingestion-azure-data-factory/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-perform-code-free-transformation-scale-azure-data-factor",
+          "title": "Perform code-free transformation at scale with Azure Data Factory",
+          "order": 3,
+          "duration_minutes": 58,
+          "content_md": "Perform code-free transformation at scale with Azure Data Factory\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/code-free-transformation-scale/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Perform code-free transformation at scale with Azure Data Factory",
+              "url": "https://learn.microsoft.com/en-us/training/modules/code-free-transformation-scale/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-orchestrate-data-movement-transformation-azure-data-fact",
+          "title": "Orchestrate data movement and transformation in Azure Data Factory",
+          "order": 4,
+          "duration_minutes": 38,
+          "content_md": "Orchestrate data movement and transformation in Azure Data Factory\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/orchestrate-data-movement-transformation-azure-data-factory/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Orchestrate data movement and transformation in Azure Data Factory",
+              "url": "https://learn.microsoft.com/en-us/training/modules/orchestrate-data-movement-transformation-azure-data-factory/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-execute-existing-ssis-packages-azure-data-factory",
+          "title": "Execute existing SSIS packages in Azure Data Factory or Azure Synapse Pipeline",
+          "order": 5,
+          "duration_minutes": 24,
+          "content_md": "Execute existing SSIS packages in Azure Data Factory or Azure Synapse Pipeline\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/execute-existing-ssis-packages-azure-data-factory/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Execute existing SSIS packages in Azure Data Factory or Azure Synapse Pipeline",
+              "url": "https://learn.microsoft.com/en-us/training/modules/execute-existing-ssis-packages-azure-data-factory/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-operationalize-your-azure-data-factory-pipelines",
+          "title": "Operationalize your Azure Data Factory pipelines",
+          "order": 6,
+          "duration_minutes": 53,
+          "content_md": "Operationalize your Azure Data Factory pipelines\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/operationalize-azure-data-factory-pipelines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Operationalize your Azure Data Factory pipelines",
+              "url": "https://learn.microsoft.com/en-us/training/modules/operationalize-azure-data-factory-pipelines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-data-integration-scale-azure-data-factory",
+          "title": "Laboratorio opcional: aplica Data integration at scale with Azure Data Factory or Azure Synapse Pipeline",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Data integration at scale with Azure Data Factory or Azure Synapse Pipeline**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

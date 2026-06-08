@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-develop-solutions-that-use-blob-storage",
+  "track": "azure",
+  "title": "Develop solutions that use Blob storage",
+  "summary": "Learn how to create Azure Blob storage resources, manage data through the blob storage lifecycle, and work with containers and items by using the Azure Blob storage client library V12 for .NET.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 94,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/develop-solutions-that-use-blob-storage/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-develop-solutions-that-use-blob-storage",
+      "title": "Develop solutions that use Blob storage",
+      "summary": "Learn how to create Azure Blob storage resources, manage data through the blob storage lifecycle, and work with containers and items by using the Azure Blob storage client library V12 for .NET.",
+      "order": 1,
+      "duration_minutes": 94,
+      "lessons": [
+        {
+          "lesson_key": "wwl-explore-azure-blob-storage",
+          "title": "Explore Azure Blob storage",
+          "order": 1,
+          "duration_minutes": 20,
+          "content_md": "Learn the core features and functionality of Azure Blob storage.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-azure-blob-storage/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore Azure Blob storage",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-azure-blob-storage/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-azure-blob-storage-lifecycle",
+          "title": "Manage the Azure Blob storage lifecycle",
+          "order": 2,
+          "duration_minutes": 21,
+          "content_md": "Learn how to manage data availability throughout the Azure Blob storage lifecycle.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-azure-blob-storage-lifecycle/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage the Azure Blob storage lifecycle",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-azure-blob-storage-lifecycle/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-work-azure-blob-storage",
+          "title": "Work with Azure Blob storage",
+          "order": 3,
+          "duration_minutes": 53,
+          "content_md": "Learn how to use the Azure Blob storage client library to create and update Blob storage resources.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/work-azure-blob-storage/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Work with Azure Blob storage",
+              "url": "https://learn.microsoft.com/en-us/training/modules/work-azure-blob-storage/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-develop-solutions-that-use-blob-storage",
+          "title": "Laboratorio opcional: aplica Develop solutions that use Blob storage",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Develop solutions that use Blob storage**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

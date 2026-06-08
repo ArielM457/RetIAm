@@ -3,9 +3,11 @@ from fastapi import APIRouter
 from app.api.routes.auth import router as auth_router
 from app.api.routes.catalog import router as catalog_router
 from app.api.routes.coach import router as coach_router
+from app.api.routes.courses import router as courses_router
 from app.api.routes.exams import router as exams_router
 from app.api.routes.health import router as health_router
 from app.api.routes.learning import router as learning_router
+from app.api.routes.lessons import router as lessons_router
 from app.api.routes.manager import router as manager_router
 from app.api.routes.sessions import router as sessions_router
 from app.api.routes.suggestions import router as suggestions_router
@@ -19,8 +21,10 @@ api_router.include_router(catalog_router, tags=["catalog"])
 api_router.include_router(auth_router, prefix="/auth", tags=["auth"])
 api_router.include_router(teams_router, prefix="/teams", tags=["teams"])
 api_router.include_router(users_router, prefix="/users", tags=["users"])
+api_router.include_router(courses_router, prefix="/courses", tags=["courses"])
 api_router.include_router(learning_router, prefix="/learning", tags=["learning"])
 api_router.include_router(sessions_router, prefix="/sessions", tags=["sessions"])
+api_router.include_router(lessons_router, prefix="/lessons", tags=["lessons"])
 api_router.include_router(coach_router, prefix="/coach", tags=["coach"])
 api_router.include_router(manager_router, prefix="/manager", tags=["manager"])
 api_router.include_router(exams_router, prefix="/exams", tags=["exams"])

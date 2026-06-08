@@ -330,3 +330,191 @@ on public.suggestions
 for insert
 to authenticated
 with check (auth.uid() = user_id);
+
+-- =====================================================================
+-- Course content catalog (Fase 0 del modulo de cursos)
+-- Contenido global (no por usuario) poblado por ingesta MS Learn / plantillas.
+-- Jerarquia: courses -> course_sections -> course_lessons / course_labs.
+-- =====================================================================
+
+create table if not exists public.courses (
+    id uuid primary key default gen_random_uuid(),
+    certification_code text not null,
+    track text not null check (track in ('azure', 'aws', 'github')),
+    title text not null,
+    summary text,
+    provider text,
+    level text not null default 'basic' check (level in ('basic', 'intermediate', 'advanced')),
+    total_duration_minutes integer not null default 0,
+    source text not null default 'template' check (source in ('template', 'ms_learn', 'synthetic')),
+    source_url text,
+    created_at timestamptz not null default timezone('utc', now()),
+    updated_at timestamptz not null default timezone('utc', now())
+);
+
+create unique index if not exists courses_certification_code_idx
+on public.courses (certification_code);
+
+create table if not exists public.course_sections (
+    id uuid primary key default gen_random_uuid(),
+    course_id uuid not null references public.courses (id) on delete cascade,
+    section_key text not null,
+    title text not null,
+    summary text,
+    "order" integer not null default 1,
+    duration_minutes integer not null default 0,
+    created_at timestamptz not null default timezone('utc', now()),
+    unique (course_id, section_key)
+);
+
+create table if not exists public.course_lessons (
+    id uuid primary key default gen_random_uuid(),
+    section_id uuid not null references public.course_sections (id) on delete cascade,
+    lesson_key text not null,
+    title text not null,
+    "order" integer not null default 1,
+    duration_minutes integer not null default 0,
+    content_md text,
+    learning_objectives jsonb not null default '[]'::jsonb,
+    sources jsonb not null default '[]'::jsonb,
+    created_at timestamptz not null default timezone('utc', now()),
+    unique (section_id, lesson_key)
+);
+
+create table if not exists public.course_labs (
+    id uuid primary key default gen_random_uuid(),
+    section_id uuid not null references public.course_sections (id) on delete cascade,
+    lesson_id uuid references public.course_lessons (id) on delete set null,
+    lab_key text not null,
+    title text not null,
+    is_optional boolean not null default true,
+    estimated_minutes integer not null default 30,
+    instructions_md text,
+    rubric jsonb not null default '[]'::jsonb,
+    created_at timestamptz not null default timezone('utc', now()),
+    unique (section_id, lab_key)
+);
+
+-- Progreso por leccion (por usuario)
+create table if not exists public.lesson_completions (
+    id uuid primary key default gen_random_uuid(),
+    user_id uuid not null references public.profiles (id) on delete cascade,
+    plan_id uuid references public.study_plans (id) on delete cascade,
+    lesson_id uuid not null references public.course_lessons (id) on delete cascade,
+    session_id uuid references public.learning_sessions (id) on delete set null,
+    status text not null default 'completed' check (status in ('in_progress', 'completed')),
+    completed_at timestamptz not null default timezone('utc', now()),
+    unique (user_id, lesson_id)
+);
+
+-- Chat del tutor por leccion (Gini Eval)
+create table if not exists public.lesson_chat_messages (
+    id uuid primary key default gen_random_uuid(),
+    user_id uuid not null references public.profiles (id) on delete cascade,
+    lesson_id uuid not null references public.course_lessons (id) on delete cascade,
+    session_id uuid references public.learning_sessions (id) on delete set null,
+    role text not null check (role in ('user', 'assistant')),
+    content text not null,
+    sources jsonb not null default '[]'::jsonb,
+    suggested_questions jsonb not null default '[]'::jsonb,
+    source_mode text not null default 'mock' check (source_mode in ('mock', 'foundry')),
+    created_at timestamptz not null default timezone('utc', now())
+);
+
+create index if not exists lesson_chat_messages_lookup_idx
+on public.lesson_chat_messages (user_id, lesson_id, created_at);
+
+alter table public.courses enable row level security;
+alter table public.course_sections enable row level security;
+alter table public.course_lessons enable row level security;
+alter table public.course_labs enable row level security;
+alter table public.lesson_completions enable row level security;
+alter table public.lesson_chat_messages enable row level security;
+
+-- El catalogo de cursos es contenido global legible por cualquier usuario autenticado.
+create policy "Authenticated can read courses"
+on public.courses for select to authenticated using (true);
+
+create policy "Authenticated can read course sections"
+on public.course_sections for select to authenticated using (true);
+
+create policy "Authenticated can read course lessons"
+on public.course_lessons for select to authenticated using (true);
+
+create policy "Authenticated can read course labs"
+on public.course_labs for select to authenticated using (true);
+
+create policy "Users can read own lesson completions"
+on public.lesson_completions for select to authenticated using (auth.uid() = user_id);
+
+create policy "Users can insert own lesson completions"
+on public.lesson_completions for insert to authenticated with check (auth.uid() = user_id);
+
+create policy "Users can read own lesson chat"
+on public.lesson_chat_messages for select to authenticated using (auth.uid() = user_id);
+
+create policy "Users can insert own lesson chat"
+on public.lesson_chat_messages for insert to authenticated with check (auth.uid() = user_id);
+
+-- =====================================================================
+-- RAG con pgvector (Supabase como base vectorial)
+-- Reemplaza a Azure AI Search: el tutor recupera fragmentos reales del
+-- contenido completo de las lecciones y los pasa como contexto a GPT-4o.
+-- Dimension 1024 = BGE-M3 / multilingual-e5-large.
+-- =====================================================================
+
+create extension if not exists vector;
+
+create table if not exists public.lesson_chunks (
+    id uuid primary key default gen_random_uuid(),
+    certification_code text not null,
+    lesson_key text not null,
+    lesson_title text,
+    content text not null,
+    source_url text,
+    chunk_index integer not null default 0,
+    embedding vector(1024),
+    created_at timestamptz not null default timezone('utc', now())
+);
+
+create index if not exists lesson_chunks_cert_idx
+on public.lesson_chunks (certification_code, lesson_key);
+
+create index if not exists lesson_chunks_embedding_idx
+on public.lesson_chunks using hnsw (embedding vector_cosine_ops);
+
+alter table public.lesson_chunks enable row level security;
+
+create policy "Authenticated can read lesson chunks"
+on public.lesson_chunks for select to authenticated using (true);
+
+-- Busqueda por similitud (cosine). filter_certification = busca dentro del curso.
+create or replace function public.match_lesson_chunks(
+    query_embedding vector(1024),
+    match_count int default 5,
+    filter_certification text default null
+)
+returns table (
+    id uuid,
+    certification_code text,
+    lesson_key text,
+    lesson_title text,
+    content text,
+    source_url text,
+    similarity float
+)
+language sql stable
+as $$
+    select
+        lc.id,
+        lc.certification_code,
+        lc.lesson_key,
+        lc.lesson_title,
+        lc.content,
+        lc.source_url,
+        1 - (lc.embedding <=> query_embedding) as similarity
+    from public.lesson_chunks lc
+    where filter_certification is null or lc.certification_code = filter_certification
+    order by lc.embedding <=> query_embedding
+    limit match_count;
+$$;

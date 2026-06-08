@@ -1,0 +1,123 @@
+{
+  "certification_code": "wwl-plan-implement-data-platform-resources",
+  "track": "azure",
+  "title": "Plan and implement data platform resources",
+  "summary": "Plan and implement data platform resources",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 353,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/plan-implement-data-platform-resources/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-plan-implement-data-platform-resources",
+      "title": "Plan and implement data platform resources",
+      "summary": "Plan and implement data platform resources",
+      "order": 1,
+      "duration_minutes": 353,
+      "lessons": [
+        {
+          "lesson_key": "wwl-prepare-to-maintain-sql-databases-azure",
+          "title": "Prepare to maintain SQL Server-based databases on Azure",
+          "order": 1,
+          "duration_minutes": 31,
+          "content_md": "Prepare to maintain SQL Server-based databases on Azure\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/prepare-to-maintain-sql-databases-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Prepare to maintain SQL Server-based databases on Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/prepare-to-maintain-sql-databases-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-deploy-iaas-solutions-with-azure-sql",
+          "title": "Deploy IaaS solutions with Azure SQL",
+          "order": 2,
+          "duration_minutes": 86,
+          "content_md": "Deploy IaaS solutions with Azure SQL\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-iaas-solutions-with-azure-sql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy IaaS solutions with Azure SQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-iaas-solutions-with-azure-sql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-deploy-paas-solutions-with-azure-sql",
+          "title": "Deploy PaaS solutions with Azure SQL",
+          "order": 3,
+          "duration_minutes": 89,
+          "content_md": "Deploy PaaS solutions with Azure SQL\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-paas-solutions-with-azure-sql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy PaaS solutions with Azure SQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-paas-solutions-with-azure-sql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-wwl-migrate-sql-workloads-azure-sql-databases",
+          "title": "Migrate SQL Server workloads to Azure SQL Database",
+          "order": 4,
+          "duration_minutes": 78,
+          "content_md": "Learn the essentials of Azure SQL Database deployment and migration. Explore its benefits, exclusive features, and migration options while optimizing performance and application connections for a smooth transition to the cloud.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-sql-workloads-azure-sql-databases/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate SQL Server workloads to Azure SQL Database",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-sql-workloads-azure-sql-databases/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-wwl-migrate-sql-workloads-azure-managed-instances",
+          "title": "Migrate SQL Server workloads to Azure SQL Managed Instance",
+          "order": 5,
+          "duration_minutes": 69,
+          "content_md": "Migrate SQL Server workloads to Azure SQL Managed Instance\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-sql-workloads-azure-managed-instances/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate SQL Server workloads to Azure SQL Managed Instance",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-sql-workloads-azure-managed-instances/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-plan-implement-data-platform-resources",
+          "title": "Laboratorio opcional: aplica Plan and implement data platform resources",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Plan and implement data platform resources**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

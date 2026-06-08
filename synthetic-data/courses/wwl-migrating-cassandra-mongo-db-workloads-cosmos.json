@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-migrating-cassandra-mongo-db-workloads-cosmos",
+  "track": "azure",
+  "title": "Migrating Cassandra and MongoDB workloads to Cosmos DB",
+  "summary": "Migrating Cassandra and MongoDB workloads to Cosmos DB",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 148,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/migrate-cassandra-mongo-db-workloads-to-cosmos-db/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-migrating-cassandra-mongo-db-workloads-cosmos-db",
+      "title": "Migrating Cassandra and MongoDB workloads to Cosmos DB",
+      "summary": "Migrating Cassandra and MongoDB workloads to Cosmos DB",
+      "order": 1,
+      "duration_minutes": 148,
+      "lessons": [
+        {
+          "lesson_key": "wwl-introduction-open-source-database-migration-azure-cosmos",
+          "title": "Introduction to open source database migration to Azure Cosmos DB",
+          "order": 1,
+          "duration_minutes": 40,
+          "content_md": "Module on the use of Azure Cosmos DB as part of a migration solution.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-open-source-database-migration-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to open source database migration to Azure Cosmos DB",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-open-source-database-migration-azure-cosmos-db/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-migrate-cassandra-workloads-cosmos-db",
+          "title": "Migrate Cassandra workloads to Cosmos DB",
+          "order": 2,
+          "duration_minutes": 39,
+          "content_md": "Migrate Cassandra workloads to Cosmos DB\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-cassandra-workloads-cosmos-db/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate Cassandra workloads to Cosmos DB",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-cassandra-workloads-cosmos-db/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-migrate-premises-mongodb-databases-azure-database-mongod",
+          "title": "Migrate on-premises MongoDB databases to Cosmos DB",
+          "order": 3,
+          "duration_minutes": 69,
+          "content_md": "Migrate on-premises MongoDB databases to Cosmos DB\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-on-premises-mongodb-databases-azure-database-mongodb/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate on-premises MongoDB databases to Cosmos DB",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-on-premises-mongodb-databases-azure-database-mongodb/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-migrating-cassandra-mongo-db-workloads-cosmos-db",
+          "title": "Laboratorio opcional: aplica Migrating Cassandra and MongoDB workloads to Cosmos DB",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Migrating Cassandra and MongoDB workloads to Cosmos DB**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

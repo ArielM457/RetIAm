@@ -1,0 +1,185 @@
+<section class="page-shell catalog">
+  <!-- Hero -->
+  <header class="catalog-hero glass-card animate-fade-up">
+    <div class="hero-copy">
+      <p class="eyebrow">Catálogo RetAIM</p>
+      <h1 class="hero-title">Aprende y certifícate con <span class="gradient-text">contenido real</span></h1>
+      <p class="hero-sub">
+        Rutas fundamentadas en Microsoft Learn y documentación oficial. Elige un curso y la IA
+        arma tu plan a tu ritmo.
+      </p>
+      <div class="hero-stats" *ngIf="!loading()">
+        <div><strong>{{ courses().length }}</strong><span>cursos</span></div>
+        <div><strong>{{ trackCount()['azure'] || 0 }}</strong><span>Azure</span></div>
+        <div><strong>{{ trackCount()['github'] || 0 }}</strong><span>GitHub</span></div>
+      </div>
+    </div>
+    <div class="hero-orb" aria-hidden="true"></div>
+  </header>
+
+  <!-- Carrusel destacado -->
+  <div class="block-head" *ngIf="!loading() && featured().length">
+    <h2 class="panel-title">Destacados</h2>
+    <span class="block-hint">Desliza para explorar →</span>
+  </div>
+  <div class="shelf stagger" *ngIf="!loading() && featured().length">
+    <article
+      class="course-card featured-card"
+      *ngFor="let course of featured()"
+      (click)="openCourse(course.certification_code)"
+    >
+      <div class="course-cover" [ngClass]="coverClass(course.track)">
+        <span class="track-badge">{{ course.provider || course.track }}</span>
+      </div>
+      <div class="course-body">
+        <h3 class="course-title">{{ course.title }}</h3>
+        <p class="course-summary">{{ course.summary || 'Curso de certificación técnica.' }}</p>
+        <div class="course-meta">
+          <span class="level-pill" [ngClass]="levelClass(course.level)">{{ levelLabel(course.level) }}</span>
+          <span class="meta-row">
+            <span>{{ course.lesson_count }} lecciones</span>
+            <span class="meta-dot"></span>
+            <span>{{ formatDuration(course.total_duration_minutes) }}</span>
+          </span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- Filtros -->
+  <div class="filters" *ngIf="!loading()">
+    <input
+      class="input-pill search"
+      type="search"
+      placeholder="Buscar curso (ej. Azure Functions, GitHub Actions)…"
+      [ngModel]="query()"
+      (ngModelChange)="query.set($event)"
+    />
+    <div class="chip-row">
+      <button
+        *ngFor="let t of tracks"
+        class="chip"
+        [class.chip-active]="track() === t.key"
+        (click)="track.set(t.key)"
+      >
+        {{ t.label }}
+        <span class="chip-count" *ngIf="trackCount()[t.key === 'all' ? 'all' : t.key] as c">{{ c }}</span>
+      </button>
+    </div>
+    <div class="chip-row">
+      <button
+        *ngFor="let l of levels"
+        class="chip"
+        [class.chip-active]="level() === l.key"
+        (click)="level.set(l.key)"
+      >
+        {{ l.label }}
+      </button>
+    </div>
+  </div>
+
+  <!-- Grid de cursos -->
+  <div class="block-head" *ngIf="!loading()">
+    <h2 class="panel-title">{{ filtered().length }} cursos</h2>
+  </div>
+
+  <!-- Skeletons -->
+  <div class="course-grid" *ngIf="loading()">
+    <div class="course-card" *ngFor="let s of [1,2,3,4,5,6,7,8]">
+      <div class="skeleton" style="height: 110px"></div>
+      <div class="course-body">
+        <div class="skeleton" style="height: 18px; width: 80%; margin-bottom: 10px"></div>
+        <div class="skeleton" style="height: 12px; width: 100%; margin-bottom: 6px"></div>
+        <div class="skeleton" style="height: 12px; width: 60%"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-grid stagger" *ngIf="!loading()">
+    <article
+      class="course-card"
+      *ngFor="let course of filtered()"
+      (click)="openCourse(course.certification_code)"
+    >
+      <div class="course-cover" [ngClass]="coverClass(course.track)">
+        <span class="track-badge">{{ course.provider || course.track }}</span>
+      </div>
+      <div class="course-body">
+        <h3 class="course-title">{{ course.title }}</h3>
+        <p class="course-summary">{{ course.summary || 'Curso de certificación técnica.' }}</p>
+        <div class="course-meta">
+          <span class="level-pill" [ngClass]="levelClass(course.level)">{{ levelLabel(course.level) }}</span>
+          <span class="meta-row">
+            <span>{{ course.lesson_count }} lecciones</span>
+            <span class="meta-dot"></span>
+            <span>{{ formatDuration(course.total_duration_minutes) }}</span>
+          </span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="empty" *ngIf="!loading() && !filtered().length">
+    <p>No encontramos cursos con esos filtros.</p>
+  </div>
+</section>
+
+<!-- Drawer de detalle -->
+<ng-container *ngIf="selected() || detailLoading()">
+  <div class="drawer-backdrop" (click)="closeDrawer()"></div>
+  <aside class="drawer-panel">
+    <div class="drawer-loading" *ngIf="detailLoading()">
+      <div class="skeleton" style="height: 130px; border-radius: 0"></div>
+      <div style="padding: 1.5rem">
+        <div class="skeleton" style="height: 24px; width: 70%; margin-bottom: 12px"></div>
+        <div class="skeleton" style="height: 14px; width: 100%"></div>
+      </div>
+    </div>
+
+    <ng-container *ngIf="selected() as course">
+      <div class="drawer-cover" [ngClass]="coverClass(course.track)">
+        <button class="drawer-close" (click)="closeDrawer()" aria-label="Cerrar">✕</button>
+        <span class="track-badge">{{ course.provider || course.track }}</span>
+      </div>
+      <div class="drawer-body">
+        <h2 class="drawer-title">{{ course.title }}</h2>
+        <div class="course-meta" style="margin: 0.5rem 0 1rem">
+          <span class="level-pill" [ngClass]="levelClass(course.level)">{{ levelLabel(course.level) }}</span>
+          <span class="meta-row">
+            <span>{{ course.sections.length }} secciones</span>
+            <span class="meta-dot"></span>
+            <span>{{ formatDuration(course.total_duration_minutes) }}</span>
+          </span>
+        </div>
+        <p class="drawer-summary">{{ course.summary || 'Curso de certificación técnica fundamentado en documentación oficial.' }}</p>
+
+        <button class="btn btn-primary btn-block" [disabled]="starting()" (click)="startCourse(course.certification_code)">
+          {{ starting() ? 'Preparando tu sesión…' : 'Iniciar curso' }}
+        </button>
+        <p class="drawer-cta-hint">Te llevamos directo a tu sesión para empezar a estudiar.</p>
+
+        <h3 class="drawer-section-title">Temario</h3>
+        <div class="section-list">
+          <details class="section-item" *ngFor="let section of course.sections; let i = index" [open]="i === 0">
+            <summary>
+              <span class="section-index">{{ i + 1 }}</span>
+              <span class="section-name">{{ section.title }}</span>
+              <span class="section-time">{{ formatDuration(section.duration_minutes) }}</span>
+            </summary>
+            <ul class="lesson-list">
+              <li *ngFor="let lesson of section.lessons">
+                <span class="lesson-dot"></span>
+                <span class="lesson-name">{{ lesson.title }}</span>
+                <span class="lesson-time">{{ formatDuration(lesson.duration_minutes) }}</span>
+              </li>
+              <li class="lab-row" *ngFor="let lab of section.labs">
+                <span class="lab-tag">Lab opcional</span>
+                <span class="lesson-name">{{ lab.title }}</span>
+              </li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </ng-container>
+  </aside>
+</ng-container>

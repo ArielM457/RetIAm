@@ -1,0 +1,168 @@
+{
+  "certification_code": "wwl-introduction-cloud-infrastructure-apply-azure",
+  "track": "azure",
+  "title": "Introduction to cloud infrastructure: Apply Azure skills in guided projects",
+  "summary": "Hands-on guided projects that are part of the Azure Infrastructure fundamentals content.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 308,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/introduction-cloud-infrastructure-apply-azure-skills-guided-projects/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-introduction-cloud-infrastructure-apply-azure-skills-gui",
+      "title": "Introduction to cloud infrastructure: Apply Azure skills in guided projects",
+      "summary": "Hands-on guided projects that are part of the Azure Infrastructure fundamentals content.",
+      "order": 1,
+      "duration_minutes": 308,
+      "lessons": [
+        {
+          "lesson_key": "wwl-guided-project-deploy-static-website-blob-storage",
+          "title": "Guided project: Deploy a static website with Azure Blob Storage",
+          "order": 1,
+          "duration_minutes": 36,
+          "content_md": "Host a public website directly from Azure Blob Storage without managing servers.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/guided-project-deploy-static-website-blob-storage/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Guided project: Deploy a static website with Azure Blob Storage",
+              "url": "https://learn.microsoft.com/en-us/training/modules/guided-project-deploy-static-website-blob-storage/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-guided-project-organize-resources-tags-locks",
+          "title": "Guided project: Organize and protect resources with tags and locks",
+          "order": 2,
+          "duration_minutes": 36,
+          "content_md": "Apply resource tags for organization and resource locks to prevent accidental changes.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/guided-project-organize-resources-tags-locks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Guided project: Organize and protect resources with tags and locks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/guided-project-organize-resources-tags-locks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-guided-project-build-basic-website-endpoint-with-functio",
+          "title": "Guided Project: Build a simple website endpoint with Azure Functions",
+          "order": 3,
+          "duration_minutes": 36,
+          "content_md": "Create and test an HTTP-triggered Azure Function as a lightweight website endpoint.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/guided-project-build-basic-website-endpoint-with-functions/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Guided Project: Build a simple website endpoint with Azure Functions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/guided-project-build-basic-website-endpoint-with-functions/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-guided-project-new-employee-access",
+          "title": "Guided Project: Set up new employee access (Entra ID and RBAC)",
+          "order": 4,
+          "duration_minutes": 36,
+          "content_md": "Configure a basic identity and RBAC onboarding flow for a new team member.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/guided-project-new-employee-access/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Guided Project: Set up new employee access (Entra ID and RBAC)",
+              "url": "https://learn.microsoft.com/en-us/training/modules/guided-project-new-employee-access/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-guided-project-share-files-securely",
+          "title": "Guided project: Share files securely",
+          "order": 5,
+          "duration_minutes": 49,
+          "content_md": "Use Azure Storage, stored access policies, and SAS to share files securely with time-limited access.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/guided-project-share-files-securely/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Guided project: Share files securely",
+              "url": "https://learn.microsoft.com/en-us/training/modules/guided-project-share-files-securely/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-guided-project-cost-guardrails",
+          "title": "Guided project: Set up cost guardrails in Azure",
+          "order": 6,
+          "duration_minutes": 36,
+          "content_md": "Apply basic cost governance with tags, budget alerts, and policy constraints.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/guided-project-cost-guardrails/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Guided project: Set up cost guardrails in Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/guided-project-cost-guardrails/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-guided-project-monitor-service-health-activity-alerts",
+          "title": "Guided project: Monitor Azure with Service Health and Activity Log alerts",
+          "order": 7,
+          "duration_minutes": 36,
+          "content_md": "Set up proactive monitoring with Service Health alerts and Activity Log alerts without paid compute resources.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/guided-project-monitor-service-health-activity-alerts/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Guided project: Monitor Azure with Service Health and Activity Log alerts",
+              "url": "https://learn.microsoft.com/en-us/training/modules/guided-project-monitor-service-health-activity-alerts/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-guided-project-manage-resources-cloud-shell-cli",
+          "title": "Guided project: Manage Azure resources with Cloud Shell and the Azure CLI",
+          "order": 8,
+          "duration_minutes": 43,
+          "content_md": "Create, query, tag, and clean up Azure resources using Cloud Shell and Azure CLI commands.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/guided-project-manage-resources-cloud-shell-cli/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Guided project: Manage Azure resources with Cloud Shell and the Azure CLI",
+              "url": "https://learn.microsoft.com/en-us/training/modules/guided-project-manage-resources-cloud-shell-cli/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-introduction-cloud-infrastructure-apply-azure-skills-gui",
+          "title": "Laboratorio opcional: aplica Introduction to cloud infrastructure: Apply Azure skills in guided projects",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduction to cloud infrastructure: Apply Azure skills in guided projects**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "certification_code": "wwl-work-with-generative-models-azure-machine-lear",
+  "track": "azure",
+  "title": "Work with generative artificial intelligence (AI) models in Azure Machine Learning",
+  "summary": "Work with generative artificial intelligence (AI) models in Azure Machine Learning",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 54,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/work-with-generative-models-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-work-with-generative-models-azure-machine-learning",
+      "title": "Work with generative artificial intelligence (AI) models in Azure Machine Learning",
+      "summary": "Work with generative artificial intelligence (AI) models in Azure Machine Learning",
+      "order": 1,
+      "duration_minutes": 54,
+      "lessons": [
+        {
+          "lesson_key": "explore-foundation-models-in-model-catalog",
+          "title": "Understand the Transformer architecture and explore large language models in Azure Machine Learning",
+          "order": 1,
+          "duration_minutes": 54,
+          "content_md": "Learn about the history of natural language processing (NLP), including how the Transformer architecture revolutionized the field and helped us create large language models (LLMs). Work with LLMs in Azure Machine Learning through the foundation models in the model catalog.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-foundation-models-in-model-catalog/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand the Transformer architecture and explore large language models in Azure Machine Learning",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-foundation-models-in-model-catalog/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-work-with-generative-models-azure-machine-learning",
+          "title": "Laboratorio opcional: aplica Work with generative artificial intelligence (AI) models in Azure Machine Learning",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Work with generative artificial intelligence (AI) models in Azure Machine Learning**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "certification_code": "azure-database-for-mysql",
+  "track": "azure",
+  "title": "Azure Database for MySQL",
+  "summary": "Azure Database for MySQL",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 135,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/introduction-to-azure-database-for-mysql/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "azure-database-for-mysql",
+      "title": "Azure Database for MySQL",
+      "summary": "Azure Database for MySQL",
+      "order": 1,
+      "duration_minutes": 135,
+      "lessons": [
+        {
+          "lesson_key": "intro-to-azure-database-for-mysql",
+          "title": "Introduction to Azure Database for MySQL",
+          "order": 1,
+          "duration_minutes": 33,
+          "content_md": "Describe how Azure Database for MySQL supports mission-critical workloads with predictable performance and dynamic scalability. Determine whether you should implement Azure Database for MySQL to address your relational database needs.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-azure-database-for-mysql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure Database for MySQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-azure-database-for-mysql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "explore-azure-database-for-mysql-features-support-mission-cr",
+          "title": "Explore Azure Database for MySQL - Flexible Server features that support mission-critical workloads",
+          "order": 2,
+          "duration_minutes": 32,
+          "content_md": "Explore Azure Database for MySQL - Flexible Server features that support mission-critical workloads\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/explore-azure-database-for-mysql-features-that-support-mission-critical-workloads/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore Azure Database for MySQL - Flexible Server features that support mission-critical workloads",
+              "url": "https://learn.microsoft.com/en-us/training/modules/explore-azure-database-for-mysql-features-that-support-mission-critical-workloads/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "implement-azure-database-for-mysql-features-support-mission",
+          "title": "Implement Azure Database for MySQL Flexible Server features that support mission-critical workloads",
+          "order": 3,
+          "duration_minutes": 30,
+          "content_md": "Implement Azure Database for MySQL Flexible Server features that support mission-critical workloads\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-azure-database-for-mysql-features-that-support-mission-critical-workloads/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement Azure Database for MySQL Flexible Server features that support mission-critical workloads",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-azure-database-for-mysql-features-that-support-mission-critical-workloads/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "choose-tool-to-migrate-data-to-azure-database-for-mysql",
+          "title": "Choose a tool to migrate data to Azure Database for MySQL",
+          "order": 4,
+          "duration_minutes": 40,
+          "content_md": "Choose a tool to migrate data to Azure Database for MySQL\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/choose-tool-to-migrate-data-to-azure-database-for-mysql/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Choose a tool to migrate data to Azure Database for MySQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/choose-tool-to-migrate-data-to-azure-database-for-mysql/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-azure-database-for-mysql",
+          "title": "Laboratorio opcional: aplica Azure Database for MySQL",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Azure Database for MySQL**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

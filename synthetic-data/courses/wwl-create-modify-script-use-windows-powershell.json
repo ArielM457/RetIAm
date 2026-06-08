@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-create-modify-script-use-windows-powershell",
+  "track": "azure",
+  "title": "Create and modify scripts by using Windows PowerShell",
+  "summary": "This learning path explains how to create and modify scripts. It covers useful scripting techniques that include importing data from a file, accepting user input, and error handling.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 221,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/create-modify-script-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-create-modify-script-use-windows-powershell",
+      "title": "Create and modify scripts by using Windows PowerShell",
+      "summary": "This learning path explains how to create and modify scripts. It covers useful scripting techniques that include importing data from a file, accepting user input, and error handling.",
+      "order": 1,
+      "duration_minutes": 221,
+      "lessons": [
+        {
+          "lesson_key": "wwl-create-run-scripts-use-windows-powershell",
+          "title": "Create and run scripts by using Windows PowerShell",
+          "order": 1,
+          "duration_minutes": 48,
+          "content_md": "This module explains how to create and run scripts.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-run-scripts-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create and run scripts by using Windows PowerShell",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-run-scripts-use-windows-powershell/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-work-script-constructs-windows-powershell",
+          "title": "Work with scripting constructs in Windows PowerShell",
+          "order": 2,
+          "duration_minutes": 39,
+          "content_md": "This module explains how to use scripting constructs for iteration and decision making in Windows PowerShell.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/work-script-constructs-windows-powershell/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Work with scripting constructs in Windows PowerShell",
+              "url": "https://learn.microsoft.com/en-us/training/modules/work-script-constructs-windows-powershell/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-import-data-different-formats-for-use-scripts",
+          "title": "Import data in different formats for use in scripts by using Windows PowerShell cmdlets",
+          "order": 3,
+          "duration_minutes": 28,
+          "content_md": "This module explains how to import data from a text file, CSV file, XML file, and JavaScript Object Notation (JSON) file.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/import-data-different-formats-for-use-scripts/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Import data in different formats for use in scripts by using Windows PowerShell cmdlets",
+              "url": "https://learn.microsoft.com/en-us/training/modules/import-data-different-formats-for-use-scripts/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-use-methods-to-accept-user-inputs-windows-powershell-scr",
+          "title": "Use methods to accept user inputs in Windows PowerShell scripts",
+          "order": 4,
+          "duration_minutes": 41,
+          "content_md": "This method explains multiple methods for accepting user input in a Windows PowerShell script.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/use-methods-to-accept-user-inputs-windows-powershell-scripts/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use methods to accept user inputs in Windows PowerShell scripts",
+              "url": "https://learn.microsoft.com/en-us/training/modules/use-methods-to-accept-user-inputs-windows-powershell-scripts/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-troubleshoot-scripts-handle-errors-windows-powershell",
+          "title": "Troubleshoot scripts and handle errors in Windows PowerShell",
+          "order": 5,
+          "duration_minutes": 36,
+          "content_md": "This module covers troubleshooting PowerShell scripts and understanding error messages.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/troubleshoot-scripts-handle-errors-windows-powershell/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Troubleshoot scripts and handle errors in Windows PowerShell",
+              "url": "https://learn.microsoft.com/en-us/training/modules/troubleshoot-scripts-handle-errors-windows-powershell/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-use-functions-modules-windows-powershell-scripts",
+          "title": "Use functions and modules in Windows PowerShell scripts",
+          "order": 6,
+          "duration_minutes": 29,
+          "content_md": "This module covers how to create modules and functions in Windows PowerShell scripts.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/use-functions-modules-windows-powershell-scripts/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use functions and modules in Windows PowerShell scripts",
+              "url": "https://learn.microsoft.com/en-us/training/modules/use-functions-modules-windows-powershell-scripts/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-create-modify-script-use-windows-powershell",
+          "title": "Laboratorio opcional: aplica Create and modify scripts by using Windows PowerShell",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Create and modify scripts by using Windows PowerShell**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "certification_code": "ai-security-fundamentals",
+  "track": "azure",
+  "title": "AI security fundamentals",
+  "summary": "Learn the fundamental concepts of AI security.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 130,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/ai-security-fundamentals/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "ai-security-fundamentals",
+      "title": "AI security fundamentals",
+      "summary": "Learn the fundamental concepts of AI security.",
+      "order": 1,
+      "duration_minutes": 130,
+      "lessons": [
+        {
+          "lesson_key": "fundamentals-of-ai-security",
+          "title": "Fundamentals of AI security",
+          "order": 1,
+          "duration_minutes": 53,
+          "content_md": "Learn about AI security fundamentals including how AI security differs from traditional cybersecurity, the three-layer AI architecture model, and AI-specific attack techniques like jailbreaking, prompt injection, and data exfiltration.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/fundamentals-ai-security/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Fundamentals of AI security",
+              "url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-ai-security/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "ai-security-controls",
+          "title": "AI security controls",
+          "order": 2,
+          "duration_minutes": 48,
+          "content_md": "Learn about the security controls you can implement to protect AI systems, including content filters, metaprompts, data security, grounding, and monitoring.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/ai-security-controls/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "AI security controls",
+              "url": "https://learn.microsoft.com/en-us/training/modules/ai-security-controls/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "introduction-to-ai-security-testing",
+          "title": "Introduction to AI security testing",
+          "order": 3,
+          "duration_minutes": 29,
+          "content_md": "Learn about AI red teaming, the three categories of AI security testing, and how to plan and execute red teaming exercises for LLMs and AI-enabled applications.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-ai-security-testing/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to AI security testing",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-ai-security-testing/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-ai-security-fundamentals",
+          "title": "Laboratorio opcional: aplica AI security fundamentals",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **AI security fundamentals**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

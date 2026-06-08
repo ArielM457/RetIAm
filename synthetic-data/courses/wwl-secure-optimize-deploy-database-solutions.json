@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-secure-optimize-deploy-database-solutions",
+  "track": "azure",
+  "title": "Secure, optimize, and deploy database solutions",
+  "summary": "Learn to protect data with encryption and access controls, tune query performance, implement CI/CD pipelines for database projects, and integrate SQL solutions with Azure services.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 451,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/secure-optimize-deploy-database-solutions/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-secure-optimize-deploy-database-solutions",
+      "title": "Secure, optimize, and deploy database solutions",
+      "summary": "Learn to protect data with encryption and access controls, tune query performance, implement CI/CD pipelines for database projects, and integrate SQL solutions with Azure services.",
+      "order": 1,
+      "duration_minutes": 451,
+      "lessons": [
+        {
+          "lesson_key": "implement-data-security-compliance",
+          "title": "Implement data security and compliance with SQL",
+          "order": 1,
+          "duration_minutes": 121,
+          "content_md": "Learn how to implement data security and compliance features in SQL Server, Azure SQL, and SQL databases in Microsoft Fabric, including encryption, masking, Row-Level Security, and auditing.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-data-security-compliance/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement data security and compliance with SQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-data-security-compliance/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-optimize-database-performance",
+          "title": "Optimize database performance",
+          "order": 2,
+          "duration_minutes": 104,
+          "content_md": "Optimize Azure SQL Database performance by choosing the right service tier and managing concurrency with isolation levels. Analyze queries with execution plans and DMVs. Use Query Store for plan management and resolve blocking and deadlocks.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/optimize-database-performance/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Optimize database performance",
+              "url": "https://learn.microsoft.com/en-us/training/modules/optimize-database-performance/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-cicd-sql-database-projects",
+          "title": "Implement CI/CD by using SQL Database Projects",
+          "order": 3,
+          "duration_minutes": 116,
+          "content_md": "Implement CI/CD for SQL Database Projects with source control, branching, schema drift detection, automated pipelines, and testing strategies using GitHub Actions and Azure DevOps.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-cicd-sql-database-projects/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement CI/CD by using SQL Database Projects",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-cicd-sql-database-projects/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "integrate-sql-solutions-azure-services",
+          "title": "Integrate SQL solutions with Azure services",
+          "order": 4,
+          "duration_minutes": 110,
+          "content_md": "Learn how to use Data API Builder to create REST and GraphQL APIs for SQL databases, deploy to Azure, configure monitoring, and implement event-driven patterns for change handling.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/integrate-sql-solutions-azure-services/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Integrate SQL solutions with Azure services",
+              "url": "https://learn.microsoft.com/en-us/training/modules/integrate-sql-solutions-azure-services/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-secure-optimize-deploy-database-solutions",
+          "title": "Laboratorio opcional: aplica Secure, optimize, and deploy database solutions",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Secure, optimize, and deploy database solutions**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

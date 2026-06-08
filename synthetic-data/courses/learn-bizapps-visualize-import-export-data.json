@@ -1,0 +1,123 @@
+{
+  "certification_code": "learn-bizapps-visualize-import-export-data",
+  "track": "azure",
+  "title": "Visualize, import, and export Microsoft Dataverse data",
+  "summary": "This learning path will show you how to use various Dataverse views, explore how Power Query can load data into Dataverse tables, and how to use Dataverse with third-party tools.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 141,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/visualize-import-export-dataverse/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "learn-bizapps-visualize-import-export-data",
+      "title": "Visualize, import, and export Microsoft Dataverse data",
+      "summary": "This learning path will show you how to use various Dataverse views, explore how Power Query can load data into Dataverse tables, and how to use Dataverse with third-party tools.",
+      "order": 1,
+      "duration_minutes": 141,
+      "lessons": [
+        {
+          "lesson_key": "learn-bizapps-visualize-data",
+          "title": "Visualize data with Dataverse views",
+          "order": 1,
+          "duration_minutes": 28,
+          "content_md": "Discover the different types of Dataverse views and how to create and edit them.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/visualize-data/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Visualize data with Dataverse views",
+              "url": "https://learn.microsoft.com/en-us/training/modules/visualize-data/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-bizapps-use-power-query",
+          "title": "Use Power Query to load data in Dataverse",
+          "order": 2,
+          "duration_minutes": 29,
+          "content_md": "Learn how to synchronize data from different sources to a Microsoft Dataverse table using Power Query and create dataflows in Power Apps.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/use-power-query/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use Power Query to load data in Dataverse",
+              "url": "https://learn.microsoft.com/en-us/training/modules/use-power-query/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-bizapps-use-word-excel-dataverse",
+          "title": "Use Microsoft Word and Excel templates with Dataverse",
+          "order": 3,
+          "duration_minutes": 34,
+          "content_md": "Explore how you can create data analysis and standardized documents by using Microsoft Dataverse data along with Microsoft Word and Excel templates.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/use-word-excel-dataverse/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use Microsoft Word and Excel templates with Dataverse",
+              "url": "https://learn.microsoft.com/en-us/training/modules/use-word-excel-dataverse/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-bizapps-export-dataverse-excel",
+          "title": "Export data from Dataverse and use Microsoft Excel to edit records",
+          "order": 4,
+          "duration_minutes": 28,
+          "content_md": "Discover how to export and edit Microsoft Dataverse table data using Excel files, while understanding security concepts.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/export-dataverse-excel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Export data from Dataverse and use Microsoft Excel to edit records",
+              "url": "https://learn.microsoft.com/en-us/training/modules/export-dataverse-excel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-bizapps-understand-azure-dataverse",
+          "title": "Use Azure and external tools to manipulate data",
+          "order": 5,
+          "duration_minutes": 22,
+          "content_md": "Learn how to use Azure and external tools to manipulate data.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/understand-azure-dataverse/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Use Azure and external tools to manipulate data",
+              "url": "https://learn.microsoft.com/en-us/training/modules/understand-azure-dataverse/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-learn-bizapps-visualize-import-export-data",
+          "title": "Laboratorio opcional: aplica Visualize, import, and export Microsoft Dataverse data",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Visualize, import, and export Microsoft Dataverse data**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

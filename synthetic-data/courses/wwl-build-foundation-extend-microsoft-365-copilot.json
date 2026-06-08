@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-build-foundation-extend-microsoft-365-copilot",
+  "track": "azure",
+  "title": "Build a foundation to build AI agents and extend Microsoft 365 Copilot",
+  "summary": "Prepare to build AI agents and extend Microsoft 365 Copilot using Copilot Studio, Microsoft Foundry, Microsoft 365 Agents Toolkit, and more. Explore agent use cases, development paths, tools, and related considerations.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 104,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/build-foundation-extend-microsoft-365-copilot/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-build-foundation-extend-microsoft-365-copilot",
+      "title": "Build a foundation to build AI agents and extend Microsoft 365 Copilot",
+      "summary": "Prepare to build AI agents and extend Microsoft 365 Copilot using Copilot Studio, Microsoft Foundry, Microsoft 365 Agents Toolkit, and more. Explore agent use cases, development paths, tools, and related considerations.",
+      "order": 1,
+      "duration_minutes": 104,
+      "lessons": [
+        {
+          "lesson_key": "wwl-introduction-develop-ai-agents",
+          "title": "Introduction to developing AI agents",
+          "order": 1,
+          "duration_minutes": 18,
+          "content_md": "Explore what AI agents are, understand their core components, and discover a range of impactful use cases driving AI-powered transformation.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-develop-ai-agents/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to developing AI agents",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-develop-ai-agents/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-introduction-microsoft-ai-agent-solutions",
+          "title": "Introduction to Microsoft AI agent solutions",
+          "order": 2,
+          "duration_minutes": 27,
+          "content_md": "Explore Microsoft AI agent solutions and gain clarity on when to adopt, extend, or develop custom agent solutions based on your scenario and objectives.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-microsoft-ai-agent-solutions/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Microsoft AI agent solutions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-microsoft-ai-agent-solutions/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-choose-microsoft-365-copilot-extensibility-path",
+          "title": "Choose the best Microsoft 365 Copilot extensibility path for your scenario",
+          "order": 3,
+          "duration_minutes": 29,
+          "content_md": "Explore development options for extending Microsoft 365 Copilot with custom data, logic, and actions. Determine the best approach for your scenario.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/choose-microsoft-365-copilot-extensibility-path/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Choose the best Microsoft 365 Copilot extensibility path for your scenario",
+              "url": "https://learn.microsoft.com/en-us/training/modules/choose-microsoft-365-copilot-extensibility-path/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-choose-ai-agent-development-path",
+          "title": "Choose a custom AI agent development path",
+          "order": 4,
+          "duration_minutes": 30,
+          "content_md": "Explore development paths for building custom AI agents for internal use or commercial applications. Compare tools and services like Copilot Studio, Microsoft Foundry, Microsoft 365 Agents SDK, and the Microsoft Teams SDK.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/choose-ai-agent-development-path/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Choose a custom AI agent development path",
+              "url": "https://learn.microsoft.com/en-us/training/modules/choose-ai-agent-development-path/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-build-foundation-extend-microsoft-365-copilot",
+          "title": "Laboratorio opcional: aplica Build a foundation to build AI agents and extend Microsoft 365 Copilot",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Build a foundation to build AI agents and extend Microsoft 365 Copilot**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-implement-container-app-hosting-azure",
+  "track": "azure",
+  "title": "Implement container application hosting on Azure",
+  "summary": "Learn how to deploy, configure, and troubleshoot containerized applications on Azure.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 140,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-container-app-hosting-azure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-container-app-hosting-azure",
+      "title": "Implement container application hosting on Azure",
+      "summary": "Learn how to deploy, configure, and troubleshoot containerized applications on Azure.",
+      "order": 1,
+      "duration_minutes": 140,
+      "lessons": [
+        {
+          "lesson_key": "wwl-store-manage-containers-azure-container-registry",
+          "title": "Store and manage containers in Azure Container Registry",
+          "order": 1,
+          "duration_minutes": 66,
+          "content_md": "Learn to store, build, and manage container images using Azure Container Registry for AI applications on Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/store-manage-containers-azure-container-registry/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Store and manage containers in Azure Container Registry",
+              "url": "https://learn.microsoft.com/en-us/training/modules/store-manage-containers-azure-container-registry/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-deploy-containers-azure-app-service",
+          "title": "Deploy containers to Azure App Service",
+          "order": 2,
+          "duration_minutes": 74,
+          "content_md": "Learn how to deploy and manage containerized applications on Azure App Service by configuring container sources, runtime settings, application configuration, and diagnostics.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-containers-azure-app-service/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy containers to Azure App Service",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-containers-azure-app-service/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-container-app-hosting-azure",
+          "title": "Laboratorio opcional: aplica Implement container application hosting on Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement container application hosting on Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

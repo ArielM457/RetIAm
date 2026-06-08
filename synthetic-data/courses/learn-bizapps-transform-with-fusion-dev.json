@@ -1,0 +1,123 @@
+{
+  "certification_code": "learn-bizapps-transform-with-fusion-dev",
+  "track": "azure",
+  "title": "Transform your business applications with fusion development",
+  "summary": "Fusion development allows your business to build better applications, faster by bringing together professional developers with citizen, or low-code, developers. This learning path will teach you how a fusion development team functions, introduce low-code concepts for professional developers, and explain how a professional developer can enable their citizen developer counterparts to build amazing Power Apps applications using pro-code tools and frameworks they're already familiar and comfortable with, like JavaScript, ASP.NET Core web APIs, and Azure API Management.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 191,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/transform-business-applications-with-fusion-development/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "learn-bizapps-transform-with-fusion-dev",
+      "title": "Transform your business applications with fusion development",
+      "summary": "Fusion development allows your business to build better applications, faster by bringing together professional developers with citizen, or low-code, developers. This learning path will teach you how a fusion development team functions, introduce low-code concepts for professional developers, and explain how a professional developer can enable their citizen developer counterparts to build amazing Power Apps applications using pro-code tools and frameworks they're already familiar and comfortable with, like JavaScript, ASP.NET Core web APIs, and Azure API Management.",
+      "order": 1,
+      "duration_minutes": 191,
+      "lessons": [
+        {
+          "lesson_key": "learn-bizapps-powerapps-transform-biz-software-auth-fusion-d",
+          "title": "Transform business software authoring with fusion development teams",
+          "order": 1,
+          "duration_minutes": 17,
+          "content_md": "Increase software development efficiency and productivity with fusion development teams.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/transform-business-software-authoring-with-fusion-dev/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Transform business software authoring with fusion development teams",
+              "url": "https://learn.microsoft.com/en-us/training/modules/transform-business-software-authoring-with-fusion-dev/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-bizapps-powerapps-understanding-low-code-as-a-traditio",
+          "title": "Understanding Low Code as a Traditional Developer",
+          "order": 2,
+          "duration_minutes": 31,
+          "content_md": "Understand Power Fx and how to use it to build an app within Power Apps as a traditional developer.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/understanding-low-code-as-a-traditional-developer/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understanding Low Code as a Traditional Developer",
+              "url": "https://learn.microsoft.com/en-us/training/modules/understanding-low-code-as-a-traditional-developer/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-bizapps-build-power-apps-component",
+          "title": "Build a Power Apps component",
+          "order": 3,
+          "duration_minutes": 47,
+          "content_md": "Learn how to build a custom Power Apps component, create a code component solution package, and then test and debug a code component.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/build-power-apps-component/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build a Power Apps component",
+              "url": "https://learn.microsoft.com/en-us/training/modules/build-power-apps-component/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-integrate-openapi-enabled-web-api-with-apim-and-visual",
+          "title": "Integrate OpenAPI-enabled Web APIs with Azure API Management through Visual Studio",
+          "order": 4,
+          "duration_minutes": 39,
+          "content_md": "Learn how to add an OpenAPI-enabled Web API application to Azure API Management through Visual Studio.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/integrate-openapi-enabled-web-api-with-apim-and-visual-studio/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Integrate OpenAPI-enabled Web APIs with Azure API Management through Visual Studio",
+              "url": "https://learn.microsoft.com/en-us/training/modules/integrate-openapi-enabled-web-api-with-apim-and-visual-studio/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "learn-bizapps-powerapps-discover-web-apis-power-apps",
+          "title": "Discover and use Web APIs with Power Apps",
+          "order": 5,
+          "duration_minutes": 57,
+          "content_md": "Build a custom connector using an OpenAPI document or Azure API Management to send data to and receive data from web APIs.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/discover-web-apis-power-apps/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Discover and use Web APIs with Power Apps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/discover-web-apis-power-apps/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-learn-bizapps-transform-with-fusion-dev",
+          "title": "Laboratorio opcional: aplica Transform your business applications with fusion development",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Transform your business applications with fusion development**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

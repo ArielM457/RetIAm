@@ -1,0 +1,123 @@
+{
+  "certification_code": "az-104-manage-compute-resources",
+  "track": "azure",
+  "title": "AZ-104: Deploy and manage Azure compute resources",
+  "summary": "Learn how to deploy and configure virtual machines, containers, and Web Apps in Azure.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 213,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/az-104-manage-compute-resources/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "az-104-manage-compute-resources",
+      "title": "AZ-104: Deploy and manage Azure compute resources",
+      "summary": "Learn how to deploy and configure virtual machines, containers, and Web Apps in Azure.",
+      "order": 1,
+      "duration_minutes": 213,
+      "lessons": [
+        {
+          "lesson_key": "introduction-to-azure-virtual-machines",
+          "title": "Introduction to Azure virtual machines",
+          "order": 1,
+          "duration_minutes": 67,
+          "content_md": "Learn about the decisions you make before creating a virtual machine, the options to create and manage the VM, and the extensions and services you use to manage your VM.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-azure-virtual-machines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure virtual machines",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-azure-virtual-machines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-virtual-machine-availability",
+          "title": "Configure virtual machine availability",
+          "order": 2,
+          "duration_minutes": 41,
+          "content_md": "Learn how to configure virtual machine availability including vertical and horizontal scaling.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-virtual-machine-availability/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure virtual machine availability",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-virtual-machine-availability/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-app-service-plans",
+          "title": "Configure Azure App Service plans",
+          "order": 3,
+          "duration_minutes": 24,
+          "content_md": "Configure Azure App Service plans\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-app-service-plans/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure Azure App Service plans",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-app-service-plans/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-azure-app-services",
+          "title": "Configure Azure App Service",
+          "order": 4,
+          "duration_minutes": 44,
+          "content_md": "Configure Azure App Service\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-azure-app-services/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure Azure App Service",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-azure-app-services/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-configure-azure-container-instances",
+          "title": "Configure Azure Container Instances",
+          "order": 5,
+          "duration_minutes": 37,
+          "content_md": "Learn how to configure Azure Container Instances including container groups.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-azure-container-instances/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure Azure Container Instances",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-azure-container-instances/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-az-104-manage-compute-resources",
+          "title": "Laboratorio opcional: aplica AZ-104: Deploy and manage Azure compute resources",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **AZ-104: Deploy and manage Azure compute resources**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

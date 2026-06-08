@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-monitor-troubleshoot-azure-cosmos-db-sql-api-s",
+  "track": "azure",
+  "title": "Monitor and troubleshoot an Azure Cosmos DB for NoSQL solution",
+  "summary": "Monitor and troubleshoot an Azure Cosmos DB for NoSQL solution",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 195,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/monitor-troubleshoot-azure-cosmos-db-sql-api-solution/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-monitor-troubleshoot-azure-cosmos-db-sql-api-solution",
+      "title": "Monitor and troubleshoot an Azure Cosmos DB for NoSQL solution",
+      "summary": "Monitor and troubleshoot an Azure Cosmos DB for NoSQL solution",
+      "order": 1,
+      "duration_minutes": 195,
+      "lessons": [
+        {
+          "lesson_key": "wwl-measure-performance-azure-cosmos-db-sql-api",
+          "title": "Measure performance in Azure Cosmos DB for NoSQL",
+          "order": 1,
+          "duration_minutes": 42,
+          "content_md": "We learn to use Azure Monitor to create and analyze monitoring data for Azure Cosmos DB.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/measure-performance-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Measure performance in Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/measure-performance-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-monitor-responses-events-azure-cosmos-db-sql-api",
+          "title": "Monitor responses and events in Azure Cosmos DB for NoSQL",
+          "order": 2,
+          "duration_minutes": 51,
+          "content_md": "We will learn to use a rich set of REST response codes returned by Azure Cosmos DB request to help you analyze potential issues.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-responses-events-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Monitor responses and events in Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-responses-events-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implementing-backup-restore-for-azure-cosmos-db-sql-api",
+          "title": "Implement backup and restore for Azure Cosmos DB for NoSQL",
+          "order": 3,
+          "duration_minutes": 42,
+          "content_md": "Learn how to use the two backup models Azure Cosmos DB provides.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-backup-restore-for-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement backup and restore for Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-backup-restore-for-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-security-azure-cosmos-db-sql-api",
+          "title": "Implement security in Azure Cosmos DB for NoSQL",
+          "order": 4,
+          "duration_minutes": 60,
+          "content_md": "We will learn the different security models that Azure Cosmos DB uses.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-security-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement security in Azure Cosmos DB for NoSQL",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-security-azure-cosmos-db-sql-api/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-monitor-troubleshoot-azure-cosmos-db-sql-api-solution",
+          "title": "Laboratorio opcional: aplica Monitor and troubleshoot an Azure Cosmos DB for NoSQL solution",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Monitor and troubleshoot an Azure Cosmos DB for NoSQL solution**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

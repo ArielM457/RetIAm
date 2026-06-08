@@ -1,0 +1,78 @@
+{
+  "certification_code": "expand-capabilities-java-azure",
+  "track": "azure",
+  "title": "Expand the capabilities for Java apps on Azure",
+  "summary": "Start here and learn how you can get the full power of Azure with your Java apps - use idiomatic libraries to connect and interact with your preferred cloud services, including Azure SQL and NoSQL databases, messaging and eventing systems, Redis cache, storage and directory services. As always, use tools and frameworks that you know and love – Spring, Tomcat, WildFly, JBoss, WebLogic, WebSphere, Maven, Gradle, IntelliJ, Eclipse, Jenkins, Terraform and more.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 84,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/expand-capabilities-java-azure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "expand-capabilities-java-azure",
+      "title": "Expand the capabilities for Java apps on Azure",
+      "summary": "Start here and learn how you can get the full power of Azure with your Java apps - use idiomatic libraries to connect and interact with your preferred cloud services, including Azure SQL and NoSQL databases, messaging and eventing systems, Redis cache, storage and directory services. As always, use tools and frameworks that you know and love – Spring, Tomcat, WildFly, JBoss, WebLogic, WebSphere, Maven, Gradle, IntelliJ, Eclipse, Jenkins, Terraform and more.",
+      "order": 1,
+      "duration_minutes": 84,
+      "lessons": [
+        {
+          "lesson_key": "azure-deploy-java-ee-app-to-app-service",
+          "title": "Deploy a Jakarta EE application to Azure",
+          "order": 1,
+          "duration_minutes": 47,
+          "content_md": "Deploy a Jakarta EE application to JBoss EAP on Azure App Service and bind it to Azure Database for MySQL.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-java-ee-app-to-jboss-app-service/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy a Jakarta EE application to Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-java-ee-app-to-jboss-app-service/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-azure-java-app-enable-authentication-authorization",
+          "title": "Sign in users with Microsoft Entra ID in a Java web app",
+          "order": 2,
+          "duration_minutes": 37,
+          "content_md": "Learn how to authenticate users with Microsoft Entra ID and get authorized access to data in a Java web app using Microsoft Authentication Library.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-java-app-enable-authentication-authorization/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Sign in users with Microsoft Entra ID in a Java web app",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-java-app-enable-authentication-authorization/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-expand-capabilities-java-azure",
+          "title": "Laboratorio opcional: aplica Expand the capabilities for Java apps on Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Expand the capabilities for Java apps on Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

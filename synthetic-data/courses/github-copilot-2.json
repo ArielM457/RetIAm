@@ -1,0 +1,138 @@
+{
+  "certification_code": "github-copilot-2",
+  "track": "github",
+  "title": "GitHub Copilot Fundamentals Part 2 of 2",
+  "summary": "Empower individual developers and businesses to enhance their productivity and foster innovation through a comprehensive exploration of the fundamental concepts of GitHub Copilot. Additionally, gain valuable insights on how to initiate the implementation of GitHub Copilot within your organization, enabling you to kickstart your own transformative journey.",
+  "provider": "GitHub",
+  "level": "basic",
+  "total_duration_minutes": 199,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/gh-copilot-2/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "github-copilot-2",
+      "title": "GitHub Copilot Fundamentals Part 2 of 2",
+      "summary": "Empower individual developers and businesses to enhance their productivity and foster innovation through a comprehensive exploration of the fundamental concepts of GitHub Copilot. Additionally, gain valuable insights on how to initiate the implementation of GitHub Copilot within your organization, enabling you to kickstart your own transformative journey.",
+      "order": 1,
+      "duration_minutes": 199,
+      "lessons": [
+        {
+          "lesson_key": "github-github-copilot-agent-mode",
+          "title": "Building applications with GitHub Copilot agent mode",
+          "order": 1,
+          "duration_minutes": 50,
+          "content_md": "GitHub Copilot Agent Mode is an AI-powered coding assistant that works on its own to analyze your entire project, handle tricky coding tasks, improve solutions over time, and help make your software development process faster and more collaborative.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/github-copilot-agent-mode/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Building applications with GitHub Copilot agent mode",
+              "url": "https://learn.microsoft.com/en-us/training/modules/github-copilot-agent-mode/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-github-copilot-code-agent",
+          "title": "Accelerate development with GitHub Copilot Cloud Agent",
+          "order": 2,
+          "duration_minutes": 35,
+          "content_md": "This module introduces GitHub Copilot Cloud Agent , showing how it automates routine tasks, manages pull requests, and integrates into your development workflow.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/github-copilot-code-agent/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Accelerate development with GitHub Copilot Cloud Agent",
+              "url": "https://learn.microsoft.com/en-us/training/modules/github-copilot-code-agent/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-mcp-server",
+          "title": "Introduction to MCP Server",
+          "order": 3,
+          "duration_minutes": 35,
+          "content_md": "Learn how to set up and use GitHub MCP Server in Visual Studio Code to extend GitHub Copilot and streamline your AI-assisted development workflow.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/mcp-server/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to MCP Server",
+              "url": "https://learn.microsoft.com/en-us/training/modules/mcp-server/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-code-reviews-pull-requests-github-copilot",
+          "title": "Leveling up code reviews and pull requests with GitHub Copilot",
+          "order": 4,
+          "duration_minutes": 35,
+          "content_md": "This module shows how GitHub Copilot supports code reviews with actionable suggestions, auto-fixes, and custom guidelines, while Premium Request Units (PRUs) unlock advanced review capabilities.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/code-reviews-pull-requests-github-copilot/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Leveling up code reviews and pull requests with GitHub Copilot",
+              "url": "https://learn.microsoft.com/en-us/training/modules/code-reviews-pull-requests-github-copilot/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-copilot-with-javascript",
+          "title": "Using GitHub Copilot with JavaScript",
+          "order": 5,
+          "duration_minutes": 22,
+          "content_md": "Develop updates in a JavaScript application using GitHub Copilot with Visual Studio Code.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-copilot-javascript/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Using GitHub Copilot with JavaScript",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-copilot-javascript/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-copilot-with-python",
+          "title": "Using GitHub Copilot with Python",
+          "order": 6,
+          "duration_minutes": 22,
+          "content_md": "Make changes and updates to a Python application by using GitHub Copilot with Visual Studio Code.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-copilot-python/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Using GitHub Copilot with Python",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-copilot-python/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-github-copilot-2",
+          "title": "Laboratorio opcional: aplica GitHub Copilot Fundamentals Part 2 of 2",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **GitHub Copilot Fundamentals Part 2 of 2**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

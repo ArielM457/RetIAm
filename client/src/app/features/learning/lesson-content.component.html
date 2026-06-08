@@ -1,0 +1,31 @@
+<div class="lesson-content-wrap" *ngIf="parsed() as data">
+  <!-- Índice de subtemas -->
+  <nav class="toc" *ngIf="toc().length > 1">
+    <span class="toc-label">En esta lección</span>
+    <button class="toc-chip" *ngFor="let item of toc()" (click)="openAndScroll(item.id)">
+      {{ item.title }}
+    </button>
+  </nav>
+
+  <!-- Unidades colapsables -->
+  <section class="units">
+    <article class="unit" *ngFor="let unit of data.units; let i = index" [id]="unit.id">
+      <button class="unit-summary" (click)="toggle(unit.id, i)" [class.open]="isOpen(unit.id, i)">
+        <span class="unit-num">{{ i + 1 }}</span>
+        <span class="unit-title">{{ unit.title }}</span>
+        <span class="unit-caret">{{ isOpen(unit.id, i) ? '▾' : '▸' }}</span>
+      </button>
+      <div class="unit-body prose" *ngIf="isOpen(unit.id, i)" [innerHTML]="unit.html"></div>
+    </article>
+  </section>
+
+  <!-- Pie de fuente -->
+  <p class="content-source" *ngIf="data.source">
+    Fuente oficial:
+    <a [href]="data.source" target="_blank" rel="noopener">{{ data.source }}</a>
+  </p>
+
+  <p class="content-empty" *ngIf="!data.units.length">
+    Esta lección aún no tiene contenido cargado. Corre la ingesta con <code>--content</code>.
+  </p>
+</div>

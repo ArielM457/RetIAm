@@ -1,0 +1,108 @@
+{
+  "certification_code": "github-actions",
+  "track": "github",
+  "title": "Automate your workflow with GitHub Actions Part 1 of 2",
+  "summary": "Learn how GitHub Actions enables you to automate your software development cycle.",
+  "provider": "GitHub",
+  "level": "basic",
+  "total_duration_minutes": 341,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/github-actions/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "github-actions",
+      "title": "Automate your workflow with GitHub Actions Part 1 of 2",
+      "summary": "Learn how GitHub Actions enables you to automate your software development cycle.",
+      "order": 1,
+      "duration_minutes": 341,
+      "lessons": [
+        {
+          "lesson_key": "github-github-actions-automate-tasks",
+          "title": "Automate development tasks by using GitHub Actions",
+          "order": 1,
+          "duration_minutes": 56,
+          "content_md": "Create a basic GitHub Action and use that action in a workflow.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/github-actions-automate-tasks/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Automate development tasks by using GitHub Actions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/github-actions-automate-tasks/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-github-actions-ci",
+          "title": "Build continuous integration workflows by using GitHub Actions",
+          "order": 2,
+          "duration_minutes": 81,
+          "content_md": "Learn how to create workflows to add continuous integration (CI) to your projects.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/github-actions-ci/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build continuous integration workflows by using GitHub Actions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/github-actions-ci/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-github-actions-cd",
+          "title": "Build and deploy applications to Azure by using GitHub Actions",
+          "order": 3,
+          "duration_minutes": 179,
+          "content_md": "Create two deployment workflows using GitHub Actions and Microsoft Azure. Learn about triggering a CD workflow and storing credentials.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/github-actions-cd/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build and deploy applications to Azure by using GitHub Actions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/github-actions-cd/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-automate-github-using-github-script",
+          "title": "Automate GitHub by using GitHub Script",
+          "order": 4,
+          "duration_minutes": 25,
+          "content_md": "Learn to interact with the GitHub API from GitHub Actions by using GitHub Script.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/automate-github-using-github-script/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Automate GitHub by using GitHub Script",
+              "url": "https://learn.microsoft.com/en-us/training/modules/automate-github-using-github-script/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-github-actions",
+          "title": "Laboratorio opcional: aplica Automate your workflow with GitHub Actions Part 1 of 2",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Automate your workflow with GitHub Actions Part 1 of 2**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

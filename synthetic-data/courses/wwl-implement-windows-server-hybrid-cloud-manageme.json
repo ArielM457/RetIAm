@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-implement-windows-server-hybrid-cloud-manageme",
+  "track": "azure",
+  "title": "Implement Windows Server hybrid cloud management, monitoring, and security",
+  "summary": "This learning path addresses problems related to managing, monitoring, and securing a hybrid environment. After completing the learning path, you’ll be able to manage and maintain hybrid Azure and on-premises workloads.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 175,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-windows-server-hybrid-cloud-management-monitoring-security/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-windows-server-hybrid-cloud-management-monitor",
+      "title": "Implement Windows Server hybrid cloud management, monitoring, and security",
+      "summary": "This learning path addresses problems related to managing, monitoring, and securing a hybrid environment. After completing the learning path, you’ll be able to manage and maintain hybrid Azure and on-premises workloads.",
+      "order": 1,
+      "duration_minutes": 175,
+      "lessons": [
+        {
+          "lesson_key": "wwl-manage-hybrid-workloads-with-azure-arc",
+          "title": "Manage hybrid workloads with Azure Arc",
+          "order": 1,
+          "duration_minutes": 44,
+          "content_md": "Manage hybrid workloads with Azure Arc\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-hybrid-workloads-azure-arc/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage hybrid workloads with Azure Arc",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-hybrid-workloads-azure-arc/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-monitor-windows-server-iaas-vms-hybrid-instances",
+          "title": "Monitor Windows Server IaaS Virtual Machines and hybrid instances",
+          "order": 2,
+          "duration_minutes": 46,
+          "content_md": "Monitor Windows Server IaaS Virtual Machines and hybrid instances\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/monitor-windows-server-iaas-virtual-machines-hybrid-instances/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Monitor Windows Server IaaS Virtual Machines and hybrid instances",
+              "url": "https://learn.microsoft.com/en-us/training/modules/monitor-windows-server-iaas-virtual-machines-hybrid-instances/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-audit-security-of-windows-server-iaas-vms",
+          "title": "Audit the security of Windows Server IaaS Virtual Machines",
+          "order": 3,
+          "duration_minutes": 45,
+          "content_md": "Learn about Microsoft Defender for Cloud and how to onboard Windows Server computers to the Microsoft Defender for Cloud Service. Also learn about Microsoft Sentinel, security information and event management (SIEM), and security orchestration, automation, and response (SOAR).\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/audit-security-of-windows-server-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Audit the security of Windows Server IaaS Virtual Machines",
+              "url": "https://learn.microsoft.com/en-us/training/modules/audit-security-of-windows-server-iaas-virtual-machines/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-azure-updates",
+          "title": "Manage Azure updates",
+          "order": 4,
+          "duration_minutes": 40,
+          "content_md": "You'll be able to enable Azure Update Management, deploy updates, review an update assessment, and manage updates for your Azure VMs.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-azure-updates/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage Azure updates",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-azure-updates/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-windows-server-hybrid-cloud-management-monitor",
+          "title": "Laboratorio opcional: aplica Implement Windows Server hybrid cloud management, monitoring, and security",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement Windows Server hybrid cloud management, monitoring, and security**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

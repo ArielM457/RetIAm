@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-automate-azure-load-testing-github",
+  "track": "github",
+  "title": "Automate Azure Load Testing by using GitHub",
+  "summary": "Learn how to implement GitHub Actions and configure Azure Load Testing to automate testing app deployments.",
+  "provider": "GitHub",
+  "level": "intermediate",
+  "total_duration_minutes": 192,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/automate-azure-load-testing-github/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-automate-azure-load-testing-github",
+      "title": "Automate Azure Load Testing by using GitHub",
+      "summary": "Learn how to implement GitHub Actions and configure Azure Load Testing to automate testing app deployments.",
+      "order": 1,
+      "duration_minutes": 192,
+      "lessons": [
+        {
+          "lesson_key": "wwl-implement-github-actions",
+          "title": "Implement GitHub Actions",
+          "order": 1,
+          "duration_minutes": 60,
+          "content_md": "GitHub Actions is a powerful CI/CD platform that allows developers to automate their software development workflows. Learn how GitHub actions are implemented, how workflow files are structured, and how to control workflow execution.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-github-actions/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement GitHub Actions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-github-actions/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-github-actions-azure",
+          "title": "Implement GitHub Actions for Azure",
+          "order": 2,
+          "duration_minutes": 61,
+          "content_md": "Learn how to use GitHub Actions for Azure in your workflows and configure Azure with the necessary security principals to automate software development workflows between GitHub and Azure.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-github-actions-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement GitHub Actions for Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-github-actions-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-azure-load-testing",
+          "title": "Implement Azure Load Testing",
+          "order": 3,
+          "duration_minutes": 71,
+          "content_md": "Learn how to optimize application performance by simulating real-world loads with Azure Load Testing service. Learn how to automate load testing with GitHub Actions to ensure consistent application performance and scalability.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-azure-load-testing/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement Azure Load Testing",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-azure-load-testing/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-automate-azure-load-testing-github",
+          "title": "Laboratorio opcional: aplica Automate Azure Load Testing by using GitHub",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Automate Azure Load Testing by using GitHub**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,78 +1,235 @@
-<section class="grid gap-6 xl:grid-cols-[0.9fr_1.1fr]">
-  <article class="glass-card rounded-[2rem] p-6">
-    <p class="eyebrow">Gini Eval</p>
-    <h1 class="mt-3 text-3xl">Sesion de aprendizaje</h1>
-    <p class="mt-3 text-[var(--muted)]">
-      Recursos, pregunta obligatoria, dudas libres y evaluacion de avance antes de continuar.
-    </p>
+<!-- Modo curso: lectura directa del curso seleccionado (sin ruta) -->
+<app-course-session *ngIf="courseCode() as code" [code]="code" />
 
-    @if (plan() && currentSection()) {
-      <div class="mt-6 rounded-[1.5rem] bg-white/[0.04] p-5">
-        <p class="text-sm text-[var(--muted)]">Plan activo</p>
-        <h3 class="mt-2 text-2xl font-semibold">{{ currentSection()?.title }}</h3>
-        <p class="mt-2 text-sm text-[var(--muted)]">{{ currentSection()?.estimated_hours }} horas estimadas</p>
-        <button class="mt-5 rounded-2xl bg-[var(--hero-strong)] px-4 py-3 font-semibold text-white" type="button" (click)="startSession()">
-          Crear sesion
-        </button>
-      </div>
-    } @else {
-      <div class="mt-6">
-        <app-empty-state title="Sin plan ni ruta activos" message="Genera primero tu ruta y plan para poder iniciar una sesion."></app-empty-state>
-      </div>
-    }
-  </article>
+<ng-container *ngIf="!courseCode()">
+<section class="page-shell session" *ngIf="!loading(); else loadingTpl">
+  <!-- Sin plan -->
+  <app-empty-state
+    *ngIf="!route(); else hasRoute"
+    title="Aún no tienes una ruta de aprendizaje"
+    message="Elige un curso en el catálogo para generar tu ruta y plan."
+  >
+    <a routerLink="/catalog" class="btn btn-primary">Explorar cursos</a>
+  </app-empty-state>
 
-  <article class="glass-card rounded-[2rem] p-6">
-    <div class="flex items-center justify-between">
-      <h2 class="panel-title">Workspace</h2>
-      <app-status-pill [label]="session()?.status || 'sin sesion'" tone="info"></app-status-pill>
+  <ng-template #hasRoute>
+    <header class="session-head animate-fade-up">
+      <div>
+        <p class="eyebrow">Sesión de aprendizaje</p>
+        <h1 class="session-title">{{ route()?.target_certification }}</h1>
+      </div>
+      <button class="btn btn-ghost btn-sm" (click)="toggleTutor()">
+        {{ tutorOpen() ? 'Ocultar tutor' : 'Mostrar tutor IA' }}
+      </button>
+    </header>
+
+    <!-- Selector de secciones -->
+    <div class="section-tabs">
+      <button
+        *ngFor="let s of sections(); let i = index"
+        class="chip"
+        [class.chip-active]="section()?.section_id === s.section_id"
+        (click)="selectSection(s)"
+      >
+        {{ i + 1 }}. {{ s.title }}
+      </button>
     </div>
 
-    @if (session()) {
-      <div class="mt-6 space-y-5">
-        <div class="rounded-[1.5rem] bg-white/[0.04] p-4">
-          <p class="text-sm text-[var(--muted)]">Pregunta obligatoria</p>
-          <p class="mt-2 font-semibold">{{ session()?.mandatory_question?.prompt }}</p>
-          <textarea class="mt-4 min-h-24 w-full rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3" [(ngModel)]="mandatoryAnswer"></textarea>
-          <button class="mt-3 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-[var(--ink-soft)]" type="button" (click)="sendMandatoryAnswer()">
-            Enviar respuesta
+    <div class="session-grid" [class.tutor-collapsed]="!tutorOpen()">
+      <!-- Columna principal -->
+      <div class="session-main">
+        <!-- Antes de iniciar -->
+        <div class="glass-card start-card" *ngIf="!session()">
+          <h2 class="panel-title">{{ section()?.title }}</h2>
+          <p class="muted">
+            {{ section()?.lessons?.length || 0 }} lecciones ·
+            {{ formatDuration(section()?.duration_minutes || 0) }}
+          </p>
+          <p class="start-hint" *ngIf="!(section()?.lessons?.length)">
+            Esta sección no tiene lecciones cargadas (curso legacy). Elige un curso del catálogo con contenido real.
+          </p>
+          <button class="btn btn-primary" [disabled]="starting() || !(section()?.lessons?.length)" (click)="startSession()">
+            {{ starting() ? 'Preparando sesión…' : 'Iniciar sesión' }}
           </button>
         </div>
 
-        <div class="rounded-[1.5rem] bg-white/[0.04] p-4">
-          <p class="text-sm text-[var(--muted)]">Pregunta libre al agente</p>
-          <input class="mt-3 w-full rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3" [(ngModel)]="freeQuestion" type="text" />
-          <button class="mt-3 rounded-2xl border border-white/10 px-4 py-3 text-sm font-semibold" type="button" (click)="sendFreeQuestion()">
-            Consultar
-          </button>
-          @if (session()?.free_questions?.length) {
-            <div class="mt-4 space-y-3">
-              @for (item of session()?.free_questions || []; track item.question) {
-                <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-3">
-                  <p class="font-semibold">{{ item.question }}</p>
-                  <p class="mt-2 text-sm text-[var(--muted)]">{{ item.answer }}</p>
+        <!-- Sesion activa -->
+        <ng-container *ngIf="session() as sess">
+          <div class="lesson-layout">
+            <!-- Lista de lecciones -->
+            <aside class="lesson-rail glass-card">
+              <p class="rail-title">Lecciones</p>
+              <button
+                *ngFor="let lesson of section()?.lessons; let i = index"
+                class="rail-item"
+                [class.active]="activeLesson()?.id === lesson.id"
+                (click)="selectLesson(lesson)"
+              >
+                <span class="rail-num">{{ i + 1 }}</span>
+                <span class="rail-name">{{ lesson.title }}</span>
+                <span class="rail-time">{{ formatDuration(lesson.duration_minutes) }}</span>
+              </button>
+            </aside>
+
+            <!-- Contenido de la leccion -->
+            <article class="lesson-content glass-card" *ngIf="activeLesson() as lesson">
+              <!-- Progreso de lectura -->
+              <div class="reading-progress" *ngIf="lessonList().length">
+                <div class="rp-top">
+                  <span>Lección {{ lessonIndex() + 1 }} de {{ lessonList().length }}</span>
+                  <span>{{ readingProgress() }}%</span>
                 </div>
-              }
+                <div class="rp-track"><div class="rp-fill" [style.width.%]="readingProgress()"></div></div>
+              </div>
+
+              <h2 class="lesson-h">{{ lesson.title }}</h2>
+              <p class="lesson-dur" *ngIf="lesson.duration_minutes">{{ formatDuration(lesson.duration_minutes) }}</p>
+
+              <div class="lesson-objectives" *ngIf="lesson.learning_objectives?.length">
+                <p class="mini-label">Objetivos</p>
+                <ul>
+                  <li *ngFor="let obj of lesson.learning_objectives">{{ obj }}</li>
+                </ul>
+              </div>
+
+              <app-lesson-content [content]="lesson.content_md" />
+
+              <div class="lesson-sources" *ngIf="lesson.sources?.length">
+                <p class="mini-label">Fuentes</p>
+                <a *ngFor="let src of lesson.sources" class="source-link" [href]="src.url || '#'" target="_blank" rel="noopener">
+                  {{ src.title }}
+                </a>
+              </div>
+
+              <!-- Navegación entre lecciones -->
+              <div class="lesson-nav">
+                <button class="btn btn-ghost btn-sm" [disabled]="lessonIndex() <= 0" (click)="goToLessonOffset(-1)">
+                  ← Anterior
+                </button>
+                <button
+                  class="btn btn-ghost btn-sm"
+                  [disabled]="lessonIndex() >= lessonList().length - 1"
+                  (click)="goToLessonOffset(1)"
+                >
+                  Siguiente →
+                </button>
+              </div>
+
+              <div class="lesson-actions">
+                <button class="btn btn-primary" (click)="completeActiveLesson()">Completar lección</button>
+                <button class="btn btn-ghost" (click)="toggleTutor()" *ngIf="!tutorOpen()">Preguntar al tutor</button>
+              </div>
+
+              <!-- Resultado de orquestacion -->
+              <div class="orchestration" *ngIf="completeResult() as result">
+                <div class="progress-line">
+                  <span>Progreso del curso</span>
+                  <strong>{{ result.progress_percent }}%</strong>
+                </div>
+                <div class="progress-track"><div class="progress-fill" [style.width.%]="result.progress_percent"></div></div>
+                <p class="orch-note" *ngIf="result.insight_note">💡 {{ result.insight_note }}</p>
+                <p class="orch-note" *ngIf="result.coach_message">🔔 {{ result.coach_message }}</p>
+                <p class="orch-next" *ngIf="result.next_action_label">{{ result.next_action_label }}</p>
+                <a class="btn btn-primary btn-sm" *ngIf="result.next_action === 'final_exam'" routerLink="/exam">
+                  Ir al examen final
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Gate de seccion: pregunta obligatoria + quiz -->
+          <div class="gate glass-card">
+            <h3 class="gate-title">Para aprobar la sección</h3>
+
+            <!-- Pregunta obligatoria -->
+            <div class="gate-block">
+              <p class="mini-label">Pregunta obligatoria</p>
+              <p class="gate-q">{{ sess.mandatory_question?.prompt }}</p>
+              <div class="gate-answered" *ngIf="mandatoryPassed()">✓ Respuesta aceptada</div>
+              <ng-container *ngIf="!mandatoryPassed()">
+                <textarea class="input-pill" rows="2" [(ngModel)]="mandatoryAnswer" placeholder="Tu respuesta…"></textarea>
+                <p class="gate-feedback" *ngIf="sess.evaluation?.mandatory_answer && !mandatoryPassed()">
+                  {{ sess.evaluation.mandatory_answer?.feedback }}
+                </p>
+                <button class="btn btn-ghost btn-sm" [disabled]="mandatorySending()" (click)="sendMandatory()">
+                  {{ mandatorySending() ? 'Enviando…' : 'Enviar respuesta' }}
+                </button>
+              </ng-container>
             </div>
-          }
+
+            <!-- Quiz -->
+            <div class="gate-block" *ngIf="mandatoryPassed() && quizQuestions().length">
+              <p class="mini-label">Quiz ({{ quizQuestions().length }} preguntas)</p>
+              <div class="quiz-q" *ngFor="let q of quizQuestions(); let qi = index">
+                <p class="quiz-prompt">{{ qi + 1 }}. {{ q.prompt }}</p>
+                <button
+                  *ngFor="let opt of q.options; let oi = index"
+                  class="quiz-opt"
+                  [class.selected]="isSelected(q.question_id, oi)"
+                  (click)="selectQuizOption(q.question_id, oi)"
+                >
+                  <span class="opt-mark">{{ ['A','B','C','D'][oi] }}</span>{{ opt }}
+                </button>
+              </div>
+
+              <div class="quiz-result" *ngIf="quizResult() as qr" [class.passed]="qr.passed">
+                {{ qr.passed ? '✓ Aprobado' : '✕ No alcanzaste' }} · {{ qr.score }}% ({{ qr.correct_answers }}/{{ qr.total_questions }})
+              </div>
+              <button class="btn btn-primary" [disabled]="!allQuizAnswered() || quizSubmitting()" (click)="submitQuiz()">
+                {{ quizSubmitting() ? 'Calificando…' : (quizResult() ? 'Reintentar' : 'Enviar quiz') }}
+              </button>
+            </div>
+
+            <!-- Encuesta -->
+            <div class="gate-block" *ngIf="quizResult()?.passed">
+              <p class="mini-label">Encuesta rápida</p>
+              <div class="survey-actions">
+                <button class="btn btn-primary btn-sm" (click)="saveSurvey(false)">Me gustó esta sesión</button>
+                <button class="btn btn-ghost btn-sm" (click)="saveSurvey(true)">Saltar</button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+
+      <!-- Panel del tutor IA -->
+      <aside class="tutor-panel glass-card" *ngIf="tutorOpen() && session()">
+        <div class="tutor-head">
+          <div class="tutor-avatar">IA</div>
+          <div class="tutor-id">
+            <p class="tutor-name">Gini Eval · Tutor</p>
+            <p class="tutor-sub">{{ activeLesson()?.title || 'Selecciona una lección' }}</p>
+          </div>
+          <button class="tutor-x" (click)="toggleTutor()" aria-label="Cerrar">✕</button>
         </div>
 
-        <div class="flex flex-wrap gap-3">
-          <button class="rounded-2xl bg-[var(--hero-strong)] px-4 py-3 text-sm font-semibold text-white" type="button" (click)="passEvaluation()">
-            Evaluar avance
-          </button>
-          <button class="rounded-2xl border border-white/10 px-4 py-3 text-sm font-semibold" type="button" (click)="saveSurvey(false)">
-            Guardar encuesta
-          </button>
-          <button class="rounded-2xl border border-white/10 px-4 py-3 text-sm font-semibold" type="button" (click)="saveSurvey(true)">
-            Saltar encuesta
-          </button>
+        <div class="tutor-body">
+          <p class="tutor-empty" *ngIf="!chat().length && !tutorLoading()">
+            Pregúntame lo que no entiendas de esta lección. Cito siempre la fuente.
+          </p>
+          <div class="tutor-bubble" *ngFor="let msg of chat()" [ngClass]="msg.role === 'user' ? 'tutor-user' : 'tutor-ai'">
+            {{ msg.content }}
+            <div class="bubble-sources" *ngIf="msg.sources?.length">
+              <a *ngFor="let s of msg.sources" [href]="s.url || '#'" target="_blank" rel="noopener">{{ s.title }}</a>
+            </div>
+          </div>
+          <div class="tutor-typing" *ngIf="tutorLoading()"><span></span><span></span><span></span></div>
         </div>
-      </div>
-    } @else {
-      <div class="mt-6">
-        <app-empty-state title="Todavia no hay sesion" message="Crea una sesion desde el bloque izquierdo para empezar a trabajar una seccion."></app-empty-state>
-      </div>
-    }
-  </article>
+
+        <div class="tutor-suggested" *ngIf="suggested().length">
+          <button class="suggested-chip" *ngFor="let q of suggested()" (click)="sendTutor(q)">{{ q }}</button>
+        </div>
+
+        <form class="tutor-input" (ngSubmit)="sendTutor()">
+          <input class="input-pill" [(ngModel)]="tutorInput" name="tutorInput" placeholder="Escribe tu pregunta…" autocomplete="off" />
+          <button class="btn btn-primary btn-sm" type="submit" [disabled]="!tutorInput.trim() || tutorLoading()">Enviar</button>
+        </form>
+      </aside>
+    </div>
+  </ng-template>
 </section>
+</ng-container>
+
+<ng-template #loadingTpl>
+  <section class="page-shell"><div class="skeleton" style="height: 60vh; border-radius: 1.5rem"></div></section>
+</ng-template>

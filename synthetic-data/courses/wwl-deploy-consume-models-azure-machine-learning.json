@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-deploy-consume-models-azure-machine-learning",
+  "track": "azure",
+  "title": "Deploy and consume models with Azure Machine Learning",
+  "summary": "Learn how to deploy a model to an endpoint. When you deploy a model, you can get real-time or batch predictions by calling the endpoint.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 89,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/deploy-consume-models-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-deploy-consume-models-azure-machine-learning",
+      "title": "Deploy and consume models with Azure Machine Learning",
+      "summary": "Learn how to deploy a model to an endpoint. When you deploy a model, you can get real-time or batch predictions by calling the endpoint.",
+      "order": 1,
+      "duration_minutes": 89,
+      "lessons": [
+        {
+          "lesson_key": "wwl-deploy-model-managed-online-endpoint",
+          "title": "Deploy a model to a managed online endpoint",
+          "order": 1,
+          "duration_minutes": 45,
+          "content_md": "Learn how to deploy models to a managed online endpoint for real-time inferencing.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-model-managed-online-endpoint/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy a model to a managed online endpoint",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-model-managed-online-endpoint/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-deploy-model-batch-endpoint",
+          "title": "Deploy a model to a batch endpoint",
+          "order": 2,
+          "duration_minutes": 44,
+          "content_md": "Learn how to deploy models to a batch endpoint. When you invoke a batch endpoint, you trigger a batch scoring job.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deploy-model-batch-endpoint/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy a model to a batch endpoint",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deploy-model-batch-endpoint/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-deploy-consume-models-azure-machine-learning",
+          "title": "Laboratorio opcional: aplica Deploy and consume models with Azure Machine Learning",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Deploy and consume models with Azure Machine Learning**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "certification_code": "azure-well-architected-framework",
+  "track": "azure",
+  "title": "Build great solutions with the Microsoft Azure Well-Architected Framework",
+  "summary": "Learn how to design and build secure, scalable, high-performing solutions in Azure using the pillars of the Microsoft Azure Well-Architected Framework.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 368,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/azure-well-architected-framework/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "azure-well-architected-framework",
+      "title": "Build great solutions with the Microsoft Azure Well-Architected Framework",
+      "summary": "Learn how to design and build secure, scalable, high-performing solutions in Azure using the pillars of the Microsoft Azure Well-Architected Framework.",
+      "order": 1,
+      "duration_minutes": 368,
+      "lessons": [
+        {
+          "lesson_key": "azure-well-architected-introduction",
+          "title": "Introduction to the Microsoft Azure Well-Architected Framework",
+          "order": 1,
+          "duration_minutes": 14,
+          "content_md": "Learn how using key principles throughout your cloud architecture can help you design and build a solid architectural foundation that you can continuously improve.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-well-architected-introduction/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to the Microsoft Azure Well-Architected Framework",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-well-architected-introduction/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-well-architected-reliability",
+          "title": "Microsoft Azure Well-Architected Framework - Reliability",
+          "order": 2,
+          "duration_minutes": 89,
+          "content_md": "Apply reliability guidance in your architecture to improve your workload's availability and resilience.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-well-architected-reliability/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Microsoft Azure Well-Architected Framework - Reliability",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-well-architected-reliability/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-well-architected-security",
+          "title": "Microsoft Azure Well-Architected Framework - Security",
+          "order": 3,
+          "duration_minutes": 54,
+          "content_md": "Discover the tools that Azure provides to help you design a secure environment throughout your infrastructure, data, network, and applications.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-well-architected-security/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Microsoft Azure Well-Architected Framework - Security",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-well-architected-security/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-well-architected-cost-optimization",
+          "title": "Microsoft Azure Well-Architected Framework - Cost Optimization",
+          "order": 4,
+          "duration_minutes": 64,
+          "content_md": "Apply cost optimization guidance in your architecture to sustain and improve your return on investment (ROI).\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-well-architected-cost-optimization/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Microsoft Azure Well-Architected Framework - Cost Optimization",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-well-architected-cost-optimization/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-well-architected-operational-excellence",
+          "title": "Microsoft Azure Well-Architected Framework - Operational Excellence",
+          "order": 5,
+          "duration_minutes": 82,
+          "content_md": "Learn how to design an Azure architecture that uses modern practices and gives you full visibility into what's happening in your environment.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-well-architected-operational-excellence/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Microsoft Azure Well-Architected Framework - Operational Excellence",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-well-architected-operational-excellence/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-well-architected-performance-efficiency",
+          "title": "Microsoft Azure Well-Architected Framework - Performance Efficiency",
+          "order": 6,
+          "duration_minutes": 65,
+          "content_md": "Learn how to optimize your workload to meet performance requirements while balancing costs, reliability, and security.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-well-architected-performance-efficiency/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Microsoft Azure Well-Architected Framework - Performance Efficiency",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-well-architected-performance-efficiency/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-azure-well-architected-framework",
+          "title": "Laboratorio opcional: aplica Build great solutions with the Microsoft Azure Well-Architected Framework",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Build great solutions with the Microsoft Azure Well-Architected Framework**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "certification_code": "collaborate-markdown-github-pages",
+  "track": "github",
+  "title": "Collaborate with others with Markdown and GitHub Pages",
+  "summary": "Learn how to use Markdown to effectively communicate with others in your GitHub issues, pull requests, comments, and documentation. Then learn how to build project sites and blog posts to promote your projects with GitHub Pages.",
+  "provider": "GitHub",
+  "level": "basic",
+  "total_duration_minutes": 243,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/collaborate-markdown-github-pages/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "collaborate-markdown-github-pages",
+      "title": "Collaborate with others with Markdown and GitHub Pages",
+      "summary": "Learn how to use Markdown to effectively communicate with others in your GitHub issues, pull requests, comments, and documentation. Then learn how to build project sites and blog posts to promote your projects with GitHub Pages.",
+      "order": 1,
+      "duration_minutes": 243,
+      "lessons": [
+        {
+          "lesson_key": "github-introduction-to-github",
+          "title": "Introduction to GitHub",
+          "order": 1,
+          "duration_minutes": 105,
+          "content_md": "Learn to use key GitHub features, including issues, notifications, branches, commits, and pull requests.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-to-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-communicate-using-markdown",
+          "title": "Communicate effectively on GitHub using Markdown",
+          "order": 2,
+          "duration_minutes": 66,
+          "content_md": "Learn to use Markdown to communicate with brevity, clarity, and expression.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/communicate-using-markdown/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Communicate effectively on GitHub using Markdown",
+              "url": "https://learn.microsoft.com/en-us/training/modules/communicate-using-markdown/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-create-host-web-sites-github-pages",
+          "title": "Create and host web sites by using GitHub Pages",
+          "order": 3,
+          "duration_minutes": 72,
+          "content_md": "Learn how to host your personal, organization, and project sites for free with GitHub Pages.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-host-web-sites-github-pages/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create and host web sites by using GitHub Pages",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-host-web-sites-github-pages/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-collaborate-markdown-github-pages",
+          "title": "Laboratorio opcional: aplica Collaborate with others with Markdown and GitHub Pages",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Collaborate with others with Markdown and GitHub Pages**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

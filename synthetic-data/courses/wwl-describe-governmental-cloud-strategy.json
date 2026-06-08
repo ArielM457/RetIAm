@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-describe-governmental-cloud-strategy",
+  "track": "azure",
+  "title": "Describe governmental cloud strategy",
+  "summary": "Describe governmental cloud strategy",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 141,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/describe-governmental-cloud-strategy/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-describe-governmental-cloud-strategy",
+      "title": "Describe governmental cloud strategy",
+      "summary": "Describe governmental cloud strategy",
+      "order": 1,
+      "duration_minutes": 141,
+      "lessons": [
+        {
+          "lesson_key": "wwl-describe-government-its-structure",
+          "title": "Describe the government and its structure",
+          "order": 1,
+          "duration_minutes": 39,
+          "content_md": "Understand government and how it is organized.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-government-its-structure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe the government and its structure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-government-its-structure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-significant-government-strategy-actions",
+          "title": "Describe significant government strategy actions",
+          "order": 2,
+          "duration_minutes": 78,
+          "content_md": "Understand legislation, memoranda, executive orders, and policies that significantly set the government's cloud computing approach.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-significant-government-strategy-actions/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe significant government strategy actions",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-significant-government-strategy-actions/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-describe-cloud-business-case-analysis",
+          "title": "Describe Cloud Business Case Analysis",
+          "order": 3,
+          "duration_minutes": 24,
+          "content_md": "Understand a cloud business case analysis through a business case analysis, analysis of alternatives, and non-financial operational benefits.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/describe-cloud-business-case-analysis/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Describe Cloud Business Case Analysis",
+              "url": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-business-case-analysis/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-describe-governmental-cloud-strategy",
+          "title": "Laboratorio opcional: aplica Describe governmental cloud strategy",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Describe governmental cloud strategy**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-azure-databricks-data-engineer-secure-govern-u",
+  "track": "azure",
+  "title": "Secure and govern Unity Catalog objects in Azure Databricks",
+  "summary": "Learn to implement comprehensive security and governance for your data assets in Azure Databricks using Unity Catalog. Master access control strategies, fine-grained permissions, credential management, and governance practices to build a secure and compliant data platform.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 215,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/azure-databricks-data-engineer-secure-govern-unity-catalog/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-azure-databricks-data-engineer-secure-govern-unity-catal",
+      "title": "Secure and govern Unity Catalog objects in Azure Databricks",
+      "summary": "Learn to implement comprehensive security and governance for your data assets in Azure Databricks using Unity Catalog. Master access control strategies, fine-grained permissions, credential management, and governance practices to build a secure and compliant data platform.",
+      "order": 1,
+      "duration_minutes": 215,
+      "lessons": [
+        {
+          "lesson_key": "wwl-secure-unity-catalog-objects",
+          "title": "Secure Unity Catalog objects",
+          "order": 1,
+          "duration_minutes": 107,
+          "content_md": "Learn how to implement comprehensive security for Unity Catalog objects in Azure Databricks, including access control, fine-grained permissions, credential management, and authentication strategies.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/secure-unity-catalog-objects/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure Unity Catalog objects",
+              "url": "https://learn.microsoft.com/en-us/training/modules/secure-unity-catalog-objects/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-govern-unity-catalog-objects",
+          "title": "Govern Unity Catalog objects",
+          "order": 2,
+          "duration_minutes": 108,
+          "content_md": "Learn how to govern data and AI assets in Azure Databricks using Unity Catalog, including access control, data lineage, audit logging, and secure sharing.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/govern-unity-catalog-objects/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Govern Unity Catalog objects",
+              "url": "https://learn.microsoft.com/en-us/training/modules/govern-unity-catalog-objects/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-azure-databricks-data-engineer-secure-govern-unity-catal",
+          "title": "Laboratorio opcional: aplica Secure and govern Unity Catalog objects in Azure Databricks",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Secure and govern Unity Catalog objects in Azure Databricks**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

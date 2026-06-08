@@ -1,0 +1,123 @@
+{
+  "certification_code": "wwl-devops-foundations-core-principles-practices",
+  "track": "github",
+  "title": "DevOps foundations: The core principles and practices",
+  "summary": "Explore DevOps practices using GitHub. Your development and operations teams will experience improved collaboration, agility, continuous integration, continuous delivery, automation, and operational excellence throughout all phases of the application lifecycle. (AZ-2008)",
+  "provider": "GitHub",
+  "level": "basic",
+  "total_duration_minutes": 269,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/devops-foundations-core-principles-practices/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-devops-foundations-core-principles-practices",
+      "title": "DevOps foundations: The core principles and practices",
+      "summary": "Explore DevOps practices using GitHub. Your development and operations teams will experience improved collaboration, agility, continuous integration, continuous delivery, automation, and operational excellence throughout all phases of the application lifecycle. (AZ-2008)",
+      "order": 1,
+      "duration_minutes": 269,
+      "lessons": [
+        {
+          "lesson_key": "wwl-discover-devops",
+          "title": "Discover DevOps",
+          "order": 1,
+          "duration_minutes": 26,
+          "content_md": "This module explores how DevOps practices optimize application lifecycle management for accelerated time to market and operational stability.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/discover-devops/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Discover DevOps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/discover-devops/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-plan-with-devops",
+          "title": "Plan with DevOps",
+          "order": 2,
+          "duration_minutes": 70,
+          "content_md": "In this module you learn how to plan your software development projects agilely using GitHub Projects boards.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/plan-with-devops/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Plan with DevOps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/plan-with-devops/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-develop-with-devops",
+          "title": "Develop with DevOps",
+          "order": 3,
+          "duration_minutes": 59,
+          "content_md": "Streamline updates to your software development projects by applying version control with Git and GitHub. Your software lifecycle improves through the implementation of continuous integration, shift-left testing, and shift-left security.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/develop-with-devops/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Develop with DevOps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/develop-with-devops/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-deliver-with-devops",
+          "title": "Deliver with DevOps",
+          "order": 4,
+          "duration_minutes": 60,
+          "content_md": "Build and run continuous integration and continuous delivery workflows using GitHub Actions.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/deliver-with-devops/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deliver with DevOps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/deliver-with-devops/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-operate-with-devops",
+          "title": "Operate with DevOps",
+          "order": 5,
+          "duration_minutes": 54,
+          "content_md": "Achieve operational excellence and enhance developer experience in your organization through DevOps. Your operational and development practices improve by implementing shift-right testing, observability through performance and security monitoring, Site Reliability Engineering and platform engineering.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/operate-with-devops/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Operate with DevOps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/operate-with-devops/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-devops-foundations-core-principles-practices",
+          "title": "Laboratorio opcional: aplica DevOps foundations: The core principles and practices",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **DevOps foundations: The core principles and practices**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "certification_code": "wwl-work-windows-powershell-pipeline",
+  "track": "azure",
+  "title": "Work with the Windows PowerShell pipeline",
+  "summary": "This learning path explains the purpose and use of the PowerShell pipeline and use the pipeline to sort, filter, enumerate and display output data for PowerShell cmdlets.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 215,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/work-windows-powershell-pipeline/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-work-windows-powershell-pipeline",
+      "title": "Work with the Windows PowerShell pipeline",
+      "summary": "This learning path explains the purpose and use of the PowerShell pipeline and use the pipeline to sort, filter, enumerate and display output data for PowerShell cmdlets.",
+      "order": 1,
+      "duration_minutes": 215,
+      "lessons": [
+        {
+          "lesson_key": "wwl-understand-windows-powershell-pipeline",
+          "title": "Understand the Windows PowerShell pipeline",
+          "order": 1,
+          "duration_minutes": 30,
+          "content_md": "This module explains about the Windows PowerShell pipeline and some basic techniques for running multiple commands in it.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/understand-windows-powershell-pipeline/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand the Windows PowerShell pipeline",
+              "url": "https://learn.microsoft.com/en-us/training/modules/understand-windows-powershell-pipeline/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-select-sort-measure-objects-use-pipeline",
+          "title": "Select, sort, and measure objects using the pipeline",
+          "order": 2,
+          "duration_minutes": 42,
+          "content_md": "This module explains how to manipulate objects in the pipeline by using commands that sort, select, and measure objects.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/select-sort-measure-objects-use-pipeline/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Select, sort, and measure objects using the pipeline",
+              "url": "https://learn.microsoft.com/en-us/training/modules/select-sort-measure-objects-use-pipeline/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-filter-objects-out-of-pipeline",
+          "title": "Filter objects out of the pipeline",
+          "order": 3,
+          "duration_minutes": 37,
+          "content_md": "This module explains how to filter objects out of the pipeline by using the Where-Object cmdlet to specify various criteria.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/filter-objects-out-of-pipeline/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Filter objects out of the pipeline",
+              "url": "https://learn.microsoft.com/en-us/training/modules/filter-objects-out-of-pipeline/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-enumerate-objects-pipeline",
+          "title": "Enumerate objects in the pipeline",
+          "order": 4,
+          "duration_minutes": 28,
+          "content_md": "This module explains how to enumerate objects in the pipeline so that you can work with one object at a time during automation.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/enumerate-objects-pipeline/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Enumerate objects in the pipeline",
+              "url": "https://learn.microsoft.com/en-us/training/modules/enumerate-objects-pipeline/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-send-pass-data-output-from-pipeline",
+          "title": "Send and pass data as output from the pipeline",
+          "order": 5,
+          "duration_minutes": 28,
+          "content_md": "This module explains how to send pipeline data to files and in various output formats.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/send-pass-data-output-from-pipeline/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Send and pass data as output from the pipeline",
+              "url": "https://learn.microsoft.com/en-us/training/modules/send-pass-data-output-from-pipeline/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-pass-pipeline-objects",
+          "title": "Pass pipeline objects",
+          "order": 6,
+          "duration_minutes": 50,
+          "content_md": "This module explains how the Windows PowerShell command-line interface passes objects from one command to another in the pipeline.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/pass-pipeline-objects/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Pass pipeline objects",
+              "url": "https://learn.microsoft.com/en-us/training/modules/pass-pipeline-objects/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-work-windows-powershell-pipeline",
+          "title": "Laboratorio opcional: aplica Work with the Windows PowerShell pipeline",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Work with the Windows PowerShell pipeline**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

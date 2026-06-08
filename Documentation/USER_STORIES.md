@@ -62,8 +62,8 @@ Esta épica cubre la evaluación que hace Gini Profile al primer ingreso de cada
 ---
 
 **US-201** 🔴
-Como empleado nuevo en RetAIM, quiero que el sistema me haga una evaluación inicial de nivel, para que mi plan de estudio parta de donde realmente estoy y no desde cero.
-
+Como empleado nuevo en RetAIM, quiero que el sistema me haga una evaluación inicial de nivel, para que mi plan de estudio parta de donde realmente estoy y no desde cero. (Cambiar por )
+|
 *Criterios de aceptación:*
 - Gini Profile me hace entre 5 y 10 preguntas sobre mi rol, experiencia y área de certificación
 - Al finalizar genera un perfil con nivel detectado (básico, intermedio, avanzado)

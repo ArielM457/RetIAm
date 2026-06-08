@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-automate-tasks-sql-server",
+  "track": "azure",
+  "title": "Automate database tasks for Azure SQL",
+  "summary": "Automate database tasks for Azure SQL",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 167,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/automate-tasks-sql-server/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-automate-tasks-sql-server",
+      "title": "Automate database tasks for Azure SQL",
+      "summary": "Automate database tasks for Azure SQL",
+      "order": 1,
+      "duration_minutes": 167,
+      "lessons": [
+        {
+          "lesson_key": "wwl-configure-automatic-deployment-for-azure-sql-database",
+          "title": "Automate database deployment",
+          "order": 1,
+          "duration_minutes": 50,
+          "content_md": "Automate database deployment\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-automatic-deployment-azure-sql-database/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Automate database deployment",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-automatic-deployment-azure-sql-database/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-schedule-tasks-using-sql-server-agent",
+          "title": "Create and manage SQL Agent jobs",
+          "order": 2,
+          "duration_minutes": 49,
+          "content_md": "Create and manage SQL Agent jobs\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/schedule-tasks-using-sql-server-agent/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Create and manage SQL Agent jobs",
+              "url": "https://learn.microsoft.com/en-us/training/modules/schedule-tasks-using-sql-server-agent/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-azure-paas-resources-using-automated-methods",
+          "title": "Manage Azure PaaS tasks using automation",
+          "order": 3,
+          "duration_minutes": 68,
+          "content_md": "Manage Azure PaaS tasks using automation\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-azure-paas-resources-using-automated-methods/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage Azure PaaS tasks using automation",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-azure-paas-resources-using-automated-methods/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-automate-tasks-sql-server",
+          "title": "Laboratorio opcional: aplica Automate database tasks for Azure SQL",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Automate database tasks for Azure SQL**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

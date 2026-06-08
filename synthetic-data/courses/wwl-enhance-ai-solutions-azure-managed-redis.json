@@ -1,0 +1,93 @@
+{
+  "certification_code": "wwl-enhance-ai-solutions-azure-managed-redis",
+  "track": "azure",
+  "title": "Enhance AI solutions with Azure Managed Redis",
+  "summary": "Learn how to use Azure Managed Redis to enhance your AI solutions, including caching strategies, data operations, event messaging, and vector storage.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 222,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/enhance-ai-solutions-azure-managed-redis/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-enhance-ai-solutions-azure-managed-redis",
+      "title": "Enhance AI solutions with Azure Managed Redis",
+      "summary": "Learn how to use Azure Managed Redis to enhance your AI solutions, including caching strategies, data operations, event messaging, and vector storage.",
+      "order": 1,
+      "duration_minutes": 222,
+      "lessons": [
+        {
+          "lesson_key": "wwl-implement-data-operations-azure-managed-redis",
+          "title": "Implement data operations in Azure Managed Redis",
+          "order": 1,
+          "duration_minutes": 61,
+          "content_md": "Learn how to implement data operations in Azure Managed Redis.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-data-operations-azure-managed-redis/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement data operations in Azure Managed Redis",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-data-operations-azure-managed-redis/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-event-messaging-azure-managed-redis",
+          "title": "Implement event messaging with Azure Managed Redis",
+          "order": 2,
+          "duration_minutes": 81,
+          "content_md": "Learn how to implement event messaging with Azure Cache for Redis and Azure Managed Redis, including pub/sub for real-time notifications and Streams for reliable task processing.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-event-messaging-azure-managed-redis/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement event messaging with Azure Managed Redis",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-event-messaging-azure-managed-redis/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-vector-storage-azure-managed-redis",
+          "title": "Implement vector storage in Azure Managed Redis",
+          "order": 3,
+          "duration_minutes": 80,
+          "content_md": "Learn how to implement vector storage and similarity search in Azure Managed Redis.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-vector-storage-azure-managed-redis/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement vector storage in Azure Managed Redis",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-vector-storage-azure-managed-redis/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-enhance-ai-solutions-azure-managed-redis",
+          "title": "Laboratorio opcional: aplica Enhance AI solutions with Azure Managed Redis",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Enhance AI solutions with Azure Managed Redis**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

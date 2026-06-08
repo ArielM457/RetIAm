@@ -1,0 +1,138 @@
+{
+  "certification_code": "manage-project-lifecycle-github",
+  "track": "github",
+  "title": "Manage the lifecycle of your projects on GitHub",
+  "summary": "Through work planning and tracking, effective branching strategies, and extending GitHub through its API, manage releases all the way from idea to working software in the hands of your users.",
+  "provider": "GitHub",
+  "level": "intermediate",
+  "total_duration_minutes": 398,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/manage-project-lifecycle-github/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "manage-project-lifecycle-github",
+      "title": "Manage the lifecycle of your projects on GitHub",
+      "summary": "Through work planning and tracking, effective branching strategies, and extending GitHub through its API, manage releases all the way from idea to working software in the hands of your users.",
+      "order": 1,
+      "duration_minutes": 398,
+      "lessons": [
+        {
+          "lesson_key": "github-introduction-to-github",
+          "title": "Introduction to GitHub",
+          "order": 1,
+          "duration_minutes": 105,
+          "content_md": "Learn to use key GitHub features, including issues, notifications, branches, commits, and pull requests.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-to-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-release-based-workflow-github",
+          "title": "Manage software delivery by using a release based workflow on GitHub",
+          "order": 2,
+          "duration_minutes": 104,
+          "content_md": "Learn to implement a release based workflow on GitHub using project boards, branches, and releases.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/release-based-workflow-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage software delivery by using a release based workflow on GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/release-based-workflow-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-manage-changes-pull-requests-github",
+          "title": "Manage repository changes by using pull requests on GitHub",
+          "order": 3,
+          "duration_minutes": 56,
+          "content_md": "Learn how to manage changes to your repository source by using pull requests.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-changes-pull-requests-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage repository changes by using pull requests on GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-changes-pull-requests-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-merge-conflict-resolution-github",
+          "title": "Settle competing commits by using merge conflict resolution on GitHub",
+          "order": 4,
+          "duration_minutes": 52,
+          "content_md": "Learn to settle overlapping commits across branches by using merge conflict resolution.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/resolve-merge-conflicts-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Settle competing commits by using merge conflict resolution on GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/resolve-merge-conflicts-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-automate-devops-github-apps",
+          "title": "Automate DevOps processes by using GitHub Apps",
+          "order": 5,
+          "duration_minutes": 43,
+          "content_md": "Learn to automate DevOps processes by using GitHub Apps that handle repetitive tasks, enforce team policies, and maintain a tidy repository.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/automate-devops-github-apps/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Automate DevOps processes by using GitHub Apps",
+              "url": "https://learn.microsoft.com/en-us/training/modules/automate-devops-github-apps/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "github-search-organize-repository-history-github",
+          "title": "Search and organize repository history by using GitHub",
+          "order": 6,
+          "duration_minutes": 38,
+          "content_md": "Learn to search and organize repository history by using filters, blame, and cross-linking on GitHub.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/search-organize-repository-history-github/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Search and organize repository history by using GitHub",
+              "url": "https://learn.microsoft.com/en-us/training/modules/search-organize-repository-history-github/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-manage-project-lifecycle-github",
+          "title": "Laboratorio opcional: aplica Manage the lifecycle of your projects on GitHub",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Manage the lifecycle of your projects on GitHub**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

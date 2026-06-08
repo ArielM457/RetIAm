@@ -1,0 +1,78 @@
+{
+  "certification_code": "az104-admin-prerequisites",
+  "track": "azure",
+  "title": "AZ-104: Prerequisites for Azure administrators",
+  "summary": "AZ-104: Prerequisites for Azure administrators",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 63,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/az-104-administrator-prerequisites/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "az104-admin-prerequisites",
+      "title": "AZ-104: Prerequisites for Azure administrators",
+      "summary": "AZ-104: Prerequisites for Azure administrators",
+      "order": 1,
+      "duration_minutes": 63,
+      "lessons": [
+        {
+          "lesson_key": "intro-to-azure-cloud-shell",
+          "title": "Introduction to Azure Cloud Shell",
+          "order": 1,
+          "duration_minutes": 20,
+          "content_md": "In this module, you learn what Azure Cloud Shell does, how it works, and when you should choose to use Azure Cloud Shell as a solution to meet your organization’s needs.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-azure-cloud-shell/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure Cloud Shell",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-azure-cloud-shell/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-create-resource-manager-template-vs-code",
+          "title": "Deploy Azure infrastructure by using JSON ARM templates",
+          "order": 2,
+          "duration_minutes": 43,
+          "content_md": "Write JSON Azure Resource Manager templates by using Visual Studio Code to deploy your infrastructure to Azure consistently and reliably.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/create-azure-resource-manager-template-vs-code/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Deploy Azure infrastructure by using JSON ARM templates",
+              "url": "https://learn.microsoft.com/en-us/training/modules/create-azure-resource-manager-template-vs-code/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-az104-admin-prerequisites",
+          "title": "Laboratorio opcional: aplica AZ-104: Prerequisites for Azure administrators",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **AZ-104: Prerequisites for Azure administrators**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

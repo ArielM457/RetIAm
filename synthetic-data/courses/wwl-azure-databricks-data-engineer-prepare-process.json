@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-azure-databricks-data-engineer-prepare-process",
+  "track": "azure",
+  "title": "Prepare and process data with Azure Databricks",
+  "summary": "Master the essential skills to build robust, scalable data engineering solutions with Azure Databricks and Unity Catalog. Learn to design effective data models, ingest data from diverse sources, transform raw data into analytics-ready formats, and ensure data quality across your lakehouse architecture.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 423,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/azure-databricks-data-engineer-prepare-process-data/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-azure-databricks-data-engineer-prepare-process-data",
+      "title": "Prepare and process data with Azure Databricks",
+      "summary": "Master the essential skills to build robust, scalable data engineering solutions with Azure Databricks and Unity Catalog. Learn to design effective data models, ingest data from diverse sources, transform raw data into analytics-ready formats, and ensure data quality across your lakehouse architecture.",
+      "order": 1,
+      "duration_minutes": 423,
+      "lessons": [
+        {
+          "lesson_key": "wwl-design-implement-data-modeling-unity-catalog",
+          "title": "Design and implement data modeling with Azure Databricks",
+          "order": 1,
+          "duration_minutes": 137,
+          "content_md": "Learn how to design and implement data modeling strategies in Azure Databricks with Unity Catalog, including ingestion patterns, table formats, partitioning, slowly changing dimensions, and clustering strategies.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/design-implement-data-modeling-unity-catalog/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Design and implement data modeling with Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/design-implement-data-modeling-unity-catalog/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-ingest-data-into-unity-catalog",
+          "title": "Ingest data into Unity Catalog",
+          "order": 2,
+          "duration_minutes": 101,
+          "content_md": "Learn how to ingest data from diverse sources into Unity Catalog tables in Azure Databricks using managed connectors, notebooks, SQL commands, streaming, and declarative pipelines.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/ingest-data-into-unity-catalog/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Ingest data into Unity Catalog",
+              "url": "https://learn.microsoft.com/en-us/training/modules/ingest-data-into-unity-catalog/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-cleanse-transform-load-data-into-unity-catalog",
+          "title": "Cleanse, transform, and load data into Unity Catalog",
+          "order": 3,
+          "duration_minutes": 102,
+          "content_md": "Learn how to cleanse, transform, and load data into Unity Catalog tables in Azure Databricks by profiling data, handling duplicates and nulls, applying transformations, and using various loading strategies.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/cleanse-transform-load-data-into-unity-catalog/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Cleanse, transform, and load data into Unity Catalog",
+              "url": "https://learn.microsoft.com/en-us/training/modules/cleanse-transform-load-data-into-unity-catalog/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-manage-data-quality-constraints-unity-catalog",
+          "title": "Implement and manage data quality constraints with Azure Databricks",
+          "order": 4,
+          "duration_minutes": 83,
+          "content_md": "Learn how to implement and manage data quality constraints in Azure Databricks using Unity Catalog, including validation checks, schema enforcement, and pipeline expectations.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-manage-data-quality-constraints-unity-catalog/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement and manage data quality constraints with Azure Databricks",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-manage-data-quality-constraints-unity-catalog/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-azure-databricks-data-engineer-prepare-process-data",
+          "title": "Laboratorio opcional: aplica Prepare and process data with Azure Databricks",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Prepare and process data with Azure Databricks**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

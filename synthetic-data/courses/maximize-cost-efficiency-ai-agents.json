@@ -1,0 +1,153 @@
+{
+  "certification_code": "maximize-cost-efficiency-ai-agents",
+  "track": "azure",
+  "title": "Maximize the Cost Efficiency of AI Agents on Azure",
+  "summary": "Maximize the ROI of AI agent investments by making cost-conscious, informed decisions at every stage. This learning path offers actionable guidance, from identifying high-impact use cases and understanding cost drivers, to forecasting ROI, adopting best practices, designing scalable and effective architectures, and optimizing ongoing investments.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 292,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/maximize-cost-efficiency-ai-agents/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "maximize-cost-efficiency-ai-agents",
+      "title": "Maximize the Cost Efficiency of AI Agents on Azure",
+      "summary": "Maximize the ROI of AI agent investments by making cost-conscious, informed decisions at every stage. This learning path offers actionable guidance, from identifying high-impact use cases and understanding cost drivers, to forecasting ROI, adopting best practices, designing scalable and effective architectures, and optimizing ongoing investments.",
+      "order": 1,
+      "duration_minutes": 292,
+      "lessons": [
+        {
+          "lesson_key": "identify-ai-agent-use-case",
+          "title": "Identify and Prioritize High-Impact AI Agent Use Cases",
+          "order": 1,
+          "duration_minutes": 21,
+          "content_md": "Uncover and evaluate AI agent use cases that deliver measurable business value with financial efficiency.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/identify-ai-agent-use-case/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Identify and Prioritize High-Impact AI Agent Use Cases",
+              "url": "https://learn.microsoft.com/en-us/training/modules/identify-ai-agent-use-case/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "ai-agent-cost-structure",
+          "title": "Understand the key cost drivers of AI agents",
+          "order": 2,
+          "duration_minutes": 96,
+          "content_md": "Developing and deploying AI agents can unlock transformative capabilities for businesses, but it requires careful planning and budgeting.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/ai-agent-cost-structure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand the key cost drivers of AI agents",
+              "url": "https://learn.microsoft.com/en-us/training/modules/ai-agent-cost-structure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "forcast-agent-return-investment",
+          "title": "Forecast the return on investment (ROI) of AI agents",
+          "order": 3,
+          "duration_minutes": 32,
+          "content_md": "AI agents are rapidly transforming how organizations operate, automating tasks, enhancing decision-making, and improving customer experiences. But to scale adoption and secure stakeholder buy-in, it's not enough to showcase innovation; leaders must clearly demonstrate the business value these agents deliver.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/forecast-agent-return-investment/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Forecast the return on investment (ROI) of AI agents",
+              "url": "https://learn.microsoft.com/en-us/training/modules/forecast-agent-return-investment/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "adopt-ai-agent-best-practice",
+          "title": "Implement best practices to empower AI agent efficiency and ensure long-term success",
+          "order": 4,
+          "duration_minutes": 34,
+          "content_md": "Learn how to implement best practices for AI agent workloads by leveraging frameworks like AI Center of Excellence, FinOps, GenAI Ops, Cloud Adoption Framework, and Well-Architected Framework.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/adopt-ai-agent-best-practice/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement best practices to empower AI agent efficiency and ensure long-term success",
+              "url": "https://learn.microsoft.com/en-us/training/modules/adopt-ai-agent-best-practice/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "maximize-cost-efficiency-ai-agent-development",
+          "title": "Maximize cost efficiency by choosing the right AI agent development approach on Azure",
+          "order": 5,
+          "duration_minutes": 28,
+          "content_md": "Evaluate when to develop custom AI agents tailored to your needs and when to deploy prebuilt solutions from trusted platforms. Learn how to assess trade-offs in time-to-value, complexity, customization, and operational cost. This module also guides you in selecting the right models for your AI agents, from lightweight task-specific agents to advanced multi-modal agents.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/maximize-cost-efficiency-ai-agent-development/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Maximize cost efficiency by choosing the right AI agent development approach on Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/maximize-cost-efficiency-ai-agent-development/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "architect-scalable-t-solutions",
+          "title": "Architect scalable and cost-efficient AI agent solutions on Azure",
+          "order": 6,
+          "duration_minutes": 47,
+          "content_md": "This module guides learners through designing AI agent architectures that scale with business demand, provide deep visibility into cost drivers, and support long-term governance. Participants explore reference architectures, orchestration patterns, and financial design principles that ensure operational efficiency, cost control, and strategic alignment.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/architect-scalable-ai-agent-solutions/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Architect scalable and cost-efficient AI agent solutions on Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/architect-scalable-ai-agent-solutions/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "manage-optimize-agent-investment-azure",
+          "title": "Manage and optimize AI agent investments on Azure",
+          "order": 7,
+          "duration_minutes": 34,
+          "content_md": "Managing and optimizing AI agent investments on Azure is now more streamlined and powerful with the built-in observability capabilities in Microsoft Foundry. These tools provide enterprise-grade observability, governance, and performance optimization capabilities essential for deploying intelligent, goal-driven agents at scale. These tools provide enterprise-grade observability, governance, and performance optimization capabilities essential for deploying intelligent, goal-driven agents at scale.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-optimize-agent-investment-azure/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage and optimize AI agent investments on Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-optimize-agent-investment-azure/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-maximize-cost-efficiency-ai-agents",
+          "title": "Laboratorio opcional: aplica Maximize the Cost Efficiency of AI Agents on Azure",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Maximize the Cost Efficiency of AI Agents on Azure**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

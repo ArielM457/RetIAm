@@ -1,0 +1,108 @@
+{
+  "certification_code": "azure-build-mixed-reality-azure-digital-twins-unit",
+  "track": "azure",
+  "title": "Build mixed reality digital twins with Azure Digital Twins and Unity",
+  "summary": "Learn how to create a mixed reality application using Azure Digital Twins and Unity, a real-time 3D platform.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 239,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/build-mixed-reality-azure-digital-twins-unity/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "azure-build-mixed-reality-azure-digital-twins-unity",
+      "title": "Build mixed reality digital twins with Azure Digital Twins and Unity",
+      "summary": "Learn how to create a mixed reality application using Azure Digital Twins and Unity, a real-time 3D platform.",
+      "order": 1,
+      "duration_minutes": 239,
+      "lessons": [
+        {
+          "lesson_key": "azure-set-up-mixed-reality-azure-digital-twins-unity",
+          "title": "Set up a mixed reality project for Azure Digital Twins in Unity",
+          "order": 1,
+          "duration_minutes": 34,
+          "content_md": "Get step-by-step guidance on how to set up and configure a mixed reality project in Unity. Learn about the Azure Digital Twins and SignalR services and common use cases for the Azure platform in Mixed Reality.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/set-up-mixed-reality-azure-digital-twins-unity/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Set up a mixed reality project for Azure Digital Twins in Unity",
+              "url": "https://learn.microsoft.com/en-us/training/modules/set-up-mixed-reality-azure-digital-twins-unity/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-build-3d-scene-mixed-reality-unity",
+          "title": "Build a 3D Scene for mixed reality in Unity",
+          "order": 2,
+          "duration_minutes": 52,
+          "content_md": "Learn how to create a 3D Scene in Unity using the Microsoft Maps SDK or static terrain. Get familiar with mixed reality scene design, the Unity interface, and deploying your Unity project to a mixed reality device.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/build-3d-scene-mixed-reality-unity/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build a 3D Scene for mixed reality in Unity",
+              "url": "https://learn.microsoft.com/en-us/training/modules/build-3d-scene-mixed-reality-unity/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-configure-3d-assets-mixed-reality-unity",
+          "title": "Configure 3D assets for mixed reality in Unity",
+          "order": 3,
+          "duration_minutes": 41,
+          "content_md": "Get step-by-step instructions on how to place Prefab 3D assets and models into a Unity scene. Learn about Unity Scriptable Objects and mixed reality design considerations before deploying to a HoloLens 2.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/configure-3d-assets-mixed-reality-unity/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure 3D assets for mixed reality in Unity",
+              "url": "https://learn.microsoft.com/en-us/training/modules/configure-3d-assets-mixed-reality-unity/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "azure-connect-iot-hololens-azure-digital-twins-unity",
+          "title": "Connect IoT data to mixed reality with Azure Digital Twins and Unity",
+          "order": 4,
+          "duration_minutes": 112,
+          "content_md": "Stream simulated operational telemetry data from physical assets to Azure Digital Twins and visualize data in Unity and mixed reality. Learn how to use an ARM template, create a user interface in Unity, and identify performance events before deploying to a HoloLens 2.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/connect-iot-hololens-azure-digital-twins-unity/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Connect IoT data to mixed reality with Azure Digital Twins and Unity",
+              "url": "https://learn.microsoft.com/en-us/training/modules/connect-iot-hololens-azure-digital-twins-unity/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-azure-build-mixed-reality-azure-digital-twins-unity",
+          "title": "Laboratorio opcional: aplica Build mixed reality digital twins with Azure Digital Twins and Unity",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Build mixed reality digital twins with Azure Digital Twins and Unity**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

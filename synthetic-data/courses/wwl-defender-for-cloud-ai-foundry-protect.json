@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-defender-for-cloud-ai-foundry-protect",
+  "track": "azure",
+  "title": "Protect Microsoft Foundry solutions by using Microsoft Defender for Cloud",
+  "summary": "Learn how to secure Microsoft Foundry workloads by using Microsoft Defender for Cloud. Discover AI resources across Azure, assess their security posture, protect against runtime threats, and configure model guardrails in Microsoft Foundry to prevent unsafe or policy-violating content.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 162,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/defender-for-cloud-ai-foundry-protect/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-defender-for-cloud-ai-foundry-protect",
+      "title": "Protect Microsoft Foundry solutions by using Microsoft Defender for Cloud",
+      "summary": "Learn how to secure Microsoft Foundry workloads by using Microsoft Defender for Cloud. Discover AI resources across Azure, assess their security posture, protect against runtime threats, and configure model guardrails in Microsoft Foundry to prevent unsafe or policy-violating content.",
+      "order": 1,
+      "duration_minutes": 162,
+      "lessons": [
+        {
+          "lesson_key": "wwl-defender-for-cloud-ai-understand-protections",
+          "title": "Understand how Microsoft Defender for Cloud supports AI security and governance in Azure",
+          "order": 1,
+          "duration_minutes": 26,
+          "content_md": "Understand how Microsoft Defender for Cloud strengthens AI security in Azure through posture management and integration with key governance and identity services.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/defender-for-cloud-ai-understand-protections/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Understand how Microsoft Defender for Cloud supports AI security and governance in Azure",
+              "url": "https://learn.microsoft.com/en-us/training/modules/defender-for-cloud-ai-understand-protections/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-defender-for-cloud-ai-protect-workloads",
+          "title": "Protect AI workloads with Microsoft Defender for Cloud",
+          "order": 2,
+          "duration_minutes": 38,
+          "content_md": "Learn how Microsoft Defender for Cloud extends protection to AI workloads across Azure. See how it discovers AI resources, assesses configuration risks, detects active threats, and integrates with Microsoft Defender XDR for unified investigation and response.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/defender-for-cloud-ai-protect-workloads/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Protect AI workloads with Microsoft Defender for Cloud",
+              "url": "https://learn.microsoft.com/en-us/training/modules/defender-for-cloud-ai-protect-workloads/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-azure-ai-foundry-configure-manage-guardrails",
+          "title": "Configure and manage guardrails in Microsoft Foundry",
+          "order": 3,
+          "duration_minutes": 48,
+          "content_md": "Safeguard your AI workloads with Microsoft Foundry guardrails. Discover how to configure and validate content filters, blocklists, and Prompt Shields to protect sensitive data, ensure responsible model behavior, and continuously improve AI safety.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-ai-foundry-configure-manage-guardrails/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Configure and manage guardrails in Microsoft Foundry",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-ai-foundry-configure-manage-guardrails/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-azure-ai-foundry-secure-environment",
+          "title": "Secure Microsoft Foundry environments",
+          "order": 4,
+          "duration_minutes": 50,
+          "content_md": "Secure Microsoft Foundry environments by applying layered protections across identity, secrets, networks, and diagnostics. This module explains how to manage access with Microsoft Entra ID and project roles, protect credentials with Key Vault, and isolate workloads through private network connections. It also covers enabling diagnostic logging to strengthen visibility and auditing. These practices help you build trusted, compliant AI environments that support collaboration safely.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-ai-foundry-secure-environment/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Secure Microsoft Foundry environments",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-ai-foundry-secure-environment/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-defender-for-cloud-ai-foundry-protect",
+          "title": "Laboratorio opcional: aplica Protect Microsoft Foundry solutions by using Microsoft Defender for Cloud",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Protect Microsoft Foundry solutions by using Microsoft Defender for Cloud**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

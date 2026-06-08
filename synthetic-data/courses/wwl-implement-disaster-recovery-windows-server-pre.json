@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-implement-disaster-recovery-windows-server-pre",
+  "track": "azure",
+  "title": "Implement disaster recovery in Windows Server on-premises and hybrid environments",
+  "summary": "Implement disaster recovery in Windows Server on-premises and hybrid environments",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 179,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/implement-disaster-recovery-windows-server-premises/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-implement-disaster-recovery-windows-server-premises",
+      "title": "Implement disaster recovery in Windows Server on-premises and hybrid environments",
+      "summary": "Implement disaster recovery in Windows Server on-premises and hybrid environments",
+      "order": 1,
+      "duration_minutes": 179,
+      "lessons": [
+        {
+          "lesson_key": "wwl-implement-hyper-v-replica",
+          "title": "Implement Hyper-V Replica",
+          "order": 1,
+          "duration_minutes": 50,
+          "content_md": "Implement Hyper-V Replica\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-hyper-v-replica/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement Hyper-V Replica",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-hyper-v-replica/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-implement-hybrid-backup-recovery-with-windows-server-iaa",
+          "title": "Implement hybrid backup and recovery with Windows Server IaaS",
+          "order": 2,
+          "duration_minutes": 61,
+          "content_md": "Learn about Azure Backup before learning to implement Recovery Vaults and Azure Backup Policies. Learn to implement Windows IaaS VM recovery, perform backup and restore of on-premises workloads, and manage Azure VM backups.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-hybrid-backup-recovery-windows-server-iaas/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement hybrid backup and recovery with Windows Server IaaS",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-hybrid-backup-recovery-windows-server-iaas/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "protect-on-premises-infrastructure-with-azure-site-recovery",
+          "title": "Protect your on-premises infrastructure from disasters with Azure Site Recovery",
+          "order": 3,
+          "duration_minutes": 33,
+          "content_md": "Learn how to provide disaster recovery for your on-premises infrastructure by using Azure Site Recovery to manage and orchestrate replication. Use Site Recovery to perform failover and failback of VMware virtual machines, Hyper-V virtual machines, and physical servers.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/protect-on-premises-infrastructure-with-azure-site-recovery/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Protect your on-premises infrastructure from disasters with Azure Site Recovery",
+              "url": "https://learn.microsoft.com/en-us/training/modules/protect-on-premises-infrastructure-with-azure-site-recovery/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "protect-virtual-machines-with-azure-backup",
+          "title": "Protect your virtual machines by using Azure Backup",
+          "order": 4,
+          "duration_minutes": 35,
+          "content_md": "Use Azure Backup to help protect on-premises servers, virtual machines, SQL Server, Azure file shares, and other workloads.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/protect-virtual-machines-with-azure-backup/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Protect your virtual machines by using Azure Backup",
+              "url": "https://learn.microsoft.com/en-us/training/modules/protect-virtual-machines-with-azure-backup/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-implement-disaster-recovery-windows-server-premises",
+          "title": "Laboratorio opcional: aplica Implement disaster recovery in Windows Server on-premises and hybrid environments",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Implement disaster recovery in Windows Server on-premises and hybrid environments**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "certification_code": "wwl-az-204-develop-event-based-solutions",
+  "track": "azure",
+  "title": "Develop event-based solutions",
+  "summary": "Learn how to build applications with event-based architectures by integrating Azure Event Grid and Azure Event Hubs in to your solution.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 117,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/az-204-develop-event-based-solutions/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-az-204-develop-event-based-solutions",
+      "title": "Develop event-based solutions",
+      "summary": "Learn how to build applications with event-based architectures by integrating Azure Event Grid and Azure Event Hubs in to your solution.",
+      "order": 1,
+      "duration_minutes": 117,
+      "lessons": [
+        {
+          "lesson_key": "wwl-azure-event-grid",
+          "title": "Explore Azure Event Grid",
+          "order": 1,
+          "duration_minutes": 59,
+          "content_md": "Explore Azure Event Grid\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-event-grid/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore Azure Event Grid",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-event-grid/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-azure-event-hubs",
+          "title": "Explore Azure Event Hubs",
+          "order": 2,
+          "duration_minutes": 58,
+          "content_md": "Learn how Azure Event Hubs captures events and how to scale your processing application.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/azure-event-hubs/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Explore Azure Event Hubs",
+              "url": "https://learn.microsoft.com/en-us/training/modules/azure-event-hubs/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-az-204-develop-event-based-solutions",
+          "title": "Laboratorio opcional: aplica Develop event-based solutions",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Develop event-based solutions**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

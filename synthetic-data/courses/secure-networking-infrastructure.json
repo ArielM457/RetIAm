@@ -1,0 +1,78 @@
+{
+  "certification_code": "secure-networking-infrastructure",
+  "track": "azure",
+  "title": "Introduction to Secure Network Infrastructure with Azure network security",
+  "summary": "Learn to protect your network from cyber security attacks to secure your networking infrastructure.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 76,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/secure-networking-infrastructure/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "secure-networking-infrastructure",
+      "title": "Introduction to Secure Network Infrastructure with Azure network security",
+      "summary": "Learn to protect your network from cyber security attacks to secure your networking infrastructure.",
+      "order": 1,
+      "duration_minutes": 76,
+      "lessons": [
+        {
+          "lesson_key": "introduction-azure-firewall",
+          "title": "Introduction to Azure Firewall",
+          "order": 1,
+          "duration_minutes": 48,
+          "content_md": "Describe how Azure Firewall protects Azure Virtual Network resources, including the Azure Firewall features, rules, deployment options, and administration with Azure Firewall Manager.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/introduction-azure-firewall/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure Firewall",
+              "url": "https://learn.microsoft.com/en-us/training/modules/introduction-azure-firewall/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "intro-to-azure-firewall-manager",
+          "title": "Introduction to Azure Firewall Manager",
+          "order": 2,
+          "duration_minutes": 28,
+          "content_md": "Describe how Azure Firewall Manager provides central security policy and route management for your cloud-based security perimeters. Determine whether Azure Firewall Manager can help you secure your cloud perimeters.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-to-azure-firewall-manager/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to Azure Firewall Manager",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-azure-firewall-manager/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-secure-networking-infrastructure",
+          "title": "Laboratorio opcional: aplica Introduction to Secure Network Infrastructure with Azure network security",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Introduction to Secure Network Infrastructure with Azure network security**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "certification_code": "wwl-sc-200-connect-logs-to-azure-sentinel",
+  "track": "azure",
+  "title": "Connect logs to Microsoft Sentinel",
+  "summary": "Connect logs to Microsoft Sentinel",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 184,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/sc-200-connect-logs-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-sc-200-connect-logs-to-azure-sentinel",
+      "title": "Connect logs to Microsoft Sentinel",
+      "summary": "Connect logs to Microsoft Sentinel",
+      "order": 1,
+      "duration_minutes": 184,
+      "lessons": [
+        {
+          "lesson_key": "wwl-connect-data-to-azure-sentinel-with-data-connectors",
+          "title": "Connect data to Microsoft Sentinel using data connectors",
+          "order": 1,
+          "duration_minutes": 22,
+          "content_md": "Connect data to Microsoft Sentinel using data connectors\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/connect-data-to-azure-sentinel-with-data-connectors/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Connect data to Microsoft Sentinel using data connectors",
+              "url": "https://learn.microsoft.com/en-us/training/modules/connect-data-to-azure-sentinel-with-data-connectors/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-connect-microsoft-services-to-azure-sentinel",
+          "title": "Connect Microsoft services to Microsoft Sentinel",
+          "order": 2,
+          "duration_minutes": 26,
+          "content_md": "Connect Microsoft services to Microsoft Sentinel\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/connect-microsoft-services-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Connect Microsoft services to Microsoft Sentinel",
+              "url": "https://learn.microsoft.com/en-us/training/modules/connect-microsoft-services-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-connect-microsoft-defender-365-to-azure-sentinel",
+          "title": "Connect Microsoft Defender XDR to Microsoft Sentinel",
+          "order": 3,
+          "duration_minutes": 29,
+          "content_md": "Connect Microsoft Defender XDR to Microsoft Sentinel\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/connect-microsoft-defender-365-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Connect Microsoft Defender XDR to Microsoft Sentinel",
+              "url": "https://learn.microsoft.com/en-us/training/modules/connect-microsoft-defender-365-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-connect-windows-hosts-to-azure-sentinel",
+          "title": "Connect Windows hosts to Microsoft Sentinel",
+          "order": 4,
+          "duration_minutes": 26,
+          "content_md": "Connect Windows hosts to Microsoft Sentinel\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/connect-windows-hosts-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Connect Windows hosts to Microsoft Sentinel",
+              "url": "https://learn.microsoft.com/en-us/training/modules/connect-windows-hosts-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-connect-common-event-format-cef-logs-to-azure-sentinel",
+          "title": "Connect Common Event Format logs to Microsoft Sentinel",
+          "order": 5,
+          "duration_minutes": 20,
+          "content_md": "Connect Common Event Format logs to Microsoft Sentinel\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/connect-common-event-format-logs-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Connect Common Event Format logs to Microsoft Sentinel",
+              "url": "https://learn.microsoft.com/en-us/training/modules/connect-common-event-format-logs-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-connect-syslog-data-sources-to-azure-sentinel",
+          "title": "Connect syslog data sources to Microsoft Sentinel",
+          "order": 6,
+          "duration_minutes": 28,
+          "content_md": "Connect syslog data sources to Microsoft Sentinel\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/connect-syslog-data-sources-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Connect syslog data sources to Microsoft Sentinel",
+              "url": "https://learn.microsoft.com/en-us/training/modules/connect-syslog-data-sources-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-connect-threat-indicators-to-azure-sentinel",
+          "title": "Connect threat indicators to Microsoft Sentinel",
+          "order": 7,
+          "duration_minutes": 33,
+          "content_md": "Connect threat indicators to Microsoft Sentinel\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/connect-threat-indicators-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Connect threat indicators to Microsoft Sentinel",
+              "url": "https://learn.microsoft.com/en-us/training/modules/connect-threat-indicators-to-azure-sentinel/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-sc-200-connect-logs-to-azure-sentinel",
+          "title": "Laboratorio opcional: aplica Connect logs to Microsoft Sentinel",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Connect logs to Microsoft Sentinel**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

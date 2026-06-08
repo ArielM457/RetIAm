@@ -1,0 +1,93 @@
+{
+  "certification_code": "tensorflow-tensorflow-fundamentals",
+  "track": "azure",
+  "title": "TensorFlow fundamentals",
+  "summary": "Learn the fundamentals of deep learning with TensorFlow! This beginner friendly learning path will introduce key concepts to building machine learning models.",
+  "provider": "Microsoft",
+  "level": "basic",
+  "total_duration_minutes": 168,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/tensorflow-fundamentals/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "tensorflow-tensorflow-fundamentals",
+      "title": "TensorFlow fundamentals",
+      "summary": "Learn the fundamentals of deep learning with TensorFlow! This beginner friendly learning path will introduce key concepts to building machine learning models.",
+      "order": 1,
+      "duration_minutes": 168,
+      "lessons": [
+        {
+          "lesson_key": "tensorflow-intro-computer-vision",
+          "title": "Introduction to computer vision with TensorFlow",
+          "order": 2,
+          "duration_minutes": 57,
+          "content_md": "Learn how to perform different computer vision tasks using TensorFlow.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-computer-vision-tensorflow/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to computer vision with TensorFlow",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-computer-vision-tensorflow/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "tensorflow-intro-natural-language-processing",
+          "title": "Introduction to natural language processing with TensorFlow",
+          "order": 3,
+          "duration_minutes": 63,
+          "content_md": "In this module, we explore different neural network architectures for processing natural language texts.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-natural-language-processing-tensorflow/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to natural language processing with TensorFlow",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-natural-language-processing-tensorflow/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "tensorflow-intro-audio-classification",
+          "title": "Introduction to audio classification with TensorFlow",
+          "order": 4,
+          "duration_minutes": 48,
+          "content_md": "Learn how to prepare audio data, create spectrograms, and build a TensorFlow keyword classification model.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Introduction to audio classification with TensorFlow",
+              "url": "https://learn.microsoft.com/en-us/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-tensorflow-tensorflow-fundamentals",
+          "title": "Laboratorio opcional: aplica TensorFlow fundamentals",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **TensorFlow fundamentals**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

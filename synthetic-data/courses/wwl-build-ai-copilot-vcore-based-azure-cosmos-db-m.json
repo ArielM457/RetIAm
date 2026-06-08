@@ -1,0 +1,108 @@
+{
+  "certification_code": "wwl-build-ai-copilot-vcore-based-azure-cosmos-db-m",
+  "track": "azure",
+  "title": "Build an AI copilot with vCore-based Azure Cosmos DB for MongoDB and Azure OpenAI",
+  "summary": "Build an AI copilot with vCore-based Azure Cosmos DB for MongoDB and Azure OpenAI.",
+  "provider": "Microsoft",
+  "level": "intermediate",
+  "total_duration_minutes": 226,
+  "source": "ms_learn",
+  "source_url": "https://learn.microsoft.com/en-us/training/paths/build-ai-copilot-vcore-based-azure-cosmos-db-mongodb-azure-openai/?WT.mc_id=api_CatalogApi",
+  "sections": [
+    {
+      "section_key": "wwl-build-ai-copilot-vcore-based-azure-cosmos-db-mongodb-azu",
+      "title": "Build an AI copilot with vCore-based Azure Cosmos DB for MongoDB and Azure OpenAI",
+      "summary": "Build an AI copilot with vCore-based Azure Cosmos DB for MongoDB and Azure OpenAI.",
+      "order": 1,
+      "duration_minutes": 226,
+      "lessons": [
+        {
+          "lesson_key": "wwl-implement-vcore-based-azure-cosmos-db-mongodb",
+          "title": "Implement vCore-based Azure Cosmos DB for MongoDB",
+          "order": 1,
+          "duration_minutes": 33,
+          "content_md": "Implement vCore-based Azure Cosmos DB for MongoDB.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/implement-vcore-based-azure-cosmos-db-mongodb/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Implement vCore-based Azure Cosmos DB for MongoDB",
+              "url": "https://learn.microsoft.com/en-us/training/modules/implement-vcore-based-azure-cosmos-db-mongodb/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-migrate-vcore-based-azure-cosmos-db-mongodb",
+          "title": "Migrate to vCore-based Azure Cosmos DB for MongoDB",
+          "order": 2,
+          "duration_minutes": 50,
+          "content_md": "Migrate to vCore-based Azure Cosmos DB for MongoDB.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/migrate-vcore-based-azure-cosmos-db-mongodb/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Migrate to vCore-based Azure Cosmos DB for MongoDB",
+              "url": "https://learn.microsoft.com/en-us/training/modules/migrate-vcore-based-azure-cosmos-db-mongodb/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-manage-vcore-based-azure-cosmos-db-mongodb-cluster",
+          "title": "Manage a vCore-based Azure Cosmos DB for MongoDB cluster",
+          "order": 3,
+          "duration_minutes": 70,
+          "content_md": "Manage a vCore-based Azure Cosmos DB for MongoDB cluster.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/manage-vcore-based-azure-cosmos-db-mongodb-cluster/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Manage a vCore-based Azure Cosmos DB for MongoDB cluster",
+              "url": "https://learn.microsoft.com/en-us/training/modules/manage-vcore-based-azure-cosmos-db-mongodb-cluster/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        },
+        {
+          "lesson_key": "wwl-build-your-own-ai-copilot-vcore-based-azure-cosmos-db-mo",
+          "title": "Build your own AI copilot with vCore-based Azure Cosmos DB for MongoDB and Azure OpenAI",
+          "order": 4,
+          "duration_minutes": 73,
+          "content_md": "Build your own AI copilot with vCore-based Azure Cosmos DB for MongoDB and Azure OpenAI.\n\nFuente oficial: https://learn.microsoft.com/en-us/training/modules/build-ai-copilot-vcore-based-azure-cosmos-db-mongodb/?WT.mc_id=api_CatalogApi",
+          "learning_objectives": [],
+          "sources": [
+            {
+              "title": "Build your own AI copilot with vCore-based Azure Cosmos DB for MongoDB and Azure OpenAI",
+              "url": "https://learn.microsoft.com/en-us/training/modules/build-ai-copilot-vcore-based-azure-cosmos-db-mongodb/?WT.mc_id=api_CatalogApi",
+              "source": "ms_learn"
+            }
+          ]
+        }
+      ],
+      "labs": [
+        {
+          "lab_key": "lab-wwl-build-ai-copilot-vcore-based-azure-cosmos-db-mongodb-azu",
+          "title": "Laboratorio opcional: aplica Build an AI copilot with vCore-based Azure Cosmos DB for MongoDB and Azure OpenAI",
+          "is_optional": true,
+          "estimated_minutes": 30,
+          "instructions_md": "Lleva a la practica lo aprendido en **Build an AI copilot with vCore-based Azure Cosmos DB for MongoDB and Azure OpenAI**. Implementa un escenario pequeno y documenta tu solucion. Este laboratorio es opcional pero refuerza la retencion.",
+          "rubric": [
+            {
+              "criterion": "Funcionalidad",
+              "weight": 40,
+              "description": "La solucion cumple el objetivo del laboratorio."
+            },
+            {
+              "criterion": "Claridad",
+              "weight": 30,
+              "description": "La explicacion es comprensible y ordenada."
+            },
+            {
+              "criterion": "Buenas practicas",
+              "weight": 30,
+              "description": "Aplica recomendaciones del modulo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
