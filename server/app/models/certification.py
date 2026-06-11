@@ -19,6 +19,21 @@ class ResourceReference(BaseModel):
     url: str
 
 
+class RouteProfileContext(BaseModel):
+    weekly_hours_available: int = 0
+    preferred_time: str = "morning"
+    preferred_start_hour: int | None = None
+    preferred_study_days: list[str] = Field(default_factory=list)
+    learning_style: list[str] = Field(default_factory=list)
+    content_preferences: list[str] = Field(default_factory=list)
+    study_techniques: list[str] = Field(default_factory=list)
+    learning_goals: list[str] = Field(default_factory=list)
+    technology_experience: list[str] = Field(default_factory=list)
+    recommended_study_days: list[str] = Field(default_factory=list)
+    recommended_session_duration_minutes: int = 45
+    weekly_study_minutes: int = 0
+
+
 class RouteSection(BaseModel):
     section_id: str
     title: str
@@ -30,6 +45,12 @@ class RouteSection(BaseModel):
     course_section_id: str | None = None
     lessons: list[CourseLesson] = Field(default_factory=list)
     labs: list[CourseLab] = Field(default_factory=list)
+    recommended_session_type: str = "theory"
+    recommended_study_methods: list[str] = Field(default_factory=list)
+    target_lessons: int = 0
+    target_labs: int = 0
+    review_points: list[str] = Field(default_factory=list)
+    unlock_after_section_id: str | None = None
 
 
 class CertificationRouteResponse(BaseModel):
@@ -38,3 +59,5 @@ class CertificationRouteResponse(BaseModel):
     detected_level: str
     source_mode: str
     sections: list[RouteSection] = Field(default_factory=list)
+    personalization_summary: list[str] = Field(default_factory=list)
+    profile_context: RouteProfileContext = Field(default_factory=RouteProfileContext)

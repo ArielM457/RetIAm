@@ -10,6 +10,7 @@
       </p>
       <div class="hero-stats" *ngIf="!loading()">
         <div><strong>{{ courses().length }}</strong><span>cursos</span></div>
+        <div><strong>{{ enrolledCount() }}</strong><span>inscritos</span></div>
         <div><strong>{{ trackCount()['azure'] || 0 }}</strong><span>Azure</span></div>
         <div><strong>{{ trackCount()['github'] || 0 }}</strong><span>GitHub</span></div>
       </div>
@@ -30,6 +31,7 @@
     >
       <div class="course-cover" [ngClass]="coverClass(course.track)">
         <span class="track-badge">{{ course.provider || course.track }}</span>
+        <span class="enrolled-badge" *ngIf="isEnrolled(course.certification_code)">Inscrito</span>
       </div>
       <div class="course-body">
         <h3 class="course-title">{{ course.title }}</h3>
@@ -103,6 +105,7 @@
     >
       <div class="course-cover" [ngClass]="coverClass(course.track)">
         <span class="track-badge">{{ course.provider || course.track }}</span>
+        <span class="enrolled-badge" *ngIf="isEnrolled(course.certification_code)">Inscrito</span>
       </div>
       <div class="course-body">
         <h3 class="course-title">{{ course.title }}</h3>
@@ -153,10 +156,26 @@
         </div>
         <p class="drawer-summary">{{ course.summary || 'Curso de certificación técnica fundamentado en documentación oficial.' }}</p>
 
-        <button class="btn btn-primary btn-block" [disabled]="starting()" (click)="startCourse(course.certification_code)">
-          {{ starting() ? 'Preparando tu sesión…' : 'Iniciar curso' }}
+        <button
+          class="btn btn-primary btn-block"
+          [disabled]="enrolling() && !isEnrolled(course.certification_code)"
+          (click)="requestEnrollment(course.certification_code)"
+        >
+          {{
+            isEnrolled(course.certification_code)
+              ? 'Ver curso'
+              : enrolling()
+                ? 'Preparando inscripción…'
+                : 'Inscribirme a este curso'
+          }}
         </button>
-        <p class="drawer-cta-hint">Te llevamos directo a tu sesión para empezar a estudiar.</p>
+        <p class="drawer-cta-hint">
+          {{
+            isEnrolled(course.certification_code)
+              ? 'Ya estás inscrito. Desde aquí entras directo al contenido del curso.'
+              : 'Primero te inscribes y luego el agente arma tu ruta personalizada y tu agenda.'
+          }}
+        </p>
 
         <h3 class="drawer-section-title">Temario</h3>
         <div class="section-list">
@@ -183,3 +202,40 @@
     </ng-container>
   </aside>
 </ng-container>
+
+<ng-container *ngIf="showEnrollConfirm()">
+  <div class="drawer-backdrop" (click)="closeEnrollmentConfirm()"></div>
+  <div class="enroll-modal glass-card">
+    <p class="eyebrow">Inscripción al curso</p>
+    <h2>¿Quieres inscribirte a este curso?</h2>
+    <p class="enroll-copy">
+      Usaremos tus preferencias actuales para generar una ruta personalizada, dividir el curso
+      en sesiones progresivas y agendarlo en tu calendario de estudio.
+    </p>
+
+    <div class="enroll-facts">
+      <div class="enroll-fact" *ngFor="let fact of preferenceFacts()">
+        <span>{{ fact.label }}</span>
+        <strong>{{ fact.value }}</strong>
+      </div>
+    </div>
+
+    <div class="enroll-actions">
+      <button class="btn btn-ghost" type="button" (click)="closeEnrollmentConfirm()">Cancelar</button>
+      <button class="btn btn-primary" type="button" (click)="confirmEnrollment()">Sí, inscribirme</button>
+    </div>
+  </div>
+</ng-container>
+
+<div class="agent-overlay" *ngIf="enrolling()">
+  <div class="agent-card glass-card">
+    <div class="agent-spinner">
+      <span></span><span></span><span></span>
+    </div>
+    <h3>El agente está diseñando tu ruta</h3>
+    <p>
+      Estamos revisando tus preferencias, separando sesiones, creando checkpoints y armando tu
+      agenda personalizada.
+    </p>
+  </div>
+</div>

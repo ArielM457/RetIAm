@@ -13,6 +13,7 @@ Degrada con gracia:
 
 import json
 import logging
+import re
 
 from app.core.config import get_settings
 from app.db.supabase import get_supabase_service_client
@@ -21,6 +22,7 @@ from app.models.course import CourseLesson, LessonSource
 from app.models.tutor import (
     LessonChatMessage,
     LessonChatResponse,
+    LessonReviewResponse,
     SuggestedQuestionsResponse,
 )
 from app.services import rag_service
@@ -29,6 +31,13 @@ from app.services.course_service import require_lesson_context
 from app.services.profile_service import ensure_profile_for_user
 
 logger = logging.getLogger(__name__)
+
+_STOPWORDS = {
+    "de", "la", "el", "y", "que", "en", "a", "los", "las", "un", "una", "por", "para",
+    "con", "del", "al", "se", "lo", "le", "su", "sus", "como", "pero", "mas", "más",
+    "esta", "este", "esto", "esa", "ese", "soy", "eres", "fue", "son", "hay", "muy",
+    "me", "mi", "tu", "te", "ya", "si", "sin", "o",
+}
 
 
 def _client():
@@ -114,6 +123,31 @@ def _build_context(chunks: list[dict]) -> str:
         title = chunk.get("lesson_title") or "Fragmento"
         blocks.append(f"[Fragmento {index} — {title}]\n{chunk.get('content', '')}")
     return "\n\n".join(blocks)
+
+
+def _meaningful_tokens(text: str) -> set[str]:
+    tokens = set(re.findall(r"[a-zA-ZáéíóúÁÉÍÓÚñÑ]{4,}", text.lower()))
+    return {token for token in tokens if token not in _STOPWORDS}
+
+
+def _looks_related(explanation: str, context_text: str, lesson_title: str, subject: str | None) -> bool:
+    explanation_tokens = _meaningful_tokens(explanation)
+    if not explanation_tokens:
+        return False
+
+    context_tokens = _meaningful_tokens(f"{context_text}\n{lesson_title}\n{subject or ''}")
+    overlap = explanation_tokens & context_tokens
+    if overlap:
+        return True
+
+    # Fallback flexible: aceptar variaciones cercanas como singular/plural o tokens compuestos.
+    for token in explanation_tokens:
+        for candidate in context_tokens:
+            if len(candidate) < 5:
+                continue
+            if token in candidate or candidate in token:
+                return True
+    return False
 
 
 def _fallback_suggested_questions(lesson: CourseLesson) -> list[str]:
@@ -213,23 +247,115 @@ def get_suggested_questions(auth_user: object, lesson_id: str) -> SuggestedQuest
     lesson: CourseLesson = context["lesson"]
     certification = context.get("certification_code")
 
-    chunks = rag_service.retrieve(certification, lesson.title, k=4)
-    if chunks:
-        context_text = _build_context(chunks)
-        prompt = (
-            f"Genera 4 preguntas breves y útiles que un alumno podría hacer sobre la lección "
-            f"«{lesson.title}», basándote SOLO en este material:\n{context_text}\n\n"
-            'Devuelve SOLO un objeto JSON: {"questions": ["...", "..."]}'
-        )
-        parsed = run_agent_json("gini-eval", prompt, temperature=0.4, max_tokens=400, ground=False)
-        if parsed and isinstance(parsed.get("questions"), list) and parsed["questions"]:
-            return SuggestedQuestionsResponse(
-                lesson_id=lesson_id,
-                questions=[str(item) for item in parsed["questions"]][:4],
-                source_mode="foundry",
+    try:
+        chunks = rag_service.retrieve(certification, lesson.title, k=4)
+        if chunks:
+            context_text = _build_context(chunks)
+            prompt = (
+                f"Genera 4 preguntas breves y útiles que un alumno podría hacer sobre la lección "
+                f"«{lesson.title}», basándote SOLO en este material:\n{context_text}\n\n"
+                'Devuelve SOLO un objeto JSON: {"questions": ["...", "..."]}'
             )
+            parsed = run_agent_json("gini-eval", prompt, temperature=0.4, max_tokens=400, ground=False)
+            if parsed and isinstance(parsed.get("questions"), list) and parsed["questions"]:
+                return SuggestedQuestionsResponse(
+                    lesson_id=lesson_id,
+                    questions=[str(item) for item in parsed["questions"]][:4],
+                    source_mode="foundry",
+                )
+    except Exception as exc:
+        logger.warning("Fallo get_suggested_questions para %s; se usa fallback: %s", lesson_id, exc)
+
     return SuggestedQuestionsResponse(
         lesson_id=lesson_id,
         questions=_fallback_suggested_questions(lesson),
+        source_mode="mock",
+    )
+
+
+def review_explanation(
+    auth_user: object,
+    lesson_id: str,
+    explanation: str,
+    part_title: str | None = None,
+    technique: str | None = None,
+) -> LessonReviewResponse:
+    ensure_profile_for_user(auth_user)
+    context = require_lesson_context(lesson_id)
+    lesson: CourseLesson = context["lesson"]
+    certification = context.get("certification_code")
+    subject = part_title or lesson.title
+
+    chunks = rag_service.retrieve(certification, f"{lesson.title} {subject}", k=4)
+    lesson_context_text = lesson.content_md or ""
+    base_context_text = lesson_context_text
+    if chunks:
+        base_context_text = _build_context(chunks)
+
+    related = _looks_related(explanation, base_context_text, lesson.title, subject)
+
+    if not chunks:
+        if related:
+            return LessonReviewResponse(
+                lesson_id=lesson_id,
+                accepted=True,
+                feedback="Tu explicacion si va con el tema de esta parte. Puedes continuar.",
+                reinforcement="Buen trabajo. Si quieres mejorarla, menciona tambien la herramienta o el riesgo principal que se explica aqui.",
+                source_mode="mock",
+            )
+        return LessonReviewResponse(
+            lesson_id=lesson_id,
+            accepted=False,
+            feedback="Todavia no puedo validar esta explicacion con el contexto de esta parte. Intenta responder usando la idea principal del texto.",
+            reinforcement="Si vuelve a pasar, revisa el contenido una vez mas y resume solo lo que se explica en esta parte.",
+            source_mode="mock",
+        )
+
+    context_text = _build_context(chunks)
+    if not related:
+        return LessonReviewResponse(
+            lesson_id=lesson_id,
+            accepted=False,
+            feedback="Eso no tiene que ver con esta parte. Intenta otra vez enfocandote en la idea principal del texto.",
+            reinforcement="Usa palabras simples, pero habla solo de lo que acabas de leer en esta parte.",
+            source_mode="mock",
+        )
+
+    prompt = (
+        "Eres Gini Eval revisando una explicacion breve de un alumno sobre una parte de una leccion. "
+        "Debes ser amable, rapido y muy claro. SOLO rechaza si la respuesta no tiene relacion con el contenido o es claramente absurda. "
+        "Si la idea es razonable, aceptala aunque sea incompleta. Cuando aceptes, responde con un tono positivo, di brevemente que va bien y agrega un detalle interesante o util para reforzar. "
+        "Cuando rechaces, di claramente que no tiene que ver con esta parte y pide que lo intente otra vez con la idea principal.\n\n"
+        f"LECCION: {lesson.title}\n"
+        f"PARTE: {subject}\n"
+        f"METODOLOGIA: {technique or 'general'}\n\n"
+        f"CONTEXTO DEL CURSO:\n{context_text}\n\n"
+        f"EXPLICACION DEL ALUMNO:\n{explanation}\n\n"
+        'Devuelve SOLO JSON con esta forma: {"accepted": true, "feedback": "...", "reinforcement": "..."}'
+    )
+    parsed = run_agent_json("gini-eval", prompt, temperature=0.2, max_tokens=300, ground=False)
+    if parsed:
+        accepted = bool(parsed.get("accepted", True))
+        if accepted and not related:
+            accepted = False
+        feedback = str(parsed.get("feedback") or "").strip() or (
+            "Vas bien, tu explicacion esta alineada con el contenido. Puedes continuar."
+            if accepted
+            else "Eso no tiene que ver con esta parte. Intenta otra vez enfocandote en la idea principal del texto."
+        )
+        reinforcement = str(parsed.get("reinforcement") or "").strip() or None
+        return LessonReviewResponse(
+            lesson_id=lesson_id,
+            accepted=accepted,
+            feedback=feedback,
+            reinforcement=reinforcement,
+            source_mode="foundry",
+        )
+
+    return LessonReviewResponse(
+        lesson_id=lesson_id,
+        accepted=False,
+        feedback="No pude confirmar que esta respuesta este alineada con esta parte. Intenta otra vez con un resumen mas centrado en el contenido.",
+        reinforcement="Menciona la idea principal o algun concepto puntual que aparezca en el texto de esta parte.",
         source_mode="mock",
     )

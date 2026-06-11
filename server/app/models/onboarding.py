@@ -56,7 +56,13 @@ class LearningProfileSnapshot(BaseModel):
     detected_level: Difficulty
     weekly_hours_available: int
     preferred_time: PreferredTime
+    preferred_start_hour: int | None = None
+    preferred_study_days: list[str] = Field(default_factory=list)
     learning_style: list[LearningStyle]
+    content_preferences: list[str] = Field(default_factory=list)
+    study_techniques: list[str] = Field(default_factory=list)
+    learning_goals: list[str] = Field(default_factory=list)
+    technology_experience: list[str] = Field(default_factory=list)
     profile_version: int
     onboarding_completed_at: str | None = None
 
@@ -78,7 +84,13 @@ class SavedAssessmentResponse(BaseModel):
     detected_level: Difficulty
     weekly_hours_available: int
     preferred_time: PreferredTime
+    preferred_start_hour: int | None = None
+    preferred_study_days: list[str] = Field(default_factory=list)
     learning_style: list[LearningStyle]
+    content_preferences: list[str] = Field(default_factory=list)
+    study_techniques: list[str] = Field(default_factory=list)
+    learning_goals: list[str] = Field(default_factory=list)
+    technology_experience: list[str] = Field(default_factory=list)
     score: int
     max_score: int
     notes: str | None = None
@@ -97,7 +109,13 @@ class AgentIntakeRequest(BaseModel):
     professional_role: str
     weekly_hours_available: int = Field(ge=1, le=60)
     preferred_time: PreferredTime
+    preferred_start_hour: int = Field(ge=0, le=23)
+    preferred_study_days: list[str] = Field(min_length=1, max_length=7)
     learning_style: list[str] = Field(min_length=1, max_length=12)
+    content_preferences: list[str] = Field(default_factory=list, max_length=12)
+    study_techniques: list[str] = Field(default_factory=list, max_length=12)
+    learning_goals: list[str] = Field(default_factory=list, max_length=12)
+    technology_experience: list[str] = Field(default_factory=list, max_length=20)
     target_certification: str | None = None
     answers: list[AgentIntakeAnswer] = Field(min_length=6, max_length=20)
 

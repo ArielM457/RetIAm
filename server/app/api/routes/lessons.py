@@ -13,12 +13,15 @@ from app.models.tutor import (
     LessonChatMessage,
     LessonChatRequest,
     LessonChatResponse,
+    LessonReviewRequest,
+    LessonReviewResponse,
     SuggestedQuestionsResponse,
 )
 from app.services.lesson_tutor_service import (
     ask_tutor,
     get_chat_history,
     get_suggested_questions,
+    review_explanation,
 )
 
 router = APIRouter()
@@ -47,3 +50,18 @@ def get_lesson_suggested_questions(
     current_user=Depends(get_current_supabase_user),
 ) -> SuggestedQuestionsResponse:
     return get_suggested_questions(current_user, lesson_id)
+
+
+@router.post("/{lesson_id}/review", response_model=LessonReviewResponse)
+def post_lesson_review(
+    lesson_id: str,
+    payload: LessonReviewRequest,
+    current_user=Depends(get_current_supabase_user),
+) -> LessonReviewResponse:
+    return review_explanation(
+        current_user,
+        lesson_id,
+        payload.explanation,
+        part_title=payload.part_title,
+        technique=payload.technique,
+    )

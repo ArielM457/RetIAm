@@ -134,8 +134,8 @@ export class DashboardPageComponent {
     try {
       const [catalog, route, plan, reminders, courses] = await Promise.all([
         this.api.listCertifications().catch(() => []),
-        this.api.getLatestRoute(),
-        this.api.getLatestPlan(),
+        this.api.getLatestRoute().catch(() => null),
+        this.api.getLatestPlan().catch(() => null),
         this.api.listMyReminders().catch(() => []),
         this.api.listCourses().catch(() => []),
       ]);

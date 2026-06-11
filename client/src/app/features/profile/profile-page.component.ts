@@ -47,7 +47,10 @@ export class ProfilePageComponent {
     target_certification: [''],
     weekly_hours_available: [6],
     preferred_time: ['morning'],
+    preferred_start_hour: [8],
+    preferred_study_days: ['Monday, Tuesday, Wednesday, Thursday, Friday'],
     learning_style: ['documentation,mixed'],
+    study_techniques: ['pomodoro'],
   });
 
   constructor() {
@@ -58,7 +61,10 @@ export class ProfilePageComponent {
       target_certification: profile?.target_certification || '',
       weekly_hours_available: profile?.weekly_hours_available || 6,
       preferred_time: profile?.preferred_time || 'morning',
+      preferred_start_hour: profile?.preferred_start_hour || 8,
+      preferred_study_days: profile?.preferred_study_days?.join(', ') || 'Monday, Tuesday, Wednesday, Thursday, Friday',
       learning_style: profile?.learning_style?.join(', ') || 'documentation,mixed',
+      study_techniques: profile?.study_techniques?.join(', ') || 'pomodoro',
     });
     void this.loadAssessment();
   }
@@ -72,6 +78,14 @@ export class ProfilePageComponent {
       await this.api.updateCurrentProfile({
         ...payload,
         learning_style: payload.learning_style
+          ?.split(',')
+          .map((item) => item.trim())
+          .filter(Boolean),
+        preferred_study_days: payload.preferred_study_days
+          ?.split(',')
+          .map((item) => item.trim())
+          .filter(Boolean),
+        study_techniques: payload.study_techniques
           ?.split(',')
           .map((item) => item.trim())
           .filter(Boolean),
@@ -101,11 +115,19 @@ export class ProfilePageComponent {
       },
       {
         label: 'Horario preferido',
-        value: this.formatPreferredTime(profile?.preferred_time),
+        value: `${this.formatPreferredTime(profile?.preferred_time)}${profile?.preferred_start_hour !== null && profile?.preferred_start_hour !== undefined ? ` desde las ${this.formatHour(profile.preferred_start_hour)}` : ''}`,
+      },
+      {
+        label: 'Dias de estudio',
+        value: profile?.preferred_study_days?.length ? profile.preferred_study_days.join(', ') : 'Pendiente',
       },
       {
         label: 'Estilos de aprendizaje',
         value: profile?.learning_style?.length ? profile.learning_style.join(', ') : 'Pendiente',
+      },
+      {
+        label: 'Tecnicas de estudio',
+        value: profile?.study_techniques?.length ? profile.study_techniques.join(', ') : 'Pendiente',
       },
       { label: 'Equipo', value: profile?.team_id || 'Sin equipo' },
       { label: 'Organizacion', value: profile?.org_id || 'Sin organizacion' },
@@ -172,5 +194,11 @@ export class ProfilePageComponent {
       return 'Night';
     }
     return value;
+  }
+
+  private formatHour(value: number): string {
+    const suffix = value >= 12 ? 'pm' : 'am';
+    const display = value % 12 === 0 ? 12 : value % 12;
+    return `${display} ${suffix}`;
   }
 }

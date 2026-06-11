@@ -60,14 +60,12 @@ export const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'dashboard',
+        redirectTo: 'catalog',
       },
       {
         path: 'dashboard',
-        loadComponent: () =>
-          import('./features/dashboard/dashboard-page.component').then(
-            (module) => module.DashboardPageComponent,
-          ),
+        pathMatch: 'full',
+        redirectTo: 'catalog',
       },
       {
         path: 'catalog',
@@ -88,6 +86,13 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./features/learning/learning-session-page.component').then(
             (module) => module.LearningSessionPageComponent,
+          ),
+      },
+      {
+        path: 'agenda',
+        loadComponent: () =>
+          import('./features/learning/agenda-page.component').then(
+            (module) => module.AgendaPageComponent,
           ),
       },
       {
@@ -143,6 +148,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'dashboard',
+    redirectTo: 'catalog',
   },
 ];

@@ -23,6 +23,25 @@ from app.services._shared import response_data
 from app.services.onboarding_catalog import CERTIFICATION_TRACK_HINTS, QUESTION_BANK
 from app.services.profile_service import ensure_profile_for_user
 
+DAY_ALIASES = {
+    "lunes": "Monday",
+    "monday": "Monday",
+    "martes": "Tuesday",
+    "tuesday": "Tuesday",
+    "miercoles": "Wednesday",
+    "miércoles": "Wednesday",
+    "wednesday": "Wednesday",
+    "jueves": "Thursday",
+    "thursday": "Thursday",
+    "viernes": "Friday",
+    "friday": "Friday",
+    "sabado": "Saturday",
+    "sábado": "Saturday",
+    "saturday": "Saturday",
+    "domingo": "Sunday",
+    "sunday": "Sunday",
+}
+
 
 def _resolve_track(target_certification: str) -> str:
     if target_certification in CERTIFICATION_TRACK_HINTS:
@@ -207,7 +226,13 @@ def evaluate_onboarding(auth_user: object, payload: OnboardingEvaluationRequest)
             detected_level=level,
             weekly_hours_available=payload.weekly_hours_available,
             preferred_time=payload.preferred_time,
+            preferred_start_hour=getattr(payload, "preferred_start_hour", None),
+            preferred_study_days=list(getattr(payload, "preferred_study_days", []) or []),
             learning_style=payload.learning_style,
+            content_preferences=list(getattr(payload, "content_preferences", []) or []),
+            study_techniques=list(getattr(payload, "study_techniques", []) or []),
+            learning_goals=list(getattr(payload, "learning_goals", []) or []),
+            technology_experience=list(getattr(payload, "technology_experience", []) or []),
             profile_version=next_version,
             onboarding_completed_at=completed_at,
         ),
@@ -222,19 +247,25 @@ def evaluate_onboarding(auth_user: object, payload: OnboardingEvaluationRequest)
 def get_latest_assessment(auth_user: object) -> SavedAssessmentResponse | None:
     settings = get_settings()
     profile = ensure_profile_for_user(auth_user)
-    response = (
-        get_supabase_service_client()
-        .table(settings.supabase_profile_assessments_table)
-        .select("*")
-        .eq("user_id", profile.id)
-        .order("created_at", desc=True)
-        .limit(1)
-        .execute()
-    )
+    try:
+        response = (
+            get_supabase_service_client()
+            .table(settings.supabase_profile_assessments_table)
+            .select("*")
+            .eq("user_id", profile.id)
+            .order("created_at", desc=True)
+            .limit(1)
+            .execute()
+        )
+    except Exception:
+        return None
     data = response_data(response, [])
     if not data:
         return None
-    return SavedAssessmentResponse.model_validate(data[0])
+    try:
+        return SavedAssessmentResponse.model_validate(data[0])
+    except Exception:
+        return None
 
 
 def save_agent_intake(auth_user: object, payload: AgentIntakeRequest) -> AgentIntakeResponse:
@@ -247,7 +278,8 @@ def save_agent_intake(auth_user: object, payload: AgentIntakeRequest) -> AgentIn
     summary = (
         f"Perfil inicial registrado para {payload.professional_role}. "
         f"Disponibilidad estimada: {payload.weekly_hours_available} horas por semana, "
-        f"preferencia horaria {payload.preferred_time} y estilos {', '.join(payload.learning_style)}."
+        f"preferencia horaria {payload.preferred_time} desde las {payload.preferred_start_hour}:00, "
+        f"con estudio en {', '.join(payload.preferred_study_days)} y estilos {', '.join(payload.learning_style)}."
     )
 
     get_supabase_service_client().table(settings.supabase_profiles_table).update(
@@ -255,7 +287,13 @@ def save_agent_intake(auth_user: object, payload: AgentIntakeRequest) -> AgentIn
             "professional_role": payload.professional_role,
             "weekly_hours_available": payload.weekly_hours_available,
             "preferred_time": payload.preferred_time,
+            "preferred_start_hour": payload.preferred_start_hour,
+            "preferred_study_days": payload.preferred_study_days,
             "learning_style": payload.learning_style,
+            "content_preferences": payload.content_preferences,
+            "study_techniques": payload.study_techniques,
+            "learning_goals": payload.learning_goals,
+            "technology_experience": payload.technology_experience,
             "target_certification": payload.target_certification,
             "profile_version": next_version,
             "onboarding_completed_at": completed_at,
@@ -270,7 +308,13 @@ def save_agent_intake(auth_user: object, payload: AgentIntakeRequest) -> AgentIn
             "detected_level": "basic",
             "weekly_hours_available": payload.weekly_hours_available,
             "preferred_time": payload.preferred_time,
+            "preferred_start_hour": payload.preferred_start_hour,
+            "preferred_study_days": payload.preferred_study_days,
             "learning_style": payload.learning_style,
+            "content_preferences": payload.content_preferences,
+            "study_techniques": payload.study_techniques,
+            "learning_goals": payload.learning_goals,
+            "technology_experience": payload.technology_experience,
             "questions": [
                 {"key": answer.key, "title": answer.title}
                 for answer in payload.answers
@@ -305,6 +349,41 @@ def _extract_preferred_time(message: str) -> str | None:
     if any(token in lowered for token in ("night", "noche", "nights")):
         return "night"
     return None
+
+
+def _extract_preferred_start_hour(message: str, preferred_time: str | None = None) -> int | None:
+    lowered = message.lower().replace(".", ":")
+    matches = re.findall(r"\b(\d{1,2})(?::(\d{2}))?\s*(am|pm)?\b", lowered)
+    if not matches:
+        return None
+
+    for hour_text, _minute, meridiem in matches:
+        hour = int(hour_text)
+        if meridiem == "pm" and hour < 12:
+            hour += 12
+        elif meridiem == "am" and hour == 12:
+            hour = 0
+        elif meridiem is None and preferred_time == "night" and 6 <= hour <= 11:
+            hour += 12
+        elif meridiem is None and preferred_time == "afternoon" and 1 <= hour <= 7:
+            hour += 12
+        if 0 <= hour <= 23:
+            return hour
+    return None
+
+
+def _extract_preferred_study_days(message: str) -> list[str]:
+    lowered = message.lower()
+    if "lunes a viernes" in lowered or "monday to friday" in lowered:
+        return ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+    if "lunes a domingo" in lowered or "monday to sunday" in lowered:
+        return ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+    found: list[str] = []
+    for token, canonical in DAY_ALIASES.items():
+        if re.search(rf"\b{re.escape(token)}\b", lowered):
+            found.append(canonical)
+    return list(dict.fromkeys(found))
 
 
 def _extract_learning_style(message: str) -> str | None:
@@ -356,6 +435,14 @@ def _extract_study_techniques(message: str) -> str | None:
         matches.append("regla de 5 minutos")
     if "continuo" in lowered or "continuo" in lowered or "aprendizaje continuo" in lowered:
         matches.append("aprendizaje continuo")
+    if "feynman" in lowered:
+        matches.append("feynman")
+    if "espaciad" in lowered or "spaced repetition" in lowered:
+        matches.append("repeticion espaciada")
+    if "recall" in lowered or "active recall" in lowered:
+        matches.append("active recall")
+    if "intercalad" in lowered or "interleaving" in lowered:
+        matches.append("intercalado")
     if not matches:
         return None
     return ", ".join(dict.fromkeys(matches))
@@ -369,6 +456,8 @@ def assist_agent_intake(auth_user: object, payload: AgentIntakeAssistRequest) ->
 
     weekly_hours = _extract_weekly_hours(message)
     preferred_time = _extract_preferred_time(message)
+    preferred_start_hour = _extract_preferred_start_hour(message, preferred_time)
+    preferred_study_days = _extract_preferred_study_days(message)
     learning_style = _extract_learning_style(message)
     age_range = _extract_age_range(message)
     study_techniques = _extract_study_techniques(message)
@@ -377,6 +466,10 @@ def assist_agent_intake(auth_user: object, payload: AgentIntakeAssistRequest) ->
         extracted_answers["weekly_hours_available"] = weekly_hours
     if preferred_time:
         extracted_answers["preferred_time"] = preferred_time
+    if preferred_start_hour is not None:
+        extracted_answers["preferred_start_hour"] = str(preferred_start_hour)
+    if preferred_study_days:
+        extracted_answers["preferred_study_days"] = ", ".join(preferred_study_days)
     if learning_style:
         extracted_answers["learning_style"] = learning_style
     if age_range:
@@ -389,12 +482,13 @@ def assist_agent_intake(auth_user: object, payload: AgentIntakeAssistRequest) ->
             "professional_role": "Puedes responder con tu puesto real o el rol con el que trabajas hoy en el equipo.",
             "age_range": "Si no quieres decir la edad exacta, basta con un rango como 25-34 o 35-44.",
             "weekly_hours_available": "Aqui necesito una estimacion realista de horas por semana para estudiar.",
-            "preferred_time": "Puedes decir morning, afternoon o night, o expresarlo como mañana, tarde o noche.",
+            "preferred_time": "En este mismo paso define bloque y hora, por ejemplo night desde las 8 pm o mañana desde las 7 am.",
+            "preferred_study_days": "Puedes elegir patrones como lunes a viernes, lunes miercoles y viernes o martes jueves y sabado.",
             "learning_style": "Puedes combinar formatos como video, textos, practica o ejemplos de codigo.",
             "content_preferences": "Aqui sirve una frase corta como laboratorios reales, casos de uso, resúmenes o guias paso a paso.",
             "technology_experience": "Aqui me sirve una lista breve de tecnologias que ya usas o has probado.",
             "learning_goals": "Aqui puedes contar que te gustaria aprender o mejorar primero.",
-            "study_techniques": "Aqui puedes mencionar pomodoro, regla de 5 minutos, aprendizaje continuo u otra tecnica propia.",
+            "study_techniques": "Aqui puedes mencionar pomodoro, regla de 5 minutos, aprendizaje continuo, feynman o repeticion espaciada.",
         }
         return AgentIntakeAssistResponse(
             message=f"{help_map.get(payload.question_key, 'Voy a ayudarte solo con este paso del perfil inicial.')} Cuando quieras, responde este paso: {payload.question_title}.",
@@ -411,11 +505,19 @@ def assist_agent_intake(auth_user: object, payload: AgentIntakeAssistRequest) ->
                 extracted_answers=extracted_answers,
             )
     elif payload.question_key == "preferred_time":
-        if preferred_time:
-            normalized_answer = preferred_time
+        if preferred_time and preferred_start_hour is not None:
+            normalized_answer = f"{preferred_time} desde las {preferred_start_hour:02d}:00"
         else:
             return AgentIntakeAssistResponse(
-                message="Para este paso dime si te funciona mejor morning, afternoon o night.",
+                message="Para este paso necesito bloque y hora exacta. Puedes responder algo como night desde las 8 pm.",
+                extracted_answers=extracted_answers,
+            )
+    elif payload.question_key == "preferred_study_days":
+        if preferred_study_days:
+            normalized_answer = ", ".join(preferred_study_days)
+        else:
+            return AgentIntakeAssistResponse(
+                message="Aqui necesito los dias concretos. Puedes responder lunes a viernes o martes, jueves y sabado.",
                 extracted_answers=extracted_answers,
             )
     elif payload.question_key == "learning_style":

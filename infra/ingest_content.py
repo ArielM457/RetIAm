@@ -29,12 +29,15 @@ se trocea ese texto, se generan embeddings y se sube a pgvector para el tutor.
 from __future__ import annotations
 
 import argparse
+import http.client
 import json
 import os
 import re
 import ssl
 import sys
+import time
 import urllib.request
+from urllib.error import HTTPError, URLError
 from pathlib import Path
 
 CATALOG_URL = "https://learn.microsoft.com/api/catalog/?type=learningPaths,modules&locale=en-us"
@@ -162,10 +165,24 @@ def fetch_catalog(ctx: ssl.SSLContext | None) -> tuple[dict, dict]:
 # --- Contenido completo: descarga de unidades, Markdown legible, troceo y RAG ---
 
 
-def _http_get(url: str, ctx: ssl.SSLContext | None) -> str:
+def _http_get(url: str, ctx: ssl.SSLContext | None, timeout: int = 90, retries: int = 3) -> str:
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 retaim"})
-    with urllib.request.urlopen(req, timeout=40, context=ctx) as response:
-        return response.read().decode("utf-8", "replace")
+    last_exc = None
+    for attempt in range(1, retries + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout, context=ctx) as response:
+                return response.read().decode("utf-8", "replace")
+        except KeyboardInterrupt:
+            raise
+        except HTTPError:
+            raise
+        except (TimeoutError, URLError, http.client.IncompleteRead, ssl.SSLError, ConnectionError) as exc:
+            last_exc = exc
+            if attempt == retries:
+                break
+            print(f"    reintento {attempt}/{retries - 1} para {url}")
+            time.sleep(min(2 * attempt, 5))
+    raise RuntimeError(f"no se pudo descargar {url}: {last_exc}") from last_exc
 
 
 def _clean_unit_text(html: str) -> str:
@@ -309,11 +326,17 @@ def enrich_course_with_content(
 
     certification_code = course["certification_code"]
     total_chunks = 0
+    total_lessons = sum(len(section["lessons"]) for section in course["sections"])
+    lesson_index = 0
     for section in course["sections"]:
         for lesson in section["lessons"]:
+            lesson_index += 1
             mod = mods_by_slug.get(lesson["lesson_key"])
             if not mod:
                 continue
+            print(
+                f"    [{certification_code}] contenido {lesson_index}/{total_lessons}: {lesson.get('title')}"
+            )
             markdown, plain_text = _fetch_module_content(mod, ctx)
             if len(markdown) > 80:
                 source_url = mod["url"].split("?")[0]

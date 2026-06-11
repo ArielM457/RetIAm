@@ -128,9 +128,21 @@
               <option value="night">Night</option>
             </select>
           </label>
+          <label class="field">
+            <span>Hora de inicio</span>
+            <input formControlName="preferred_start_hour" type="number" min="0" max="23" />
+          </label>
+          <label class="field field-wide">
+            <span>Dias de estudio</span>
+            <input formControlName="preferred_study_days" type="text" />
+          </label>
           <label class="field field-wide">
             <span>Estilo de aprendizaje</span>
             <input formControlName="learning_style" type="text" />
+          </label>
+          <label class="field field-wide">
+            <span>Tecnicas de estudio</span>
+            <input formControlName="study_techniques" type="text" />
           </label>
         </form>
 
