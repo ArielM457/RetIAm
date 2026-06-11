@@ -227,6 +227,6 @@ export class AuthStore {
       return;
     }
 
-    await this.router.navigate([profile?.role === 'manager' ? '/manager/dashboard' : '/dashboard']);
+    await this.router.navigate([profile?.role === 'manager' ? '/manager/dashboard' : '/catalog']);
   }
 }

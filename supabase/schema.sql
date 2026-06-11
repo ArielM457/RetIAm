@@ -18,7 +18,13 @@ create table if not exists public.profiles (
     detected_level text check (detected_level in ('basic', 'intermediate', 'advanced')),
     weekly_hours_available integer,
     preferred_time text check (preferred_time in ('morning', 'afternoon', 'night')),
+    preferred_start_hour integer check (preferred_start_hour between 0 and 23),
+    preferred_study_days text[] not null default '{}',
     learning_style text[] not null default '{}',
+    content_preferences text[] not null default '{}',
+    study_techniques text[] not null default '{}',
+    learning_goals text[] not null default '{}',
+    technology_experience text[] not null default '{}',
     profile_version integer not null default 1,
     onboarding_completed_at timestamptz,
     created_at timestamptz not null default timezone('utc', now()),
@@ -94,7 +100,13 @@ create table if not exists public.profile_assessments (
     detected_level text not null check (detected_level in ('basic', 'intermediate', 'advanced')),
     weekly_hours_available integer not null,
     preferred_time text not null check (preferred_time in ('morning', 'afternoon', 'night')),
+    preferred_start_hour integer check (preferred_start_hour between 0 and 23),
+    preferred_study_days text[] not null default '{}',
     learning_style text[] not null default '{}',
+    content_preferences text[] not null default '{}',
+    study_techniques text[] not null default '{}',
+    learning_goals text[] not null default '{}',
+    technology_experience text[] not null default '{}',
     questions jsonb not null default '[]'::jsonb,
     answers jsonb not null default '[]'::jsonb,
     score integer not null default 0,
@@ -109,6 +121,8 @@ create table if not exists public.learning_routes (
     target_certification text not null,
     detected_level text not null check (detected_level in ('basic', 'intermediate', 'advanced')),
     sections jsonb not null default '[]'::jsonb,
+    profile_context jsonb not null default '{}'::jsonb,
+    personalization_summary jsonb not null default '[]'::jsonb,
     source_mode text not null default 'mock' check (source_mode in ('mock', 'foundry')),
     created_at timestamptz not null default timezone('utc', now())
 );
@@ -122,6 +136,7 @@ create table if not exists public.study_plans (
     weekly_hours integer not null,
     weekly_milestones jsonb not null default '[]'::jsonb,
     workiq_context jsonb not null default '{}'::jsonb,
+    personalization_summary jsonb not null default '[]'::jsonb,
     status text not null default 'active' check (status in ('active', 'completed', 'paused', 'needs_reinforcement')),
     created_at timestamptz not null default timezone('utc', now()),
     updated_at timestamptz not null default timezone('utc', now())
@@ -196,6 +211,9 @@ create table if not exists public.exam_attempts (
 alter table public.exam_attempts add column if not exists time_limit_minutes integer not null default 60;
 alter table public.exam_attempts add column if not exists failed_sections jsonb not null default '[]'::jsonb;
 alter table public.exam_attempts add column if not exists recommendations jsonb not null default '[]'::jsonb;
+alter table public.learning_routes add column if not exists profile_context jsonb not null default '{}'::jsonb;
+alter table public.learning_routes add column if not exists personalization_summary jsonb not null default '[]'::jsonb;
+alter table public.study_plans add column if not exists personalization_summary jsonb not null default '[]'::jsonb;
 alter table public.exam_attempts add column if not exists next_certification text;
 
 create table if not exists public.certificates (
@@ -451,12 +469,60 @@ create table if not exists public.lesson_chat_messages (
 create index if not exists lesson_chat_messages_lookup_idx
 on public.lesson_chat_messages (user_id, lesson_id, created_at);
 
+create table if not exists public.course_enrollments (
+    id uuid primary key default gen_random_uuid(),
+    user_id uuid not null references public.profiles (id) on delete cascade,
+    course_id uuid not null references public.courses (id) on delete cascade,
+    certification_code text not null,
+    status text not null default 'enrolled' check (status in ('enrolled', 'active', 'paused', 'completed', 'cancelled')),
+    enrolled_at timestamptz not null default timezone('utc', now()),
+    activated_route_id uuid references public.learning_routes (id) on delete set null,
+    activated_plan_id uuid references public.study_plans (id) on delete set null,
+    preferences_snapshot jsonb not null default '{}'::jsonb,
+    personalization_summary jsonb not null default '[]'::jsonb,
+    current_section_id text,
+    current_session_id text,
+    unique (user_id, certification_code)
+);
+
+create index if not exists course_enrollments_user_status_idx
+on public.course_enrollments (user_id, status, enrolled_at desc);
+
+create table if not exists public.learning_agenda_items (
+    id uuid primary key default gen_random_uuid(),
+    user_id uuid not null references public.profiles (id) on delete cascade,
+    enrollment_id uuid references public.course_enrollments (id) on delete cascade,
+    plan_id uuid references public.study_plans (id) on delete cascade,
+    route_id uuid references public.learning_routes (id) on delete cascade,
+    title text not null,
+    item_type text not null check (item_type in ('study_session', 'review', 'lab', 'checkin', 'reminder')),
+    related_session_id text,
+    related_section_id text,
+    related_lesson_ids jsonb not null default '[]'::jsonb,
+    scheduled_start timestamptz not null,
+    scheduled_end timestamptz not null,
+    time_window text,
+    status text not null default 'scheduled' check (status in ('scheduled', 'completed', 'missed', 'rescheduled', 'cancelled')),
+    agenda_date date generated always as ((scheduled_start at time zone 'utc')::date) stored,
+    metadata jsonb not null default '{}'::jsonb,
+    created_at timestamptz not null default timezone('utc', now()),
+    updated_at timestamptz not null default timezone('utc', now())
+);
+
+create index if not exists learning_agenda_items_user_date_idx
+on public.learning_agenda_items (user_id, agenda_date, scheduled_start);
+
+create index if not exists learning_agenda_items_plan_idx
+on public.learning_agenda_items (plan_id, status);
+
 alter table public.courses enable row level security;
 alter table public.course_sections enable row level security;
 alter table public.course_lessons enable row level security;
 alter table public.course_labs enable row level security;
 alter table public.lesson_completions enable row level security;
 alter table public.lesson_chat_messages enable row level security;
+alter table public.course_enrollments enable row level security;
+alter table public.learning_agenda_items enable row level security;
 
 -- El catalogo de cursos es contenido global legible por cualquier usuario autenticado.
 create policy "Authenticated can read courses"
@@ -482,6 +548,24 @@ on public.lesson_chat_messages for select to authenticated using (auth.uid() = u
 
 create policy "Users can insert own lesson chat"
 on public.lesson_chat_messages for insert to authenticated with check (auth.uid() = user_id);
+
+create policy "Users can read own enrollments"
+on public.course_enrollments for select to authenticated using (auth.uid() = user_id);
+
+create policy "Users can insert own enrollments"
+on public.course_enrollments for insert to authenticated with check (auth.uid() = user_id);
+
+create policy "Users can update own enrollments"
+on public.course_enrollments for update to authenticated using (auth.uid() = user_id);
+
+create policy "Users can read own agenda items"
+on public.learning_agenda_items for select to authenticated using (auth.uid() = user_id);
+
+create policy "Users can insert own agenda items"
+on public.learning_agenda_items for insert to authenticated with check (auth.uid() = user_id);
+
+create policy "Users can update own agenda items"
+on public.learning_agenda_items for update to authenticated using (auth.uid() = user_id);
 
 -- =====================================================================
 -- RAG con pgvector (Supabase como base vectorial)

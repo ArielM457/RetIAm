@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, inject, input, signal } from '@angular/core';
+import { Component, computed, inject, input } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { marked } from 'marked';
 
@@ -7,6 +7,14 @@ interface LessonUnit {
   id: string;
   title: string;
   html: SafeHtml;
+  body: string;
+}
+
+interface LessonMicroSection {
+  id: string;
+  title: string;
+  html: SafeHtml;
+  coachNote: string;
 }
 
 const CALLOUT_KINDS = 'Note|Important|Tip|Caution|Warning';
@@ -30,9 +38,8 @@ export class LessonContentComponent {
   private readonly sanitizer = inject(DomSanitizer);
 
   readonly content = input<string | null>(null);
-
-  /** Estado de apertura por unidad (id -> abierto). */
-  private readonly openState = signal<Record<string, boolean>>({});
+  readonly unitIndex = input(0);
+  readonly technique = input<string | null>(null);
 
   protected readonly parsed = computed(() => {
     const raw = (this.content() ?? '').trim();
@@ -59,6 +66,7 @@ export class LessonContentComponent {
       units.push({
         id: `unit-${index}`,
         title,
+        body,
         html: this.render(body),
       });
     });
@@ -66,7 +74,31 @@ export class LessonContentComponent {
     return { units, source };
   });
 
-  protected readonly toc = computed(() => this.parsed().units.map((u) => ({ id: u.id, title: u.title })));
+  protected readonly activeUnit = computed(() => {
+    const units = this.parsed().units;
+    if (!units.length) return null;
+    const requested = this.unitIndex();
+    const index = Math.min(Math.max(requested, 0), units.length - 1);
+    return {
+      unit: units[index],
+      index,
+      total: units.length,
+    };
+  });
+
+  protected readonly microLearningMode = computed(() => {
+    const technique = (this.technique() ?? '').toLowerCase();
+    return technique === 'aprendizaje continuo' || technique === 'regla de 5 minutos';
+  });
+
+  protected readonly activeMicroSections = computed(() => {
+    const active = this.activeUnit();
+    if (!active || !this.microLearningMode()) return [];
+
+    const technique = (this.technique() ?? '').toLowerCase();
+    const wordLimit = technique === 'regla de 5 minutos' ? 85 : 120;
+    return this.buildMicroSections(active.unit, wordLimit);
+  });
 
   private render(markdown: string): SafeHtml {
     let html = marked.parse(markdown, { async: false, gfm: true, breaks: false }) as string;
@@ -85,20 +117,84 @@ export class LessonContentComponent {
     return { note: 'ℹ️', important: '❗', tip: '💡', caution: '⚠️', warning: '⚠️' }[kind] ?? 'ℹ️';
   }
 
-  protected isOpen(id: string, index: number): boolean {
-    const state = this.openState();
-    return id in state ? state[id] : index === 0; // primera unidad abierta por defecto
+  private buildMicroSections(unit: LessonUnit, wordLimit: number): LessonMicroSection[] {
+    const blocks = unit.body
+      .split(/\n{2,}/g)
+      .map((block) => block.trim())
+      .filter(Boolean);
+
+    if (!blocks.length) {
+      return [
+        {
+          id: `${unit.id}-micro-0`,
+          title: unit.title,
+          html: unit.html,
+          coachNote: 'Reti te sugiere cerrar este bloque diciendo en una frase cual fue la idea principal.',
+        },
+      ];
+    }
+
+    const sections: Array<{ title: string; markdown: string }> = [];
+    let currentTitle = unit.title;
+    let currentBlocks: string[] = [];
+    let currentWords = 0;
+
+    const flush = () => {
+      if (!currentBlocks.length) return;
+      sections.push({
+        title: currentTitle,
+        markdown: currentBlocks.join('\n\n'),
+      });
+      currentBlocks = [];
+      currentWords = 0;
+    };
+
+    blocks.forEach((block) => {
+      const heading = block.match(/^#{1,6}\s+(.+?)\s*$/);
+      if (heading) {
+        flush();
+        currentTitle = heading[1].trim();
+        return;
+      }
+
+      const blockWords = this.countWords(block);
+      if (currentBlocks.length && currentWords + blockWords > wordLimit) {
+        flush();
+      }
+
+      currentBlocks.push(block);
+      currentWords += blockWords;
+    });
+
+    flush();
+
+    return sections.map((section, index) => ({
+      id: `${unit.id}-micro-${index}`,
+      title: sections.length > 1 ? `${section.title} · Bloque ${index + 1}` : section.title,
+      html: this.render(section.markdown),
+      coachNote: this.buildCoachNote(section.markdown),
+    }));
   }
 
-  protected toggle(id: string, index: number): void {
-    const current = this.isOpen(id, index);
-    this.openState.update((s) => ({ ...s, [id]: !current }));
+  private buildCoachNote(markdown: string): string {
+    const plain = markdown
+      .replace(/```[\s\S]*?```/g, ' ')
+      .replace(/`[^`]+`/g, ' ')
+      .replace(/!\[[^\]]*\]\([^)]+\)/g, ' ')
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+      .replace(/^#{1,6}\s+/gm, '')
+      .replace(/[*_>~-]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    const firstSentence = plain.match(/[^.!?]+[.!?]?/)?.[0]?.trim() ?? plain;
+    const compact = firstSentence.length > 120 ? `${firstSentence.slice(0, 117).trim()}...` : firstSentence;
+    return compact
+      ? `Reti añade: aquí conviene quedarte con esta idea clave: ${compact}`
+      : 'Reti añade: termina este bloque diciendo con tus palabras qué fue lo más importante.';
   }
 
-  protected openAndScroll(id: string): void {
-    this.openState.update((s) => ({ ...s, [id]: true }));
-    setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 60);
+  private countWords(text: string): number {
+    return text.split(/\s+/).filter(Boolean).length;
   }
 }

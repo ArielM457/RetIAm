@@ -1,124 +1,342 @@
-<section class="page-shell reader" *ngIf="!loading(); else loadingTpl">
+<section class="course-view" *ngIf="!loading(); else loadingTpl">
   <ng-container *ngIf="course() as c; else notFound">
-    <!-- Encabezado -->
-    <header class="reader-head animate-fade-up">
-      <div class="head-top">
-        <a routerLink="/catalog" class="btn btn-ghost btn-sm">← Volver al catálogo</a>
-        <button class="btn btn-ghost btn-sm" (click)="toggleTutor()">
-          {{ tutorOpen() ? 'Ocultar tutor' : 'Preguntar al tutor IA' }}
-        </button>
-      </div>
-      <p class="eyebrow">{{ c.provider || 'Curso' }}</p>
-      <h1 class="reader-title">{{ c.title }}</h1>
-      <div class="reader-meta">
-        <span class="chip-level" [class]="'level-' + c.level">{{ levelLabel(c.level) }}</span>
-        <span class="muted">{{ flatLessons().length }} lecciones · {{ formatDuration(c.total_duration_minutes) }}</span>
-      </div>
+    <div class="viewer-layout">
+      <aside class="viewer-sidebar">
+        <section class="sidebar-pomodoro-card" *ngIf="activeTechniqueOption()?.key === 'pomodoro'">
+          <div>
+            <p class="session-mode-label">Pomodoro activo</p>
+            <h3 class="session-mode-title">{{ pomodoroMinutes() }}:{{ pomodoroSeconds() }}</h3>
+          </div>
+          <div class="pomodoro-actions">
+            <button class="footer-btn primary" type="button" (click)="startOrPausePomodoro()">
+              {{ pomodoroRunning() ? 'Pausar' : 'Iniciar' }}
+            </button>
+            <button class="footer-btn ghost" type="button" (click)="resetPomodoro()">Reiniciar</button>
+          </div>
+        </section>
 
-      <!-- Progreso del curso -->
-      <div class="course-progress">
-        <div class="cp-top">
-          <span>{{ readCount() }} de {{ flatLessons().length }} lecciones leídas</span>
-          <span>{{ progress() }}%</span>
-        </div>
-        <div class="cp-track"><div class="cp-fill" [style.width.%]="progress()"></div></div>
-      </div>
-    </header>
+        <section class="sidebar-pomodoro-card" *ngIf="dueSpacedEntry() as reviewCard">
+          <div>
+            <p class="session-mode-label">Repaso rapido</p>
+            <h3 class="session-mode-title">{{ reviewCard.partTitle }}</h3>
+            <p class="methodology-meta">{{ reviewCard.explanation }}</p>
+          </div>
+          <div class="pomodoro-actions">
+            <button class="footer-btn primary" type="button" (click)="updateSpacedReview('remembered')">
+              Lo recorde
+            </button>
+            <button class="footer-btn ghost" type="button" (click)="updateSpacedReview('later')">
+              Repasar luego
+            </button>
+          </div>
+        </section>
 
-    <div class="reader-grid" [class.tutor-collapsed]="!tutorOpen()">
-      <!-- Índice del curso -->
-      <aside class="reader-rail glass-card">
-        <p class="rail-title">Temario</p>
-        <div class="rail-section" *ngFor="let s of sections(); let si = index; trackBy: trackSection">
-          <p class="rail-section-title">{{ si + 1 }}. {{ s.title }}</p>
-          <button
-            *ngFor="let lesson of s.lessons"
-            class="rail-item"
-            [class.active]="isActive(lesson)"
-            (click)="selectLesson(lesson)"
-          >
-            <span class="rail-check" [class.done]="isRead(lesson)">{{ isRead(lesson) ? '✓' : '' }}</span>
-            <span class="rail-name">{{ lesson.title }}</span>
-            <span class="rail-time">{{ formatDuration(lesson.duration_minutes) }}</span>
-          </button>
+        <div class="sidebar-scroll">
+          <section class="nav-group" *ngFor="let s of sections(); let si = index; trackBy: trackSection">
+            <div class="nav-group-header">
+              <div>
+                <p class="nav-group-eyebrow">Sección {{ si + 1 }}</p>
+                <p class="nav-group-title">{{ s.title }}</p>
+              </div>
+              <span class="nav-group-progress">{{ sectionProgress(s) }}%</span>
+            </div>
+
+            <div class="nav-lesson-group" *ngFor="let lesson of s.lessons; let li = index; trackBy: trackLesson">
+              <button
+                type="button"
+                class="nav-item"
+                [class.active]="isActive(lesson)"
+                (click)="selectLesson(lesson)"
+              >
+                <span class="nav-item-index" [class.done]="isRead(lesson)">
+                  {{ isRead(lesson) ? '✓' : li + 1 }}
+                </span>
+
+                <span class="nav-item-copy">
+                  <span class="nav-item-title">{{ lesson.title }}</span>
+                  <span class="nav-item-meta">
+                    {{ formatDuration(lesson.duration_minutes) || 'Lectura guiada' }}
+                  </span>
+                </span>
+              </button>
+
+              <div class="nav-subparts" *ngIf="isActive(lesson) && lessonParts(lesson).length > 1">
+                <button
+                  *ngFor="let part of lessonParts(lesson); let pi = index"
+                  type="button"
+                  class="nav-subpart"
+                  [class.active]="isActivePart(pi)"
+                  [class.done]="isCompletedPart(lesson, pi)"
+                  (click)="goToPart(pi)"
+                >
+                  <span class="nav-subpart-index">{{ pi + 1 }}</span>
+                  <span class="nav-subpart-title">{{ part.title }}</span>
+                </button>
+              </div>
+            </div>
+          </section>
         </div>
       </aside>
 
-      <!-- Contenido de la lección -->
-      <article class="reader-content glass-card" *ngIf="activeLesson() as lesson">
-        <h2 class="lesson-h">{{ lesson.title }}</h2>
-        <p class="lesson-dur" *ngIf="lesson.duration_minutes">{{ formatDuration(lesson.duration_minutes) }}</p>
-
-        <div class="lesson-objectives" *ngIf="lesson.learning_objectives?.length">
-          <p class="mini-label">Objetivos</p>
-          <ul>
-            <li *ngFor="let obj of lesson.learning_objectives">{{ obj }}</li>
-          </ul>
+      <main class="viewer-main" *ngIf="activeLesson() as lesson">
+        <div class="viewer-badge-row">
+          <span class="viewer-badge">
+            Seccion {{ activeSectionIndex() + 1 }} / {{ sections().length }}
+          </span>
+          <span class="viewer-badge soft" *ngIf="activePart() as part">
+            Parte {{ part.index + 1 }} / {{ part.total }}
+          </span>
+          <span class="viewer-provider">{{ c.provider || 'Programa RetAIM' }}</span>
         </div>
 
-        <app-lesson-content [content]="lesson.content_md" />
-
-        <div class="lesson-sources" *ngIf="lesson.sources?.length">
-          <p class="mini-label">Fuentes</p>
-          <a *ngFor="let src of lesson.sources" class="source-link" [href]="src.url || '#'" target="_blank" rel="noopener">
-            {{ src.title }}
-          </a>
-        </div>
-
-        <!-- Navegación entre lecciones -->
-        <div class="lesson-nav">
-          <button class="btn btn-ghost btn-sm" [disabled]="lessonIndex() <= 0" (click)="goToLessonOffset(-1)">
-            ← Anterior
-          </button>
-          <button class="btn btn-ghost btn-sm" [disabled]="lessonIndex() >= flatLessons().length - 1" (click)="goToLessonOffset(1)">
-            Siguiente →
-          </button>
-        </div>
-
-        <div class="lesson-actions">
-          <button class="btn" [class.btn-primary]="!isRead(lesson)" [class.btn-ghost]="isRead(lesson)" (click)="toggleRead(lesson)">
-            {{ isRead(lesson) ? '✓ Leída' : 'Marcar como leída' }}
-          </button>
-          <button class="btn btn-primary" (click)="completeAndNext()" *ngIf="lessonIndex() < flatLessons().length - 1">
-            Marcar y continuar →
-          </button>
-          <button class="btn btn-ghost" (click)="toggleTutor()" *ngIf="!tutorOpen()">Preguntar al tutor</button>
-        </div>
-      </article>
-
-      <!-- Panel del tutor IA -->
-      <aside class="tutor-panel glass-card" *ngIf="tutorOpen()">
-        <div class="tutor-head">
-          <div class="tutor-avatar">IA</div>
-          <div class="tutor-id">
-            <p class="tutor-name">Gini Eval · Tutor</p>
-            <p class="tutor-sub">{{ activeLesson()?.title || 'Selecciona una lección' }}</p>
+        <div class="viewer-title-row">
+          <div class="viewer-check">✓</div>
+          <div class="viewer-title-copy">
+            <p class="viewer-section-label">{{ activeSectionPartLabel() }}</p>
+            <h2 class="viewer-title">{{ lesson.title }}</h2>
           </div>
-          <button class="tutor-x" (click)="toggleTutor()" aria-label="Cerrar">✕</button>
         </div>
 
-        <div class="tutor-body">
+        <div class="viewer-tabs">
+          <span class="viewer-tab muted">Video</span>
+          <span class="viewer-tab active">Texto e imágenes</span>
+          <span class="viewer-tab muted">Transcript</span>
+        </div>
+
+        <section class="viewer-content">
+          <section class="lesson-objectives" *ngIf="lesson.learning_objectives?.length">
+            <p class="block-label">Objetivos</p>
+            <ul>
+              <li *ngFor="let obj of lesson.learning_objectives">{{ obj }}</li>
+            </ul>
+          </section>
+
+          <section class="part-progress" *ngIf="activePart() as part">
+            <div class="part-progress-head">
+              <div>
+                <p class="part-progress-label">Parte actual</p>
+                <h3 class="part-progress-title">{{ part.part.title }}</h3>
+              </div>
+              <span class="part-progress-count">{{ part.index + 1 }} / {{ part.total }}</span>
+            </div>
+            <div class="part-progress-track">
+              <div
+                class="part-progress-fill"
+                [style.width.%]="((part.index + 1) / part.total) * 100"
+              ></div>
+            </div>
+          </section>
+
+          <div class="lesson-prose-shell">
+            <app-lesson-content
+              [content]="lesson.content_md"
+              [unitIndex]="activeUnitIndex()"
+              [technique]="sessionTechnique()"
+            />
+          </div>
+
+          <div class="lesson-note" *ngIf="lesson.sources?.length || c.summary">
+            <div class="lesson-note-head">
+              <span class="lesson-note-icon">i</span>
+              <span>Referencia rápida</span>
+            </div>
+            <p class="lesson-note-copy">
+              Este curso se muestra en modo lectura para que avances directamente sobre el texto del contenido
+              sin depender de un video. Puedes usar las fuentes al final para profundizar.
+            </p>
+          </div>
+
+          <section class="lesson-sources" *ngIf="lesson.sources?.length">
+            <p class="block-label">Fuentes</p>
+            <a *ngFor="let src of lesson.sources" class="source-link" [href]="src.url || '#'" target="_blank" rel="noopener">
+              {{ src.title }}
+            </a>
+          </section>
+
+          <div class="viewer-footer-nav">
+            <div class="viewer-footer-actions">
+              <button
+                class="footer-btn ghost"
+                type="button"
+                [disabled]="!canGoPreviousPart()"
+                (click)="goToPartOffset(-1)"
+              >
+                ← Anterior
+              </button>
+            </div>
+
+            <div class="viewer-footer-actions">
+              <button
+                class="footer-btn primary"
+                type="button"
+                (click)="completeAndNext()"
+                *ngIf="showContinueAction()"
+              >
+                Completar y seguir a la siguiente parte
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <ng-container *ngIf="activeTechniqueOption() as technique">
+      <aside class="methodology-dock">
+        <button class="tutor-launcher-inline" type="button" (click)="openTutorAssistant()">
+          <span>
+            <span class="session-mode-label">Tutor disponible</span>
+            <strong>Pregunta a Reti tu tutor AI</strong>
+          </span>
+          <span class="tutor-launcher-arrow">↓</span>
+        </button>
+
+        <button class="methodology-card" type="button" (click)="toggleMethodologyDock()">
+          <span>
+            <span class="session-mode-label">Metodologia activa</span>
+            <strong>{{ technique.label }}</strong>
+          </span>
+          <span class="tutor-launcher-arrow">↓</span>
+        </button>
+
+        <p class="methodology-effectiveness">{{ methodologyEffectivenessLabel() }}</p>
+      </aside>
+
+      <div class="methodology-modal-backdrop" *ngIf="methodologyDockOpen()" (click)="closeMethodologyDock()">
+        <section class="methodology-modal methodology-info-modal" (click)="$event.stopPropagation()">
+          <div class="methodology-info-head">
+            <div>
+              <p class="session-mode-label">Metodologia activa</p>
+              <h3 class="session-mode-title">{{ technique.label }}</h3>
+            </div>
+            <button class="tutor-panel-close" type="button" (click)="closeMethodologyDock()">Cerrar</button>
+          </div>
+
+          <p class="session-mode-copy">{{ technique.description }}</p>
+
+          <div class="methodology-info-body" *ngIf="techniqueTips().length">
+            <p class="block-label">Como usarla en esta sesion</p>
+            <ul class="session-mode-list">
+              <li *ngFor="let tip of techniqueTips()">{{ tip }}</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </ng-container>
+
+    <div class="methodology-modal-backdrop" *ngIf="shouldChooseTechnique()">
+      <section class="methodology-modal methodology-selection-modal">
+        <p class="session-mode-label">Modo de sesion</p>
+        <h3 class="session-mode-title">Elige con que metodologia quieres trabajar hoy</h3>
+        <p class="session-mode-copy">
+          Esta sesion se personalizara con una sola metodologia para que el seguimiento y la efectividad queden guardados.
+        </p>
+
+        <div class="session-mode-options">
+          <button
+            *ngFor="let technique of availableTechniques()"
+            type="button"
+            class="session-mode-option"
+            (click)="chooseTechnique(technique.key)"
+          >
+            <strong>{{ technique.label }}</strong>
+            <span>{{ technique.description }}</span>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <div class="tutor-modal-backdrop" *ngIf="tutorOpen()">
+      <section class="tutor-modal">
+        <div class="tutor-panel-head">
+          <div class="tutor-panel-id">
+            <div class="tutor-panel-avatar">IA</div>
+            <div>
+              <p class="tutor-panel-title">{{ tutorHeadline() }}</p>
+              <p class="tutor-panel-subtitle">
+                {{ isCheckpointTutorMode() ? activeSectionPartLabel() : (activeLesson()?.title || 'Selecciona una lección') }}
+              </p>
+            </div>
+          </div>
+          <button class="tutor-panel-close" type="button" (click)="toggleTutor()">Cerrar</button>
+        </div>
+
+        <div class="tutor-modal-hero">
+          <div
+            class="agent-wave"
+            [class.active]="tutorLoading() || (methodologyReviewLoading() && isCheckpointTutorMode())"
+            aria-hidden="true"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="tutor-panel-body">
           <p class="tutor-empty" *ngIf="!chat().length && !tutorLoading()">
-            Pregúntame lo que no entiendas de esta lección. Cito siempre la fuente.
+            Haz preguntas sobre esta lección y responderé con base en el contenido del curso.
           </p>
+
           <div class="tutor-bubble" *ngFor="let msg of chat()" [ngClass]="msg.role === 'user' ? 'tutor-user' : 'tutor-ai'">
             {{ msg.content }}
             <div class="bubble-sources" *ngIf="msg.sources?.length">
               <a *ngFor="let s of msg.sources" [href]="s.url || '#'" target="_blank" rel="noopener">{{ s.title }}</a>
             </div>
           </div>
-          <div class="tutor-typing" *ngIf="tutorLoading()"><span></span><span></span><span></span></div>
+
+          <div class="tutor-typing" *ngIf="tutorLoading() || (methodologyReviewLoading() && isCheckpointTutorMode())">
+            <span></span><span></span><span></span>
+          </div>
         </div>
 
-        <div class="tutor-suggested" *ngIf="suggested().length">
-          <button class="suggested-chip" *ngFor="let q of suggested()" (click)="sendTutor(q)">{{ q }}</button>
+        <div class="tutor-suggested" *ngIf="suggested().length && !isCheckpointTutorMode()">
+          <button class="suggested-chip" *ngFor="let q of suggested()" type="button" (click)="sendTutor(q)">
+            {{ q }}
+          </button>
         </div>
 
-        <form class="tutor-input" (ngSubmit)="sendTutor()">
-          <input class="input-pill" [(ngModel)]="tutorInput" name="tutorInput" placeholder="Escribe tu pregunta…" autocomplete="off" />
-          <button class="btn btn-primary btn-sm" type="submit" [disabled]="!tutorInput.trim() || tutorLoading()">Enviar</button>
+        <div
+          class="methodology-review-state"
+          *ngIf="methodologyReviewResult() as review"
+          [class.accepted]="review.accepted"
+          [class.rejected]="!review.accepted"
+        >
+          <strong>{{ review.feedback }}</strong>
+          <p *ngIf="review.reinforcement">{{ review.reinforcement }}</p>
+        </div>
+
+        <p class="methodology-meta" *ngIf="isCheckpointTutorMode()">Saltos disponibles: {{ 2 - methodologySkipCount() }}</p>
+
+        <form class="tutor-form" (ngSubmit)="sendTutor()">
+          <input
+            class="tutor-input"
+            [(ngModel)]="tutorInput"
+            name="tutorInput"
+            [placeholder]="tutorInputPlaceholder()"
+            autocomplete="off"
+            [disabled]="methodologyReviewLoading() || methodologyCanContinue()"
+          />
+          <button
+            class="tutor-send"
+            type="submit"
+            [disabled]="!tutorInput.trim() || tutorLoading() || methodologyReviewLoading() || methodologyCanContinue()"
+          >
+            {{ tutorSubmitLabel() }}
+          </button>
         </form>
-      </aside>
+
+        <button
+          *ngIf="isCheckpointTutorMode()"
+          class="checkpoint-skip-btn"
+          type="button"
+          [disabled]="methodologySkipCount() >= 2 || methodologyReviewLoading()"
+          (click)="skipMethodologyPrompt()"
+        >
+          {{ methodologySkipCount() >= 2 ? 'Saltos agotados' : 'Omitir por ahora' }}
+        </button>
+      </section>
     </div>
   </ng-container>
 

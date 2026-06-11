@@ -20,11 +20,11 @@ export class AppShellComponent {
   protected readonly mobileProgressMenuOpen = signal(false);
 
   protected readonly employeePrimaryLinks = [
-    { label: 'Inicio', path: '/dashboard', icon: 'home' },
     { label: 'Cursos', path: '/catalog', icon: 'plan' },
   ];
 
   protected readonly employeeProgressLinks = [
+    { label: 'Agenda', path: '/agenda', icon: 'summary' },
     { label: 'Mi Plan', path: '/plan', icon: 'plan' },
     { label: 'Sesiones', path: '/sessions', icon: 'session' },
     { label: 'Brechas', path: '/suggestions', icon: 'spark' },
@@ -33,11 +33,12 @@ export class AppShellComponent {
   ];
 
   protected readonly managerPrimaryLinks = [
-    { label: 'Inicio', path: '/dashboard', icon: 'home' },
+    { label: 'Cursos', path: '/catalog', icon: 'plan' },
     { label: 'Equipo', path: '/manager/dashboard', icon: 'team' },
   ];
 
   protected readonly managerProgressLinks = [
+    { label: 'Agenda', path: '/agenda', icon: 'summary' },
     { label: 'Mi Plan', path: '/plan', icon: 'plan' },
     { label: 'Sesiones', path: '/sessions', icon: 'session' },
     { label: 'Recordatorios', path: '/reminders', icon: 'bell' },
@@ -55,7 +56,7 @@ export class AppShellComponent {
   );
 
   protected readonly homePath = computed(() =>
-    '/dashboard',
+    this.profile()?.role === 'manager' ? '/manager/dashboard' : '/catalog',
   );
 
   protected toggleMenu(): void {

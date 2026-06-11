@@ -16,7 +16,13 @@ export type UserProfile = {
   detected_level: string | null;
   weekly_hours_available: number | null;
   preferred_time: string | null;
+  preferred_start_hour: number | null;
+  preferred_study_days: string[];
   learning_style: string[];
+  content_preferences: string[];
+  study_techniques: string[];
+  learning_goals: string[];
+  technology_experience: string[];
   profile_version: number;
   onboarding_completed_at: string | null;
 };
@@ -84,7 +90,13 @@ export type OnboardingEvaluationResponse = {
     detected_level: string;
     weekly_hours_available: number;
     preferred_time: string;
+    preferred_start_hour: number | null;
+    preferred_study_days: string[];
     learning_style: string[];
+    content_preferences: string[];
+    study_techniques: string[];
+    learning_goals: string[];
+    technology_experience: string[];
     profile_version: number;
     onboarding_completed_at: string | null;
   };
@@ -110,7 +122,13 @@ export type SavedAssessmentResponse = {
   detected_level: string;
   weekly_hours_available: number;
   preferred_time: string;
+  preferred_start_hour: number | null;
+  preferred_study_days: string[];
   learning_style: string[];
+  content_preferences: string[];
+  study_techniques: string[];
+  learning_goals: string[];
+  technology_experience: string[];
   score: number;
   max_score: number;
   notes: string | null;
@@ -197,6 +215,27 @@ export type RouteSection = {
   course_section_id: string | null;
   lessons: CourseLesson[];
   labs: CourseLab[];
+  recommended_session_type: string;
+  recommended_study_methods: string[];
+  target_lessons: number;
+  target_labs: number;
+  review_points: string[];
+  unlock_after_section_id: string | null;
+};
+
+export type RouteProfileContext = {
+  weekly_hours_available: number;
+  preferred_time: string;
+  preferred_start_hour: number | null;
+  preferred_study_days: string[];
+  learning_style: string[];
+  content_preferences: string[];
+  study_techniques: string[];
+  learning_goals: string[];
+  technology_experience: string[];
+  recommended_study_days: string[];
+  recommended_session_duration_minutes: number;
+  weekly_study_minutes: number;
 };
 
 export type CourseCatalogSummary = {
@@ -268,6 +307,14 @@ export type SuggestedQuestionsResponse = {
   source_mode: string;
 };
 
+export type LessonReviewResponse = {
+  lesson_id: string;
+  accepted: boolean;
+  feedback: string;
+  reinforcement: string | null;
+  source_mode: string;
+};
+
 export type CompleteLessonResponse = {
   lesson_id: string;
   status: string;
@@ -297,6 +344,31 @@ export type CertificationRouteResponse = {
   detected_level: string;
   source_mode: string;
   sections: RouteSection[];
+  personalization_summary: string[];
+  profile_context: RouteProfileContext;
+};
+
+export type StudySessionPlan = {
+  session_id: string;
+  title: string;
+  session_type: string;
+  day_name: string;
+  time_window: string;
+  duration_minutes: number;
+  section_id: string;
+  lesson_ids: string[];
+  methodologies: string[];
+  focus_points: string[];
+  is_review: boolean;
+  unlocks: string[];
+};
+
+export type PlanCheckin = {
+  kind: string;
+  title: string;
+  trigger: string;
+  success_criteria: string[];
+  recovery_action: string | null;
 };
 
 export type StudyPlanResponse = {
@@ -310,9 +382,53 @@ export type StudyPlanResponse = {
     title: string;
     section_ids: string[];
     estimated_hours: number;
+    focus: string | null;
+    methodology_notes: string[];
+    sessions: StudySessionPlan[];
+    checkins: PlanCheckin[];
   }>;
   workiq_context: Record<string, unknown>;
   status: string;
+  personalization_summary: string[];
+};
+
+export type CourseEnrollmentResponse = {
+  id: string | null;
+  user_id: string;
+  course_id: string;
+  certification_code: string;
+  status: string;
+  enrolled_at: string | null;
+  activated_route_id: string | null;
+  activated_plan_id: string | null;
+  preferences_snapshot: RouteProfileContext;
+  personalization_summary: string[];
+  current_section_id: string | null;
+  current_session_id: string | null;
+};
+
+export type AgendaItemResponse = {
+  id: string | null;
+  enrollment_id: string | null;
+  plan_id: string | null;
+  route_id: string | null;
+  title: string;
+  item_type: string;
+  related_session_id: string | null;
+  related_section_id: string | null;
+  related_lesson_ids: string[];
+  scheduled_start: string;
+  scheduled_end: string;
+  time_window: string | null;
+  status: string;
+  metadata: Record<string, unknown>;
+};
+
+export type EnrollmentFlowResponse = {
+  enrollment: CourseEnrollmentResponse;
+  route: CertificationRouteResponse;
+  plan: StudyPlanResponse;
+  agenda: AgendaItemResponse[];
 };
 
 export type TeamSummary = {
@@ -580,7 +696,13 @@ export class ApiService {
     professional_role: string;
     weekly_hours_available: number;
     preferred_time: 'morning' | 'afternoon' | 'night';
+    preferred_start_hour: number;
+    preferred_study_days: string[];
     learning_style: string[];
+    content_preferences: string[];
+    study_techniques: string[];
+    learning_goals: string[];
+    technology_experience: string[];
     target_certification?: string | null;
     answers: Array<{ key: string; title: string; answer: string }>;
   }): Promise<AgentIntakeResponse> {
@@ -633,6 +755,27 @@ export class ApiService {
   getLatestPlan(): Promise<StudyPlanResponse | null> {
     return firstValueFrom(
       this.http.get<StudyPlanResponse | null>(`${this.apiBaseUrl}/learning/plans/latest`),
+    );
+  }
+
+  enrollInCourse(certificationCode: string): Promise<EnrollmentFlowResponse> {
+    return firstValueFrom(
+      this.http.post<EnrollmentFlowResponse>(`${this.apiBaseUrl}/learning/enrollments`, {
+        certification_code: certificationCode,
+        confirm: true,
+      }),
+    );
+  }
+
+  listMyAgenda(): Promise<AgendaItemResponse[]> {
+    return firstValueFrom(
+      this.http.get<AgendaItemResponse[]>(`${this.apiBaseUrl}/learning/agenda/mine`),
+    );
+  }
+
+  listMyEnrollments(): Promise<CourseEnrollmentResponse[]> {
+    return firstValueFrom(
+      this.http.get<CourseEnrollmentResponse[]>(`${this.apiBaseUrl}/learning/enrollments/mine`),
     );
   }
 
@@ -813,6 +956,15 @@ export class ApiService {
       this.http.get<SuggestedQuestionsResponse>(
         `${this.apiBaseUrl}/lessons/${lessonId}/suggested-questions`,
       ),
+    );
+  }
+
+  reviewLessonExplanation(
+    lessonId: string,
+    payload: { explanation: string; part_title?: string | null; technique?: string | null },
+  ): Promise<LessonReviewResponse> {
+    return firstValueFrom(
+      this.http.post<LessonReviewResponse>(`${this.apiBaseUrl}/lessons/${lessonId}/review`, payload),
     );
   }
 

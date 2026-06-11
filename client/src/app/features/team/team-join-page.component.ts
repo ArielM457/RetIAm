@@ -35,7 +35,7 @@ export class TeamJoinPageComponent {
         await this.router.navigate(['/onboarding']);
         return;
       }
-      await this.router.navigate(['/dashboard']);
+      await this.router.navigate(['/catalog']);
     } catch (error) {
       this.error.set(error instanceof Error ? error.message : 'No se pudo unir al equipo.');
     } finally {

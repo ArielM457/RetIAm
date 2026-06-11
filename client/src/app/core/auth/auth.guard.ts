@@ -16,7 +16,7 @@ export const guestGuard: CanActivateFn = async () => {
   const router = inject(Router);
 
   await authStore.ensureInitialized();
-  return authStore.user() ? router.parseUrl('/dashboard') : true;
+  return authStore.user() ? router.parseUrl('/catalog') : true;
 };
 
 export const managerGuard: CanActivateFn = async () => {
@@ -24,5 +24,5 @@ export const managerGuard: CanActivateFn = async () => {
   const router = inject(Router);
 
   await authStore.ensureInitialized();
-  return authStore.profile()?.role === 'manager' ? true : router.parseUrl('/dashboard');
+  return authStore.profile()?.role === 'manager' ? true : router.parseUrl('/catalog');
 };

@@ -67,6 +67,88 @@
           </div>
         }
 
+        @if (currentQuestion()!.key === 'preferred_time') {
+          <div class="guided-panel">
+            <div class="guided-block">
+              <span class="guided-label">Parte del dia</span>
+              <div class="guided-chip-grid">
+                @for (option of timeSlotOptions; track option.value) {
+                  <button
+                    class="guided-chip"
+                    type="button"
+                    [class.guided-chip-active]="selectedTimeSlot() === option.value"
+                    (click)="pickTimeSlot(option.value)"
+                    [disabled]="agentBusy()"
+                  >
+                    {{ option.label }}
+                  </button>
+                }
+              </div>
+            </div>
+
+            @if (selectedTimeSlot()) {
+              <div class="guided-block">
+                <span class="guided-label">Desde que hora</span>
+                <div class="guided-chip-grid">
+                  @for (hour of timeHourOptions(); track hour) {
+                    <button
+                      class="guided-chip"
+                      type="button"
+                      [class.guided-chip-active]="selectedTimeHour() === hour"
+                      (click)="pickTimeHour(hour)"
+                      [disabled]="agentBusy()"
+                    >
+                      {{ hour >= 12 ? ((hour - 1) % 12) + 1 : hour }} {{ hour >= 12 ? 'pm' : 'am' }}
+                    </button>
+                  }
+                </div>
+              </div>
+            }
+          </div>
+        }
+
+        @if (currentQuestion()!.key === 'preferred_study_days') {
+          <div class="guided-panel">
+            <div class="guided-block">
+              <span class="guided-label">Patrones sugeridos</span>
+              <div class="guided-chip-grid">
+                @for (preset of studyDayPresets; track preset.value) {
+                  <button
+                    class="guided-chip guided-chip-wide"
+                    type="button"
+                    [class.guided-chip-active]="selectedStudyDayPreset() === preset.value"
+                    (click)="pickStudyDayPreset(preset)"
+                    [disabled]="agentBusy()"
+                  >
+                    {{ preset.label }}
+                  </button>
+                }
+              </div>
+            </div>
+          </div>
+        }
+
+        @if (currentQuestion()!.key === 'study_techniques') {
+          <div class="techniques-panel">
+            @for (technique of visibleStudyTechniques(); track technique.key) {
+              <button
+                class="technique-card"
+                type="button"
+                [class.technique-card-active]="selectedStudyTechniques().includes(technique.key)"
+                (click)="toggleStudyTechnique(technique.key)"
+                [disabled]="agentBusy()"
+              >
+                <strong>{{ technique.label }}</strong>
+                <span>{{ technique.description }}</span>
+              </button>
+            }
+
+            <button class="technique-toggle" type="button" (click)="toggleStudyTechniqueExpansion()">
+              {{ showAllStudyTechniques() ? 'Ver menos metodologias' : 'Ver mas metodologias' }}
+            </button>
+          </div>
+        }
+
         <div class="chat-input-row">
           <input
             class="chat-input"

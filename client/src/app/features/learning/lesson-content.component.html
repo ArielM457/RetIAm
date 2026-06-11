@@ -1,31 +1,43 @@
 <div class="lesson-content-wrap" *ngIf="parsed() as data">
-  <!-- Índice de subtemas -->
-  <nav class="toc" *ngIf="toc().length > 1">
-    <span class="toc-label">En esta lección</span>
-    <button class="toc-chip" *ngFor="let item of toc()" (click)="openAndScroll(item.id)">
-      {{ item.title }}
-    </button>
-  </nav>
+  <section class="units" *ngIf="activeUnit() as active">
+    <article class="unit" [id]="active.unit.id">
+      <div class="unit-summary open">
+        <span class="unit-num">{{ active.index + 1 }}</span>
+        <span class="unit-title">{{ active.unit.title }}</span>
+      </div>
+      <div class="micro-learning-intro" *ngIf="microLearningMode() && activeMicroSections().length > 1">
+        <strong>Lectura guiada por bloques cortos</strong>
+        <span>Esta parte se dividió en segmentos pequeños para avanzar con más comodidad.</span>
+      </div>
 
-  <!-- Unidades colapsables -->
-  <section class="units">
-    <article class="unit" *ngFor="let unit of data.units; let i = index" [id]="unit.id">
-      <button class="unit-summary" (click)="toggle(unit.id, i)" [class.open]="isOpen(unit.id, i)">
-        <span class="unit-num">{{ i + 1 }}</span>
-        <span class="unit-title">{{ unit.title }}</span>
-        <span class="unit-caret">{{ isOpen(unit.id, i) ? '▾' : '▸' }}</span>
-      </button>
-      <div class="unit-body prose" *ngIf="isOpen(unit.id, i)" [innerHTML]="unit.html"></div>
+      <ng-container *ngIf="microLearningMode() && activeMicroSections().length; else standardBody">
+        <div class="micro-sections">
+          <section class="micro-section" *ngFor="let micro of activeMicroSections(); let mi = index">
+            <div class="micro-section-head">
+              <span class="micro-section-index">{{ mi + 1 }}</span>
+              <h4>{{ micro.title }}</h4>
+            </div>
+            <div class="unit-body prose micro-body" [innerHTML]="micro.html"></div>
+            <div class="micro-coach-note">
+              <span class="micro-coach-badge">Reti</span>
+              <p>{{ micro.coachNote }}</p>
+            </div>
+          </section>
+        </div>
+      </ng-container>
+
+      <ng-template #standardBody>
+        <div class="unit-body prose" [innerHTML]="active.unit.html"></div>
+      </ng-template>
     </article>
   </section>
 
-  <!-- Pie de fuente -->
   <p class="content-source" *ngIf="data.source">
     Fuente oficial:
     <a [href]="data.source" target="_blank" rel="noopener">{{ data.source }}</a>
   </p>
 
-  <p class="content-empty" *ngIf="!data.units.length">
+  <p class="content-empty" *ngIf="!activeUnit()">
     Esta lección aún no tiene contenido cargado. Corre la ingesta con <code>--content</code>.
   </p>
 </div>

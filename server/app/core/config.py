@@ -34,6 +34,8 @@ class Settings(BaseSettings):
     supabase_course_labs_table: str = "course_labs"
     supabase_lesson_completions_table: str = "lesson_completions"
     supabase_lesson_chat_messages_table: str = "lesson_chat_messages"
+    supabase_course_enrollments_table: str = "course_enrollments"
+    supabase_learning_agenda_items_table: str = "learning_agenda_items"
     supabase_lesson_chunks_table: str = "lesson_chunks"
     # Embeddings para el RAG (Supabase pgvector). multilingual-e5-large = 1024 dim,
     # multilingue, gratis y soportado por fastembed (usa prefijos query:/passage:).

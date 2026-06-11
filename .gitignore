@@ -19,6 +19,7 @@ client/.angular/
 client/dist/
 
 infra/.generated/
+server/generated/fastembed_cache/
 
 .vscode/*
 !.vscode/settings.json

@@ -1,0 +1,144 @@
+<section class="agenda-page">
+  <div class="cal-root">
+    <div class="cal-topbar">
+      <span class="cal-topbar-logo">RetAIM</span>
+      <button class="cal-btn-today" type="button" (click)="goToday()">Today</button>
+      <div class="cal-nav">
+        <button class="cal-nav-btn" type="button" (click)="moveWeek(-1)">&#8249;</button>
+        <button class="cal-nav-btn" type="button" (click)="moveWeek(1)">&#8250;</button>
+      </div>
+      <span class="cal-month-label">{{ monthLabel() }}</span>
+      <div class="cal-topbar-right">
+        <button class="cal-ghost-btn" type="button">Agenda</button>
+        <button class="cal-ghost-btn" type="button">{{ selectedWeekSummary().total }} bloques</button>
+        <button class="cal-ghost-btn" type="button">Week ▾</button>
+      </div>
+    </div>
+
+    <div class="cal-body" *ngIf="!loading(); else loadingTpl">
+      <div class="cal-sidebar">
+        <a class="cal-create-btn" routerLink="/catalog">
+          <span class="cal-plus">+</span>
+          Explorar cursos
+        </a>
+
+        <div>
+          <div class="mini-cal-header">
+            <span class="mini-cal-title">{{ miniCalendarTitle() }}</span>
+            <div>
+              <button class="mini-cal-nav" type="button" (click)="moveMonth(-1)">‹</button>
+              <button class="mini-cal-nav" type="button" (click)="moveMonth(1)">›</button>
+            </div>
+          </div>
+          <div class="mini-cal-grid">
+            <div class="mini-cal-dow" *ngFor="let day of ['S','M','T','W','T','F','S']">{{ day }}</div>
+            <button
+              class="mini-cal-day"
+              *ngFor="let cell of miniCalendarCells()"
+              type="button"
+              [class.today]="cell.isToday"
+              [class.other-month]="!cell.inCurrentMonth"
+              [class.selected-week]="cell.isSelectedWeek"
+              (click)="selectMiniCalendarDate(cell.date)"
+            >
+              {{ cell.day }}
+            </button>
+          </div>
+        </div>
+
+        <div class="search-box">
+          <span class="search-icon">⌕</span>
+          <input
+            type="text"
+            placeholder="Buscar sesiones"
+            [value]="search()"
+            (input)="search.set($any($event.target).value)"
+          />
+        </div>
+
+        <div class="sidebar-summary">
+          <p class="summary-title">Resumen semanal</p>
+          <div class="summary-row">
+            <span>Sesiones</span>
+            <strong>{{ selectedWeekSummary().sessions }}</strong>
+          </div>
+          <div class="summary-row">
+            <span>Revisiones</span>
+            <strong>{{ selectedWeekSummary().reviews }}</strong>
+          </div>
+          <div class="summary-row">
+            <span>Total</span>
+            <strong>{{ selectedWeekSummary().total }}</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="cal-main" *ngIf="visibleDays().length; else emptyTpl">
+        <div class="cal-days-header">
+          <div class="gutter">
+            <div class="gmt-label">Tu horario</div>
+          </div>
+          <div class="cal-day-col-head" *ngFor="let day of visibleDays()">
+            <div class="cal-day-name">{{ day.dayName }}</div>
+            <div *ngIf="!day.isToday" class="cal-day-num">{{ day.dayLabel }}</div>
+            <div *ngIf="day.isToday"><span class="cal-day-num-circle">{{ day.dayLabel }}</span></div>
+          </div>
+        </div>
+
+        <div class="cal-scroll">
+          <div class="cal-grid-rows">
+            <div class="time-col">
+              <div class="time-slot" *ngFor="let hour of hours()">
+                <span class="time-label">{{ hourLabel(hour) }}</span>
+              </div>
+            </div>
+
+            <div class="day-col" *ngFor="let day of visibleDays()">
+              <div class="hour-line" *ngFor="let hour of hours(); let idx = index" [style.top.px]="idx * 64"></div>
+
+              <div class="now-line" *ngIf="day.isToday && currentTimeTop() !== null" [style.top.px]="currentTimeTop()">
+                <div class="now-dot"></div>
+              </div>
+
+              <button
+                class="event"
+                *ngFor="let event of day.items"
+                type="button"
+                [class.event-study]="event.tone === 'study'"
+                [class.event-review]="event.tone === 'review'"
+                [class.event-lab]="event.tone === 'lab'"
+                [class.event-checkin]="event.tone === 'checkin'"
+                [class.event-reminder]="event.tone === 'reminder'"
+                [class.event-openable]="canOpenItem(event.item)"
+                [style.top.px]="event.top"
+                [style.height.px]="event.height"
+                (click)="openItem(event.item)"
+              >
+                <div class="ev-title">{{ event.item.title }}</div>
+                <div class="ev-time">{{ event.startLabel }} - {{ event.endLabel }}</div>
+                <div class="ev-meta">{{ itemTypeLabel(event.item.item_type) }}</div>
+                <div class="ev-copy">{{ focusText(event.item) }}</div>
+                <div class="ev-link" *ngIf="canOpenItem(event.item)">Abrir curso</div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ng-template #loadingTpl>
+  <div class="agenda-loading">
+    <div class="skeleton" style="height: 620px; border-radius: 16px"></div>
+  </div>
+</ng-template>
+
+<ng-template #emptyTpl>
+  <app-empty-state
+    title="Todavia no tienes una agenda activa"
+    message="Inscribete a un curso del catalogo y el agente te organizara sesiones progresivas por fecha."
+  >
+    <a routerLink="/catalog" class="btn btn-primary">Ir al catálogo</a>
+  </app-empty-state>
+</ng-template>

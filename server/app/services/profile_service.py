@@ -30,7 +30,13 @@ def ensure_profile_for_user(auth_user: object) -> UserProfileResponse:
         "detected_level": existing_profile.get("detected_level"),
         "weekly_hours_available": existing_profile.get("weekly_hours_available"),
         "preferred_time": existing_profile.get("preferred_time"),
+        "preferred_start_hour": existing_profile.get("preferred_start_hour"),
+        "preferred_study_days": existing_profile.get("preferred_study_days") or [],
         "learning_style": metadata.get("learning_style") or existing_profile.get("learning_style", []),
+        "content_preferences": existing_profile.get("content_preferences") or [],
+        "study_techniques": existing_profile.get("study_techniques") or [],
+        "learning_goals": existing_profile.get("learning_goals") or [],
+        "technology_experience": existing_profile.get("technology_experience") or [],
         "profile_version": existing_profile.get("profile_version", 1),
         "onboarding_completed_at": existing_profile.get("onboarding_completed_at"),
     }
