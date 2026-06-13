@@ -49,6 +49,15 @@ class Settings(BaseSettings):
     azure_foundry_deployment: str | None = None
     azure_foundry_api_key: str | None = None
     azure_foundry_api_version: str = "2024-10-21"
+    # Deployments por tarea (vacio = usa azure_foundry_deployment por defecto).
+    # Sala 1 (presentaciones) conviene gpt-4.1-mini; Lab (supervision) gpt-4.1.
+    azure_foundry_deployment_presenter: str | None = None
+    azure_foundry_deployment_supervisor: str | None = None
+    # Azure AI Speech (voz neuronal para la Sala 1). Si faltan key/region, el
+    # frontend usa la voz del navegador como fallback.
+    azure_speech_key: str | None = None
+    azure_speech_region: str | None = None
+    azure_speech_voice: str = "es-ES-ElviraNeural"
     azure_search_endpoint: str | None = None
     azure_search_key: str | None = None
     azure_search_index: str | None = None

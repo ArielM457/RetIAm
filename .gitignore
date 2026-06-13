@@ -28,3 +28,6 @@ infra/.generated/
 
 .DS_Store
 Thumbs.db
+
+# Windows alternate data streams
+*:Zone.Identifier
