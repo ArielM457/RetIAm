@@ -5,6 +5,7 @@ from fastapi import HTTPException
 
 from app.core.config import get_settings
 from app.db.supabase import get_supabase_service_client
+from app.integrations.foundry_adapter import run_agent
 from app.models.manager import (
     ManagerDashboardResponse,
     ManagerExportResponse,
@@ -238,6 +239,68 @@ def send_support_message(
         channel="platform",
         message=payload.message,
     )
+
+
+def _insert_nudge(member_id: str, message: str, kind: str = "nudge") -> None:
+    settings = get_settings()
+    get_supabase_service_client().table(settings.supabase_coach_reminders_table).insert(
+        {
+            "user_id": member_id,
+            "plan_id": None,
+            "kind": kind,
+            "tone": "casual",
+            "delivery_channel": "platform",
+            "message": message,
+            "scheduled_for": datetime.now(timezone.utc).isoformat(),
+            "status": "scheduled",
+        }
+    ).execute()
+
+
+def _draft_nudge(name: str | None, progress: int, risk: str | None) -> str:
+    """Redacta un empujon motivador con IA; cae a una plantilla si no hay IA."""
+    prompt = (
+        "Eres un coach de aprendizaje. Escribe un mensaje MUY breve (1 a 2 frases, en espanol, "
+        "tono cercano y motivador, sin emojis excesivos) para animar a un miembro del equipo a "
+        f"seguir aprendiendo. Nombre: {name or 'colega'}. Progreso actual: {progress}%. "
+        f"Nivel de riesgo: {risk or 'medio'}. No regañes; motiva y sugiere retomar hoy."
+    )
+    result = run_agent("learning-coach", prompt, temperature=0.6, max_tokens=160, ground=False)
+    if result and result.get("text"):
+        return result["text"].strip()
+    return (
+        f"Hola {name or ''}, vas {progress}% de tu ruta. Dedica 20 minutos hoy y sigues "
+        "sumando. ¡Tú puedes!"
+    ).strip()
+
+
+def send_member_nudge(
+    auth_user: object, team_id: str, member_id: str, message: str | None = None
+) -> dict:
+    """Envia un empujon (manual o redactado por IA) a un miembro para que siga aprendiendo."""
+    profile = ensure_profile_for_user(auth_user)
+    _ensure_manager_access(team_id, profile.id)
+    detail = get_member_detail(auth_user, team_id, member_id)
+    text = (message or "").strip() or _draft_nudge(
+        detail.full_name, detail.progress_percent, detail.risk_status
+    )
+    _insert_nudge(member_id, text)
+    return {"delivered": True, "member_id": member_id, "message": text}
+
+
+def nudge_at_risk(auth_user: object, team_id: str) -> dict:
+    """Avisa (con IA) a TODOS los miembros en riesgo (amarillo/rojo) de una vez."""
+    profile = ensure_profile_for_user(auth_user)
+    _ensure_manager_access(team_id, profile.id)
+    dashboard = get_team_dashboard(auth_user, team_id)
+    notified: list[dict] = []
+    for member in dashboard.members:
+        if member.risk_status not in {"yellow", "red"}:
+            continue
+        text = _draft_nudge(member.full_name, member.progress_percent, member.risk_status)
+        _insert_nudge(member.user_id, text)
+        notified.append({"user_id": member.user_id, "full_name": member.full_name, "message": text})
+    return {"count": len(notified), "notified": notified}
 
 
 def get_weekly_team_summary(auth_user: object, team_id: str) -> WeeklyTeamSummaryResponse:

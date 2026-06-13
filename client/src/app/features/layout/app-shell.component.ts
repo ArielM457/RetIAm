@@ -21,6 +21,7 @@ export class AppShellComponent {
 
   protected readonly employeePrimaryLinks = [
     { label: 'Cursos', path: '/catalog', icon: 'plan' },
+    { label: 'Metaverso', path: '/auxiliaturas', icon: 'spark' },
   ];
 
   protected readonly employeeProgressLinks = [
@@ -35,6 +36,8 @@ export class AppShellComponent {
   protected readonly managerPrimaryLinks = [
     { label: 'Cursos', path: '/catalog', icon: 'plan' },
     { label: 'Equipo', path: '/manager/dashboard', icon: 'team' },
+    { label: 'Ranking', path: '/manager/insights', icon: 'chart' },
+    { label: 'Curso a medida', path: '/manager/custom-course', icon: 'plan' },
   ];
 
   protected readonly managerProgressLinks = [

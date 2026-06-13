@@ -105,10 +105,14 @@ def run_agent(
     max_tokens: int = 900,
     ground: bool = True,
     response_json: bool = False,
+    deployment: str | None = None,
 ) -> dict | None:
     """Ejecuta un agente Gini en Foundry. Devuelve dict o None (fallback).
 
     dict: {"text": str, "sources": list[dict], "source_mode": "foundry"}
+
+    `deployment` permite usar otro modelo desplegado (p. ej. gpt-4.1-mini para la
+    Sala 1) sin cambiar el resto; si es None usa azure_foundry_deployment.
     """
     if not foundry_enabled():
         return None
@@ -130,7 +134,7 @@ def run_agent(
             {"role": "user", "content": user_prompt},
         ]
         kwargs: dict = {
-            "model": settings.azure_foundry_deployment,
+            "model": deployment or settings.azure_foundry_deployment,
             "messages": messages,
             "temperature": temperature,
             "max_tokens": max_tokens,

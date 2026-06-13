@@ -1,0 +1,177 @@
+<section class="page-shell aux">
+  <header class="aux-head animate-fade-up">
+    <p class="eyebrow">Sala de Auxiliaturas · Metaverso</p>
+    <h1 class="aux-title">Entra al aula y pídele ayuda al <span class="gradient-text">profesor IA</span></h1>
+    <p class="aux-sub">
+      Pulsa el micrófono y háblale: “hola, necesito ayuda”. Elige el curso y el tema, y el
+      profesor preparará la clase y te la explicará en vivo. Muévete por el aula con W A S D.
+    </p>
+  </header>
+
+  <!-- Escenario 3D (siempre visible) -->
+  <div class="stage">
+    <app-aula3d [slide]="activeSlide()" [title]="deckTitle()" [playing]="speaking()" />
+
+    <!-- Overlay de bienvenida (un clic para entrar y habilitar la voz) -->
+    <div class="enter-overlay" *ngIf="!entered()">
+      <div class="enter-card glass-card">
+        <p class="eyebrow">Metaverso RetIAm</p>
+        <h2>Bienvenido al metaverso</h2>
+        <p class="enter-sub">
+          Resuelve dudas de cualquier tema, realiza tus laboratorios en tiempo real y debate con
+          tus amigos — todo guiado por tu agente de IA.
+        </p>
+        <button class="btn btn-primary" (click)="enterMetaverse()">▶ Entrar al metaverso</button>
+      </div>
+    </div>
+
+    <!-- Caption: lo que dice el profesor -->
+    <div class="agent-caption" *ngIf="agentLine()">
+      <span class="agent-badge">Profesor IA</span>
+      <p>{{ agentLine() }}</p>
+    </div>
+
+    <!-- Controles mínimos -->
+    <div class="stage-controls">
+      <button
+        class="ctl mic"
+        *ngIf="sttSupported"
+        [class.on]="micActive()"
+        (click)="toggleMic()"
+      >
+        {{ micActive() ? '● Escuchando…' : '🎤 Hablar con el profesor' }}
+      </button>
+      <button class="ctl" (click)="openHelp()">🎓 Pedir un tema</button>
+      <button class="ctl" *ngIf="playing()" (click)="pauseForQuestion()">✋ Tengo una duda</button>
+      <button class="ctl" *ngIf="playing()" (click)="stopNarration()">⏹ Detener</button>
+      <button class="ctl" *ngIf="presentation()" (click)="reset()">🔄 Otro tema</button>
+      <span class="voice-tag">{{ azureVoice() ? '🟣 Voz neuronal' : '🔊 Voz navegador' }}</span>
+    </div>
+
+    <!-- Panel: tengo una duda (interrumpe sin regenerar la clase) -->
+    <div class="ask-panel" *ngIf="askingOpen()">
+      <span class="field-label">Tu duda (la clase se reanuda al responder)</span>
+      <div class="topic-row">
+        <input
+          class="input-pill"
+          [(ngModel)]="question"
+          name="question"
+          placeholder="Ej. ¿y eso en qué se diferencia de una NSG?"
+          (keyup.enter)="submitQuestion()"
+          [disabled]="answering()"
+        />
+        <button
+          type="button"
+          class="mic-btn"
+          *ngIf="sttSupported"
+          [class.listening]="listening()"
+          (click)="dictateQuestion()"
+        >
+          {{ listening() ? '●' : '🎤' }}
+        </button>
+      </div>
+      <div class="ask-actions">
+        <button class="btn btn-ghost btn-sm" (click)="cancelQuestion()" [disabled]="answering()">
+          Continuar clase
+        </button>
+        <button class="btn btn-primary btn-sm" (click)="submitQuestion()" [disabled]="!question.trim() || answering()">
+          {{ answering() ? 'Respondiendo…' : 'Preguntar' }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Contador de slides -->
+    <div class="slide-counter" *ngIf="presentation() as deck">
+      {{ slideIndex() + 1 }} / {{ deck.slides.length }}
+    </div>
+
+    <p class="stage-hint" *ngIf="!presentation() && !helpOpen()">
+      Pulsa 🎤 y di: “hola, necesito ayuda”
+    </p>
+  </div>
+
+  <!-- Ventana emergente: elegir curso + tema -->
+  <div class="modal-backdrop" *ngIf="helpOpen()" (click)="closeHelp()">
+    <div class="modal glass-card" (click)="$event.stopPropagation()">
+      <h2 class="modal-title">¿Qué quieres aprender?</h2>
+
+      <label class="field">
+        <span class="field-label">Tu pregunta o tema</span>
+        <div class="topic-row">
+          <input
+            class="input-pill"
+            [(ngModel)]="topic"
+            name="topic"
+            placeholder="Ej. ¿Cómo configuro Cosmos DB en Azure?"
+            (keyup.enter)="present()"
+          />
+          <button
+            type="button"
+            class="mic-btn"
+            *ngIf="sttSupported"
+            [class.listening]="listening()"
+            (click)="dictateTopic()"
+            title="Dictar con voz"
+          >
+            {{ listening() ? '●' : '🎤' }}
+          </button>
+        </div>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Curso (opcional · por defecto busca en todos)</span>
+        <select class="input-pill" [(ngModel)]="courseCode" name="course">
+          <option value="">🌐 Todos los cursos</option>
+          <option *ngFor="let c of courses()" [value]="c.certification_code">{{ c.title }}</option>
+        </select>
+      </label>
+
+      <details class="upload-block">
+        <summary>📄 …o sube/pega un artículo para que te lo explique</summary>
+        <textarea
+          class="input-pill upload-text"
+          [(ngModel)]="articleText"
+          name="article"
+          rows="4"
+          placeholder="Pega aquí el texto o artículo que quieras entender…"
+        ></textarea>
+        <input type="file" accept=".txt,.md,.markdown,text/plain" (change)="onArticleFile($event)" />
+        <span class="upload-hint">Si pegas o subes texto, la IA lo explica (el tema es opcional).</span>
+      </details>
+
+      <div class="modal-actions">
+        <button class="btn btn-ghost btn-sm" (click)="closeHelp()">Cancelar</button>
+        <button
+          class="btn btn-primary"
+          [disabled]="(!topic.trim() && !articleText.trim()) || generating()"
+          (click)="present()"
+        >
+          {{ generating() ? 'Preparando…' : 'Empezar la clase' }}
+        </button>
+      </div>
+
+      <p class="modal-note">
+        Reviso primero el contenido de los cursos; si no encuentro material, respondo con
+        conocimiento general basado en documentación oficial.
+      </p>
+      <button class="btn btn-ghost btn-sm demo-link" (click)="loadDemo()">
+        🧪 Ver demo del Aula 3D (sin backend)
+      </button>
+    </div>
+  </div>
+
+  <!-- Fuentes del curso -->
+  <div class="deck-sources" *ngIf="presentation() as deck">
+    <ng-container *ngIf="deck.sources.length">
+      <p class="mini-label">Fuentes del curso</p>
+      <a
+        *ngFor="let s of deck.sources"
+        class="source-link"
+        [href]="s.url || '#'"
+        target="_blank"
+        rel="noopener"
+        >{{ s.title }}</a
+      >
+    </ng-container>
+  </div>
+</section>

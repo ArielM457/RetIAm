@@ -10,6 +10,12 @@ class MemberRiskSummary(BaseModel):
     risk_status: str
 
 
+class NudgeRequest(BaseModel):
+    """Empujon para seguir aprendiendo (si message viene vacio, lo redacta la IA)."""
+
+    message: str | None = None
+
+
 class ManagerDashboardResponse(BaseModel):
     team_id: str
     team_name: str

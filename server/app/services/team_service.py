@@ -104,6 +104,27 @@ def _build_team_summary(team: dict) -> TeamSummary:
     )
 
 
+def get_user_team_ids(profile_id: str) -> list[str]:
+    """Todos los equipos a los que pertenece el usuario (como miembro o manager)."""
+    settings = get_settings()
+    client = get_supabase_service_client()
+    member_rows = (
+        client.table(settings.supabase_team_members_table)
+        .select("team_id")
+        .eq("user_id", profile_id)
+        .execute()
+    )
+    manager_rows = (
+        client.table(settings.supabase_teams_table)
+        .select("id")
+        .eq("manager_id", profile_id)
+        .execute()
+    )
+    ids = {row["team_id"] for row in (response_data(member_rows, []) or [])}
+    ids |= {row["id"] for row in (response_data(manager_rows, []) or [])}
+    return list(ids)
+
+
 def _ensure_manager_access(team_id: str, user_id: str) -> dict:
     team = _get_team_record(team_id)
     if team["manager_id"] != user_id:
