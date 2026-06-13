@@ -241,7 +241,7 @@
           <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#d2bbff]">Acceso al equipo</p>
           <h2 class="text-2xl font-bold text-white">Añadir miembros</h2>
           <p class="text-sm text-[var(--muted)]">
-            Genera un codigo temporal o envia correos para que nuevas personas entren a {{ selectedTeam()!.name }}.
+            Genera un codigo temporal y compártelo para que nuevas personas entren a {{ selectedTeam()!.name }}.
           </p>
         </div>
 
@@ -270,25 +270,9 @@
               </p>
             </div>
           }
-        </div>
-
-        <div class="rounded-[1.25rem] border border-white/10 bg-white/[0.04] p-5">
-          <p class="text-sm font-semibold text-white">Invitar por correo</p>
-          <p class="mt-1 text-xs text-[var(--muted)]">Separa varios correos con coma y los agregamos al flujo del equipo.</p>
-          <textarea
-            class="mt-4 min-h-[120px] w-full rounded-[1rem] border border-white/10 bg-[rgba(10,14,24,0.7)] px-4 py-3 text-sm text-white outline-none transition focus:border-[#d2bbff]/40"
-            [(ngModel)]="inviteEmails"
-            placeholder="ana@empresa.com, luis@empresa.com"
-          ></textarea>
-          <button
-            class="mt-4 inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/[0.08]"
-            type="button"
-            (click)="inviteMembers()"
-            [disabled]="!inviteEmails.trim()"
-          >
-            <app-icon name="arrow-right" className="h-4 w-4"></app-icon>
-            Enviar invitaciones
-          </button>
+          <p class="mt-4 text-xs text-[var(--muted)]">
+            La persona se registra como miembro e ingresa este código durante el alta para unirse a tu equipo.
+          </p>
         </div>
       </article>
 

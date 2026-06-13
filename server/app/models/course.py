@@ -71,7 +71,19 @@ class CourseDetail(BaseModel):
     total_duration_minutes: int = 0
     source: str = "template"
     source_url: str | None = None
+    # Cursos personalizados (team lead): scoping + certificacion de plataforma.
+    team_id: str | None = None
+    created_by: str | None = None
+    visibility: str = "global"  # 'global' | 'team' | 'org'
+    is_certifiable: bool = False
     sections: list[CourseSectionContent] = Field(default_factory=list)
+
+
+class CustomCourseRequest(BaseModel):
+    """El team lead sube/pega un Markdown para crear un curso personalizado."""
+
+    markdown: str = Field(min_length=1)
+    title: str | None = None
 
 
 class CourseCatalogSummary(BaseModel):
@@ -87,3 +99,7 @@ class CourseCatalogSummary(BaseModel):
     total_duration_minutes: int = 0
     section_count: int = 0
     lesson_count: int = 0
+    # Para distinguir y marcar cursos personalizados del equipo en el catalogo.
+    visibility: str = "global"
+    is_certifiable: bool = False
+    source: str = "template"

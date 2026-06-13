@@ -82,11 +82,17 @@ def _assemble_course(course_row: dict) -> CourseDetail:
         total_duration_minutes=course_row.get("total_duration_minutes", 0),
         source=course_row.get("source", "template"),
         source_url=course_row.get("source_url"),
+        team_id=course_row.get("team_id"),
+        created_by=course_row.get("created_by"),
+        visibility=course_row.get("visibility") or "global",
+        is_certifiable=course_row.get("is_certifiable", False),
         sections=sections,
     )
 
 
-def list_courses() -> list[CourseCatalogSummary]:
+def list_courses(viewer_team_ids: list[str] | None = None) -> list[CourseCatalogSummary]:
+    """Lista el catalogo. Los cursos personalizados ('team') solo se incluyen si
+    el espectador pertenece a ese equipo; los globales siempre."""
     settings = get_settings()
     try:
         course_rows = response_data(
@@ -96,8 +102,17 @@ def list_courses() -> list[CourseCatalogSummary]:
         logger.warning("No se pudo listar el catalogo de cursos: %s", exc)
         return []
 
+    team_ids = set(viewer_team_ids or [])
+    visible_rows = []
+    for row in course_rows:
+        visibility = row.get("visibility") or "global"
+        if visibility == "global":
+            visible_rows.append(row)
+        elif row.get("team_id") and row.get("team_id") in team_ids:
+            visible_rows.append(row)
+
     summaries: list[CourseCatalogSummary] = []
-    for course_row in course_rows:
+    for course_row in visible_rows:
         section_rows = response_data(
             _client()
             .table(settings.supabase_course_sections_table)
@@ -130,6 +145,9 @@ def list_courses() -> list[CourseCatalogSummary]:
                 total_duration_minutes=course_row.get("total_duration_minutes", 0),
                 section_count=len(section_ids),
                 lesson_count=lesson_count,
+                visibility=course_row.get("visibility") or "global",
+                is_certifiable=course_row.get("is_certifiable", False),
+                source=course_row.get("source", "template"),
             )
         )
     return summaries
@@ -224,6 +242,10 @@ def upsert_course(course: CourseDetail) -> str:
         "total_duration_minutes": course.total_duration_minutes,
         "source": course.source,
         "source_url": course.source_url,
+        "team_id": course.team_id,
+        "created_by": course.created_by,
+        "visibility": course.visibility,
+        "is_certifiable": course.is_certifiable,
     }
     course_row = response_data(
         _client()

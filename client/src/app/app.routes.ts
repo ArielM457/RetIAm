@@ -77,6 +77,13 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'auxiliaturas',
+        loadComponent: () =>
+          import('./features/auxiliaturas/auxiliaturas-page.component').then(
+            (module) => module.AuxiliaturasPageComponent,
+          ),
+      },
+      {
         path: 'plan',
         loadComponent: () =>
           import('./features/learning/learning-plan-page.component').then(
@@ -137,6 +144,22 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./features/manager/manager-weekly-summary-page.component').then(
             (module) => module.ManagerWeeklySummaryPageComponent,
+          ),
+      },
+      {
+        path: 'manager/custom-course',
+        canActivate: [managerGuard],
+        loadComponent: () =>
+          import('./features/manager/manager-custom-course-page.component').then(
+            (module) => module.ManagerCustomCoursePageComponent,
+          ),
+      },
+      {
+        path: 'manager/insights',
+        canActivate: [managerGuard],
+        loadComponent: () =>
+          import('./features/manager/manager-insights-page.component').then(
+            (module) => module.ManagerInsightsPageComponent,
           ),
       },
     ],

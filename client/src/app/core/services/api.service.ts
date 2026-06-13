@@ -246,6 +246,77 @@ export type QuizQuestionPublic = {
   section_id?: string | null;
 };
 
+export type RankingMember = {
+  user_id: string;
+  full_name: string;
+  rank: number;
+  score: number;
+  progress_percent: number;
+  completed_sessions: number;
+  study_minutes: number;
+  fastest_minutes: number | null;
+  avg_minutes: number | null;
+  exams_taken: number;
+  exams_passed: number;
+  pass_rate: number;
+  learning_style: string[];
+};
+
+export type MethodologyStat = { style: string; avg_progress: number; members: number };
+
+export type TeamRanking = {
+  team_id: string;
+  team_name: string | null;
+  members: RankingMember[];
+  record_holder: RankingMember | null;
+  best_methodology: MethodologyStat | null;
+  methodology_breakdown: MethodologyStat[];
+  narrative: string;
+};
+
+export type CustomCourseSectionSummary = {
+  title: string;
+  lessons: string[];
+  labs: string[];
+};
+
+export type CustomCourseResult = {
+  certification_code: string;
+  title: string;
+  summary: string | null;
+  level: string;
+  total_duration_minutes: number;
+  section_count: number;
+  lesson_count: number;
+  lab_count: number;
+  is_certifiable: boolean;
+  issues: string[];
+  exam_questions: number;
+  exam_pass_percent: number;
+  sections: CustomCourseSectionSummary[];
+  chunk_count?: number;
+  message?: string;
+};
+
+export type PresentationSlide = {
+  title: string;
+  bullets: string[];
+  code: string | null;
+  diagram: string[];
+  narration: string;
+};
+
+export type PresentationResponse = {
+  course_code: string;
+  topic: string;
+  title: string;
+  grounded: boolean;
+  slides: PresentationSlide[];
+  sources: LessonSource[];
+  source_mode: string;
+  message: string | null;
+};
+
 export type LessonChatMessage = {
   id: string | null;
   role: 'user' | 'assistant';
@@ -793,6 +864,53 @@ export class ApiService {
     );
   }
 
+  // --- Sala de Auxiliaturas (Sala 1): presentaciones ---
+  createPresentation(courseCode: string, topic: string): Promise<PresentationResponse> {
+    return firstValueFrom(
+      this.http.post<PresentationResponse>(`${this.apiBaseUrl}/presentations`, {
+        course_code: courseCode,
+        topic,
+      }),
+    );
+  }
+
+  /** Duda durante la clase (no regenera la presentación). */
+  askPresentation(
+    question: string,
+    courseCode?: string,
+    topic?: string,
+  ): Promise<{ answer: string; sources: LessonSource[] }> {
+    return firstValueFrom(
+      this.http.post<{ answer: string; sources: LessonSource[] }>(
+        `${this.apiBaseUrl}/presentations/ask`,
+        { question, course_code: courseCode || null, topic: topic || null },
+      ),
+    );
+  }
+
+  /** Genera una presentación a partir de un texto/artículo del alumno. */
+  createPresentationFromText(text: string, topic?: string): Promise<PresentationResponse> {
+    return firstValueFrom(
+      this.http.post<PresentationResponse>(`${this.apiBaseUrl}/presentations/from-text`, {
+        text,
+        topic: topic || null,
+      }),
+    );
+  }
+
+  // --- Voz (TTS) de la Sala de Auxiliaturas con Azure Speech ---
+  speechStatus(): Promise<{ enabled: boolean; voice: string }> {
+    return firstValueFrom(
+      this.http.get<{ enabled: boolean; voice: string }>(`${this.apiBaseUrl}/speech/status`),
+    );
+  }
+
+  synthesizeSpeech(text: string): Promise<Blob> {
+    return firstValueFrom(
+      this.http.post(`${this.apiBaseUrl}/speech/tts`, { text }, { responseType: 'blob' }),
+    );
+  }
+
   // --- Tutor por leccion SIN sesion (pagina de lectura del curso) ---
   askLessonTutor(lessonId: string, question: string): Promise<LessonChatResponse> {
     return firstValueFrom(
@@ -892,6 +1010,50 @@ export class ApiService {
       this.http.post(`${this.apiBaseUrl}/manager/teams/${teamId}/members/${memberId}/support-message`, {
         message,
       }),
+    );
+  }
+
+  // --- Ranking del equipo + notificaciones (team lead) ---
+  getTeamRanking(teamId: string): Promise<TeamRanking> {
+    return firstValueFrom(
+      this.http.get<TeamRanking>(`${this.apiBaseUrl}/manager/teams/${teamId}/ranking`),
+    );
+  }
+
+  nudgeAtRisk(teamId: string): Promise<{ count: number; notified: { full_name: string; message: string }[] }> {
+    return firstValueFrom(
+      this.http.post<{ count: number; notified: { full_name: string; message: string }[] }>(
+        `${this.apiBaseUrl}/manager/teams/${teamId}/nudge-at-risk`,
+        {},
+      ),
+    );
+  }
+
+  nudgeMember(teamId: string, memberId: string, message?: string): Promise<{ message: string }> {
+    return firstValueFrom(
+      this.http.post<{ message: string }>(
+        `${this.apiBaseUrl}/manager/teams/${teamId}/members/${memberId}/nudge`,
+        { message: message || null },
+      ),
+    );
+  }
+
+  // --- Curso personalizado del equipo (team lead) ---
+  previewCustomCourse(teamId: string, markdown: string, title?: string): Promise<CustomCourseResult> {
+    return firstValueFrom(
+      this.http.post<CustomCourseResult>(
+        `${this.apiBaseUrl}/manager/teams/${teamId}/custom-courses/preview`,
+        { markdown, title: title || null },
+      ),
+    );
+  }
+
+  createCustomCourse(teamId: string, markdown: string, title?: string): Promise<CustomCourseResult> {
+    return firstValueFrom(
+      this.http.post<CustomCourseResult>(
+        `${this.apiBaseUrl}/manager/teams/${teamId}/custom-courses`,
+        { markdown, title: title || null },
+      ),
     );
   }
 
