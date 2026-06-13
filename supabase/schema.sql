@@ -42,6 +42,8 @@ alter table public.teams add column if not exists member_capacity integer;
 alter table public.teams add column if not exists work_style text;
 alter table public.teams add column if not exists notes text;
 
+-- Idempotente: si ya existe el constraint, lo recreamos sin romper el re-run.
+alter table public.profiles drop constraint if exists profiles_team_id_fkey;
 alter table public.profiles
     add constraint profiles_team_id_fkey
     foreign key (team_id) references public.teams (id) on delete set null;
@@ -193,6 +195,11 @@ create table if not exists public.exam_attempts (
     submitted_at timestamptz
 );
 
+-- Permitir notificaciones del manager (support directo + nudge generado por IA).
+alter table public.coach_reminders drop constraint if exists coach_reminders_kind_check;
+alter table public.coach_reminders add constraint coach_reminders_kind_check
+    check (kind in ('standard', 'deadline', 'minimal', 'manager_support', 'nudge'));
+
 alter table public.exam_attempts add column if not exists time_limit_minutes integer not null default 60;
 alter table public.exam_attempts add column if not exists failed_sections jsonb not null default '[]'::jsonb;
 alter table public.exam_attempts add column if not exists recommendations jsonb not null default '[]'::jsonb;
@@ -255,6 +262,17 @@ alter table public.coach_reminders enable row level security;
 alter table public.exam_attempts enable row level security;
 alter table public.certificates enable row level security;
 alter table public.suggestions enable row level security;
+
+-- Idempotencia: Postgres no soporta "create policy if not exists", así que
+-- borramos TODAS las políticas existentes del esquema public antes de recrearlas.
+-- Esto permite re-correr este schema.sql completo sin el error "policy already exists".
+do $$
+declare pol record;
+begin
+    for pol in (select policyname, tablename from pg_policies where schemaname = 'public') loop
+        execute format('drop policy if exists %I on public.%I', pol.policyname, pol.tablename);
+    end loop;
+end $$;
 
 create policy "Users can read own profile"
 on public.profiles
@@ -381,6 +399,24 @@ create table if not exists public.courses (
 
 create unique index if not exists courses_certification_code_idx
 on public.courses (certification_code);
+
+-- Cursos personalizados creados por un team lead: scoping (solo su equipo) +
+-- certificacion de plataforma. Idempotente para bases ya existentes.
+alter table public.courses add column if not exists team_id uuid references public.teams (id) on delete cascade;
+alter table public.courses add column if not exists created_by uuid references public.profiles (id) on delete set null;
+alter table public.courses add column if not exists visibility text not null default 'global';
+alter table public.courses add column if not exists is_certifiable boolean not null default false;
+-- Relajar los CHECK para permitir cursos personalizados (track 'custom', source 'custom').
+alter table public.courses drop constraint if exists courses_track_check;
+alter table public.courses add constraint courses_track_check
+    check (track in ('azure', 'aws', 'github', 'custom'));
+alter table public.courses drop constraint if exists courses_source_check;
+alter table public.courses add constraint courses_source_check
+    check (source in ('template', 'ms_learn', 'synthetic', 'custom'));
+alter table public.courses drop constraint if exists courses_visibility_check;
+alter table public.courses add constraint courses_visibility_check
+    check (visibility in ('global', 'team', 'org'));
+create index if not exists courses_team_idx on public.courses (team_id);
 
 create table if not exists public.course_sections (
     id uuid primary key default gen_random_uuid(),
@@ -545,3 +581,6 @@ as $$
     order by lc.embedding <=> query_embedding
     limit match_count;
 $$;
+
+-- Refrescar el cache de esquema de PostgREST (que la API vea tablas/columnas nuevas).
+NOTIFY pgrst, 'reload schema';
